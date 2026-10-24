@@ -1,0 +1,9 @@
+{
+  "n": 687,
+  "sha256": "859577fbc4d5f5bf7e45e0a49c959986aa31065b81f777af7c62eb49752946dd",
+  "split": "train",
+  "teacher": "Qwen/Qwen3.5-9B",
+  "thinking": false,
+  "decode": "greedy",
+  "max_new_tokens": 128
+}

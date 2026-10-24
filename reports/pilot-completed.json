@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "steps": 4,
+  "response_tokens": 692,
+  "elapsed_seconds": 89.73081048950553,
+  "phase_seconds": {
+    "rollout": 16.885231848806143,
+    "teacher": 25.67876146733761,
+    "learner": 41.74154307320714,
+    "dev": 4.6697769202291965
+  },
+  "teacher_unchanged": true,
+  "trainable_parameters": 15630336,
+  "nonzero_updates": 4,
+  "max_behavior_error": 4.553794860839844e-05,
+  "selected": {
+    "path": "checkpoint-0002",
+    "dev_score": 0.41085547204217804,
+    "step": 2,
+    "adapter_sha256": "67b0c638079f7ff2bed96e1fa95771d785000716ab25c1c194961ff135de3579",
+    "optimizer_sha256": "714cc54d56c40b4e78afc09ae495100b6b0b5175202e61e00bbbb072b7b2bedf",
+    "rng_sha256": "cc28710455780e31bd023adc2d1657bc4e1b6387b9c9328b6c8553cb0a5c0df1",
+    "tokens_seen": 372
+  }
+}

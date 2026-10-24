@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "servedistill"
+version = "0.1.0"
+description = "Audited on-policy business distillation and small-model serving"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.6",
+  "transformers==5.2.0",
+  "peft==0.18.1",
+  "accelerate==1.11.0",
+  "numpy==1.26.4",
+  "scikit-learn>=1.5",
+  "safetensors>=0.6",
+  "requests>=2.32",
+]
+
+[project.optional-dependencies]
+data = ["pandas>=2.2", "pyarrow>=17"]
+kernels = ["flash-linear-attention==0.4.1", "einops==0.8.1"]
+
+[tool.setuptools.packages.find]
+include = ["servedistill*"]

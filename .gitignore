@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+data/
+data_search/*.jsonl
+results/
+models/
+wheelhouse/
+.ops/
+*.part
+*.prefetch

@@ -1,0 +1,247 @@
+{
+  "slices": {
+    "instruction/general": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.29,
+      "candidate_seed_scores": [
+        0.85
+      ],
+      "candidate_mean": 0.85,
+      "delta": 0.56,
+      "paired_task_ci95": [
+        0.47,
+        0.65
+      ],
+      "small_slice": false
+    },
+    "instruction": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.29,
+      "candidate_seed_scores": [
+        0.85
+      ],
+      "candidate_mean": 0.85,
+      "delta": 0.56,
+      "paired_task_ci95": [
+        0.45999999999999996,
+        0.65
+      ],
+      "small_slice": false
+    },
+    "math/general": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.1,
+      "candidate_seed_scores": [
+        0.32
+      ],
+      "candidate_mean": 0.32,
+      "delta": 0.22,
+      "paired_task_ci95": [
+        0.13999999999999999,
+        0.31
+      ],
+      "small_slice": false
+    },
+    "math": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.1,
+      "candidate_seed_scores": [
+        0.32
+      ],
+      "candidate_mean": 0.32,
+      "delta": 0.22,
+      "paired_task_ci95": [
+        0.14,
+        0.3
+      ],
+      "small_slice": false
+    },
+    "relevance/es": {
+      "n_independent_tasks": 22,
+      "n_training_seeds": 1,
+      "baseline": 0.20270270270270271,
+      "candidate_seed_scores": [
+        0.30833333333333335
+      ],
+      "candidate_mean": 0.30833333333333335,
+      "delta": 0.10563063063063063,
+      "paired_task_ci95": [
+        -0.04423122113280931,
+        0.22859511008704542
+      ],
+      "small_slice": false
+    },
+    "relevance/jp": {
+      "n_independent_tasks": 21,
+      "n_training_seeds": 1,
+      "baseline": 0.15,
+      "candidate_seed_scores": [
+        0.3778846153846154
+      ],
+      "candidate_mean": 0.3778846153846154,
+      "delta": 0.22788461538461538,
+      "paired_task_ci95": [
+        0.062194525904203324,
+        0.3740847466709535
+      ],
+      "small_slice": false
+    },
+    "relevance/us": {
+      "n_independent_tasks": 57,
+      "n_training_seeds": 1,
+      "baseline": 0.1566265060240964,
+      "candidate_seed_scores": [
+        0.33051106025934396
+      ],
+      "candidate_mean": 0.33051106025934396,
+      "delta": 0.17388455423524757,
+      "paired_task_ci95": [
+        0.08571023628621524,
+        0.25258745346172173
+      ],
+      "small_slice": false
+    },
+    "relevance": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.16666666666666666,
+      "candidate_seed_scores": [
+        0.3374717488241402
+      ],
+      "candidate_mean": 0.3374717488241402,
+      "delta": 0.17080508215747356,
+      "paired_task_ci95": [
+        0.09915550816583459,
+        0.2351980134231089
+      ],
+      "small_slice": false
+    },
+    "search/es": {
+      "n_independent_tasks": 14,
+      "n_training_seeds": 1,
+      "baseline": 0.28256954490102654,
+      "candidate_seed_scores": [
+        0.8144116020842566
+      ],
+      "candidate_mean": 0.8144116020842566,
+      "delta": 0.5318420571832301,
+      "paired_task_ci95": [
+        0.30455766551303937,
+        0.7566325958656744
+      ],
+      "small_slice": true
+    },
+    "search/jp": {
+      "n_independent_tasks": 21,
+      "n_training_seeds": 1,
+      "baseline": 0.3130874689094708,
+      "candidate_seed_scores": [
+        0.7244543107259329
+      ],
+      "candidate_mean": 0.7244543107259329,
+      "delta": 0.4113668418164621,
+      "paired_task_ci95": [
+        0.17062580184054962,
+        0.6507774335579269
+      ],
+      "small_slice": false
+    },
+    "search/us": {
+      "n_independent_tasks": 65,
+      "n_training_seeds": 1,
+      "baseline": 0.27182507789379173,
+      "candidate_seed_scores": [
+        0.7028983009353585
+      ],
+      "candidate_mean": 0.7028983009353585,
+      "delta": 0.4310732230415668,
+      "paired_task_ci95": [
+        0.3007668815079845,
+        0.5630513073715416
+      ],
+      "small_slice": false
+    },
+    "search": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.2817727674959323,
+      "candidate_seed_scores": [
+        0.7222879206337829
+      ],
+      "candidate_mean": 0.7222879206337829,
+      "delta": 0.4405151531378506,
+      "paired_task_ci95": [
+        0.33401048587562715,
+        0.5411312677966572
+      ],
+      "small_slice": false
+    },
+    "substitute/es": {
+      "n_independent_tasks": 18,
+      "n_training_seeds": 1,
+      "baseline": 0.5178571428571428,
+      "candidate_seed_scores": [
+        0.3793103448275862
+      ],
+      "candidate_mean": 0.3793103448275862,
+      "delta": -0.1385467980295566,
+      "paired_task_ci95": [
+        -0.37777777777777766,
+        0.0
+      ],
+      "small_slice": true
+    },
+    "substitute/jp": {
+      "n_independent_tasks": 19,
+      "n_training_seeds": 1,
+      "baseline": 0.4242424242424242,
+      "candidate_seed_scores": [
+        0.3448275862068966
+      ],
+      "candidate_mean": 0.3448275862068966,
+      "delta": -0.07941483803552762,
+      "paired_task_ci95": [
+        -0.27708333333333335,
+        0.060897435897435875
+      ],
+      "small_slice": true
+    },
+    "substitute/us": {
+      "n_independent_tasks": 63,
+      "n_training_seeds": 1,
+      "baseline": 0.41846153846153844,
+      "candidate_seed_scores": [
+        0.42201834862385323
+      ],
+      "candidate_mean": 0.42201834862385323,
+      "delta": 0.003556810162314794,
+      "paired_task_ci95": [
+        -0.0914970250506375,
+        0.07247787610619472
+      ],
+      "small_slice": false
+    },
+    "substitute": {
+      "n_independent_tasks": 100,
+      "n_training_seeds": 1,
+      "baseline": 0.44086021505376344,
+      "candidate_seed_scores": [
+        0.40119760479041916
+      ],
+      "candidate_mean": 0.40119760479041916,
+      "delta": -0.03966261026334428,
+      "paired_task_ci95": [
+        -0.12109542297214247,
+        0.035099933519965376
+      ],
+      "small_slice": false
+    }
+  },
+  "bootstrap_repetitions": 2000,
+  "ci_scope": "paired tasks, conditional on observed training seeds",
+  "multiplicity": "exploratory; no multiple-comparison correction"
+}

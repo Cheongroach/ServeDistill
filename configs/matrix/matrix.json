@@ -1,0 +1,188 @@
+{
+  "models": {
+    "student": "Qwen/Qwen3.5-2B",
+    "teacher": "Qwen/Qwen3.5-9B"
+  },
+  "matching": "fixed optimizer updates and prompt schedule; tokens and GPUh reported separately",
+  "seeds": [
+    17,
+    29
+  ],
+  "steps": 80,
+  "experiments": [
+    {
+      "label": "oracle_sft_seed17",
+      "config": "oracle_sft_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "offline_sft_seed17",
+      "config": "offline_sft_seed17.json",
+      "requires_teacher_labels": true,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "grpo_seed17",
+      "config": "grpo_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_seed17",
+      "config": "opd_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_025_seed17",
+      "config": "mixed_025_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_100_seed17",
+      "config": "mixed_100_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_400_seed17",
+      "config": "mixed_400_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "alternating_seed17",
+      "config": "alternating_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "dynamic_seed17",
+      "config": "dynamic_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_bucketed_seed17",
+      "config": "opd_bucketed_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_trajectory_seed17",
+      "config": "opd_trajectory_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "full_kl_seed17",
+      "config": "full_kl_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "business_sft_seed17",
+      "config": "business_sft_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "restore_general_opd_seed17",
+      "config": "restore_general_opd_seed17.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": true
+    },
+    {
+      "label": "oracle_sft_seed29",
+      "config": "oracle_sft_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "offline_sft_seed29",
+      "config": "offline_sft_seed29.json",
+      "requires_teacher_labels": true,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "grpo_seed29",
+      "config": "grpo_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_seed29",
+      "config": "opd_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_025_seed29",
+      "config": "mixed_025_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_100_seed29",
+      "config": "mixed_100_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "mixed_400_seed29",
+      "config": "mixed_400_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "alternating_seed29",
+      "config": "alternating_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "dynamic_seed29",
+      "config": "dynamic_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_bucketed_seed29",
+      "config": "opd_bucketed_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "opd_trajectory_seed29",
+      "config": "opd_trajectory_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "full_kl_seed29",
+      "config": "full_kl_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "business_sft_seed29",
+      "config": "business_sft_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": false
+    },
+    {
+      "label": "restore_general_opd_seed29",
+      "config": "restore_general_opd_seed29.json",
+      "requires_teacher_labels": false,
+      "requires_initial_adapter": true
+    }
+  ],
+  "final_test_used_for_selection": false,
+  "train_precision": "float32_torch",
+  "teacher_precision": "bf16",
+  "deployment_precision": "bf16_merged",
+  "qualification_policy": "all domains retained; teacher nonpositive headroom is a negative control, not transfer evidence",
+  "domain_headroom_note": "substitute dev macro-F1 teacher 0.4012 < student 0.4409; no transferable headroom claim"
+}

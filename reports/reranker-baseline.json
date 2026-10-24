@@ -1,0 +1,65 @@
+{
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "backend": "transformers_sdpa_bf16",
+  "scope": "off-the-shelf joint pair scoring; search ranking only",
+  "latency_boundary": "in-process scoring of all displayed candidates; excludes retrieval/HTTP",
+  "candidate_batch_size": 8,
+  "cold_load_seconds": 2.0073231495916843,
+  "device": "NVIDIA H20",
+  "splits": {
+    "test": {
+      "domains": {
+        "search": {
+          "n": 300,
+          "success": 0.26666666666666666,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 0.0,
+          "selection_score": 0.8806506356998521,
+          "ndcg_n": 297,
+          "ndcg": 0.8806506356998521,
+          "mrr": 0.7526984126984126
+        }
+      },
+      "business_macro": 0.8806506356998521,
+      "general_macro": null,
+      "overall": 0.26666666666666666,
+      "n_queries": 300,
+      "latency_seconds": {
+        "p50": 0.07122031133621931,
+        "p95": 0.10287266280502083,
+        "p99": 0.6814668568409978
+      },
+      "elapsed_seconds": 21.13236882351339,
+      "gpu_hours_per_million_queries": 19.567008169919806
+    },
+    "ood": {
+      "domains": {
+        "search": {
+          "n": 100,
+          "success": 0.24,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 0.0,
+          "selection_score": 0.8812444696832742,
+          "ndcg_n": 100,
+          "ndcg": 0.8812444696832742,
+          "mrr": 0.8240000000000001
+        }
+      },
+      "business_macro": 0.8812444696832742,
+      "general_macro": null,
+      "overall": 0.24,
+      "n_queries": 100,
+      "latency_seconds": {
+        "p50": 0.03694163728505373,
+        "p95": 0.09380075959488748,
+        "p99": 0.10513592435047031
+      },
+      "elapsed_seconds": 5.089426998049021,
+      "gpu_hours_per_million_queries": 14.137297216802835
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "bf16",
+    "n_sequences": 10,
+    "n_actions": 124,
+    "max_error": 0.14801979064941406,
+    "mean_error": 0.00888220872503617,
+    "p99_error": 0.08415793627500534,
+    "elapsed_seconds": 162.61146416142583,
+    "backward_finite_nonzero": true,
+    "gradient_norm": 3.194383321547382,
+    "parameter_dtype": "torch.bfloat16"
+  },
+  {
+    "variant": "float_head",
+    "n_sequences": 10,
+    "n_actions": 127,
+    "max_error": 0.08990716934204102,
+    "mean_error": 0.0072370518564551095,
+    "p99_error": 0.0821940004825592,
+    "elapsed_seconds": 6.641803991049528,
+    "backward_finite_nonzero": true,
+    "gradient_norm": 3.0654533005704554,
+    "parameter_dtype": "torch.bfloat16"
+  },
+  {
+    "variant": "float32_torch",
+    "n_sequences": 10,
+    "n_actions": 116,
+    "max_error": 4.6253204345703125e-05,
+    "mean_error": 1.979109743153874e-06,
+    "p99_error": 1.939534740813542e-05,
+    "elapsed_seconds": 27.068118412047625,
+    "backward_finite_nonzero": true,
+    "gradient_norm": 2.978927246734477,
+    "parameter_dtype": "torch.float32"
+  }
+]

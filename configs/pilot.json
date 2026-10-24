@@ -1,0 +1,16 @@
+{
+  "objective": "mixed",
+  "business_domains": ["search", "relevance", "substitute"],
+  "seed": 17,
+  "steps": 4,
+  "prompts_per_step": 5,
+  "group_size": 2,
+  "microbatch": 1,
+  "rollout_batch": 2,
+  "max_new_tokens": 128,
+  "learning_rate": 0.00002,
+  "opd_weight": 1.0,
+  "dev_every": 2,
+  "dev_per_domain": 4,
+  "behavior_tolerance": 0.15
+}

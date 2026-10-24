@@ -1,0 +1,142 @@
+{
+  "source": {
+    "repository": "https://github.com/amazon-science/esci-data",
+    "revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "license": "Apache-2.0 (official project)",
+    "files": {
+      "shopping_queries_dataset_examples.parquet": {
+        "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+        "bytes": 51286808
+      },
+      "shopping_queries_dataset_products.parquet": {
+        "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+        "bytes": 1108857465
+      }
+    }
+  },
+  "seed": 20261024,
+  "business_domains": [
+    "search",
+    "relevance",
+    "substitute"
+  ],
+  "query_overlap_excluded": 15,
+  "candidate_limit": 8,
+  "gains": {
+    "E": 1.0,
+    "S": 0.1,
+    "C": 0.01,
+    "I": 0.0
+  },
+  "official_version": "small_version",
+  "text_limits": {
+    "title": 220,
+    "brand": 80,
+    "color": 60,
+    "details": 280
+  },
+  "ood_definition": "disjoint official-test query replication; NOT proven distribution shift",
+  "splits": {
+    "train": {
+      "rows": 3000,
+      "domains": {
+        "substitute": 600,
+        "search": 600,
+        "relevance": 600,
+        "instruction": 600,
+        "math": 600
+      },
+      "locales": {
+        "us": 1125,
+        "es": 287,
+        "general": 1200,
+        "jp": 388
+      },
+      "target_classes": {
+        "{\"substitute\":\"yes\"}": 231,
+        "{\"label\":\"I\"}": 97,
+        "{\"substitute\":\"no\"}": 369,
+        "{\"label\":\"E\"}": 273,
+        "{\"label\":\"S\"}": 200,
+        "{\"label\":\"C\"}": 30
+      },
+      "sha256": "9845c4b707214888678dc73456092cb6949ceaa3a8c985731bc97d5eb5d7f6a4"
+    },
+    "dev": {
+      "rows": 500,
+      "domains": {
+        "instruction": 100,
+        "relevance": 100,
+        "substitute": 100,
+        "search": 100,
+        "math": 100
+      },
+      "locales": {
+        "general": 200,
+        "us": 185,
+        "jp": 61,
+        "es": 54
+      },
+      "target_classes": {
+        "{\"label\":\"I\"}": 18,
+        "{\"substitute\":\"no\"}": 67,
+        "{\"substitute\":\"yes\"}": 33,
+        "{\"label\":\"E\"}": 50,
+        "{\"label\":\"S\"}": 28,
+        "{\"label\":\"C\"}": 4
+      },
+      "sha256": "2a0b90efb755100578408e9ec945e070cadf39e96bd09766062af94c1c1e9a4c"
+    },
+    "test": {
+      "rows": 1500,
+      "domains": {
+        "relevance": 300,
+        "instruction": 300,
+        "search": 300,
+        "substitute": 300,
+        "math": 300
+      },
+      "locales": {
+        "us": 546,
+        "general": 600,
+        "jp": 202,
+        "es": 152
+      },
+      "target_classes": {
+        "{\"label\":\"S\"}": 96,
+        "{\"substitute\":\"yes\"}": 118,
+        "{\"label\":\"E\"}": 136,
+        "{\"substitute\":\"no\"}": 182,
+        "{\"label\":\"I\"}": 52,
+        "{\"label\":\"C\"}": 16
+      },
+      "sha256": "2f827e5f7ad12195ebb8f1c2d45be9725986c679ad2ad6dd51b42dc6bee38498"
+    },
+    "ood": {
+      "rows": 500,
+      "domains": {
+        "math": 100,
+        "relevance": 100,
+        "instruction": 100,
+        "search": 100,
+        "substitute": 100
+      },
+      "locales": {
+        "general": 200,
+        "us": 192,
+        "jp": 63,
+        "es": 45
+      },
+      "target_classes": {
+        "{\"label\":\"E\"}": 48,
+        "{\"substitute\":\"no\"}": 68,
+        "{\"label\":\"S\"}": 33,
+        "{\"substitute\":\"yes\"}": 32,
+        "{\"label\":\"C\"}": 8,
+        "{\"label\":\"I\"}": 11
+      },
+      "sha256": "19807db62493dc9b18bc083b81a079329b314410752f8989e16fd7a9888c0210"
+    }
+  },
+  "product_overlap_train_test": 13
+}

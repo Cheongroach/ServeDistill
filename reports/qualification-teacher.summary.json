@@ -1,0 +1,57 @@
+{
+  "domains": {
+    "instruction": {
+      "n": 100,
+      "success": 0.85,
+      "json_valid": 1.0,
+      "constraint_violation": 0.0,
+      "truncated": 0.0,
+      "mean_output_tokens": 13.08,
+      "selection_score": 0.85
+    },
+    "relevance": {
+      "n": 100,
+      "success": 0.54,
+      "json_valid": 1.0,
+      "constraint_violation": 0.0,
+      "truncated": 0.0,
+      "mean_output_tokens": 8.0,
+      "selection_score": 0.3374717488241402,
+      "macro_f1": 0.3374717488241402
+    },
+    "substitute": {
+      "n": 100,
+      "success": 0.67,
+      "json_valid": 1.0,
+      "constraint_violation": 0.0,
+      "truncated": 0.0,
+      "mean_output_tokens": 9.0,
+      "selection_score": 0.40119760479041916,
+      "macro_f1": 0.40119760479041916
+    },
+    "search": {
+      "n": 100,
+      "success": 0.27,
+      "json_valid": 0.81,
+      "constraint_violation": 0.0,
+      "truncated": 0.0,
+      "mean_output_tokens": 27.09,
+      "selection_score": 0.7222879206337829,
+      "ndcg_n": 97,
+      "ndcg": 0.7222879206337829,
+      "mrr": 0.6066785714285714
+    },
+    "math": {
+      "n": 100,
+      "success": 0.32,
+      "json_valid": 1.0,
+      "constraint_violation": 0.0,
+      "truncated": 0.0,
+      "mean_output_tokens": 9.66,
+      "selection_score": 0.32
+    }
+  },
+  "business_macro": 0.4869857580827808,
+  "general_macro": 0.585,
+  "overall": 0.53
+}
