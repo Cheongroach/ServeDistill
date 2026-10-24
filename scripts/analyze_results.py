@@ -8,7 +8,7 @@ from pathlib import Path
 
 import numpy as np
 
-from servedistill.data import load_rows
+from servedistill.data import load_rows, parse_response
 from servedistill.statistics import bootstrap_metric, compare, metric
 
 DOMAINS = ("search", "relevance", "substitute", "math", "instruction")
@@ -30,6 +30,8 @@ def scores(rows):
         "json_valid": float(np.mean([r["json_valid"] for r in rows])),
         "truncated": float(np.mean([r["truncated"] for r in rows])),
         "independent_tasks": len(rows),
+        "json_valid_by_domain": {d: float(np.mean([r["json_valid"] for r in rows if r["domain"] == d]))
+                                 for d in DOMAINS},
     }
 
 
@@ -106,7 +108,7 @@ def analyze(evidence, output, selections):
                 "teacher_sampled_kl", "reference_sampled_kl", "effective_group_fraction",
                 "gradient_norm", "parameter_delta_l2", "opd_weight", "behavior_max_error",
                 "response_tokens", "json_valid", "truncation_rate", "elapsed_seconds",
-                "gradient_projection_cosine")}})
+                "gradient_projection_cosine", "ratio_min", "ratio_max", "ess_fraction", "clip_fraction")}})
         result["runs"][label] = {
             "selection": json.loads((train / "selected.json").read_text()),
             "updates": len(metrics), "nonzero_updates": completed["nonzero_updates"],
@@ -126,7 +128,8 @@ def analyze(evidence, output, selections):
                       for q in (5, 50, 95)}
                 for key in ("gradient_norm", "entropy", "effective_group_fraction",
                             "teacher_sampled_kl", "reference_sampled_kl",
-                            "gradient_projection_cosine")
+                            "gradient_projection_cosine", "ratio_min", "ratio_max",
+                            "ess_fraction", "clip_fraction", "behavior_max_error")
                 if any(key in r for r in metrics)
             },
             "dynamic_events": load_rows(train / "weight_events.jsonl")
@@ -149,8 +152,18 @@ def analyze(evidence, output, selections):
         after = [load_rows(runs[f"restore_general_opd_seed{seed}"] / "final" / f"{split}.jsonl")
                  for seed in (17, 29)]
         result["restoration"][split] = paired_methods(before, after)
+    result["search_common_valid"] = {}
+    for method in methods:
+        initial = {r["sample_id"]: r for r in baseline["baseline_2b"]["test"] if r["domain"] == "search"}
+        current = [{r["sample_id"]: r for r in load_rows(runs[f"{method}_seed{seed}"] / "final/test.jsonl")
+                    if r["domain"] == "search"} for seed in (17, 29)]
+        ids = [i for i, r in initial.items() if r["json_valid"] and r["ndcg_eligible"]
+               and all(group[i]["json_valid"] for group in current)]
+        if ids:
+            result["search_common_valid"][method] = compare([initial[i] for i in ids],
+                                                           [[g[i] for i in ids] for g in current])
     result["method_comparisons"] = {}
-    for previous, current in (("offline_sft", "opd"), ("oracle_sft", "opd"),
+    for previous, current in (("offline_sft", "opd"), ("offline_sft", "full_kl"), ("oracle_sft", "opd"),
                               ("grpo", "mixed_025"), ("grpo", "mixed_100"),
                               ("grpo", "mixed_400"), ("opd", "opd_bucketed"),
                               ("opd", "opd_trajectory"), ("opd", "full_kl"),
@@ -178,9 +191,58 @@ def analyze(evidence, output, selections):
                     for domain in sorted({row["domain"] for row in records})
                 } for concurrency in (1, 4, 16)
             }
+    result["holdout_retention_gate"] = {}
+    for kind, label in (("best", selections["label"]),
+                        ("opd", selections["opd_candidate"]["label"])):
+        final = result["runs"][label]["scores"]["test"]["domains"]
+        initial = result["baselines"]["baseline_2b"]["test"]["domains"]
+        deltas = {domain: final[domain] - initial[domain] for domain in DOMAINS}
+        result["holdout_retention_gate"][kind] = {
+            "label": label, "domain_delta": deltas,
+            "passes_point_estimate_5pp_gate": all(delta >= -0.05 for delta in deltas.values()),
+            "regressed_domains": [d for d, delta in deltas.items() if delta < -0.05],
+            "interpretation": "frozen selection unchanged; holdout failure blocks pilot promotion",
+        }
+    for kind in ("baseline", "teacher"):
+        target = deployment / kind
+        report = json.loads((target / "supplement/benchmark.json").read_text())
+        records = load_rows(target / "supplement/requests.jsonl")
+        report["domain_scores"] = {str(c): {
+            d: metric([r for r in records if r["concurrency"] == c and r["domain"] == d])
+            for d in sorted({r["domain"] for r in records})} for c in (1, 4, 16)}
+        result["serving"][kind + "/supplement"] = report
+    result["deployment_runtime"] = {
+        kind: {name: json.loads((deployment / kind / (name + ".json")).read_text())
+               for name in ("startup", "gpu-memory") if (deployment / kind / (name + ".json")).exists()}
+        for kind in ("baseline", "teacher", "best", "opd")
+    }
+    for runtime in result["deployment_runtime"].values():
+        runtime["startup"].pop("argv", None)
+    result["deployment_parity"] = {}
+    for kind, label in (("best", selections["label"]),
+                        ("opd", selections["opd_candidate"]["label"])):
+        reference = {r["sample_id"]: r for r in load_rows(runs[label] / "final/test.jsonl")}
+        measured = [r for r in load_rows(deployment / kind / "http/requests.jsonl") if r["concurrency"] == 1]
+        differences, decisions, trimmed = [], [], []
+        for row in measured:
+            before = reference[row["sample_id"]]
+            if before["input_sha256"] != row["input_sha256"]:
+                raise ValueError("Deployment input hash changed")
+            differences.append(before["text"] != row["text"])
+            trimmed.append(before["text"].strip() != row["text"].strip())
+            left, right = parse_response(before["text"]), parse_response(row["text"])
+            decisions.append(left is not None and right is not None and left == right)
+        result["deployment_parity"][kind] = {
+            "n_tasks": len(measured), "exact_text_agreement": 1 - float(np.mean(differences)),
+            "trimmed_text_agreement": 1 - float(np.mean(trimmed)),
+            "parsed_json_decision_agreement": float(np.mean(decisions)),
+            "hf_scores_same_subset": scores([reference[r["sample_id"]] for r in measured]),
+            "vllm_scores_same_subset": scores(measured),
+            "boundary": "BF16 HF adapter merge vs BF16 native vLLM; greedy kernels may differ",
+        }
     write(output / "results.json", result)
     with (output / "training-curves.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(curves[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(curves[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(curves)
     return result

@@ -4,6 +4,9 @@ import shutil
 
 
 def native_key(name):
+    # Transformers may already serialize text weights using wrapper prefixes.
+    if name.startswith("model.language_model."):
+        return name
     if name.startswith("model."):
         return "model.language_model." + name.removeprefix("model.")
     if name.startswith("lm_head."):

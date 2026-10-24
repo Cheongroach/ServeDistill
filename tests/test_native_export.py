@@ -4,10 +4,16 @@ import unittest
 from pathlib import Path
 import torch
 from safetensors.torch import load_file, save_file
-from servedistill.native_export import repackage_native
+from servedistill.native_export import native_key, repackage_native
 
 
 class NativeExportTests(unittest.TestCase):
+    def test_existing_wrapper_prefix_is_preserved(self):
+        name = "model.language_model.layers.0.mlp.down_proj.weight"
+        self.assertEqual(native_key(name), name)
+        self.assertEqual(native_key(native_key("model.embed_tokens.weight")),
+                         "model.language_model.embed_tokens.weight")
+
     def test_native_wrapper_and_index_keep_language_weights_exact(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

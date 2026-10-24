@@ -1,0 +1,60 @@
+{
+  "selection": {
+    "path": "checkpoint-0060",
+    "dev_score": 0.4993616865235058,
+    "step": 60,
+    "adapter_sha256": "496b63dcda3326697996d42f7b6285aa77d8d3b97d955f28f2fa49ee4348a19a",
+    "optimizer_sha256": "4b415bab2595275ab0e10a78cb6ad2e19b147dc77613bc94343d27cb2fd9cd7d",
+    "rng_sha256": "0ee81ff8fd0464b9125d1d59f40f8da3859f49b2230088d0e7b5fcc1c0f23bb6",
+    "tokens_seen": 3900
+  },
+  "precision": "BF16",
+  "architecture": "qwen3_5_text",
+  "adapter_merged": true,
+  "test_used_for_selection": false,
+  "files": {
+    "chat_template.jinja": {
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "bytes": 7755
+    },
+    "config.json": {
+      "sha256": "48f15885715219328a6880c496b28c4d17341cafa4a58002e9da21f05bdc8ce9",
+      "bytes": 2510
+    },
+    "generation_config.json": {
+      "sha256": "0c35bb39fbaed1ac0656baabc4f4e9bda20214e12336d0e4e8755aac1f487c2e",
+      "bytes": 115
+    },
+    "model.safetensors": {
+      "sha256": "f0150fdaa7087d088ee7561bc18af327bc899052186be55b49827f30984fed5d",
+      "bytes": 3763692048
+    },
+    "preprocessor_config.json": {
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "bytes": 390
+    },
+    "tokenizer.json": {
+      "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "bytes": 19989343
+    },
+    "tokenizer_config.json": {
+      "sha256": "83febe739ecefd99f984f546dfdc10149cedf293b9ee0291b99894341188b613",
+      "bytes": 1098
+    }
+  },
+  "loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "text_only": true
+  },
+  "packaging": {
+    "native_wrapper": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "language_tensors": 320,
+    "vision_weights_included": false,
+    "required_server_flag": "--language-model-only",
+    "namespace_repair": "removed duplicated language_model prefix; tensor values unchanged"
+  }
+}

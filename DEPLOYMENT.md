@@ -4,7 +4,7 @@ Merge the dev-selected adapter into a BF16 language checkpoint and run the same 
 
 The in-process Hugging Face benchmark is a reproducible reference, not an online SLA. It reports static batches at 1/4/16 requests, per-batch completion latency, first-token callback timing, valid output fraction and GPU hours per million requests. Include retrieval, HTTP, queueing and fallback costs when validating a real service.
 
-`scripts/run_reference_server.sh` starts a localhost vLLM endpoint from `MODEL_PATH`. Use a vLLM version with native Qwen3.5 support and its supported PyTorch/Transformers stack; do not install it over the training environment. Send `chat_template_kwargs={"enable_thinking":false}` and enforce the same output budget as evaluation. The serving stack is being validated separately; this script is not evidence that an HTTP service has passed.
+`scripts/run_reference_server.sh` starts a localhost vLLM endpoint from `MODEL_PATH`. Use a vLLM version with native Qwen3.5 support and its supported PyTorch/Transformers stack; do not install it over the training environment. Send `chat_template_kwargs={"enable_thinking":false}` and enforce the same output budget as evaluation. The frozen baseline and selected-model streaming HTTP sweeps completed on H20; see the final report for the measured boundary and quality failures.
 
 No GPU price is assumed. Multiply measured GPU hours by an explicit unit price; preserve teacher labeling, teacher scoring, failed jobs, loading and idle residency in training cost. Report effective answers separately from requests.
 
@@ -27,7 +27,11 @@ The client measures the first nonempty content delta and the complete stream thr
 
 The native Qwen3.5 registry in vLLM 0.19.1 uses the conditional-generation wrapper. `--vllm-native` preserves its source configuration and maps merged language tensor names back to that wrapper; it does not export vision weights and requires `--language-model-only`. The mapping preserves tensor values and shard-index identities. The default export retains the Hugging Face text-only format.
 
-The 2B/4B/9B baseline engines started and completed the streaming sweeps on H20. Selected student deployment and fallback measurements remain in progress.
+The 2B/4B/9B baseline engines and both frozen student candidates completed streaming HTTP, protocol cascade, and fictional local-services sweeps. At concurrency 16, the OPD candidate measured P95 437.6 ms and 28.27 correct answers/s, compared with the 9B teacher's 1979.2 ms and 8.91 correct answers/s. Their success rates differed (38.67% vs 46.00%); this is not an equal-quality speedup.
+
+Both selected candidates fail the final substitute retention gate, so these are research deployment measurements. Local-services format transfer scored zero; the search output contract cannot be silently reused for another business. HF/native vLLM parsed-decision agreement on the same 150-task subset was 96.00% for SFT and 97.33% for OPD. Report exact output and quality agreement separately.
+
+The exporter preserves an existing `model.language_model.*` prefix. Transformers may already save this wrapper prefix from the text model; adding it again prevented the first server startup. The regression and actual native startup passed after repair. Both deployment manifests are in `reports/evidence/`. All benchmark GPU allocations were released.
 
 ## Protocol fallback
 

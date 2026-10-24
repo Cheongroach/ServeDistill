@@ -6,5 +6,6 @@
   "monitor_fix": "SFT trend alarms must not require reference KL fields from RL/OPD",
   "offline_sft_seed17_recovery": "restore checkpoint 40 with adapter/Adam/RNG fingerprint checks",
   "offline_sft_seed29_recovery": "restart after an early failure before the first checkpoint; preserve failed attempt",
-  "validation": "21 CPU tests passed; GPU matrix and HTTP outcomes still pending"
+  "validation": "28 complete training stages; native baseline and selected deployments/cascades completed; 32 complete CPU regressions passed with process exit0",
+  "native_export_fix": "preserve existing wrapper prefix to avoid duplicated language_model namespace"
 }

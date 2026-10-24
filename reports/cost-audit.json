@@ -1,0 +1,123 @@
+{
+  "peak_scheduled_gpus": 32,
+  "scheduled_window_hours": 4.210833333333333,
+  "status_cost_boundary": "failed/stopped totals include successful child experiments on stopped hosts; not failed-compute waste",
+  "measured_utc": "2026-10-24T11:37:45.453347+00:00",
+  "jobs": [
+    {
+      "experiment": "probe-qwen35-v1",
+      "status": "failed_to_launch",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0,
+      "submission_to_end_gpu_hours": 0.0,
+      "active": false,
+      "pods_observed": 0
+    },
+    {
+      "experiment": "pilot-qwen35-v1",
+      "status": "stopped",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.17444444444444446,
+      "submission_to_end_gpu_hours": 0.20104270564185248,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "pilot-qwen35-v2",
+      "status": "failed",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.43027777777777776,
+      "submission_to_end_gpu_hours": 0.4623088706864251,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "diagnostic-qwen35-v1",
+      "status": "done",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.12444444444444444,
+      "submission_to_end_gpu_hours": 0.15569086068206364,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "qualification-qwen35-v1",
+      "status": "done",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.5833333333333334,
+      "submission_to_end_gpu_hours": 0.6246198483308156,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "teacher-labels-qwen35-v1",
+      "status": "done",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.5077777777777778,
+      "submission_to_end_gpu_hours": 0.5268634927935071,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "reranker-qwen3-v1",
+      "status": "done",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.056666666666666664,
+      "submission_to_end_gpu_hours": 0.07471872621112399,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "pilot-fp32-v1",
+      "status": "done",
+      "gpu_count": 1,
+      "scheduled_gpu_hours": 0.3552777777777778,
+      "submission_to_end_gpu_hours": 0.4045374062326219,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "matrix-host0-v1",
+      "status": "failed",
+      "gpu_count": 8,
+      "scheduled_gpu_hours": 12.406666666666666,
+      "submission_to_end_gpu_hours": 12.692167655097114,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "matrix-host1-v1",
+      "status": "stopped",
+      "gpu_count": 8,
+      "scheduled_gpu_hours": 15.14,
+      "submission_to_end_gpu_hours": 15.416193555196127,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "matrix-host2-v1",
+      "status": "done",
+      "gpu_count": 8,
+      "scheduled_gpu_hours": 13.855555555555556,
+      "submission_to_end_gpu_hours": 14.073909424146017,
+      "active": false,
+      "pods_observed": 1
+    },
+    {
+      "experiment": "matrix-host3-v1",
+      "status": "stopped",
+      "gpu_count": 8,
+      "scheduled_gpu_hours": 16.12,
+      "submission_to_end_gpu_hours": 16.329967096646627,
+      "active": false,
+      "pods_observed": 1
+    }
+  ],
+  "scheduled_gpu_hours": 59.754444444444445,
+  "failed_stopped_scheduled_gpu_hours": 44.27138888888889,
+  "all_terminal": true,
+  "boundary": "platform pod schedule_at to stop_at; running rows are lower bounds",
+  "includes": "preparation, model loads, kernel compilation, evaluation, sidecars, failures, idle allocations",
+  "currency": "no unit price supplied; multiply GPU hours by c currency units/GPUh",
+  "failed_parent_note": "matrix host0/1 may have failed original offline child; successful recovery evidence is separate"
+}
