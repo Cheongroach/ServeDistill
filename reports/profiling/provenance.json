@@ -1,0 +1,116 @@
+{
+  "base_revision": "4bf7701",
+  "instrumented_sources_sha256": {
+    "servedistill/train.py": "0681fecd83444d6a5a44ddcc9f0dc1f27babf5e2d0bf6b3e6a10766c6bf1268b",
+    "servedistill/observation.py": "1e12ac989d481211c37339847de81390d619e7d8fe3c95aaf4681272562856a4",
+    "scripts/profile_training.py": "425b3d7316a98df330771b0d2c30cb7ff868c64ba01232520f06a62e4f789062"
+  },
+  "environment": {
+    "GPU": "NVIDIA H20",
+    "GPU_count": 1,
+    "CUDA": "12.9",
+    "torch": "2.9.1",
+    "transformers": "5.2.0",
+    "peft": "0.18.1",
+    "fla": "0.4.1",
+    "causal_conv1d": false,
+    "nsys": "2026.1.1.204"
+  },
+  "captured_update": 42,
+  "warmup_update": 41,
+  "restored_checkpoint_update": 40,
+  "raw_artifacts": [
+    {
+      "relative_path": "observe-v1/nsys_m1/capture.nsys-rep",
+      "bytes": 78437746,
+      "sha256": "f670f8a0facdc96b68a2a3bf2e5d4586f387c8ec9ccc0fa9977d65a8330f976b"
+    },
+    {
+      "relative_path": "observe-v1/nsys_m1/capture.sqlite",
+      "bytes": 210513920,
+      "sha256": "81836d3ae07795fadad8a543a56c253172a70dd1c99c163ed48b12da0d94f8e2"
+    },
+    {
+      "relative_path": "observe-v2/nsys_m1/capture.nsys-rep",
+      "bytes": 77817259,
+      "sha256": "c93e4773713190f008d5327b36f33a2cede11483bd37c8ed7508ae2b2ed834ee"
+    },
+    {
+      "relative_path": "observe-v2/nsys_m1/capture.sqlite",
+      "bytes": 210386944,
+      "sha256": "903e2701f8651b1d0910e752c826be0aa6b4932f8a1dc9fd3ffb495eb5aa52d6"
+    },
+    {
+      "relative_path": "observe-v2/nsys_m4/capture.nsys-rep",
+      "bytes": 27971569,
+      "sha256": "4b7965a20a041683b827ed7dde58902915a68440c2659f7f2b9fd4a607932e6a"
+    },
+    {
+      "relative_path": "observe-v2/nsys_m4/capture.sqlite",
+      "bytes": 75681792,
+      "sha256": "2662b1887ff552fb34d6f3843946d2ff5b9c9ad0ddce2a5c901a54cd7d0d3a27"
+    },
+    {
+      "relative_path": "observe-v2/torch_m4/observation/torch-trace.json",
+      "bytes": 231437355,
+      "sha256": "58ec51129ceae0b52cb5d7d306d06df28df54f26a188a99bb06ede4bc0bc7b1f"
+    }
+  ],
+  "v2_cases": [
+    {
+      "case": "baseline_m1",
+      "backend": "none",
+      "microbatch": 1,
+      "returncode": 0,
+      "elapsed_seconds": 221.63675260543823
+    },
+    {
+      "case": "nsys_m1",
+      "backend": "nsys",
+      "microbatch": 1,
+      "returncode": 0,
+      "elapsed_seconds": 107.8190848827362
+    },
+    {
+      "case": "baseline_m1_warm",
+      "backend": "none",
+      "microbatch": 1,
+      "returncode": 0,
+      "elapsed_seconds": 76.4274673461914
+    },
+    {
+      "case": "baseline_m4",
+      "backend": "none",
+      "microbatch": 4,
+      "returncode": 0,
+      "elapsed_seconds": 138.9163908958435
+    },
+    {
+      "case": "nsys_m4",
+      "backend": "nsys",
+      "microbatch": 4,
+      "returncode": 0,
+      "elapsed_seconds": 59.54994344711304
+    },
+    {
+      "case": "torch_m4",
+      "backend": "torch",
+      "microbatch": 4,
+      "returncode": 0,
+      "elapsed_seconds": 82.08465623855591
+    }
+  ],
+  "v1_failure": "Full-update PyTorch record_shapes exceeded 240s; first two cases completed; no microbatch4 trace in v1",
+  "CPU_regressions": {
+    "passed": 32,
+    "failed": 0,
+    "scope": "existing contract/selection/http/statistics suite; CUDA observation validated separately on H20"
+  },
+  "validation": {
+    "raw_download_hashes_verified": true,
+    "instrumented_source_hashes_verified": true,
+    "all_v2_cases_exit_zero": true,
+    "all_observation_allocations_released": true
+  },
+  "boundary": "Diagnostic continuation; raw traces kept locally because they can contain internal paths; no new quality/serving acceptance"
+}

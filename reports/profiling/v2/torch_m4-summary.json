@@ -1,0 +1,1094 @@
+{
+  "trace_sha256": "58ec51129ceae0b52cb5d7d306d06df28df54f26a188a99bb06ede4bc0bc7b1f",
+  "bytes": 231437355,
+  "event_count": 626070,
+  "categories": {
+    "cpu_op": 318632,
+    "fwdbwd": 43850,
+    "user_annotation": 5,
+    "overhead": 29,
+    "gpu_memcpy": 1543,
+    "ac2g": 131743,
+    "cuda_runtime": 65497,
+    "kernel": 63612,
+    "gpu_memset": 510,
+    "cuda_driver": 581,
+    "gpu_user_annotation": 5,
+    "": 62,
+    "Trace": 1
+  },
+  "actual_kernel_count": 63612,
+  "actual_summed_kernel_seconds": 0.9239062039999486,
+  "actual_kernel_union_seconds": 0.9239060595703125,
+  "recorded_scopes": [
+    {
+      "name": "learner_forward",
+      "cat": "user_annotation",
+      "ts": 1993488531151.078,
+      "dur": 392070.993
+    },
+    {
+      "name": "teacher_forward",
+      "cat": "user_annotation",
+      "ts": 1993488929228.958,
+      "dur": 140099.878
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "cat": "user_annotation",
+      "ts": 1993489153030.979,
+      "dur": 17402.651
+    },
+    {
+      "name": "reference_forward",
+      "cat": "user_annotation",
+      "ts": 1993489171857.659,
+      "dur": 301201.586
+    },
+    {
+      "name": "backward",
+      "cat": "user_annotation",
+      "ts": 1993489475784.425,
+      "dur": 1134779.157
+    },
+    {
+      "name": "backward",
+      "cat": "gpu_user_annotation",
+      "ts": 1993489475836.744,
+      "dur": 87.522
+    },
+    {
+      "name": "reference_forward",
+      "cat": "gpu_user_annotation",
+      "ts": 1993489175204.398,
+      "dur": 299844.252
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "cat": "gpu_user_annotation",
+      "ts": 1993489153109.754,
+      "dur": 17245.112
+    },
+    {
+      "name": "teacher_forward",
+      "cat": "gpu_user_annotation",
+      "ts": 1993488933125.364,
+      "dur": 219267.401
+    },
+    {
+      "name": "learner_forward",
+      "cat": "gpu_user_annotation",
+      "ts": 1993488535650.992,
+      "dur": 391255.401
+    }
+  ],
+  "top_cpu_operations_by_count": [
+    {
+      "name": "aten::as_strided",
+      "calls": 53976,
+      "inclusive_host_us": 44218.14500000019
+    },
+    {
+      "name": "aten::copy_",
+      "calls": 21343,
+      "inclusive_host_us": 229966.95499999987
+    },
+    {
+      "name": "aten::slice",
+      "calls": 17908,
+      "inclusive_host_us": 59944.103000000076
+    },
+    {
+      "name": "aten::select",
+      "calls": 12105,
+      "inclusive_host_us": 43984.72900000009
+    },
+    {
+      "name": "aten::mul",
+      "calls": 10595,
+      "inclusive_host_us": 180926.24400000038
+    },
+    {
+      "name": "aten::empty_like",
+      "calls": 10585,
+      "inclusive_host_us": 52791.96200000015
+    },
+    {
+      "name": "aten::empty",
+      "calls": 9934,
+      "inclusive_host_us": 33104.761
+    },
+    {
+      "name": "aten::clone",
+      "calls": 9008,
+      "inclusive_host_us": 148667.35999999943
+    },
+    {
+      "name": "aten::empty_strided",
+      "calls": 8863,
+      "inclusive_host_us": 30754.46999999992
+    },
+    {
+      "name": "aten::reshape",
+      "calls": 8458,
+      "inclusive_host_us": 30111.37100000003
+    },
+    {
+      "name": "aten::fill_",
+      "calls": 7407,
+      "inclusive_host_us": 79299.8099999997
+    },
+    {
+      "name": "aten::view",
+      "calls": 7149,
+      "inclusive_host_us": 10973.628999999995
+    },
+    {
+      "name": "aten::zero_",
+      "calls": 6919,
+      "inclusive_host_us": 87784.96
+    },
+    {
+      "name": "aten::unsqueeze",
+      "calls": 6652,
+      "inclusive_host_us": 21976.30900000003
+    },
+    {
+      "name": "aten::detach",
+      "calls": 5891,
+      "inclusive_host_us": 11543.893999999995
+    },
+    {
+      "name": "detach",
+      "calls": 5891,
+      "inclusive_host_us": 6034.503000000005
+    },
+    {
+      "name": "aten::zeros",
+      "calls": 5574,
+      "inclusive_host_us": 104255.34900000023
+    },
+    {
+      "name": "aten::add",
+      "calls": 5463,
+      "inclusive_host_us": 61250.07699999999
+    },
+    {
+      "name": "aten::transpose",
+      "calls": 5393,
+      "inclusive_host_us": 16922.37099999996
+    },
+    {
+      "name": "aten::sum",
+      "calls": 5188,
+      "inclusive_host_us": 77194.91699999933
+    },
+    {
+      "name": "aten::expand",
+      "calls": 5165,
+      "inclusive_host_us": 15793.544999999995
+    },
+    {
+      "name": "aten::add_",
+      "calls": 4793,
+      "inclusive_host_us": 41926.37799999985
+    },
+    {
+      "name": "aten::to",
+      "calls": 3624,
+      "inclusive_host_us": 36756.35799999997
+    },
+    {
+      "name": "autograd::engine::evaluate_function: SliceBackward0",
+      "calls": 3486,
+      "inclusive_host_us": 127449.73499999993
+    },
+    {
+      "name": "SliceBackward0",
+      "calls": 3486,
+      "inclusive_host_us": 102784.5769999999
+    },
+    {
+      "name": "aten::slice_backward",
+      "calls": 3486,
+      "inclusive_host_us": 97628.51899999994
+    },
+    {
+      "name": "aten::_unsafe_view",
+      "calls": 3116,
+      "inclusive_host_us": 5251.9070000000265
+    },
+    {
+      "name": "aten::matmul",
+      "calls": 2924,
+      "inclusive_host_us": 166626.28600000023
+    },
+    {
+      "name": "aten::t",
+      "calls": 2802,
+      "inclusive_host_us": 14217.629000000019
+    },
+    {
+      "name": "aten::bmm",
+      "calls": 2451,
+      "inclusive_host_us": 76724.01699999995
+    }
+  ],
+  "top_shapes_by_count": [
+    {
+      "name": "aten::as_strided",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "calls": 14148,
+      "inclusive_host_us": 12456.660000000044
+    },
+    {
+      "name": "aten::empty",
+      "input_dims": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "calls": 9934,
+      "inclusive_host_us": 33104.761
+    },
+    {
+      "name": "aten::as_strided",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "calls": 9522,
+      "inclusive_host_us": 7148.734000000021
+    },
+    {
+      "name": "aten::empty_strided",
+      "input_dims": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "calls": 8863,
+      "inclusive_host_us": 30754.46999999992
+    },
+    {
+      "name": "aten::select",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        [],
+        []
+      ],
+      "calls": 8298,
+      "inclusive_host_us": 30298.35899999998
+    },
+    {
+      "name": "aten::slice",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "calls": 7938,
+      "inclusive_host_us": 26074.75700000002
+    },
+    {
+      "name": "aten::zeros",
+      "input_dims": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "calls": 5574,
+      "inclusive_host_us": 104255.34900000023
+    },
+    {
+      "name": "aten::slice",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "calls": 4536,
+      "inclusive_host_us": 16237.055000000006
+    },
+    {
+      "name": "autograd::engine::evaluate_function: SliceBackward0",
+      "input_dims": [],
+      "calls": 3486,
+      "inclusive_host_us": 127449.73499999993
+    },
+    {
+      "name": "autograd::engine::evaluate_function: CloneBackward0",
+      "input_dims": [],
+      "calls": 2394,
+      "inclusive_host_us": 9618.470999999998
+    },
+    {
+      "name": "aten::zero_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ]
+      ],
+      "calls": 2358,
+      "inclusive_host_us": 20331.23900000004
+    },
+    {
+      "name": "aten::fill_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        []
+      ],
+      "calls": 2358,
+      "inclusive_host_us": 16259.853000000023
+    },
+    {
+      "name": "aten::add_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        []
+      ],
+      "calls": 2358,
+      "inclusive_host_us": 18059.228000000003
+    },
+    {
+      "name": "autograd::engine::evaluate_function: SelectBackward0",
+      "input_dims": [],
+      "calls": 2034,
+      "inclusive_host_us": 88593.42999999985
+    },
+    {
+      "name": "aten::as_strided",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "calls": 2016,
+      "inclusive_host_us": 1872.3510000000003
+    },
+    {
+      "name": "autograd::engine::evaluate_function: MulBackward0",
+      "input_dims": [],
+      "calls": 1985,
+      "inclusive_host_us": 99342.17800000019
+    },
+    {
+      "name": "aten::as_strided",
+      "input_dims": [
+        [
+          4,
+          16,
+          64,
+          128
+        ],
+        [],
+        [],
+        []
+      ],
+      "calls": 1890,
+      "inclusive_host_us": 1319.7710000000018
+    },
+    {
+      "name": "aten::select",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          128
+        ],
+        [],
+        []
+      ],
+      "calls": 1710,
+      "inclusive_host_us": 6521.053000000011
+    },
+    {
+      "name": "autograd::engine::evaluate_function: AddBackward0",
+      "input_dims": [],
+      "calls": 1639,
+      "inclusive_host_us": 8485.08199999999
+    },
+    {
+      "name": "aten::reshape",
+      "input_dims": [
+        [
+          4,
+          16,
+          64,
+          128
+        ],
+        []
+      ],
+      "calls": 1620,
+      "inclusive_host_us": 4982.407999999998
+    },
+    {
+      "name": "autograd::engine::evaluate_function: UnsqueezeBackward0",
+      "input_dims": [],
+      "calls": 1614,
+      "inclusive_host_us": 27767.432999999954
+    },
+    {
+      "name": "aten::zero_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64
+        ]
+      ],
+      "calls": 1440,
+      "inclusive_host_us": 12918.48300000002
+    },
+    {
+      "name": "aten::fill_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64
+        ],
+        []
+      ],
+      "calls": 1440,
+      "inclusive_host_us": 10396.957999999997
+    },
+    {
+      "name": "aten::select",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64
+        ],
+        [],
+        []
+      ],
+      "calls": 1386,
+      "inclusive_host_us": 4943.607999999995
+    },
+    {
+      "name": "aten::expand",
+      "input_dims": [
+        [
+          4,
+          16,
+          64,
+          128
+        ],
+        [],
+        []
+      ],
+      "calls": 1350,
+      "inclusive_host_us": 4065.4400000000032
+    },
+    {
+      "name": "autograd::engine::evaluate_function: ViewBackward0",
+      "input_dims": [],
+      "calls": 1273,
+      "inclusive_host_us": 14469.755999999996
+    },
+    {
+      "name": "aten::as_strided",
+      "input_dims": [
+        [
+          4,
+          16,
+          64
+        ],
+        [],
+        [],
+        []
+      ],
+      "calls": 1224,
+      "inclusive_host_us": 864.5400000000002
+    },
+    {
+      "name": "autograd::engine::evaluate_function: torch::autograd::CopySlices",
+      "input_dims": [],
+      "calls": 1224,
+      "inclusive_host_us": 89733.31799999998
+    },
+    {
+      "name": "aten::copy_",
+      "input_dims": [
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        [
+          4,
+          16,
+          5,
+          64,
+          64
+        ],
+        []
+      ],
+      "calls": 1206,
+      "inclusive_host_us": 13376.742999999984
+    },
+    {
+      "name": "autograd::engine::evaluate_function: SumBackward1",
+      "input_dims": [],
+      "calls": 1171,
+      "inclusive_host_us": 13688.747999999996
+    }
+  ],
+  "matrix_shapes": [
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          64,
+          128
+        ],
+        [
+          64,
+          128,
+          128
+        ]
+      ],
+      "calls": 792,
+      "inclusive_host_us": 23710.524999999965
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          64,
+          64
+        ],
+        [
+          64,
+          64,
+          128
+        ]
+      ],
+      "calls": 450,
+      "inclusive_host_us": 12473.874999999996
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          2048
+        ],
+        [
+          2048,
+          16
+        ]
+      ],
+      "calls": 426,
+      "inclusive_host_us": 17898.67699999999
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          128,
+          64
+        ],
+        [
+          64,
+          64,
+          128
+        ]
+      ],
+      "calls": 414,
+      "inclusive_host_us": 12245.190999999995
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          64,
+          128
+        ],
+        [
+          64,
+          128,
+          64
+        ]
+      ],
+      "calls": 360,
+      "inclusive_host_us": 12497.44
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          16
+        ],
+        [
+          16,
+          2048
+        ]
+      ],
+      "calls": 294,
+      "inclusive_host_us": 8848.756
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          2048
+        ],
+        [
+          2048,
+          6144
+        ]
+      ],
+      "calls": 222,
+      "inclusive_host_us": 7935.1500000000015
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          2048
+        ],
+        [
+          2048,
+          2048
+        ]
+      ],
+      "calls": 168,
+      "inclusive_host_us": 7973.007000000002
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          320,
+          64,
+          64
+        ],
+        [
+          320,
+          64,
+          128
+        ]
+      ],
+      "calls": 162,
+      "inclusive_host_us": 6836.961999999999
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          16
+        ],
+        [
+          16,
+          6144
+        ]
+      ],
+      "calls": 156,
+      "inclusive_host_us": 5402.031000000001
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          6144
+        ],
+        [
+          6144,
+          2048
+        ]
+      ],
+      "calls": 138,
+      "inclusive_host_us": 4515.743
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          16,
+          1088
+        ],
+        [
+          1088,
+          2048
+        ]
+      ],
+      "calls": 126,
+      "inclusive_host_us": 3352.483000000001
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          6144
+        ],
+        [
+          6144,
+          16
+        ]
+      ],
+      "calls": 114,
+      "inclusive_host_us": 3559.5069999999982
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          320,
+          64,
+          128
+        ],
+        [
+          320,
+          128,
+          64
+        ]
+      ],
+      "calls": 90,
+      "inclusive_host_us": 3974.1340000000005
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          128,
+          64
+        ],
+        [
+          64,
+          64,
+          64
+        ]
+      ],
+      "calls": 90,
+      "inclusive_host_us": 2365.482000000001
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          64,
+          128,
+          128
+        ],
+        [
+          64,
+          128,
+          64
+        ]
+      ],
+      "calls": 72,
+      "inclusive_host_us": 1320.7719999999997
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          2048,
+          1088
+        ],
+        [
+          1088,
+          16
+        ]
+      ],
+      "calls": 66,
+      "inclusive_host_us": 3212.3949999999995
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          6144,
+          1088
+        ],
+        [
+          1088,
+          16
+        ]
+      ],
+      "calls": 66,
+      "inclusive_host_us": 2000.9880000000003
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          4096
+        ],
+        [
+          4096,
+          12288
+        ]
+      ],
+      "calls": 64,
+      "inclusive_host_us": 2286.743000000001
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          4096
+        ],
+        [
+          4096,
+          4096
+        ]
+      ],
+      "calls": 56,
+      "inclusive_host_us": 2228.3030000000003
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          4096
+        ],
+        [
+          4096,
+          32
+        ]
+      ],
+      "calls": 48,
+      "inclusive_host_us": 1463.6160000000002
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          2048
+        ],
+        [
+          2048,
+          512
+        ]
+      ],
+      "calls": 36,
+      "inclusive_host_us": 1526.6010000000003
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          4096
+        ],
+        [
+          4096,
+          8192
+        ]
+      ],
+      "calls": 32,
+      "inclusive_host_us": 1316.126
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          12288
+        ],
+        [
+          12288,
+          4096
+        ]
+      ],
+      "calls": 32,
+      "inclusive_host_us": 736.0100000000001
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          16
+        ],
+        [
+          16,
+          512
+        ]
+      ],
+      "calls": 24,
+      "inclusive_host_us": 839.709
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          16,
+          1088
+        ],
+        [
+          1088,
+          6144
+        ]
+      ],
+      "calls": 24,
+      "inclusive_host_us": 836.308
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          2048
+        ],
+        [
+          2048,
+          4096
+        ]
+      ],
+      "calls": 18,
+      "inclusive_host_us": 857.247
+    },
+    {
+      "name": "aten::bmm",
+      "input_dims": [
+        [
+          320,
+          128,
+          64
+        ],
+        [
+          320,
+          64,
+          64
+        ]
+      ],
+      "calls": 18,
+      "inclusive_host_us": 1006.5099999999999
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1300,
+          4096
+        ],
+        [
+          4096,
+          1024
+        ]
+      ],
+      "calls": 16,
+      "inclusive_host_us": 9821.609
+    },
+    {
+      "name": "aten::mm",
+      "input_dims": [
+        [
+          1088,
+          16
+        ],
+        [
+          16,
+          4096
+        ]
+      ],
+      "calls": 12,
+      "inclusive_host_us": 508.75299999999993
+    }
+  ],
+  "boundary": "Only cat=kernel counted as CUDA kernels. GPU annotations and CPU operation durations are nonadditive. Window covers first microbatch, not rollout, optimizer, or the complete update."
+}

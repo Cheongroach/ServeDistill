@@ -10,3 +10,5 @@ wheelhouse/
 .ops/
 *.part
 *.prefetch
+
+reports/profiling/raw/

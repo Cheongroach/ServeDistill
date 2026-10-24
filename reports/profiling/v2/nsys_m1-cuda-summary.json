@@ -1,0 +1,862 @@
+{
+  "trace_sha256": "903e2701f8651b1d0910e752c826be0aa6b4932f8a1dc9fd3ffb495eb5aa52d6",
+  "host_update_seconds": 36.340466696,
+  "cuda_kernel_count": 1509666,
+  "summed_kernel_seconds": 9.669211561,
+  "kernel_union_seconds_in_update": 9.669211561,
+  "kernel_copy_memset_union_seconds_in_update": 9.80316535,
+  "phase_device_launch_attribution": {
+    "rollout": {
+      "kernels": 217353,
+      "summed_device_seconds": 1.686177686
+    },
+    "learner_forward": {
+      "kernels": 225750,
+      "summed_device_seconds": 1.599667263
+    },
+    "unattributed": {
+      "kernels": 5920,
+      "summed_device_seconds": 0.015408217
+    },
+    "teacher_forward": {
+      "kernels": 41582,
+      "summed_device_seconds": 1.012644736
+    },
+    "full_vocabulary_kl": {
+      "kernels": 260,
+      "summed_device_seconds": 0.005210556
+    },
+    "reference_forward": {
+      "kernels": 211442,
+      "summed_device_seconds": 1.516116587
+    },
+    "backward": {
+      "kernels": 40,
+      "summed_device_seconds": 4.6848e-05
+    },
+    "backward_cross_thread_temporal": {
+      "kernels": 807282,
+      "summed_device_seconds": 3.833125302
+    },
+    "optimizer": {
+      "kernels": 37,
+      "summed_device_seconds": 0.000814366
+    }
+  },
+  "host_scopes": [
+    {
+      "name": "rollout",
+      "start_seconds": 0.00647698,
+      "end_seconds": 4.78980924
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 4.790956292,
+      "end_seconds": 5.104353475
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 5.10601894,
+      "end_seconds": 5.216917885
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 5.217370402,
+      "end_seconds": 5.228713769
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 5.229764324,
+      "end_seconds": 5.443322354
+    },
+    {
+      "name": "backward",
+      "start_seconds": 5.444081064,
+      "end_seconds": 6.285249117
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 6.285395962,
+      "end_seconds": 6.617837537
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 6.619537276,
+      "end_seconds": 6.687093201
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 6.687534651,
+      "end_seconds": 6.69701043
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 6.697201909,
+      "end_seconds": 6.913978379
+    },
+    {
+      "name": "backward",
+      "start_seconds": 6.914693561,
+      "end_seconds": 7.774682904
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 7.77484906,
+      "end_seconds": 8.330568636
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 8.332251426,
+      "end_seconds": 8.398484964
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 8.398925643,
+      "end_seconds": 8.414813145
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 8.415326244,
+      "end_seconds": 8.638058395
+    },
+    {
+      "name": "backward",
+      "start_seconds": 8.638809224,
+      "end_seconds": 9.493904847
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 9.494051102,
+      "end_seconds": 9.820950432
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 9.822679783,
+      "end_seconds": 9.889701849
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 9.890129416,
+      "end_seconds": 9.900279257
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 9.900480007,
+      "end_seconds": 10.115100452
+    },
+    {
+      "name": "backward",
+      "start_seconds": 10.11582168,
+      "end_seconds": 10.963626742
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 10.963774026,
+      "end_seconds": 11.332644944
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 11.334303735,
+      "end_seconds": 11.463057427
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 11.480097433,
+      "end_seconds": 11.492221009
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 11.49346259,
+      "end_seconds": 11.747852661
+    },
+    {
+      "name": "backward",
+      "start_seconds": 11.748582922,
+      "end_seconds": 12.770448532
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 12.770622717,
+      "end_seconds": 13.142885804
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 13.144605882,
+      "end_seconds": 13.21193992
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 13.230682546,
+      "end_seconds": 13.242450745
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 13.242702267,
+      "end_seconds": 13.483428017
+    },
+    {
+      "name": "backward",
+      "start_seconds": 13.484161951,
+      "end_seconds": 14.4950409
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 14.495200072,
+      "end_seconds": 15.117138256
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 15.118846743,
+      "end_seconds": 15.233852583
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 15.25102525,
+      "end_seconds": 15.263402011
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 15.263622486,
+      "end_seconds": 15.505655843
+    },
+    {
+      "name": "backward",
+      "start_seconds": 15.50639034,
+      "end_seconds": 16.500342552
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 16.500505326,
+      "end_seconds": 16.872566409
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 16.874262465,
+      "end_seconds": 16.940893716
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 16.959996867,
+      "end_seconds": 16.972949446
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 16.973156206,
+      "end_seconds": 17.229203258
+    },
+    {
+      "name": "backward",
+      "start_seconds": 17.229964355,
+      "end_seconds": 18.211013895
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 18.211160848,
+      "end_seconds": 18.537412845
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 18.539127646,
+      "end_seconds": 18.664855437
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 18.665320512,
+      "end_seconds": 18.678151319
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 18.678368331,
+      "end_seconds": 18.897330443
+    },
+    {
+      "name": "backward",
+      "start_seconds": 18.898067133,
+      "end_seconds": 19.734766117
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 19.734928708,
+      "end_seconds": 20.063118168
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 20.064778877,
+      "end_seconds": 20.143548205
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 20.143958481,
+      "end_seconds": 20.154901969
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 20.155096428,
+      "end_seconds": 20.372472283
+    },
+    {
+      "name": "backward",
+      "start_seconds": 20.373166251,
+      "end_seconds": 21.214165153
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 21.214312526,
+      "end_seconds": 21.817773473
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 21.819539027,
+      "end_seconds": 21.890206214
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 21.89066519,
+      "end_seconds": 21.902287151
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 21.902499416,
+      "end_seconds": 22.121780655
+    },
+    {
+      "name": "backward",
+      "start_seconds": 22.12253227,
+      "end_seconds": 23.028366638
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 23.028537011,
+      "end_seconds": 23.368748364
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 23.370436137,
+      "end_seconds": 23.439592074
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 23.440034687,
+      "end_seconds": 23.451615856
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 23.451823704,
+      "end_seconds": 23.673369796
+    },
+    {
+      "name": "backward",
+      "start_seconds": 23.674146824,
+      "end_seconds": 24.522210887
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 24.522385139,
+      "end_seconds": 24.856374841
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 24.858114373,
+      "end_seconds": 24.972442118
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 24.972951181,
+      "end_seconds": 24.986049532
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 24.987239081,
+      "end_seconds": 25.206277518
+    },
+    {
+      "name": "backward",
+      "start_seconds": 25.20704386,
+      "end_seconds": 26.05096424
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 26.051120262,
+      "end_seconds": 26.394966171
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 26.396753348,
+      "end_seconds": 26.465179044
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 26.465610842,
+      "end_seconds": 26.477351032
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 26.477565792,
+      "end_seconds": 26.696197345
+    },
+    {
+      "name": "backward",
+      "start_seconds": 26.696959711,
+      "end_seconds": 27.534394618
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 27.534556572,
+      "end_seconds": 27.866134029
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 27.867843309,
+      "end_seconds": 27.936728126
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 27.937213445,
+      "end_seconds": 27.950380109
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 27.951641463,
+      "end_seconds": 28.185508101
+    },
+    {
+      "name": "backward",
+      "start_seconds": 28.186232563,
+      "end_seconds": 29.0279391
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 29.028091426,
+      "end_seconds": 29.58915349
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 29.590912915,
+      "end_seconds": 29.660268894
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 29.660723549,
+      "end_seconds": 29.672118108
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 29.672320435,
+      "end_seconds": 29.894146205
+    },
+    {
+      "name": "backward",
+      "start_seconds": 29.894905142,
+      "end_seconds": 30.737294556
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 30.737465396,
+      "end_seconds": 31.042031593
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 31.043717352,
+      "end_seconds": 31.18217406
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 31.182640625,
+      "end_seconds": 31.193901959
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 31.194107624,
+      "end_seconds": 31.40001755
+    },
+    {
+      "name": "backward",
+      "start_seconds": 31.400751398,
+      "end_seconds": 32.162690891
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 32.162848335,
+      "end_seconds": 32.469331156
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 32.47103581,
+      "end_seconds": 32.538923946
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 32.539372294,
+      "end_seconds": 32.551000648
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 32.552043001,
+      "end_seconds": 32.754752085
+    },
+    {
+      "name": "backward",
+      "start_seconds": 32.755494936,
+      "end_seconds": 33.523522869
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 33.523672543,
+      "end_seconds": 33.840886673
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 33.842624283,
+      "end_seconds": 33.911047974
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 33.911452261,
+      "end_seconds": 33.922094553
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 33.922286038,
+      "end_seconds": 34.127855104
+    },
+    {
+      "name": "backward",
+      "start_seconds": 34.128562216,
+      "end_seconds": 34.901852509
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 34.901998272,
+      "end_seconds": 35.206836804
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 35.208528593,
+      "end_seconds": 35.276413236
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 35.276859153,
+      "end_seconds": 35.288909175
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 35.289983486,
+      "end_seconds": 35.494860605
+    },
+    {
+      "name": "backward",
+      "start_seconds": 35.495588819,
+      "end_seconds": 36.259674582
+    },
+    {
+      "name": "optimizer",
+      "start_seconds": 36.28666595,
+      "end_seconds": 36.298904551
+    }
+  ],
+  "top_kernels": [
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 8682,
+      "summed_device_seconds": 2.141294418,
+      "mean_us": 246.6360767104354,
+      "max_us": 753.632
+    },
+    {
+      "name": "elementwise_kernel",
+      "calls": 672260,
+      "summed_device_seconds": 1.796575557,
+      "mean_us": 2.6724415508880495,
+      "max_us": 103.104
+    },
+    {
+      "name": "vectorized_elementwise_kernel",
+      "calls": 514125,
+      "summed_device_seconds": 0.881229215,
+      "mean_us": 1.7140368879163628,
+      "max_us": 43.136
+    },
+    {
+      "name": "reduce_kernel",
+      "calls": 127158,
+      "summed_device_seconds": 0.604394296,
+      "mean_us": 4.753096903065478,
+      "max_us": 36.8
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 504,
+      "summed_device_seconds": 0.483650071,
+      "mean_us": 959.6231567460317,
+      "max_us": 1776.576
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 3750,
+      "summed_device_seconds": 0.357479359,
+      "mean_us": 95.32782906666667,
+      "max_us": 586.176
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 922,
+      "summed_device_seconds": 0.285609645,
+      "mean_us": 309.7718492407809,
+      "max_us": 2391.84
+    },
+    {
+      "name": "gemmSN_TN_kernel",
+      "calls": 8050,
+      "summed_device_seconds": 0.270061265,
+      "mean_us": 33.54798322981367,
+      "max_us": 1097.728
+    },
+    {
+      "name": "Kernel2",
+      "calls": 23124,
+      "summed_device_seconds": 0.243523201,
+      "mean_us": 10.531188418958658,
+      "max_us": 603.008
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 576,
+      "summed_device_seconds": 0.225249337,
+      "mean_us": 391.0578767361111,
+      "max_us": 395.584
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 33306,
+      "summed_device_seconds": 0.218380314,
+      "mean_us": 6.556785984507297,
+      "max_us": 25.344
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 582,
+      "summed_device_seconds": 0.19381636,
+      "mean_us": 333.0178006872852,
+      "max_us": 558.591
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 27335,
+      "summed_device_seconds": 0.179026375,
+      "mean_us": 6.549346076458753,
+      "max_us": 25.248
+    },
+    {
+      "name": "nvjet_tst_256x112_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 512,
+      "summed_device_seconds": 0.133903899,
+      "mean_us": 261.531052734375,
+      "max_us": 264.64
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 384,
+      "summed_device_seconds": 0.126302427,
+      "mean_us": 328.9125703125,
+      "max_us": 332.384
+    },
+    {
+      "name": "nvjet_tst_128x192_64x5_2x1_v_bz_coopB_TNN",
+      "calls": 256,
+      "summed_device_seconds": 0.114041981,
+      "mean_us": 445.47648828125,
+      "max_us": 447.488
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 16632,
+      "summed_device_seconds": 0.101557632,
+      "mean_us": 6.106158730158731,
+      "max_us": 17.28
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 312,
+      "summed_device_seconds": 0.101101418,
+      "mean_us": 324.04300641025645,
+      "max_us": 411.488
+    },
+    {
+      "name": "nvjet_tst_384x88_64x3_1x1_h_bz_coopA_TNT",
+      "calls": 352,
+      "summed_device_seconds": 0.093534793,
+      "mean_us": 265.72384375,
+      "max_us": 459.968
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x64x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 1680,
+      "summed_device_seconds": 0.088983101,
+      "mean_us": 52.96613154761905,
+      "max_us": 53.664
+    },
+    {
+      "name": "conv_depthwise2d_forward_kernel_generic",
+      "calls": 2910,
+      "summed_device_seconds": 0.080749553,
+      "mean_us": 27.748987285223368,
+      "max_us": 222.08
+    },
+    {
+      "name": "nvjet_tst_320x128_64x3_2x1_v_bz_coopB_TNT",
+      "calls": 384,
+      "summed_device_seconds": 0.07228932,
+      "mean_us": 188.2534375,
+      "max_us": 189.28
+    },
+    {
+      "name": "nvjet_tst_256x112_64x4_2x1_v_bz_coopA_splitK_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.067421675,
+      "mean_us": 263.36591796875,
+      "max_us": 265.439
+    },
+    {
+      "name": "splitKreduce_kernel",
+      "calls": 25004,
+      "summed_device_seconds": 0.066333455,
+      "mean_us": 2.6529137338025914,
+      "max_us": 13.44
+    },
+    {
+      "name": "nvjet_tst_64x176_64x7_2x1_v_bz_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.065183759,
+      "mean_us": 254.62405859375,
+      "max_us": 255.712
+    },
+    {
+      "name": "nvjet_tst_320x64_64x4_2x1_v_bz_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.048140143,
+      "mean_us": 188.04743359375,
+      "max_us": 281.024
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 144,
+      "summed_device_seconds": 0.046510416,
+      "mean_us": 322.989,
+      "max_us": 325.312
+    },
+    {
+      "name": "nvjet_tst_384x48_64x3_1x1_h_bz_TNT",
+      "calls": 448,
+      "summed_device_seconds": 0.039163193,
+      "mean_us": 87.41784151785714,
+      "max_us": 88.256
+    },
+    {
+      "name": "fmha_cutlassB_f32_aligned_128x64_k65536_sm80",
+      "calls": 102,
+      "summed_device_seconds": 0.037270285,
+      "mean_us": 365.3949509803922,
+      "max_us": 653.791
+    },
+    {
+      "name": "nvjet_tst_80x192_64x6_2x1_v_bz_TNN",
+      "calls": 256,
+      "summed_device_seconds": 0.036176947,
+      "mean_us": 141.31619921875,
+      "max_us": 142.304
+    }
+  ],
+  "cuda_api": [
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "calls": 1373013,
+      "host_seconds": 6.638014469
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "calls": 36420,
+      "host_seconds": 0.612434923
+    },
+    {
+      "name": "cudaLaunchKernelExC_v11060",
+      "calls": 101279,
+      "host_seconds": 0.561593115
+    },
+    {
+      "name": "cudaStreamSynchronize_v3020",
+      "calls": 5252,
+      "host_seconds": 0.146985354
+    },
+    {
+      "name": "cuLaunchKernel",
+      "calls": 23284,
+      "host_seconds": 0.132703506
+    },
+    {
+      "name": "cudaMemsetAsync_v3020",
+      "calls": 20002,
+      "host_seconds": 0.126860769
+    },
+    {
+      "name": "cuLaunchKernelEx",
+      "calls": 12090,
+      "host_seconds": 0.083698539
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "calls": 51,
+      "host_seconds": 0.071046983
+    },
+    {
+      "name": "cudaGetDeviceProperties_v2_v12000",
+      "calls": 12,
+      "host_seconds": 0.023309256
+    },
+    {
+      "name": "cuKernelGetFunction",
+      "calls": 23124,
+      "host_seconds": 0.014849153
+    },
+    {
+      "name": "cudaStreamIsCapturing_v10000",
+      "calls": 3632,
+      "host_seconds": 0.003282427
+    },
+    {
+      "name": "cuKernelGetAttribute",
+      "calls": 9960,
+      "host_seconds": 0.001278286
+    },
+    {
+      "name": "cuModuleLoadData",
+      "calls": 8,
+      "host_seconds": 0.001088024
+    },
+    {
+      "name": "cuLibraryLoadData",
+      "calls": 20,
+      "host_seconds": 0.000909841
+    },
+    {
+      "name": "cuKernelSetAttribute",
+      "calls": 348,
+      "host_seconds": 0.000109162
+    },
+    {
+      "name": "cuLibraryGetKernel",
+      "calls": 20,
+      "host_seconds": 6.568e-06
+    },
+    {
+      "name": "cuProfilerStart",
+      "calls": 1,
+      "host_seconds": 5.361e-06
+    }
+  ],
+  "representative_window": {
+    "start_seconds": 4.790956292,
+    "end_seconds": 6.285249117
+  },
+  "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization"
+}
