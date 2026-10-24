@@ -13,3 +13,10 @@ This is an edited project requirement summary, not a verbatim private session ex
 - Keep the experiment within a bounded thirty-hour wall-clock window, with at most thirty-two H20 GPUs.
 
 Internal resource names, service identifiers, endpoints, authentication material, unrelated workspace activity and raw terminal/session logs are intentionally absent.
+
+
+## Completion steering and outcome
+
+The final continuation requested collection and completion of the authorized experiment. The project used Qwen3.5-family public models and preserved the public-search primary benchmark plus fictional local-services checks. Final artifacts now include both seeds, all ablations, staged capability restoration, paired confidence intervals, native HTTP/cascade measurements, cold restoration evidence and complete GPU residency.
+
+The completed result deliberately records adverse outcomes: offline SFT won development selection; the selected OPD-family candidate failed a held-out substitute-retention gate; the search-trained adapters failed a different local-services output schema. No direct production qualification, real conversion gain, independent expert-weight merging, or asynchronous throughput benefit is claimed. All experiment GPUs were released.

@@ -19,3 +19,8 @@ Two seeds and 80 optimizer updates are frozen before final model comparisons. Ac
 The public reranker reference is Qwen3-Reranker-0.6B, a specialized joint query/document scorer. Its frozen search test NDCG was 0.8807. This observation does not pick an OPD hyperparameter or establish the final student comparison. Serving metrics distinguish in-process static batching, scheduler timing and real HTTP boundaries.
 
 Final deployment selection must use dev and an explicit general-regression constraint. Final test/OOD labels cannot control weights, reward or checkpoint choice. The extra official-test replication is called replication, not proven distribution shift.
+
+
+The completed experiment is archived in main revision `4bf7701`. All 28 training stages, final evaluations and native serving sweeps completed; 32 CPU regressions passed. Total scheduled H20 residency was 59.7544 GPU hours, with peak32 GPUs and a4.2108-hour allocation window. Every job is terminal. See FINAL_REFLECTION.md for the final choices and negative outcomes.
+
+Dev favored offline SFT; the best OPD-family dev candidate was full reverse KL. Full-KL two-seed test business macro was49.2478% vs25.8562% initially, while substitute macro-F1 regressed5.4812pp (paired task CI[-10.06196,-0.92825]pp). This failure blocks promotion despite aggregate gains. Test outcomes do not replace the frozen dev candidate.
