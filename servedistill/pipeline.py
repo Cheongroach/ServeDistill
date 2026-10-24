@@ -26,11 +26,30 @@ def main():
     p.add_argument("--output",type=Path,required=True)
     p.add_argument("--teacher-labels")
     p.add_argument("--business-config",type=Path)
+    p.add_argument("--initial-adapter",type=Path)
+    p.add_argument("--initial-selection",type=Path)
     p.add_argument("--benchmark",action="store_true")
     a=p.parse_args()
     a.output.mkdir(parents=True,exist_ok=True)
     common=["--student",a.student,"--teacher",a.teacher,"--data",a.data]
     adapter=None
+    if a.initial_adapter:
+        import hashlib
+        if a.business_config or not a.initial_selection:
+            p.error("External business checkpoint requires its dev selection and no duplicate business stage")
+        source=json.loads(a.initial_selection.read_text())
+        if "dev_score" not in source or source.get("step",0) < 1:
+            raise ValueError("Initial checkpoint has no recorded development selection")
+        weight=a.initial_adapter / "adapter_model.safetensors"
+        if not weight.is_file():raise FileNotFoundError(weight)
+        adapter=str(a.initial_adapter)
+        write_json(a.output / "initial-provenance.json", {
+            "selection":source,
+            "adapter_file_sha256":hashlib.file_digest(weight.open("rb"),"sha256").hexdigest(),
+            "initial_selection_uses_test":False,
+        })
+    elif a.initial_selection:
+        p.error("Initial selection requires an initial adapter")
     if a.business_config:
         before=a.output / "business_stage"
         call(["-m","servedistill.train",*common,"--config",str(a.business_config),"--output",str(before)])

@@ -4,7 +4,7 @@
 
 ServeDistill tests whether OPD is worth using for product-search relevance, reranking, capability retention, and small-model serving. The main benchmark uses real Amazon ESCI queries, product texts, and independently annotated labels. Fictional local-services tasks provide additional checks of budget, refunds, inventory, and clarification decisions.
 
-Current status: Qwen3.5 GPU qualification and probability-contract validation. Four nonzero FP32 pilot updates, frozen teacher checks, and matching adapter/Adam/RNG cold-restoration fingerprints passed. Maximum cached/recomputed log-probability error was 4.55e-5; the earlier BF16 gate rejected a batch at 0.194. **No final training improvement or serving speedup has been established yet**.
+Current status: the 26-run, two-seed training matrix is running on H20; two general-restoration stages and native vLLM HTTP baselines are also being executed. Four nonzero FP32 pilot updates, frozen teacher checks, and matching adapter/Adam/RNG cold-restoration fingerprints passed. Maximum cached/recomputed log-probability error was 4.55e-5; the earlier BF16 gate rejected a batch at 0.194. **No final training improvement or serving speedup has been established yet**.
 
 The primary public models are **Qwen3.5-9B → Qwen3.5-2B**, with Qwen3.5-4B as a serving/quality reference. These are public post-trained checkpoints, used through their text-only language components. Prompt-routed teachers are not presented as independently trained domain experts. Thinking is explicitly disabled for both teacher and student.
 

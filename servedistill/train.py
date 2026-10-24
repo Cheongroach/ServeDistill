@@ -134,8 +134,8 @@ def alert(metrics: dict, history: list[dict]) -> list[str]:
         baseline = history[0]
         if (metrics["reward_mean"] < baseline["reward_mean"] - 0.2
                 and metrics["entropy"] < baseline["entropy"] * 0.5
-                and (abs(metrics["reference_sampled_kl"]) >
-                     abs(baseline["reference_sampled_kl"]) + 0.3
+                and (abs(metrics.get("reference_sampled_kl", 0.0)) >
+                     abs(baseline.get("reference_sampled_kl", 0.0)) + 0.3
                      or metrics["gradient_norm"] > max(1.0, baseline["gradient_norm"]) * 5)):
             alarms.append("reward_entropy_divergence_joint_alarm")
         if (metrics["truncation_rate"] > 0.5 and metrics["json_valid"] < 0.3

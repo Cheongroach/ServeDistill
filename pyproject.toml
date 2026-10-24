@@ -20,6 +20,7 @@ dependencies = [
 
 [project.optional-dependencies]
 data = ["pandas>=2.2", "pyarrow>=17"]
+http = ["aiohttp>=3.12"]
 kernels = ["flash-linear-attention==0.4.1", "einops==0.8.1"]
 
 [tool.setuptools.packages.find]
