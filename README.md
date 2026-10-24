@@ -10,6 +10,8 @@ The dev-selected OPD-family method (`full_kl`) reached a two-seed business macro
 
 Read the [final report](reports/FINAL_REPORT.md), [interview notes](reports/INTERVIEW_NOTES.md), [measured statistics](reports/results.json), and [complete allocation cost](reports/cost-audit.json). [Task score evidence](reports/evidence/task-metrics.jsonl.gz) supports independent paired-statistics checks.
 
+A separate [H20 profiling study](reports/profiling/REPORT.md) includes real Nsight CUDA/NVTX traces, PyTorch input shapes, a microbatch 1/4 diagnostic, and reproducible commands. Kernel count fell 63.9% in the traced comparison; runtime ratios remain diagnostic because profiler overhead and shape compilation affect timing. Both observation allocations are released: **0.87 additional H20 GPU hours**, or **60.62 GPU hours** including the original study. See the [observation cost audit](reports/profiling/cost-audit.json).
+
 The primary public models are **Qwen3.5-9B → Qwen3.5-2B**, with Qwen3.5-4B as a serving/quality reference. These are public post-trained checkpoints, used through their text-only language components. Prompt-routed teachers are not presented as independently trained domain experts. Thinking is explicitly disabled for both teacher and student.
 
 - Main tasks: search reranking, E/S/C/I relevance classification, substitute identification.

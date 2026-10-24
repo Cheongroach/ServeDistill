@@ -1,0 +1,1284 @@
+{
+  "baseline_m1": {
+    "host_seconds": {
+      "rollout": 9.254162785,
+      "learner_forward": 9.884458945999999,
+      "teacher_forward": 22.568228142,
+      "full_vocabulary_kl": 0.317445114,
+      "reference_forward": 3.7081801980000004,
+      "backward": 17.608714187000004,
+      "optimizer": 0.009627634,
+      "update": 63.564355722
+    },
+    "metrics": [
+      {
+        "effective_group_fraction": 0.6,
+        "reward_mean": 0.3499999940395355,
+        "reward_std": 0.4769695997238159,
+        "clip_fraction": 0.0,
+        "ratio_min": 0.9999915978405625,
+        "ratio_max": 1.000018982682377,
+        "ess_fraction": 1.0000000048894435,
+        "teacher_sampled_kl": 0.139921989695722,
+        "reference_sampled_kl": 0.09499714596313424,
+        "entropy": 0.18001275372807868,
+        "loss": 0.17953129274701496,
+        "rl_loss": -0.045105380937457085,
+        "opd_loss": 0.17953129274701496,
+        "gradient_projection_cosine": 0.0,
+        "rl_gradient_projection_norm": 0.0,
+        "opd_gradient_projection_norm": 0.4036059081554413,
+        "step": 41,
+        "rollout_version": 40,
+        "learner_version": 41,
+        "gradient_norm": 5.635598659515381,
+        "parameter_delta_l2": 0.0181979243816624,
+        "response_tokens": 256,
+        "cumulative_response_tokens": 11884,
+        "opd_weight": 1.0,
+        "behavior_max_error": 4.9591064453125e-05,
+        "behavior_tolerance": 0.15,
+        "json_valid": 0.95,
+        "truncation_rate": 0.0,
+        "domains": {
+          "substitute": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 36,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "search": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 114,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "math": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 42,
+            "reward": 0.25,
+            "success": 0.25
+          },
+          "relevance": {
+            "prompts": 2,
+            "sequences": 8,
+            "response_tokens": 64,
+            "reward": 0.0,
+            "success": 0.0
+          }
+        },
+        "elapsed_seconds": 147.03480961639434,
+        "cuda_peak_bytes": 26746209280,
+        "alarms": []
+      },
+      {
+        "effective_group_fraction": 0.6,
+        "reward_mean": 0.6430764198303223,
+        "reward_std": 0.4721636176109314,
+        "clip_fraction": 0.0,
+        "ratio_min": 0.9999855510337612,
+        "ratio_max": 1.0000118792267652,
+        "ess_fraction": 1.0000000395960187,
+        "teacher_sampled_kl": 0.43666014069479037,
+        "reference_sampled_kl": 0.11214706164788017,
+        "entropy": 0.21006855916218706,
+        "loss": 0.333259715915447,
+        "rl_loss": -0.01835730640290062,
+        "opd_loss": 0.333259715915447,
+        "step": 42,
+        "rollout_version": 41,
+        "learner_version": 42,
+        "gradient_norm": 12.996108055114746,
+        "parameter_delta_l2": 0.018713382879163545,
+        "response_tokens": 283,
+        "cumulative_response_tokens": 12167,
+        "opd_weight": 1.0,
+        "behavior_max_error": 5.352497100830078e-05,
+        "behavior_tolerance": 0.15,
+        "json_valid": 0.95,
+        "truncation_rate": 0.0,
+        "domains": {
+          "search": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 117,
+            "reward": 0.7153821386886323,
+            "success": 0.0
+          },
+          "instruction": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 62,
+            "reward": 0.0,
+            "success": 0.0
+          },
+          "substitute": {
+            "prompts": 2,
+            "sequences": 8,
+            "response_tokens": 72,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "relevance": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 32,
+            "reward": 1.0,
+            "success": 1.0
+          }
+        },
+        "elapsed_seconds": 210.599355250597,
+        "cuda_peak_bytes": 26746209280,
+        "alarms": []
+      }
+    ],
+    "rollout_token_sha256": "94d0944cb52b44b5d619be851b8add544292ed63c936774e0e71cfb61c9cccff",
+    "rollout_mask_sha256": "bc90559e85f9bc3cdc6e8bfc810080208b7a27f61cb34731a00b8bd8f669478c",
+    "sample_ids_sha256": "d66ed61b4ec0b63a3d5af6b3ff66263e4acccc7d535179aa1f95baf3ab0ada1b",
+    "restoration": {
+      "passed": true,
+      "step": 40,
+      "adapter_sha256": "07389328ec13823f16bc1e5e45af92fed57fc7b26e7adf70ca48d0d1f8f9d136",
+      "optimizer_sha256": "434f349a1d977eca2e0b6938f76d49b5b4939d6184cb3150e64ba7800b2f739d",
+      "rng_sha256": "f7bfc6cf77ed43fc11da2a595ec11682f3e49d0e1298a6cd1ed20bbd0258e62e"
+    },
+    "configuration": {
+      "checkpoint_configuration": {
+        "objective": "full_kl",
+        "train_precision": "float32_torch",
+        "business_domains": [
+          "search",
+          "relevance",
+          "substitute"
+        ],
+        "seed": 17,
+        "steps": 80,
+        "prompts_per_step": 5,
+        "group_size": 4,
+        "microbatch": 1,
+        "rollout_batch": 4,
+        "max_new_tokens": 128,
+        "learning_rate": 2e-05,
+        "opd_weight": 1.0,
+        "aggregation": "token",
+        "bucketed": false,
+        "business_only": false,
+        "general_only": false,
+        "dev_every": 20,
+        "dev_per_domain": 20,
+        "clip": 0.2,
+        "behavior_tolerance": 0.15
+      },
+      "observed_configuration": {
+        "objective": "full_kl",
+        "train_precision": "float32_torch",
+        "business_domains": [
+          "search",
+          "relevance",
+          "substitute"
+        ],
+        "seed": 17,
+        "steps": 80,
+        "prompts_per_step": 5,
+        "group_size": 4,
+        "microbatch": 1,
+        "rollout_batch": 4,
+        "max_new_tokens": 128,
+        "learning_rate": 2e-05,
+        "opd_weight": 1.0,
+        "aggregation": "token",
+        "bucketed": false,
+        "business_only": false,
+        "general_only": false,
+        "dev_every": 20,
+        "dev_per_domain": 20,
+        "clip": 0.2,
+        "behavior_tolerance": 0.15
+      },
+      "backend": "none",
+      "first_update": 42,
+      "last_update": 42,
+      "profiler_options": {
+        "record_shapes": false,
+        "profile_memory": false,
+        "with_stack": false
+      },
+      "boundary": "diagnostic clone; original checkpoints and final selection unchanged"
+    }
+  },
+  "nsys_m1": {
+    "host_seconds": {
+      "rollout": 5.539551125,
+      "learner_forward": 9.801409754000002,
+      "teacher_forward": 2.039322728,
+      "full_vocabulary_kl": 0.338000141,
+      "reference_forward": 5.268433192000001,
+      "backward": 19.972816448000003,
+      "optimizer": 0.013601512,
+      "update": 43.177540672
+    },
+    "metrics": [
+      {
+        "effective_group_fraction": 0.6,
+        "reward_mean": 0.3499999940395355,
+        "reward_std": 0.4769695997238159,
+        "clip_fraction": 0.0,
+        "ratio_min": 0.9999915978405625,
+        "ratio_max": 1.000018982682377,
+        "ess_fraction": 1.0000000048894435,
+        "teacher_sampled_kl": 0.139921989695722,
+        "reference_sampled_kl": 0.09499714596313424,
+        "entropy": 0.18001275372807868,
+        "loss": 0.17953129274701496,
+        "rl_loss": -0.045105380937457085,
+        "opd_loss": 0.17953129274701496,
+        "gradient_projection_cosine": 0.0,
+        "rl_gradient_projection_norm": 0.0,
+        "opd_gradient_projection_norm": 0.4036059081554413,
+        "step": 41,
+        "rollout_version": 40,
+        "learner_version": 41,
+        "gradient_norm": 5.635598659515381,
+        "parameter_delta_l2": 0.0181979244484298,
+        "response_tokens": 256,
+        "cumulative_response_tokens": 11884,
+        "opd_weight": 1.0,
+        "behavior_max_error": 4.9591064453125e-05,
+        "behavior_tolerance": 0.15,
+        "json_valid": 0.95,
+        "truncation_rate": 0.0,
+        "domains": {
+          "relevance": {
+            "prompts": 2,
+            "sequences": 8,
+            "response_tokens": 64,
+            "reward": 0.0,
+            "success": 0.0
+          },
+          "substitute": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 36,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "search": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 114,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "math": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 42,
+            "reward": 0.25,
+            "success": 0.25
+          }
+        },
+        "elapsed_seconds": 36.90541936736554,
+        "cuda_peak_bytes": 26637933056,
+        "alarms": []
+      },
+      {
+        "effective_group_fraction": 0.6,
+        "reward_mean": 0.6430764198303223,
+        "reward_std": 0.4721636176109314,
+        "clip_fraction": 0.0,
+        "ratio_min": 0.9999847599558613,
+        "ratio_max": 1.0000132002173376,
+        "ess_fraction": 0.9999999991575315,
+        "teacher_sampled_kl": 0.43666005960431997,
+        "reference_sampled_kl": 0.11214697237254875,
+        "entropy": 0.21006861105297986,
+        "loss": 0.33326096542289824,
+        "rl_loss": -0.018357174977818143,
+        "opd_loss": 0.33326096542289824,
+        "step": 42,
+        "rollout_version": 41,
+        "learner_version": 42,
+        "gradient_norm": 12.99612808227539,
+        "parameter_delta_l2": 0.018713381112240482,
+        "response_tokens": 283,
+        "cumulative_response_tokens": 12167,
+        "opd_weight": 1.0,
+        "behavior_max_error": 5.0067901611328125e-05,
+        "behavior_tolerance": 0.15,
+        "json_valid": 0.95,
+        "truncation_rate": 0.0,
+        "domains": {
+          "instruction": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 62,
+            "reward": 0.0,
+            "success": 0.0
+          },
+          "relevance": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 32,
+            "reward": 1.0,
+            "success": 1.0
+          },
+          "substitute": {
+            "prompts": 2,
+            "sequences": 8,
+            "response_tokens": 72,
+            "reward": 0.75,
+            "success": 0.75
+          },
+          "search": {
+            "prompts": 1,
+            "sequences": 4,
+            "response_tokens": 117,
+            "reward": 0.7153821386886323,
+            "success": 0.0
+          }
+        },
+        "elapsed_seconds": 80.51920332480222,
+        "cuda_peak_bytes": 26637933056,
+        "alarms": []
+      }
+    ],
+    "rollout_token_sha256": "94d0944cb52b44b5d619be851b8add544292ed63c936774e0e71cfb61c9cccff",
+    "rollout_mask_sha256": "bc90559e85f9bc3cdc6e8bfc810080208b7a27f61cb34731a00b8bd8f669478c",
+    "sample_ids_sha256": "d66ed61b4ec0b63a3d5af6b3ff66263e4acccc7d535179aa1f95baf3ab0ada1b",
+    "restoration": {
+      "passed": true,
+      "step": 40,
+      "adapter_sha256": "07389328ec13823f16bc1e5e45af92fed57fc7b26e7adf70ca48d0d1f8f9d136",
+      "optimizer_sha256": "434f349a1d977eca2e0b6938f76d49b5b4939d6184cb3150e64ba7800b2f739d",
+      "rng_sha256": "f7bfc6cf77ed43fc11da2a595ec11682f3e49d0e1298a6cd1ed20bbd0258e62e"
+    },
+    "configuration": {
+      "checkpoint_configuration": {
+        "objective": "full_kl",
+        "train_precision": "float32_torch",
+        "business_domains": [
+          "search",
+          "relevance",
+          "substitute"
+        ],
+        "seed": 17,
+        "steps": 80,
+        "prompts_per_step": 5,
+        "group_size": 4,
+        "microbatch": 1,
+        "rollout_batch": 4,
+        "max_new_tokens": 128,
+        "learning_rate": 2e-05,
+        "opd_weight": 1.0,
+        "aggregation": "token",
+        "bucketed": false,
+        "business_only": false,
+        "general_only": false,
+        "dev_every": 20,
+        "dev_per_domain": 20,
+        "clip": 0.2,
+        "behavior_tolerance": 0.15
+      },
+      "observed_configuration": {
+        "objective": "full_kl",
+        "train_precision": "float32_torch",
+        "business_domains": [
+          "search",
+          "relevance",
+          "substitute"
+        ],
+        "seed": 17,
+        "steps": 80,
+        "prompts_per_step": 5,
+        "group_size": 4,
+        "microbatch": 1,
+        "rollout_batch": 4,
+        "max_new_tokens": 128,
+        "learning_rate": 2e-05,
+        "opd_weight": 1.0,
+        "aggregation": "token",
+        "bucketed": false,
+        "business_only": false,
+        "general_only": false,
+        "dev_every": 20,
+        "dev_per_domain": 20,
+        "clip": 0.2,
+        "behavior_tolerance": 0.15
+      },
+      "backend": "nsys",
+      "first_update": 42,
+      "last_update": 42,
+      "profiler_options": {
+        "record_shapes": false,
+        "profile_memory": false,
+        "with_stack": false
+      },
+      "boundary": "diagnostic clone; original checkpoints and final selection unchanged"
+    },
+    "cuda": {
+      "trace_sha256": "81836d3ae07795fadad8a543a56c253172a70dd1c99c163ed48b12da0d94f8e2",
+      "host_update_seconds": 43.177496544,
+      "cuda_kernel_count": 1509666,
+      "summed_kernel_seconds": 9.692318411,
+      "kernel_union_seconds_in_update": 9.692318411,
+      "kernel_copy_memset_union_seconds_in_update": 9.837374326,
+      "phase_device_launch_attribution": {
+        "rollout": {
+          "kernels": 217353,
+          "summed_device_seconds": 1.686046034
+        },
+        "learner_forward": {
+          "kernels": 225750,
+          "summed_device_seconds": 1.603861712
+        },
+        "unattributed": {
+          "kernels": 5920,
+          "summed_device_seconds": 0.015326686
+        },
+        "teacher_forward": {
+          "kernels": 41582,
+          "summed_device_seconds": 1.020550777
+        },
+        "full_vocabulary_kl": {
+          "kernels": 260,
+          "summed_device_seconds": 0.005222712
+        },
+        "reference_forward": {
+          "kernels": 211442,
+          "summed_device_seconds": 1.519229438
+        },
+        "backward": {
+          "kernels": 40,
+          "summed_device_seconds": 4.688e-05
+        },
+        "backward_cross_thread_temporal": {
+          "kernels": 807282,
+          "summed_device_seconds": 3.841222015
+        },
+        "optimizer": {
+          "kernels": 37,
+          "summed_device_seconds": 0.000812157
+        }
+      },
+      "host_scopes": [
+        {
+          "name": "rollout",
+          "start_seconds": 0.006948782,
+          "end_seconds": 5.546501512
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 5.547872874,
+          "end_seconds": 6.259012198
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 6.260898955,
+          "end_seconds": 6.391267924
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 6.391905429,
+          "end_seconds": 6.406776047
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 6.408132106,
+          "end_seconds": 6.658835075
+        },
+        {
+          "name": "backward",
+          "start_seconds": 6.659673878,
+          "end_seconds": 7.615603513
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 7.615827548,
+          "end_seconds": 8.010236067
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 8.012111244,
+          "end_seconds": 8.091294817
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 8.091924019,
+          "end_seconds": 8.105948427
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 8.106184662,
+          "end_seconds": 8.364784654
+        },
+        {
+          "name": "backward",
+          "start_seconds": 8.365582483,
+          "end_seconds": 9.330589121
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 9.330781478,
+          "end_seconds": 9.71596734
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 9.717922013,
+          "end_seconds": 9.798037711
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 9.798580129,
+          "end_seconds": 9.81324041
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 9.813569165,
+          "end_seconds": 10.085047305
+        },
+        {
+          "name": "backward",
+          "start_seconds": 10.085926504,
+          "end_seconds": 11.066179329
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 11.06635157,
+          "end_seconds": 11.451884685
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 11.454249959,
+          "end_seconds": 11.533297509
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 11.533891649,
+          "end_seconds": 11.552546581
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 11.552860884,
+          "end_seconds": 11.799896978
+        },
+        {
+          "name": "backward",
+          "start_seconds": 11.800767534,
+          "end_seconds": 12.770749475
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 12.770923622,
+          "end_seconds": 13.588757324
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 13.590706089,
+          "end_seconds": 13.746576944
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 13.751963869,
+          "end_seconds": 13.769006883
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 13.770670299,
+          "end_seconds": 14.076207468
+        },
+        {
+          "name": "backward",
+          "start_seconds": 14.077080663,
+          "end_seconds": 15.257050457
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 15.257267583,
+          "end_seconds": 15.752889007
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 15.754804146,
+          "end_seconds": 15.830802339
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 15.842484768,
+          "end_seconds": 15.857772917
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 15.858011941,
+          "end_seconds": 16.142939054
+        },
+        {
+          "name": "backward",
+          "start_seconds": 16.143841179,
+          "end_seconds": 17.303495155
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 17.303744495,
+          "end_seconds": 17.765664263
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 17.767506976,
+          "end_seconds": 17.90839575
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 17.915103287,
+          "end_seconds": 17.939168645
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 17.939395115,
+          "end_seconds": 18.224598016
+        },
+        {
+          "name": "backward",
+          "start_seconds": 18.225533214,
+          "end_seconds": 19.368811796
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 19.369014886,
+          "end_seconds": 19.810353462
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 19.812430785,
+          "end_seconds": 19.891821421
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 19.900451819,
+          "end_seconds": 19.924337505
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 19.925177985,
+          "end_seconds": 20.217502379
+        },
+        {
+          "name": "backward",
+          "start_seconds": 20.218321618,
+          "end_seconds": 21.417956686
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 21.418182531,
+          "end_seconds": 22.195576426
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 22.197509203,
+          "end_seconds": 22.384493063
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 22.385105889,
+          "end_seconds": 22.402930305
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 22.403172665,
+          "end_seconds": 22.669019994
+        },
+        {
+          "name": "backward",
+          "start_seconds": 22.66990566,
+          "end_seconds": 23.647219775
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 23.647420228,
+          "end_seconds": 24.043091107
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 24.045187525,
+          "end_seconds": 24.140035886
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 24.140598356,
+          "end_seconds": 24.155967405
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 24.156185825,
+          "end_seconds": 24.417511399
+        },
+        {
+          "name": "backward",
+          "start_seconds": 24.418406906,
+          "end_seconds": 25.395280412
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 25.395472114,
+          "end_seconds": 25.7983186
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 25.800503194,
+          "end_seconds": 25.884665566
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 25.885245256,
+          "end_seconds": 25.9004789
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 25.900783834,
+          "end_seconds": 26.153426602
+        },
+        {
+          "name": "backward",
+          "start_seconds": 26.154377248,
+          "end_seconds": 27.127271187
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 27.127460671,
+          "end_seconds": 27.532732658
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 27.534631946,
+          "end_seconds": 27.617450439
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 27.618024224,
+          "end_seconds": 27.634078905
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 27.634299061,
+          "end_seconds": 27.901481901
+        },
+        {
+          "name": "backward",
+          "start_seconds": 27.902334729,
+          "end_seconds": 28.875419129
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 28.875622638,
+          "end_seconds": 29.632949544
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 29.634914338,
+          "end_seconds": 29.770478231
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 29.771048885,
+          "end_seconds": 29.788241509
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 29.789782078,
+          "end_seconds": 30.049176771
+        },
+        {
+          "name": "backward",
+          "start_seconds": 30.050026282,
+          "end_seconds": 31.026817644
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 31.027019957,
+          "end_seconds": 31.426577392
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 31.428671929,
+          "end_seconds": 31.507790944
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 31.508363149,
+          "end_seconds": 31.522954195
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 31.523179757,
+          "end_seconds": 31.778253611
+        },
+        {
+          "name": "backward",
+          "start_seconds": 31.779182105,
+          "end_seconds": 32.787236501
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 32.787420226,
+          "end_seconds": 33.18409963
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 33.186177418,
+          "end_seconds": 33.263969505
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 33.264506496,
+          "end_seconds": 33.282844515
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 33.284588983,
+          "end_seconds": 33.561659302
+        },
+        {
+          "name": "backward",
+          "start_seconds": 33.562473699,
+          "end_seconds": 34.548302826
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 34.548493579,
+          "end_seconds": 34.949396367
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 34.951341736,
+          "end_seconds": 35.03638788
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 35.036966594,
+          "end_seconds": 35.0517016
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 35.051932566,
+          "end_seconds": 35.309513167
+        },
+        {
+          "name": "backward",
+          "start_seconds": 35.310340472,
+          "end_seconds": 36.352816505
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 36.353012807,
+          "end_seconds": 36.716867927
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 36.718812388,
+          "end_seconds": 36.874884597
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 36.875414179,
+          "end_seconds": 36.889672523
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 36.889944186,
+          "end_seconds": 37.131936674
+        },
+        {
+          "name": "backward",
+          "start_seconds": 37.13276875,
+          "end_seconds": 37.982909352
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 37.983098265,
+          "end_seconds": 38.665234556
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 38.667323118,
+          "end_seconds": 38.746420166
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 38.746990942,
+          "end_seconds": 38.762568749
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 38.763929689,
+          "end_seconds": 39.000830718
+        },
+        {
+          "name": "backward",
+          "start_seconds": 39.001723415,
+          "end_seconds": 39.879494977
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 39.879715534,
+          "end_seconds": 40.240938262
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 40.242868557,
+          "end_seconds": 40.321409122
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 40.322048225,
+          "end_seconds": 40.341953802
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 40.342183324,
+          "end_seconds": 40.595879617
+        },
+        {
+          "name": "backward",
+          "start_seconds": 40.596719011,
+          "end_seconds": 41.493971241
+        },
+        {
+          "name": "learner_forward",
+          "start_seconds": 41.494167862,
+          "end_seconds": 41.859848036
+        },
+        {
+          "name": "teacher_forward",
+          "start_seconds": 41.861872911,
+          "end_seconds": 41.940329808
+        },
+        {
+          "name": "full_vocabulary_kl",
+          "start_seconds": 41.940951235,
+          "end_seconds": 41.957448801
+        },
+        {
+          "name": "reference_forward",
+          "start_seconds": 41.959041169,
+          "end_seconds": 42.203078611
+        },
+        {
+          "name": "backward",
+          "start_seconds": 42.204080781,
+          "end_seconds": 43.084805531
+        },
+        {
+          "name": "optimizer",
+          "start_seconds": 43.116754701,
+          "end_seconds": 43.130353195
+        }
+      ],
+      "top_kernels": [
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 8682,
+          "summed_device_seconds": 2.148597164,
+          "mean_us": 247.47721308454274,
+          "max_us": 756.927
+        },
+        {
+          "name": "elementwise_kernel",
+          "calls": 672260,
+          "summed_device_seconds": 1.798075587,
+          "mean_us": 2.674672875078095,
+          "max_us": 102.944
+        },
+        {
+          "name": "vectorized_elementwise_kernel",
+          "calls": 514125,
+          "summed_device_seconds": 0.881825831,
+          "mean_us": 1.715197337223438,
+          "max_us": 43.199
+        },
+        {
+          "name": "reduce_kernel",
+          "calls": 127158,
+          "summed_device_seconds": 0.604702604,
+          "mean_us": 4.7555215086742475,
+          "max_us": 36.992
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 504,
+          "summed_device_seconds": 0.485078332,
+          "mean_us": 962.4570079365079,
+          "max_us": 1783.581
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 3750,
+          "summed_device_seconds": 0.358877861,
+          "mean_us": 95.70076293333334,
+          "max_us": 589.343
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 922,
+          "summed_device_seconds": 0.28608979,
+          "mean_us": 310.2926138828633,
+          "max_us": 2401.308
+        },
+        {
+          "name": "gemmSN_TN_kernel",
+          "calls": 8050,
+          "summed_device_seconds": 0.270402664,
+          "mean_us": 33.59039304347826,
+          "max_us": 1102.302
+        },
+        {
+          "name": "Kernel2",
+          "calls": 23124,
+          "summed_device_seconds": 0.244443294,
+          "mean_us": 10.570977944992215,
+          "max_us": 607.359
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 576,
+          "summed_device_seconds": 0.225775632,
+          "mean_us": 391.97158333333334,
+          "max_us": 396.255
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 33306,
+          "summed_device_seconds": 0.218526288,
+          "mean_us": 6.5611687984147,
+          "max_us": 24.544
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 582,
+          "summed_device_seconds": 0.194519451,
+          "mean_us": 334.2258608247423,
+          "max_us": 560.927
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 27335,
+          "summed_device_seconds": 0.179495926,
+          "mean_us": 6.5665237241631615,
+          "max_us": 25.184
+        },
+        {
+          "name": "nvjet_tst_256x112_64x4_2x1_v_bz_coopA_TNT",
+          "calls": 512,
+          "summed_device_seconds": 0.135138178,
+          "mean_us": 263.94175390625,
+          "max_us": 265.024
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 384,
+          "summed_device_seconds": 0.126493651,
+          "mean_us": 329.41054947916666,
+          "max_us": 332.447
+        },
+        {
+          "name": "nvjet_tst_128x192_64x5_2x1_v_bz_coopB_TNN",
+          "calls": 256,
+          "summed_device_seconds": 0.115287196,
+          "mean_us": 450.340609375,
+          "max_us": 453.183
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 16632,
+          "summed_device_seconds": 0.101868258,
+          "mean_us": 6.124835137085137,
+          "max_us": 17.536
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 312,
+          "summed_device_seconds": 0.101303544,
+          "mean_us": 324.6908461538461,
+          "max_us": 412.799
+        },
+        {
+          "name": "nvjet_tst_384x88_64x3_1x1_h_bz_coopA_TNT",
+          "calls": 352,
+          "summed_device_seconds": 0.094326698,
+          "mean_us": 267.9735738636364,
+          "max_us": 463.711
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x64x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 1680,
+          "summed_device_seconds": 0.089279919,
+          "mean_us": 53.142808928571434,
+          "max_us": 53.952
+        },
+        {
+          "name": "conv_depthwise2d_forward_kernel_generic",
+          "calls": 2910,
+          "summed_device_seconds": 0.080930767,
+          "mean_us": 27.811260137457044,
+          "max_us": 222.176
+        },
+        {
+          "name": "nvjet_tst_320x128_64x3_2x1_v_bz_coopB_TNT",
+          "calls": 384,
+          "summed_device_seconds": 0.072946664,
+          "mean_us": 189.96527083333334,
+          "max_us": 191.296
+        },
+        {
+          "name": "nvjet_tst_256x112_64x4_2x1_v_bz_coopA_splitK_TNT",
+          "calls": 256,
+          "summed_device_seconds": 0.068044362,
+          "mean_us": 265.7982890625,
+          "max_us": 267.071
+        },
+        {
+          "name": "nvjet_tst_64x176_64x7_2x1_v_bz_TNT",
+          "calls": 256,
+          "summed_device_seconds": 0.065808882,
+          "mean_us": 257.0659453125,
+          "max_us": 258.111
+        },
+        {
+          "name": "splitKreduce_kernel",
+          "calls": 25004,
+          "summed_device_seconds": 0.063337145,
+          "mean_us": 2.533080507118861,
+          "max_us": 13.6
+        },
+        {
+          "name": "nvjet_tst_320x64_64x4_2x1_v_bz_TNT",
+          "calls": 256,
+          "summed_device_seconds": 0.048605327,
+          "mean_us": 189.86455859375,
+          "max_us": 285.088
+        },
+        {
+          "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x128x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+          "calls": 144,
+          "summed_device_seconds": 0.046605965,
+          "mean_us": 323.65253472222224,
+          "max_us": 327.935
+        },
+        {
+          "name": "nvjet_tst_384x48_64x3_1x1_h_bz_TNT",
+          "calls": 448,
+          "summed_device_seconds": 0.039517442,
+          "mean_us": 88.20857589285714,
+          "max_us": 88.672
+        },
+        {
+          "name": "fmha_cutlassB_f32_aligned_128x64_k65536_sm80",
+          "calls": 102,
+          "summed_device_seconds": 0.037587961,
+          "mean_us": 368.5094215686275,
+          "max_us": 660.255
+        },
+        {
+          "name": "nvjet_tst_80x192_64x6_2x1_v_bz_TNN",
+          "calls": 256,
+          "summed_device_seconds": 0.036518049,
+          "mean_us": 142.64862890625,
+          "max_us": 143.488
+        }
+      ],
+      "cuda_api": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "calls": 1373013,
+          "host_seconds": 8.613341169
+        },
+        {
+          "name": "cudaLaunchKernelExC_v11060",
+          "calls": 101279,
+          "host_seconds": 0.723188231
+        },
+        {
+          "name": "cudaMemcpyAsync_v3020",
+          "calls": 36420,
+          "host_seconds": 0.666905584
+        },
+        {
+          "name": "cuLaunchKernel",
+          "calls": 23284,
+          "host_seconds": 0.172885452
+        },
+        {
+          "name": "cudaMemsetAsync_v3020",
+          "calls": 20002,
+          "host_seconds": 0.14060926
+        },
+        {
+          "name": "cudaStreamSynchronize_v3020",
+          "calls": 5252,
+          "host_seconds": 0.120836815
+        },
+        {
+          "name": "cuLaunchKernelEx",
+          "calls": 12090,
+          "host_seconds": 0.109583869
+        },
+        {
+          "name": "cudaGetDeviceProperties_v2_v12000",
+          "calls": 12,
+          "host_seconds": 0.059346351
+        },
+        {
+          "name": "cudaDeviceSynchronize_v3020",
+          "calls": 51,
+          "host_seconds": 0.030982588
+        },
+        {
+          "name": "cuKernelGetFunction",
+          "calls": 23124,
+          "host_seconds": 0.017264498
+        },
+        {
+          "name": "cudaStreamIsCapturing_v10000",
+          "calls": 3632,
+          "host_seconds": 0.003590857
+        },
+        {
+          "name": "cuKernelGetAttribute",
+          "calls": 9960,
+          "host_seconds": 0.001512295
+        },
+        {
+          "name": "cuModuleLoadData",
+          "calls": 8,
+          "host_seconds": 0.001177027
+        },
+        {
+          "name": "cuLibraryLoadData",
+          "calls": 20,
+          "host_seconds": 0.001087611
+        },
+        {
+          "name": "cuKernelSetAttribute",
+          "calls": 348,
+          "host_seconds": 0.000118176
+        },
+        {
+          "name": "cuLibraryGetKernel",
+          "calls": 20,
+          "host_seconds": 7.944e-06
+        },
+        {
+          "name": "cuProfilerStart",
+          "calls": 1,
+          "host_seconds": 5.272e-06
+        }
+      ],
+      "representative_window": {
+        "start_seconds": 5.547872874,
+        "end_seconds": 7.615603513
+      },
+      "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization"
+    }
+  }
+}

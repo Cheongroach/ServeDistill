@@ -1,0 +1,29 @@
+{
+  "jobs": [
+    {
+      "experiment": "observe-v1",
+      "gpu_count": 1,
+      "gpu": "NVIDIA H20",
+      "schedule_at_utc": "2026-10-24T13:06:39.000Z",
+      "stop_at_utc": "2026-10-24T13:29:34.000Z",
+      "pod_exit_code": 1,
+      "scheduled_gpu_hours": 0.3819444444444444,
+      "active": false
+    },
+    {
+      "experiment": "observe-v2",
+      "gpu_count": 1,
+      "gpu": "NVIDIA H20",
+      "schedule_at_utc": "2026-10-24T13:37:11.000Z",
+      "stop_at_utc": "2026-10-24T14:06:23.000Z",
+      "pod_exit_code": 0,
+      "scheduled_gpu_hours": 0.4866666666666667,
+      "active": false
+    }
+  ],
+  "all_terminal": true,
+  "additional_scheduled_gpu_hours": 0.8686111111111111,
+  "original_study_gpu_hours": 59.754444444444445,
+  "study_plus_observation_gpu_hours": 60.62305555555556,
+  "boundary": "Pod schedule_at to stop_at; includes preparation, compilation, failed full-window PyTorch capture, publishing and idle time; separate from original quality study"
+}

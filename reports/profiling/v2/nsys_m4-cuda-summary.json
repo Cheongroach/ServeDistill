@@ -1,0 +1,487 @@
+{
+  "trace_sha256": "2662b1887ff552fb34d6f3843946d2ff5b9c9ad0ddce2a5c901a54cd7d0d3a27",
+  "host_update_seconds": 15.038878594,
+  "cuda_kernel_count": 544560,
+  "summed_kernel_seconds": 6.712893568,
+  "kernel_union_seconds_in_update": 6.712893568,
+  "kernel_copy_memset_union_seconds_in_update": 6.882188247,
+  "phase_device_launch_attribution": {
+    "rollout": {
+      "kernels": 217353,
+      "summed_device_seconds": 1.686986491
+    },
+    "learner_forward": {
+      "kernels": 56514,
+      "summed_device_seconds": 0.954616074
+    },
+    "unattributed": {
+      "kernels": 4435,
+      "summed_device_seconds": 0.012428857
+    },
+    "teacher_forward": {
+      "kernels": 10305,
+      "summed_device_seconds": 0.894856859
+    },
+    "full_vocabulary_kl": {
+      "kernels": 70,
+      "summed_device_seconds": 0.00321859
+    },
+    "reference_forward": {
+      "kernels": 52865,
+      "summed_device_seconds": 0.905173564
+    },
+    "backward": {
+      "kernels": 10,
+      "summed_device_seconds": 1.1232e-05
+    },
+    "backward_cross_thread_temporal": {
+      "kernels": 202971,
+      "summed_device_seconds": 2.254791085
+    },
+    "optimizer": {
+      "kernels": 37,
+      "summed_device_seconds": 0.000810816
+    }
+  },
+  "host_scopes": [
+    {
+      "name": "rollout",
+      "start_seconds": 0.006994836,
+      "end_seconds": 5.202266519
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 5.203474324,
+      "end_seconds": 5.549040229
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 5.55458844,
+      "end_seconds": 5.698265713
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 5.781423359,
+      "end_seconds": 5.795696337
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 5.796985528,
+      "end_seconds": 6.058164637
+    },
+    {
+      "name": "backward",
+      "start_seconds": 6.060546293,
+      "end_seconds": 6.979237794
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 6.979401117,
+      "end_seconds": 7.440337968
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 7.4538566,
+      "end_seconds": 7.679881844
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 7.811455112,
+      "end_seconds": 7.821578756
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 7.821805679,
+      "end_seconds": 8.209828738
+    },
+    {
+      "name": "backward",
+      "start_seconds": 8.220092293,
+      "end_seconds": 9.403570342
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 9.40372042,
+      "end_seconds": 10.034161336
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 10.040076996,
+      "end_seconds": 10.195440805
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 10.277840909,
+      "end_seconds": 10.2935995
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 10.29492088,
+      "end_seconds": 10.568581764
+    },
+    {
+      "name": "backward",
+      "start_seconds": 10.571698711,
+      "end_seconds": 11.506776143
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 11.506927452,
+      "end_seconds": 11.875219379
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 11.880543839,
+      "end_seconds": 12.018491068
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 12.101251906,
+      "end_seconds": 12.118397331
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 12.118656167,
+      "end_seconds": 12.373907354
+    },
+    {
+      "name": "backward",
+      "start_seconds": 12.376719,
+      "end_seconds": 13.328680244
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 13.328841733,
+      "end_seconds": 13.667774105
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 13.66979723,
+      "end_seconds": 13.799343731
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 13.829595786,
+      "end_seconds": 13.84984122
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 13.850215737,
+      "end_seconds": 14.091863436
+    },
+    {
+      "name": "backward",
+      "start_seconds": 14.092646407,
+      "end_seconds": 14.948925211
+    },
+    {
+      "name": "optimizer",
+      "start_seconds": 14.979505601,
+      "end_seconds": 14.99210541
+    }
+  ],
+  "top_kernels": [
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 2062,
+      "summed_device_seconds": 2.025102475,
+      "mean_us": 982.105952958293,
+      "max_us": 4334.911
+    },
+    {
+      "name": "elementwise_kernel",
+      "calls": 215549,
+      "summed_device_seconds": 0.914610253,
+      "mean_us": 4.243166300933894,
+      "max_us": 146.432
+    },
+    {
+      "name": "vectorized_elementwise_kernel",
+      "calls": 187896,
+      "summed_device_seconds": 0.477632877,
+      "mean_us": 2.542006626005876,
+      "max_us": 99.648
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 323,
+      "summed_device_seconds": 0.376609609,
+      "mean_us": 1165.9740216718267,
+      "max_us": 4075.391
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 2760,
+      "summed_device_seconds": 0.29254188,
+      "mean_us": 105.99343478260869,
+      "max_us": 754.143
+    },
+    {
+      "name": "gemmSN_TN_kernel",
+      "calls": 8050,
+      "summed_device_seconds": 0.269448371,
+      "mean_us": 33.47184732919255,
+      "max_us": 1097.216
+    },
+    {
+      "name": "reduce_kernel",
+      "calls": 44870,
+      "summed_device_seconds": 0.248384167,
+      "mean_us": 5.5356400044573215,
+      "max_us": 58.976
+    },
+    {
+      "name": "Kernel2",
+      "calls": 13362,
+      "summed_device_seconds": 0.242738816,
+      "mean_us": 18.166353539889236,
+      "max_us": 1948.96
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 240,
+      "summed_device_seconds": 0.228967843,
+      "mean_us": 954.0326791666668,
+      "max_us": 1047.936
+    },
+    {
+      "name": "nvjet_tst_192x192_64x4_2x1_v_bz_coopB_TNN",
+      "calls": 240,
+      "summed_device_seconds": 0.164772817,
+      "mean_us": 686.5534041666667,
+      "max_us": 997.952
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 5256,
+      "summed_device_seconds": 0.164203122,
+      "mean_us": 31.24108105022831,
+      "max_us": 1384.192
+    },
+    {
+      "name": "nvjet_tst_320x128_64x3_1x2_h_bz_coopB_TNT",
+      "calls": 272,
+      "summed_device_seconds": 0.159897273,
+      "mean_us": 587.8576213235294,
+      "max_us": 1661.375
+    },
+    {
+      "name": "nvjet_tst_192x192_64x4_1x2_h_bz_coopB_TNN",
+      "calls": 64,
+      "summed_device_seconds": 0.105777955,
+      "mean_us": 1652.780546875,
+      "max_us": 1657.536
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x64x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 1680,
+      "summed_device_seconds": 0.089091089,
+      "mean_us": 53.03041011904762,
+      "max_us": 53.984
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 14418,
+      "summed_device_seconds": 0.080228876,
+      "mean_us": 5.564494104591483,
+      "max_us": 24.864
+    },
+    {
+      "name": "conv_depthwise2d_forward_kernel_generic",
+      "calls": 1740,
+      "summed_device_seconds": 0.078992016,
+      "mean_us": 45.39771034482759,
+      "max_us": 334.432
+    },
+    {
+      "name": "nvjet_tst_176x128_64x5_2x1_v_bz_TNN",
+      "calls": 64,
+      "summed_device_seconds": 0.064571312,
+      "mean_us": 1008.92675,
+      "max_us": 1012.544
+    },
+    {
+      "name": "nvjet_tst_256x120_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 80,
+      "summed_device_seconds": 0.064049873,
+      "mean_us": 800.6234125,
+      "max_us": 969.855
+    },
+    {
+      "name": "nvjet_tst_128x200_64x5_2x1_v_bz_coopA_TNT",
+      "calls": 88,
+      "summed_device_seconds": 0.052484465,
+      "mean_us": 596.414375,
+      "max_us": 1036.096
+    },
+    {
+      "name": "nvjet_tst_128x224_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 64,
+      "summed_device_seconds": 0.041215986,
+      "mean_us": 643.99978125,
+      "max_us": 647.072
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 84,
+      "summed_device_seconds": 0.040764571,
+      "mean_us": 485.2925119047619,
+      "max_us": 727.84
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 3384,
+      "summed_device_seconds": 0.038514999,
+      "mean_us": 11.381500886524822,
+      "max_us": 37.056
+    },
+    {
+      "name": "fmha_cutlassB_f32_aligned_128x64_k65536_sm80",
+      "calls": 30,
+      "summed_device_seconds": 0.03790863,
+      "mean_us": 1263.621,
+      "max_us": 2596.927
+    },
+    {
+      "name": "nvjet_tst_256x136_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 32,
+      "summed_device_seconds": 0.035006007,
+      "mean_us": 1093.93771875,
+      "max_us": 1097.056
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x32x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 2298,
+      "summed_device_seconds": 0.034133525,
+      "mean_us": 14.853579199303741,
+      "max_us": 47.104
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 1902,
+      "summed_device_seconds": 0.033560025,
+      "mean_us": 17.64459779179811,
+      "max_us": 45.056
+    },
+    {
+      "name": "fmha_cutlassF_f32_aligned_32x128_gmem_sm80",
+      "calls": 90,
+      "summed_device_seconds": 0.031986682,
+      "mean_us": 355.4075777777778,
+      "max_us": 784.928
+    },
+    {
+      "name": "splitKreduce_kernel",
+      "calls": 13458,
+      "summed_device_seconds": 0.031426423,
+      "mean_us": 2.335148090355179,
+      "max_us": 3.84
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 2864,
+      "summed_device_seconds": 0.026397748,
+      "mean_us": 9.217090782122904,
+      "max_us": 25.408
+    },
+    {
+      "name": "nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 32,
+      "summed_device_seconds": 0.022055482,
+      "mean_us": 689.2338125,
+      "max_us": 691.232
+    }
+  ],
+  "cuda_api": [
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "calls": 482526,
+      "host_seconds": 3.113842489
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "calls": 12979,
+      "host_seconds": 0.680047076
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "calls": 21,
+      "host_seconds": 0.406943352
+    },
+    {
+      "name": "cudaLaunchKernelExC_v11060",
+      "calls": 44597,
+      "host_seconds": 0.305809717
+    },
+    {
+      "name": "cudaStreamSynchronize_v3020",
+      "calls": 3722,
+      "host_seconds": 0.146025109
+    },
+    {
+      "name": "cuLaunchKernel",
+      "calls": 13402,
+      "host_seconds": 0.092752895
+    },
+    {
+      "name": "cuLaunchKernelEx",
+      "calls": 4035,
+      "host_seconds": 0.062700839
+    },
+    {
+      "name": "cudaMemsetAsync_v3020",
+      "calls": 6774,
+      "host_seconds": 0.056202707
+    },
+    {
+      "name": "cudaGetDeviceProperties_v2_v12000",
+      "calls": 10,
+      "host_seconds": 0.024535642
+    },
+    {
+      "name": "cuModuleLoadData",
+      "calls": 15,
+      "host_seconds": 0.013635589
+    },
+    {
+      "name": "cuKernelGetFunction",
+      "calls": 13362,
+      "host_seconds": 0.007232055
+    },
+    {
+      "name": "cudaStreamIsCapturing_v10000",
+      "calls": 1091,
+      "host_seconds": 0.00102149
+    },
+    {
+      "name": "cuLibraryLoadData",
+      "calls": 13,
+      "host_seconds": 0.000608221
+    },
+    {
+      "name": "cuKernelGetAttribute",
+      "calls": 2490,
+      "host_seconds": 0.000315967
+    },
+    {
+      "name": "cuKernelSetAttribute",
+      "calls": 96,
+      "host_seconds": 3.7779e-05
+    },
+    {
+      "name": "cuLibraryGetKernel",
+      "calls": 14,
+      "host_seconds": 7.236e-06
+    },
+    {
+      "name": "cuProfilerStart",
+      "calls": 1,
+      "host_seconds": 4.667e-06
+    }
+  ],
+  "representative_window": {
+    "start_seconds": 5.203474324,
+    "end_seconds": 6.979237794
+  },
+  "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization"
+}

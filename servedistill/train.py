@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import nullcontext
 import dataclasses
 import hashlib
 import json
@@ -146,6 +147,8 @@ def alert(metrics: dict, history: list[dict]) -> list[str]:
 
 def train(args) -> dict:
     config = Config(**json.loads(Path(args.config).read_text()))
+    observation = getattr(args, "observation", None)
+    span = observation.span if observation is not None else lambda name: nullcontext()
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     seed_all(config.seed)
@@ -174,6 +177,8 @@ def train(args) -> dict:
         start_step, tokens_seen = restored["step"], restored["tokens_seen"]
         best_score, history = restored["best_score"], restored["monitor_history"]
         write_json(output / f"restoration-{start_step:04d}.json", restored["restoration"])
+    if observation is not None:
+        observation.configure(config)
     frozen_teacher = (
         tensor_fingerprint({name: p.flatten()[:32] for name, p in runtime.teacher.named_parameters()})
         if runtime.teacher else None)
@@ -186,6 +191,8 @@ def train(args) -> dict:
         write_json(output / "baseline.json", baseline)
         totals["dev"] += time.monotonic() - started
     for step in range(start_step, config.steps):
+        if observation is not None:
+            observation.begin_update(step + 1)
         optimizer.zero_grad(set_to_none=True)
         prompts = batches[step]
         before = [p.detach().clone() for p in parameters]
@@ -210,7 +217,8 @@ def train(args) -> dict:
                                               for row, text in zip(rows, texts)]).item(),
                        "effective_group_fraction": 0.0, "reward_std": 0.0}
         else:
-            rollout = collate_rollouts(runtime, prompts, config)
+            with span("rollout"):
+                rollout = collate_rollouts(runtime, prompts, config)
             rewards = torch.tensor([grade(row, text)["reward"]
                                     for row, text in zip(rollout["rows"], rollout["texts"])])
             rl_adv, metrics = grpo_advantages(rewards, rollout["groups"])
@@ -231,8 +239,9 @@ def train(args) -> dict:
             batch, tok, m = rows[start:end], tokens[start:end], mask[start:end]
             learner_started = time.monotonic()
             teacher_seconds = 0.0
-            current = runtime.score(batch, tok, m, entropy=True,
-                                    keep_logits=config.objective == "full_kl")
+            with span("learner_forward"):
+                current = runtime.score(batch, tok, m, entropy=True,
+                                        keep_logits=config.objective == "full_kl")
             logp = current["logp"]
             m = m.to(logp.device)
             factor = m.sum().item() / total_actions if config.aggregation == "token" else len(batch) / len(rows)
@@ -260,8 +269,9 @@ def train(args) -> dict:
                 opd_loss = logp.sum() * 0
                 if runtime.teacher:
                     teacher_started = time.monotonic()
-                    teacher = runtime.score(batch, tok, m, teacher=True,
-                                            keep_logits=config.objective == "full_kl")
+                    with span("teacher_forward"):
+                        teacher = runtime.score(batch, tok, m, teacher=True,
+                                                keep_logits=config.objective == "full_kl")
                     torch.cuda.synchronize()
                     teacher_seconds = time.monotonic() - teacher_started
                     totals["teacher"] += teacher_seconds
@@ -269,9 +279,10 @@ def train(args) -> dict:
                     signal = opd_advantages(old, teacher_logp, m)
                     from .losses import reduce_actions
                     if config.objective == "full_kl":
-                        kl = full_reverse_kl(
-                            current["logits"], teacher["logits"].to(logp.device))
-                        opd_loss = reduce_actions(kl, m, config.aggregation)
+                        with span("full_vocabulary_kl"):
+                            kl = full_reverse_kl(
+                                current["logits"], teacher["logits"].to(logp.device))
+                            opd_loss = reduce_actions(kl, m, config.aggregation)
                     else:
                         opd_loss, _ = policy_loss(
                             logp, old, signal, m, config.clip, config.aggregation)
@@ -283,7 +294,8 @@ def train(args) -> dict:
                     loss = mix_losses(rl_loss, opd_loss, controller.weight,
                                       config.objective, step)
                 with torch.no_grad():
-                    reference = runtime.score(batch, tok, m, reference=True)["logp"]
+                    with span("reference_forward"):
+                        reference = runtime.score(batch, tok, m, reference=True)["logp"]
                 from .losses import reduce_actions
                 audit["reference_sampled_kl"] += reduce_actions(
                     old - reference, m, config.aggregation).item() * factor
@@ -305,7 +317,8 @@ def train(args) -> dict:
                         g_rl.flatten().float(), g_opd.flatten().float(), dim=0).item()
                     audit["rl_gradient_projection_norm"] = g_rl.float().norm().item()
                     audit["opd_gradient_projection_norm"] = g_opd.float().norm().item()
-            (loss * factor).backward()
+            with span("backward"):
+                (loss * factor).backward()
             del current, logp, loss
             torch.cuda.synchronize()
             totals["learner"] += time.monotonic() - learner_started - teacher_seconds
@@ -313,7 +326,8 @@ def train(args) -> dict:
         if not gradients_finite:
             raise FloatingPointError("Non-finite gradient; optimizer update refused")
         norm = torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True).item()
-        optimizer.step()
+        with span("optimizer"):
+            optimizer.step()
         delta = sum((p.detach().float() - old.float()).square().sum().item()
                     for p, old in zip(parameters, before)) ** 0.5
         if not all(bool(torch.isfinite(p).all()) for p in parameters):
@@ -348,6 +362,8 @@ def train(args) -> dict:
         metrics["alarms"] = alert(metrics, history)
         history.append(metrics)
         append_json(output / "metrics.jsonl", metrics)
+        if observation is not None:
+            observation.end_update(metrics)
         append_json(output / "rollouts.jsonl", {
             "step": step + 1, "version": version,
             "sample_ids": [r["sample_id"] for r in rows],
