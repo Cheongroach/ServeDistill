@@ -27,6 +27,32 @@ def metric(rows):
     return float(np.mean([r["success"] for r in rows]))
 
 
+def bootstrap_metric(rows, indices):
+    """Vectorized task resampling, retaining the nonlinear macro-F1 metric."""
+    task = rows[0].get("task", "")
+    if task == "esci_ranking":
+        values = np.array([r["ndcg"] for r in rows])
+        eligible = np.array([r["ndcg_eligible"] for r in rows], dtype=float)
+        numerator = (values * eligible)[indices].sum(axis=1)
+        denominator = eligible[indices].sum(axis=1)
+        return np.divide(numerator, denominator, out=np.zeros_like(numerator),
+                         where=denominator > 0)
+    if task in ("esci_classification", "esci_substitute"):
+        labels = ("E", "S", "C", "I") if task == "esci_classification" else ("yes", "no")
+        scores = []
+        for label in labels:
+            truth = np.array([r["target_class"] == label for r in rows])
+            predicted = np.array([r["predicted_class"] == label for r in rows])
+            tp = (truth & predicted)[indices].sum(axis=1)
+            fp = (~truth & predicted)[indices].sum(axis=1)
+            fn = (truth & ~predicted)[indices].sum(axis=1)
+            denominator = 2 * tp + fp + fn
+            scores.append(np.divide(2 * tp, denominator, out=np.zeros(len(indices)),
+                                    where=denominator > 0))
+        return np.mean(scores, axis=0)
+    return np.array([r["success"] for r in rows], dtype=float)[indices].mean(axis=1)
+
+
 def compare(baseline, candidates, repetitions=2000):
     groups = [{r["sample_id"]: r for r in rows} for rows in [baseline, *candidates]]
     if not candidates or repetitions < 1:
@@ -48,11 +74,9 @@ def compare(baseline, candidates, repetitions=2000):
                and (locale is None or r.get("locale", "general") == locale)]
         rows = [[group[i] for i in ids] for group in groups]
         scores = [metric(part) for part in rows]
-        deltas = []
-        for _ in range(repetitions):
-            indices = rng.integers(0, len(ids), len(ids))
-            sampled = [metric([part[i] for i in indices]) for part in rows]
-            deltas.append(float(np.mean(sampled[1:])) - sampled[0])
+        indices = rng.integers(0, len(ids), (repetitions, len(ids)))
+        sampled = [bootstrap_metric(part, indices) for part in rows]
+        deltas = np.mean(sampled[1:], axis=0) - sampled[0]
         label = domain + ("/" + locale if locale else "")
         reports[label] = {
             "n_independent_tasks": len(ids), "n_training_seeds": len(candidates),

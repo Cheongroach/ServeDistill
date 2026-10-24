@@ -1,0 +1,231 @@
+{
+  "label": "offline_sft_seed29",
+  "method": "offline_sft",
+  "selection": {
+    "path": "checkpoint-0060",
+    "dev_score": 0.4993616865235058,
+    "step": 60,
+    "adapter_sha256": "496b63dcda3326697996d42f7b6285aa77d8d3b97d955f28f2fa49ee4348a19a",
+    "optimizer_sha256": "4b415bab2595275ab0e10a78cb6ad2e19b147dc77613bc94343d27cb2fd9cd7d",
+    "rng_sha256": "0ee81ff8fd0464b9125d1d59f40f8da3859f49b2230088d0e7b5fcc1c0f23bb6",
+    "tokens_seen": 3900
+  },
+  "adapter_file_sha256": "4c3438584a259092a6ecbf1ae7bd9005be1223e9e382c6ff0050e4d1f73e0ef7",
+  "deployment_gate_passed": true,
+  "criterion": "mean two-seed 0.8 business macro + 0.2 general macro; <=5pp loss per domain",
+  "seed_rule": "highest development score within selected method; label breaks ties",
+  "checkpoint_rule": "each run's previously frozen development-selected checkpoint",
+  "test_used_for_selection": false,
+  "dev_task_sha256": "834b5fb20611d4f928ef10d43f81be39d1f92a710916d310c0c1c4c9c5411b59",
+  "snapshot_sha256": "aeda2592fad2d63df099a14903f7913b7b6c0d2df0a5bffe4a67a65a33546a1d",
+  "methods": [
+    {
+      "method": "offline_sft",
+      "dev_score": 0.4949714781050587,
+      "domain_delta": {
+        "search": 0.6059850387356083,
+        "relevance": 0.13251140973630834,
+        "substitute": 0.08359456635318702,
+        "math": 0.09999999999999999,
+        "instruction": 0.44999999999999996
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.4905812696866116,
+        "29": 0.4993616865235058
+      }
+    },
+    {
+      "method": "full_kl",
+      "dev_score": 0.4878756464523737,
+      "domain_delta": {
+        "search": 0.5981256700380392,
+        "relevance": 0.13251140973630834,
+        "substitute": 0.08359456635318702,
+        "math": 0.075,
+        "instruction": 0.425
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.487958438924937,
+        "29": 0.48779285397981037
+      }
+    },
+    {
+      "method": "opd",
+      "dev_score": 0.48686781464743406,
+      "domain_delta": {
+        "search": 0.6229614968479471,
+        "relevance": 0.14139621365787694,
+        "substitute": 0.08359456635318702,
+        "math": 0.075,
+        "instruction": 0.325
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.49887828056309313,
+        "29": 0.474857348731775
+      }
+    },
+    {
+      "method": "mixed_400",
+      "dev_score": 0.4850257863465351,
+      "domain_delta": {
+        "search": 0.601225459347027,
+        "relevance": 0.11872464503042598,
+        "substitute": 0.08359456635318702,
+        "math": 0.05,
+        "instruction": 0.45
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.4778360038198088,
+        "29": 0.4922155688732614
+      }
+    },
+    {
+      "method": "mixed_100",
+      "dev_score": 0.47867673971195285,
+      "domain_delta": {
+        "search": 0.5987400638791083,
+        "relevance": 0.10677611561866127,
+        "substitute": 0.08359456635318702,
+        "math": 0.05,
+        "instruction": 0.425
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.46694619145123856,
+        "29": 0.49040728797266714
+      }
+    },
+    {
+      "method": "dynamic",
+      "dev_score": 0.478064036626166,
+      "domain_delta": {
+        "search": 0.5964424273074075,
+        "relevance": 0.10677611561866127,
+        "substitute": 0.08359456635318702,
+        "math": 0.05,
+        "instruction": 0.425
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.46694619145123856,
+        "29": 0.4891818818010934
+      }
+    },
+    {
+      "method": "mixed_025",
+      "dev_score": 0.4684850344586982,
+      "domain_delta": {
+        "search": 0.6088540799299103,
+        "relevance": 0.05844320486815417,
+        "substitute": 0.08359456635318702,
+        "math": 0.075,
+        "instruction": 0.4
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.45110849418101345,
+        "29": 0.485861574736383
+      }
+    },
+    {
+      "method": "opd_bucketed",
+      "dev_score": 0.4664349902016457,
+      "domain_delta": {
+        "search": 0.5886995162873518,
+        "relevance": 0.11778510254676584,
+        "substitute": 0.08359456635318702,
+        "math": 0.05,
+        "instruction": 0.3
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.46941711029482275,
+        "29": 0.46345287010846864
+      }
+    },
+    {
+      "method": "opd_trajectory",
+      "dev_score": 0.46223634663284563,
+      "domain_delta": {
+        "search": 0.5187001767749253,
+        "relevance": 0.14391452867619198,
+        "substitute": 0.08359456635318702,
+        "math": 0.025,
+        "instruction": 0.4
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.4597432823190955,
+        "29": 0.46472941094659576
+      }
+    },
+    {
+      "method": "alternating",
+      "dev_score": 0.45750857448808535,
+      "domain_delta": {
+        "search": 0.5995098102830791,
+        "relevance": 0.07350074962518742,
+        "substitute": 0.08359456635318702,
+        "math": 0.05,
+        "instruction": 0.3
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.4421722165191254,
+        "29": 0.47284493245704534
+      }
+    },
+    {
+      "method": "oracle_sft",
+      "dev_score": 0.446363017323502,
+      "domain_delta": {
+        "search": 0.533700032965815,
+        "relevance": 0.06643930781861816,
+        "substitute": 0.10529494610983275,
+        "math": 0.075,
+        "instruction": 0.30000000000000004
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.4338683021888544,
+        "29": 0.45885773245814954
+      }
+    },
+    {
+      "method": "grpo",
+      "dev_score": 0.4175022460051122,
+      "domain_delta": {
+        "search": 0.5760381023337361,
+        "relevance": 0.02366379310344828,
+        "substitute": 0.016254499013119678,
+        "math": 0.05,
+        "instruction": 0.275
+      },
+      "passes_dev_retention_gate": true,
+      "seed_scores": {
+        "17": 0.3865582244553047,
+        "29": 0.44844626755491973
+      }
+    }
+  ],
+  "opd_candidate": {
+    "label": "full_kl_seed17",
+    "method": "full_kl",
+    "selection": {
+      "path": "checkpoint-0060",
+      "dev_score": 0.487958438924937,
+      "step": 60,
+      "adapter_sha256": "8246f5524947eadb03ff01fcd5be8beb643d13d7711fdd0e6e04203350429f76",
+      "optimizer_sha256": "9e9a8c9dfba8e4b1764d209e3c3f5b073dd953e0621df9cf198be98f0d43f7a8",
+      "rng_sha256": "68bf9af18ef228558cdc0674b876405483fcd04f2bc621752ac7050359675be0",
+      "tokens_seen": 17457
+    },
+    "adapter_file_sha256": "b86862c39e554f4592eaf31c2799d7e811d8139c258457cd0a50a5b24e80219e",
+    "deployment_gate_passed": true
+  },
+  "interpretation": "research candidate only if no method passes the development gate"
+}

@@ -4,7 +4,11 @@
 
 ServeDistill tests whether OPD is worth using for product-search relevance, reranking, capability retention, and small-model serving. The main benchmark uses real Amazon ESCI queries, product texts, and independently annotated labels. Fictional local-services tasks provide additional checks of budget, refunds, inventory, and clarification decisions.
 
-Current status: Qwen3.5 GPU qualification and probability-contract validation. Four nonzero FP32 pilot updates, frozen teacher checks, and matching adapter/Adam/RNG cold-restoration fingerprints passed. Maximum cached/recomputed log-probability error was 4.55e-5; the earlier BF16 gate rejected a batch at 0.194. **No final training improvement or serving speedup has been established yet**.
+Completed: **28 training stages × 80 updates**, two seeds, final test/replication, frozen dev selection, BF16 native vLLM serving, protocol fallback, and 32 CPU regressions. All experiment GPU allocations are released: **59.75 H20 GPU hours**, peak 32 GPUs, 4.21 hours from first allocation to final release.
+
+The dev-selected OPD-family method (`full_kl`) reached a two-seed business macro score of **49.25% vs 25.86%** initially; the limited general score increased **17.75 pp**. Substitute macro-F1 fell **5.48 pp**, failing the final 5 pp retention gate. Dev selection favored offline SFT; this study does **not establish OPD superiority or production readiness**. Fictional local-services output-format transfer also failed. These negative outcomes are part of the result.
+
+Read the [final report](reports/FINAL_REPORT.md), [interview notes](reports/INTERVIEW_NOTES.md), [measured statistics](reports/results.json), and [complete allocation cost](reports/cost-audit.json). [Task score evidence](reports/evidence/task-metrics.jsonl.gz) supports independent paired-statistics checks.
 
 The primary public models are **Qwen3.5-9B → Qwen3.5-2B**, with Qwen3.5-4B as a serving/quality reference. These are public post-trained checkpoints, used through their text-only language components. Prompt-routed teachers are not presented as independently trained domain experts. Thinking is explicitly disabled for both teacher and student.
 

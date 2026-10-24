@@ -1,0 +1,11 @@
+{
+  "initial_public_revision": "05808e7",
+  "initial_matrix_bundle_manifest_sha256": "e6cacc98c5327e28545c93bd106be4f282cf5617e38cba225f7b1a221df41182",
+  "serving_archive_sha256": "afa5b9e7b0b517cddf3cc5837dbc02cdceb13c610490241c16a2b7e063bf467e",
+  "serving_wheel_manifest_sha256": "0265abf1c47945e38c061ba66b2322dafde95af937a9b56a15e74d399fa0e544",
+  "monitor_fix": "SFT trend alarms must not require reference KL fields from RL/OPD",
+  "offline_sft_seed17_recovery": "restore checkpoint 40 with adapter/Adam/RNG fingerprint checks",
+  "offline_sft_seed29_recovery": "restart after an early failure before the first checkpoint; preserve failed attempt",
+  "validation": "28 complete training stages; native baseline and selected deployments/cascades completed; 32 complete CPU regressions passed with process exit0",
+  "native_export_fix": "preserve existing wrapper prefix to avoid duplicated language_model namespace"
+}

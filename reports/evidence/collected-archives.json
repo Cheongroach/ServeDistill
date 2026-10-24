@@ -1,0 +1,25 @@
+{
+  "archives": [
+    {
+      "host": 0,
+      "sha256": "adda3ef15a1f84f4e9047c930c28ccf7d1f7c035b71878abd23d92272b72335d",
+      "bytes": 1689538
+    },
+    {
+      "host": 1,
+      "sha256": "404ccdc59f43253e89f6758e506c1bf84fb829b2e8e2a0f0cefa83d4c642e61b",
+      "bytes": 1896497
+    },
+    {
+      "host": 2,
+      "sha256": "fa78dc85bea20cdbc57106289a8e88666747f01874eceadb33e4c789056abec9",
+      "bytes": 1740798
+    },
+    {
+      "host": 3,
+      "sha256": "2d383db055d95b579793ab3276c2f1b1fbc2587e9706d1fe2c3ae0496ee79777",
+      "bytes": 1633469
+    }
+  ],
+  "boundary": "private raw archive hashes; public score projections are independently reproducible"
+}

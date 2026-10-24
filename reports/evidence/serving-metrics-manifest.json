@@ -1,0 +1,18 @@
+{
+  "file": "serving-metrics.jsonl.gz",
+  "sha256": "e6af3944966eb7dcc85a3f03728b9fcf3e0c53ccdcc66865067319baf3380ac0",
+  "records": {
+    "deployment_v1/baseline/supplement": 270,
+    "deployment_v1/best/cascade": 450,
+    "deployment_v1/best/http": 450,
+    "deployment_v1/best/supplement": 270,
+    "deployment_v1/opd/cascade": 450,
+    "deployment_v1/opd/http": 450,
+    "deployment_v1/opd/supplement": 270,
+    "deployment_v1/teacher/supplement": 270,
+    "serving_native_v1/baseline_2b/http": 450,
+    "serving_native_v1/baseline_4b/http": 450,
+    "serving_native_v1/baseline_9b/http": 450
+  },
+  "boundary": "separate sweeps at concurrency1/4/16; latency is per request"
+}
