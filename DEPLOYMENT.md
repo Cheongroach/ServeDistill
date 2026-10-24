@@ -16,7 +16,7 @@ Install the serving stack in a separate Python environment (`vllm==0.19.1`, `tor
 # In the training environment, export the checkpoint selected on dev.
 python -m servedistill.export --model /tmp/student/model \
   --adapter results/run/train/checkpoint-0040 \
-  --selection results/run/train/selected.json --output /tmp/merged-student
+  --selection results/run/train/selected.json --output /tmp/merged-student --vllm-native
 # In the serving environment.
 MODEL_PATH=/tmp/merged-student bash scripts/run_reference_server.sh
 python -m servedistill.http_benchmark --data data_search/test.jsonl \
@@ -25,7 +25,20 @@ python -m servedistill.http_benchmark --data data_search/test.jsonl \
 
 The client measures the first nonempty content delta and the complete stream through `[DONE]`; it rejects mixed response IDs, missing usage, and interrupted streams. Concurrency 1/4/16 uses continuously replenished clients. This is a localhost HTTP benchmark, including engine queues and protocol handling, with retrieval excluded. GPU hours per million correct answers expose quality-related cost; total requests and correct answers are distinct denominators. Teacher fallback measurements use `--teacher-prompts` to preserve the qualified teacher prompt.
 
-HTTP measurements are in progress. Source support and passing CPU protocol tests do not establish GPU engine startup or latency.
+The native Qwen3.5 registry in vLLM 0.19.1 uses the conditional-generation wrapper. `--vllm-native` preserves its source configuration and maps merged language tensor names back to that wrapper; it does not export vision weights and requires `--language-model-only`. The mapping preserves tensor values and shard-index identities. The default export retains the Hugging Face text-only format.
+
+The 2B/4B/9B baseline engines started and completed the streaming sweeps on H20. Selected student deployment and fallback measurements remain in progress.
+
+## Protocol fallback
+
+```bash
+python -m servedistill.cascade_benchmark \
+  --student-endpoint http://127.0.0.1:8000 \
+  --teacher-endpoint http://127.0.0.1:8001 \
+  --data data_search/test.jsonl --output results/cascade
+```
+
+Malformed output fields, invalid candidate IDs, and truncation trigger fallback. A syntactically valid wrong decision does not trigger fallback, because the service cannot observe the benchmark label. JSON is buffered until validation; first visible answer latency therefore equals complete answer latency. Cost includes two dedicated GPU allocations during the measured sweep, including idle teacher capacity. Request correctness remains an offline metric.
 
 ## Reusing the business checkpoint for general restoration
 
