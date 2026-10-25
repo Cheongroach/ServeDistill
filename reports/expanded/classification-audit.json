@@ -1,0 +1,1589 @@
+{
+  "splits": {
+    "test": {
+      "parent_update40": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 1398,
+            "I": 102
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 1398,
+              "true_positive": 636,
+              "precision": 0.45493562231759654,
+              "recall": 0.9724770642201835,
+              "f1": 0.6198830409356725
+            },
+            "S": {
+              "support": 527,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 102,
+              "true_positive": 37,
+              "precision": 0.3627450980392157,
+              "recall": 0.15546218487394958,
+              "f1": 0.21764705882352942
+            }
+          },
+          "macro_f1": 0.20938252493980047,
+          "accuracy": 0.44866666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1493,
+            "yes": 7
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 7,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1493,
+              "true_positive": 965,
+              "precision": 0.6463496316141996,
+              "recall": 0.992798353909465,
+              "f1": 0.7829614604462475
+            }
+          },
+          "macro_f1": 0.39148073022312374,
+          "accuracy": 0.6433333333333333,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": false
+        }
+      },
+      "full_kl_m1_seed17": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 1152,
+            "I": 313,
+            "S": 33,
+            "C": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 1152,
+              "true_positive": 582,
+              "precision": 0.5052083333333334,
+              "recall": 0.8899082568807339,
+              "f1": 0.6445182724252492
+            },
+            "S": {
+              "support": 527,
+              "predicted": 33,
+              "true_positive": 21,
+              "precision": 0.6363636363636364,
+              "recall": 0.03984819734345351,
+              "f1": 0.075
+            },
+            "C": {
+              "support": 81,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 0.012345679012345678,
+              "f1": 0.024096385542168676
+            },
+            "I": {
+              "support": 238,
+              "predicted": 313,
+              "true_positive": 110,
+              "precision": 0.3514376996805112,
+              "recall": 0.46218487394957986,
+              "f1": 0.3992740471869328
+            }
+          },
+          "macro_f1": 0.28572217628858765,
+          "accuracy": 0.476,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed17": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 1089,
+            "I": 392,
+            "S": 17,
+            "C": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 1089,
+              "true_positive": 565,
+              "precision": 0.5188246097337006,
+              "recall": 0.863914373088685,
+              "f1": 0.6483075157773953
+            },
+            "S": {
+              "support": 527,
+              "predicted": 17,
+              "true_positive": 13,
+              "precision": 0.7647058823529411,
+              "recall": 0.024667931688804556,
+              "f1": 0.04779411764705882
+            },
+            "C": {
+              "support": 81,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 0.012345679012345678,
+              "f1": 0.024096385542168676
+            },
+            "I": {
+              "support": 238,
+              "predicted": 392,
+              "true_positive": 125,
+              "precision": 0.31887755102040816,
+              "recall": 0.5252100840336135,
+              "f1": 0.3968253968253968
+            }
+          },
+          "macro_f1": 0.2792558539480049,
+          "accuracy": 0.4693333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed29": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 1150,
+            "I": 350
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 1150,
+              "true_positive": 579,
+              "precision": 0.5034782608695653,
+              "recall": 0.8853211009174312,
+              "f1": 0.6419068736141907
+            },
+            "S": {
+              "support": 527,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 350,
+              "true_positive": 117,
+              "precision": 0.3342857142857143,
+              "recall": 0.49159663865546216,
+              "f1": 0.3979591836734694
+            }
+          },
+          "macro_f1": 0.25996651432191503,
+          "accuracy": 0.464,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed29": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 1176,
+            "I": 322,
+            "S": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 1176,
+              "true_positive": 590,
+              "precision": 0.5017006802721088,
+              "recall": 0.9021406727828746,
+              "f1": 0.644808743169399
+            },
+            "S": {
+              "support": 527,
+              "predicted": 2,
+              "true_positive": 2,
+              "precision": 1.0,
+              "recall": 0.003795066413662239,
+              "f1": 0.007561436672967864
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 322,
+              "true_positive": 114,
+              "precision": 0.35403726708074534,
+              "recall": 0.4789915966386555,
+              "f1": 0.40714285714285714
+            }
+          },
+          "macro_f1": 0.264878259246306,
+          "accuracy": 0.4706666666666667,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed43": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 911,
+            "I": 588,
+            "S": 1
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 911,
+              "true_positive": 508,
+              "precision": 0.557628979143798,
+              "recall": 0.7767584097859327,
+              "f1": 0.6492012779552716
+            },
+            "S": {
+              "support": 527,
+              "predicted": 1,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 588,
+              "true_positive": 160,
+              "precision": 0.272108843537415,
+              "recall": 0.6722689075630253,
+              "f1": 0.387409200968523
+            }
+          },
+          "macro_f1": 0.25915261973094866,
+          "accuracy": 0.44533333333333336,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed43": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 938,
+            "I": 560,
+            "S": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 938,
+              "true_positive": 517,
+              "precision": 0.5511727078891258,
+              "recall": 0.790519877675841,
+              "f1": 0.6494974874371859
+            },
+            "S": {
+              "support": 527,
+              "predicted": 2,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 560,
+              "true_positive": 153,
+              "precision": 0.2732142857142857,
+              "recall": 0.6428571428571429,
+              "f1": 0.38345864661654133
+            }
+          },
+          "macro_f1": 0.2582390335134318,
+          "accuracy": 0.44666666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed71": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 842,
+            "I": 656,
+            "C": 1,
+            "S": 1
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 842,
+              "true_positive": 484,
+              "precision": 0.5748218527315915,
+              "recall": 0.7400611620795107,
+              "f1": 0.6470588235294118
+            },
+            "S": {
+              "support": 527,
+              "predicted": 1,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 0.012345679012345678,
+              "f1": 0.024390243902439025
+            },
+            "I": {
+              "support": 238,
+              "predicted": 656,
+              "true_positive": 174,
+              "precision": 0.2652439024390244,
+              "recall": 0.7310924369747899,
+              "f1": 0.38926174496644295
+            }
+          },
+          "macro_f1": 0.26517770309957345,
+          "accuracy": 0.43933333333333335,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed71": {
+        "relevance": {
+          "queries": 1500,
+          "target_counts": {
+            "S": 527,
+            "E": 654,
+            "I": 238,
+            "C": 81
+          },
+          "prediction_counts": {
+            "E": 899,
+            "I": 601
+          },
+          "per_class": {
+            "E": {
+              "support": 654,
+              "predicted": 899,
+              "true_positive": 507,
+              "precision": 0.5639599555061179,
+              "recall": 0.7752293577981652,
+              "f1": 0.652929813264649
+            },
+            "S": {
+              "support": 527,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 81,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 238,
+              "predicted": 601,
+              "true_positive": 163,
+              "precision": 0.27121464226289516,
+              "recall": 0.6848739495798319,
+              "f1": 0.38855780691299163
+            }
+          },
+          "macro_f1": 0.26037190504441016,
+          "accuracy": 0.44666666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15181058495821728,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 1500,
+          "target_counts": {
+            "no": 972,
+            "yes": 528
+          },
+          "prediction_counts": {
+            "no": 1500
+          },
+          "per_class": {
+            "yes": {
+              "support": 528,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 972,
+              "predicted": 1500,
+              "true_positive": 972,
+              "precision": 0.648,
+              "recall": 1.0,
+              "f1": 0.7864077669902912
+            }
+          },
+          "macro_f1": 0.3932038834951456,
+          "accuracy": 0.648,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3932038834951456,
+          "constant_prediction": true
+        }
+      }
+    },
+    "ood": {
+      "parent_update40": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 469,
+            "I": 31
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 469,
+              "true_positive": 227,
+              "precision": 0.4840085287846482,
+              "recall": 0.9869565217391304,
+              "f1": 0.6494992846924177
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 31,
+              "true_positive": 15,
+              "precision": 0.4838709677419355,
+              "recall": 0.19230769230769232,
+              "f1": 0.27522935779816515
+            }
+          },
+          "macro_f1": 0.2311821606226457,
+          "accuracy": 0.484,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 495,
+            "yes": 5
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 5,
+              "true_positive": 1,
+              "precision": 0.2,
+              "recall": 0.005747126436781609,
+              "f1": 0.0111731843575419
+            },
+            "no": {
+              "support": 326,
+              "predicted": 495,
+              "true_positive": 322,
+              "precision": 0.6505050505050505,
+              "recall": 0.9877300613496932,
+              "f1": 0.784409257003654
+            }
+          },
+          "macro_f1": 0.39779122068059797,
+          "accuracy": 0.646,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": false
+        }
+      },
+      "full_kl_m1_seed17": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 389,
+            "S": 5,
+            "I": 106
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 389,
+              "true_positive": 212,
+              "precision": 0.5449871465295629,
+              "recall": 0.9217391304347826,
+              "f1": 0.6849757673667205
+            },
+            "S": {
+              "support": 170,
+              "predicted": 5,
+              "true_positive": 5,
+              "precision": 1.0,
+              "recall": 0.029411764705882353,
+              "f1": 0.05714285714285714
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 106,
+              "true_positive": 38,
+              "precision": 0.3584905660377358,
+              "recall": 0.48717948717948717,
+              "f1": 0.41304347826086957
+            }
+          },
+          "macro_f1": 0.2887905256926118,
+          "accuracy": 0.51,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed17": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 361,
+            "I": 137,
+            "S": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 361,
+              "true_positive": 205,
+              "precision": 0.5678670360110804,
+              "recall": 0.8913043478260869,
+              "f1": 0.6937394247038917
+            },
+            "S": {
+              "support": 170,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 0.0058823529411764705,
+              "f1": 0.011627906976744186
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 137,
+              "true_positive": 43,
+              "precision": 0.31386861313868614,
+              "recall": 0.5512820512820513,
+              "f1": 0.4
+            }
+          },
+          "macro_f1": 0.276341832920159,
+          "accuracy": 0.498,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed29": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 382,
+            "I": 118
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 382,
+              "true_positive": 209,
+              "precision": 0.5471204188481675,
+              "recall": 0.908695652173913,
+              "f1": 0.6830065359477124
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 118,
+              "true_positive": 40,
+              "precision": 0.3389830508474576,
+              "recall": 0.5128205128205128,
+              "f1": 0.40816326530612246
+            }
+          },
+          "macro_f1": 0.2727924503134587,
+          "accuracy": 0.498,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed29": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 384,
+            "I": 116
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 384,
+              "true_positive": 210,
+              "precision": 0.546875,
+              "recall": 0.9130434782608695,
+              "f1": 0.6840390879478827
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 116,
+              "true_positive": 39,
+              "precision": 0.33620689655172414,
+              "recall": 0.5,
+              "f1": 0.4020618556701031
+            }
+          },
+          "macro_f1": 0.27152523590449645,
+          "accuracy": 0.498,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed43": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 302,
+            "I": 198
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 302,
+              "true_positive": 188,
+              "precision": 0.6225165562913907,
+              "recall": 0.8173913043478261,
+              "f1": 0.706766917293233
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 198,
+              "true_positive": 55,
+              "precision": 0.2777777777777778,
+              "recall": 0.7051282051282052,
+              "f1": 0.39855072463768115
+            }
+          },
+          "macro_f1": 0.2763294104827285,
+          "accuracy": 0.486,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed43": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 309,
+            "I": 190,
+            "S": 1
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 309,
+              "true_positive": 189,
+              "precision": 0.6116504854368932,
+              "recall": 0.8217391304347826,
+              "f1": 0.7012987012987013
+            },
+            "S": {
+              "support": 170,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 0.0058823529411764705,
+              "f1": 0.011695906432748537
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 190,
+              "true_positive": 52,
+              "precision": 0.2736842105263158,
+              "recall": 0.6666666666666666,
+              "f1": 0.3880597014925373
+            }
+          },
+          "macro_f1": 0.2752635773059968,
+          "accuracy": 0.484,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m1_seed71": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 279,
+            "I": 221
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 279,
+              "true_positive": 173,
+              "precision": 0.6200716845878136,
+              "recall": 0.7521739130434782,
+              "f1": 0.6797642436149313
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 221,
+              "true_positive": 57,
+              "precision": 0.2579185520361991,
+              "recall": 0.7307692307692307,
+              "f1": 0.38127090301003347
+            }
+          },
+          "macro_f1": 0.2652587866562412,
+          "accuracy": 0.46,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      },
+      "full_kl_m4_seed71": {
+        "relevance": {
+          "queries": 500,
+          "target_counts": {
+            "S": 170,
+            "E": 230,
+            "C": 22,
+            "I": 78
+          },
+          "prediction_counts": {
+            "E": 294,
+            "I": 206
+          },
+          "per_class": {
+            "E": {
+              "support": 230,
+              "predicted": 294,
+              "true_positive": 182,
+              "precision": 0.6190476190476191,
+              "recall": 0.7913043478260869,
+              "f1": 0.6946564885496184
+            },
+            "S": {
+              "support": 170,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 22,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 78,
+              "predicted": 206,
+              "true_positive": 57,
+              "precision": 0.2766990291262136,
+              "recall": 0.7307692307692307,
+              "f1": 0.4014084507042254
+            }
+          },
+          "macro_f1": 0.27401623481346093,
+          "accuracy": 0.478,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.15753424657534246,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 500,
+          "target_counts": {
+            "no": 326,
+            "yes": 174
+          },
+          "prediction_counts": {
+            "no": 500
+          },
+          "per_class": {
+            "yes": {
+              "support": 174,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 326,
+              "predicted": 500,
+              "true_positive": 326,
+              "precision": 0.652,
+              "recall": 1.0,
+              "f1": 0.7893462469733656
+            }
+          },
+          "macro_f1": 0.3946731234866828,
+          "accuracy": 0.652,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3946731234866828,
+          "constant_prediction": true
+        }
+      }
+    }
+  },
+  "boundary": "Descriptive class support/predictions; frozen noninferiority criteria unchanged"
+}

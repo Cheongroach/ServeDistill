@@ -1,0 +1,35 @@
+{
+  "completed": true,
+  "parent_restoration": {
+    "passed": true,
+    "step": 40,
+    "adapter_sha256": "07389328ec13823f16bc1e5e45af92fed57fc7b26e7adf70ca48d0d1f8f9d136",
+    "optimizer_sha256": "434f349a1d977eca2e0b6938f76d49b5b4939d6184cb3150e64ba7800b2f739d",
+    "rng_sha256": "f7bfc6cf77ed43fc11da2a595ec11682f3e49d0e1298a6cd1ed20bbd0258e62e"
+  },
+  "bank_token_sha256": "887eca48354a847ea509266a9fb4180d60d2c940634b94087b50595ed87cf1db",
+  "teacher_logits_sha256": "f203390aa0ad2a3a3990e2b4174f99606cccba7a9f1dd956a7877ab468df13a6",
+  "sequences": 4,
+  "audits": {
+    "1": {
+      "loss": 0.3748525727439571,
+      "behavior_max_error": 2.2232532501220703e-05,
+      "preclip_gradient_norm": 10.604293823242188,
+      "parameter_delta_l2": 0.01889087659388322
+    },
+    "4": {
+      "loss": 0.3748522996902466,
+      "behavior_max_error": 2.0325183868408203e-05,
+      "preclip_gradient_norm": 10.604312896728516,
+      "parameter_delta_l2": 0.018890873547605273
+    }
+  },
+  "gradient_cosine_fp64": 0.9999999999335603,
+  "gradient_relative_l2_fp64": 1.1507684589165079e-05,
+  "gradient_max_abs_difference": 3.110617399215698e-07,
+  "gradient_vector_elements": 15630336,
+  "update_relative_l2_fp64": 2.0127185591241897e-05,
+  "boundary": "Independent fixed-Teacher four-sequence post-clip audit; outside formal timing",
+  "reduction_dtype": "float64",
+  "execution_source_sha256": "1bd9bc7f10b34fd0463b72b0bd9980bfcd45e51eae9a7406f01e8d3435627533"
+}

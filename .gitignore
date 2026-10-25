@@ -12,3 +12,6 @@ wheelhouse/
 *.prefetch
 
 reports/profiling/raw/
+
+data_expanded/*.jsonl
+reports/expanded/raw/

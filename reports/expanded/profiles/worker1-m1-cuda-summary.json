@@ -1,0 +1,1134 @@
+{
+  "trace_sha256": "4eb8dbc5edc399c2e79479a54812bc69799397b6f02913f047be9a0c807f0299",
+  "update_name": "fixed_bank_update",
+  "host_update_seconds": 55.58347015,
+  "cuda_kernel_count": 2163697,
+  "summed_kernel_seconds": 14.627979892,
+  "kernel_union_seconds_in_update": 14.627979892,
+  "kernel_copy_memset_union_seconds_in_update": 14.804176061,
+  "phase_device_launch_attribution": {
+    "learner_forward": {
+      "kernels": 376744,
+      "summed_device_seconds": 2.853287318
+    },
+    "unattributed": {
+      "kernels": 7120,
+      "summed_device_seconds": 0.01751321
+    },
+    "teacher_forward": {
+      "kernels": 66544,
+      "summed_device_seconds": 2.003195404
+    },
+    "full_vocabulary_kl": {
+      "kernels": 416,
+      "summed_device_seconds": 0.008365476
+    },
+    "reference_forward": {
+      "kernels": 352776,
+      "summed_device_seconds": 2.70163677
+    },
+    "backward": {
+      "kernels": 64,
+      "summed_device_seconds": 7.024e-05
+    },
+    "backward_cross_thread_temporal": {
+      "kernels": 1359996,
+      "summed_device_seconds": 7.043097751
+    },
+    "optimizer": {
+      "kernels": 37,
+      "summed_device_seconds": 0.000813723
+    }
+  },
+  "host_scopes": [
+    {
+      "name": "learner_forward",
+      "start_seconds": 0.000192538,
+      "end_seconds": 0.310552459
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 0.312174158,
+      "end_seconds": 0.380561509
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 0.381004213,
+      "end_seconds": 0.381404229
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 0.381574439,
+      "end_seconds": 0.577770589
+    },
+    {
+      "name": "backward",
+      "start_seconds": 0.578460562,
+      "end_seconds": 1.347352432
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 1.347492327,
+      "end_seconds": 1.648148843
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 1.649822696,
+      "end_seconds": 1.717609894
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 1.718039867,
+      "end_seconds": 1.731483022
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 1.732829261,
+      "end_seconds": 1.948237077
+    },
+    {
+      "name": "backward",
+      "start_seconds": 1.948957968,
+      "end_seconds": 2.755846969
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 2.755992468,
+      "end_seconds": 3.22565104
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 3.227335034,
+      "end_seconds": 3.296889837
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 3.297306066,
+      "end_seconds": 3.305481164
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 3.305678478,
+      "end_seconds": 3.51192913
+    },
+    {
+      "name": "backward",
+      "start_seconds": 3.512651148,
+      "end_seconds": 4.352564039
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 4.352705906,
+      "end_seconds": 4.903700823
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 4.905440523,
+      "end_seconds": 4.973927362
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 4.974324687,
+      "end_seconds": 4.988114083
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 4.989494414,
+      "end_seconds": 5.211584105
+    },
+    {
+      "name": "backward",
+      "start_seconds": 5.212350912,
+      "end_seconds": 6.040756729
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 6.04092232,
+      "end_seconds": 6.361320505
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 6.36307505,
+      "end_seconds": 6.433503324
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 6.433940781,
+      "end_seconds": 6.44386129
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 6.444072058,
+      "end_seconds": 6.653208669
+    },
+    {
+      "name": "backward",
+      "start_seconds": 6.653947539,
+      "end_seconds": 7.438760806
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 7.438937798,
+      "end_seconds": 7.751887562
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 7.753590813,
+      "end_seconds": 7.833419107
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 7.833939479,
+      "end_seconds": 7.846663453
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 7.846897853,
+      "end_seconds": 8.062720353
+    },
+    {
+      "name": "backward",
+      "start_seconds": 8.063468017,
+      "end_seconds": 8.852820323
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 8.852968975,
+      "end_seconds": 9.169826525
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 9.171541606,
+      "end_seconds": 9.242286112
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 9.242676577,
+      "end_seconds": 9.25400835
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 9.254220401,
+      "end_seconds": 9.473999526
+    },
+    {
+      "name": "backward",
+      "start_seconds": 9.474720472,
+      "end_seconds": 10.283564556
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 10.283701507,
+      "end_seconds": 10.603596616
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 10.605338771,
+      "end_seconds": 10.675356003
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 10.675752396,
+      "end_seconds": 10.68803403
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 10.688224295,
+      "end_seconds": 10.899659556
+    },
+    {
+      "name": "backward",
+      "start_seconds": 10.900385969,
+      "end_seconds": 11.697379871
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 11.697520924,
+      "end_seconds": 12.284991364
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 12.286735342,
+      "end_seconds": 12.357945143
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 12.358345438,
+      "end_seconds": 12.370915813
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 12.371966719,
+      "end_seconds": 12.591597272
+    },
+    {
+      "name": "backward",
+      "start_seconds": 12.592334525,
+      "end_seconds": 13.447316109
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 13.447462485,
+      "end_seconds": 13.785680164
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 13.787444282,
+      "end_seconds": 13.858925383
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 13.859346051,
+      "end_seconds": 13.872037775
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 13.872235545,
+      "end_seconds": 14.094005866
+    },
+    {
+      "name": "backward",
+      "start_seconds": 14.094719588,
+      "end_seconds": 14.909119067
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 14.909255012,
+      "end_seconds": 15.241816499
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 15.243550628,
+      "end_seconds": 15.314021351
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 15.314444198,
+      "end_seconds": 15.326947026
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 15.328280766,
+      "end_seconds": 15.557221354
+    },
+    {
+      "name": "backward",
+      "start_seconds": 15.558046946,
+      "end_seconds": 16.395859834
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 16.396011423,
+      "end_seconds": 16.720115541
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 16.721761785,
+      "end_seconds": 16.790527911
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 16.790935176,
+      "end_seconds": 16.802410557
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 16.802594385,
+      "end_seconds": 17.016015737
+    },
+    {
+      "name": "backward",
+      "start_seconds": 17.016682134,
+      "end_seconds": 17.839996822
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 17.840149152,
+      "end_seconds": 18.571172627
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 18.575017993,
+      "end_seconds": 18.656460985
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 18.726969214,
+      "end_seconds": 18.739630571
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 18.739852031,
+      "end_seconds": 19.06284454
+    },
+    {
+      "name": "backward",
+      "start_seconds": 19.063877987,
+      "end_seconds": 20.388703003
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 20.388873099,
+      "end_seconds": 20.864613109
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 20.868261187,
+      "end_seconds": 20.954677804
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 21.025278105,
+      "end_seconds": 21.042345623
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 21.04256003,
+      "end_seconds": 21.370911948
+    },
+    {
+      "name": "backward",
+      "start_seconds": 21.371846818,
+      "end_seconds": 22.698327875
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 22.698466442,
+      "end_seconds": 23.172313016
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 23.17597829,
+      "end_seconds": 23.257827823
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 23.328354653,
+      "end_seconds": 23.346333386
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 23.347768223,
+      "end_seconds": 23.664092347
+    },
+    {
+      "name": "backward",
+      "start_seconds": 23.665039011,
+      "end_seconds": 25.004567232
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 25.004738994,
+      "end_seconds": 25.721124983
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 25.724825412,
+      "end_seconds": 25.806437532
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 25.877094279,
+      "end_seconds": 25.904498338
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 25.904713928,
+      "end_seconds": 26.217143284
+    },
+    {
+      "name": "backward",
+      "start_seconds": 26.21810254,
+      "end_seconds": 27.578172327
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 27.578302714,
+      "end_seconds": 27.89066873
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 27.892373722,
+      "end_seconds": 27.961009882
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 27.961413456,
+      "end_seconds": 27.989351271
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 27.990295298,
+      "end_seconds": 28.206095405
+    },
+    {
+      "name": "backward",
+      "start_seconds": 28.206769216,
+      "end_seconds": 29.003328643
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 29.003458703,
+      "end_seconds": 29.31638036
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 29.31806159,
+      "end_seconds": 29.386928033
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 29.387328893,
+      "end_seconds": 29.40063693
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 29.401882421,
+      "end_seconds": 29.608051563
+    },
+    {
+      "name": "backward",
+      "start_seconds": 29.608749854,
+      "end_seconds": 30.411639298
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 30.411777582,
+      "end_seconds": 30.718604959
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 30.720325954,
+      "end_seconds": 30.788130077
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 30.788514011,
+      "end_seconds": 30.801398563
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 30.802671962,
+      "end_seconds": 31.021382774
+    },
+    {
+      "name": "backward",
+      "start_seconds": 31.02212904,
+      "end_seconds": 31.826755655
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 31.826924969,
+      "end_seconds": 32.386826588
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 32.388527187,
+      "end_seconds": 32.457815524
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 32.458249989,
+      "end_seconds": 32.474097537
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 32.474295099,
+      "end_seconds": 32.679242032
+    },
+    {
+      "name": "backward",
+      "start_seconds": 32.67998861,
+      "end_seconds": 33.484143187
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 33.484341002,
+      "end_seconds": 33.805465443
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 33.807234996,
+      "end_seconds": 33.877000852
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 33.877444865,
+      "end_seconds": 33.892907043
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 33.893120429,
+      "end_seconds": 34.100440826
+    },
+    {
+      "name": "backward",
+      "start_seconds": 34.101189005,
+      "end_seconds": 34.913643554
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 34.913845607,
+      "end_seconds": 35.23203626
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 35.23372434,
+      "end_seconds": 35.302727273
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 35.303178562,
+      "end_seconds": 35.317136424
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 35.31734191,
+      "end_seconds": 35.522810547
+    },
+    {
+      "name": "backward",
+      "start_seconds": 35.523535341,
+      "end_seconds": 36.385108605
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 36.385258241,
+      "end_seconds": 36.710737762
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 36.712460158,
+      "end_seconds": 36.781949648
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 36.782423746,
+      "end_seconds": 36.796193419
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 36.796408252,
+      "end_seconds": 37.005562686
+    },
+    {
+      "name": "backward",
+      "start_seconds": 37.00631388,
+      "end_seconds": 37.811454607
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 37.811595791,
+      "end_seconds": 38.12827768
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 38.129995317,
+      "end_seconds": 38.198901241
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 38.199306978,
+      "end_seconds": 38.213502709
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 38.213782181,
+      "end_seconds": 38.421184183
+    },
+    {
+      "name": "backward",
+      "start_seconds": 38.422018611,
+      "end_seconds": 39.345023994
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 39.345233519,
+      "end_seconds": 40.144497813
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 40.147839715,
+      "end_seconds": 40.232198511
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 40.304603411,
+      "end_seconds": 40.318813548
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 40.319132589,
+      "end_seconds": 40.637772292
+    },
+    {
+      "name": "backward",
+      "start_seconds": 40.638584099,
+      "end_seconds": 42.007182509
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 42.007359542,
+      "end_seconds": 42.515514913
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 42.518501602,
+      "end_seconds": 42.60198925
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 42.674158005,
+      "end_seconds": 42.702449887
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 42.702686039,
+      "end_seconds": 43.04021624
+    },
+    {
+      "name": "backward",
+      "start_seconds": 43.040999977,
+      "end_seconds": 44.39064701
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 44.390813586,
+      "end_seconds": 45.118713216
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 45.122379383,
+      "end_seconds": 45.206180106
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 45.278459899,
+      "end_seconds": 45.301308739
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 45.301568873,
+      "end_seconds": 45.630172454
+    },
+    {
+      "name": "backward",
+      "start_seconds": 45.631050779,
+      "end_seconds": 46.977763591
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 46.97793367,
+      "end_seconds": 47.458585581
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 47.462349815,
+      "end_seconds": 47.545608226
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 47.617948631,
+      "end_seconds": 47.636959748
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 47.638283223,
+      "end_seconds": 47.959583186
+    },
+    {
+      "name": "backward",
+      "start_seconds": 47.960518201,
+      "end_seconds": 49.2732356
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 49.273377468,
+      "end_seconds": 49.612555723
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 49.614293491,
+      "end_seconds": 49.684580828
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 49.685019792,
+      "end_seconds": 49.702551049
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 49.702750154,
+      "end_seconds": 49.92419473
+    },
+    {
+      "name": "backward",
+      "start_seconds": 49.924979492,
+      "end_seconds": 50.764385483
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 50.764531744,
+      "end_seconds": 51.336417272
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 51.338230869,
+      "end_seconds": 51.412366118
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 51.412914658,
+      "end_seconds": 51.428376311
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 51.429797189,
+      "end_seconds": 51.666738446
+    },
+    {
+      "name": "backward",
+      "start_seconds": 51.667544972,
+      "end_seconds": 52.511723382
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 52.511903261,
+      "end_seconds": 52.844067657
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 52.845783886,
+      "end_seconds": 52.916134542
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 52.916524441,
+      "end_seconds": 52.929998059
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 52.930208614,
+      "end_seconds": 53.14551864
+    },
+    {
+      "name": "backward",
+      "start_seconds": 53.146287114,
+      "end_seconds": 53.988796939
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 53.989019303,
+      "end_seconds": 54.326242795
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 54.328023139,
+      "end_seconds": 54.398362156
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 54.398828723,
+      "end_seconds": 54.414990444
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 54.415296447,
+      "end_seconds": 54.651732897
+    },
+    {
+      "name": "backward",
+      "start_seconds": 54.652507864,
+      "end_seconds": 55.485294343
+    },
+    {
+      "name": "optimizer",
+      "start_seconds": 55.514665349,
+      "end_seconds": 55.527027316
+    }
+  ],
+  "top_kernels": [
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 4896,
+      "summed_device_seconds": 3.09492826,
+      "mean_us": 632.1340400326796,
+      "max_us": 1050.141
+    },
+    {
+      "name": "elementwise_kernel",
+      "calls": 1016384,
+      "summed_device_seconds": 2.796647187,
+      "mean_us": 2.751565537237894,
+      "max_us": 73.568
+    },
+    {
+      "name": "vectorized_elementwise_kernel",
+      "calls": 730501,
+      "summed_device_seconds": 1.373643681,
+      "mean_us": 1.8804131424871422,
+      "max_us": 33.376
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 11400,
+      "summed_device_seconds": 1.318537809,
+      "mean_us": 115.66121131578947,
+      "max_us": 225.055
+    },
+    {
+      "name": "reduce_kernel",
+      "calls": 179621,
+      "summed_device_seconds": 0.862011393,
+      "mean_us": 4.799056864175125,
+      "max_us": 21.792
+    },
+    {
+      "name": "Kernel2",
+      "calls": 14208,
+      "summed_device_seconds": 0.486158463,
+      "mean_us": 34.21723416385135,
+      "max_us": 1105.021
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 624,
+      "summed_device_seconds": 0.478331389,
+      "mean_us": 766.5567131410256,
+      "max_us": 1036.253
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 3984,
+      "summed_device_seconds": 0.47313258,
+      "mean_us": 118.75817771084337,
+      "max_us": 370.975
+    },
+    {
+      "name": "nvjet_tst_192x192_64x4_1x2_h_bz_coopB_TNN",
+      "calls": 512,
+      "summed_device_seconds": 0.429145392,
+      "mean_us": 838.17459375,
+      "max_us": 842.461
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 928,
+      "summed_device_seconds": 0.381902683,
+      "mean_us": 411.5330635775862,
+      "max_us": 2390.424
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 50352,
+      "summed_device_seconds": 0.30547892,
+      "mean_us": 6.066867651731808,
+      "max_us": 11.776
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 34704,
+      "summed_device_seconds": 0.227561584,
+      "mean_us": 6.557214845550945,
+      "max_us": 21.024
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 34488,
+      "summed_device_seconds": 0.206974026,
+      "mean_us": 6.001334551148226,
+      "max_us": 12.224
+    },
+    {
+      "name": "nvjet_tst_256x128_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 352,
+      "summed_device_seconds": 0.181695209,
+      "mean_us": 516.1795710227273,
+      "max_us": 897.021
+    },
+    {
+      "name": "nvjet_tst_192x160_64x4_2x1_v_bz_coopB_TNT",
+      "calls": 352,
+      "summed_device_seconds": 0.170614663,
+      "mean_us": 484.7007471590909,
+      "max_us": 840.637
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 648,
+      "summed_device_seconds": 0.158308907,
+      "mean_us": 244.3038688271605,
+      "max_us": 280.255
+    },
+    {
+      "name": "conv_depthwise2d_forward_kernel_generic",
+      "calls": 2496,
+      "summed_device_seconds": 0.135440063,
+      "mean_us": 54.26284575320513,
+      "max_us": 164.959
+    },
+    {
+      "name": "nvjet_tst_80x192_64x6_2x1_v_bz_TNN",
+      "calls": 768,
+      "summed_device_seconds": 0.109706679,
+      "mean_us": 142.84723828125,
+      "max_us": 144.16
+    },
+    {
+      "name": "nvjet_tst_320x128_64x3_2x1_v_bz_coopB_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.096394072,
+      "mean_us": 376.53934375,
+      "max_us": 566.143
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 1032,
+      "summed_device_seconds": 0.071690013,
+      "mean_us": 69.46706686046511,
+      "max_us": 198.112
+    },
+    {
+      "name": "nvjet_tst_256x160_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 128,
+      "summed_device_seconds": 0.071660176,
+      "mean_us": 559.845125,
+      "max_us": 560.958
+    },
+    {
+      "name": "nvjet_tst_256x104_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.062884275,
+      "mean_us": 245.64169921875,
+      "max_us": 247.071
+    },
+    {
+      "name": "nvjet_tst_256x96_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.058099015,
+      "mean_us": 226.94927734375,
+      "max_us": 229.312
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 216,
+      "summed_device_seconds": 0.055363114,
+      "mean_us": 256.31071296296295,
+      "max_us": 281.087
+    },
+    {
+      "name": "nvjet_tst_80x192_64x6_2x1_v_bz_splitK_TNN",
+      "calls": 384,
+      "summed_device_seconds": 0.055191917,
+      "mean_us": 143.72895052083334,
+      "max_us": 144.896
+    },
+    {
+      "name": "splitKreduce_kernel",
+      "calls": 17072,
+      "summed_device_seconds": 0.053176882,
+      "mean_us": 3.1148595360824745,
+      "max_us": 12.96
+    },
+    {
+      "name": "nvjet_tst_320x128_64x3_1x2_h_bz_coopB_TNT",
+      "calls": 256,
+      "summed_device_seconds": 0.048761167,
+      "mean_us": 190.47330859375,
+      "max_us": 191.68
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x64x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 32,
+      "summed_device_seconds": 0.047977699,
+      "mean_us": 1499.30309375,
+      "max_us": 1518.363
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x32x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 3264,
+      "summed_device_seconds": 0.042362479,
+      "mean_us": 12.978700674019608,
+      "max_us": 27.039
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x64x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 432,
+      "summed_device_seconds": 0.038068607,
+      "mean_us": 88.12177546296296,
+      "max_us": 215.999
+    }
+  ],
+  "cuda_api": [
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "calls": 1972857,
+      "host_seconds": 9.571039848
+    },
+    {
+      "name": "cudaLaunchKernelExC_v11060",
+      "calls": 159192,
+      "host_seconds": 0.906359775
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "calls": 53022,
+      "host_seconds": 0.62568461
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "calls": 65,
+      "host_seconds": 0.566570513
+    },
+    {
+      "name": "cudaStreamSynchronize_v3020",
+      "calls": 4766,
+      "host_seconds": 0.230865316
+    },
+    {
+      "name": "cuLaunchKernelEx",
+      "calls": 17184,
+      "host_seconds": 0.148267552
+    },
+    {
+      "name": "cudaMemsetAsync_v3020",
+      "calls": 19304,
+      "host_seconds": 0.142424706
+    },
+    {
+      "name": "cuLaunchKernel",
+      "calls": 14464,
+      "host_seconds": 0.087351675
+    },
+    {
+      "name": "cuKernelGetFunction",
+      "calls": 14208,
+      "host_seconds": 0.012999473
+    },
+    {
+      "name": "cudaStreamIsCapturing_v10000",
+      "calls": 5393,
+      "host_seconds": 0.005051387
+    },
+    {
+      "name": "cuKernelGetAttribute",
+      "calls": 15936,
+      "host_seconds": 0.002193714
+    },
+    {
+      "name": "cuKernelSetAttribute",
+      "calls": 512,
+      "host_seconds": 0.000125424
+    },
+    {
+      "name": "cuProfilerStart",
+      "calls": 1,
+      "host_seconds": 8.973e-06
+    }
+  ],
+  "representative_window": {
+    "start_seconds": 0.000192538,
+    "end_seconds": 1.347352432
+  },
+  "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization"
+}

@@ -145,16 +145,138 @@ def alert(metrics: dict, history: list[dict]) -> list[str]:
     return alarms
 
 
+def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
+                  parameters, before, step, output, totals, span, frozen_teacher=None):
+    """Execute the same audited learner update for training and fixed-trajectory benchmarks."""
+    rows, tokens, mask = rollout["rows"], rollout["tokens"], rollout["mask"]
+    total_actions = mask.sum().item()
+    version = step
+    sft = config.objective in ("oracle_sft", "offline_sft")
+    audit = defaultdict(float)
+    max_error = 0.0
+    for start in range(0, len(rows), config.microbatch):
+        end = min(start + config.microbatch, len(rows))
+        batch, tok, m = rows[start:end], tokens[start:end], mask[start:end]
+        learner_started = time.monotonic()
+        teacher_seconds = 0.0
+        with span("learner_forward"):
+            current = runtime.score(batch, tok, m, entropy=True,
+                                    keep_logits=config.objective == "full_kl")
+        logp = current["logp"]
+        m = m.to(logp.device)
+        factor = m.sum().item() / total_actions if config.aggregation == "token" else len(batch) / len(rows)
+        entropy = current["entropy"].detach()
+        if sft:
+            from .losses import reduce_actions
+            loss = reduce_actions(-logp, m, config.aggregation)
+            rl_loss, opd_loss = loss * 0, loss * 0
+        else:
+            old = rollout["behavior_logp"][start:end].to(logp.device)
+            error = (logp.detach() - old)[m].abs().max().item()
+            max_error = max(max_error, error)
+            if error > config.behavior_tolerance:
+                write_json(output / "probability-failure.json", {
+                    "step": step + 1, "version": version, "max_error": error,
+                    "sample_ids": [r["sample_id"] for r in batch],
+                    "tokens": tok.tolist(), "mask": m.cpu().tolist(),
+                    "behavior_logp": old.cpu().tolist(),
+                    "recomputed_logp": logp.detach().cpu().tolist()})
+                raise RuntimeError(f"Version {version}: rollout/recompute error {error:.6f}")
+            rl_signal = rl_adv[start:end].to(logp.device)[:, None].expand_as(logp)
+            rl_loss, ratios = policy_loss(logp, old, rl_signal, m, config.clip, config.aggregation)
+            for key, value in ratios.items():
+                audit[key] += value * factor
+            opd_loss = logp.sum() * 0
+            if runtime.teacher:
+                teacher_started = time.monotonic()
+                with span("teacher_forward"):
+                    teacher = (runtime.score(batch, tok, m, teacher=True,
+                                            keep_logits=config.objective == "full_kl")
+                               if frozen_teacher is None else {
+                                   key: value[start:end].to(logp.device)
+                                   for key, value in frozen_teacher.items()})
+                torch.cuda.synchronize()
+                teacher_seconds = time.monotonic() - teacher_started
+                totals["teacher"] += teacher_seconds
+                teacher_logp = teacher["logp"].to(logp.device)
+                signal = opd_advantages(old, teacher_logp, m)
+                from .losses import reduce_actions
+                if config.objective == "full_kl":
+                    with span("full_vocabulary_kl"):
+                        kl = full_reverse_kl(
+                            current["logits"], teacher["logits"].to(logp.device))
+                        opd_loss = reduce_actions(kl, m, config.aggregation)
+                else:
+                    opd_loss, _ = policy_loss(
+                        logp, old, signal, m, config.clip, config.aggregation)
+                audit["teacher_sampled_kl"] += reduce_actions(-signal, m, config.aggregation).item() * factor
+                del teacher
+            if config.objective == "full_kl":
+                loss = opd_loss
+            else:
+                loss = mix_losses(rl_loss, opd_loss, controller.weight,
+                                  config.objective, step)
+            with torch.no_grad():
+                with span("reference_forward"):
+                    reference = runtime.score(batch, tok, m, reference=True)["logp"]
+            from .losses import reduce_actions
+            audit["reference_sampled_kl"] += reduce_actions(
+                old - reference, m, config.aggregation).item() * factor
+        if not bool(torch.isfinite(loss)):
+            raise FloatingPointError("Non-finite objective")
+        audit["entropy"] += (entropy[m].mean().item() * factor)
+        audit["loss"] += loss.detach().item() * factor
+        audit["rl_loss"] += rl_loss.detach().item() * factor
+        audit["opd_loss"] += opd_loss.detach().item() * factor
+        # A limited parameter projection, explicitly not a full-gradient claim.
+        if not sft and runtime.teacher and step % 10 == 0 and start == 0:
+            projection = parameters[-1]
+            g_rl = torch.autograd.grad(rl_loss, projection, retain_graph=True,
+                                       allow_unused=True)[0]
+            g_opd = torch.autograd.grad(opd_loss, projection, retain_graph=True,
+                                        allow_unused=True)[0]
+            if g_rl is not None and g_opd is not None:
+                audit["gradient_projection_cosine"] = torch.nn.functional.cosine_similarity(
+                    g_rl.flatten().float(), g_opd.flatten().float(), dim=0).item()
+                audit["rl_gradient_projection_norm"] = g_rl.float().norm().item()
+                audit["opd_gradient_projection_norm"] = g_opd.float().norm().item()
+        with span("backward"):
+            (loss * factor).backward()
+        del current, logp, loss
+        torch.cuda.synchronize()
+        totals["learner"] += time.monotonic() - learner_started - teacher_seconds
+    gradients_finite = all(p.grad is None or bool(torch.isfinite(p.grad).all()) for p in parameters)
+    if not gradients_finite:
+        raise FloatingPointError("Non-finite gradient; optimizer update refused")
+    norm = torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True).item()
+    with span("optimizer"):
+        optimizer.step()
+    delta = sum((p.detach().float() - old.float()).square().sum().item()
+                for p, old in zip(parameters, before)) ** 0.5
+    if not all(bool(torch.isfinite(p).all()) for p in parameters):
+        raise FloatingPointError("Non-finite adapter parameters")
+    if runtime.teacher:
+        if any(p.grad is not None or p.requires_grad for p in runtime.teacher.parameters()):
+            raise RuntimeError("Teacher gradient/freeze contract failed")
+    return dict(audit), max_error, norm, delta
+
+
 def train(args) -> dict:
     config = Config(**json.loads(Path(args.config).read_text()))
     observation = getattr(args, "observation", None)
+    if observation is None and getattr(args, "observe_host", False):
+        from .observation import TrainingObservation
+        observation = TrainingObservation(Path(args.output) / "observation", "none", 1, config.steps)
+    fork_parent = getattr(args, "fork_parent", None)
+    if fork_parent and (args.resume or args.adapter):
+        raise ValueError("Fork parent cannot be combined with resume/adapter")
     span = observation.span if observation is not None else lambda name: nullcontext()
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     seed_all(config.seed)
     teacher_needed = config.objective not in ("oracle_sft", "offline_sft", "grpo")
     runtime = Runtime(
-        args.student, args.teacher if teacher_needed else None, args.adapter or args.resume,
+        args.student, args.teacher if teacher_needed else None, args.adapter or args.resume or fork_parent,
         train=True, teacher_device=args.teacher_device, train_precision=config.train_precision,
     )
     write_json(output / "contract.json", runtime.contract)
@@ -177,6 +299,22 @@ def train(args) -> dict:
         start_step, tokens_seen = restored["step"], restored["tokens_seen"]
         best_score, history = restored["best_score"], restored["monitor_history"]
         write_json(output / f"restoration-{start_step:04d}.json", restored["restoration"])
+    elif fork_parent:
+        parent_path = Path(fork_parent)
+        parent_state = torch.load(parent_path / "training.pt", map_location="cpu", weights_only=False)
+        restored = load_checkpoint(runtime, optimizer, parent_path,
+                                   Config(**parent_state["config"]), controller)
+        seed_all(config.seed)
+        controller = DevWeightController(config.opd_weight)
+        write_json(output / "fork-provenance.json", {
+            "parent_restoration": restored["restoration"],
+            "parent_config": parent_state["config"],
+            "new_config": dataclasses.asdict(config),
+            "optimizer_carried": True, "rng_seed": config.seed,
+            "step_tokens_history_controller_reset": True,
+            "boundary": "New experiment from common adapter/Adam; not seamless resume",
+        })
+        del parent_state, restored
     if observation is not None:
         observation.configure(config)
     frozen_teacher = (
@@ -232,109 +370,9 @@ def train(args) -> dict:
             "mask_sha256": tensor_fingerprint(mask),
             "texts": rollout["texts"],
         })
-        audit = defaultdict(float)
-        max_error = 0.0
-        for start in range(0, len(rows), config.microbatch):
-            end = min(start + config.microbatch, len(rows))
-            batch, tok, m = rows[start:end], tokens[start:end], mask[start:end]
-            learner_started = time.monotonic()
-            teacher_seconds = 0.0
-            with span("learner_forward"):
-                current = runtime.score(batch, tok, m, entropy=True,
-                                        keep_logits=config.objective == "full_kl")
-            logp = current["logp"]
-            m = m.to(logp.device)
-            factor = m.sum().item() / total_actions if config.aggregation == "token" else len(batch) / len(rows)
-            entropy = current["entropy"].detach()
-            if sft:
-                from .losses import reduce_actions
-                loss = reduce_actions(-logp, m, config.aggregation)
-                rl_loss, opd_loss = loss * 0, loss * 0
-            else:
-                old = rollout["behavior_logp"][start:end].to(logp.device)
-                error = (logp.detach() - old)[m].abs().max().item()
-                max_error = max(max_error, error)
-                if error > config.behavior_tolerance:
-                    write_json(output / "probability-failure.json", {
-                        "step": step + 1, "version": version, "max_error": error,
-                        "sample_ids": [r["sample_id"] for r in batch],
-                        "tokens": tok.tolist(), "mask": m.cpu().tolist(),
-                        "behavior_logp": old.cpu().tolist(),
-                        "recomputed_logp": logp.detach().cpu().tolist()})
-                    raise RuntimeError(f"Version {version}: rollout/recompute error {error:.6f}")
-                rl_signal = rl_adv[start:end].to(logp.device)[:, None].expand_as(logp)
-                rl_loss, ratios = policy_loss(logp, old, rl_signal, m, config.clip, config.aggregation)
-                for key, value in ratios.items():
-                    audit[key] += value * factor
-                opd_loss = logp.sum() * 0
-                if runtime.teacher:
-                    teacher_started = time.monotonic()
-                    with span("teacher_forward"):
-                        teacher = runtime.score(batch, tok, m, teacher=True,
-                                                keep_logits=config.objective == "full_kl")
-                    torch.cuda.synchronize()
-                    teacher_seconds = time.monotonic() - teacher_started
-                    totals["teacher"] += teacher_seconds
-                    teacher_logp = teacher["logp"].to(logp.device)
-                    signal = opd_advantages(old, teacher_logp, m)
-                    from .losses import reduce_actions
-                    if config.objective == "full_kl":
-                        with span("full_vocabulary_kl"):
-                            kl = full_reverse_kl(
-                                current["logits"], teacher["logits"].to(logp.device))
-                            opd_loss = reduce_actions(kl, m, config.aggregation)
-                    else:
-                        opd_loss, _ = policy_loss(
-                            logp, old, signal, m, config.clip, config.aggregation)
-                    audit["teacher_sampled_kl"] += reduce_actions(-signal, m, config.aggregation).item() * factor
-                    del teacher
-                if config.objective == "full_kl":
-                    loss = opd_loss
-                else:
-                    loss = mix_losses(rl_loss, opd_loss, controller.weight,
-                                      config.objective, step)
-                with torch.no_grad():
-                    with span("reference_forward"):
-                        reference = runtime.score(batch, tok, m, reference=True)["logp"]
-                from .losses import reduce_actions
-                audit["reference_sampled_kl"] += reduce_actions(
-                    old - reference, m, config.aggregation).item() * factor
-            if not bool(torch.isfinite(loss)):
-                raise FloatingPointError("Non-finite objective")
-            audit["entropy"] += (entropy[m].mean().item() * factor)
-            audit["loss"] += loss.detach().item() * factor
-            audit["rl_loss"] += rl_loss.detach().item() * factor
-            audit["opd_loss"] += opd_loss.detach().item() * factor
-            # A limited parameter projection, explicitly not a full-gradient claim.
-            if not sft and runtime.teacher and step % 10 == 0 and start == 0:
-                projection = parameters[-1]
-                g_rl = torch.autograd.grad(rl_loss, projection, retain_graph=True,
-                                           allow_unused=True)[0]
-                g_opd = torch.autograd.grad(opd_loss, projection, retain_graph=True,
-                                            allow_unused=True)[0]
-                if g_rl is not None and g_opd is not None:
-                    audit["gradient_projection_cosine"] = torch.nn.functional.cosine_similarity(
-                        g_rl.flatten().float(), g_opd.flatten().float(), dim=0).item()
-                    audit["rl_gradient_projection_norm"] = g_rl.float().norm().item()
-                    audit["opd_gradient_projection_norm"] = g_opd.float().norm().item()
-            with span("backward"):
-                (loss * factor).backward()
-            del current, logp, loss
-            torch.cuda.synchronize()
-            totals["learner"] += time.monotonic() - learner_started - teacher_seconds
-        gradients_finite = all(p.grad is None or bool(torch.isfinite(p.grad).all()) for p in parameters)
-        if not gradients_finite:
-            raise FloatingPointError("Non-finite gradient; optimizer update refused")
-        norm = torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True).item()
-        with span("optimizer"):
-            optimizer.step()
-        delta = sum((p.detach().float() - old.float()).square().sum().item()
-                    for p, old in zip(parameters, before)) ** 0.5
-        if not all(bool(torch.isfinite(p).all()) for p in parameters):
-            raise FloatingPointError("Non-finite adapter parameters")
-        if runtime.teacher:
-            if any(p.grad is not None or p.requires_grad for p in runtime.teacher.parameters()):
-                raise RuntimeError("Teacher gradient/freeze contract failed")
+        audit, max_error, norm, delta = apply_rollout(
+            runtime, optimizer, config, controller, rollout, rl_adv, parameters,
+            before, step, output, totals, span)
         grades = [grade(row, text) for row, text in zip(rows, rollout["texts"])]
         domain_metrics = {}
         for domain in set(row["domain"] for row in rows):
@@ -426,6 +464,8 @@ def main():
     parser.add_argument("--teacher-labels")
     parser.add_argument("--adapter")
     parser.add_argument("--resume")
+    parser.add_argument("--fork-parent")
+    parser.add_argument("--observe-host", action="store_true")
     parser.add_argument("--stop-after", type=int)
     args = parser.parse_args()
     try:

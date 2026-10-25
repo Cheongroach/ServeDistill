@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "performance-measurements.jsonl.gz",
+      "records": 520,
+      "sha256": "d0cf471a374bab67114b9d557c2567bd0273d885414fc88b4510912a2f2e35cd"
+    },
+    {
+      "file": "training-steps.jsonl.gz",
+      "records": 1920,
+      "sha256": "4b85b13e617c1c8660cb4abb5504943b693730432150f9a33889d12b386ad821"
+    },
+    {
+      "file": "task-metrics.jsonl.gz",
+      "records": 70400,
+      "sha256": "74b6f27afa4c614a6661d9904e3793bf7ff3e2fd3ee0fcb8e433cea6342853f4"
+    }
+  ],
+  "boundary": "Repetitions and seeds do not increase independent bank/query counts",
+  "original_fp32_cosine_valid": false,
+  "original_fp32_cosine_reason": "Self-comparison exceeded 1; raw fields retained but excluded from claims"
+}

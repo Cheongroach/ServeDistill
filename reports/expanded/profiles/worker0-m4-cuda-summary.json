@@ -1,0 +1,549 @@
+{
+  "trace_sha256": "2b83801d244b6be1f4d693b6306577bff7b7529fff33a27c848da352541d34ea",
+  "update_name": "fixed_bank_update",
+  "host_update_seconds": 15.223117903,
+  "cuda_kernel_count": 519910,
+  "summed_kernel_seconds": 8.413990982,
+  "kernel_union_seconds_in_update": 8.413990982,
+  "kernel_copy_memset_union_seconds_in_update": 8.590748786,
+  "phase_device_launch_attribution": {
+    "learner_forward": {
+      "kernels": 90031,
+      "summed_device_seconds": 1.611558838
+    },
+    "unattributed": {
+      "kernels": 4744,
+      "summed_device_seconds": 0.01292694
+    },
+    "teacher_forward": {
+      "kernels": 16397,
+      "summed_device_seconds": 1.455629938
+    },
+    "full_vocabulary_kl": {
+      "kernels": 112,
+      "summed_device_seconds": 0.005154138
+    },
+    "reference_forward": {
+      "kernels": 84495,
+      "summed_device_seconds": 1.530843792
+    },
+    "backward": {
+      "kernels": 16,
+      "summed_device_seconds": 1.7664e-05
+    },
+    "backward_cross_thread_temporal": {
+      "kernels": 324078,
+      "summed_device_seconds": 3.797044824
+    },
+    "optimizer": {
+      "kernels": 37,
+      "summed_device_seconds": 0.000814848
+    }
+  },
+  "host_scopes": [
+    {
+      "name": "learner_forward",
+      "start_seconds": 0.00025156,
+      "end_seconds": 0.326354055
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 0.331876093,
+      "end_seconds": 0.420624825
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 0.496220029,
+      "end_seconds": 0.497045403
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 0.497274529,
+      "end_seconds": 0.726666574
+    },
+    {
+      "name": "backward",
+      "start_seconds": 0.729439447,
+      "end_seconds": 1.542617699
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 1.542761434,
+      "end_seconds": 1.858569828
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 1.864037543,
+      "end_seconds": 1.949108827
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 2.021772453,
+      "end_seconds": 2.035308411
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 2.03695252,
+      "end_seconds": 2.287433023
+    },
+    {
+      "name": "backward",
+      "start_seconds": 2.290078697,
+      "end_seconds": 3.137580962
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 3.137724092,
+      "end_seconds": 3.451573665
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 3.454507024,
+      "end_seconds": 3.524477916
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 3.563248642,
+      "end_seconds": 3.571858874
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 3.572082582,
+      "end_seconds": 3.786222808
+    },
+    {
+      "name": "backward",
+      "start_seconds": 3.786939364,
+      "end_seconds": 4.59326494
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 4.593406209,
+      "end_seconds": 4.930474817
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 4.937162937,
+      "end_seconds": 5.040564505
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 5.129674896,
+      "end_seconds": 5.142007804
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 5.14227005,
+      "end_seconds": 5.409805865
+    },
+    {
+      "name": "backward",
+      "start_seconds": 5.413549473,
+      "end_seconds": 6.292495363
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 6.29265265,
+      "end_seconds": 6.866053992
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 6.869117841,
+      "end_seconds": 6.940133196
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 6.974909914,
+      "end_seconds": 6.985305593
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 6.985533564,
+      "end_seconds": 7.208609789
+    },
+    {
+      "name": "backward",
+      "start_seconds": 7.20937467,
+      "end_seconds": 8.015555568
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 8.015711217,
+      "end_seconds": 8.772089678
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 8.802570717,
+      "end_seconds": 9.079037135
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 9.327361416,
+      "end_seconds": 9.339772296
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 9.339995683,
+      "end_seconds": 9.996199323
+    },
+    {
+      "name": "backward",
+      "start_seconds": 10.022800126,
+      "end_seconds": 11.752132911
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 11.752300416,
+      "end_seconds": 12.101765355
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 12.107726272,
+      "end_seconds": 12.204520152
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 12.280537196,
+      "end_seconds": 12.297151612
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 12.297377031,
+      "end_seconds": 12.555039627
+    },
+    {
+      "name": "backward",
+      "start_seconds": 12.5579408,
+      "end_seconds": 13.423292429
+    },
+    {
+      "name": "learner_forward",
+      "start_seconds": 13.42343118,
+      "end_seconds": 13.980201458
+    },
+    {
+      "name": "teacher_forward",
+      "start_seconds": 13.983436645,
+      "end_seconds": 14.054373155
+    },
+    {
+      "name": "full_vocabulary_kl",
+      "start_seconds": 14.103760363,
+      "end_seconds": 14.118843637
+    },
+    {
+      "name": "reference_forward",
+      "start_seconds": 14.119083822,
+      "end_seconds": 14.333186134
+    },
+    {
+      "name": "backward",
+      "start_seconds": 14.333892066,
+      "end_seconds": 15.130981094
+    },
+    {
+      "name": "optimizer",
+      "start_seconds": 15.158169587,
+      "end_seconds": 15.170672002
+    }
+  ],
+  "top_kernels": [
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 1834,
+      "summed_device_seconds": 1.915900727,
+      "mean_us": 1044.656884950927,
+      "max_us": 4325.47
+    },
+    {
+      "name": "elementwise_kernel",
+      "calls": 246311,
+      "summed_device_seconds": 1.134951335,
+      "mean_us": 4.607798007397152,
+      "max_us": 255.808
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 4386,
+      "summed_device_seconds": 0.620856827,
+      "mean_us": 141.55422412220702,
+      "max_us": 792.319
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x32x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 2292,
+      "summed_device_seconds": 0.575028796,
+      "mean_us": 250.88516404886562,
+      "max_us": 4725.308
+    },
+    {
+      "name": "vectorized_elementwise_kernel",
+      "calls": 175379,
+      "summed_device_seconds": 0.573078126,
+      "mean_us": 3.267655340719242,
+      "max_us": 105.856
+    },
+    {
+      "name": "nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 184,
+      "summed_device_seconds": 0.408648629,
+      "mean_us": 2220.9164619565217,
+      "max_us": 3013.534
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize128x32x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 690,
+      "summed_device_seconds": 0.397705113,
+      "mean_us": 576.3842217391305,
+      "max_us": 4510.684
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 356,
+      "summed_device_seconds": 0.300888047,
+      "mean_us": 845.1911432584269,
+      "max_us": 4060.893
+    },
+    {
+      "name": "reduce_kernel",
+      "calls": 44809,
+      "summed_device_seconds": 0.272832468,
+      "mean_us": 6.088787252560869,
+      "max_us": 70.976
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 216,
+      "summed_device_seconds": 0.218728737,
+      "mean_us": 1012.6330416666666,
+      "max_us": 1045.919
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 6690,
+      "summed_device_seconds": 0.206806824,
+      "mean_us": 30.91282869955157,
+      "max_us": 642.176
+    },
+    {
+      "name": "Kernel2",
+      "calls": 1002,
+      "summed_device_seconds": 0.192904334,
+      "mean_us": 192.51929540918164,
+      "max_us": 3393.949
+    },
+    {
+      "name": "conv_depthwise2d_forward_kernel_generic",
+      "calls": 624,
+      "summed_device_seconds": 0.103594703,
+      "mean_us": 166.01715224358975,
+      "max_us": 612.799
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x256x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 150,
+      "summed_device_seconds": 0.095770733,
+      "mean_us": 638.4715533333333,
+      "max_us": 836.639
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 162,
+      "summed_device_seconds": 0.091612662,
+      "mean_us": 565.5102592592592,
+      "max_us": 2582.494
+    },
+    {
+      "name": "nvjet_tst_320x128_64x3_1x2_h_bz_coopB_TNT",
+      "calls": 184,
+      "summed_device_seconds": 0.076160574,
+      "mean_us": 413.91616304347826,
+      "max_us": 559.871
+    },
+    {
+      "name": "nvjet_tst_256x112_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 64,
+      "summed_device_seconds": 0.066316902,
+      "mean_us": 1036.20159375,
+      "max_us": 1040.735
+    },
+    {
+      "name": "nvjet_tst_256x160_64x4_1x2_h_bz_coopA_TNT",
+      "calls": 64,
+      "summed_device_seconds": 0.05928745,
+      "mean_us": 926.36640625,
+      "max_us": 928.544
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 5064,
+      "summed_device_seconds": 0.056177227,
+      "mean_us": 11.093449249605055,
+      "max_us": 18.016
+    },
+    {
+      "name": "nvjet_tst_128x304_64x3_2x1_v_bz_coopA_TNT",
+      "calls": 64,
+      "summed_device_seconds": 0.056155951,
+      "mean_us": 877.436734375,
+      "max_us": 878.528
+    },
+    {
+      "name": "nvjet_tst_192x208_64x4_2x1_v_bz_coopB_TNT",
+      "calls": 88,
+      "summed_device_seconds": 0.055062547,
+      "mean_us": 625.7107613636364,
+      "max_us": 1085.119
+    },
+    {
+      "name": "nvjet_tst_192x192_64x4_1x2_h_bz_coopB_TNN",
+      "calls": 64,
+      "summed_device_seconds": 0.053392783,
+      "mean_us": 834.262234375,
+      "max_us": 837.312
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nt_n_tilesize64x64x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 4680,
+      "summed_device_seconds": 0.053228912,
+      "mean_us": 11.373699145299145,
+      "max_us": 65.279
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize64x128x8_stage3_warpsize1x4x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 114,
+      "summed_device_seconds": 0.053010139,
+      "mean_us": 465.00121929824564,
+      "max_us": 630.432
+    },
+    {
+      "name": "nvjet_tst_128x184_64x5_2x1_v_bz_coopA_TNT",
+      "calls": 88,
+      "summed_device_seconds": 0.048692002,
+      "mean_us": 553.3182045454546,
+      "max_us": 960.223
+    },
+    {
+      "name": "nvjet_tst_192x176_64x4_2x1_v_bz_coopB_TNT",
+      "calls": 88,
+      "summed_device_seconds": 0.046606264,
+      "mean_us": 529.6166363636363,
+      "max_us": 917.055
+    },
+    {
+      "name": "nvjet_tst_384x104_64x3_2x1_v_bz_coopA_TNT",
+      "calls": 96,
+      "summed_device_seconds": 0.046571959,
+      "mean_us": 485.1245729166667,
+      "max_us": 546.751
+    },
+    {
+      "name": "nvjet_tst_256x128_64x4_2x1_v_bz_coopA_TNT",
+      "calls": 88,
+      "summed_device_seconds": 0.045198494,
+      "mean_us": 513.61925,
+      "max_us": 889.631
+    },
+    {
+      "name": "nvjet_tst_128x208_64x5_2x1_v_bz_coopA_TNT",
+      "calls": 64,
+      "summed_device_seconds": 0.038610729,
+      "mean_us": 603.292640625,
+      "max_us": 604.415
+    },
+    {
+      "name": "sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x8_stage3_warpsize1x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas",
+      "calls": 4020,
+      "summed_device_seconds": 0.038506463,
+      "mean_us": 9.578722139303483,
+      "max_us": 25.824
+    }
+  ],
+  "cuda_api": [
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "calls": 474726,
+      "host_seconds": 2.484083562
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "calls": 13954,
+      "host_seconds": 1.276274543
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "calls": 17,
+      "host_seconds": 0.679464157
+    },
+    {
+      "name": "cudaLaunchKernelExC_v11060",
+      "calls": 39822,
+      "host_seconds": 0.217453738
+    },
+    {
+      "name": "cudaStreamSynchronize_v3020",
+      "calls": 2318,
+      "host_seconds": 0.113358028
+    },
+    {
+      "name": "cuLaunchKernelEx",
+      "calls": 4296,
+      "host_seconds": 0.100824417
+    },
+    {
+      "name": "cudaMemsetAsync_v3020",
+      "calls": 6354,
+      "host_seconds": 0.043236116
+    },
+    {
+      "name": "cuLaunchKernel",
+      "calls": 1066,
+      "host_seconds": 0.017365965
+    },
+    {
+      "name": "cudaStreamIsCapturing_v10000",
+      "calls": 1367,
+      "host_seconds": 0.001332163
+    },
+    {
+      "name": "cuKernelGetFunction",
+      "calls": 1002,
+      "host_seconds": 0.001017714
+    },
+    {
+      "name": "cuKernelGetAttribute",
+      "calls": 3984,
+      "host_seconds": 0.000508984
+    },
+    {
+      "name": "cuMemSetAccess",
+      "calls": 1,
+      "host_seconds": 0.000160202
+    },
+    {
+      "name": "cuMemCreate",
+      "calls": 1,
+      "host_seconds": 0.000125763
+    },
+    {
+      "name": "cuMemMap",
+      "calls": 1,
+      "host_seconds": 5.6051e-05
+    },
+    {
+      "name": "cuKernelSetAttribute",
+      "calls": 128,
+      "host_seconds": 3.0399e-05
+    },
+    {
+      "name": "cuProfilerStart",
+      "calls": 1,
+      "host_seconds": 6.058e-06
+    }
+  ],
+  "representative_window": {
+    "start_seconds": 0.00025156,
+    "end_seconds": 1.542617699
+  },
+  "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization"
+}

@@ -1,0 +1,338 @@
+{
+  "full_kl_m1_seed17": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 109851,
+      "elapsed_seconds": 12498.147339433432,
+      "phase_seconds": {
+        "rollout": 1624.8597378060222,
+        "teacher": 738.4868685044348,
+        "learner": 9785.590434532613,
+        "dev": 306.74433018639684
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 0.00010132789611816406,
+      "selected": {
+        "path": "checkpoint-0120",
+        "dev_score": 0.5203444915935226,
+        "step": 120,
+        "adapter_sha256": "cabbf89020bf7fa8b9d090d3c97c38b153e4cec68b35b5f07110c05fe0ad78f7",
+        "optimizer_sha256": "551895c608811e3dbb82197b5e2936c817182935c0c952514d872c245dd53ddd",
+        "rng_sha256": "6cfb857ab79f9e6231d4288f01c9275e68e8137788ba58d81e5a5d6bc0f7c618",
+        "tokens_seen": 55225
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.3156152,
+        "end_unix_seconds": 1792876075.104265
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792876135.7428377,
+        "end_unix_seconds": 1792877283.805835
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.303515625,
+    "mean_trajectory_truncation_rate": 0.000390625
+  },
+  "full_kl_m4_seed17": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 110493,
+      "elapsed_seconds": 6268.21393041499,
+      "phase_seconds": {
+        "rollout": 1646.1291283685714,
+        "teacher": 898.6093792300671,
+        "learner": 3373.6599615886807,
+        "dev": 307.9863903839141
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 9.298324584960938e-05,
+      "selected": {
+        "path": "checkpoint-0240",
+        "dev_score": 0.5233114529168461,
+        "step": 240,
+        "adapter_sha256": "58b9a9923e36350b94c898d2f91e3dfa184bd4c3b51c47de3b949f5ac00f1bc2",
+        "optimizer_sha256": "03271bf594854abc4aeea3df8f4c1ca632d631973909ba97707d2ecbb0b55b3b",
+        "rng_sha256": "6faa46738360f560b0af1d50f93ad9fa7104c05ddedc9e73dff6ef6a714c1104",
+        "tokens_seen": 110493
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.3186576,
+        "end_unix_seconds": 1792869845.7544532
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792869910.291516,
+        "end_unix_seconds": 1792871142.3219616
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.387109375,
+    "mean_trajectory_truncation_rate": 0.000390625
+  },
+  "full_kl_m1_seed29": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 109850,
+      "elapsed_seconds": 12562.479268044233,
+      "phase_seconds": {
+        "rollout": 1624.0255755987018,
+        "teacher": 753.0195325277746,
+        "learner": 9837.18007030338,
+        "dev": 305.81561787612736
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 0.00010323524475097656,
+      "selected": {
+        "path": "checkpoint-0180",
+        "dev_score": 0.5175786843125755,
+        "step": 180,
+        "adapter_sha256": "a2154b1959302c9e881fb72c6bd97280f958b9cd1ff66f796ee5d3084fe04ea8",
+        "optimizer_sha256": "5bb509dc6ddd0c207c003c85006edac9875b610415362f1b6785308f28241eea",
+        "rng_sha256": "0ee075c48e248d99582abf581625c74c2ba477d72ab9d8aaefb59d6acc24a24c",
+        "tokens_seen": 82375
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.3189747,
+        "end_unix_seconds": 1792876139.4899423
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792876201.0744233,
+        "end_unix_seconds": 1792877333.2832527
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.303385416666666,
+    "mean_trajectory_truncation_rate": 0.0
+  },
+  "full_kl_m4_seed29": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 110447,
+      "elapsed_seconds": 6440.093155279756,
+      "phase_seconds": {
+        "rollout": 1690.768129285425,
+        "teacher": 902.8141322210431,
+        "learner": 3491.0438397340477,
+        "dev": 312.2118266429752
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 0.00011205673217773438,
+      "selected": {
+        "path": "checkpoint-0180",
+        "dev_score": 0.512117888509148,
+        "step": 180,
+        "adapter_sha256": "e9bb7434d0763e42e753c07a10d84fc5c009fda4b707417135ba942991b59f98",
+        "optimizer_sha256": "ffc1535e423b1ef013ff1c84e65f633d3fbe35e4dc1639ba3ff32c29e0305391",
+        "rng_sha256": "3fc791d3b67b6a578e89be35e46de8e75d4ca30668e8c76dcc7bb053e98d540b",
+        "tokens_seen": 82867
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.318839,
+        "end_unix_seconds": 1792870017.5326707
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792870070.2924926,
+        "end_unix_seconds": 1792871203.4392781
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.381119791666666,
+    "mean_trajectory_truncation_rate": 0.000390625
+  },
+  "full_kl_m1_seed43": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 109786,
+      "elapsed_seconds": 12564.580139921978,
+      "phase_seconds": {
+        "rollout": 1619.0410042311996,
+        "teacher": 727.4708110801876,
+        "learner": 9867.782004982233,
+        "dev": 307.81655482016504
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 8.869171142578125e-05,
+      "selected": {
+        "path": "checkpoint-0240",
+        "dev_score": 0.5193536964515093,
+        "step": 240,
+        "adapter_sha256": "448445eb791b938b34a5467e2362befa918f5f87cd651c412b53de9140b17f0e",
+        "optimizer_sha256": "2cad4b8ea2bbec24761ff2aeadae1b81f64d764df377a624e12271109155304a",
+        "rng_sha256": "dab5dcf5c3b37dd5cdfb5d0935dd92e1711867389a7bad808a7eb84b849d778e",
+        "tokens_seen": 109786
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.3199747,
+        "end_unix_seconds": 1792876141.6628609
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792876207.1710813,
+        "end_unix_seconds": 1792877305.2386537
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.295052083333333,
+    "mean_trajectory_truncation_rate": 0.00013020833333333333
+  },
+  "full_kl_m4_seed43": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 109998,
+      "elapsed_seconds": 6360.514004690573,
+      "phase_seconds": {
+        "rollout": 1689.1755285523832,
+        "teacher": 826.1576450522989,
+        "learner": 3485.076098307967,
+        "dev": 316.14477552846074
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 8.916854858398438e-05,
+      "selected": {
+        "path": "checkpoint-0240",
+        "dev_score": 0.5304643101946478,
+        "step": 240,
+        "adapter_sha256": "6b8582f66b64c11ea8946707bd250687e1205e0cb8b6e3129406fd1deefa269b",
+        "optimizer_sha256": "21eb6204d1e1f88515b1b26fae735b3fe002b21143f919cde2d24078b14095b5",
+        "rng_sha256": "dab5dcf5c3b37dd5cdfb5d0935dd92e1711867389a7bad808a7eb84b849d778e",
+        "tokens_seen": 109998
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.3213925,
+        "end_unix_seconds": 1792869938.0753827
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792870034.2703917,
+        "end_unix_seconds": 1792871206.8111722
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.32265625,
+    "mean_trajectory_truncation_rate": 0.0
+  },
+  "full_kl_m1_seed71": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 110335,
+      "elapsed_seconds": 12619.856615189463,
+      "phase_seconds": {
+        "rollout": 1632.8750168737024,
+        "teacher": 735.8784105293453,
+        "learner": 9900.93329167366,
+        "dev": 307.1583935432136
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 0.00011301040649414062,
+      "selected": {
+        "path": "checkpoint-0240",
+        "dev_score": 0.5298728728999171,
+        "step": 240,
+        "adapter_sha256": "f7bfb0153c702dd3c3e59c44785fb89a057a48ccf6909b3afe7ab7754ea99b06",
+        "optimizer_sha256": "f9fb214ace65746218713c06d0991599c55149a38911eb670f2569711a1470ab",
+        "rng_sha256": "8df8f63a0a5e61c6a9f6d0544acc9dade2ac4fe7ff2d8fdd5af3aff26ad6d94b",
+        "tokens_seen": 110335
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.322943,
+        "end_unix_seconds": 1792876196.8286855
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792876263.8225942,
+        "end_unix_seconds": 1792877365.902178
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.366536458333334,
+    "mean_trajectory_truncation_rate": 0.00026041666666666666
+  },
+  "full_kl_m4_seed71": {
+    "completed": {
+      "completed": true,
+      "steps": 240,
+      "response_tokens": 110641,
+      "elapsed_seconds": 6262.719704207033,
+      "phase_seconds": {
+        "rollout": 1660.5217585060745,
+        "teacher": 851.5312163718045,
+        "learner": 3399.7076989840716,
+        "dev": 308.84696569666266
+      },
+      "teacher_unchanged": true,
+      "trainable_parameters": 15630336,
+      "nonzero_updates": 240,
+      "max_behavior_error": 8.988380432128906e-05,
+      "selected": {
+        "path": "checkpoint-0240",
+        "dev_score": 0.5226672809360917,
+        "step": 240,
+        "adapter_sha256": "f53950cbfb13b353db97eda0219db9ec1395a1d378d8933bc4dff1cb271fc179",
+        "optimizer_sha256": "93ba48b8cf917ba772f13d7369853c54fcef637d9af044685db49161541687fd",
+        "rng_sha256": "4113b245aa67594a3ae8dd388b16d12ef1a212d6873f0e20e9d526288964b123",
+        "tokens_seen": 110641
+      }
+    },
+    "execution": {
+      "train": {
+        "returncode": 0,
+        "start_unix_seconds": 1792863551.325493,
+        "end_unix_seconds": 1792869840.0521026
+      },
+      "final": {
+        "returncode": 0,
+        "start_unix_seconds": 1792869921.8166285,
+        "end_unix_seconds": 1792871139.6394176
+      }
+    },
+    "generated_trajectories": 7680,
+    "mean_response_tokens_per_trajectory": 14.406380208333333,
+    "mean_trajectory_truncation_rate": 0.00026041666666666666
+  }
+}

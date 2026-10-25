@@ -1,0 +1,47 @@
+{
+  "measured_utc": "2026-10-24T22:53:55.668851+00:00",
+  "all_terminal": true,
+  "active_gpus": 0,
+  "peak_scheduled_gpus": 10,
+  "scheduled_gpu_hours": 43.64333333333333,
+  "prior_study_gpu_hours": 59.754444444444445,
+  "prior_profiling_gpu_hours": 0.8686111111111111,
+  "project_total_gpu_hours": 104.26638888888888,
+  "nominal_expansion_script_cap_gpu_hours": 56,
+  "boundary": "Pod schedule_at to stop_at includes setup, compilation, evaluation, idle and release. Live totals are lower bounds; script cap excludes platform overhead.",
+  "currency": "No unit price supplied; GPUh multiplied by supplied price gives monetary cost.",
+  "jobs": [
+    {
+      "experiment": "performance",
+      "status": "done",
+      "gpu_count": 2,
+      "all_pods_stopped": true,
+      "scheduled_gpu_hours": 5.796666666666667,
+      "nominal_script_cap_hours": 4,
+      "pod_times": [
+        {
+          "schedule_at": "2026-10-24T17:30:06.000Z",
+          "start_at": "2026-10-24T17:30:27.000Z",
+          "stop_at": "2026-10-24T20:24:00.000Z",
+          "exit_status": 0
+        }
+      ]
+    },
+    {
+      "experiment": "training",
+      "status": "done",
+      "gpu_count": 8,
+      "all_pods_stopped": true,
+      "scheduled_gpu_hours": 37.846666666666664,
+      "nominal_script_cap_hours": 6,
+      "pod_times": [
+        {
+          "schedule_at": "2026-10-24T17:29:53.000Z",
+          "start_at": "2026-10-24T17:29:56.000Z",
+          "stop_at": "2026-10-24T22:13:44.000Z",
+          "exit_status": 0
+        }
+      ]
+    }
+  ]
+}

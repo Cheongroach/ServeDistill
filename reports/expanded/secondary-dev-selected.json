@@ -1,0 +1,174 @@
+{
+  "arms": {
+    "full_kl_m1_seed17": {
+      "checkpoint": "checkpoint-0120",
+      "step": 120,
+      "additional_evaluation_outputs": 8800,
+      "scores": {
+        "test": {
+          "instruction": 0.7306666666666667,
+          "math": 0.06666666666666667,
+          "relevance": 0.2668090080144964,
+          "search": 0.8486445046352455,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.708,
+          "math": 0.06,
+          "relevance": 0.2656897736593584,
+          "search": 0.8186336494771649,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m4_seed17": {
+      "checkpoint": "checkpoint-0240",
+      "step": 240,
+      "additional_evaluation_outputs": 0,
+      "scores": {
+        "test": {
+          "instruction": 0.8133333333333334,
+          "math": 0.08166666666666667,
+          "relevance": 0.2792558539480049,
+          "search": 0.8392907804483933,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.816,
+          "math": 0.075,
+          "relevance": 0.276341832920159,
+          "search": 0.8071365351798502,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m1_seed29": {
+      "checkpoint": "checkpoint-0180",
+      "step": 180,
+      "additional_evaluation_outputs": 8800,
+      "scores": {
+        "test": {
+          "instruction": 0.816,
+          "math": 0.06666666666666667,
+          "relevance": 0.2626532813595011,
+          "search": 0.8492522615193776,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.802,
+          "math": 0.085,
+          "relevance": 0.27524948836424246,
+          "search": 0.8319441238443983,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m4_seed29": {
+      "checkpoint": "checkpoint-0180",
+      "step": 180,
+      "additional_evaluation_outputs": 8800,
+      "scores": {
+        "test": {
+          "instruction": 0.774,
+          "math": 0.07,
+          "relevance": 0.2629551885077512,
+          "search": 0.8558587319785684,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.776,
+          "math": 0.09,
+          "relevance": 0.27609489051094893,
+          "search": 0.8397012752823935,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m1_seed43": {
+      "checkpoint": "checkpoint-0240",
+      "step": 240,
+      "additional_evaluation_outputs": 0,
+      "scores": {
+        "test": {
+          "instruction": 0.7353333333333333,
+          "math": 0.065,
+          "relevance": 0.25915261973094866,
+          "search": 0.8468129918166643,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.736,
+          "math": 0.06,
+          "relevance": 0.2763294104827285,
+          "search": 0.8257841914978171,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m4_seed43": {
+      "checkpoint": "checkpoint-0240",
+      "step": 240,
+      "additional_evaluation_outputs": 0,
+      "scores": {
+        "test": {
+          "instruction": 0.7566666666666667,
+          "math": 0.065,
+          "relevance": 0.2582390335134318,
+          "search": 0.8567134532112474,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.748,
+          "math": 0.065,
+          "relevance": 0.2752635773059968,
+          "search": 0.8404157550701826,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m1_seed71": {
+      "checkpoint": "checkpoint-0240",
+      "step": 240,
+      "additional_evaluation_outputs": 0,
+      "scores": {
+        "test": {
+          "instruction": 0.7953333333333333,
+          "math": 0.07833333333333334,
+          "relevance": 0.26517770309957345,
+          "search": 0.8166878108094207,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.77,
+          "math": 0.11,
+          "relevance": 0.2652587866562412,
+          "search": 0.795902333633835,
+          "substitute": 0.3946731234866828
+        }
+      }
+    },
+    "full_kl_m4_seed71": {
+      "checkpoint": "checkpoint-0240",
+      "step": 240,
+      "additional_evaluation_outputs": 0,
+      "scores": {
+        "test": {
+          "instruction": 0.8233333333333334,
+          "math": 0.07166666666666667,
+          "relevance": 0.26037190504441016,
+          "search": 0.8285264059763875,
+          "substitute": 0.3932038834951456
+        },
+        "ood": {
+          "instruction": 0.81,
+          "math": 0.12,
+          "relevance": 0.27401623481346093,
+          "search": 0.7970469816853528,
+          "substitute": 0.3946731234866828
+        }
+      }
+    }
+  },
+  "additional_evaluation_outputs": 26400,
+  "boundary": "Dev-only selection, descriptive secondary results; primary remains fixed update240"
+}
