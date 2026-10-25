@@ -40,3 +40,5 @@ Backward 的 GPU annotation只有87.522μs而CPU范围1.135s，不能把主线�
 追加两次allocation均已释放：0.8686H20 GPUh，含失败shape采集、准备和发布；原质量研究59.7544GPUh，累计60.6231GPUh。32 CPU回归通过，第二轮六case全部退出0，原始trace和插桩源码hash回读一致。
 
 可用的面试表述：负责把业务OPD训练从数值验收推进到可观测执行；用NVTX、CUDA correlation和PyTorch shape识别FP32参考路径的百万级kernel发射，对照microbatch减少63.9%kernel、增加2.30GiB显存；同时识别profiler/编译冷启动混杂，保留数值差异和稳态验证缺口，避免把观测窗口时间比宣称为同质量生产加速。
+
+2026-10-25 后续：固定轨迹重复计时和四种子扩展已完成，见 [EXPANDED_STUDY_NOTES.md](EXPANDED_STUDY_NOTES.md)。新 workload 的无 profiler learner 吞吐比为 2.98×，完整训练时长比 1.98×；同时发现 substitute 全 `no` 退化。上述原诊断数字与混杂边界保持不变，不能用新结果改写旧捕获的实验条件。
