@@ -1,0 +1,941 @@
+{
+  "slices": {
+    "instruction/general": {
+      "n_independent_queries": 500,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 500,
+      "m1_seed_scores": [
+        0.802,
+        0.744,
+        0.736,
+        0.77
+      ],
+      "m4_seed_scores": [
+        0.816,
+        0.734,
+        0.748,
+        0.81
+      ],
+      "m1_mean": 0.763,
+      "m4_mean": 0.777,
+      "paired_seed_deltas": [
+        0.013999999999999901,
+        -0.010000000000000009,
+        0.01200000000000001,
+        0.040000000000000036
+      ],
+      "delta": 0.013999999999999985,
+      "paired_query_ci95": [
+        0.0020000000000000018,
+        0.02749999999999997
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.004000000000000031,
+        0.03300000000000003
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "instruction": {
+      "n_independent_queries": 500,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 500,
+      "m1_seed_scores": [
+        0.802,
+        0.744,
+        0.736,
+        0.77
+      ],
+      "m4_seed_scores": [
+        0.816,
+        0.734,
+        0.748,
+        0.81
+      ],
+      "m1_mean": 0.763,
+      "m4_mean": 0.777,
+      "paired_seed_deltas": [
+        0.013999999999999901,
+        -0.010000000000000009,
+        0.01200000000000001,
+        0.040000000000000036
+      ],
+      "delta": 0.013999999999999985,
+      "paired_query_ci95": [
+        0.0015000000000000013,
+        0.026999999999999996
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.004000000000000031,
+        0.03300000000000003
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "math/general": {
+      "n_independent_queries": 200,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 200,
+      "m1_seed_scores": [
+        0.055,
+        0.11,
+        0.06,
+        0.11
+      ],
+      "m4_seed_scores": [
+        0.075,
+        0.08,
+        0.065,
+        0.12
+      ],
+      "m1_mean": 0.08375,
+      "m4_mean": 0.08499999999999999,
+      "paired_seed_deltas": [
+        0.019999999999999997,
+        -0.03,
+        0.0050000000000000044,
+        0.009999999999999995
+      ],
+      "delta": 0.0012499999999999994,
+      "paired_query_ci95": [
+        -0.0075000000000000015,
+        0.011249999999999996
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.02,
+        0.01625
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "math": {
+      "n_independent_queries": 200,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 200,
+      "m1_seed_scores": [
+        0.055,
+        0.11,
+        0.06,
+        0.11
+      ],
+      "m4_seed_scores": [
+        0.075,
+        0.08,
+        0.065,
+        0.12
+      ],
+      "m1_mean": 0.08375,
+      "m4_mean": 0.08499999999999999,
+      "paired_seed_deltas": [
+        0.019999999999999997,
+        -0.03,
+        0.0050000000000000044,
+        0.009999999999999995
+      ],
+      "delta": 0.0012499999999999994,
+      "paired_query_ci95": [
+        -0.008749999999999997,
+        0.011249999999999996
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.02,
+        0.01625
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "relevance/es": {
+      "n_independent_queries": 85,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 85,
+      "m1_seed_scores": [
+        0.3293460925039873,
+        0.3165438165438165,
+        0.3013963480128894,
+        0.2947324414715719
+      ],
+      "m4_seed_scores": [
+        0.30386461227582723,
+        0.3035714285714286,
+        0.30729166666666663,
+        0.285531914893617
+      ],
+      "m1_mean": 0.3105046746330663,
+      "m4_mean": 0.30006490560188487,
+      "paired_seed_deltas": [
+        -0.025481480228160047,
+        -0.012972387972387922,
+        0.005895318653777237,
+        -0.009200526577954893
+      ],
+      "delta": -0.010439769031181406,
+      "paired_query_ci95": [
+        -0.028182880022138278,
+        0.005900184387577335
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.02141124181560876,
+        0.0011783919972359475
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "relevance/jp": {
+      "n_independent_queries": 97,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 97,
+      "m1_seed_scores": [
+        0.2696921231507397,
+        0.2806026365348399,
+        0.2961111111111111,
+        0.29122468659594986
+      ],
+      "m4_seed_scores": [
+        0.26331521739130437,
+        0.27548449612403103,
+        0.28800702650910254,
+        0.304323368691739
+      ],
+      "m1_mean": 0.28440763934816016,
+      "m4_mean": 0.28278252717904423,
+      "paired_seed_deltas": [
+        -0.006376905759435336,
+        -0.00511814041080888,
+        -0.008104084602008566,
+        0.013098682095789127
+      ],
+      "delta": -0.0016251121691159137,
+      "paired_query_ci95": [
+        -0.011775250691106343,
+        0.008603922385715581
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.007357598554208644,
+        0.008229785131983011
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "relevance/us": {
+      "n_independent_queries": 318,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 318,
+      "m1_seed_scores": [
+        0.28358365633074933,
+        0.25739036155241846,
+        0.26200513859738006,
+        0.24841269841269842
+      ],
+      "m4_seed_scores": [
+        0.27220882098930876,
+        0.261285142329183,
+        0.2604956695536309,
+        0.26032708303961655
+      ],
+      "m1_mean": 0.26284796372331154,
+      "m4_mean": 0.2635791789779348,
+      "paired_seed_deltas": [
+        -0.01137483534144057,
+        0.003894780776764528,
+        -0.0015094690437491565,
+        0.011914384626918129
+      ],
+      "delta": 0.0007312152546232326,
+      "paired_query_ci95": [
+        -0.00641029136512598,
+        0.00867718961610626
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.0075574313118892955,
+        0.008558421209251307
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "relevance": {
+      "n_independent_queries": 500,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 500,
+      "m1_seed_scores": [
+        0.2887905256926118,
+        0.2727924503134587,
+        0.2763294104827285,
+        0.2652587866562412
+      ],
+      "m4_seed_scores": [
+        0.276341832920159,
+        0.27152523590449645,
+        0.2752635773059968,
+        0.27401623481346093
+      ],
+      "m1_mean": 0.27579279328626005,
+      "m4_mean": 0.2742867202360283,
+      "paired_seed_deltas": [
+        -0.012448692772452807,
+        -0.0012672144089622694,
+        -0.0010658331767317009,
+        0.008757448157219738
+      ],
+      "delta": -0.0015060730502317599,
+      "paired_query_ci95": [
+        -0.00748531602010619,
+        0.004739704576416361
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.00960297787352253,
+        0.006251282515674236
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "search/es": {
+      "n_independent_queries": 84,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 82,
+      "m1_seed_scores": [
+        0.8215285732047829,
+        0.827350575317764,
+        0.851445295589459,
+        0.811722691490583
+      ],
+      "m4_seed_scores": [
+        0.8329708874366103,
+        0.8221276933313203,
+        0.84085609059802,
+        0.811982816747833
+      ],
+      "m1_mean": 0.8280117839006472,
+      "m4_mean": 0.8269843720284459,
+      "paired_seed_deltas": [
+        0.0114423142318274,
+        -0.005222881986443717,
+        -0.010589204991439005,
+        0.00026012525725005453
+      ],
+      "delta": -0.001027411872201317,
+      "paired_query_ci95": [
+        -0.013734837164440789,
+        0.011864401466165325
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.007906043488941361,
+        0.0072760151772596204
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 0.9851190476190477,
+          "m4": 0.9791666666666666,
+          "delta": -0.005952380952380952,
+          "paired_query_ci95": [
+            -0.020833333333333332,
+            0.008928571428571428
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mrr": {
+          "m1": 0.6416170634920635,
+          "m4": 0.6453939909297052,
+          "delta": 0.003776927437641723,
+          "paired_query_ci95": [
+            -0.007412662981859411,
+            0.01573182397959184
+          ]
+        }
+      }
+    },
+    "search/jp": {
+      "n_independent_queries": 94,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 94,
+      "m1_seed_scores": [
+        0.797429921400826,
+        0.813722596232052,
+        0.7819889127848456,
+        0.7349689926832914
+      ],
+      "m4_seed_scores": [
+        0.768449243536244,
+        0.8013709485961343,
+        0.7979295303252953,
+        0.7320260433538441
+      ],
+      "m1_mean": 0.7820276057752538,
+      "m4_mean": 0.7749439414528796,
+      "paired_seed_deltas": [
+        -0.028980677864582027,
+        -0.012351647635917673,
+        0.01594061754044973,
+        -0.0029429493294472753
+      ],
+      "delta": -0.007083664322374311,
+      "paired_query_ci95": [
+        -0.021033092828154083,
+        0.005813526011729166
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.02247124573079834,
+        0.00886755124635788
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 0.9281914893617021,
+          "m4": 0.9202127659574468,
+          "delta": -0.007978723404255319,
+          "paired_query_ci95": [
+            -0.02127659574468085,
+            0.005319148936170213
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mrr": {
+          "m1": 0.6746168946301925,
+          "m4": 0.6675246960486323,
+          "delta": -0.0070921985815602835,
+          "paired_query_ci95": [
+            -0.022119902482269506,
+            0.0068727836879432696
+          ]
+        }
+      }
+    },
+    "search/us": {
+      "n_independent_queries": 322,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 318,
+      "m1_seed_scores": [
+        0.8217881165912911,
+        0.8288889128666019,
+        0.8321129514459451,
+        0.8098346125806832
+      ],
+      "m4_seed_scores": [
+        0.8119107129453995,
+        0.8128408671394932,
+        0.8528610305819334,
+        0.81241562862887
+      ],
+      "m1_mean": 0.8231561483711303,
+      "m4_mean": 0.822507059823924,
+      "paired_seed_deltas": [
+        -0.009877403645891625,
+        -0.016048045727108717,
+        0.020748079135988307,
+        0.002581016048186724
+      ],
+      "delta": -0.0006490885472063279,
+      "paired_query_ci95": [
+        -0.006913220443036287,
+        0.005379816540609413
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.012962724686500171,
+        0.013091708440518324
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 0.9417701863354038,
+          "m4": 0.9409937888198758,
+          "delta": -0.0007763975155279503,
+          "paired_query_ci95": [
+            -0.007763975155279503,
+            0.005434782608695652
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mrr": {
+          "m1": 0.7281887755102041,
+          "m4": 0.7262071132800946,
+          "delta": -0.001981662230109435,
+          "paired_query_ci95": [
+            -0.0091115100931677,
+            0.00509813572167998
+          ]
+        }
+      }
+    },
+    "search": {
+      "n_independent_queries": 500,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 494,
+      "m1_seed_scores": [
+        0.8171100742722681,
+        0.8257476629826902,
+        0.8257841914978171,
+        0.795902333633835
+      ],
+      "m4_seed_scores": [
+        0.8071365351798502,
+        0.8121998699829226,
+        0.8404157550701826,
+        0.7970469816853528
+      ],
+      "m1_mean": 0.8161360655966526,
+      "m4_mean": 0.814199785479577,
+      "paired_seed_deltas": [
+        -0.009973539092417938,
+        -0.013547792999767605,
+        0.014631563572365502,
+        0.001144648051517816
+      ],
+      "delta": -0.0019362801170755561,
+      "paired_query_ci95": [
+        -0.007283303263096619,
+        0.0033384124979359765
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        -0.011760666046092771,
+        0.008480287906169642
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 0.9465,
+          "m4": 0.9435,
+          "delta": -0.003,
+          "paired_query_ci95": [
+            -0.0085,
+            0.0025
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "mrr": {
+          "m1": 0.7035732142857144,
+          "m4": 0.7015982142857142,
+          "delta": -0.001975,
+          "paired_query_ci95": [
+            -0.007723869047619047,
+            0.0037375744047619054
+          ]
+        }
+      }
+    },
+    "substitute/es": {
+      "n_independent_queries": 73,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 73,
+      "m1_seed_scores": [
+        0.39166666666666666,
+        0.39166666666666666,
+        0.39166666666666666,
+        0.39166666666666666
+      ],
+      "m4_seed_scores": [
+        0.39166666666666666,
+        0.39166666666666666,
+        0.39166666666666666,
+        0.39166666666666666
+      ],
+      "m1_mean": 0.39166666666666666,
+      "m4_mean": 0.39166666666666666,
+      "paired_seed_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "paired_query_ci95": [
+        0.0,
+        0.0
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        0.0,
+        0.0
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "substitute/jp": {
+      "n_independent_queries": 107,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 107,
+      "m1_seed_scores": [
+        0.398876404494382,
+        0.398876404494382,
+        0.398876404494382,
+        0.398876404494382
+      ],
+      "m4_seed_scores": [
+        0.398876404494382,
+        0.398876404494382,
+        0.398876404494382,
+        0.398876404494382
+      ],
+      "m1_mean": 0.398876404494382,
+      "m4_mean": 0.398876404494382,
+      "paired_seed_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "paired_query_ci95": [
+        0.0,
+        0.0
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        0.0,
+        0.0
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "substitute/us": {
+      "n_independent_queries": 320,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 320,
+      "m1_seed_scores": [
+        0.3939393939393939,
+        0.3939393939393939,
+        0.3939393939393939,
+        0.3939393939393939
+      ],
+      "m4_seed_scores": [
+        0.3939393939393939,
+        0.3939393939393939,
+        0.3939393939393939,
+        0.3939393939393939
+      ],
+      "m1_mean": 0.3939393939393939,
+      "m4_mean": 0.3939393939393939,
+      "paired_seed_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "paired_query_ci95": [
+        0.0,
+        0.0
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        0.0,
+        0.0
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "substitute": {
+      "n_independent_queries": 500,
+      "n_paired_training_seeds": 4,
+      "n_metric_eligible_queries": 500,
+      "m1_seed_scores": [
+        0.3946731234866828,
+        0.3946731234866828,
+        0.3946731234866828,
+        0.3946731234866828
+      ],
+      "m4_seed_scores": [
+        0.3946731234866828,
+        0.3946731234866828,
+        0.3946731234866828,
+        0.3946731234866828
+      ],
+      "m1_mean": 0.3946731234866828,
+      "m4_mean": 0.3946731234866828,
+      "paired_seed_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "paired_query_ci95": [
+        0.0,
+        0.0
+      ],
+      "noninferiority_margin": -0.05,
+      "noninferiority": "supported",
+      "exploratory_paired_seed_ci95": [
+        0.0,
+        0.0
+      ],
+      "auxiliary": {
+        "json_valid": {
+          "m1": 1.0,
+          "m4": 1.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "truncated": {
+          "m1": 0.0,
+          "m4": 0.0,
+          "delta": 0.0,
+          "paired_query_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "bootstrap_repetitions": 3000,
+  "ci_scope": "paired independent queries, conditional on the observed training seeds",
+  "seed_ci_scope": "exploratory empirical paired seed bootstrap; four seeds do not establish universality",
+  "multiplicity": "pointwise intervals; joint business claim requires every primary domain to pass",
+  "all_business_domains_noninferior": true
+}

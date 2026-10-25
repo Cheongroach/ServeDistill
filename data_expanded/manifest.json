@@ -1,0 +1,145 @@
+{
+  "seed": 20261025,
+  "source": {
+    "repository": "https://github.com/amazon-science/esci-data",
+    "revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "license": "Apache-2.0 (official project)",
+    "files": {
+      "shopping_queries_dataset_examples.parquet": {
+        "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+        "bytes": 51286808
+      },
+      "shopping_queries_dataset_products.parquet": {
+        "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+        "bytes": 1108857465
+      }
+    }
+  },
+  "general_sources": {
+    "train": {
+      "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+      "license": "MIT (OpenAI grade-school-math)",
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/train.jsonl"
+    },
+    "test": {
+      "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+      "license": "MIT (OpenAI grade-school-math)",
+      "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/test.jsonl"
+    }
+  },
+  "previous_manifest_sha256": "3910161714d6b41e6339d182038b19a7c1c2eee009694905d4dcb66fda71e28f",
+  "pilot_query_groups_excluded": 3300,
+  "pilot_inputs_excluded": 5500,
+  "query_input_overlap": 0,
+  "splits": {
+    "train": {
+      "rows": 14000,
+      "domains": {
+        "instruction": 3000,
+        "substitute": 3000,
+        "search": 3000,
+        "math": 2000,
+        "relevance": 3000
+      },
+      "locales": {
+        "general": 5000,
+        "us": 5597,
+        "es": 1449,
+        "jp": 1954
+      },
+      "target_classes": {
+        "{\"substitute\":\"yes\"}": 1034,
+        "{\"substitute\":\"no\"}": 1966,
+        "{\"label\":\"I\"}": 446,
+        "{\"label\":\"E\"}": 1343,
+        "{\"label\":\"S\"}": 1051,
+        "{\"label\":\"C\"}": 160
+      },
+      "sha256": "f4f4042a25bbbd38e9e5fa26596458f08fe336c44e7f541b8e82b32fed5082b4"
+    },
+    "dev": {
+      "rows": 1400,
+      "domains": {
+        "math": 200,
+        "substitute": 300,
+        "search": 300,
+        "relevance": 300,
+        "instruction": 300
+      },
+      "locales": {
+        "general": 500,
+        "es": 142,
+        "us": 571,
+        "jp": 187
+      },
+      "target_classes": {
+        "{\"substitute\":\"yes\"}": 115,
+        "{\"substitute\":\"no\"}": 185,
+        "{\"label\":\"C\"}": 15,
+        "{\"label\":\"E\"}": 133,
+        "{\"label\":\"S\"}": 98,
+        "{\"label\":\"I\"}": 54
+      },
+      "sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4"
+    },
+    "test": {
+      "rows": 6600,
+      "domains": {
+        "relevance": 1500,
+        "instruction": 1500,
+        "search": 1500,
+        "substitute": 1500,
+        "math": 600
+      },
+      "locales": {
+        "us": 2785,
+        "general": 2100,
+        "jp": 914,
+        "es": 801
+      },
+      "target_classes": {
+        "{\"label\":\"S\"}": 527,
+        "{\"label\":\"E\"}": 654,
+        "{\"substitute\":\"no\"}": 972,
+        "{\"substitute\":\"yes\"}": 528,
+        "{\"label\":\"I\"}": 238,
+        "{\"label\":\"C\"}": 81
+      },
+      "sha256": "4838d642942674cad6c56d7b4cb6404ea90e58074b2160c259c0a1b00488abf3"
+    },
+    "ood": {
+      "rows": 2200,
+      "domains": {
+        "instruction": 500,
+        "substitute": 500,
+        "relevance": 500,
+        "search": 500,
+        "math": 200
+      },
+      "locales": {
+        "general": 700,
+        "us": 960,
+        "jp": 298,
+        "es": 242
+      },
+      "target_classes": {
+        "{\"substitute\":\"no\"}": 326,
+        "{\"label\":\"S\"}": 170,
+        "{\"substitute\":\"yes\"}": 174,
+        "{\"label\":\"E\"}": 230,
+        "{\"label\":\"C\"}": 22,
+        "{\"label\":\"I\"}": 78
+      },
+      "sha256": "0dc8b19ce3882f4dce8235f8c375d16cbef6fb867a547f690bdf77e4e50ea00b"
+    }
+  },
+  "product_overlap_train_test": 359,
+  "candidate_limit": 8,
+  "gains": {
+    "E": 1.0,
+    "S": 0.1,
+    "C": 0.01,
+    "I": 0.0
+  },
+  "replication_boundary": "disjoint official-test query replication, not distribution shift"
+}

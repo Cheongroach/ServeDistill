@@ -24,7 +24,7 @@ def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
 
 
-def analyze_sqlite(path, output):
+def analyze_sqlite(path, output, update_name="update_42", label=None):
     db = sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True)
     strings = dict(db.execute("SELECT id, value FROM StringIds"))
     scopes = []
@@ -32,12 +32,12 @@ def analyze_sqlite(path, output):
             "SELECT start, end, text, textId, globalTid FROM NVTX_EVENTS WHERE end IS NOT NULL"):
         name = text or strings.get(text_id, "")
         if name in ("rollout", "learner_forward", "teacher_forward",
-                    "full_vocabulary_kl", "reference_forward", "backward", "optimizer", "update_42"):
+                    "full_vocabulary_kl", "reference_forward", "backward", "optimizer", update_name):
             scopes.append(dict(start=start, end=end, name=name, tid=tid))
-    update = next(s for s in scopes if s["name"] == "update_42")
+    update = next(s for s in scopes if s["name"] == update_name)
     origin, limit = update["start"], update["end"]
     # Attribute GPU work to its correlated launch API and the launching thread.
-    inner = sorted((s for s in scopes if s["name"] != "update_42"), key=lambda s: s["start"])
+    inner = sorted((s for s in scopes if s["name"] != update_name), key=lambda s: s["start"])
     starts = [s["start"] for s in inner]
     kernel_stats = defaultdict(lambda: [0, 0, 0])
     phase_stats = defaultdict(lambda: [0, 0])
@@ -96,6 +96,7 @@ def analyze_sqlite(path, output):
            sorted(kernel_stats.items(), key=lambda x: x[1][1], reverse=True)]
     summary = {
         "trace_sha256": hashlib.file_digest(path.open("rb"), "sha256").hexdigest(),
+        "update_name": update_name,
         "host_update_seconds": (limit - origin) / 1e9,
         "cuda_kernel_count": actual_rows,
         "summed_kernel_seconds": sum(s[1] for s in kernel_stats.values()) / 1e9,
@@ -111,12 +112,13 @@ def analyze_sqlite(path, output):
                                   "end_seconds": (selected_end - origin) / 1e9},
         "boundary": "CUDA interval union is activity coverage, not SM occupancy or HBM utilization",
     }
-    write_json(output / (path.parent.name + "-cuda-summary.json"), summary)
-    with (output / (path.parent.name + "-representative-kernels.csv")).open("w") as stream:
+    label = label or path.parent.name
+    write_json(output / (label + "-cuda-summary.json"), summary)
+    with (output / (label + "-representative-kernels.csv")).open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=representative[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(representative)
-    with (output / (path.parent.name + "-launch-density.csv")).open("w") as stream:
+    with (output / (label + "-launch-density.csv")).open("w") as stream:
         writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(["start_seconds", "kernels_started_in_10ms"])
         for index in range(int((limit - origin) / 10_000_000) + 1):
