@@ -26,4 +26,4 @@ test = ["pytest>=8"]
 kernels = ["flash-linear-attention==0.4.1", "einops==0.8.1"]
 
 [tool.setuptools.packages.find]
-include = ["servedistill*"]
+include = ["servedistill*", "scripts*"]

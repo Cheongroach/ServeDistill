@@ -1,0 +1,16 @@
+{
+  "scope": "professional_profiler_verification_v1",
+  "hardware": "NVIDIA H20",
+  "driver_version": "535.261.03",
+  "reported_cuda_version": "12.9",
+  "ncu_version": "2026.1.1",
+  "package_sha256": "f1ead828efaf27835dd6fbbc2d9f2f058f99490ba034e1f4a037a3ed0188be00",
+  "application_returncode": 11,
+  "observed_error": "Cuda driver is not compatible with Nsight Compute.",
+  "counter_capture_verified": false,
+  "none_runtime_validity_passed": true,
+  "nsys_runtime_validity_passed": true,
+  "observed_update": 162,
+  "next_action": "Test an older official NCU against this actual driver before selecting a compatible locked version.",
+  "boundary": "Version/query-metrics succeeded, but capture failed. No hardware counter or NCU timing conclusion is established."
+}
