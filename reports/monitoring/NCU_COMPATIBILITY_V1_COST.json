@@ -1,0 +1,16 @@
+{
+  "scope": "ncu-compatibility-v1 only",
+  "verified_terminal": true,
+  "gpu_model": "NVIDIA-H20",
+  "allocated_gpus": 1,
+  "schedule_at": "2026-10-27T15:59:03.000Z",
+  "start_at": "2026-10-27T15:59:03.000Z",
+  "stop_at": "2026-10-27T16:21:59.000Z",
+  "allocation_seconds": 1376,
+  "gpu_hours": 0.38222222222222224,
+  "trial_count": 1,
+  "pod_exit_status": 1,
+  "counter_capture_passed": false,
+  "cost_advantage_supported": false,
+  "boundary": "Platform terminal Pod interval. Includes model staging, three failed NCU versions, exports and shutdown. Separate from the first suite, DEV training and later profiler recovery. Not billing."
+}

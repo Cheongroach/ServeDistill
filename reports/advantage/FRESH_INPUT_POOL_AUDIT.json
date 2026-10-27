@@ -1,0 +1,153 @@
+{
+  "scope": "input_pool_audit_only",
+  "model_evaluated": false,
+  "confirmation_frozen": false,
+  "quality_advantage_supported": false,
+  "source_lock_sha256": "2cc7ff5217dbfe1b16abdc22d809053bf5bda6f7129b8ee8e3a7e0612b50d0ce",
+  "sources": {
+    "schema_version": 1,
+    "esci": {
+      "repository": "amazon-science/esci-data",
+      "revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+      "examples_sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+      "examples_bytes": 51286808
+    },
+    "gsm8k": {
+      "repository": "openai/grade-school-math",
+      "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "path": "grade_school_math/data/test.jsonl",
+      "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+      "license": "MIT"
+    },
+    "boundary": "Audit available input pools only. No model outputs, future holdout split, or sample-size decision."
+  },
+  "historical_files": [
+    {
+      "dataset": "data",
+      "file": "dev.jsonl",
+      "sha256": "cba3279d734676f4e0a7aa854bcf32d51a48d1750c92f46a151e67666742257c",
+      "rows": 500
+    },
+    {
+      "dataset": "data",
+      "file": "ood.jsonl",
+      "sha256": "311dfcf98ba5fd9448ab7c88d0a12d3bd4d876b448df2d8feda0eec46c68966c",
+      "rows": 500
+    },
+    {
+      "dataset": "data",
+      "file": "test.jsonl",
+      "sha256": "aca8a777bd3c8339685e7e4d4b51511d3bb05e6ed80f914eef8022992963fa57",
+      "rows": 1500
+    },
+    {
+      "dataset": "data",
+      "file": "train.jsonl",
+      "sha256": "3c0cedca4c4a8a2d4316b9bde75403466d504ca0e912fa75a606a0b7248b7da3",
+      "rows": 3000
+    },
+    {
+      "dataset": "data_search",
+      "file": "dev.jsonl",
+      "sha256": "2a0b90efb755100578408e9ec945e070cadf39e96bd09766062af94c1c1e9a4c",
+      "rows": 500
+    },
+    {
+      "dataset": "data_search",
+      "file": "ood.jsonl",
+      "sha256": "19807db62493dc9b18bc083b81a079329b314410752f8989e16fd7a9888c0210",
+      "rows": 500
+    },
+    {
+      "dataset": "data_search",
+      "file": "test.jsonl",
+      "sha256": "2f827e5f7ad12195ebb8f1c2d45be9725986c679ad2ad6dd51b42dc6bee38498",
+      "rows": 1500
+    },
+    {
+      "dataset": "data_search",
+      "file": "train.jsonl",
+      "sha256": "9845c4b707214888678dc73456092cb6949ceaa3a8c985731bc97d5eb5d7f6a4",
+      "rows": 3000
+    },
+    {
+      "dataset": "data_expanded",
+      "file": "dev.jsonl",
+      "sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4",
+      "rows": 1400
+    },
+    {
+      "dataset": "data_expanded",
+      "file": "ood.jsonl",
+      "sha256": "0dc8b19ce3882f4dce8235f8c375d16cbef6fb867a547f690bdf77e4e50ea00b",
+      "rows": 2200
+    },
+    {
+      "dataset": "data_expanded",
+      "file": "test.jsonl",
+      "sha256": "4838d642942674cad6c56d7b4cb6404ea90e58074b2160c259c0a1b00488abf3",
+      "rows": 6600
+    },
+    {
+      "dataset": "data_expanded",
+      "file": "train.jsonl",
+      "sha256": "f4f4042a25bbbd38e9e5fa26596458f08fe336c44e7f541b8e82b32fed5082b4",
+      "rows": 14000
+    },
+    {
+      "dataset": "data_advantage_screen",
+      "file": "dev.jsonl",
+      "sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4",
+      "rows": 1400
+    },
+    {
+      "dataset": "data_advantage_screen",
+      "file": "train.jsonl",
+      "sha256": "481c4d4d4492a5fb2b3d25d91d37fbcede02ba590c1e77730edffef6c1a4d1a4",
+      "rows": 6400
+    },
+    {
+      "dataset": "data_advantage_holdout",
+      "file": "dev.jsonl",
+      "sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4",
+      "rows": 1400
+    },
+    {
+      "dataset": "data_advantage_holdout",
+      "file": "ood.jsonl",
+      "sha256": "0e5ea11f936a4f6a3fd40d35d87077edc85048bc62bc48552cb475e06227943d",
+      "rows": 2000
+    },
+    {
+      "dataset": "data_advantage_holdout",
+      "file": "test.jsonl",
+      "sha256": "339073c4a3f0b44465c3ff6da7fc97749f5c9ae84454270b445e9cf6eb2fee85",
+      "rows": 5000
+    },
+    {
+      "dataset": "data_advantage_holdout",
+      "file": "train.jsonl",
+      "sha256": "481c4d4d4492a5fb2b3d25d91d37fbcede02ba590c1e77730edffef6c1a4d1a4",
+      "rows": 6400
+    }
+  ],
+  "unique_historical_inputs": 40000,
+  "unique_historical_query_groups": 25200,
+  "unique_historical_math_questions": 5100,
+  "esci": {
+    "eligible_unseen_official_test_query_groups": 1273,
+    "mixed_official_split_queries_excluded": 15,
+    "minimum_distinct_products": 2
+  },
+  "gsm8k": {
+    "official_test_questions": 1319,
+    "remaining_original_questions": 119,
+    "previously_observed_questions_excluded": 1200
+  },
+  "svamp": {
+    "source_sha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+    "source_rows": 1000,
+    "remaining_original_questions": 0
+  },
+  "boundary": "Unused in recorded ServeDistill inputs; public benchmark pretraining exposure is unknown. Counts do not establish statistical power. Preserve the complete historical-file list; labels never select model candidates."
+}

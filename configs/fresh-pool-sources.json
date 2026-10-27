@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "esci": {
+    "repository": "amazon-science/esci-data",
+    "revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "examples_sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+    "examples_bytes": 51286808
+  },
+  "gsm8k": {
+    "repository": "openai/grade-school-math",
+    "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "path": "grade_school_math/data/test.jsonl",
+    "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "license": "MIT"
+  },
+  "boundary": "Audit available input pools only. No model outputs, future holdout split, or sample-size decision."
+}

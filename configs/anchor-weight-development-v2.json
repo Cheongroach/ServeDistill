@@ -1,0 +1,63 @@
+{
+  "advance_rule": "all four candidate seeds pass absolute gates; mean business delta positive against both SFT controls; at least three positive seed pairs against each; domain/math noninferiority versus both and initial",
+  "base_protocol_sha256": "c5a8110f496151d24895087261ca82daf5235375db13e3a521aa31280ff63f7b",
+  "cost_boundary": "Retain every original and extension allocation, including failed starts. Only coefficient varies; updates/prompts are matched, not GPU time or response tokens.",
+  "created_unix_seconds": 1793119296.7527695,
+  "development_candidates": [
+    "anchor01",
+    "aopd_anchor",
+    "anchor10"
+  ],
+  "global_gpu_cap": null,
+  "holdout_files_packaged": false,
+  "holdout_observed": false,
+  "new_single_gpu_jobs": 8,
+  "other_training_changes": null,
+  "quality_gates": {
+    "domain_noninferiority_margin": -0.03,
+    "math_noninferiority_margin": -0.05,
+    "minimum_json_valid": 0.99,
+    "minimum_metric": {
+      "relevance": 0.45,
+      "search": 0.8,
+      "substitute": 0.55
+    },
+    "minimum_positive_seed_pairs": 3,
+    "minimum_recall": {
+      "relevance": {
+        "C": 0.2,
+        "E": 0.2,
+        "I": 0.2,
+        "S": 0.2
+      },
+      "substitute": {
+        "no": 0.3,
+        "yes": 0.3
+      }
+    }
+  },
+  "reference_controls": "all four paired offline_sft, oracle_sft and initial from anchor-development-v1",
+  "resource_authorization": "2026-10-28 user removed global 8-GPU limit; original frozen protocol bytes retained",
+  "schema_version": 1,
+  "scope": "development_only",
+  "seeds": [
+    101,
+    211,
+    307,
+    401
+  ],
+  "selection_checkpoint": "fixed_final_update_320",
+  "selection_precision": "bf16",
+  "selection_rule": "Wait for all three weights and both controls at all four seeds. Among weights passing the original advance rule, choose greatest mean DEV business macro; exact ties use smaller anchor weight. Pure AOPD is an ablation only. No holdout may be viewed until one candidate and confirmation protocol are frozen.",
+  "source_files": {
+    "scripts/run_anchor_weight_development.py": "859d22fcfb801b15b1301f38cc552481e205429a22d12df90ec66db88d065c6e"
+  },
+  "variants": {
+    "anchor01": {
+      "anchor_ce_weight": 0.1
+    },
+    "anchor10": {
+      "anchor_ce_weight": 1.0
+    }
+  }
+}

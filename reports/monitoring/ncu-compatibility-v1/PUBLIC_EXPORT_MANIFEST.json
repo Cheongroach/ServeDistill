@@ -1,0 +1,531 @@
+{
+  "original_hash_verification": {
+    "candidates/2025.2.1/capture": {
+      "files": 15,
+      "all_hashes_match": true
+    },
+    "candidates/2024.1.1/capture": {
+      "files": 15,
+      "all_hashes_match": true
+    },
+    "candidates/2023.3.1/capture": {
+      "files": 15,
+      "all_hashes_match": true
+    }
+  },
+  "independent_report_validation": {
+    "candidates/2025.2.1/capture": {
+      "passed": false,
+      "checks": {
+        "raw_export_succeeded": false,
+        "kernels_captured": false,
+        "all_requested_metrics_present": false,
+        "finite_values_with_units": false,
+        "positive_kernel_duration": false
+      },
+      "kernel_launches": 0,
+      "metric_rows": 0,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+      ],
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "candidates/2024.1.1/capture": {
+      "passed": false,
+      "checks": {
+        "raw_export_succeeded": false,
+        "kernels_captured": false,
+        "all_requested_metrics_present": false,
+        "finite_values_with_units": false,
+        "positive_kernel_duration": false
+      },
+      "kernel_launches": 0,
+      "metric_rows": 0,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+      ],
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "candidates/2023.3.1/capture": {
+      "passed": false,
+      "checks": {
+        "raw_export_succeeded": false,
+        "kernels_captured": false,
+        "all_requested_metrics_present": false,
+        "finite_values_with_units": false,
+        "positive_kernel_duration": false
+      },
+      "kernel_launches": 0,
+      "metric_rows": 0,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+      ],
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    }
+  },
+  "records": [
+    {
+      "source": "base-environment.json",
+      "original_sha256": "1f3fdbc0f408148d4d24f30be3c9767936a1d442361d88866a10b7214dedb3c4",
+      "original_bytes": 526,
+      "public_file": "base-environment.json",
+      "public_sha256": "1f3fdbc0f408148d4d24f30be3c9767936a1d442361d88866a10b7214dedb3c4",
+      "public_bytes": 526
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/observation/configuration.json",
+      "original_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "original_bytes": 2055,
+      "public_file": "candidates/2023.3.1/capture/application/observation/configuration.json",
+      "public_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "public_bytes": 2055
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "candidates/2023.3.1/capture/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/train/contract.json",
+      "original_sha256": "3432e3518adfbee688397afab852f779dfdbec6cc27d21549b4d8ba96827c06e",
+      "original_bytes": 796,
+      "public_file": "candidates/2023.3.1/capture/application/train/contract.json",
+      "public_sha256": "3432e3518adfbee688397afab852f779dfdbec6cc27d21549b4d8ba96827c06e",
+      "public_bytes": 796
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/train/last-rollout-contract.json",
+      "original_sha256": "85e13bf6251a897a780a6d88c50b44aa870cdd9c67d42518dad42e2877d6a406",
+      "original_bytes": 2543,
+      "public_file": "candidates/2023.3.1/capture/application/train/last-rollout-contract.json",
+      "public_sha256": "58e7730ce6033a8175154dd74236d8ec0ab79aea2332970989fe0d3b91b46b19",
+      "public_bytes": 2573
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "candidates/2023.3.1/capture/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "candidates/2023.3.1/capture/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "candidates/2023.3.1/capture/application.log",
+      "original_sha256": "3a4fda7dc8e2c0a1a03638697f86ec945aef2bceaa2efd871bcad3b90fce7c65",
+      "original_bytes": 220161,
+      "public_file": "candidates/2023.3.1/capture/application.log",
+      "public_sha256": "5370dae39b45006a174d9c6f64228079458a9f2d0b54b0b5c48f86109454de90",
+      "public_bytes": 218424
+    },
+    {
+      "source": "candidates/2023.3.1/capture/available-metrics.txt",
+      "original_sha256": "47f6ffe4c3b907f036e6be6325f39355b0d8796b38b388c077b0796025f5ee22",
+      "original_bytes": 929443,
+      "public_file": "candidates/2023.3.1/capture/available-metrics.txt",
+      "public_sha256": "b88a3b24d302d6ba291c54203b1d63b1caf162b50f6c3071a666dea32bad5aa7",
+      "public_bytes": 802472
+    },
+    {
+      "source": "candidates/2023.3.1/capture/gpu-details.txt",
+      "original_sha256": "a518c5c6fa1d4b8a849a3f9202ab5bd2a78fbfff70127a511b674ad195cb0b33",
+      "original_bytes": 9684,
+      "public_file": "candidates/2023.3.1/capture/gpu-details.txt",
+      "public_sha256": "c78e9ae5f50830278f7f38d4320cd77c53f3133e811ce7b54a810fb496113d59",
+      "public_bytes": 9681
+    },
+    {
+      "source": "candidates/2023.3.1/capture/gpu-telemetry.csv",
+      "original_sha256": "c6dd0a2153526cc2b61d35f113830edbf60d5afe8f20e906d992b950a42e64bd",
+      "original_bytes": 9234,
+      "public_file": "candidates/2023.3.1/capture/gpu-telemetry.csv",
+      "public_sha256": "c6dd0a2153526cc2b61d35f113830edbf60d5afe8f20e906d992b950a42e64bd",
+      "public_bytes": 9234
+    },
+    {
+      "source": "candidates/2023.3.1/capture/host-telemetry.jsonl",
+      "original_sha256": "c01b8cb5c4e59b531bec15bda4dc8b9749e15258fa9475665b9198d5e6ef715d",
+      "original_bytes": 874473,
+      "public_file": "candidates/2023.3.1/capture/host-telemetry.jsonl",
+      "public_sha256": "8907ef3d2faa3ee9099849336db5b297fdca9341d9fd254826d140e68626a380",
+      "public_bytes": 874845
+    },
+    {
+      "source": "candidates/2023.3.1/capture/manifest.json",
+      "original_sha256": "c3ed3c84778dd5c41ae3fecb481c11b3cb20e4a0ce92bee321c184e73866426d",
+      "original_bytes": 11929,
+      "public_file": "candidates/2023.3.1/capture/manifest.json",
+      "public_sha256": "9c00f405317fca64b9dd786e52970e7bdfa79f3c1b29e8eb5bab9913ffbf1826",
+      "public_bytes": 11340
+    },
+    {
+      "source": "candidates/2023.3.1/capture/outputs.json",
+      "original_sha256": "63cacd4d4e0d08c6ca64cc61bf36234fe042b83fdd6bac5f44d2791dc7fe4733",
+      "original_bytes": 2063,
+      "public_file": "candidates/2023.3.1/capture/outputs.json",
+      "public_sha256": "63cacd4d4e0d08c6ca64cc61bf36234fe042b83fdd6bac5f44d2791dc7fe4733",
+      "public_bytes": 2063
+    },
+    {
+      "source": "candidates/2023.3.1/capture/tool-audit.json",
+      "original_sha256": "a7d5e4689ce1a34d4ef26de97daf34b7fe4cf1441593a94498af4c47854cb35d",
+      "original_bytes": 551,
+      "public_file": "candidates/2023.3.1/capture/tool-audit.json",
+      "public_sha256": "a7d5e4689ce1a34d4ef26de97daf34b7fe4cf1441593a94498af4c47854cb35d",
+      "public_bytes": 551
+    },
+    {
+      "source": "candidates/2023.3.1/capture/tool-version.txt",
+      "original_sha256": "d96ef3db2075480a4e4d1e25eb8162ad448669a03f64b6aff7ebda8564960906",
+      "original_bytes": 144,
+      "public_file": "candidates/2023.3.1/capture/tool-version.txt",
+      "public_sha256": "d96ef3db2075480a4e4d1e25eb8162ad448669a03f64b6aff7ebda8564960906",
+      "public_bytes": 144
+    },
+    {
+      "source": "candidates/2023.3.1/capture/validity.json",
+      "original_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "original_bytes": 1097,
+      "public_file": "candidates/2023.3.1/capture/validity.json",
+      "public_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "public_bytes": 1097
+    },
+    {
+      "source": "candidates/2023.3.1/runner.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "candidates/2023.3.1/runner.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/observation/configuration.json",
+      "original_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "original_bytes": 2055,
+      "public_file": "candidates/2024.1.1/capture/application/observation/configuration.json",
+      "public_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "public_bytes": 2055
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "candidates/2024.1.1/capture/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/train/contract.json",
+      "original_sha256": "ee8c327f80e73ab33fea1b7cbfa376371fe3bf76d8ac813f3beca5426016ef4d",
+      "original_bytes": 796,
+      "public_file": "candidates/2024.1.1/capture/application/train/contract.json",
+      "public_sha256": "ee8c327f80e73ab33fea1b7cbfa376371fe3bf76d8ac813f3beca5426016ef4d",
+      "public_bytes": 796
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/train/last-rollout-contract.json",
+      "original_sha256": "85e13bf6251a897a780a6d88c50b44aa870cdd9c67d42518dad42e2877d6a406",
+      "original_bytes": 2543,
+      "public_file": "candidates/2024.1.1/capture/application/train/last-rollout-contract.json",
+      "public_sha256": "58e7730ce6033a8175154dd74236d8ec0ab79aea2332970989fe0d3b91b46b19",
+      "public_bytes": 2573
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "candidates/2024.1.1/capture/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "candidates/2024.1.1/capture/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "candidates/2024.1.1/capture/application.log",
+      "original_sha256": "5871bb5f1efe17100d3b10d29b5371e21a852843e7ec8201dac3caa94854b0a5",
+      "original_bytes": 220065,
+      "public_file": "candidates/2024.1.1/capture/application.log",
+      "public_sha256": "08900c081df9c6d6018ede54391c6d84f92c9cb6fdaa9559deaaa8a43546e506",
+      "public_bytes": 218328
+    },
+    {
+      "source": "candidates/2024.1.1/capture/available-metrics.txt",
+      "original_sha256": "30579615ac52d84aee0d0b8d0794d64b710f76eeb0969fb0c5e20f28c48de857",
+      "original_bytes": 930533,
+      "public_file": "candidates/2024.1.1/capture/available-metrics.txt",
+      "public_sha256": "8df80c71c20dcb5a7a9499f762ffc21fcf5a5d0c4ff1f3b5b5edfb74b72e7eb1",
+      "public_bytes": 803436
+    },
+    {
+      "source": "candidates/2024.1.1/capture/gpu-details.txt",
+      "original_sha256": "91480570a47f6dda23e7e1b222e0ffd6fe3e6f428ca3815f88d12c6ae9f2c44c",
+      "original_bytes": 9685,
+      "public_file": "candidates/2024.1.1/capture/gpu-details.txt",
+      "public_sha256": "f978b7b69c236a7529234b32b82aa5a197a0f7f3cc6bdc74947e8b042d69a23d",
+      "public_bytes": 9682
+    },
+    {
+      "source": "candidates/2024.1.1/capture/gpu-telemetry.csv",
+      "original_sha256": "4aad9b63b1c74a2fa06715f47aa7d06cc7a6af35fc2e361b94998d832f7f543e",
+      "original_bytes": 9105,
+      "public_file": "candidates/2024.1.1/capture/gpu-telemetry.csv",
+      "public_sha256": "4aad9b63b1c74a2fa06715f47aa7d06cc7a6af35fc2e361b94998d832f7f543e",
+      "public_bytes": 9105
+    },
+    {
+      "source": "candidates/2024.1.1/capture/host-telemetry.jsonl",
+      "original_sha256": "3a5f74525b34307e8d46bdcabe74190ad6a9b5925098d69c17f94574aaad20e2",
+      "original_bytes": 848759,
+      "public_file": "candidates/2024.1.1/capture/host-telemetry.jsonl",
+      "public_sha256": "fb7be97f8239168a640688c4744302d6ccc28a58069d20ac6605c45f2e8accdb",
+      "public_bytes": 849119
+    },
+    {
+      "source": "candidates/2024.1.1/capture/manifest.json",
+      "original_sha256": "434c0eeb496a797db4866911ad04b14042f564118a6dd6b6ce7e5d1c92b9caff",
+      "original_bytes": 11930,
+      "public_file": "candidates/2024.1.1/capture/manifest.json",
+      "public_sha256": "2459836d789c397f2264db73f3d98a8a8d959e2927b9fbee0ce748c45ff8e698",
+      "public_bytes": 11341
+    },
+    {
+      "source": "candidates/2024.1.1/capture/outputs.json",
+      "original_sha256": "e1619bc2ecab45bd4b89264793bb3ce42ea671e1144a24ee9cbe83edd0e628f1",
+      "original_bytes": 2063,
+      "public_file": "candidates/2024.1.1/capture/outputs.json",
+      "public_sha256": "e1619bc2ecab45bd4b89264793bb3ce42ea671e1144a24ee9cbe83edd0e628f1",
+      "public_bytes": 2063
+    },
+    {
+      "source": "candidates/2024.1.1/capture/tool-audit.json",
+      "original_sha256": "0e5873378b06706e2b222f1257eec2fe0b0ea9ce0d91d8575f199b692ccdeff8",
+      "original_bytes": 551,
+      "public_file": "candidates/2024.1.1/capture/tool-audit.json",
+      "public_sha256": "0e5873378b06706e2b222f1257eec2fe0b0ea9ce0d91d8575f199b692ccdeff8",
+      "public_bytes": 551
+    },
+    {
+      "source": "candidates/2024.1.1/capture/tool-version.txt",
+      "original_sha256": "590a8c19ec20f7a4a5508b3cf68f2bca78cdb2540235136c07ca193f6c97a576",
+      "original_bytes": 144,
+      "public_file": "candidates/2024.1.1/capture/tool-version.txt",
+      "public_sha256": "590a8c19ec20f7a4a5508b3cf68f2bca78cdb2540235136c07ca193f6c97a576",
+      "public_bytes": 144
+    },
+    {
+      "source": "candidates/2024.1.1/capture/validity.json",
+      "original_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "original_bytes": 1097,
+      "public_file": "candidates/2024.1.1/capture/validity.json",
+      "public_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "public_bytes": 1097
+    },
+    {
+      "source": "candidates/2024.1.1/runner.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "candidates/2024.1.1/runner.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/observation/configuration.json",
+      "original_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "original_bytes": 2055,
+      "public_file": "candidates/2025.2.1/capture/application/observation/configuration.json",
+      "public_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "public_bytes": 2055
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "candidates/2025.2.1/capture/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/train/contract.json",
+      "original_sha256": "f953bc4edb41345db8e5a055c7ee8d269085230fec4d039a8fe21967565b3c66",
+      "original_bytes": 795,
+      "public_file": "candidates/2025.2.1/capture/application/train/contract.json",
+      "public_sha256": "f953bc4edb41345db8e5a055c7ee8d269085230fec4d039a8fe21967565b3c66",
+      "public_bytes": 795
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/train/last-rollout-contract.json",
+      "original_sha256": "85e13bf6251a897a780a6d88c50b44aa870cdd9c67d42518dad42e2877d6a406",
+      "original_bytes": 2543,
+      "public_file": "candidates/2025.2.1/capture/application/train/last-rollout-contract.json",
+      "public_sha256": "58e7730ce6033a8175154dd74236d8ec0ab79aea2332970989fe0d3b91b46b19",
+      "public_bytes": 2573
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "candidates/2025.2.1/capture/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "candidates/2025.2.1/capture/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "candidates/2025.2.1/capture/application.log",
+      "original_sha256": "d9a568710973d27ee202d106794aebd357c79eefa08634c007fedaa0846c35a6",
+      "original_bytes": 219881,
+      "public_file": "candidates/2025.2.1/capture/application.log",
+      "public_sha256": "fbc92126b741a0ffaf383b96205d852fb0d4b9f00fafddd6f15251b190e7c01a",
+      "public_bytes": 218144
+    },
+    {
+      "source": "candidates/2025.2.1/capture/available-metrics.txt",
+      "original_sha256": "34139e5b3bd2020069d2c9488221a6df8dcf548da5e4909a7b0b1f905f2c6f45",
+      "original_bytes": 994452,
+      "public_file": "candidates/2025.2.1/capture/available-metrics.txt",
+      "public_sha256": "ee324061d1ea69a3d9849a2a96abfc24a226240d6583cd10c31c5b0bd30f9654",
+      "public_bytes": 856220
+    },
+    {
+      "source": "candidates/2025.2.1/capture/gpu-details.txt",
+      "original_sha256": "f37def31f9ef4859bb67e4008f05841a4b6c91d968109b6766a8a37c0c63ed9d",
+      "original_bytes": 9684,
+      "public_file": "candidates/2025.2.1/capture/gpu-details.txt",
+      "public_sha256": "0030092eaa38b7f37ace43d389760be8d9ad6d4190ab888835ee02cd6c5ae839",
+      "public_bytes": 9681
+    },
+    {
+      "source": "candidates/2025.2.1/capture/gpu-telemetry.csv",
+      "original_sha256": "dcfd67b84ba822cfb88d138d26af45d9b308a14d0b68764b8822981fc3c661e9",
+      "original_bytes": 29978,
+      "public_file": "candidates/2025.2.1/capture/gpu-telemetry.csv",
+      "public_sha256": "dcfd67b84ba822cfb88d138d26af45d9b308a14d0b68764b8822981fc3c661e9",
+      "public_bytes": 29978
+    },
+    {
+      "source": "candidates/2025.2.1/capture/host-telemetry.jsonl",
+      "original_sha256": "ba9f59ac077fb5e3ccdcd1b60804cd73d9a6eb0f0d265464ee6fe4e9e9475bd2",
+      "original_bytes": 2889901,
+      "public_file": "candidates/2025.2.1/capture/host-telemetry.jsonl",
+      "public_sha256": "7866df546390f68d8f6916a0915e60d612361f932d2161c13fba09aa04670aa8",
+      "public_bytes": 2891197
+    },
+    {
+      "source": "candidates/2025.2.1/capture/manifest.json",
+      "original_sha256": "6511ac972398f27ed847fa9f48d7b41d89f0d1c1c299297f61b2b22228c3900d",
+      "original_bytes": 11929,
+      "public_file": "candidates/2025.2.1/capture/manifest.json",
+      "public_sha256": "6334b9b814dc5dd6b45bda5fecfd566e65b44687e04636c2fed931640a131060",
+      "public_bytes": 11340
+    },
+    {
+      "source": "candidates/2025.2.1/capture/outputs.json",
+      "original_sha256": "24ed824d07779e3a62414980d290d079d09151032d73520f12e5618cc5d79f75",
+      "original_bytes": 2065,
+      "public_file": "candidates/2025.2.1/capture/outputs.json",
+      "public_sha256": "24ed824d07779e3a62414980d290d079d09151032d73520f12e5618cc5d79f75",
+      "public_bytes": 2065
+    },
+    {
+      "source": "candidates/2025.2.1/capture/tool-audit.json",
+      "original_sha256": "6349703ff4a0f5212c9a9154c95177acf862115641518a4b66e6f3eff45451e1",
+      "original_bytes": 550,
+      "public_file": "candidates/2025.2.1/capture/tool-audit.json",
+      "public_sha256": "6349703ff4a0f5212c9a9154c95177acf862115641518a4b66e6f3eff45451e1",
+      "public_bytes": 550
+    },
+    {
+      "source": "candidates/2025.2.1/capture/tool-version.txt",
+      "original_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "original_bytes": 144,
+      "public_file": "candidates/2025.2.1/capture/tool-version.txt",
+      "public_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "public_bytes": 144
+    },
+    {
+      "source": "candidates/2025.2.1/capture/validity.json",
+      "original_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "original_bytes": 1097,
+      "public_file": "candidates/2025.2.1/capture/validity.json",
+      "public_sha256": "44a365b56a19208228bf1b3b770f6b51dfc635c8ab0b98d79703badb4edcc8d5",
+      "public_bytes": 1097
+    },
+    {
+      "source": "candidates/2025.2.1/runner.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "candidates/2025.2.1/runner.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "candidates/cases.json",
+      "original_sha256": "9309e57f03a0ca5f24e537856637f624ff409e5fbb973aa16e749f4d03179522",
+      "original_bytes": 5142,
+      "public_file": "candidates/cases.json",
+      "public_sha256": "9309e57f03a0ca5f24e537856637f624ff409e5fbb973aa16e749f4d03179522",
+      "public_bytes": 5142
+    },
+    {
+      "source": "candidates/completed.json",
+      "original_sha256": "8d8a867167a4826d0ad65a86c608a0331f25752faa6d6c292f708434102fd011",
+      "original_bytes": 5665,
+      "public_file": "candidates/completed.json",
+      "public_sha256": "8d8a867167a4826d0ad65a86c608a0331f25752faa6d6c292f708434102fd011",
+      "public_bytes": 5665
+    },
+    {
+      "source": "environment.json",
+      "original_sha256": "79343ae51fef47b98bf2ec6d4ec8a8291e9868561a828f3a19c4a7ac7af21b71",
+      "original_bytes": 539,
+      "public_file": "environment.json",
+      "public_sha256": "79343ae51fef47b98bf2ec6d4ec8a8291e9868561a828f3a19c4a7ac7af21b71",
+      "public_bytes": 539
+    },
+    {
+      "source": "task-events.json",
+      "original_sha256": "796164b54931199f789fcd3caae9b000ab7e511319eb6840896f3f37fddedd52",
+      "original_bytes": 327,
+      "public_file": "task-events.json",
+      "public_sha256": "796164b54931199f789fcd3caae9b000ab7e511319eb6840896f3f37fddedd52",
+      "public_bytes": 327
+    },
+    {
+      "source": "worker-failed.json",
+      "original_sha256": "a07fac812c7457ab75e30870bdd3c2a8cbc714e0860f41024a600fd55e5c2c8b",
+      "original_bytes": 503,
+      "public_file": "worker-failed.json",
+      "public_sha256": "a07fac812c7457ab75e30870bdd3c2a8cbc714e0860f41024a600fd55e5c2c8b",
+      "public_bytes": 503
+    }
+  ],
+  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims."
+}

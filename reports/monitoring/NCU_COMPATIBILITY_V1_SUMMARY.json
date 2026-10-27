@@ -1,0 +1,16 @@
+{
+  "scope": "actual cold-restored training compatibility",
+  "completed": false,
+  "selected": null,
+  "versions_tested": ["2025.2.1", "2024.1.1", "2023.3.1"],
+  "all_application_returncodes": [1, 1, 1],
+  "failure": "RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED",
+  "observed_call": "Teacher torch.nn.functional.scaled_dot_product_attention during warmup",
+  "captured_kernel_launches": 0,
+  "valid_counter_rows": 0,
+  "original_indexed_files_verified": 45,
+  "public_manifest": "ncu-compatibility-v1/PUBLIC_EXPORT_MANIFEST.json",
+  "cost": "NCU_COMPATIBILITY_V1_COST.json",
+  "next_diagnostic": "Paired default/no_cudnn cold baselines and NCU with explicit no_cudnn dispatch, plus representative GEMM sections and independent system tool checks.",
+  "boundary": "Observed cuDNN initialization failure does not establish the underlying driver, library or permission cause. This is distinct from the earlier NCU2026.1.1 driver-incompatibility message. No valid NCU counters yet."
+}

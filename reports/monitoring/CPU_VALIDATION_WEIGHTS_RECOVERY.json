@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "tests_passed": 140,
+  "test_log": "reports/monitoring/cpu-tests-weights-recovery.txt",
+  "test_log_sha256": "27245fc6c2c93569fe03e31f1fc21210f2fece51f2863aadf0227157ecbefed6",
+  "source_files": {
+    "scripts/run_anchor_weight_development.py": "859d22fcfb801b15b1301f38cc552481e205429a22d12df90ec66db88d065c6e",
+    "scripts/collect_anchor_development.py": "93505a59e673cc79d8b9832aac293c164e8a975421b9cd323cf0313e4c2d2d3c",
+    "scripts/analyze_anchor_development.py": "62464f2abfc6a60fd56e8135f5236421907836e6358ec654ba0e26be20ba5e0f",
+    "scripts/audit_fresh_pools.py": "ec482761e7eb8b6608f0e1d3e43e392c4b782bc5946091dd10b532701832019e",
+    "scripts/materialize_experiment.py": "fb815336ed7641602b758612c87f570db93a0ec4bcda866494a6396314e73bb6",
+    "scripts/profile_run.py": "9eb250ef383d61f1dcee9950ebe0ff0499f4d899642438738a7d7d4f141ea28f",
+    "scripts/profile_training.py": "bdda64c67cdbc359e31649ed7087c1b8abd77c3cc0aa5685711ea3f5f6be9c6b",
+    "scripts/run_profiler_recovery.py": "12da792102bc8659d68d852eb00c23a95e5760a7d0fa92aee91198b7287bb0b2",
+    "servedistill/profiling.py": "50d5a814895293734fcfbb194d941388444d75cf88bb0078ffd6d68ddc9c98c8",
+    "tests/test_anchor_collection.py": "ef53343a038d20de4534ed1c83c1327cb3f46e47001815be284e3d85318a1173"
+  },
+  "boundary": "Current CPU regression suite only. Frozen original training and submitted profiling source snapshots have separate manifests. This does not establish GPU capture or quality advantage."
+}

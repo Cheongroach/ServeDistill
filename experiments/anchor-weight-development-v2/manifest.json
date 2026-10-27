@@ -1,0 +1,9 @@
+{
+  "file": "source.tar.gz",
+  "sha256": "efce7b110f1b6886ddf156bf352b6a5fbedb2023bf4152a154c043a39a90e4d8",
+  "protocol_sha256": "fa93bdb4e927298359b1b0fd9a192b0378817ad57182e9ab4f59c078bc028197",
+  "support_file": "support.tar.gz",
+  "support_sha256": "2a914cdfbf893ff782268f1155303b36285cdd20c845907d68e98af1b3ddbe6b",
+  "base_protocol_sha256": "c5a8110f496151d24895087261ca82daf5235375db13e3a521aa31280ff63f7b",
+  "boundary": "Exact original training source plus frozen weight runner. Original data/init and no holdout."
+}
