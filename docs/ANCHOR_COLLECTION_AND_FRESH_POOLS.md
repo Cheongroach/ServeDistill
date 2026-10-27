@@ -102,3 +102,8 @@ python -m scripts.audit_fresh_pools \
 数据池足够大只解决可用样本问题。下一轮还需按 DEV 方差确定样本量，固定一个候选、两个 SFT 对照、完整种子集合、主指标、各域非劣效门、两个不重叠确认批次，以及后续重复确认的显著性预算。
 
 可以继续做 DEV 迭代；不能反复测相同 holdout、看见有利结果便停止或更换比较指标。每次新的确认必须使用未观测输入，并把其消耗登记到后续排除列表。
+
+具体封存、前瞻预算、GPU 输出绑定和独立重评入口见
+[一步步从 DEV 候选走到新的独立确认](FRESH_CONFIRMATION-friendly.md)。
+旧审计锁保留原字节；新增产品原表 SHA256 使用独立的
+`configs/fresh-confirmation-sources-v1.json`。当前只完成 CPU 流程验证，尚未产生新确认预测。

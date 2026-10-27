@@ -1,0 +1,24 @@
+{
+  "scope": "cpu_regression_only",
+  "utc": "2026-10-27T18:43:57.316248+00:00",
+  "tests_passed": 166,
+  "test_stdout_sha256": "ebe7525b9d07403129dea0e027a3493c8f4f25b8a0b0bbd7f6f42a78fbafd241",
+  "test_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_sha256": {
+    "servedistill/fresh_confirmation.py": "cb59cfe77aa246b7c7bd774a2a07f4ab74c7a9a11c8d00e4095cbeb559407ff8",
+    "servedistill/fresh_contracts.py": "5cdc43c468247162a92acae1437caecbf470db97017e7ce217f46012188596be",
+    "servedistill/sequential_confirmation.py": "ef0814bb08e6471ef3091c6b17b18a260781cf98b0c6ef6250b95758afd2af82",
+    "scripts/freeze_fresh_confirmation.py": "369f63a52cdba4082cf8df7a073dcf60a18d539f808b76c621c3d5b7cf32b1e1",
+    "scripts/evaluate_fresh_confirmation.py": "f7072c8492a1d6e034e21790f7afaa9ef7396a48abec3ebe64421269cc355f1d",
+    "scripts/analyze_fresh_confirmation.py": "f7a774402cf9e3655a5c67d2634f11529f4941acfd162a94a52abd69cc02d3b8",
+    "tests/test_fresh_confirmation.py": "212c1e13204afada7b32aa2cfdc76e83734ccfb168645e3fc864ef051fb0d20f",
+    "configs/fresh-confirmation-family-v1.json": "15b5760415363f2c054ece944706d96d3fad3c3dfcd8561c729d7216c6913519",
+    "configs/fresh-confirmation-sources-v1.json": "58e9f1aaade5dc7ececb6b45fc5df2cb84138ccca884a4b780c964acce23a221"
+  },
+  "new_confirmation_predictions_generated": false,
+  "new_confirmation_candidate_frozen": false,
+  "quality_advantage_supported": false,
+  "coverage": "Real parquet joins and historical original-question exclusion; label-independent disjoint sampling; immutable failed-attempt spending; paired nonlinear query statistics; complete synthetic final decisions including strong-control tie, replication regression and missing seed.",
+  "command": "env -u LD_LIBRARY_PATH PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 python3 -m pytest -q -c /dev/null --rootdir=. tests; PYTHONPATH contains the repository and isolated test dependencies",
+  "boundary": "Synthetic outputs validate inference/coverage contracts only; all real DEV training and fresh GPU evaluation remain separate."
+}

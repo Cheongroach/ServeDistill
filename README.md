@@ -32,6 +32,16 @@ After excluding all recorded historical inputs, the full ESCI source retains 17,
 official-test query groups and GSM8K train retains 4,573 original questions.
 These are input-pool audits, not frozen confirmation samples or model results.
 
+The [fresh confirmation walkthrough](docs/FRESH_CONFIRMATION-friendly.md) provides
+candidate sealing, label-independent sampling, prospective alpha spending, fixed
+adapter evaluation and independent regrading against both SFT controls on both
+batches. New predictions still await the complete DEV gate. The pinned 1.11 GB
+ESCI product table has been downloaded and SHA256-verified; historical source
+locks and failed confirmations remain unchanged.
+The [current CPU audit](reports/monitoring/CPU_VALIDATION_FRESH_CONFIRMATION.json)
+records **166 passed checks**, including complete synthetic acceptance and rejection
+cases; those synthetic outputs do not establish model quality.
+
 The [professional profiler verification](reports/monitoring/STATUS.md) collected
 real Nsight Systems and PyTorch GPU traces after cold restoration. All 91 indexed
 output files passed SHA256 checks, and adapter/Adam drift passed the frozen diagnostic
@@ -46,7 +56,8 @@ final numerical states passed the matched baseline tolerances, with different ex
 hashes. Perf/DCGM were unavailable, and Compute Sanitizer failed with CUDA API errors
 and student-rollout OOM. The first suite consumed **0.527 H20 GPU hours**, the compatibility
 probe **0.382**, and recovery **1.035278**, including preparation and failure, separate
-from historical and DEV allocations. CPU regressions passed **156 tests**.
+from historical and DEV allocations. The 156-test monitoring/collection validation
+is retained; the current fresh-confirmation CPU validation is reported separately.
 Profiling diagnostics do not establish speed or quality superiority.
 
 The following paragraphs describe older, closed studies.
