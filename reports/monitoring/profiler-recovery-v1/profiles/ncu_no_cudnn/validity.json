@@ -1,0 +1,36 @@
+{
+  "passed": false,
+  "checks": {
+    "cold_restoration": true,
+    "window_complete": true,
+    "finite_loss_gradient_delta": true,
+    "nonzero_parameter_update": true,
+    "behavior_probability": true,
+    "rollout_version": true
+  },
+  "observed_steps": [
+    162
+  ],
+  "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+  "boundary": "Runtime gates do not prove business quality or method superiority.",
+  "application_succeeded": true,
+  "trace_present": true,
+  "report": {
+    "passed": false,
+    "checks": {
+      "raw_export_succeeded": true,
+      "kernels_captured": false,
+      "all_requested_metrics_present": false,
+      "finite_values_with_units": false,
+      "positive_kernel_duration": false
+    },
+    "kernel_launches": 0,
+    "metric_rows": 0,
+    "requested_metrics": [
+      "gpu__time_duration.sum",
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+    ],
+    "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+  }
+}

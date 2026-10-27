@@ -39,7 +39,34 @@ python -m scripts.analyze_anchor_development \
 
 `advance_to_fresh_confirmation` 只代表通过原 0.5 候选的 DEV 门。新增权重存在后，最终选择仍须等待三组权重的全部结果，按扩展协议统一排序。不能把这个入口提前产生的 true 当成整个扩展实验已经完成。
 
-## 第 4 步：数清真正未使用的输入
+## 第 4 步：收齐两个新增权重，执行一次统一选择
+
+```bash
+python -m scripts.collect_anchor_weights \
+  --protocol configs/anchor-development-v1.json \
+  --extension configs/anchor-weight-development-v2.json \
+  --submissions "$WEIGHT_SUBMISSIONS" \
+  --training "$ANCHOR_DATA/train.jsonl" \
+  --hdfs-root "$SERVEDISTILL_HDFS_ADVANTAGE" \
+  --output "$RAW_WEIGHT_EVIDENCE"
+
+python -m scripts.analyze_anchor_weights \
+  --base-root "$RAW_ANCHOR_EVIDENCE" --weight-root "$RAW_WEIGHT_EVIDENCE" \
+  --protocol configs/anchor-development-v1.json \
+  --extension configs/anchor-weight-development-v2.json \
+  --training "$ANCHOR_DATA/train.jsonl" --dev "$ANCHOR_DATA/dev.jsonl" \
+  --output results/anchor-weight-development-analysis.json
+```
+
+`WEIGHT_SUBMISSIONS` 的每项包含 `variant`、`seed`、平台 `sid`；两个 variant 为 `anchor01`、`anchor10`，各四种子。八个任务缺一不可，未结束的任务不能产生最终收集审计。
+
+原轮和扩展共重评 30,800 条预测。收集器还逐步检查 320 条 update 与 rollout 记录：实际 sample ID、版本、学习率、有限数值、非零参数更新，以及 checkpoint 中的累计 response token 数。它不能只凭一个 `completed=true` 接受训练完成。
+
+统一分析先对每个权重应用相同门槛：四种子全部通过绝对质量门，相对两个 SFT 对照均有正的平均业务差值、至少三对种子为正，各业务域和数学回归满足原非劣效门。只在合格者中按平均 DEV business macro 排序，精确平分时选较小权重；没有合格者则返回 `selected_dev_candidate=null`。pure AOPD 保留为消融，不参加选择。
+
+`dev_allocated_gpu_hours` 合并这十二个任务的完整 Pod 分配区间；历史 Teacher 准备、标签、初始化和 profiler 成本仍单列。原始平台响应可能包含私有字段，`RAW_*_EVIDENCE` 必须放在 Git 忽略目录中，公开结果只导出审核过的统计和文件指纹。
+
+## 第 5 步：数清真正未使用的输入
 
 旧确认失败后，旧 test 和 replication 已经被观察。本项目历史输入审计结果：
 
@@ -55,7 +82,7 @@ python -m scripts.analyze_anchor_development \
 
 “本项目未使用”不等于基础模型预训练未接触。ESCI 完整版与此前 small-version 的抽样总体不同；GSM8K train 剩余题也必须明确标成从官方 train 划出的项目 holdout，不能称为官方 test。
 
-## 第 5 步：复现输入池审计
+## 第 6 步：复现输入池审计
 
 固定源版本和完整 SHA256 在 `configs/fresh-pool-expanded-sources.json`。`ESCI_EXAMPLES` 指固定版本的 examples parquet；`GSM8K_TRAIN` 指固定版本的原始 train.jsonl。
 
@@ -70,7 +97,7 @@ python -m scripts.audit_fresh_pools \
 
 所有历史根目录都要提供，包含各轮 train/dev/test/replication。输出记录每个原文件的内容 SHA256、行数和去重统计。源数据字节与锁文件不符、历史 prompt 与保存哈希不符，审计立即失败。
 
-## 第 6 步：确认协议必须在新预测前冻结
+## 第 7 步：确认协议必须在新预测前冻结
 
 数据池足够大只解决可用样本问题。下一轮还需按 DEV 方差确定样本量，固定一个候选、两个 SFT 对照、完整种子集合、主指标、各域非劣效门、两个不重叠确认批次，以及后续重复确认的显著性预算。
 

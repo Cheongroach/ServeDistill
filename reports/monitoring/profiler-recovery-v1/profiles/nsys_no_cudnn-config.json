@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "backend": "nsys",
+  "timeout_seconds": 900,
+  "first_update": 162,
+  "last_update": 162,
+  "microbatch": 4,
+  "gpu_poll_ms": 500,
+  "host_poll_seconds": 1,
+  "options": {
+    "trace": "cuda,nvtx,osrt",
+    "sample": "none",
+    "cpuctxsw": "none",
+    "reports": [
+      "cuda_gpu_kern_sum",
+      "cuda_api_sum",
+      "nvtx_sum",
+      "cuda_gpu_mem_time_sum"
+    ]
+  },
+  "attention_backend": "no_cudnn"
+}

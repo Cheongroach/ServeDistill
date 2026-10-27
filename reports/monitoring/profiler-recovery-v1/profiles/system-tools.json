@@ -1,0 +1,13 @@
+{
+  "perf": {
+    "available": false
+  },
+  "dcgmi": {
+    "available": false
+  },
+  "compute-sanitizer": {
+    "available": true,
+    "binary": "/usr/local/cuda/bin/compute-sanitizer",
+    "returncode": 0
+  }
+}

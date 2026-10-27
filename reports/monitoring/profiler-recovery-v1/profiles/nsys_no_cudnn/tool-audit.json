@@ -1,0 +1,66 @@
+{
+  "version": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "--version"
+    ],
+    "returncode": 0
+  },
+  "environment": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "status",
+      "--environment"
+    ],
+    "returncode": 0
+  },
+  "gpu": {
+    "argv": [
+      "/usr/bin/nvidia-smi",
+      "-q"
+    ],
+    "returncode": 0
+  },
+  "cuda_gpu_kern_sum": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "stats",
+      "--report=cuda_gpu_kern_sum",
+      "--format=csv",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.nsys-rep"
+    ],
+    "returncode": 0
+  },
+  "cuda_api_sum": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "stats",
+      "--report=cuda_api_sum",
+      "--format=csv",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.nsys-rep"
+    ],
+    "returncode": 0
+  },
+  "nvtx_sum": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "stats",
+      "--report=nvtx_sum",
+      "--format=csv",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.nsys-rep"
+    ],
+    "returncode": 0
+  },
+  "cuda_gpu_mem_time_sum": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/nsys",
+      "stats",
+      "--report=cuda_gpu_mem_time_sum",
+      "--format=csv",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.nsys-rep"
+    ],
+    "returncode": 0
+  },
+  "application_returncode": 0,
+  "ended_unix_seconds": 1793121700.615
+}

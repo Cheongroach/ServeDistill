@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "backend": "sanitizer",
+  "attention_backend": "no_cudnn",
+  "cuda_allocator": "no_expandable",
+  "timeout_seconds": 2400,
+  "first_update": 162,
+  "last_update": 162,
+  "microbatch": 1,
+  "gpu_poll_ms": 1000,
+  "host_poll_seconds": 1,
+  "options": {"tool": "memcheck"}
+}

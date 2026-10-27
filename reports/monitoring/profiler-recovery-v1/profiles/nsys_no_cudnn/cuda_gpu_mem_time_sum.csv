@@ -1,0 +1,11 @@
+
+NOTICE: Existing SQLite export found: /tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.sqlite
+        It is assumed file was previously exported from: /tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [/tmp/servedistill-profiler-recovery-v1/output/profiles/nsys_no_cudnn/capture.sqlite] with [/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/host/target-linux-x64/reports/cuda_gpu_mem_time_sum.py]...
+Time (%),Total Time (ns),Count,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Operation
+59.4,109729820,1697,64661.1,5952.0,736,730110,137131.4,[CUDA memcpy Host-to-Device]
+34.4,63492002,10564,6010.2,3840.0,864,27456,5748.6,[CUDA memcpy Device-to-Device]
+3.4,6254121,6086,1027.6,896.0,736,5344,272.6,[CUDA memset]
+2.8,5253139,2116,2482.6,2464.0,2240,4448,115.2,[CUDA memcpy Device-to-Host]

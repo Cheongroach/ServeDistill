@@ -1,0 +1,155 @@
+{
+  "scope": "bounded_profiler_diagnostic",
+  "environment": {
+    "python": "3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0]",
+    "versions": {
+      "torch": "2.9.1",
+      "transformers": "5.2.0",
+      "peft": "0.18.1",
+      "vllm": null,
+      "flash-linear-attention": "0.4.1",
+      "causal-conv1d": null,
+      "triton": "3.5.1",
+      "numpy": "1.26.4",
+      "scikit-learn": "1.6.1"
+    },
+    "cuda": "12.9",
+    "device_count": 1,
+    "devices": [
+      "NVIDIA H20"
+    ],
+    "optional_kernels": {
+      "fla": true,
+      "causal_conv1d": false
+    },
+    "unix_seconds": 1793120374.4816043,
+    "bf16_backward_finite": true
+  },
+  "ncu_version": "2025.2.1",
+  "driver": "535.261.03",
+  "attention_backend": "no_cudnn",
+  "original_completion_sha256": "68c1e5322051ca32529044bf1d6cbdc981152d40645cd740dadae4a860bde0d3",
+  "original_cases_sha256": "4a0d7d4d1a229950978c62f250e55ab18949cab1c79c5df8451b040eaba32f51",
+  "original_indexed_files_verified": 156,
+  "original_source_files_exported": 188,
+  "validation_format_correction": "NCU --csv --page raw returned kernel rows with metric columns and a units row. Old long-only parser reported zero kernels; original false validity and nonzero runner exit retained.",
+  "revalidation": {
+    "profiles/none_default": {
+      "original_passed": true,
+      "passed": true,
+      "kernel_launches": null
+    },
+    "profiles/none_no_cudnn": {
+      "original_passed": true,
+      "passed": true,
+      "kernel_launches": null
+    },
+    "profiles/ncu_no_cudnn": {
+      "original_passed": false,
+      "passed": true,
+      "kernel_launches": 8
+    },
+    "profiles/ncu_gemm_no_cudnn": {
+      "original_passed": false,
+      "passed": true,
+      "kernel_launches": 1
+    },
+    "profiles/nsys_no_cudnn": {
+      "original_passed": true,
+      "passed": true,
+      "kernel_launches": null
+    },
+    "profiles/sanitizer_no_cudnn": {
+      "original_passed": false,
+      "passed": false,
+      "kernel_launches": null
+    }
+  },
+  "gemm_kernel": [
+    "sm80_xmma_gemm_f32f32_f32f32_f32_tn_n_tilesize128x128x8_stage3_warpsize2x2x1_ffma_aligna4_alignc4_execute_kernel__5x_cublas"
+  ],
+  "gemm_metrics": {
+    "dram__bytes.sum.per_second": {
+      "value": 79.479168,
+      "unit": "Gbyte/s"
+    },
+    "gpu__dram_throughput.avg.pct_of_peak_sustained_elapsed": {
+      "value": 1.975737,
+      "unit": "%"
+    },
+    "gpu__time_duration.sum": {
+      "value": 1.473088,
+      "unit": "ms"
+    },
+    "launch__occupancy_limit_registers": {
+      "value": 2.0,
+      "unit": "block"
+    },
+    "launch__registers_per_thread": {
+      "value": 255.0,
+      "unit": "register/thread"
+    },
+    "lts__t_sector_hit_rate.pct": {
+      "value": 92.505896,
+      "unit": "%"
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "value": 88.902048,
+      "unit": "%"
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "value": 12.492236,
+      "unit": "%"
+    }
+  },
+  "numerical_state_checks": {
+    "NCU": {
+      "passed": true,
+      "rng_equal": true,
+      "same_step_and_tokens": true,
+      "exact_final_state_equivalence": false
+    },
+    "GEMM": {
+      "passed": true,
+      "rng_equal": true,
+      "same_step_and_tokens": true,
+      "exact_final_state_equivalence": false
+    },
+    "NSYS": {
+      "passed": true,
+      "rng_equal": true,
+      "same_step_and_tokens": true,
+      "exact_final_state_equivalence": false
+    }
+  },
+  "system_tools": {
+    "perf": {
+      "available": false
+    },
+    "dcgmi": {
+      "available": false
+    },
+    "compute-sanitizer": {
+      "available": true,
+      "binary": "/usr/local/cuda/bin/compute-sanitizer",
+      "returncode": 0
+    }
+  },
+  "system_watch": {
+    "returncode": 0,
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/servedistill-profiler-recovery-v1/code/scripts/system_watch.py",
+      "--config",
+      "/tmp/servedistill-profiler-recovery-v1/code/configs/monitoring/system.json",
+      "--output",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/system-watch"
+    ],
+    "boundary": "Standalone idle host telemetry; serial and outside kernel profiling."
+  },
+  "sanitizer_failure": "CUDA OOM in student rollout prefill at Qwen3.5 torch_chunk_gated_delta_rule during warmup. Memcheck also reported CUDA_ERROR_INVALID_VALUE on cuMemCreate in ExpandableSegment::map, with ERROR SUMMARY: 3 errors. No complete observed update; allocator compatibility and memory pressure are not yet isolated.",
+  "allocated_gpu_hours": 1.0352777777777777,
+  "quality_advantage_supported": false,
+  "speed_advantage_supported": false,
+  "boundary": "GEMM numbers describe one filtered launch under explicit no_cudnn diagnostic dispatch, not the complete training workload. Numeric tolerance is not exact state or quality equivalence. Perf/DCGM unavailable and sanitizer failure retained."
+}

@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "argv": [
+    "/usr/bin/python3",
+    "/tmp/servedistill-profiler-recovery-v1/code/scripts/system_watch.py",
+    "--config",
+    "/tmp/servedistill-profiler-recovery-v1/code/configs/monitoring/system.json",
+    "--output",
+    "/tmp/servedistill-profiler-recovery-v1/output/profiles/system-watch"
+  ],
+  "boundary": "Standalone idle host telemetry; serial and outside kernel profiling."
+}

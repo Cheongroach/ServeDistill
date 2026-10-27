@@ -54,6 +54,8 @@ def validate_config(config: dict) -> None:
         raise ValueError("Observation window is reversed")
     if config.get("attention_backend", "default") not in ("default", "no_cudnn"):
         raise ValueError("Unknown diagnostic attention backend")
+    if config.get("cuda_allocator", "default") not in ("default", "no_expandable"):
+        raise ValueError("Unknown diagnostic CUDA allocator")
     if config["backend"] == "ncu":
         options = config["options"]
         if options["replay_mode"] != "kernel" or not options["nvtx_include"]:
@@ -62,6 +64,15 @@ def validate_config(config: dict) -> None:
             raise ValueError("NCU launch count must be between 1 and 100")
         if not options.get("metrics") and not options.get("sections"):
             raise ValueError("NCU needs metrics or sections")
+
+
+def application_environment(config: dict, environment: dict) -> dict:
+    """Apply an explicit diagnostic allocator choice only to the child process."""
+    result = dict(environment)
+    if config.get("cuda_allocator", "default") == "no_expandable":
+        result.pop("PYTORCH_CUDA_ALLOC_CONF", None)
+        result["PYTORCH_ALLOC_CONF"] = "expandable_segments:False"
+    return result
 
 
 def build_command(config: dict, application: list[str], output: Path,
@@ -206,26 +217,66 @@ def metric_number(value: str | None) -> float | None:
     return result if math.isfinite(result) else None
 
 
+def ncu_metric_records(path: Path) -> list[dict]:
+    """Normalize long CSV and NCU raw wide CSV without changing source bytes."""
+    long = csv_records(path, {"ID", "Kernel Name", "Metric Name", "Metric Value", "Metric Unit"})
+    if long:
+        return long
+    wide = csv_records(path, {"ID", "Kernel Name"})
+    if not wide:
+        return []
+    units = [r for r in wide if not r.get("ID") and not r.get("Kernel Name")]
+    if len(units) != 1:
+        raise ValueError("NCU wide CSV requires exactly one units row")
+    unit_row = units[0]
+    return [
+        {"ID": row["ID"], "Kernel Name": row["Kernel Name"],
+         "Metric Name": name, "Metric Value": value, "Metric Unit": unit_row.get(name)}
+        for row in wide if row.get("Kernel Name")
+        for name, value in row.items() if name and "__" in name
+    ]
+
+
+NCU_SECTION_METRICS = {
+    "SpeedOfLight": ("gpu__time_duration.sum",
+                     "sm__throughput.avg.pct_of_peak_sustained_elapsed"),
+    "MemoryWorkloadAnalysis": ("dram__bytes.sum.per_second", "lts__t_sector_hit_rate.pct"),
+    "LaunchStats": ("launch__registers_per_thread", "launch__shared_mem_per_block"),
+    "Occupancy": ("sm__warps_active.avg.pct_of_peak_sustained_active",
+                  "launch__occupancy_limit_registers"),
+}
+
+
 def report_validity(root: Path, config: dict, audit: dict) -> dict:
     """A nonempty report alone does not establish usable profiler evidence."""
     backend = config["backend"]
     checks, details = {}, {}
     if backend == "ncu":
-        rows = csv_records(root / "ncu-metrics.csv",
-                           {"Kernel Name", "Metric Name", "Metric Value", "Metric Unit"})
-        requested = config["options"].get("metrics", [])
+        rows = ncu_metric_records(root / "ncu-metrics.csv")
+        options = config["options"]
+        requested = list(options.get("metrics", []))
+        sections = options.get("sections", [])
+        unknown_sections = [name for name in sections if name not in NCU_SECTION_METRICS]
+        for section in sections:
+            requested.extend(NCU_SECTION_METRICS.get(section, ()))
+        requested = list(dict.fromkeys(requested))
         kernels = {}
+        duplicate_metric = False
         for row in rows:
-            if not row.get("Kernel Name"):
+            if not row.get("Kernel Name") or not row.get("ID"):
                 continue
             key = (row.get("ID"), row["Kernel Name"])
+            duplicate_metric |= row.get("Metric Name") in kernels.get(key, {})
             kernels.setdefault(key, {})[row.get("Metric Name")] = row
         checks["raw_export_succeeded"] = audit.get("raw_metrics", {}).get("returncode") == 0
         checks["kernels_captured"] = bool(kernels)
+        checks["unique_kernel_metric_rows"] = not duplicate_metric
+        checks["bounded_launch_count"] = 0 < len(kernels) <= options["launch_count"]
+        checks["declared_section_validation_supported"] = not unknown_sections
         checks["all_requested_metrics_present"] = bool(kernels) and all(
             all(name in metrics for name in requested) for metrics in kernels.values())
         values = [row for metrics in kernels.values() for name, row in metrics.items()
-                  if not requested or name in requested]
+                  if name in requested]
         checks["finite_values_with_units"] = bool(values) and all(
             row.get("Metric Unit") and metric_number(row.get("Metric Value")) is not None
             and metric_number(row.get("Metric Value")) >= 0 for row in values)
@@ -233,9 +284,12 @@ def report_validity(root: Path, config: dict, audit: dict) -> dict:
             metric_number(metrics.get("gpu__time_duration.sum", {}).get("Metric Value"))
             is not None
             and metric_number(metrics["gpu__time_duration.sum"]["Metric Value"]) > 0
+            and metrics["gpu__time_duration.sum"]["Metric Unit"] in ("ns", "us", "ms", "s")
             for metrics in kernels.values())
         details = {"kernel_launches": len(kernels), "metric_rows": len(values),
-                   "requested_metrics": requested}
+                   "requested_metrics": requested, "unknown_sections": unknown_sections,
+                   "section_validation_scope": "Named quantitative evidence per requested section; "
+                                               "not exhaustive validation of every derived counter."}
     elif backend == "nsys":
         for report in ("cuda_gpu_kern_sum", "cuda_api_sum", "nvtx_sum"):
             name_key = "Range" if report == "nvtx_sum" else "Name"

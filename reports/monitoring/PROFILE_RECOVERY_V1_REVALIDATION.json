@@ -1,0 +1,233 @@
+{
+  "cases": {
+    "profiles/none_default": {
+      "original_index_sha256": "e80dac063255a42a6b7fa782ee1c8baf0b2c8ce4082202b538f25e226149cab4",
+      "original_validity_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_files_verified": 25,
+      "original_passed": true,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {},
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/none_no_cudnn": {
+      "original_index_sha256": "98de6da4d3424b578985507c7269d66338e2830a596c92994c362b46d5ae889f",
+      "original_validity_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_files_verified": 25,
+      "original_passed": true,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {},
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/ncu_no_cudnn": {
+      "original_index_sha256": "c74999e9679dc9680ba7317d923486e9070cb39bd6feeec1db770d16689dd0e3",
+      "original_validity_sha256": "22ab9b06f24eda69a752bc4e63dadac34eb655fa45687c56a9948f9b2cf0bb31",
+      "original_files_verified": 29,
+      "original_passed": false,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {
+          "raw_export_succeeded": true,
+          "kernels_captured": true,
+          "unique_kernel_metric_rows": true,
+          "bounded_launch_count": true,
+          "declared_section_validation_supported": true,
+          "all_requested_metrics_present": true,
+          "finite_values_with_units": true,
+          "positive_kernel_duration": true
+        },
+        "kernel_launches": 8,
+        "metric_rows": 24,
+        "requested_metrics": [
+          "gpu__time_duration.sum",
+          "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+          "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+        ],
+        "unknown_sections": [],
+        "section_validation_scope": "Named quantitative evidence per requested section; not exhaustive validation of every derived counter.",
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/ncu_gemm_no_cudnn": {
+      "original_index_sha256": "ba504dc5613953eb2192173f8a93541b63968d980af170e43cb47e1d80eda99c",
+      "original_validity_sha256": "f05e718e6fc681596342a848f4efd7cadf21122dcf16a9fe19bbb2db0a5e1a0b",
+      "original_files_verified": 29,
+      "original_passed": false,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {
+          "raw_export_succeeded": true,
+          "kernels_captured": true,
+          "unique_kernel_metric_rows": true,
+          "bounded_launch_count": true,
+          "declared_section_validation_supported": true,
+          "all_requested_metrics_present": true,
+          "finite_values_with_units": true,
+          "positive_kernel_duration": true
+        },
+        "kernel_launches": 1,
+        "metric_rows": 8,
+        "requested_metrics": [
+          "gpu__time_duration.sum",
+          "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+          "dram__bytes.sum.per_second",
+          "lts__t_sector_hit_rate.pct",
+          "launch__registers_per_thread",
+          "launch__shared_mem_per_block",
+          "sm__warps_active.avg.pct_of_peak_sustained_active",
+          "launch__occupancy_limit_registers"
+        ],
+        "unknown_sections": [],
+        "section_validation_scope": "Named quantitative evidence per requested section; not exhaustive validation of every derived counter.",
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/nsys_no_cudnn": {
+      "original_index_sha256": "2f9ded164fb8e246658511a831d2c1500d49e2f55f5b15457f2b79f613f316c0",
+      "original_validity_sha256": "eb6ad3260f4d9be3d23e3cc6229da97bb100f14fe5b5e4ea607c3d22b3cdc83c",
+      "original_files_verified": 33,
+      "original_passed": true,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {
+          "cuda_gpu_kern_sum_export": true,
+          "cuda_gpu_kern_sum_has_data": true,
+          "cuda_api_sum_export": true,
+          "cuda_api_sum_has_data": true,
+          "nvtx_sum_export": true,
+          "nvtx_sum_has_data": true,
+          "learner_range_present": true
+        },
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/sanitizer_no_cudnn": {
+      "original_index_sha256": "c44ea6f60c0b12641edada75dc28e21c7c38ed305fe398be40d282df96eb767e",
+      "original_validity_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "original_files_verified": 15,
+      "original_passed": false,
+      "runtime": {
+        "passed": false,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": false,
+          "finite_loss_gradient_delta": false,
+          "nonzero_parameter_update": false,
+          "behavior_probability": false,
+          "rollout_version": false
+        },
+        "observed_steps": [],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": false,
+        "checks": {
+          "zero_error_summary": false
+        },
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": false,
+      "revalidated_passed": false
+    }
+  },
+  "runtime_gates_sha256": "f9ed062044b0a6e3775345704e7c53e55eae6dd0e28d139c65f1ce29a0e61049",
+  "revalidation_source_sha256": "d3e1a1e6c1ab57ea5c71c8860c79933823dace89e3f1e8d2cd6f390636ac6303",
+  "validator_source_sha256": "374db5828e853193bb8deb154115f29b0af8fcb6a2ffc64c8c1321b067d4eec3",
+  "quality_advantage_supported": false,
+  "speed_advantage_supported": false,
+  "boundary": "Original capture, completion and failure bytes remain untouched. Revalidation fixes report parsing only and does not turn unavailable tools, failed runtime windows, or sampled kernels into a full workload validation."
+}

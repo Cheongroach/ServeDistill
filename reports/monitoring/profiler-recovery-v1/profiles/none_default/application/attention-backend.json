@@ -1,0 +1,8 @@
+{
+  "requested": "default",
+  "cudnn_sdp_enabled": true,
+  "flash_sdp_enabled": true,
+  "math_sdp_enabled": true,
+  "mem_efficient_sdp_enabled": true,
+  "boundary": "Diagnostic dispatch policy; no_cudnn changes eligible SDPA kernels. Compare only matching-policy baseline and profiler captures. Training/quality experiment defaults remain independent."
+}

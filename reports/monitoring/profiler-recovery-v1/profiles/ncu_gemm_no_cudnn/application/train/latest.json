@@ -1,0 +1,17 @@
+{
+  "path": "checkpoint-0162",
+  "step": 162,
+  "adapter_sha256": "e94356068bd6d48975c66300fcb9c24d7ab002a6ec35eb410134286956e07dc3",
+  "optimizer_sha256": "065eb023897e6e6eebebc27037375db68d4490fac3d07f6bc3179ff0a217098b",
+  "rng_sha256": "38426e2e811bbc79a15a29bb743ebb2600fb8779ed62c42fa6e52bdfc4cfa309",
+  "tokens_seen": 42315,
+  "time_budget": {
+    "limit_seconds": null,
+    "prior_method_seconds": 0.0,
+    "training_wall_seconds": 175.57267970964313,
+    "charged_method_seconds": 175.57267970964313,
+    "exhausted": false,
+    "overrun_seconds": 0.0,
+    "boundary": "Includes model initialization, training dev, updates and checkpoints. Stops between atomic updates; final evaluation and platform costs are reported separately and do not disappear from total GPU cost."
+  }
+}

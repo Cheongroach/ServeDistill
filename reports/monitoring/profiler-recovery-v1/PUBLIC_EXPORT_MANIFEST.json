@@ -1,0 +1,1599 @@
+{
+  "original_hash_verification": {
+    "profiles/none_default": {
+      "files": 25,
+      "all_hashes_match": true
+    },
+    "profiles/none_no_cudnn": {
+      "files": 25,
+      "all_hashes_match": true
+    },
+    "profiles/ncu_no_cudnn": {
+      "files": 29,
+      "all_hashes_match": true
+    },
+    "profiles/ncu_gemm_no_cudnn": {
+      "files": 29,
+      "all_hashes_match": true
+    },
+    "profiles/nsys_no_cudnn": {
+      "files": 33,
+      "all_hashes_match": true
+    },
+    "profiles/sanitizer_no_cudnn": {
+      "files": 15,
+      "all_hashes_match": true
+    }
+  },
+  "independent_report_validation": {
+    "profiles/none_default": {
+      "passed": true,
+      "checks": {},
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/none_no_cudnn": {
+      "passed": true,
+      "checks": {},
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/ncu_no_cudnn": {
+      "passed": true,
+      "checks": {
+        "raw_export_succeeded": true,
+        "kernels_captured": true,
+        "unique_kernel_metric_rows": true,
+        "bounded_launch_count": true,
+        "declared_section_validation_supported": true,
+        "all_requested_metrics_present": true,
+        "finite_values_with_units": true,
+        "positive_kernel_duration": true
+      },
+      "kernel_launches": 8,
+      "metric_rows": 24,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+      ],
+      "unknown_sections": [],
+      "section_validation_scope": "Named quantitative evidence per requested section; not exhaustive validation of every derived counter.",
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/ncu_gemm_no_cudnn": {
+      "passed": true,
+      "checks": {
+        "raw_export_succeeded": true,
+        "kernels_captured": true,
+        "unique_kernel_metric_rows": true,
+        "bounded_launch_count": true,
+        "declared_section_validation_supported": true,
+        "all_requested_metrics_present": true,
+        "finite_values_with_units": true,
+        "positive_kernel_duration": true
+      },
+      "kernel_launches": 1,
+      "metric_rows": 8,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__bytes.sum.per_second",
+        "lts__t_sector_hit_rate.pct",
+        "launch__registers_per_thread",
+        "launch__shared_mem_per_block",
+        "sm__warps_active.avg.pct_of_peak_sustained_active",
+        "launch__occupancy_limit_registers"
+      ],
+      "unknown_sections": [],
+      "section_validation_scope": "Named quantitative evidence per requested section; not exhaustive validation of every derived counter.",
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/nsys_no_cudnn": {
+      "passed": true,
+      "checks": {
+        "cuda_gpu_kern_sum_export": true,
+        "cuda_gpu_kern_sum_has_data": true,
+        "cuda_api_sum_export": true,
+        "cuda_api_sum_has_data": true,
+        "nvtx_sum_export": true,
+        "nvtx_sum_has_data": true,
+        "learner_range_present": true
+      },
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/sanitizer_no_cudnn": {
+      "passed": false,
+      "checks": {
+        "zero_error_summary": false
+      },
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    }
+  },
+  "records": [
+    {
+      "source": "base-environment.json",
+      "original_sha256": "9d6c310e32614067db2dd6861436aaa083133217edbce3eca8e3f0045f15ce5b",
+      "original_bytes": 526,
+      "public_file": "base-environment.json",
+      "public_sha256": "9d6c310e32614067db2dd6861436aaa083133217edbce3eca8e3f0045f15ce5b",
+      "public_bytes": 526
+    },
+    {
+      "source": "environment.json",
+      "original_sha256": "3a289d7363bbeb23994996155c6e2a7715be9e673e869b65c2b95fd5b73af966",
+      "original_bytes": 539,
+      "public_file": "environment.json",
+      "public_sha256": "3a289d7363bbeb23994996155c6e2a7715be9e673e869b65c2b95fd5b73af966",
+      "public_bytes": 539
+    },
+    {
+      "source": "profiles/cases.json",
+      "original_sha256": "4a0d7d4d1a229950978c62f250e55ab18949cab1c79c5df8451b040eaba32f51",
+      "original_bytes": 6218,
+      "public_file": "profiles/cases.json",
+      "public_sha256": "4a0d7d4d1a229950978c62f250e55ab18949cab1c79c5df8451b040eaba32f51",
+      "public_bytes": 6218
+    },
+    {
+      "source": "profiles/completed.json",
+      "original_sha256": "68c1e5322051ca32529044bf1d6cbdc981152d40645cd740dadae4a860bde0d3",
+      "original_bytes": 7138,
+      "public_file": "profiles/completed.json",
+      "public_sha256": "68c1e5322051ca32529044bf1d6cbdc981152d40645cd740dadae4a860bde0d3",
+      "public_bytes": 7138
+    },
+    {
+      "source": "profiles/compute-sanitizer-capability.log",
+      "original_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "original_bytes": 125,
+      "public_file": "profiles/compute-sanitizer-capability.log",
+      "public_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "public_bytes": 125
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/observation/configuration.json",
+      "original_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "original_bytes": 2055,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/observation/configuration.json",
+      "public_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "public_bytes": 2055
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/observation/host-spans.json",
+      "original_sha256": "ec0a82f7de595b46b35301a24084f76893be8e7a7f07156da8b67b1874ec8b81",
+      "original_bytes": 6318,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/observation/host-spans.json",
+      "public_sha256": "ec0a82f7de595b46b35301a24084f76893be8e7a7f07156da8b67b1874ec8b81",
+      "public_bytes": 6318
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/README.md",
+      "original_sha256": "1e2ab324501f49d5aba89117e0d2bc1802caa2399ed38eaa5c976b51a499d6b9",
+      "original_bytes": 5258,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "4475973b7396bf5623fe2b2593c6a31b1bd381fabd3cfd287eaff37a7f65caee",
+      "original_bytes": 1134,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "4ff4c6993d97856dbcf533e8f86b7e9905ad5cdf7e6ce13f583e4cb39111d7ef",
+      "public_bytes": 1135
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "328e182afc8a6cc76f9dbf1f84d300af447a78dc055428f76799610fad6e6fe5",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/state.json",
+      "original_sha256": "8cd12fceba9b9b4edb3c0045bcbf7cee0dc5e3cc0f960e2341e9b9b9cc61d58c",
+      "original_bytes": 759,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/state.json",
+      "public_sha256": "8cd12fceba9b9b4edb3c0045bcbf7cee0dc5e3cc0f960e2341e9b9b9cc61d58c",
+      "public_bytes": 759
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "de71da9c96f01fca8b694c4fd0393c80feff3d3166c700d8ec1e7cc86a4c999a",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/contract.json",
+      "original_sha256": "ee30647e45981365ce774dd9d565167658eb647e94e903dd2380182348327f6f",
+      "original_bytes": 796,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/contract.json",
+      "public_sha256": "ee30647e45981365ce774dd9d565167658eb647e94e903dd2380182348327f6f",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/latest.json",
+      "original_sha256": "fa85363f7fc5f457ec915adff84d743c4c59577db881b1a1d720796e9385f810",
+      "original_bytes": 788,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/latest.json",
+      "public_sha256": "fa85363f7fc5f457ec915adff84d743c4c59577db881b1a1d720796e9385f810",
+      "public_bytes": 788
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/metrics.jsonl",
+      "original_sha256": "7a9cd513e3ad24384721fb27220652134d7603419549420f5ec90b4d053fde86",
+      "original_bytes": 3324,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/metrics.jsonl",
+      "public_sha256": "7a9cd513e3ad24384721fb27220652134d7603419549420f5ec90b4d053fde86",
+      "public_bytes": 3324
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/application.log",
+      "original_sha256": "71b461a9a87f2c168fba96c90ccce5bcdf97f106ec6a2cae23ac992ffd253cac",
+      "original_bytes": 219218,
+      "public_file": "profiles/ncu_gemm_no_cudnn/application.log",
+      "public_sha256": "e6330366bab495023e1d5824b23589a226039343c9bb1ba8b58b3e8a5f2fe660",
+      "public_bytes": 217482
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/available-metrics.txt",
+      "original_sha256": "34139e5b3bd2020069d2c9488221a6df8dcf548da5e4909a7b0b1f905f2c6f45",
+      "original_bytes": 994452,
+      "public_file": "profiles/ncu_gemm_no_cudnn/available-metrics.txt",
+      "public_sha256": "ee324061d1ea69a3d9849a2a96abfc24a226240d6583cd10c31c5b0bd30f9654",
+      "public_bytes": 856220
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/capture.ncu-rep",
+      "original_sha256": "9fe7c58767c5e74c64ea8e95dda1e9e6967a3a5cb71d6303bea13071e423756b",
+      "original_bytes": 14108299,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/gpu-details.txt",
+      "original_sha256": "9a6328d6c9e5b1a3b9a14c4b6f96edf3c75bc03876247de157d6fd05ce42b699",
+      "original_bytes": 9682,
+      "public_file": "profiles/ncu_gemm_no_cudnn/gpu-details.txt",
+      "public_sha256": "054815e9ad2844d9333a337c6bc7a41077ff91b2fa6d5a7ae84923ba9ed64b7d",
+      "public_bytes": 9679
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/gpu-telemetry.csv",
+      "original_sha256": "6bf1a31b9677554ccd6139db4b41c3ed10d6fe8c8e2604c84843354f645aa793",
+      "original_bytes": 24707,
+      "public_file": "profiles/ncu_gemm_no_cudnn/gpu-telemetry.csv",
+      "public_sha256": "6bf1a31b9677554ccd6139db4b41c3ed10d6fe8c8e2604c84843354f645aa793",
+      "public_bytes": 24707
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/host-telemetry.jsonl",
+      "original_sha256": "45dce8c8a608627ea75f3160782c4abaf78a5355587cd269e05fc2db926c4166",
+      "original_bytes": 4585592,
+      "public_file": "profiles/ncu_gemm_no_cudnn/host-telemetry.jsonl",
+      "public_sha256": "8f7910c07ad342adcc3810914b4b93d87aaeddb5316d283e5ac548cfa87f3017",
+      "public_bytes": 4587752
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/manifest.json",
+      "original_sha256": "8d10fb10a701e57ff6f4dce5855c7a5759e50b9a0f4cb421aebb64b690d30004",
+      "original_bytes": 12911,
+      "public_file": "profiles/ncu_gemm_no_cudnn/manifest.json",
+      "public_sha256": "fffac75361792b4d6f34e622329d991451839c4add86519d20eb8a222c13c6ff",
+      "public_bytes": 12322
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/ncu-metrics.csv",
+      "original_sha256": "99357e07ccec23850f9a25b76f2a051d99416a01fe67f9dcf372666aa9d73c24",
+      "original_bytes": 34130,
+      "public_file": "profiles/ncu_gemm_no_cudnn/ncu-metrics.csv",
+      "public_sha256": "99357e07ccec23850f9a25b76f2a051d99416a01fe67f9dcf372666aa9d73c24",
+      "public_bytes": 34130
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/outputs.json",
+      "original_sha256": "ba504dc5613953eb2192173f8a93541b63968d980af170e43cb47e1d80eda99c",
+      "original_bytes": 4153,
+      "public_file": "profiles/ncu_gemm_no_cudnn/outputs.json",
+      "public_sha256": "ba504dc5613953eb2192173f8a93541b63968d980af170e43cb47e1d80eda99c",
+      "public_bytes": 4153
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/tool-audit.json",
+      "original_sha256": "37aeac207e87b0ad2b1b1618820a57e0813ce3459279a50945a31403741c2e7b",
+      "original_bytes": 853,
+      "public_file": "profiles/ncu_gemm_no_cudnn/tool-audit.json",
+      "public_sha256": "37aeac207e87b0ad2b1b1618820a57e0813ce3459279a50945a31403741c2e7b",
+      "public_bytes": 853
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/tool-version.txt",
+      "original_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "original_bytes": 144,
+      "public_file": "profiles/ncu_gemm_no_cudnn/tool-version.txt",
+      "public_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "public_bytes": 144
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn/validity.json",
+      "original_sha256": "f05e718e6fc681596342a848f4efd7cadf21122dcf16a9fe19bbb2db0a5e1a0b",
+      "original_bytes": 946,
+      "public_file": "profiles/ncu_gemm_no_cudnn/validity.json",
+      "public_sha256": "f05e718e6fc681596342a848f4efd7cadf21122dcf16a9fe19bbb2db0a5e1a0b",
+      "public_bytes": 946
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn-config.json",
+      "original_sha256": "b0b6c916d4f3fcb80844cea509ea5a2bbc17b6b9118681784e26f501b6ec447a",
+      "original_bytes": 538,
+      "public_file": "profiles/ncu_gemm_no_cudnn-config.json",
+      "public_sha256": "b0b6c916d4f3fcb80844cea509ea5a2bbc17b6b9118681784e26f501b6ec447a",
+      "public_bytes": 538
+    },
+    {
+      "source": "profiles/ncu_gemm_no_cudnn.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "profiles/ncu_gemm_no_cudnn.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/ncu_no_cudnn/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/ncu_no_cudnn/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/observation/configuration.json",
+      "original_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "original_bytes": 2055,
+      "public_file": "profiles/ncu_no_cudnn/application/observation/configuration.json",
+      "public_sha256": "c13b90af18944d458831e2b30031c5088a519b73646f4a2d823f328a4cbebce9",
+      "public_bytes": 2055
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/observation/host-spans.json",
+      "original_sha256": "48fbb1ffba6bbb4370d9cf61f492e973fc9e8a7a2f345a4459919b686df14b28",
+      "original_bytes": 6320,
+      "public_file": "profiles/ncu_no_cudnn/application/observation/host-spans.json",
+      "public_sha256": "48fbb1ffba6bbb4370d9cf61f492e973fc9e8a7a2f345a4459919b686df14b28",
+      "public_bytes": 6320
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/README.md",
+      "original_sha256": "1e2ab324501f49d5aba89117e0d2bc1802caa2399ed38eaa5c976b51a499d6b9",
+      "original_bytes": 5258,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "2feec396bc60379d155d9b32eede8a3b75668ef15d6023e6827a27e3e38f7a48",
+      "original_bytes": 1134,
+      "public_file": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "b4eaa2cb7376c1bfb0e516815bb1e234b6578a3bdb639b58ae34abf1a4b4fbc9",
+      "public_bytes": 1135
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "350e825b74a4a0e8e61696277223f486ee767f87745b51f6043a39118f446b96",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/state.json",
+      "original_sha256": "598986ed00a8bb35d693ef4ef74bff6d23b0b38e5d17b641c79bc30e690f84d9",
+      "original_bytes": 759,
+      "public_file": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/state.json",
+      "public_sha256": "598986ed00a8bb35d693ef4ef74bff6d23b0b38e5d17b641c79bc30e690f84d9",
+      "public_bytes": 759
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "64ca9b49b655caffd8ad141043e589bee876a17e4998ef5a2c6aabfeb98254dd",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/ncu_no_cudnn/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/ncu_no_cudnn/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/contract.json",
+      "original_sha256": "f6872d8451c9c3efbecb7bc4658893c276a53192ab654de31a24c452f5515f36",
+      "original_bytes": 796,
+      "public_file": "profiles/ncu_no_cudnn/application/train/contract.json",
+      "public_sha256": "f6872d8451c9c3efbecb7bc4658893c276a53192ab654de31a24c452f5515f36",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/ncu_no_cudnn/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/latest.json",
+      "original_sha256": "f2c9869fd7c6368c34d8f0250c79e9c16a547c23f4ec80a59d9a1066f4bb059f",
+      "original_bytes": 788,
+      "public_file": "profiles/ncu_no_cudnn/application/train/latest.json",
+      "public_sha256": "f2c9869fd7c6368c34d8f0250c79e9c16a547c23f4ec80a59d9a1066f4bb059f",
+      "public_bytes": 788
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/metrics.jsonl",
+      "original_sha256": "9d9b633fa0d4d59a9adaf6b334604ebb27086939bd654b1af1f4ad7298145f38",
+      "original_bytes": 3323,
+      "public_file": "profiles/ncu_no_cudnn/application/train/metrics.jsonl",
+      "public_sha256": "9d9b633fa0d4d59a9adaf6b334604ebb27086939bd654b1af1f4ad7298145f38",
+      "public_bytes": 3323
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/ncu_no_cudnn/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/ncu_no_cudnn/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/ncu_no_cudnn/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/application.log",
+      "original_sha256": "58cc16e9806b76852876203a18cd97f3649a76cf03976e73a0f99159a6fc8f01",
+      "original_bytes": 219664,
+      "public_file": "profiles/ncu_no_cudnn/application.log",
+      "public_sha256": "d057753f342bea078824f65b20e0d499b2d3e6cad7b44ea7e531f5042ea2dbe8",
+      "public_bytes": 217927
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/available-metrics.txt",
+      "original_sha256": "34139e5b3bd2020069d2c9488221a6df8dcf548da5e4909a7b0b1f905f2c6f45",
+      "original_bytes": 994452,
+      "public_file": "profiles/ncu_no_cudnn/available-metrics.txt",
+      "public_sha256": "ee324061d1ea69a3d9849a2a96abfc24a226240d6583cd10c31c5b0bd30f9654",
+      "public_bytes": 856220
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/capture.ncu-rep",
+      "original_sha256": "99734acc32a2af1aef2c2238d89ce09ca72ebce31c28cf3c9543fe1701112032",
+      "original_bytes": 41852172,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/gpu-details.txt",
+      "original_sha256": "a3f95a56e0b689fc1cdecd071ea389d2a6d0190ddc62968bc8df9db945ea76d5",
+      "original_bytes": 9682,
+      "public_file": "profiles/ncu_no_cudnn/gpu-details.txt",
+      "public_sha256": "ed86c11ae79219e6fac3f16c29104f0903bac15a16d160d0404b6415180cb253",
+      "public_bytes": 9679
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/gpu-telemetry.csv",
+      "original_sha256": "70440a29ef245a9b7360666225d5dcf4ed6d1c9acc77bfc550f932238bb3829f",
+      "original_bytes": 24587,
+      "public_file": "profiles/ncu_no_cudnn/gpu-telemetry.csv",
+      "public_sha256": "70440a29ef245a9b7360666225d5dcf4ed6d1c9acc77bfc550f932238bb3829f",
+      "public_bytes": 24587
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/host-telemetry.jsonl",
+      "original_sha256": "7dad56a6b8952a1654e16dc6369f0ce2e7460e58ba4707665c489dcbe1a87ec1",
+      "original_bytes": 4535109,
+      "public_file": "profiles/ncu_no_cudnn/host-telemetry.jsonl",
+      "public_sha256": "055a2dd66a24688303f5a6e448429ba112f1d79cb50bba7dc5c210ef83582235",
+      "public_bytes": 4537245
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/manifest.json",
+      "original_sha256": "33671e0687a5a38fbce4287348f222d4c5ed4969b4c0380774c100fe8924dc98",
+      "original_bytes": 12764,
+      "public_file": "profiles/ncu_no_cudnn/manifest.json",
+      "public_sha256": "7727c042e5ad221b5032d399ec03bec96cba7fd59a4f21fdb88f663f42922605",
+      "public_bytes": 12175
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/ncu-metrics.csv",
+      "original_sha256": "637994dfde84645ca726d0b232401b9501bbb8bf32b4b3a6917845f2a605a9b0",
+      "original_bytes": 30073,
+      "public_file": "profiles/ncu_no_cudnn/ncu-metrics.csv",
+      "public_sha256": "637994dfde84645ca726d0b232401b9501bbb8bf32b4b3a6917845f2a605a9b0",
+      "public_bytes": 30073
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/outputs.json",
+      "original_sha256": "c74999e9679dc9680ba7317d923486e9070cb39bd6feeec1db770d16689dd0e3",
+      "original_bytes": 4154,
+      "public_file": "profiles/ncu_no_cudnn/outputs.json",
+      "public_sha256": "c74999e9679dc9680ba7317d923486e9070cb39bd6feeec1db770d16689dd0e3",
+      "public_bytes": 4154
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/tool-audit.json",
+      "original_sha256": "fe0fd82ee7e04e2b390de827963eae3e8609c87ac6c7f533a1c7766a936bd154",
+      "original_bytes": 848,
+      "public_file": "profiles/ncu_no_cudnn/tool-audit.json",
+      "public_sha256": "fe0fd82ee7e04e2b390de827963eae3e8609c87ac6c7f533a1c7766a936bd154",
+      "public_bytes": 848
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/tool-version.txt",
+      "original_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "original_bytes": 144,
+      "public_file": "profiles/ncu_no_cudnn/tool-version.txt",
+      "public_sha256": "6482ecd6fdfda40a45ef492a622da1b93962661b5315bc8ac43b2b62933a25cc",
+      "public_bytes": 144
+    },
+    {
+      "source": "profiles/ncu_no_cudnn/validity.json",
+      "original_sha256": "22ab9b06f24eda69a752bc4e63dadac34eb655fa45687c56a9948f9b2cf0bb31",
+      "original_bytes": 1100,
+      "public_file": "profiles/ncu_no_cudnn/validity.json",
+      "public_sha256": "22ab9b06f24eda69a752bc4e63dadac34eb655fa45687c56a9948f9b2cf0bb31",
+      "public_bytes": 1100
+    },
+    {
+      "source": "profiles/ncu_no_cudnn-config.json",
+      "original_sha256": "071a17af04a054af430d96b2bc03902531d027dce015d8e77da42e40ee7a1c03",
+      "original_bytes": 505,
+      "public_file": "profiles/ncu_no_cudnn-config.json",
+      "public_sha256": "071a17af04a054af430d96b2bc03902531d027dce015d8e77da42e40ee7a1c03",
+      "public_bytes": 505
+    },
+    {
+      "source": "profiles/ncu_no_cudnn.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "profiles/ncu_no_cudnn.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "profiles/none_default/application/attention-backend.json",
+      "original_sha256": "16d49b2c732dca0b1891505d38ea3eb683dc1db6b9f6ae92f2988a5b04cc8aad",
+      "original_bytes": 355,
+      "public_file": "profiles/none_default/application/attention-backend.json",
+      "public_sha256": "16d49b2c732dca0b1891505d38ea3eb683dc1db6b9f6ae92f2988a5b04cc8aad",
+      "public_bytes": 355
+    },
+    {
+      "source": "profiles/none_default/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/none_default/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/none_default/application/observation/configuration.json",
+      "original_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "original_bytes": 2056,
+      "public_file": "profiles/none_default/application/observation/configuration.json",
+      "public_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/none_default/application/observation/host-spans.json",
+      "original_sha256": "859d9123607fd45f7fcbf3f18053c31f62b38fa19fd8c76fecda514941f7cd94",
+      "original_bytes": 6324,
+      "public_file": "profiles/none_default/application/observation/host-spans.json",
+      "public_sha256": "859d9123607fd45f7fcbf3f18053c31f62b38fa19fd8c76fecda514941f7cd94",
+      "public_bytes": 6324
+    },
+    {
+      "source": "profiles/none_default/application/train/checkpoint-0162/README.md",
+      "original_sha256": "1e2ab324501f49d5aba89117e0d2bc1802caa2399ed38eaa5c976b51a499d6b9",
+      "original_bytes": 5258,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_default/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "28f2517a7d63ee2191885a292df9b677ea9e0e3a5ce528f7621bec336fd4415b",
+      "original_bytes": 1134,
+      "public_file": "profiles/none_default/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "031c71629aba325964fc40991894b689f8847c6379a78a71b03839b445885a0b",
+      "public_bytes": 1135
+    },
+    {
+      "source": "profiles/none_default/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "0a0d62788aa2d13a1d8452b57bd90cefd12ab2aeb0ecb637ccd69d8527e80612",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_default/application/train/checkpoint-0162/state.json",
+      "original_sha256": "c9db4a9ce57ab8dae883f2b555f9e62a6c35782c598f383c399af5f219b87aa9",
+      "original_bytes": 759,
+      "public_file": "profiles/none_default/application/train/checkpoint-0162/state.json",
+      "public_sha256": "c9db4a9ce57ab8dae883f2b555f9e62a6c35782c598f383c399af5f219b87aa9",
+      "public_bytes": 759
+    },
+    {
+      "source": "profiles/none_default/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "b518162c1ccc6898fd31aa71c21ac0cfb75639d2552e669811e4cf2a213d0446",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_default/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/none_default/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/none_default/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/none_default/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/none_default/application/train/contract.json",
+      "original_sha256": "effcb1abbe9f6e82adea41ef79cee3539072ef2e33d6d7c764bb997383ad2e01",
+      "original_bytes": 796,
+      "public_file": "profiles/none_default/application/train/contract.json",
+      "public_sha256": "effcb1abbe9f6e82adea41ef79cee3539072ef2e33d6d7c764bb997383ad2e01",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/none_default/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/none_default/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/none_default/application/train/latest.json",
+      "original_sha256": "1d7dc42d2ef8985b28d56bbcdad6bca08a0871cc6f24060e5cd8f10e2fc15531",
+      "original_bytes": 788,
+      "public_file": "profiles/none_default/application/train/latest.json",
+      "public_sha256": "1d7dc42d2ef8985b28d56bbcdad6bca08a0871cc6f24060e5cd8f10e2fc15531",
+      "public_bytes": 788
+    },
+    {
+      "source": "profiles/none_default/application/train/metrics.jsonl",
+      "original_sha256": "6dd470cb9bdf2dd9434dc2bb75caa941c13ce5a05d846957d37aae9489c409cb",
+      "original_bytes": 3320,
+      "public_file": "profiles/none_default/application/train/metrics.jsonl",
+      "public_sha256": "6dd470cb9bdf2dd9434dc2bb75caa941c13ce5a05d846957d37aae9489c409cb",
+      "public_bytes": 3320
+    },
+    {
+      "source": "profiles/none_default/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/none_default/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/none_default/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/none_default/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/none_default/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/none_default/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/none_default/application.log",
+      "original_sha256": "26e53cfb33e340617ab4e4e23aefeb5896e92dd663526dd3d9ae4f3bc85b87ca",
+      "original_bytes": 218470,
+      "public_file": "profiles/none_default/application.log",
+      "public_sha256": "606f3bd4b7cb9e3f3d44ff2746027ac86564b2c53c3755e0f8379a87f7be99fd",
+      "public_bytes": 216733
+    },
+    {
+      "source": "profiles/none_default/gpu-details.txt",
+      "original_sha256": "b46d607c6d5d1947e2018e99724928af45a85cd25f9738388f9825de96683080",
+      "original_bytes": 9682,
+      "public_file": "profiles/none_default/gpu-details.txt",
+      "public_sha256": "e86973de32cca505d3c93314785ee8297b9f5e7a4fed76b9ccc3b8153b20093d",
+      "public_bytes": 9679
+    },
+    {
+      "source": "profiles/none_default/gpu-telemetry.csv",
+      "original_sha256": "6e471b0d3a49ec14620340afec8359aaaa23ed9022c704df11385afc25598ac2",
+      "original_bytes": 72565,
+      "public_file": "profiles/none_default/gpu-telemetry.csv",
+      "public_sha256": "6e471b0d3a49ec14620340afec8359aaaa23ed9022c704df11385afc25598ac2",
+      "public_bytes": 72565
+    },
+    {
+      "source": "profiles/none_default/host-telemetry.jsonl",
+      "original_sha256": "726c2f13ebfbddfa5c93525d12710f5d4f2084b8d85b30d8dfc1ad5234d071ee",
+      "original_bytes": 6594504,
+      "public_file": "profiles/none_default/host-telemetry.jsonl",
+      "public_sha256": "ae416515e8c4248001e8316d4d88914847b60c5882de7709e26dc317e1477e52",
+      "public_bytes": 6600804
+    },
+    {
+      "source": "profiles/none_default/manifest.json",
+      "original_sha256": "bac0924f82c0b34c52d055ff05f85736e30c43d9703f224402a40cb3faea87db",
+      "original_bytes": 11946,
+      "public_file": "profiles/none_default/manifest.json",
+      "public_sha256": "4c4e3c13c75cbf6c830063ef23b2aeb94dafdd132f1b5dec0b3979c717fd97fb",
+      "public_bytes": 11357
+    },
+    {
+      "source": "profiles/none_default/outputs.json",
+      "original_sha256": "e80dac063255a42a6b7fa782ee1c8baf0b2c8ce4082202b538f25e226149cab4",
+      "original_bytes": 3628,
+      "public_file": "profiles/none_default/outputs.json",
+      "public_sha256": "e80dac063255a42a6b7fa782ee1c8baf0b2c8ce4082202b538f25e226149cab4",
+      "public_bytes": 3628
+    },
+    {
+      "source": "profiles/none_default/tool-audit.json",
+      "original_sha256": "4320ba800349447402174cc3c8c3f4756ca6e8805cad916b01f881685381fde9",
+      "original_bytes": 175,
+      "public_file": "profiles/none_default/tool-audit.json",
+      "public_sha256": "4320ba800349447402174cc3c8c3f4756ca6e8805cad916b01f881685381fde9",
+      "public_bytes": 175
+    },
+    {
+      "source": "profiles/none_default/validity.json",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/none_default/validity.json",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/none_default-config.json",
+      "original_sha256": "ba15a283ad9d00b63e0980a5c4e97f33e2d12f9b2b0eae5bf6a410af57cdca7b",
+      "original_bytes": 236,
+      "public_file": "profiles/none_default-config.json",
+      "public_sha256": "ba15a283ad9d00b63e0980a5c4e97f33e2d12f9b2b0eae5bf6a410af57cdca7b",
+      "public_bytes": 236
+    },
+    {
+      "source": "profiles/none_default.log",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/none_default.log",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/none_no_cudnn/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/none_no_cudnn/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/observation/configuration.json",
+      "original_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "original_bytes": 2056,
+      "public_file": "profiles/none_no_cudnn/application/observation/configuration.json",
+      "public_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/observation/host-spans.json",
+      "original_sha256": "3a3ad3b311c248d558e8a731f883f6c575e88d0bd1f015578468773be6e6644f",
+      "original_bytes": 6263,
+      "public_file": "profiles/none_no_cudnn/application/observation/host-spans.json",
+      "public_sha256": "3a3ad3b311c248d558e8a731f883f6c575e88d0bd1f015578468773be6e6644f",
+      "public_bytes": 6263
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/checkpoint-0162/README.md",
+      "original_sha256": "1e2ab324501f49d5aba89117e0d2bc1802caa2399ed38eaa5c976b51a499d6b9",
+      "original_bytes": 5258,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "8af81c8d9475bf2a0aeb2cce7ccc49864fbab1b5143d4510b1a8ab5f2e83c827",
+      "original_bytes": 1134,
+      "public_file": "profiles/none_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "fd35c6495978e128bd10bb519995780db472c37587b684a0ee866553420a9339",
+      "public_bytes": 1135
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "4eca7c20a50af1749a1fce6dfe8590c001e1833d20c79ce590386e683c934795",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/checkpoint-0162/state.json",
+      "original_sha256": "8d51b9f5211c3b46c3cf8ceeee71f63ceab65fcf4b0de00999244e642fec67e5",
+      "original_bytes": 759,
+      "public_file": "profiles/none_no_cudnn/application/train/checkpoint-0162/state.json",
+      "public_sha256": "8d51b9f5211c3b46c3cf8ceeee71f63ceab65fcf4b0de00999244e642fec67e5",
+      "public_bytes": 759
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "a0cb72e0ebcb2ae91c8390e500c4d82380d1fee5800f131dffb4c79a70775c09",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/none_no_cudnn/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/none_no_cudnn/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/contract.json",
+      "original_sha256": "3c58ea33b42cca97fcb423f52a2d3b25b6ba153ab1dd4716fec29e1d19ea9a0f",
+      "original_bytes": 796,
+      "public_file": "profiles/none_no_cudnn/application/train/contract.json",
+      "public_sha256": "3c58ea33b42cca97fcb423f52a2d3b25b6ba153ab1dd4716fec29e1d19ea9a0f",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/none_no_cudnn/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/latest.json",
+      "original_sha256": "6e6cfa761781a885854ad33dd7302693e05df9631ef10adf80f3bd2229c617f2",
+      "original_bytes": 788,
+      "public_file": "profiles/none_no_cudnn/application/train/latest.json",
+      "public_sha256": "6e6cfa761781a885854ad33dd7302693e05df9631ef10adf80f3bd2229c617f2",
+      "public_bytes": 788
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/metrics.jsonl",
+      "original_sha256": "43f01cba5e9baf6da99c725f214afe8b4c00fa766b61b005f6f21a8a902de6bd",
+      "original_bytes": 3320,
+      "public_file": "profiles/none_no_cudnn/application/train/metrics.jsonl",
+      "public_sha256": "43f01cba5e9baf6da99c725f214afe8b4c00fa766b61b005f6f21a8a902de6bd",
+      "public_bytes": 3320
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/none_no_cudnn/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/none_no_cudnn/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/none_no_cudnn/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/none_no_cudnn/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/none_no_cudnn/application.log",
+      "original_sha256": "1282c7283aeebfe9e0a475b466d39da0ffd50a0032f6b81b76cce11dfdddf215",
+      "original_bytes": 218898,
+      "public_file": "profiles/none_no_cudnn/application.log",
+      "public_sha256": "bd8653ff567ebeba178e432a3cc4656f5eb26863c5b393f0e462b0791c26eae6",
+      "public_bytes": 217161
+    },
+    {
+      "source": "profiles/none_no_cudnn/gpu-details.txt",
+      "original_sha256": "97a204786bbfe315f7e95d805e2988abf74912c4706813fa60fad77f39d34a01",
+      "original_bytes": 9683,
+      "public_file": "profiles/none_no_cudnn/gpu-details.txt",
+      "public_sha256": "c909870c8946aa4c17ab47e52c9d23e81f70e13bdc0b84185c47924349ba864f",
+      "public_bytes": 9680
+    },
+    {
+      "source": "profiles/none_no_cudnn/gpu-telemetry.csv",
+      "original_sha256": "42a3321b11c7ecd636f92e55380844326b70a5bfc5ac3f571179b84299c18939",
+      "original_bytes": 15673,
+      "public_file": "profiles/none_no_cudnn/gpu-telemetry.csv",
+      "public_sha256": "42a3321b11c7ecd636f92e55380844326b70a5bfc5ac3f571179b84299c18939",
+      "public_bytes": 15673
+    },
+    {
+      "source": "profiles/none_no_cudnn/host-telemetry.jsonl",
+      "original_sha256": "9716ad064383eb1c49c5a5e0e7240ecbcacde11c7b512ca23c6f9eaa8429651c",
+      "original_bytes": 1412569,
+      "public_file": "profiles/none_no_cudnn/host-telemetry.jsonl",
+      "public_sha256": "17588998e8ffd9f6769b3ec52bdeb6e18133039d5e3c0eb7c365b02a389c1e5b",
+      "public_bytes": 1413301
+    },
+    {
+      "source": "profiles/none_no_cudnn/manifest.json",
+      "original_sha256": "e2cacd3381f93dab1f63e1b088f31a9f041af99488cd9a93a28c8d36b2abbef7",
+      "original_bytes": 11949,
+      "public_file": "profiles/none_no_cudnn/manifest.json",
+      "public_sha256": "30982c9389f9449afd587a5d1c49079c814faf6b570ba817aab46317a1fec2cf",
+      "public_bytes": 11360
+    },
+    {
+      "source": "profiles/none_no_cudnn/outputs.json",
+      "original_sha256": "98de6da4d3424b578985507c7269d66338e2830a596c92994c362b46d5ae889f",
+      "original_bytes": 3628,
+      "public_file": "profiles/none_no_cudnn/outputs.json",
+      "public_sha256": "98de6da4d3424b578985507c7269d66338e2830a596c92994c362b46d5ae889f",
+      "public_bytes": 3628
+    },
+    {
+      "source": "profiles/none_no_cudnn/tool-audit.json",
+      "original_sha256": "ee67257a755563bf53a05138585f7e9660dc02d78a35dc86ecb3fcc80a259cb7",
+      "original_bytes": 175,
+      "public_file": "profiles/none_no_cudnn/tool-audit.json",
+      "public_sha256": "ee67257a755563bf53a05138585f7e9660dc02d78a35dc86ecb3fcc80a259cb7",
+      "public_bytes": 175
+    },
+    {
+      "source": "profiles/none_no_cudnn/validity.json",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/none_no_cudnn/validity.json",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/none_no_cudnn-config.json",
+      "original_sha256": "d07627504d6077ad107ec0a78ac5777930be67677fd25787712770fb519f452b",
+      "original_bytes": 237,
+      "public_file": "profiles/none_no_cudnn-config.json",
+      "public_sha256": "d07627504d6077ad107ec0a78ac5777930be67677fd25787712770fb519f452b",
+      "public_bytes": 237
+    },
+    {
+      "source": "profiles/none_no_cudnn.log",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/none_no_cudnn.log",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/nsys_no_cudnn/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/nsys_no_cudnn/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/observation/configuration.json",
+      "original_sha256": "75fd1a15a04c4ac65d40f3380b6cede0923f9876315d85e055fbbf3f343ee5a3",
+      "original_bytes": 2056,
+      "public_file": "profiles/nsys_no_cudnn/application/observation/configuration.json",
+      "public_sha256": "75fd1a15a04c4ac65d40f3380b6cede0923f9876315d85e055fbbf3f343ee5a3",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/observation/host-spans.json",
+      "original_sha256": "f4bbb86e1b5440c577086fcd3f321a42f7d3f0bb7fbf79e09bf049ef5dba72e4",
+      "original_bytes": 6259,
+      "public_file": "profiles/nsys_no_cudnn/application/observation/host-spans.json",
+      "public_sha256": "f4bbb86e1b5440c577086fcd3f321a42f7d3f0bb7fbf79e09bf049ef5dba72e4",
+      "public_bytes": 6259
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/README.md",
+      "original_sha256": "1e2ab324501f49d5aba89117e0d2bc1802caa2399ed38eaa5c976b51a499d6b9",
+      "original_bytes": 5258,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "7c972fb624735c67c2104c16f12134c56abc2bdddb096537296c77c86f364f21",
+      "original_bytes": 1134,
+      "public_file": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "367549eb0d8f13a9b4bfd4f5af4e11ce5f2a9173e82b1dad89e903785b371300",
+      "public_bytes": 1135
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "8beedbbbf5a08aaf44d1e4fac5f9f4c550e9ec89f8bdd98f70050278b060812a",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/state.json",
+      "original_sha256": "84d3533a43c4e17ef9150da8aa87bb11c86af813b5216fe3a67fd77b203badf5",
+      "original_bytes": 757,
+      "public_file": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/state.json",
+      "public_sha256": "84d3533a43c4e17ef9150da8aa87bb11c86af813b5216fe3a67fd77b203badf5",
+      "public_bytes": 757
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "e9592f205dddb70ff494b52e1030eb17c7dccf717df52a63f65af6c48a332033",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/nsys_no_cudnn/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/nsys_no_cudnn/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/contract.json",
+      "original_sha256": "7e9b9e1cdeeb1ff4cd503d9b4472f8443922fc8700f13e0d3de0cc210ea06977",
+      "original_bytes": 796,
+      "public_file": "profiles/nsys_no_cudnn/application/train/contract.json",
+      "public_sha256": "7e9b9e1cdeeb1ff4cd503d9b4472f8443922fc8700f13e0d3de0cc210ea06977",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/nsys_no_cudnn/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/latest.json",
+      "original_sha256": "f59f0da598d0d20e9ab525bf759993cf7d19fba87dcca05e02ced0199275bcbd",
+      "original_bytes": 786,
+      "public_file": "profiles/nsys_no_cudnn/application/train/latest.json",
+      "public_sha256": "f59f0da598d0d20e9ab525bf759993cf7d19fba87dcca05e02ced0199275bcbd",
+      "public_bytes": 786
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/metrics.jsonl",
+      "original_sha256": "9574dd3ae26f3d3aedc82e35edcba80ba7bd25fc659d20fe00f8948deff1a2fe",
+      "original_bytes": 3321,
+      "public_file": "profiles/nsys_no_cudnn/application/train/metrics.jsonl",
+      "public_sha256": "9574dd3ae26f3d3aedc82e35edcba80ba7bd25fc659d20fe00f8948deff1a2fe",
+      "public_bytes": 3321
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/nsys_no_cudnn/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/nsys_no_cudnn/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/nsys_no_cudnn/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/application.log",
+      "original_sha256": "080109ad3964d75fc26ef9fde8e31f6eb8db70d2447d4e35ef70a647d640c670",
+      "original_bytes": 223108,
+      "public_file": "profiles/nsys_no_cudnn/application.log",
+      "public_sha256": "bab75faedcd46bdc4fc35968553c41a7e15ca892e3c929f92dd057ccb1ff6357",
+      "public_bytes": 221371
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/capture.nsys-rep",
+      "original_sha256": "4582e6c81c0b2a2473704a2540db0d4962b09df4543a86d0936854588e2c2ab9",
+      "original_bytes": 30158418,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/capture.sqlite",
+      "original_sha256": "a61e2a5454bfa26801fdd9ccc245bc0e14de24f0c297f77d91b784af91a7d406",
+      "original_bytes": 76349440,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/cuda_api_sum.csv",
+      "original_sha256": "3ed866128aabd613e30ec9e2b3ff691fea75a95bfbeadef6c89ea331d272310d",
+      "original_bytes": 1977,
+      "public_file": "profiles/nsys_no_cudnn/cuda_api_sum.csv",
+      "public_sha256": "0ec0317d3bdac398116d92cf07dee4f391a0aca4c6c96e1b64a4572ca0f2e416",
+      "public_bytes": 1975
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/cuda_gpu_kern_sum.csv",
+      "original_sha256": "b5e1ffbb2b9d19b5c83000612eb380ac29221a971eb7d857d5dcdc6b5f28f45a",
+      "original_bytes": 67905,
+      "public_file": "profiles/nsys_no_cudnn/cuda_gpu_kern_sum.csv",
+      "public_sha256": "1538c63c808ef25ffc5330f3e3699499b5f0e5123a8d51975acb3df731ec15fe",
+      "public_bytes": 67903
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/cuda_gpu_mem_time_sum.csv",
+      "original_sha256": "b65a9d8ea73410776ed8d3bd5af686fe45a0d1dbca9ab8ead8c0e39bd44ca4ba",
+      "original_bytes": 959,
+      "public_file": "profiles/nsys_no_cudnn/cuda_gpu_mem_time_sum.csv",
+      "public_sha256": "2e313edb740047857554b502f9407c7aaa0be0da0abe982ecb539a79caf96803",
+      "public_bytes": 957
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/gpu-details.txt",
+      "original_sha256": "f821a7f46f3d66a7c1ea5f1a958975ce4ad5810ce1f57d12fbac69d8db400155",
+      "original_bytes": 9683,
+      "public_file": "profiles/nsys_no_cudnn/gpu-details.txt",
+      "public_sha256": "bdd065aaaf3f50a66f3ebc8818f7c01dc7564d025092dcd20e3e36d76d218439",
+      "public_bytes": 9680
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/gpu-telemetry.csv",
+      "original_sha256": "77642e53bc9ebc06e35f6b37bc7018c37e28d3e901f382e79231e373e3d58318",
+      "original_bytes": 21732,
+      "public_file": "profiles/nsys_no_cudnn/gpu-telemetry.csv",
+      "public_sha256": "77642e53bc9ebc06e35f6b37bc7018c37e28d3e901f382e79231e373e3d58318",
+      "public_bytes": 21732
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/host-telemetry.jsonl",
+      "original_sha256": "99c4227e97f098cef5b4d9d73d80618a9eb70628235a361e538fd0e929c6ba8a",
+      "original_bytes": 1890446,
+      "public_file": "profiles/nsys_no_cudnn/host-telemetry.jsonl",
+      "public_sha256": "1cc18099fb5574b775ea372b0619467c9e4f6a858de7408ac08890d6b7148856",
+      "public_bytes": 1891670
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/manifest.json",
+      "original_sha256": "17cb73cc70a6814fae895f88ae59f213d9aae01bb235d5b26bc15941b88c5a1e",
+      "original_bytes": 12569,
+      "public_file": "profiles/nsys_no_cudnn/manifest.json",
+      "public_sha256": "eec5e34f1b6a4f0f9360dfb268e88a95b82c10b26481fa8b052ce63beb850ac0",
+      "public_bytes": 11980
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/nvtx_sum.csv",
+      "original_sha256": "48bc74be425a5315b45a473660dd8ce16875f00bd91288728d2762ebe8e882e9",
+      "original_bytes": 1926,
+      "public_file": "profiles/nsys_no_cudnn/nvtx_sum.csv",
+      "public_sha256": "e73d3019844e7c71b295da21e97c2f5641a1dfc4b54483cf46058dd45c706a40",
+      "public_bytes": 1924
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/outputs.json",
+      "original_sha256": "2f9ded164fb8e246658511a831d2c1500d49e2f55f5b15457f2b79f613f316c0",
+      "original_bytes": 4678,
+      "public_file": "profiles/nsys_no_cudnn/outputs.json",
+      "public_sha256": "2f9ded164fb8e246658511a831d2c1500d49e2f55f5b15457f2b79f613f316c0",
+      "public_bytes": 4678
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/tool-audit.json",
+      "original_sha256": "0159fc40ab2e544b33b89c02fd5122b2237fc7ca068337be4c592f3bee84d62e",
+      "original_bytes": 2005,
+      "public_file": "profiles/nsys_no_cudnn/tool-audit.json",
+      "public_sha256": "0159fc40ab2e544b33b89c02fd5122b2237fc7ca068337be4c592f3bee84d62e",
+      "public_bytes": 2005
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/tool-environment.txt",
+      "original_sha256": "0c8b22a6f711eeda83177c2627421a07093b4946e7ab5455b17a265125fd1c7a",
+      "original_bytes": 586,
+      "public_file": "profiles/nsys_no_cudnn/tool-environment.txt",
+      "public_sha256": "0c8b22a6f711eeda83177c2627421a07093b4946e7ab5455b17a265125fd1c7a",
+      "public_bytes": 586
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/tool-version.txt",
+      "original_sha256": "2a462986b17524d69e1c55e06b50606fdd022ca8068d59cecbb6f61ab2f703a2",
+      "original_bytes": 41,
+      "public_file": "profiles/nsys_no_cudnn/tool-version.txt",
+      "public_sha256": "2a462986b17524d69e1c55e06b50606fdd022ca8068d59cecbb6f61ab2f703a2",
+      "public_bytes": 41
+    },
+    {
+      "source": "profiles/nsys_no_cudnn/validity.json",
+      "original_sha256": "eb6ad3260f4d9be3d23e3cc6229da97bb100f14fe5b5e4ea607c3d22b3cdc83c",
+      "original_bytes": 925,
+      "public_file": "profiles/nsys_no_cudnn/validity.json",
+      "public_sha256": "eb6ad3260f4d9be3d23e3cc6229da97bb100f14fe5b5e4ea607c3d22b3cdc83c",
+      "public_bytes": 925
+    },
+    {
+      "source": "profiles/nsys_no_cudnn-config.json",
+      "original_sha256": "75374c7e3a109b4250965916298681680979da596c77246149edab1cf3aaa92f",
+      "original_bytes": 437,
+      "public_file": "profiles/nsys_no_cudnn-config.json",
+      "public_sha256": "75374c7e3a109b4250965916298681680979da596c77246149edab1cf3aaa92f",
+      "public_bytes": 437
+    },
+    {
+      "source": "profiles/nsys_no_cudnn.log",
+      "original_sha256": "eb6ad3260f4d9be3d23e3cc6229da97bb100f14fe5b5e4ea607c3d22b3cdc83c",
+      "original_bytes": 925,
+      "public_file": "profiles/nsys_no_cudnn.log",
+      "public_sha256": "eb6ad3260f4d9be3d23e3cc6229da97bb100f14fe5b5e4ea607c3d22b3cdc83c",
+      "public_bytes": 925
+    },
+    {
+      "source": "profiles/perf_no_cudnn-config.json",
+      "original_sha256": "c0c3f06bac08c3ee376abaac476bf8d3e04a6fa5bd0bd3c2a10816fb1eee20a3",
+      "original_bytes": 390,
+      "public_file": "profiles/perf_no_cudnn-config.json",
+      "public_sha256": "c0c3f06bac08c3ee376abaac476bf8d3e04a6fa5bd0bd3c2a10816fb1eee20a3",
+      "public_bytes": 390
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/sanitizer_no_cudnn/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/observation/configuration.json",
+      "original_sha256": "4c3aa1ca8072bc78d9eb449d186fc924063fff1a31987ddb76180b45a96ca617",
+      "original_bytes": 2056,
+      "public_file": "profiles/sanitizer_no_cudnn/application/observation/configuration.json",
+      "public_sha256": "4c3aa1ca8072bc78d9eb449d186fc924063fff1a31987ddb76180b45a96ca617",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/sanitizer_no_cudnn/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/train/contract.json",
+      "original_sha256": "6744b5ece1d00e08679f3e9fa77eb3c5ff4641d60fc4b5c4e3a867baef4ac221",
+      "original_bytes": 796,
+      "public_file": "profiles/sanitizer_no_cudnn/application/train/contract.json",
+      "public_sha256": "6744b5ece1d00e08679f3e9fa77eb3c5ff4641d60fc4b5c4e3a867baef4ac221",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/sanitizer_no_cudnn/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/sanitizer_no_cudnn/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/application.log",
+      "original_sha256": "e67155a9bf0ca8b0745953095fa09b8d7ddf6ae42a647b27c7ccb150a685f9b7",
+      "original_bytes": 220697,
+      "public_file": "profiles/sanitizer_no_cudnn/application.log",
+      "public_sha256": "c02b33585daa31ce1ed428f05d93084fa13c0d75b6f5cd17c73d00e0fa592840",
+      "public_bytes": 218960
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/gpu-details.txt",
+      "original_sha256": "e1d1310012d4e6e77f500abb97083e9cd3bb880cb8cab4b29db44befed4fa9fe",
+      "original_bytes": 9682,
+      "public_file": "profiles/sanitizer_no_cudnn/gpu-details.txt",
+      "public_sha256": "42e764b3f1e65dae5efa6b66da803aa53d0e2d122c01dbfe1f5364cbc4b3ddc0",
+      "public_bytes": 9679
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/gpu-telemetry.csv",
+      "original_sha256": "63008f67a0bf61638da8a6d25bc61b975c30954977535310c4c2c62e96e03ca5",
+      "original_bytes": 48898,
+      "public_file": "profiles/sanitizer_no_cudnn/gpu-telemetry.csv",
+      "public_sha256": "63008f67a0bf61638da8a6d25bc61b975c30954977535310c4c2c62e96e03ca5",
+      "public_bytes": 48898
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/host-telemetry.jsonl",
+      "original_sha256": "afd40696850ef5c8b0e64244ac1adcd8202367725cef49449a54fbfe0dbc8679",
+      "original_bytes": 8995366,
+      "public_file": "profiles/sanitizer_no_cudnn/host-telemetry.jsonl",
+      "public_sha256": "5d360505e9afd3a1ef5bc7ed3a0e2fc962e1ce8a5f1ac96d8712e49aa08a2140",
+      "public_bytes": 8999650
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/manifest.json",
+      "original_sha256": "9fc5dd812bf64244702aa59702034fe55d66d234136b18cee6eeda28a7f6875a",
+      "original_bytes": 12212,
+      "public_file": "profiles/sanitizer_no_cudnn/manifest.json",
+      "public_sha256": "da5b6045c39fba1dea1b0415bcaea7c06dd8f230169445d6c82dd44a8bc9af8b",
+      "public_bytes": 11623
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/outputs.json",
+      "original_sha256": "c44ea6f60c0b12641edada75dc28e21c7c38ed305fe398be40d282df96eb767e",
+      "original_bytes": 2044,
+      "public_file": "profiles/sanitizer_no_cudnn/outputs.json",
+      "public_sha256": "c44ea6f60c0b12641edada75dc28e21c7c38ed305fe398be40d282df96eb767e",
+      "public_bytes": 2044
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/sanitizer.log",
+      "original_sha256": "8cf8ee16c614685c20ac29232a0a12f3264c3189553f2c9e61fa94ce849cb573",
+      "original_bytes": 42005,
+      "public_file": "profiles/sanitizer_no_cudnn/sanitizer.log",
+      "public_sha256": "0aea89245b2d0a41070b9ab4ce6dd27c1bfeaf290ff48d39b5d2873a71e46de2",
+      "public_bytes": 42002
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/tool-audit.json",
+      "original_sha256": "0e8cf4f9a496ca59822c4882a77e2af1da2cf389fff17c1589af7ad59f579887",
+      "original_bytes": 302,
+      "public_file": "profiles/sanitizer_no_cudnn/tool-audit.json",
+      "public_sha256": "0e8cf4f9a496ca59822c4882a77e2af1da2cf389fff17c1589af7ad59f579887",
+      "public_bytes": 302
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/tool-version.txt",
+      "original_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "original_bytes": 125,
+      "public_file": "profiles/sanitizer_no_cudnn/tool-version.txt",
+      "public_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "public_bytes": 125
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn/validity.json",
+      "original_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "original_bytes": 702,
+      "public_file": "profiles/sanitizer_no_cudnn/validity.json",
+      "public_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "public_bytes": 702
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn-config.json",
+      "original_sha256": "f2a2e8a6ce96a0a13bcd2e97f65d5a47e7cbd064c7180930610a4008254b16d8",
+      "original_bytes": 270,
+      "public_file": "profiles/sanitizer_no_cudnn-config.json",
+      "public_sha256": "f2a2e8a6ce96a0a13bcd2e97f65d5a47e7cbd064c7180930610a4008254b16d8",
+      "public_bytes": 270
+    },
+    {
+      "source": "profiles/sanitizer_no_cudnn.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "profiles/sanitizer_no_cudnn.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "profiles/system-tools.json",
+      "original_sha256": "d2a73dd29be8068778dbda7f2a92dfea0fb5dc78ea53f97d0939e196e516bed7",
+      "original_bytes": 212,
+      "public_file": "profiles/system-tools.json",
+      "public_sha256": "d2a73dd29be8068778dbda7f2a92dfea0fb5dc78ea53f97d0939e196e516bed7",
+      "public_bytes": 212
+    },
+    {
+      "source": "profiles/system-watch/audit.json",
+      "original_sha256": "4373c1c99edb0712cb4d8cf80beef59080198f61a1bd185a4b1e4e64c5dc4d8f",
+      "original_bytes": 1317,
+      "public_file": "profiles/system-watch/audit.json",
+      "public_sha256": "4373c1c99edb0712cb4d8cf80beef59080198f61a1bd185a4b1e4e64c5dc4d8f",
+      "public_bytes": 1317
+    },
+    {
+      "source": "profiles/system-watch/host.jsonl",
+      "original_sha256": "aa7a75c7dee8fd7a30518a374e46baadc7f7350db9fba4de56cf4062340ea13e",
+      "original_bytes": 763333,
+      "public_file": "profiles/system-watch/host.jsonl",
+      "public_sha256": "aa7a75c7dee8fd7a30518a374e46baadc7f7350db9fba4de56cf4062340ea13e",
+      "public_bytes": 763333
+    },
+    {
+      "source": "profiles/system-watch/nvidia_smi.txt",
+      "original_sha256": "20ffed5943fab369b332a02a464b6809441fd075982ee08b512196ee862303d8",
+      "original_bytes": 8174,
+      "public_file": "profiles/system-watch/nvidia_smi.txt",
+      "public_sha256": "20ffed5943fab369b332a02a464b6809441fd075982ee08b512196ee862303d8",
+      "public_bytes": 8174
+    },
+    {
+      "source": "profiles/system-watch-status.json",
+      "original_sha256": "0f4a91a945dfcabe0b3d61b1e2a5dd76ccf3ace3bbc641e867248f6ba95d3afb",
+      "original_bytes": 412,
+      "public_file": "profiles/system-watch-status.json",
+      "public_sha256": "0f4a91a945dfcabe0b3d61b1e2a5dd76ccf3ace3bbc641e867248f6ba95d3afb",
+      "public_bytes": 412
+    },
+    {
+      "source": "profiles/system-watch.log",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "public_file": "profiles/system-watch.log",
+      "public_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "public_bytes": 1
+    },
+    {
+      "source": "task-events.json",
+      "original_sha256": "b1ac14bc06f8e818223c3f6554a0cce606694550135cbcef510bf0c8c906899b",
+      "original_bytes": 328,
+      "public_file": "task-events.json",
+      "public_sha256": "b1ac14bc06f8e818223c3f6554a0cce606694550135cbcef510bf0c8c906899b",
+      "public_bytes": 328
+    },
+    {
+      "source": "worker-completed.json",
+      "original_sha256": "056262dc3222c11824dd7505abd793bc63fc40cf19cc82cf700d3ba0624639ae",
+      "original_bytes": 458,
+      "public_file": "worker-completed.json",
+      "public_sha256": "056262dc3222c11824dd7505abd793bc63fc40cf19cc82cf700d3ba0624639ae",
+      "public_bytes": 458
+    }
+  ],
+  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims."
+}

@@ -1,0 +1,33 @@
+id: /home/tiger/.trae-cn-server/bin/stable-1bdfbb688ec6100a86b59885e1a7e380d536afe0-debian10/modules/ai-agent/libselinux.so.1: no version information available (required by id)
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-9.1.1, pluggy-1.7.0
+cachedir: /tmp/servedistill-delivery-20261027/pytest-cache
+rootdir: <private-workspace-path>
+configfile: ../../../../../../../dev/null
+collected 156 items
+
+tests/test_adapter_average.py ................                           [ 10%]
+tests/test_advantage_confirmation.py ......                              [ 14%]
+tests/test_advantage_contracts.py ...................                    [ 26%]
+tests/test_advantage_protocol_selection.py .........                     [ 32%]
+tests/test_advantage_screen.py .                                         [ 32%]
+tests/test_anchor_collection.py ....                                     [ 35%]
+tests/test_anchor_weights.py .............                               [ 43%]
+tests/test_aopd_domain_router.py ...                                     [ 45%]
+tests/test_aopd_router_confirmation.py ...                               [ 47%]
+tests/test_contracts.py ....................                             [ 60%]
+tests/test_deployment.py ......                                          [ 64%]
+tests/test_expanded.py ......                                            [ 67%]
+tests/test_expanded_artifacts.py .....                                   [ 71%]
+tests/test_expanded_statistics.py ........                               [ 76%]
+tests/test_http_benchmark.py ....                                        [ 78%]
+tests/test_monitoring.py ..                                              [ 80%]
+tests/test_native_export.py ..                                           [ 81%]
+tests/test_profile_configuration.py ........                             [ 86%]
+tests/test_profile_numerics.py .                                         [ 87%]
+tests/test_router_stability_dev.py .....                                 [ 90%]
+tests/test_statistics.py ...                                             [ 92%]
+tests/test_supervised_anchor.py ...                                      [ 94%]
+tests/test_time_budget.py .........                                      [100%]
+
+============================= 156 passed in 4.60s ==============================

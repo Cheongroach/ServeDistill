@@ -5,13 +5,14 @@ import argparse
 import datetime
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
 
 from servedistill.advantage_contracts import file_digest
 from servedistill.runtime import write_json
-from servedistill.scheduling import Config, schedule
+from servedistill.scheduling import Config, schedule, update_learning_rate
 from servedistill.data import load_rows
 
 
@@ -80,6 +81,63 @@ def allocation_cost(pods: list[dict], trials: list[dict], run_ids: set[str]) -> 
     }
 
 
+def verify_arm(arm: Path, spec: dict, schedule_hash: str, training: list[dict]) -> dict:
+    """Bind the evaluated final adapter to the declared complete training schedule."""
+    config = Config(**spec)
+    expected = [[r["sample_id"] for r in batch] for batch in schedule(training, config)]
+    actual = json.loads((arm / "train/schedule.json").read_text())
+    if (actual != expected or schedule_hash != hashlib.sha256(
+            json.dumps(actual).encode()).hexdigest()
+            or json.loads((arm / "config.json").read_text()) != spec
+            or json.loads((arm / "train/config.json").read_text()) != spec):
+        raise ValueError("Actual method schedule or configuration changed")
+    final = json.loads((arm / "train/completed.json").read_text())
+    checkpoint = arm / f"train/checkpoint-{config.steps:04d}"
+    evaluated = json.loads((arm / "evaluated-adapter.json").read_text())
+    state = json.loads((checkpoint / "state.json").read_text())
+    hashes = {name: file_digest(checkpoint / name) for name in (
+        "adapter_model.safetensors", "adapter_config.json", "state.json")}
+    if (not final["completed"] or final["steps"] != config.steps
+            or final["planned_steps"] != config.steps
+            or final["stop_reason"] != "update_budget" or state["step"] != config.steps
+            or final["final_checkpoint"] != checkpoint.name
+            or not final["teacher_unchanged"] or final["nonzero_updates"] != config.steps
+            or evaluated["precision"] != "bf16" or evaluated["step"] != config.steps
+            or evaluated["source"] != "fixed_final_update" or evaluated["dev_rows"] != 1100
+            or evaluated["adapter_sha256"] != hashes["adapter_model.safetensors"]
+            or evaluated["adapter_config_sha256"] != hashes["adapter_config.json"]):
+        raise ValueError("Evaluated BF16 adapter differs from fixed complete training")
+    metrics = load_rows(arm / "train/metrics.jsonl")
+    rollouts = load_rows(arm / "train/rollouts.jsonl")
+    if len(metrics) != config.steps or len(rollouts) != config.steps:
+        raise ValueError("Every optimizer update and rollout must be retained")
+    tokens = 0
+    repetitions = 1 if config.objective in ("offline_sft", "oracle_sft") else config.group_size
+    for step, (metric, rollout, prompts) in enumerate(zip(metrics, rollouts, actual), 1):
+        expected_ids = [identity for identity in prompts for _ in range(repetitions)]
+        tokens += metric["response_tokens"]
+        if (metric["step"] != step or metric["learner_version"] != step
+                or metric["rollout_version"] != step - 1
+                or rollout["step"] != step or rollout["version"] != step - 1
+                or rollout["sample_ids"] != expected_ids
+                or len(rollout["texts"]) != len(expected_ids)
+                or len(rollout["rewards"]) != len(expected_ids)
+                or metric["response_tokens"] < len(expected_ids)
+                or metric["cumulative_response_tokens"] != tokens
+                or metric["learning_rate_used"] != update_learning_rate(config, step)
+                or not math.isfinite(metric["parameter_delta_l2"])
+                or metric["parameter_delta_l2"] <= 0
+                or not math.isfinite(metric["gradient_norm"])
+                or not math.isfinite(metric["loss"])
+                or not 0 <= metric["behavior_max_error"] <= config.behavior_tolerance):
+            raise ValueError("Recorded optimizer update or executed prompt schedule changed")
+    if final["response_tokens"] != tokens or state["tokens_seen"] != tokens:
+        raise ValueError("Final checkpoint token budget differs from update history")
+    return {"checkpoint": checkpoint.name, "files": hashes,
+            "prompt_schedule_sha256": schedule_hash,
+            "verified_optimizer_updates": len(metrics), "verified_response_tokens": tokens}
+
+
 def verify_seed(root: Path, protocol: dict, protocol_hash: str, seed: int,
                 training: list[dict]) -> dict:
     completion = json.loads((root / "study/completed.json").read_text())
@@ -104,33 +162,8 @@ def verify_seed(root: Path, protocol: dict, protocol_hash: str, seed: int,
         raise ValueError("Incomplete method execution evidence")
     checks = {}
     for label, spec in protocol["methods"].items():
-        arm = root / "study" / label
-        config = Config(**{**spec, "seed": seed})
-        expected = [[r["sample_id"] for r in batch] for batch in schedule(training, config)]
-        actual = json.loads((arm / "train/schedule.json").read_text())
-        if (actual != expected or binding["prompt_schedule_sha256"] != hashlib.sha256(
-                json.dumps(actual).encode()).hexdigest()
-                or json.loads((arm / "config.json").read_text()) != {**spec, "seed": seed}
-                or json.loads((arm / "train/config.json").read_text()) != {**spec, "seed": seed}):
-            raise ValueError("Actual method schedule or configuration changed")
-        final = json.loads((arm / "train/completed.json").read_text())
-        checkpoint = arm / f"train/checkpoint-{config.steps:04d}"
-        evaluated = json.loads((arm / "evaluated-adapter.json").read_text())
-        state = json.loads((checkpoint / "state.json").read_text())
-        hashes = {name: file_digest(checkpoint / name) for name in (
-            "adapter_model.safetensors", "adapter_config.json", "state.json")}
-        if (not final["completed"] or final["steps"] != config.steps
-                or final["planned_steps"] != config.steps
-                or final["stop_reason"] != "update_budget" or state["step"] != config.steps
-                or final["final_checkpoint"] != checkpoint.name
-                or not final["teacher_unchanged"] or final["nonzero_updates"] != config.steps
-                or evaluated["precision"] != "bf16" or evaluated["step"] != config.steps
-                or evaluated["source"] != "fixed_final_update" or evaluated["dev_rows"] != 1100
-                or evaluated["adapter_sha256"] != hashes["adapter_model.safetensors"]
-                or evaluated["adapter_config_sha256"] != hashes["adapter_config.json"]):
-            raise ValueError("Evaluated BF16 adapter differs from fixed complete training")
-        checks[label] = {"checkpoint": checkpoint.name, "files": hashes,
-                         "prompt_schedule_sha256": binding["prompt_schedule_sha256"]}
+        checks[label] = verify_arm(root / "study" / label, {**spec, "seed": seed},
+                                   binding["prompt_schedule_sha256"], training)
     return checks
 
 
