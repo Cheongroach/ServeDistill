@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "candidate": "aopd_step320_substitute_router_offline_all4",
+  "report_sha256": "3633bbc03a8d6fbe5318d047b5b5ee5ae92699d7cbf43cf663084c4291eed2d0",
+  "predictions_sha256": "7912ae8f35a689c7a3b1c7762dfecbf564fa9af8419deb4a1f9af056111a3a4d",
+  "summary_sha256": "8d4c2d939d9d830d50ded81ce670778009f89eccafa43a27520daf54c2773640",
+  "source_prediction_sha256": {
+    "aopd_step320": "a94a12a95a5d37a69932e7893803558a8a2535a2cfea91ad99eaa4b1fea2839e",
+    "offline_sft_all4": "e62188b413094f13298b474dc41e86a5c7a686824cdbe60520ad373cc0f612ca"
+  },
+  "routing": {
+    "substitute": "aopd_step320",
+    "search": "offline_sft_all4",
+    "relevance": "offline_sft_all4",
+    "math": "offline_sft_all4",
+    "instruction": "offline_sft_all4"
+  },
+  "quality_advantage_established": true,
+  "holdout_observed": false,
+  "utc": "2026-10-26T23:49:52.487974+00:00"
+}

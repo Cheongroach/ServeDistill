@@ -1,0 +1,191 @@
+{
+  "utc": "2026-10-25T15:34:42.930189+00:00",
+  "arms": {
+    "deep_offline_trajectory_lr1e5": {
+      "domains": {
+        "search": {
+          "n": 300,
+          "float32_training_metric": 0.84700998641179,
+          "bf16_final_metric": 0.8444863461955234,
+          "metric_delta_bf16_minus_float32": -0.0025236402162666094,
+          "text_disagreements": 11,
+          "class_disagreements": 0
+        },
+        "relevance": {
+          "n": 300,
+          "float32_training_metric": 0.5048536216168954,
+          "bf16_final_metric": 0.5056452556452556,
+          "metric_delta_bf16_minus_float32": 0.0007916340283602441,
+          "text_disagreements": 4,
+          "class_disagreements": 4
+        },
+        "substitute": {
+          "n": 300,
+          "float32_training_metric": 0.7251157407407407,
+          "bf16_final_metric": 0.7197656221567129,
+          "metric_delta_bf16_minus_float32": -0.005350118584027785,
+          "text_disagreements": 3,
+          "class_disagreements": 3
+        },
+        "math": {
+          "n": 100,
+          "float32_training_metric": 0.15,
+          "bf16_final_metric": 0.11,
+          "metric_delta_bf16_minus_float32": -0.039999999999999994,
+          "text_disagreements": 10,
+          "class_disagreements": 0
+        },
+        "instruction": {
+          "n": 100,
+          "float32_training_metric": 0.9,
+          "bf16_final_metric": 0.9,
+          "metric_delta_bf16_minus_float32": 0.0,
+          "text_disagreements": 1,
+          "class_disagreements": 0
+        }
+      },
+      "training_predictions_sha256": "312cdd241971d2e8cce9b399f488fe4ca8d08cdf39d84b9aa36a476e58bbe004",
+      "bf16_predictions_sha256": "3f504eb390d7c1937947020e425f9b3bbc528aedeb7cb79ac41ad476a808f367"
+    },
+    "deep_offline_token_lr1e5": {
+      "domains": {
+        "search": {
+          "n": 300,
+          "float32_training_metric": 0.8500592583655705,
+          "bf16_final_metric": 0.8492680246730091,
+          "metric_delta_bf16_minus_float32": -0.0007912336925613994,
+          "text_disagreements": 9,
+          "class_disagreements": 0
+        },
+        "relevance": {
+          "n": 300,
+          "float32_training_metric": 0.4968988725633601,
+          "bf16_final_metric": 0.5006434687387769,
+          "metric_delta_bf16_minus_float32": 0.003744596175416781,
+          "text_disagreements": 4,
+          "class_disagreements": 4
+        },
+        "substitute": {
+          "n": 300,
+          "float32_training_metric": 0.6910324974252708,
+          "bf16_final_metric": 0.6788049023189027,
+          "metric_delta_bf16_minus_float32": -0.012227595106368172,
+          "text_disagreements": 6,
+          "class_disagreements": 6
+        },
+        "math": {
+          "n": 100,
+          "float32_training_metric": 0.14,
+          "bf16_final_metric": 0.12,
+          "metric_delta_bf16_minus_float32": -0.020000000000000018,
+          "text_disagreements": 7,
+          "class_disagreements": 0
+        },
+        "instruction": {
+          "n": 100,
+          "float32_training_metric": 0.9,
+          "bf16_final_metric": 0.9,
+          "metric_delta_bf16_minus_float32": 0.0,
+          "text_disagreements": 1,
+          "class_disagreements": 0
+        }
+      },
+      "training_predictions_sha256": "414871a6e2806ac82cbb31fdcf89da80218adafd672e44cc2e7a9feeaa84d812",
+      "bf16_predictions_sha256": "a2011192294ede5cf592a2ac1531b9b0bf533c9a183957685db20c69e99ba8c2"
+    },
+    "deep_oracle_token_lr1e5": {
+      "domains": {
+        "search": {
+          "n": 300,
+          "float32_training_metric": 0.8456438883432144,
+          "bf16_final_metric": 0.8448879767064263,
+          "metric_delta_bf16_minus_float32": -0.0007559116367880092,
+          "text_disagreements": 10,
+          "class_disagreements": 0
+        },
+        "relevance": {
+          "n": 300,
+          "float32_training_metric": 0.4289792028845535,
+          "bf16_final_metric": 0.4304950425918168,
+          "metric_delta_bf16_minus_float32": 0.0015158397072633223,
+          "text_disagreements": 3,
+          "class_disagreements": 3
+        },
+        "substitute": {
+          "n": 300,
+          "float32_training_metric": 0.5729752268119797,
+          "bf16_final_metric": 0.5745054173794798,
+          "metric_delta_bf16_minus_float32": 0.0015301905675001448,
+          "text_disagreements": 4,
+          "class_disagreements": 4
+        },
+        "math": {
+          "n": 100,
+          "float32_training_metric": 0.12,
+          "bf16_final_metric": 0.11,
+          "metric_delta_bf16_minus_float32": -0.009999999999999995,
+          "text_disagreements": 11,
+          "class_disagreements": 0
+        },
+        "instruction": {
+          "n": 100,
+          "float32_training_metric": 0.94,
+          "bf16_final_metric": 0.95,
+          "metric_delta_bf16_minus_float32": 0.010000000000000009,
+          "text_disagreements": 1,
+          "class_disagreements": 0
+        }
+      },
+      "training_predictions_sha256": "67da589d8a8442dbbc1426724146eddabbb2a8f1297432114f424d858f2e99c2",
+      "bf16_predictions_sha256": "9a5f742d583f702171c76db9d5585adb1d199c9ed48f535809b098fa2179aa0a"
+    },
+    "deep_oracle_trajectory_lr1e5": {
+      "domains": {
+        "search": {
+          "n": 300,
+          "float32_training_metric": 0.8454601188405948,
+          "bf16_final_metric": 0.8454484025078917,
+          "metric_delta_bf16_minus_float32": -1.1716332703137766e-05,
+          "text_disagreements": 9,
+          "class_disagreements": 0
+        },
+        "relevance": {
+          "n": 300,
+          "float32_training_metric": 0.4270313695916438,
+          "bf16_final_metric": 0.42494081917200927,
+          "metric_delta_bf16_minus_float32": -0.002090550419634518,
+          "text_disagreements": 7,
+          "class_disagreements": 7
+        },
+        "substitute": {
+          "n": 300,
+          "float32_training_metric": 0.6197089947089948,
+          "bf16_final_metric": 0.6137466574229969,
+          "metric_delta_bf16_minus_float32": -0.005962337285997821,
+          "text_disagreements": 7,
+          "class_disagreements": 7
+        },
+        "math": {
+          "n": 100,
+          "float32_training_metric": 0.14,
+          "bf16_final_metric": 0.12,
+          "metric_delta_bf16_minus_float32": -0.020000000000000018,
+          "text_disagreements": 20,
+          "class_disagreements": 0
+        },
+        "instruction": {
+          "n": 100,
+          "float32_training_metric": 0.95,
+          "bf16_final_metric": 0.95,
+          "metric_delta_bf16_minus_float32": 0.0,
+          "text_disagreements": 0,
+          "class_disagreements": 0
+        }
+      },
+      "training_predictions_sha256": "437052ac35a6ce16c9d89609de0ac3a7dcc3bb767bd44e5f30bfb41cec2d9dca",
+      "bf16_predictions_sha256": "97f5462fe80a2fe38b0b184e0e1d520e3841d5ff20c7fed9f5826de5e8c0d5e4"
+    }
+  },
+  "holdout_observed": false,
+  "boundary": "Exact same saved checkpoint and DEV inputs, FP32 training runtime versus BF16 merged evaluation. Describes runtime/precision differences; does not isolate arithmetic alone or establish superiority."
+}

@@ -1,0 +1,328 @@
+{
+  "utc": "2026-10-25T16:56:58.884102+00:00",
+  "arms": {
+    "deep_opd_trajectory_lr5e5": {
+      "observed_updates": 520,
+      "metrics_sha256": "17c99d33efe4d287562998e02f9aaf122d9ae9332d9a9c3a12c2da1acb9634b8",
+      "config_sha256": "e9a5cb424bf802e29f41d85a03746147bb43dd3eea320d7325acd628524df353",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 9.250640869140625e-05,
+      "behavior_error_mean": 3.984026037729703e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 2.091037830710411,
+          "mean_entropy": 0.1581281450460665,
+          "mean_teacher_sampled_kl": 0.07196545200411493,
+          "mean_reward": 0.5833097429946065
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 2.1914745609276,
+          "mean_entropy": 0.1572044535423629,
+          "mean_teacher_sampled_kl": 0.07370267343139858,
+          "mean_reward": 0.5833725305274129
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.8256388276815414,
+          "mean_entropy": 0.15537650784943255,
+          "mean_teacher_sampled_kl": 0.07066471487574745,
+          "mean_reward": 0.5950921602547169
+        },
+        {
+          "steps": [
+            481,
+            520
+          ],
+          "updates": 40,
+          "mean_gradient_norm": 1.4715600088238716,
+          "mean_entropy": 0.1627184486668557,
+          "mean_teacher_sampled_kl": 0.06279581999406218,
+          "mean_reward": 0.5822965174913406
+        }
+      ]
+    },
+    "deep_opd_token_lr5e5": {
+      "observed_updates": 520,
+      "metrics_sha256": "c20b1c3cf866679b7f7cd0c90679a6465758e068ed43315d22086c24c409fc1a",
+      "config_sha256": "3ffdeda1967030f3ea9dbebfaf7b91edf7912d2d7ce374c1545f756e12c0ee7e",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 8.273124694824219e-05,
+      "behavior_error_mean": 3.923280881001399e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.3060759278014302,
+          "mean_entropy": 0.16195176761560431,
+          "mean_teacher_sampled_kl": 0.054231938439645064,
+          "mean_reward": 0.5777919802814722
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.4615782751701771,
+          "mean_entropy": 0.15204928536953502,
+          "mean_teacher_sampled_kl": 0.05530778436388628,
+          "mean_reward": 0.5885435024276375
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.3733396420255304,
+          "mean_entropy": 0.15573115938755916,
+          "mean_teacher_sampled_kl": 0.051663185575917314,
+          "mean_reward": 0.60359060857445
+        },
+        {
+          "steps": [
+            481,
+            520
+          ],
+          "updates": 40,
+          "mean_gradient_norm": 1.4765404514968394,
+          "mean_entropy": 0.15025602029628551,
+          "mean_teacher_sampled_kl": 0.0474772188155505,
+          "mean_reward": 0.5821611873805523
+        }
+      ]
+    },
+    "deep_opd_token_lr2e5": {
+      "observed_updates": 520,
+      "metrics_sha256": "6ec162b13a5942e052f3c28a1cb50aab61528d0bc4def30af66fce54922a6abf",
+      "config_sha256": "686df5eec01d711bd75b8011f84ff8c02062c81bf9549387a2410da9beb50bf6",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 8.368492126464844e-05,
+      "behavior_error_mean": 3.885334500899682e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.249902887456119,
+          "mean_entropy": 0.15652332460667814,
+          "mean_teacher_sampled_kl": 0.055982020619102076,
+          "mean_reward": 0.5801959356293083
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.3586193595081568,
+          "mean_entropy": 0.15627233893033848,
+          "mean_teacher_sampled_kl": 0.045428995207315005,
+          "mean_reward": 0.5868655364960432
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.1980033137835562,
+          "mean_entropy": 0.1580791177619179,
+          "mean_teacher_sampled_kl": 0.043110366955605335,
+          "mean_reward": 0.5975035758689046
+        },
+        {
+          "steps": [
+            481,
+            520
+          ],
+          "updates": 40,
+          "mean_gradient_norm": 0.9602369900792838,
+          "mean_entropy": 0.14952066777220832,
+          "mean_teacher_sampled_kl": 0.035619600318183606,
+          "mean_reward": 0.6145615898072719
+        }
+      ]
+    },
+    "deep_opd_trajectory_lr2e5": {
+      "observed_updates": 520,
+      "metrics_sha256": "56fc6d9c3836f2ed0289f8dc47d69d29e9e1cacbf9abbe267a09c2648494c472",
+      "config_sha256": "e17473739430364487edc0de12177331544c80a51ed55b1903d84eb0b15619f6",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 0.00010061264038085938,
+      "behavior_error_mean": 3.967308081113375e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 2.0248255535028874,
+          "mean_entropy": 0.16216453002765777,
+          "mean_teacher_sampled_kl": 0.07067263568271301,
+          "mean_reward": 0.5821626091375947
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.9372686336748302,
+          "mean_entropy": 0.1610021963971667,
+          "mean_teacher_sampled_kl": 0.059600985378983756,
+          "mean_reward": 0.5965863265097141
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.7853172298520803,
+          "mean_entropy": 0.15694670071359723,
+          "mean_teacher_sampled_kl": 0.05771737823231888,
+          "mean_reward": 0.6003836737945676
+        },
+        {
+          "steps": [
+            481,
+            520
+          ],
+          "updates": 40,
+          "mean_gradient_norm": 1.8948689311742783,
+          "mean_entropy": 0.15439708589576184,
+          "mean_teacher_sampled_kl": 0.05356815393730358,
+          "mean_reward": 0.6204832091927528
+        }
+      ]
+    },
+    "deep_opd_trajectory_lr1e5": {
+      "observed_updates": 480,
+      "metrics_sha256": "a75609c4f9cd108627169d07b423bc17a0bceadf7f8049987d7fdcdf15d0535f",
+      "config_sha256": "96831553adfdeb88caac0ee6c3e7ae77b393a6f0af1c450e2b5215fa08c5e821",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 7.867813110351562e-05,
+      "behavior_error_mean": 3.875500212113063e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.9512358836829662,
+          "mean_entropy": 0.16205658493330702,
+          "mean_teacher_sampled_kl": 0.07166136586822176,
+          "mean_reward": 0.5926730833947659
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.9962012546136976,
+          "mean_entropy": 0.1649379030079581,
+          "mean_teacher_sampled_kl": 0.06001178794698717,
+          "mean_reward": 0.5865308068692684
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.5711046159267426,
+          "mean_entropy": 0.16096165324328468,
+          "mean_teacher_sampled_kl": 0.052997611687098926,
+          "mean_reward": 0.6040947239845991
+        }
+      ]
+    },
+    "deep_opd_token_lr1e5": {
+      "observed_updates": 480,
+      "metrics_sha256": "285060d682aa6260a8926811ee5c5bda6f8a027f3a7ea192955396f7adb7cb6a",
+      "config_sha256": "2010e8fd0e13703353243d3c1e02bc7ad1bcb6ce7779bac65feb2ce444b4e534",
+      "objective": "opd",
+      "observed_total_loss_equals_opd_loss_every_update": true,
+      "behavior_error_max": 8.296966552734375e-05,
+      "behavior_error_mean": 3.8310450812180837e-05,
+      "configured_behavior_tolerance": 0.15,
+      "observed_alarm_updates": 0,
+      "windows": [
+        {
+          "steps": [
+            1,
+            160
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.3209500895813107,
+          "mean_entropy": 0.1579016276932459,
+          "mean_teacher_sampled_kl": 0.059017763592967086,
+          "mean_reward": 0.5893727267161012
+        },
+        {
+          "steps": [
+            161,
+            320
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.3730860533192755,
+          "mean_entropy": 0.1625203582271359,
+          "mean_teacher_sampled_kl": 0.04704430539305197,
+          "mean_reward": 0.5868954420089721
+        },
+        {
+          "steps": [
+            321,
+            480
+          ],
+          "updates": 160,
+          "mean_gradient_norm": 1.201500686444342,
+          "mean_entropy": 0.1592339968765742,
+          "mean_teacher_sampled_kl": 0.041013788247072726,
+          "mean_reward": 0.5951585652306676
+        }
+      ]
+    }
+  },
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "boundary": "Observed DEV runtime statistics. Total recorded loss matches pure OPD on every currently collected update, not a claim of final quality, gradient equivalence, or future runtime correctness."
+}

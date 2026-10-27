@@ -1,0 +1,525 @@
+{
+  "utc": "20261026T234237080623Z",
+  "jobs": [
+    {
+      "experiment": "development_screen",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 8.814444444444444,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "original_teacher_development",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 4.696666666666666,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "repaired_teacher_development",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 6.3566666666666665,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "common_start_extended_development",
+      "status": "failed",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 5.046666666666667,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "common_start_lowrate_development",
+      "status": "stopped",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 8.095555555555556,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "trajectory_weighted_development",
+      "status": "stopped",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 4.587777777777778,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "trajectory_rate_development",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 4.4511111111111115,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "larger_common_start_development",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 16.513333333333332,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "larger_pure_opd_full_kl_controls",
+      "status": "failed",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 15.251111111111111,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-aopd-v1",
+      "status": "done",
+      "allocated_gpu_count": 1,
+      "observed_trials": 3,
+      "observed_pods": 3,
+      "scheduled_gpu_hours": 5.015555555555555,
+      "terminal_cost_verified": false,
+      "unresolved_intervals": [
+        {
+          "pod_index": 0,
+          "reason": "Missing allocation start"
+        },
+        {
+          "pod_index": 1,
+          "reason": "Missing allocation start"
+        }
+      ]
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-controls-v4",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 20.82777777777778,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-opd-v4",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 19.191111111111113,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-sft-v4",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 25.476666666666667,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit080-v1",
+      "status": "failed",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 20.886666666666667,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit160-v1",
+      "status": "failed",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 21.155555555555555,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit320-v1",
+      "status": "failed",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 24.106666666666666,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-controls-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 21.82888888888889,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-opd-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 20.904444444444444,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-sft-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 27.857777777777777,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-common320-larger-supplement-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 13.526666666666667,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-teacher320-qualification-labels-v1",
+      "status": "done",
+      "allocated_gpu_count": 1,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 1.4247222222222222,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-controls-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 22.09888888888889,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-opd-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 19.843333333333334,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-sft-v1",
+      "status": "done",
+      "allocated_gpu_count": 4,
+      "observed_trials": 1,
+      "observed_pods": 1,
+      "scheduled_gpu_hours": 24.97,
+      "terminal_cost_verified": true,
+      "unresolved_intervals": []
+    }
+  ],
+  "intervals": [
+    {
+      "experiment": "development_screen",
+      "start_unix_seconds": 1792902345.0,
+      "end_unix_seconds": 1792910278.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/development_screen-interval-000.json",
+      "evidence_sha256": "3356f14411ef698ae280a0f13f4b3102d10a9e1be994c3ede2d48835a3b1f518"
+    },
+    {
+      "experiment": "original_teacher_development",
+      "start_unix_seconds": 1792905490.0,
+      "end_unix_seconds": 1792909717.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/original_teacher_development-interval-000.json",
+      "evidence_sha256": "498e1444f697c5ab4caa42296aeecd5388af37afed063d6c975408da113ed05a"
+    },
+    {
+      "experiment": "repaired_teacher_development",
+      "start_unix_seconds": 1792908185.0,
+      "end_unix_seconds": 1792913906.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/repaired_teacher_development-interval-000.json",
+      "evidence_sha256": "0e750e825291fb42b14dc7eaae6bb90315690fd1a7080d4170fea4a40588b5b6"
+    },
+    {
+      "experiment": "common_start_extended_development",
+      "start_unix_seconds": 1792909940.0,
+      "end_unix_seconds": 1792914482.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/common_start_extended_development-interval-000.json",
+      "evidence_sha256": "ac9588d8a5fe0bf87f2130cfd16a526054ae80fe98acbf651d0b68565caf58fc"
+    },
+    {
+      "experiment": "common_start_lowrate_development",
+      "start_unix_seconds": 1792911938.0,
+      "end_unix_seconds": 1792919224.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/common_start_lowrate_development-interval-000.json",
+      "evidence_sha256": "492c9b48a18e16126732f6c2d4aa18adcda1688318775a39be127605f6a01451"
+    },
+    {
+      "experiment": "trajectory_weighted_development",
+      "start_unix_seconds": 1792914236.0,
+      "end_unix_seconds": 1792918365.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/trajectory_weighted_development-interval-000.json",
+      "evidence_sha256": "d88faeb674ee43cdb1b313ae320754fe306995b76cc5d7896be01d6fac07d228"
+    },
+    {
+      "experiment": "trajectory_rate_development",
+      "start_unix_seconds": 1792916442.0,
+      "end_unix_seconds": 1792920448.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/trajectory_rate_development-interval-000.json",
+      "evidence_sha256": "a4ea965c85178c49a9916f4597686f46d890ad83c5f273e95f4d7f1b0a09c0e1"
+    },
+    {
+      "experiment": "larger_common_start_development",
+      "start_unix_seconds": 1792918444.0,
+      "end_unix_seconds": 1792933306.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/larger_common_start_development-interval-000.json",
+      "evidence_sha256": "c31f95cf59b612334aaef2ebd76b4c37a5ab939096ac3fa0dd4c2b2a55ff97f2"
+    },
+    {
+      "experiment": "larger_pure_opd_full_kl_controls",
+      "start_unix_seconds": 1792919310.0,
+      "end_unix_seconds": 1792933036.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/larger_pure_opd_full_kl_controls-interval-000.json",
+      "evidence_sha256": "35244ba018a04e9a2ea4147063864324f0a81088bb081734d6043b5e233d045f"
+    },
+    {
+      "experiment": "servedistill-advantage-aopd-v1",
+      "start_unix_seconds": 1793039877.0,
+      "end_unix_seconds": 1793057933.0,
+      "allocated_gpu_count": 1,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-aopd-v1-interval-002.json",
+      "evidence_sha256": "e32ae3224fcb7bf20667a0d65416fa5205ac0aeaac3fa5641975ae533eac53ac"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-controls-v4",
+      "start_unix_seconds": 1792934843.0,
+      "end_unix_seconds": 1792953588.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-budget640-controls-v4-interval-000.json",
+      "evidence_sha256": "d861c5e5f6268d41dff3c8e776e0f8bf3c0cee5dade1be5c53708892f35f9770"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-opd-v4",
+      "start_unix_seconds": 1792934147.0,
+      "end_unix_seconds": 1792951419.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-budget640-opd-v4-interval-000.json",
+      "evidence_sha256": "6cc99c998024b6bc7124946e14c7aff4ff899191b25a19d85ebc5ef61372e28b"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-budget640-sft-v4",
+      "start_unix_seconds": 1792934105.0,
+      "end_unix_seconds": 1792957034.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-budget640-sft-v4-interval-000.json",
+      "evidence_sha256": "61b2e3556c7c9209b1753632db20bb7f382097d185ad173ccf4282ed74cc0cd4"
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit080-v1",
+      "start_unix_seconds": 1793017219.0,
+      "end_unix_seconds": 1793036017.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commoninit080-v1-interval-000.json",
+      "evidence_sha256": "a855b48ddce72b34b72c663293a37dee75a1c82a3a8606ad8d4d89331298e22c"
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit160-v1",
+      "start_unix_seconds": 1793017283.0,
+      "end_unix_seconds": 1793036323.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commoninit160-v1-interval-000.json",
+      "evidence_sha256": "45e1e1e1205c70a4731ddb9ed00905c4d5cfe916a751759dad216d0a635f85f2"
+    },
+    {
+      "experiment": "servedistill-advantage-commoninit320-v1",
+      "start_unix_seconds": 1793017254.0,
+      "end_unix_seconds": 1793038950.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commoninit320-v1-interval-000.json",
+      "evidence_sha256": "fd6f1e33e93253444f4ba0cf6be4ba5b835408c8901e38385f32bea54b37d829"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-controls-v1",
+      "start_unix_seconds": 1792957279.0,
+      "end_unix_seconds": 1792976925.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-decay640-controls-v1-interval-000.json",
+      "evidence_sha256": "1d8aa348264e302404697b37542dba9895ed95f7dd3791ca56f17c5f04fda63f"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-opd-v1",
+      "start_unix_seconds": 1792957202.0,
+      "end_unix_seconds": 1792976016.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-decay640-opd-v1-interval-000.json",
+      "evidence_sha256": "e13775bc39fbbba17b5bd50812cdeb06720dbfb974463575b1392abfaba73542"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-decay640-sft-v1",
+      "start_unix_seconds": 1792957255.0,
+      "end_unix_seconds": 1792982327.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-decay640-sft-v1-interval-000.json",
+      "evidence_sha256": "110808e2a912c29ca259192272e7ef200ab8e69419628af84cd7d8d2818e73e8"
+    },
+    {
+      "experiment": "servedistill-advantage-common320-larger-supplement-v1",
+      "start_unix_seconds": 1792921484.0,
+      "end_unix_seconds": 1792933658.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-common320-larger-supplement-v1-interval-000.json",
+      "evidence_sha256": "1c30c7396e75f0c04ca9d8a19c411011df546f5080a00fc41e71e4aeb22c3c41"
+    },
+    {
+      "experiment": "servedistill-advantage-teacher320-qualification-labels-v1",
+      "start_unix_seconds": 1792982546.0,
+      "end_unix_seconds": 1792987675.0,
+      "allocated_gpu_count": 1,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-teacher320-qualification-labels-v1-interval-000.json",
+      "evidence_sha256": "c4287f5d690a6b52faa58879e52529de9ec39d70cd1712f8005e640ad0abc7da"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-controls-v1",
+      "start_unix_seconds": 1792987922.0,
+      "end_unix_seconds": 1793007811.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-teacher320-decay640-controls-v1-interval-000.json",
+      "evidence_sha256": "5b61751924930d84883a62efc51054b29eaaed66d398a8d601ce1a9f4939a743"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-opd-v1",
+      "start_unix_seconds": 1792987883.0,
+      "end_unix_seconds": 1793005742.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-teacher320-decay640-opd-v1-interval-000.json",
+      "evidence_sha256": "bdb5797e33df12ed5d1ced25c287bc16351a32f3d315ab67c3352569aae7f832"
+    },
+    {
+      "experiment": "servedistill-advantage-commonstart-teacher320-decay640-sft-v1",
+      "start_unix_seconds": 1792987919.0,
+      "end_unix_seconds": 1793010392.0,
+      "allocated_gpu_count": 4,
+      "terminal_interval": true,
+      "allocation_source": "platform pod schedule_at to stop_at",
+      "resource_boundary": "Immutable single-worker job contract; actual GPU count is allocated_gpu_count",
+      "evidence_file": "reports/advantage/cost-intervals/servedistill-advantage-commonstart-teacher320-decay640-sft-v1-interval-000.json",
+      "evidence_sha256": "c2f00d5dddfc997b7256d31fd596fe2276ec779c3650e366043f4d3c14c9eb12"
+    }
+  ],
+  "peak_scheduled_gpus": 12,
+  "all_terminal_costs_verified": false,
+  "scheduled_gpu_hours": 362.9280555555555,
+  "includes": "Asset preparation, model loads, training, evaluation, qualification, export, sidecars, failure and idle allocation on every observed trial.",
+  "boundary": "Nonterminal intervals are lower bounds. No equal-cost or cost-advantage claim follows from a running allocation snapshot."
+}

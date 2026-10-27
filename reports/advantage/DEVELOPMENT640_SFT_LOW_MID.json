@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-25T17:12:45.741775+00:00",
+  "complete_low_mid_sft_candidates": 24,
+  "full_pool_complete": false,
+  "best": {
+    "offline_sft": {
+      "name": "deep_offline_trajectory_lr1e5/final",
+      "business_macro": 0.6899657413324972,
+      "general_macro": 0.505,
+      "selection_score": 0.6529725930659978
+    },
+    "oracle_sft": {
+      "name": "deep_oracle_trajectory_lr2e5/all4",
+      "business_macro": 0.6639265340022421,
+      "general_macro": 0.5449999999999999,
+      "selection_score": 0.6401412272017937
+    }
+  },
+  "absolute_dev_gate_failures": {
+    "deep_oracle_trajectory_lr2e5/all4": [
+      "relevance/metric"
+    ],
+    "deep_oracle_token_lr2e5/all4": [
+      "relevance/metric"
+    ],
+    "deep_oracle_token_lr1e5/all4": [
+      "relevance/metric"
+    ],
+    "deep_oracle_trajectory_lr2e5/last2": [
+      "relevance/metric"
+    ],
+    "deep_oracle_trajectory_lr1e5/all4": [
+      "relevance/metric"
+    ],
+    "deep_oracle_token_lr2e5/last2": [
+      "relevance/metric"
+    ],
+    "deep_oracle_trajectory_lr1e5/last2": [
+      "relevance/metric"
+    ],
+    "deep_oracle_trajectory_lr1e5/final": [
+      "relevance/metric"
+    ],
+    "deep_oracle_token_lr2e5/final": [
+      "substitute/recall/yes"
+    ],
+    "deep_oracle_token_lr1e5/final": [
+      "relevance/metric",
+      "substitute/recall/yes"
+    ]
+  },
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "development_report_sha256": "838c74d1120a55f94a982c699f2ce614c849baae3c0a4f6ee251897ac14cfc8b",
+  "source_contracts": {
+    "budget640-opd-v4": "25dfa176b8f3e11b92ef31b6b3890371a51811d2260ff0e40de8546a016c19c5",
+    "budget640-sft-v4": "aaac3490dcc37797d6938a0aa91f0278a6ec625ba495e8c77adb92b07b9c58ef",
+    "budget640-controls-v4": "0412c42d90667ea0c3747921e61701cca6b52525852c6295e021f44c6b758bf7"
+  },
+  "boundary": "Completed24 low/mid-rate SFT diagnostic; high-rate SFT and all final OPD still pending."
+}

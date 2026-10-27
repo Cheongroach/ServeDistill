@@ -1,0 +1,5506 @@
+{
+  "utc": "2026-10-25T19:37:31.929828+00:00",
+  "rankings": {
+    "opd": [
+      {
+        "name": "deep_opd_token_lr5e5/all4",
+        "source_arm": "deep_opd_token_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6743257437375533,
+        "general_macro": 0.52,
+        "selection_score": 0.6434605949900426,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6933333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6372049003627951,
+            "macro_f1": 0.6372049003627951
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.849383831673642,
+            "ndcg_n": 299,
+            "ndcg": 0.849383831673642,
+            "mrr": 0.7350396825396825
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.56,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5363884991762229,
+            "macro_f1": 0.5363884991762229
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.19,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.97,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.16,
+            "selection_score": 0.97
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_token_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "94518ae55162c7c205d99e42043d35af80850a25f6a8a29d6d8469a23914ec94",
+        "completion_sha256": "20dbbad4d88dcd782f581d1c48a45e2a04e06319180a27797f04e00fb32b8da6",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr5e5/last2",
+        "source_arm": "deep_opd_token_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6791352459522964,
+        "general_macro": 0.5,
+        "selection_score": 0.643308196761837,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.69,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6196785670469881,
+            "macro_f1": 0.6196785670469881
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8515415629610177,
+            "ndcg_n": 299,
+            "ndcg": 0.8515415629610177,
+            "mrr": 0.7352579365079366
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5661856078488829,
+            "macro_f1": 0.5661856078488829
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.21,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_token_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "90e21fbd2346afe13cc752e5f25125cff721c79aead6448e1568e063a3f07866",
+        "completion_sha256": "f90083744624edbff0532bf748bea102b27140f92e67926fbb9246d8380b8459",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr5e5/all4",
+        "source_arm": "deep_opd_trajectory_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6752835187365597,
+        "general_macro": 0.515,
+        "selection_score": 0.6432268149892477,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6579785352046232,
+            "macro_f1": 0.6579785352046232
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.851426794421245,
+            "ndcg_n": 299,
+            "ndcg": 0.851426794421245,
+            "mrr": 0.7371150793650793
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5164452265838105,
+            "macro_f1": 0.5164452265838105
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.26,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.92,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.92
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_trajectory_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "68d4c65809ced50164bd77ce50f3750641cc6c65a9598ab88a2cea35f0e55814",
+        "completion_sha256": "44daa5b9b52c779b08d4a2c302bb1ee4717edfb7b3a01883adb7ea3ea7aac49c",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr5e5/final",
+        "source_arm": "deep_opd_token_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6911694387780267,
+        "general_macro": 0.44999999999999996,
+        "selection_score": 0.6429355510224214,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6306429548563611,
+            "macro_f1": 0.6306429548563611
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8549054804143897,
+            "ndcg_n": 299,
+            "ndcg": 0.8549054804143897,
+            "mrr": 0.7418452380952382
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5733333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5879598810633293,
+            "macro_f1": 0.5879598810633293
+          },
+          "math": {
+            "n": 100,
+            "success": 0.06,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.08,
+            "selection_score": 0.06
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.84,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.08,
+            "selection_score": 0.84
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/fixed-update-development/deep_opd_token_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "66aef01f491dec71d4968c8e86794469309c407b08c91b819f7a2e9a348db521",
+        "completion_sha256": "7dfaf10209f17ba74bc931b125f414d13ffadff8d1ad3b6402a97637c4bf0989",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr1e5/last2",
+        "source_arm": "deep_opd_trajectory_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6695188895743863,
+        "general_macro": 0.52,
+        "selection_score": 0.639615111659509,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.648543585920443,
+            "macro_f1": 0.648543585920443
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.846223771338986,
+            "ndcg_n": 299,
+            "ndcg": 0.846223771338986,
+            "mrr": 0.7344841269841269
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5137893114637301,
+            "macro_f1": 0.5137893114637301
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.24,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.09,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_opd_trajectory_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "b1484776992131b051fb4d570b496657b39e9ca28c2bd63c02f83180d3c73fe2",
+        "completion_sha256": "b20ba4a79feb6dbafbc476e9a6f7740ae13a2570d4b09226e5a8d530388117cb",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr2e5/final",
+        "source_arm": "deep_opd_token_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6781647069463341,
+        "general_macro": 0.485,
+        "selection_score": 0.6395317655570673,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7133333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6688061617458281,
+            "macro_f1": 0.6688061617458281
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8494846265326281,
+            "ndcg_n": 299,
+            "ndcg": 0.8494846265326281,
+            "mrr": 0.7373452380952381
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5533333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5162033325605461,
+            "macro_f1": 0.5162033325605461
+          },
+          "math": {
+            "n": 100,
+            "success": 0.09,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.09
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.88,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.09,
+            "selection_score": 0.88
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/fixed-update-development/deep_opd_token_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "aacc655d17c1827443e3d22ba5118d211eb9b9a21ef1371e87552510e9b7679e",
+        "completion_sha256": "3e3422b9bf76c959b5e217621b02f47bf0fed8e629fb734987bc1f3c851ccb3b",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr2e5/final",
+        "source_arm": "deep_opd_trajectory_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6628502903174535,
+        "general_macro": 0.545,
+        "selection_score": 0.6392802322539628,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.69,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6223145754084823,
+            "macro_f1": 0.6223145754084823
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8483299099177488,
+            "ndcg_n": 299,
+            "ndcg": 0.8483299099177488,
+            "mrr": 0.7350357142857143
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.54,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5179063856261292,
+            "macro_f1": 0.5179063856261292
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.38,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.13,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/fixed-update-development/deep_opd_trajectory_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "a3f8b6855c8799d2a8ece8eaee8e94938e2294bee868f6dbc43f05a3311ec7e7",
+        "completion_sha256": "57abc81bf4a9316ea9e7a8a309755a47f6e832c31ca2b63040a908f1cd49bca2",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr2e5/last2",
+        "source_arm": "deep_opd_trajectory_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6628944569990532,
+        "general_macro": 0.54,
+        "selection_score": 0.6383155655992426,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.69,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.614166585996598,
+            "macro_f1": 0.614166585996598
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.848483013538601,
+            "ndcg_n": 299,
+            "ndcg": 0.848483013538601,
+            "mrr": 0.737484126984127
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5260337714619605,
+            "macro_f1": 0.5260337714619605
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.32,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.92,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.11,
+            "selection_score": 0.92
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_trajectory_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "64cc38c5053b280706b61fbfcbf0762d88f00cd66352ca8643db6409a313a5d4",
+        "completion_sha256": "30ada00358040cf8b86c8936603342335978dda1d2dca9665d99af1f38629aed",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr1e5/final",
+        "source_arm": "deep_opd_trajectory_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6644670975059018,
+        "general_macro": 0.52,
+        "selection_score": 0.6355736780047214,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6933333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6301457975986278,
+            "macro_f1": 0.6301457975986278
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8466760250127883,
+            "ndcg_n": 299,
+            "ndcg": 0.8466760250127883,
+            "mrr": 0.7345396825396824
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5165794699062897,
+            "macro_f1": 0.5165794699062897
+          },
+          "math": {
+            "n": 100,
+            "success": 0.14,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.14
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/fixed-update-development/deep_opd_trajectory_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "801c313db5adf44a7c7f663f366ef6095c749ea11c68631e16766d5c27ae38b7",
+        "completion_sha256": "803b74ca404cbc280ecda5337da3da9f55e4113c2cd51c289369524de833238b",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr2e5/last2",
+        "source_arm": "deep_opd_token_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6699540467845386,
+        "general_macro": 0.49,
+        "selection_score": 0.6339632374276309,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6450917503549083,
+            "macro_f1": 0.6450917503549083
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8526988966333086,
+            "ndcg_n": 299,
+            "ndcg": 0.8526988966333086,
+            "mrr": 0.7439801587301588
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5120714933653988,
+            "macro_f1": 0.5120714933653988
+          },
+          "math": {
+            "n": 100,
+            "success": 0.09,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.09
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.89,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.05,
+            "selection_score": 0.89
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_token_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "0d5e62907d722489e0d158b326cfe1e70c419f54dcbd7a3d96f46010d17990e8",
+        "completion_sha256": "8b5fad548cd6e8b8d771c75b9d065de988515eff1c2fdf33a82b24687be04455",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr2e5/all4",
+        "source_arm": "deep_opd_trajectory_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6593114853066188,
+        "general_macro": 0.53,
+        "selection_score": 0.6334491882452951,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.608572539003942,
+            "macro_f1": 0.608572539003942
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8511112783822569,
+            "ndcg_n": 299,
+            "ndcg": 0.8511112783822569,
+            "mrr": 0.7413730158730159
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5182506385336574,
+            "macro_f1": 0.5182506385336574
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.11,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_trajectory_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "d7055c88ecf85e9754c54a44581e3a31b490978528b41ed8944a75bef8bf758a",
+        "completion_sha256": "d9f8095d1b20ea1fcd3bca26f685805484b31d5735023f4d1cb9893437a7f103",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr5e5/last2",
+        "source_arm": "deep_opd_trajectory_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6679190235047748,
+        "general_macro": 0.495,
+        "selection_score": 0.6333352188038198,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6360364781417414,
+            "macro_f1": 0.6360364781417414
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8535442393398694,
+            "ndcg_n": 299,
+            "ndcg": 0.8535442393398694,
+            "mrr": 0.741670634920635
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5141763530327137,
+            "macro_f1": 0.5141763530327137
+          },
+          "math": {
+            "n": 100,
+            "success": 0.08,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.08
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.12,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_trajectory_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "ddcaf4a53f59453c251ef3b91a69ce11ae94e295797408187ed2f01ea5749e56",
+        "completion_sha256": "d432d47e4b2a796d5d17f95032c357672bbb0b98f3fa1ee5eeb3fae416af2ddf",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr2e5/all4",
+        "source_arm": "deep_opd_token_lr2e5",
+        "objective": "opd",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6630567277947926,
+        "general_macro": 0.5,
+        "selection_score": 0.6304453822358341,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6360364781417414,
+            "macro_f1": 0.6360364781417414
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8491176947958626,
+            "ndcg_n": 299,
+            "ndcg": 0.8491176947958626,
+            "mrr": 0.7364801587301588
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.54,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5040160104467739,
+            "macro_f1": 0.5040160104467739
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.24,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.12,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/averaged-development/deep_opd_token_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "c3c776014e762b8128b2637db1ca3866f864b13fd37b9ac45bf04dceec786b81",
+        "completion_sha256": "f2b32a31c213639a9bed4bd42dbe6b74b98185205b44131ceb18d7c04ecaaeff",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr5e5/final",
+        "source_arm": "deep_opd_trajectory_lr5e5",
+        "objective": "opd",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-opd-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6584272214921345,
+        "general_macro": 0.485,
+        "selection_score": 0.6237417771937076,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6536578245465041,
+            "macro_f1": 0.6536578245465041
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8508391284610987,
+            "ndcg_n": 299,
+            "ndcg": 0.8508391284610987,
+            "mrr": 0.7386468253968254
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.49333333333333335,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4707847114688009,
+            "macro_f1": 0.4707847114688009
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.87,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.09,
+            "selection_score": 0.87
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-opd-v4/fixed-update-development/deep_opd_trajectory_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "a166728cf2c31282fd2b1ee6043dc5296ce3ad0e6eb56cb8bbcf30df16987370",
+        "completion_sha256": "1c03942e6f054423a6061400b6bf6a19a978bc7bea7612a89e4e092300ca0285",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_trajectory_lr1e5/all4",
+        "source_arm": "deep_opd_trajectory_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6495712668492867,
+        "general_macro": 0.52,
+        "selection_score": 0.6236570134794294,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6766666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5975716004480647,
+            "macro_f1": 0.5975716004480647
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17333333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8449589611119096,
+            "ndcg_n": 299,
+            "ndcg": 0.8449589611119096,
+            "mrr": 0.7292063492063492
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.506183238987886,
+            "macro_f1": 0.506183238987886
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_opd_trajectory_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "c0dd39f335b77c51a96c26040514753d445a96076716672ec559c272d457083d",
+        "completion_sha256": "1613f5ae7c1c9a5b1524c4ec6e6ffcc3d249c91b9e2e46fba4e68b9c70f4bad1",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr1e5/final",
+        "source_arm": "deep_opd_token_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6510049333356976,
+        "general_macro": 0.51,
+        "selection_score": 0.6228039466685581,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6833333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5967684885185133,
+            "macro_f1": 0.5967684885185133
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8479436375813693,
+            "ndcg_n": 299,
+            "ndcg": 0.8479436375813693,
+            "mrr": 0.7366825396825396
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5083026739072105,
+            "macro_f1": 0.5083026739072105
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.28,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.11,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/fixed-update-development/deep_opd_token_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "4e9f32eb2cc0033ee4c430baa679ae6d94d56b5b07e2dd2696030c4b78acc275",
+        "completion_sha256": "c5930d1991b5a2ee1fb01f536c1410ce7fb5a8865c2fefcc30736f4cdbd8bbfd",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr1e5/all4",
+        "source_arm": "deep_opd_token_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6446614875176698,
+        "general_macro": 0.525,
+        "selection_score": 0.6207291900141358,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6733333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5823863636363636,
+            "macro_f1": 0.5823863636363636
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8470271796398441,
+            "ndcg_n": 299,
+            "ndcg": 0.8470271796398441,
+            "mrr": 0.7345952380952381
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5045709192768016,
+            "macro_f1": 0.5045709192768016
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.29,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.13,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_opd_token_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "75daa444f6abaaf8c4ef1e9fae48581cc7115563117ec44aa7360573dac50c54",
+        "completion_sha256": "d334f5881a0a3e96e9493ff2608ef63934e1a4978b9f91930810ed8d8bb59102",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_opd_token_lr1e5/last2",
+        "source_arm": "deep_opd_token_lr1e5",
+        "objective": "opd",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "opd",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6457138250398727,
+        "general_macro": 0.51,
+        "selection_score": 0.6185710600318982,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6766666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5945663531870429,
+            "macro_f1": 0.5945663531870429
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8482075231262642,
+            "ndcg_n": 299,
+            "ndcg": 0.8482075231262642,
+            "mrr": 0.7356468253968254
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.49436759880631104,
+            "macro_f1": 0.49436759880631104
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.11,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_opd_token_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "373421bb639bb180393a43357e21ef499887bec12db17dfd702b233f88cab234",
+        "completion_sha256": "db40bfee4ce803ba1a5f236e2f7d9d7006af593e029e861ffab26ba59d0530b0",
+        "independent_regrading_completed": true
+      }
+    ],
+    "offline_sft": [
+      {
+        "name": "deep_offline_trajectory_lr5e5/all4",
+        "source_arm": "deep_offline_trajectory_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.7004091300062886,
+        "general_macro": 0.535,
+        "selection_score": 0.6673273040050308,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.73,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6923076923076923,
+            "macro_f1": 0.6923076923076923
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.852795417670419,
+            "ndcg_n": 299,
+            "ndcg": 0.852795417670419,
+            "mrr": 0.7381468253968254
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.59,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5561242800407544,
+            "macro_f1": 0.5561242800407544
+          },
+          "math": {
+            "n": 100,
+            "success": 0.14,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.21,
+            "selection_score": 0.14
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.1,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "8ca2d4b1d612ef6c326054dadfaccc3c8da49b2ff748553d89a34a36bf8d3399",
+        "completion_sha256": "daec20f1bb629ce9890bb7f73132dae27fc36177ecec02e73672e0301dd73c90",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr5e5/all4",
+        "source_arm": "deep_offline_token_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.694280604182895,
+        "general_macro": 0.5449999999999999,
+        "selection_score": 0.664424483346316,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.74,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7075,
+            "macro_f1": 0.7075
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8492466984659641,
+            "ndcg_n": 299,
+            "ndcg": 0.8492466984659641,
+            "mrr": 0.7339007936507936
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5533333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5260951140827207,
+            "macro_f1": 0.5260951140827207
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.94,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.12,
+            "selection_score": 0.94
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "a30eb57f6c3a942b8ac3997f9c0ed5782834fdb64be0a6cb06a23784e58169a3",
+        "completion_sha256": "ef75f92eef1df7b1a402711eabe9c4ef3bb290551b8a308f6f3ecd2fa029b8fd",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr5e5/last2",
+        "source_arm": "deep_offline_trajectory_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6941107985681528,
+        "general_macro": 0.515,
+        "selection_score": 0.6582886388545223,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6678606317160534,
+            "macro_f1": 0.6678606317160534
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8540717708053172,
+            "ndcg_n": 299,
+            "ndcg": 0.8540717708053172,
+            "mrr": 0.7323412698412699
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5603999931830881,
+            "macro_f1": 0.5603999931830881
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.15,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.06,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "cc57edbbd2c5be28f3967ca0a809dcdc272e21f6bd710827318edb58b6a69e69",
+        "completion_sha256": "4d8434f237f67cd1f2c7fb9910238a98b3028ee1161d7613cb0c4b02c489fd68",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr5e5/last2",
+        "source_arm": "deep_offline_token_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6882980583448362,
+        "general_macro": 0.53,
+        "selection_score": 0.6566384466758689,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7233333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6794500444135481,
+            "macro_f1": 0.6794500444135481
+          },
+          "search": {
+            "n": 300,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8520540972464411,
+            "ndcg_n": 299,
+            "ndcg": 0.8520540972464411,
+            "mrr": 0.7355436507936508
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5566666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5333900333745196,
+            "macro_f1": 0.5333900333745196
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.17,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.08,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "d9c8364c240ead23ebbffe0d324d05ccf0b98233145b2b169b7d2befb5bad204",
+        "completion_sha256": "fed27fef20e5bcebe3525c6eb37813961dc5d1d97e9e545fadf5515d4f38c72c",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr1e5/final",
+        "source_arm": "deep_offline_trajectory_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6899657413324972,
+        "general_macro": 0.505,
+        "selection_score": 0.6529725930659978,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7197656221567129,
+            "macro_f1": 0.7197656221567129
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8444863461955234,
+            "ndcg_n": 299,
+            "ndcg": 0.8444863461955234,
+            "mrr": 0.727813492063492
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5056452556452556,
+            "macro_f1": 0.5056452556452556
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.08,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_trajectory_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "3f504eb390d7c1937947020e425f9b3bbc528aedeb7cb79ac41ad476a808f367",
+        "completion_sha256": "45d4c656b1e0cd7bcf0a0b7365e640fee2254c1e4d3915346f4c7ef81d9607b0",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr2e5/final",
+        "source_arm": "deep_offline_trajectory_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6911821245829515,
+        "general_macro": 0.5,
+        "selection_score": 0.6529456996663612,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7233333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6952972992816848,
+            "macro_f1": 0.6952972992816848
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8476246645924824,
+            "ndcg_n": 299,
+            "ndcg": 0.8476246645924824,
+            "mrr": 0.7329285714285715
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.57,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5306244098746872,
+            "macro_f1": 0.5306244098746872
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.01,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_trajectory_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "7b156ef43a292b7bbd7e1d213fdcc47ceaf8762657c9d57064a30fbf1e3910a9",
+        "completion_sha256": "dcf9a69d89a46109b3eec87f19b3a5a14dc4eb92c81b12423ce96dc7c49f4880",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr2e5/last2",
+        "source_arm": "deep_offline_trajectory_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6829106540536859,
+        "general_macro": 0.53,
+        "selection_score": 0.6523285232429488,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7266666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6805360760479975,
+            "macro_f1": 0.6805360760479975
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8478419864016213,
+            "ndcg_n": 299,
+            "ndcg": 0.8478419864016213,
+            "mrr": 0.7306269841269841
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.56,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5203538997114389,
+            "macro_f1": 0.5203538997114389
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.15,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.02,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "57d24d7c99145a726a5289bfbccf5fd0234e7c90f1a1beebb1bd71a6a3b575aa",
+        "completion_sha256": "87c04a401b79fb65363aecac65d57ff8850e57cf16edaf3ba8f7b24c1c2c523a",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr2e5/final",
+        "source_arm": "deep_offline_token_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6810374962398519,
+        "general_macro": 0.51,
+        "selection_score": 0.6468299969918815,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7233333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6924976844705155,
+            "macro_f1": 0.6924976844705155
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8489053063506946,
+            "ndcg_n": 299,
+            "ndcg": 0.8489053063506946,
+            "mrr": 0.7323214285714286
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.54,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5017094978983456,
+            "macro_f1": 0.5017094978983456
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.89,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.01,
+            "selection_score": 0.89
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_token_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "0ddd35bd075ae64e4639b227c4064f34771d7e551c2cf558bb6db3156b3327b5",
+        "completion_sha256": "33ed9383f514992fc9f7d18db060d1d7c5eff8880ec202c4487eb6270d40e767",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr5e5/final",
+        "source_arm": "deep_offline_trajectory_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6869521121292292,
+        "general_macro": 0.485,
+        "selection_score": 0.6465616897033833,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6594141924109469,
+            "macro_f1": 0.6594141924109469
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17666666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.841379872177885,
+            "ndcg_n": 299,
+            "ndcg": 0.841379872177885,
+            "mrr": 0.7146865079365079
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5600622717988559,
+            "macro_f1": 0.5600622717988559
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.19,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.87,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.03,
+            "selection_score": 0.87
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_trajectory_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "a73f441aac72a5d6c76650d0b3007ffb27dbea4b47fd387e33c25c9e0d586554",
+        "completion_sha256": "059b10d1914d44e3926c410fb25b0e1a4b8e438b051fd8d792ff5f627b18ca41",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr2e5/all4",
+        "source_arm": "deep_offline_trajectory_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6758951846996365,
+        "general_macro": 0.525,
+        "selection_score": 0.6457161477597092,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6753701416913852,
+            "macro_f1": 0.6753701416913852
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.84893355980178,
+            "ndcg_n": 299,
+            "ndcg": 0.84893355980178,
+            "mrr": 0.7343412698412699
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5033818526057443,
+            "macro_f1": 0.5033818526057443
+          },
+          "math": {
+            "n": 100,
+            "success": 0.14,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.14
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.05,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "7e5744f6daa4bfb8bd4e9f542a61c8100bb71aab3f02a686aa3686d9890699ee",
+        "completion_sha256": "730509163ac699ad756cd512e2dd96f18ff5ab89e3034ef87237eb125bce76f1",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr1e5/last2",
+        "source_arm": "deep_offline_token_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6724093266182528,
+        "general_macro": 0.53,
+        "selection_score": 0.6439274612946022,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6620528026310679,
+            "macro_f1": 0.6620528026310679
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8480036937037315,
+            "ndcg_n": 299,
+            "ndcg": 0.8480036937037315,
+            "mrr": 0.7361547619047619
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5071714835199586,
+            "macro_f1": 0.5071714835199586
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.94,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.1,
+            "selection_score": 0.94
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "545264b32e4354bf5414e860d1c77903ea6707bdd51dce8a7d0518ebd61512a7",
+        "completion_sha256": "c96aa1fd5d39f12bbd2542635f29eb65b389bcaad6da72439829a5430c8ca0cb",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr2e5/all4",
+        "source_arm": "deep_offline_token_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6741673743440341,
+        "general_macro": 0.52,
+        "selection_score": 0.6433338994752272,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7133333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6688061617458281,
+            "macro_f1": 0.6688061617458281
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8532408929800478,
+            "ndcg_n": 299,
+            "ndcg": 0.8532408929800478,
+            "mrr": 0.7430079365079365
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.500455068306226,
+            "macro_f1": 0.500455068306226
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.06,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "2e21081c86c8cad3bc8acffd5f4c54336eb0347855c2bb44da77606e364d7890",
+        "completion_sha256": "41bfda841f03d59ab137e10b238447463b91790c1ada42021b1e00a32a4ac8ff",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr2e5/last2",
+        "source_arm": "deep_offline_token_lr2e5",
+        "objective": "offline_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6725381581892584,
+        "general_macro": 0.525,
+        "selection_score": 0.6430305265514068,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6658943406853646,
+            "macro_f1": 0.6658943406853646
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8498436037039937,
+            "ndcg_n": 299,
+            "ndcg": 0.8498436037039937,
+            "mrr": 0.7353492063492063
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.54,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5018765301784169,
+            "macro_f1": 0.5018765301784169
+          },
+          "math": {
+            "n": 100,
+            "success": 0.14,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.14
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.05,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "9d392ba1429cb54c8b27bd78286373f81d95ceff8593ca75230cd1b46b73118c",
+        "completion_sha256": "f93725a8459568ea6532146216c98353bc330dadea3ad34c587fd31c1ad6edd8",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr1e5/final",
+        "source_arm": "deep_offline_token_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6762387985768962,
+        "general_macro": 0.51,
+        "selection_score": 0.642991038861517,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6788049023189027,
+            "macro_f1": 0.6788049023189027
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8492680246730091,
+            "ndcg_n": 299,
+            "ndcg": 0.8492680246730091,
+            "mrr": 0.7369285714285714
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5006434687387769,
+            "macro_f1": 0.5006434687387769
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.26,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.08,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_token_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "a2011192294ede5cf592a2ac1531b9b0bf533c9a183957685db20c69e99ba8c2",
+        "completion_sha256": "b0776e7b94b8aba9c359d15752ab2abf0fb6e0831d17cbd068d89988fbda22f5",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr1e5/all4",
+        "source_arm": "deep_offline_trajectory_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.671674534424409,
+        "general_macro": 0.52,
+        "selection_score": 0.6413396275395272,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7133333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6688061617458281,
+            "macro_f1": 0.6688061617458281
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8457847088095384,
+            "ndcg_n": 299,
+            "ndcg": 0.8457847088095384,
+            "mrr": 0.7299007936507936
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.54,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5004327327178607,
+            "macro_f1": 0.5004327327178607
+          },
+          "math": {
+            "n": 100,
+            "success": 0.14,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.14
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.08,
+            "selection_score": 0.9
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "54bb9deae719165dc017057079aca97f1f7572b13e2f98c2fbf4e17d185d08b6",
+        "completion_sha256": "fb08e16c1cac2e7d0ba09ae3d06db15522749cb3a402dc4ebe5cf1f36f0b6950",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_trajectory_lr1e5/last2",
+        "source_arm": "deep_offline_trajectory_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6685759197556193,
+        "general_macro": 0.52,
+        "selection_score": 0.6388607358044954,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6522305437968089,
+            "macro_f1": 0.6522305437968089
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8483574711099305,
+            "ndcg_n": 299,
+            "ndcg": 0.8483574711099305,
+            "mrr": 0.735063492063492
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5051397443601184,
+            "macro_f1": 0.5051397443601184
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.09,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_trajectory_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "f951fbbb0e59d9c3003b587b6ce088aa23c752d5b77ff51ddf52ca940ba1c852",
+        "completion_sha256": "c3ef3bba859943e677854a59a8b97f8f3fc92c1f098816d9fc8b07f37f66deca",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr1e5/all4",
+        "source_arm": "deep_offline_token_lr1e5",
+        "objective": "offline_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6636249357227035,
+        "general_macro": 0.515,
+        "selection_score": 0.6338999485781628,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6571606669783387,
+            "macro_f1": 0.6571606669783387
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8484110146746764,
+            "ndcg_n": 299,
+            "ndcg": 0.8484110146746764,
+            "mrr": 0.736734126984127
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.53,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4853031255150954,
+            "macro_f1": 0.4853031255150954
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.28,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.09,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_offline_token_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "37991d848aa67f2cbd57527cb1ad44ea5d8cca8c915b2522b3cf42cfc868566b",
+        "completion_sha256": "906debf86e22c4c95f593a20b26f1879ff995169ee543da3408b6629bc0040e4",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_offline_token_lr5e5/final",
+        "source_arm": "deep_offline_token_lr5e5",
+        "objective": "offline_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "offline_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6630103389182532,
+        "general_macro": 0.485,
+        "selection_score": 0.6274082711346026,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6479383958121812,
+            "macro_f1": 0.6479383958121812
+          },
+          "search": {
+            "n": 300,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8437847863921809,
+            "ndcg_n": 299,
+            "ndcg": 0.8437847863921809,
+            "mrr": 0.7202182539682539
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.53,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4973078345503975,
+            "macro_f1": 0.4973078345503975
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.86,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.04,
+            "selection_score": 0.86
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_offline_token_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "c7a93efdabd56c50cfd56c0b6c80385cb3f408dbc67b3905454ece90b54a56e9",
+        "completion_sha256": "ff2859284073764666d33254bf9682c75d32bbb6f95089ebdb2d357485c09647",
+        "independent_regrading_completed": true
+      }
+    ],
+    "oracle_sft": [
+      {
+        "name": "deep_oracle_trajectory_lr5e5/all4",
+        "source_arm": "deep_oracle_trajectory_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6836209128627772,
+        "general_macro": 0.565,
+        "selection_score": 0.6598967302902218,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7233333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7088093929435979,
+            "macro_f1": 0.7088093929435979
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8489120377781936,
+            "ndcg_n": 299,
+            "ndcg": 0.8489120377781936,
+            "mrr": 0.7333452380952381
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.56,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4931413078665401,
+            "macro_f1": 0.4931413078665401
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.98,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.18,
+            "selection_score": 0.98
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "d0299e3033fae92abe342778bdca878ca0824b69dacdc9d0a1bc72640d19ebcd",
+        "completion_sha256": "4926eb16921bd3ac52b7f8019dd73de7b85080d7f2f27b68802f67e6ab0d86b8",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr5e5/last2",
+        "source_arm": "deep_oracle_trajectory_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6803568333305933,
+        "general_macro": 0.57,
+        "selection_score": 0.6582854666644746,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6906666666666667,
+            "macro_f1": 0.6906666666666667
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17333333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8439131397257762,
+            "ndcg_n": 299,
+            "ndcg": 0.8439131397257762,
+            "mrr": 0.7201587301587301
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.56,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5064906935993372,
+            "macro_f1": 0.5064906935993372
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.14,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.98,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.16,
+            "selection_score": 0.98
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "07abdb0ee1beebdf7de3c1d7d32180964165afa57ceee86c252ef3da6b3423a4",
+        "completion_sha256": "43806450bf992cfa96e7328c1fcd8520b12307a56d5936689fa854c805cb86ab",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr5e5/last2",
+        "source_arm": "deep_oracle_token_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6809121879980996,
+        "general_macro": 0.5549999999999999,
+        "selection_score": 0.6557297503984797,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.72,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6923076923076923,
+            "macro_f1": 0.6923076923076923
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8452219268718906,
+            "ndcg_n": 299,
+            "ndcg": 0.8452219268718906,
+            "mrr": 0.7256031746031746
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.56,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5052069448147161,
+            "macro_f1": 0.5052069448147161
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.16,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr5e5_average_last2/dev.jsonl",
+        "predictions_sha256": "50277d71cedc615c9b485b7a56c6941557fa2c7fbdf62f1b1ed7a76bffa2b3b3",
+        "completion_sha256": "0529c9fb85b59513e7c45136d0a57ece214631b6479e550259a5e6ceaea77702",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr5e5/all4",
+        "source_arm": "deep_oracle_token_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6709219819280001,
+        "general_macro": 0.57,
+        "selection_score": 0.6507375855424001,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.72,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7018598267947564,
+            "macro_f1": 0.7018598267947564
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8447266077110486,
+            "ndcg_n": 299,
+            "ndcg": 0.8447266077110486,
+            "mrr": 0.7275674603174603
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.46617951127819546,
+            "macro_f1": 0.46617951127819546
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.98,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.17,
+            "selection_score": 0.98
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr5e5_average_all4/dev.jsonl",
+        "predictions_sha256": "ebf07fe438670692485c54242fec2365fb77a3b594029600e3d8d6a5810e80d3",
+        "completion_sha256": "b78febbac6e2590cc162af272c2ba85a157161f22020003778f7e0fb756e1b0b",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr5e5/final",
+        "source_arm": "deep_oracle_trajectory_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.667405976354869,
+        "general_macro": 0.5549999999999999,
+        "selection_score": 0.6449247810838952,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6600934424768622,
+            "macro_f1": 0.6600934424768622
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17666666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8412677562885056,
+            "ndcg_n": 299,
+            "ndcg": 0.8412677562885056,
+            "mrr": 0.7135992063492065
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5533333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.500856730299239,
+            "macro_f1": 0.500856730299239
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.95
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_trajectory_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "5de2d5a421d2621b5d2e1f546f027b7334874760432b5b8e081d66eda9ad61f8",
+        "completion_sha256": "d8755d7a89fbfe5f5046e3ed3c13e2de917aecd8ac598704a88ab1de82859701",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr2e5/all4",
+        "source_arm": "deep_oracle_trajectory_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6639265340022421,
+        "general_macro": 0.5449999999999999,
+        "selection_score": 0.6401412272017937,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7233333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7027185138313494,
+            "macro_f1": 0.7027185138313494
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8480740102459411,
+            "ndcg_n": 299,
+            "ndcg": 0.8480740102459411,
+            "mrr": 0.7320476190476191
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5133333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.44098707792943614,
+            "macro_f1": 0.44098707792943614
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.16,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "8fe4f431635fb6be1406dbc96a8848473863c5f17a1fbac7db54937d65e077da",
+        "completion_sha256": "ac32216c910e9eb17d4aea441056325233086baa5346655a5b4f34d7ea131cbf",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr5e5/final",
+        "source_arm": "deep_oracle_token_lr5e5",
+        "objective": "oracle_sft",
+        "learning_rate": 5e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 5e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6491383801190476,
+        "general_macro": 0.565,
+        "selection_score": 0.632310704095238,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6195564189736118,
+            "macro_f1": 0.6195564189736118
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17666666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8404734116273966,
+            "ndcg_n": 299,
+            "ndcg": 0.8404734116273966,
+            "mrr": 0.7165714285714286
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.48738530975613414,
+            "macro_f1": 0.48738530975613414
+          },
+          "math": {
+            "n": 100,
+            "success": 0.17,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.19,
+            "selection_score": 0.17
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_token_lr5e5/dev-0640.jsonl",
+        "predictions_sha256": "2636772ef9bd7b84807068e1e6e418aeb3860b9700d0cb18d778d2197a08231b",
+        "completion_sha256": "e2cca63962cb319b3ca440c68991f93e443856f835dd41f8c77dae7c10c5d8a0",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr2e5/all4",
+        "source_arm": "deep_oracle_token_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6547399485824615,
+        "general_macro": 0.535,
+        "selection_score": 0.6307919588659693,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.673202614379085,
+            "macro_f1": 0.673202614379085
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8478895464336879,
+            "ndcg_n": 299,
+            "ndcg": 0.8478895464336879,
+            "mrr": 0.7296547619047619
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.44312768493461163,
+            "macro_f1": 0.44312768493461163
+          },
+          "math": {
+            "n": 100,
+            "success": 0.09,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.09
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.98,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.98
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "b10fff99f3f1ccbdb19a14923d956d3e8d78ef4cc9f55fa837a680517b1956ec",
+        "completion_sha256": "0e8d4d3a34b70dbc273bc28066da99baa47b63a3a14ef284759dee0fba8b2650",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr1e5/all4",
+        "source_arm": "deep_oracle_token_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6575446136975905,
+        "general_macro": 0.52,
+        "selection_score": 0.6300356909580724,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6835874973632291,
+            "macro_f1": 0.6835874973632291
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8500371090306525,
+            "ndcg_n": 299,
+            "ndcg": 0.8500371090306525,
+            "mrr": 0.7348492063492064
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.51,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4390092346988899,
+            "macro_f1": 0.4390092346988899
+          },
+          "math": {
+            "n": 100,
+            "success": 0.09,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.09
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.18,
+            "selection_score": 0.95
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "560928401642ba385c2e3ef2d343f7a020d5ab7fbcaf53c8b3978cae1de86076",
+        "completion_sha256": "0bcb1376ba31c82b14f6ea5df1c08f9a4620cad76630cde1dcd7e51dd9801a7d",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr2e5/last2",
+        "source_arm": "deep_oracle_trajectory_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6460141592121688,
+        "general_macro": 0.565,
+        "selection_score": 0.629811327369735,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6966666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6465150004531859,
+            "macro_f1": 0.6465150004531859
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8439229216221632,
+            "ndcg_n": 299,
+            "ndcg": 0.8439229216221632,
+            "mrr": 0.7242936507936508
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.51,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.44760455556115736,
+            "macro_f1": 0.44760455556115736
+          },
+          "math": {
+            "n": 100,
+            "success": 0.17,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.17,
+            "selection_score": 0.17
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.16,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "727268f83c37ce935cf0f984f1d51ee855e6286d7245d2597e65912e8c0ae214",
+        "completion_sha256": "ac973f2c5ad3a6431c037c0cb3cb73042e0351f7f7d3a44b87dbd4ca501419b9",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr1e5/all4",
+        "source_arm": "deep_oracle_trajectory_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6522416533526445,
+        "general_macro": 0.525,
+        "selection_score": 0.6267933226821156,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6762166405023547,
+            "macro_f1": 0.6762166405023547
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.846285374273544,
+            "ndcg_n": 299,
+            "ndcg": 0.846285374273544,
+            "mrr": 0.728015873015873
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.43422294528203476,
+            "macro_f1": 0.43422294528203476
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.24,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.17,
+            "selection_score": 0.95
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr1e5_average_all4/dev.jsonl",
+        "predictions_sha256": "5bcaa2563cf58b05a10296565b44b41f2bf599e973be406bb3d9207e397798a9",
+        "completion_sha256": "cb887b3e221e9efc431ceeafaf57bb136065f8be179626a79e28b21d01d41f75",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr2e5/final",
+        "source_arm": "deep_oracle_trajectory_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.640970701337435,
+        "general_macro": 0.565,
+        "selection_score": 0.625776561069948,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6933333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.625081504020865,
+            "macro_f1": 0.625081504020865
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8426925721662016,
+            "ndcg_n": 299,
+            "ndcg": 0.8426925721662016,
+            "mrr": 0.7180158730158731
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.52,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.455138027825238,
+            "macro_f1": 0.455138027825238
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.97,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.16,
+            "selection_score": 0.97
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_trajectory_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "2762a2f79a2cedb117bf8367e86c5e42b9755e97907cd6c928363168a0f0dc0b",
+        "completion_sha256": "cbe2af8dd8f0a5d254dcd1f8cdf15e39dee2cf6ba1fbd65d03f79d7f589be04d",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr2e5/last2",
+        "source_arm": "deep_oracle_token_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6337240173968268,
+        "general_macro": 0.565,
+        "selection_score": 0.6199792139174615,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6142270861833106,
+            "macro_f1": 0.6142270861833106
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8448048757141362,
+            "ndcg_n": 299,
+            "ndcg": 0.8448048757141362,
+            "mrr": 0.7239920634920635
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.44214009029303364,
+            "macro_f1": 0.44214009029303364
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.98,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.98
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "4441a54a6185641934cdf559227a8df39d56d7d4c54d54099b369d5e1cd035b3",
+        "completion_sha256": "dea7afd7f6308471e29d7c753facdc42f3d1c5a32ab3372f2867039eb8666e86",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr1e5/last2",
+        "source_arm": "deep_oracle_trajectory_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6335410280398737,
+        "general_macro": 0.5449999999999999,
+        "selection_score": 0.615832822431899,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6195564189736118,
+            "macro_f1": 0.6195564189736118
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8464340419909052,
+            "ndcg_n": 299,
+            "ndcg": 0.8464340419909052,
+            "mrr": 0.7276587301587302
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.49333333333333335,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4346326231551042,
+            "macro_f1": 0.4346326231551042
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.18,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_trajectory_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "d52cfa6b5f4d40840520b6d774142299f73d0ff254bd7ac4db2c6ef6f315672f",
+        "completion_sha256": "5cec395367cf4ffcf08c697c89b1b1cdecb6f98ff47b92b4732f382671e3976c",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr1e5/last2",
+        "source_arm": "deep_oracle_token_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6328149151328897,
+        "general_macro": 0.535,
+        "selection_score": 0.6132519321063118,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6766666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5975716004480647,
+            "macro_f1": 0.5975716004480647
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8459433388741738,
+            "ndcg_n": 299,
+            "ndcg": 0.8459433388741738,
+            "mrr": 0.7247936507936508
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4549298060764304,
+            "macro_f1": 0.4549298060764304
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.27,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.19,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/averaged-development/deep_oracle_token_lr1e5_average_last2/dev.jsonl",
+        "predictions_sha256": "53a51390194263b5b7a48163b89c25c29dcb9b2fadf6526d223e3bd3f61d1f87",
+        "completion_sha256": "3ba382cc9e965ab29a22042a0ceb53d7ea2cbe8e8baad3c28762442f8153eff9",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_trajectory_lr1e5/final",
+        "source_arm": "deep_oracle_trajectory_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "trajectory",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "trajectory",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6280452930342992,
+        "general_macro": 0.5349999999999999,
+        "selection_score": 0.6094362344274394,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6966666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6137466574229969,
+            "macro_f1": 0.6137466574229969
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8454484025078917,
+            "ndcg_n": 299,
+            "ndcg": 0.8454484025078917,
+            "mrr": 0.7254365079365079
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.4866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.42494081917200927,
+            "macro_f1": 0.42494081917200927
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.22,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.2,
+            "selection_score": 0.95
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_trajectory_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "97f5462fe80a2fe38b0b184e0e1d520e3841d5ff20c7fed9f5826de5e8c0d5e4",
+        "completion_sha256": "371cfeb4a298a1100919772eeb4c6922ad9ad611b068826445cd4f8371eda9a1",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr2e5/final",
+        "source_arm": "deep_oracle_token_lr2e5",
+        "objective": "oracle_sft",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6189362056450349,
+        "general_macro": 0.5549999999999999,
+        "selection_score": 0.606148964516028,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6733333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5605118392729012,
+            "macro_f1": 0.5605118392729012
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8427556322216976,
+            "ndcg_n": 299,
+            "ndcg": 0.8427556322216976,
+            "mrr": 0.7180674603174602
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.45354114544050605,
+            "macro_f1": 0.45354114544050605
+          },
+          "math": {
+            "n": 100,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.24,
+            "selection_score": 0.15
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.15,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_token_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "165eba0d349c09d799bd1dc8901089794f78b2fc08562f058c81ec0ef554f98a",
+        "completion_sha256": "33cea70b8ebf0df4952bbc6a450970cfefe42188adf4b820f330645e6f3b8804",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_oracle_token_lr1e5/final",
+        "source_arm": "deep_oracle_token_lr1e5",
+        "objective": "oracle_sft",
+        "learning_rate": 1e-05,
+        "source_folder": "budget640-sft-v4",
+        "arm_config": {
+          "objective": "oracle_sft",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 1,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 1e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6166294788925742,
+        "general_macro": 0.53,
+        "selection_score": 0.5993035831140594,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6766666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5745054173794798,
+            "macro_f1": 0.5745054173794798
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8448879767064263,
+            "ndcg_n": 299,
+            "ndcg": 0.8448879767064263,
+            "mrr": 0.7240436507936509
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.49,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4304950425918168,
+            "macro_f1": 0.4304950425918168
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.19,
+            "selection_score": 0.95
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-sft-v4/fixed-update-development/deep_oracle_token_lr1e5/dev-0640.jsonl",
+        "predictions_sha256": "9a5f742d583f702171c76db9d5585adb1d199c9ed48f535809b098fa2179aa0a",
+        "completion_sha256": "d092145aa767494057e5fcc03c0e8e567df9422df3ccfe9e7347c104c9c93f6d",
+        "independent_regrading_completed": true
+      }
+    ],
+    "full_kl": [
+      {
+        "name": "deep_repaired_full_kl_lr2e5/final",
+        "source_arm": "deep_repaired_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.6900751243752211,
+        "general_macro": 0.52,
+        "selection_score": 0.6560600995001769,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7133333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6649524700015583,
+            "macro_f1": 0.6649524700015583
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8507005443301222,
+            "ndcg_n": 299,
+            "ndcg": 0.8507005443301222,
+            "mrr": 0.7380436507936509
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5733333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5545723587939829,
+            "macro_f1": 0.5545723587939829
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.24,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.91
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/fixed-update-development/deep_repaired_full_kl_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "e39867af30d74afae91b718e3e715e3d3e903f0665975d8a8b9b3f471e82b8d0",
+        "completion_sha256": "af43329ce2dc72b34fb3d6f131485a3856443ac26e3524ab1e98b59d3fe3de74",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_repaired_full_kl_lr2e5/all4",
+        "source_arm": "deep_repaired_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6734880576005837,
+        "general_macro": 0.545,
+        "selection_score": 0.647790446080467,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6479383958121812,
+            "macro_f1": 0.6479383958121812
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8511520100915065,
+            "ndcg_n": 299,
+            "ndcg": 0.8511520100915065,
+            "mrr": 0.7407579365079365
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5213737668980636,
+            "macro_f1": 0.5213737668980636
+          },
+          "math": {
+            "n": 100,
+            "success": 0.16,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.16
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.93
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_repaired_full_kl_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "d35c467ee6d5747a734b7ecc8fcee68586ddc416ca070bf16878ddd3489d0011",
+        "completion_sha256": "e0c70a15e4e1f21412a5c132ac7262e62f313a1cd7c1c9b9f53aa89482acf1b3",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_repaired_full_kl_lr2e5/last2",
+        "source_arm": "deep_repaired_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.6788809106412947,
+        "general_macro": 0.52,
+        "selection_score": 0.6471047285130358,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6428571428571428,
+            "macro_f1": 0.6428571428571428
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8500014228939002,
+            "ndcg_n": 299,
+            "ndcg": 0.8500014228939002,
+            "mrr": 0.7357579365079364
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5633333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5437841661728413,
+            "macro_f1": 0.5437841661728413
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.17,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.92,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.11,
+            "selection_score": 0.92
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_repaired_full_kl_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "e483e6eb2e61ef1e672bbed4e2f4cc0b37b63688a240ca7f19b2a9ad0e1bf568",
+        "completion_sha256": "030c54ac9a4fae1d02a833bbb3efd1d90e0266059977f9aef898a75f1fe15847",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_original_full_kl_lr2e5/all4",
+        "source_arm": "deep_original_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            160,
+            320,
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.5349265438574687,
+        "general_macro": 0.52,
+        "selection_score": 0.531941235085975,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.38144329896907214,
+            "macro_f1": 0.38144329896907214
+          },
+          "search": {
+            "n": 300,
+            "success": 0.25333333333333335,
+            "json_valid": 0.9633333333333334,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 29.31,
+            "selection_score": 0.8445364461695395,
+            "ndcg_n": 299,
+            "ndcg": 0.8445364461695395,
+            "mrr": 0.7510357142857144
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.53,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.3787998864337945,
+            "macro_f1": 0.3787998864337945
+          },
+          "math": {
+            "n": 100,
+            "success": 0.08,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.35,
+            "selection_score": 0.08
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.96,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.23,
+            "selection_score": 0.96
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_original_full_kl_lr2e5_average_all4/dev.jsonl",
+        "predictions_sha256": "6efba78178a2ae9f258cbc75bb926f5281b7b5ee388ee9c75e841c4defc084aa",
+        "completion_sha256": "346b0f0012617c23c21e7b0e220b81f48087f899e4f0b64a68a58bed140083a3",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_original_full_kl_lr2e5/final",
+        "source_arm": "deep_original_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "final_checkpoint"
+        },
+        "business_macro": 0.531380723275053,
+        "general_macro": 0.485,
+        "selection_score": 0.5221045786200424,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.38144329896907214,
+            "macro_f1": 0.38144329896907214
+          },
+          "search": {
+            "n": 300,
+            "success": 0.23333333333333334,
+            "json_valid": 0.9566666666666667,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 29.17,
+            "selection_score": 0.8325366667503455,
+            "ndcg_n": 299,
+            "ndcg": 0.8325366667503455,
+            "mrr": 0.7332777777777778
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.3801622041057414,
+            "macro_f1": 0.3801622041057414
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.46,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.87,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.34,
+            "selection_score": 0.87
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/fixed-update-development/deep_original_full_kl_lr2e5/dev-0640.jsonl",
+        "predictions_sha256": "516f414116b6b4f575231b5e8d1cd41eadf5f4442e5ce20f5a7aa532087630d6",
+        "completion_sha256": "f4c8c46defe7b0159dd3b7f377e52e78d2361b66b70220319dac69ea32c35158",
+        "independent_regrading_completed": true
+      },
+      {
+        "name": "deep_original_full_kl_lr2e5/last2",
+        "source_arm": "deep_original_full_kl_lr2e5",
+        "objective": "full_kl",
+        "learning_rate": 2e-05,
+        "source_folder": "budget640-controls-v4",
+        "arm_config": {
+          "objective": "full_kl",
+          "train_precision": "float32_torch",
+          "seed": 29,
+          "steps": 640,
+          "prompts_per_step": 10,
+          "group_size": 2,
+          "microbatch": 4,
+          "rollout_batch": 8,
+          "max_new_tokens": 128,
+          "learning_rate": 2e-05,
+          "dev_every": 160,
+          "dev_per_domain": 300,
+          "aggregation": "token",
+          "behavior_tolerance": 0.15
+        },
+        "aggregation": "token",
+        "postprocessing": {
+          "kind": "lora_factor_mean_fp32",
+          "steps": [
+            480,
+            640
+          ]
+        },
+        "business_macro": 0.5226074971332815,
+        "general_macro": 0.495,
+        "selection_score": 0.5170859977066252,
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.38144329896907214,
+            "macro_f1": 0.38144329896907214
+          },
+          "search": {
+            "n": 300,
+            "success": 0.24333333333333335,
+            "json_valid": 0.9566666666666667,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 29.18,
+            "selection_score": 0.839515115859769,
+            "ndcg_n": 299,
+            "ndcg": 0.839515115859769,
+            "mrr": 0.7434246031746031
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5233333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.3468640765710033,
+            "macro_f1": 0.3468640765710033
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.45,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.89,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.26,
+            "selection_score": 0.89
+          }
+        },
+        "predictions_path": "reports/advantage/raw/budget640-controls-v4/averaged-development/deep_original_full_kl_lr2e5_average_last2/dev.jsonl",
+        "predictions_sha256": "4e14effcf8a0fba95baae8524871e891af2929922dac58fb04294686a2a7be18",
+        "completion_sha256": "6a38bd8eceef5215db9f10a915f76cc4fe8301028e71fb8bcd9363869fd88b31",
+        "independent_regrading_completed": true
+      }
+    ]
+  },
+  "completed_candidates": 60,
+  "declared_candidates": 60,
+  "failed_controls": {},
+  "failed_candidates": 0,
+  "exploratory_comparisons": {
+    "offline_sft": {
+      "baseline": "deep_offline_trajectory_lr5e5/all4",
+      "candidate": "deep_opd_token_lr5e5/all4",
+      "domains": {
+        "search": {
+          "independent_queries": 300,
+          "baseline": 0.852795417670419,
+          "candidate": 0.849383831673642,
+          "delta": -0.0034115859967770445,
+          "exploratory_query_ci95": [
+            -0.010072933521083988,
+            0.002886415277273126
+          ]
+        },
+        "relevance": {
+          "independent_queries": 300,
+          "baseline": 0.5561242800407544,
+          "candidate": 0.5363884991762229,
+          "delta": -0.019735780864531538,
+          "exploratory_query_ci95": [
+            -0.05253108346308363,
+            0.012819504156272797
+          ]
+        },
+        "substitute": {
+          "independent_queries": 300,
+          "baseline": 0.6923076923076923,
+          "candidate": 0.6372049003627951,
+          "delta": -0.0551027919448972,
+          "exploratory_query_ci95": [
+            -0.09262542455325844,
+            -0.021177796546404504
+          ]
+        },
+        "math": {
+          "independent_queries": 100,
+          "baseline": 0.14,
+          "candidate": 0.07,
+          "delta": -0.07,
+          "exploratory_query_ci95": [
+            -0.12000000000000001,
+            -0.03
+          ]
+        }
+      },
+      "business_macro_delta": -0.026083386268735298,
+      "exploratory_query_ci95": [
+        -0.04254918489654781,
+        -0.009925101251446475
+      ],
+      "paired_training_seeds": [
+        29
+      ],
+      "selection_adjusted": false
+    },
+    "oracle_sft": {
+      "baseline": "deep_oracle_trajectory_lr5e5/all4",
+      "candidate": "deep_opd_token_lr5e5/all4",
+      "domains": {
+        "search": {
+          "independent_queries": 300,
+          "baseline": 0.8489120377781936,
+          "candidate": 0.849383831673642,
+          "delta": 0.00047179389544838024,
+          "exploratory_query_ci95": [
+            -0.006104395957297543,
+            0.007325353228119958
+          ]
+        },
+        "relevance": {
+          "independent_queries": 300,
+          "baseline": 0.4931413078665401,
+          "candidate": 0.5363884991762229,
+          "delta": 0.0432471913096828,
+          "exploratory_query_ci95": [
+            -0.010292200627799787,
+            0.09651390898045134
+          ]
+        },
+        "substitute": {
+          "independent_queries": 300,
+          "baseline": 0.7088093929435979,
+          "candidate": 0.6372049003627951,
+          "delta": -0.07160449258080281,
+          "exploratory_query_ci95": [
+            -0.12977579017317323,
+            -0.015698605371827528
+          ]
+        },
+        "math": {
+          "independent_queries": 100,
+          "baseline": 0.15,
+          "candidate": 0.07,
+          "delta": -0.07999999999999999,
+          "exploratory_query_ci95": [
+            -0.13999999999999999,
+            -0.03
+          ]
+        }
+      },
+      "business_macro_delta": -0.009295169125223879,
+      "exploratory_query_ci95": [
+        -0.03633262538535606,
+        0.016427457009473134
+      ],
+      "paired_training_seeds": [
+        29
+      ],
+      "selection_adjusted": false
+    }
+  },
+  "missing_candidates": [],
+  "complete_selection_pool": true,
+  "contract_sha256": {
+    "budget640-opd-v4": "25dfa176b8f3e11b92ef31b6b3890371a51811d2260ff0e40de8546a016c19c5",
+    "budget640-sft-v4": "aaac3490dcc37797d6938a0aa91f0278a6ec625ba495e8c77adb92b07b9c58ef",
+    "budget640-controls-v4": "0412c42d90667ea0c3747921e61701cca6b52525852c6295e021f44c6b758bf7"
+  },
+  "common_start": {
+    "initial_adapter_file_sha256": "46aa0d25e78b2d661ed4329b86f649892b12754cce74fb68f2e24fcb494272ca",
+    "initial_adapter_config_sha256": "19c72c93872045fefbd679269879ad799ada4086f099164e456b7e58deaf5535",
+    "student_manifest_sha256": "8361f621a86e2d7e87e0c9af8fd78e2fe2d939d391bc8b09cbc7e03f19ba122b"
+  },
+  "repaired_teacher_manifest_sha256": "792a30cc49d8ccb4b611660fd447afb3e9f95234d9f533eef48e13dc358a081e",
+  "independent_regrading_completed": true,
+  "quality_advantage_established": false,
+  "holdout_observed": false,
+  "boundary": "Observed DEV over a declared common640 pool, conditional on seed29; prior320 retained. No confirmatory superiority or equal-time claim."
+}

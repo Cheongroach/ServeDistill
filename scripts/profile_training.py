@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ("student", "teacher", "data", "config", "resume", "output"):
         parser.add_argument("--" + name, required=True)
-    parser.add_argument("--backend", choices=("none", "nsys", "torch"), required=True)
+    parser.add_argument("--backend", choices=("none", "nsys", "ncu", "torch"), required=True)
     parser.add_argument("--first-update", type=int, required=True)
     parser.add_argument("--last-update", type=int, required=True)
     parser.add_argument("--microbatch", type=int)
@@ -24,6 +24,9 @@ def main():
     checkpoint = json.loads((Path(args.resume) / "state.json").read_text())
     if args.first_update <= checkpoint["step"] + 1:
         parser.error("Leave at least one full training update for warmup")
+    config = json.loads(Path(args.config).read_text())
+    if args.last_update > config["steps"] or args.last_update < args.first_update:
+        parser.error("Observation window exceeds the immutable training budget")
     root = Path(args.output)
     observation = TrainingObservation(
         root / "observation", args.backend, args.first_update, args.last_update,

@@ -1,0 +1,2222 @@
+{
+  "protocol_sha256": "79ffd1973e43e6bfe2832db8aa8e7521e54e061155592c3d37e7ff7b7d02c3bb",
+  "data_verification": {
+    "manifest_sha256": "5dc82fb7c46c7967b377ec49bddf0c7b1d72dee72ea32da525aef5d5b457b76d",
+    "verified_splits": [
+      "train",
+      "dev",
+      "test",
+      "ood"
+    ]
+  },
+  "paired_seeds": [
+    101,
+    211,
+    307,
+    401
+  ],
+  "routing": {
+    "substitute": "aopd",
+    "search": "offline_sft",
+    "relevance": "offline_sft",
+    "math": "offline_sft"
+  },
+  "independent_regrading_completed": true,
+  "arm_evidence": {
+    "aopd_seed101": {
+      "test": {
+        "predictions_sha256": "dcc4401b687652b2232e48555e5f0b2a25819e4d7e1ed526df252272a9c9a568",
+        "summary_sha256": "2fa8ced68480ebc02a5c346aaf39ab15a904f39632a6b3a5211798d3d99f552a",
+        "provenance_sha256": "929767fe1eec0bcb193da7f463a74064a05fc2d6b10aa203254de3f2dffe86e3",
+        "completion_sha256": "24303175070124410649fe6e28186b3e6ec8675b40b03e2f4bc5721da705b1ca",
+        "rows": 1500,
+        "domains": [
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "c47578549c77d438b8aaef8944bc77fd847781572574d1a6a8413347fa5d1817",
+        "summary_sha256": "8d322a349ba362884fb851ec5916304d92de91b67b8fb4ca424c41a9f38f239e",
+        "provenance_sha256": "929767fe1eec0bcb193da7f463a74064a05fc2d6b10aa203254de3f2dffe86e3",
+        "completion_sha256": "24303175070124410649fe6e28186b3e6ec8675b40b03e2f4bc5721da705b1ca",
+        "rows": 500,
+        "domains": [
+          "substitute"
+        ]
+      }
+    },
+    "offline_sft_seed101": {
+      "test": {
+        "predictions_sha256": "108b966b42600f270c4c522050f2c22c886ea3dff18edd77165fedb914c2fe77",
+        "summary_sha256": "334a73aec05258287b05e32cf2579421c373a506a342fb89c5b0ce6e30b71813",
+        "provenance_sha256": "0424fa56508509b05899fbe9d28cf6f795bc6d24def41275327c44bec1468325",
+        "completion_sha256": "3e6bd552d05d4d6ca698c85e6e3c1601696af4d96ac50ae465c09c75dbe7c373",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "429108fe71cd8b8ddcbea31273eff245a30f9646d39b810c2713b3e1302f8774",
+        "summary_sha256": "c3c47d26635ba0d911a2624e538db1f64dc633e2532032e50b98b0b523177a11",
+        "provenance_sha256": "0424fa56508509b05899fbe9d28cf6f795bc6d24def41275327c44bec1468325",
+        "completion_sha256": "3e6bd552d05d4d6ca698c85e6e3c1601696af4d96ac50ae465c09c75dbe7c373",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "oracle_sft_seed101": {
+      "test": {
+        "predictions_sha256": "1dff93eddb17a36c1be4e7d75886cabe0c7a3124255d507e31a2b656a5afb104",
+        "summary_sha256": "7045f324ba341c2517b40410dc46d2966cccbf47dfb432e18c0d4a1be249aede",
+        "provenance_sha256": "6f01104cfb48baf8f2ada850466206bd74e4d152a28a5fc5fcfae91dd3570e28",
+        "completion_sha256": "3d078f7a7684bede1547a8241db69ad3f0582f4afbffaed76e144f66c14e1fac",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "1ea6cf8b66061754a937cd228dc6f2eafc8104c2ebb7d8776b3a0a5f02c57a03",
+        "summary_sha256": "b0b3a8d033eed9e7ec151d0c7e518dc07118950f69bfbe2c66b4bd75051cb615",
+        "provenance_sha256": "6f01104cfb48baf8f2ada850466206bd74e4d152a28a5fc5fcfae91dd3570e28",
+        "completion_sha256": "3d078f7a7684bede1547a8241db69ad3f0582f4afbffaed76e144f66c14e1fac",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "aopd_seed211": {
+      "test": {
+        "predictions_sha256": "d3b93f63a76666eb3a2c71b1c39f468e30896f47d88654f099c66c3a22a2276f",
+        "summary_sha256": "20d6e86b62c8f6bdf10403733b68842aec8f635a8c5e169a33b631936f91d441",
+        "provenance_sha256": "4498fc70caf756b81f97efa3736f0bab954bac0db7e4bd2ab67a35c6dd0a032f",
+        "completion_sha256": "d62c303c4f14b151e8d09ce7c811ef0171c7ef3fc14aef6d7ed8b93b27696cca",
+        "rows": 1500,
+        "domains": [
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "13e8b21d1ee26c70ad8b81c68d8fe1ceda600cae3fd3ee28cf4068c9cdf9bdc9",
+        "summary_sha256": "252b0fe5bdfbd60d07e22218a1577d4e18e9c7b402b02bebedd2ab9bf8bea201",
+        "provenance_sha256": "4498fc70caf756b81f97efa3736f0bab954bac0db7e4bd2ab67a35c6dd0a032f",
+        "completion_sha256": "d62c303c4f14b151e8d09ce7c811ef0171c7ef3fc14aef6d7ed8b93b27696cca",
+        "rows": 500,
+        "domains": [
+          "substitute"
+        ]
+      }
+    },
+    "offline_sft_seed211": {
+      "test": {
+        "predictions_sha256": "f51ce8e67dccbf0988bf7c2631c6ae15e03ea45b647c647e6392d2fdec1c963e",
+        "summary_sha256": "09b9bf4ea1befdc5f732ab081bde6ab9e4d6623fd634d3d8e5d86c10f3923d7f",
+        "provenance_sha256": "ac6473bbf0f2ad85ce96bb5d4c23e8e6344c8e46d8e48977e6f77691dee95518",
+        "completion_sha256": "ca43ac40e1c49b54f60749ab7f41aba0900bb8cb1201b08209956d751a871b7d",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "58fe9a3e114bfdb80705780ef8e8960396fbec20e4f08f5e6cf15d417edb0d61",
+        "summary_sha256": "11e1649519ed7a72d862ac24186a7487125337c740a9c95fe07b5265ac7c989e",
+        "provenance_sha256": "ac6473bbf0f2ad85ce96bb5d4c23e8e6344c8e46d8e48977e6f77691dee95518",
+        "completion_sha256": "ca43ac40e1c49b54f60749ab7f41aba0900bb8cb1201b08209956d751a871b7d",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "oracle_sft_seed211": {
+      "test": {
+        "predictions_sha256": "b981ee74a11aca7652a8880c524cf3adfba88f256a6e920b1f4f78e805386280",
+        "summary_sha256": "2920309c78bd44d21fabfdba48b0cb0cb2e88f59d107052f39e6399533128700",
+        "provenance_sha256": "f6906eb35fd15716dd1ed8bd12e314d8c6da04b00d84ba408cab21270334faf6",
+        "completion_sha256": "8bdd6308d88569b9ca4e806f3d403d4316045d45f312a64378e019d720dde279",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "41ce37442327505bd7b34dcd8a9534448ef8eb7ace48f00d4980572fbd2e8060",
+        "summary_sha256": "b5edfe444093a067da5d962452719fe2e7e44d88243e8d5f280b3fbbbf8ffb5d",
+        "provenance_sha256": "f6906eb35fd15716dd1ed8bd12e314d8c6da04b00d84ba408cab21270334faf6",
+        "completion_sha256": "8bdd6308d88569b9ca4e806f3d403d4316045d45f312a64378e019d720dde279",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "aopd_seed307": {
+      "test": {
+        "predictions_sha256": "b99199b561906f79e2e342f3b7f69691de509e7e09d1efa77b27886b8c0d957c",
+        "summary_sha256": "474a22f105157c1c75db5e1bcae99ba146c33fe353297dd24f87a6eb2012a9fc",
+        "provenance_sha256": "337e067ae1200d30721fafb85f5852efaa430df1fb19041e6ce6cdc4529a1bcf",
+        "completion_sha256": "98c14b47734cdda81f0d3e3d8c59b92274df2abe7aedcbc7fefcc955fa537472",
+        "rows": 1500,
+        "domains": [
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "2e9dbbaa455ffed53234287ddef17f4a6bdd9046224895b1a6394543c1198d51",
+        "summary_sha256": "3036e393751808173e0d729e20cac5445cf27b7387ee19d7d1209181c3b0ca73",
+        "provenance_sha256": "337e067ae1200d30721fafb85f5852efaa430df1fb19041e6ce6cdc4529a1bcf",
+        "completion_sha256": "98c14b47734cdda81f0d3e3d8c59b92274df2abe7aedcbc7fefcc955fa537472",
+        "rows": 500,
+        "domains": [
+          "substitute"
+        ]
+      }
+    },
+    "offline_sft_seed307": {
+      "test": {
+        "predictions_sha256": "138646392d209c27727cc76be6725d2cfbc7ac921ff33745a5d0ca1195a12fc9",
+        "summary_sha256": "d2605229a741c22ee8bb64db99eaf0e2dc2bcc07dcfa88afcc0ed3828c01b135",
+        "provenance_sha256": "402bfab21e49554a3a271c145f6b7959f8a499a5979a23358bbbcfdd4a8a1e77",
+        "completion_sha256": "07c1ee612fc7459bae938e4ed1de41f3f63f2fb863ab12d13aba0229c0f5e1d6",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "d6eff1bce042a59c257fa50ebc21a26a9d0d05d9fe493403965a5b78a435e9c6",
+        "summary_sha256": "adab4f22b53d279125375922528cdb5939fa8e8d76888731d78fd5d01fc91a0b",
+        "provenance_sha256": "402bfab21e49554a3a271c145f6b7959f8a499a5979a23358bbbcfdd4a8a1e77",
+        "completion_sha256": "07c1ee612fc7459bae938e4ed1de41f3f63f2fb863ab12d13aba0229c0f5e1d6",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "oracle_sft_seed307": {
+      "test": {
+        "predictions_sha256": "911a0f9730d8cb5815706fe37b919ffbdd5a35ed7b822cde670cca61960ff601",
+        "summary_sha256": "27ec617967fafd588abbb1016a399e14e0b53a97c6b75f4614510120ff45778f",
+        "provenance_sha256": "4483def1cbee4079745cd9236361000aec9bae2062f5cbcf52fd4076a85730af",
+        "completion_sha256": "9a1271872b88d6e5668c4f6cf201fa6c9e7415f356fa7ea5047016e46106cf3e",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "b15b1d867af1f7bd856edc284e3b4459c8d300ef4cf91908c008390c807fc297",
+        "summary_sha256": "6c1cacb43e9617dd3c0eec4cf6ca2a5800b2c44636f9e62e397c53e3b3cc8b97",
+        "provenance_sha256": "4483def1cbee4079745cd9236361000aec9bae2062f5cbcf52fd4076a85730af",
+        "completion_sha256": "9a1271872b88d6e5668c4f6cf201fa6c9e7415f356fa7ea5047016e46106cf3e",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "aopd_seed401": {
+      "test": {
+        "predictions_sha256": "a9bd336d00695fd956f03cd6a6c90ea34e47027d509538f4d8cf7dd814dbf921",
+        "summary_sha256": "dc2d91b47fe91ecd308dbfc42555a49f92c023cb4bce417a348f1bfd8e0f14ed",
+        "provenance_sha256": "845a367413211d09665ab404f16de14dca38a2a7b9ff9af7d802e14fd1b95b83",
+        "completion_sha256": "b6303c4d9367e5c0bc5bfc6161e25ef2adde589843861ea977df851b1b614aec",
+        "rows": 1500,
+        "domains": [
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "8e6ae30d36b43036882f6d299c68d2c6e45128baaa3c8c18cd40fa35f3cec20d",
+        "summary_sha256": "582d37e4572db2aaf62e2e93ca0ece40c9e9eb2942f11f66d0a7972079d5fffb",
+        "provenance_sha256": "845a367413211d09665ab404f16de14dca38a2a7b9ff9af7d802e14fd1b95b83",
+        "completion_sha256": "b6303c4d9367e5c0bc5bfc6161e25ef2adde589843861ea977df851b1b614aec",
+        "rows": 500,
+        "domains": [
+          "substitute"
+        ]
+      }
+    },
+    "offline_sft_seed401": {
+      "test": {
+        "predictions_sha256": "8f6fa9c6673c4819ebf9b876aa9d385a8e0bd50d804630fedeae8fd79d253beb",
+        "summary_sha256": "43786af20a8d0311a098ae6cc7d1eac363d4bcf4a9cddfc0146dc5e93e8a2a2e",
+        "provenance_sha256": "1d7f23c97cb0d1df1dfec56d5326d9276afbb0285ec8211a05bfb475f28d28bd",
+        "completion_sha256": "4e069d9ac47e18bada55787cd61c4a9d8a6ff06ee4decd835249084ec3c42e8e",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "df32d80cc1d4bd42f2ebfd1ec95a87af7ce7a7f5822467981dee68b057c46682",
+        "summary_sha256": "b714d0f05a32441fa7552ad407619e8f611b2f4f6593df71686abb2b379c9038",
+        "provenance_sha256": "1d7f23c97cb0d1df1dfec56d5326d9276afbb0285ec8211a05bfb475f28d28bd",
+        "completion_sha256": "4e069d9ac47e18bada55787cd61c4a9d8a6ff06ee4decd835249084ec3c42e8e",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    },
+    "oracle_sft_seed401": {
+      "test": {
+        "predictions_sha256": "017465a92bbb1b206475d6cf81898569daf0526a9f5f31b79bd47e9430cc331b",
+        "summary_sha256": "7782c57b6c36cb92ad20d89f024d078fd077563be5014f1dd01d32b1716d33ad",
+        "provenance_sha256": "10db3f48c807b2b2100241f9a0c8bcb287780908ae7646ec3b6ef24d922b4ea0",
+        "completion_sha256": "7430e1a875407f6603256d0b98e54f4edb44ae325871219b4d564b60ae67cc81",
+        "rows": 5000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      },
+      "ood": {
+        "predictions_sha256": "a348b111a00c2d4c60a838df0770040e3f43cb0d1ba997c5ded74c5861018ee3",
+        "summary_sha256": "e5d9bb7815190ae1bda3dd048eb9bee783872b9cb41149d9878a587a08bee70e",
+        "provenance_sha256": "10db3f48c807b2b2100241f9a0c8bcb287780908ae7646ec3b6ef24d922b4ea0",
+        "completion_sha256": "7430e1a875407f6603256d0b98e54f4edb44ae325871219b4d564b60ae67cc81",
+        "rows": 2000,
+        "domains": [
+          "math",
+          "relevance",
+          "search",
+          "substitute"
+        ]
+      }
+    }
+  },
+  "primary_test": {
+    "domains": {
+      "search": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.8606424374817939,
+          0.8623487747368013,
+          0.8587041041498131,
+          0.8613712356361747
+        ],
+        "candidate_seed_scores": [
+          0.8606424374817939,
+          0.8623487747368013,
+          0.8587041041498131,
+          0.8613712356361747
+        ],
+        "baseline_mean": 0.8607666380011457,
+        "candidate_mean": 0.8607666380011457,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "relevance": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.5113521295362261,
+          0.5136623727869138,
+          0.512507594200189,
+          0.5211733162375181
+        ],
+        "candidate_seed_scores": [
+          0.5113521295362261,
+          0.5136623727869138,
+          0.512507594200189,
+          0.5211733162375181
+        ],
+        "baseline_mean": 0.5146738531902117,
+        "candidate_mean": 0.5146738531902117,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "substitute": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.6516518582868153,
+          0.6508379888268156,
+          0.6467671968601528,
+          0.634347717388988
+        ],
+        "candidate_seed_scores": [
+          0.6560867048724617,
+          0.6459050487664946,
+          0.6457639451405951,
+          0.6181899276021166
+        ],
+        "baseline_mean": 0.6459011903406928,
+        "candidate_mean": 0.641486406595417,
+        "paired_seed_deltas": [
+          0.0044348465856464125,
+          -0.004932940060321078,
+          -0.0010032517195577295,
+          -0.016157789786871435
+        ],
+        "delta": -0.0044147837452759575,
+        "paired_query_ci95": [
+          -0.017758918741830512,
+          0.009199387268660248
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.022309906944201444,
+          0.011814354650614669
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "math": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.466,
+          0.468,
+          0.494,
+          0.464
+        ],
+        "candidate_seed_scores": [
+          0.466,
+          0.468,
+          0.494,
+          0.464
+        ],
+        "baseline_mean": 0.473,
+        "candidate_mean": 0.473,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "quality_gate_checks_by_seed": [
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8606424374817939,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5113521295362261,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.524024024024024,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6190476190476191,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6451612903225806,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5141700404858299,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6560867048724617,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5181451612903226,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7898406374501992,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8623487747368013,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5136623727869138,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5180180180180181,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6476190476190476,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6451612903225806,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.46963562753036436,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6459050487664946,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5383064516129032,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7559760956175299,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8587041041498131,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.512507594200189,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.49099099099099097,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6628571428571428,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6129032258064516,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5020242914979757,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6457639451405951,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6088709677419355,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.702191235059761,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8613712356361747,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5211733162375181,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5795795795795796,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6095238095238096,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6290322580645161,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.46558704453441296,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6181899276021166,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 0.9853333333333333,
+          "minimum": 0.99,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6995967741935484,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.5856573705179283,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ]
+    ],
+    "all_seed_quality_gates_passed": false,
+    "business_macro": {
+      "delta": -0.0014715945817586524,
+      "paired_seed_deltas": [
+        0.0014782821952154708,
+        -0.0016443133534403593,
+        -0.0003344172398525765,
+        -0.005385929928957145
+      ],
+      "paired_query_ci95": [
+        -0.005919639580610171,
+        0.0030664624228867493
+      ],
+      "exploratory_seed_query_ci95": [
+        -0.007436635648067148,
+        0.003938118216871556
+      ],
+      "exploratory_seed_only_ci95": [
+        -0.0041230517566810026,
+        0.0006976333080515132
+      ],
+      "positive_seed_pairs": 1
+    },
+    "all_business_domains_noninferior": true,
+    "svamp_regression_noninferior": true,
+    "quality_advantage_supported": false,
+    "bootstrap_repetitions": 5000,
+    "ci_scope": "Primary query intervals condition on the observed paired training seeds. Four seeds do not establish universal training-seed robustness.",
+    "multiplicity": "One frozen business-macro primary comparison; domain intervals are pointwise, and every domain must pass the noninferiority gate.",
+    "cost_boundary": "Quality advantage alone does not establish cost or throughput advantage."
+  },
+  "disjoint_replication": {
+    "domains": {
+      "search": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.8653295290462462,
+          0.8629273420429747,
+          0.8588384898757143,
+          0.8609597825637052
+        ],
+        "candidate_seed_scores": [
+          0.8653295290462462,
+          0.8629273420429747,
+          0.8588384898757143,
+          0.8609597825637052
+        ],
+        "baseline_mean": 0.86201378588216,
+        "candidate_mean": 0.86201378588216,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "relevance": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.5109846361199961,
+          0.4955323567866523,
+          0.5168188690142614,
+          0.5081955677365944
+        ],
+        "candidate_seed_scores": [
+          0.5109846361199961,
+          0.4955323567866523,
+          0.5168188690142614,
+          0.5081955677365944
+        ],
+        "baseline_mean": 0.5078828574143761,
+        "candidate_mean": 0.5078828574143761,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "substitute": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.6249557730864489,
+          0.6172862491983698,
+          0.6207042972533265,
+          0.6164135651900228
+        ],
+        "candidate_seed_scores": [
+          0.6327061083799514,
+          0.6202339358954884,
+          0.6236779211176106,
+          0.5784615909313757
+        ],
+        "baseline_mean": 0.619839971182042,
+        "candidate_mean": 0.6137698890811065,
+        "paired_seed_deltas": [
+          0.007750335293502553,
+          0.0029476866971185345,
+          0.002973623864284014,
+          -0.03795197425864705
+        ],
+        "delta": -0.006070082100935487,
+        "paired_query_ci95": [
+          -0.028065542765554938,
+          0.017310805534229135
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.03890748326819953,
+          0.02354438309872372
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "math": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.44,
+          0.486,
+          0.472,
+          0.468
+        ],
+        "candidate_seed_scores": [
+          0.44,
+          0.486,
+          0.472,
+          0.468
+        ],
+        "baseline_mean": 0.46649999999999997,
+        "candidate_mean": 0.46649999999999997,
+        "paired_seed_deltas": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta": 0.0,
+        "paired_query_ci95": [
+          0.0,
+          0.0
+        ],
+        "exploratory_seed_query_ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "quality_gate_checks_by_seed": [
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8653295290462462,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5109846361199961,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5676855895196506,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6123595505617978,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5238095238095238,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5138888888888888,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6327061083799514,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5033557046979866,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7663817663817664,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8629273420429747,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4955323567866523,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5545851528384279,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6404494382022472,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.47619047619047616,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4305555555555556,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6202339358954884,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5167785234899329,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7350427350427351,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8588384898757143,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5168188690142614,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5502183406113537,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6573033707865169,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5238095238095238,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6236779211176106,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5973154362416108,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.6837606837606838,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8609597825637052,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5081955677365944,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6069868995633187,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.601123595505618,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.47619047619047616,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4583333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.5784615909313757,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 0.984,
+          "minimum": 0.99,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6442953020134228,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.5698005698005698,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ]
+    ],
+    "all_seed_quality_gates_passed": false,
+    "business_macro": {
+      "delta": -0.002023360700311829,
+      "paired_seed_deltas": [
+        0.002583445097834184,
+        0.000982562232372845,
+        0.000991207954761338,
+        -0.012650658086215683
+      ],
+      "paired_query_ci95": [
+        -0.009355180921851646,
+        0.005770268511409712
+      ],
+      "exploratory_seed_query_ci95": [
+        -0.012969161089399843,
+        0.007848127699574572
+      ],
+      "exploratory_seed_only_ci95": [
+        -0.009240191575971427,
+        0.0021832243814688492
+      ],
+      "positive_seed_pairs": 3
+    },
+    "all_business_domains_noninferior": true,
+    "svamp_regression_noninferior": true,
+    "quality_advantage_supported": false,
+    "bootstrap_repetitions": 5000,
+    "ci_scope": "Primary query intervals condition on the observed paired training seeds. Four seeds do not establish universal training-seed robustness.",
+    "multiplicity": "One frozen business-macro primary comparison; domain intervals are pointwise, and every domain must pass the noninferiority gate.",
+    "cost_boundary": "Quality advantage alone does not establish cost or throughput advantage."
+  },
+  "oracle_primary_test": {
+    "domains": {
+      "search": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.858750349314175,
+          0.8606805180703325,
+          0.8588450780201404,
+          0.856041623535017
+        ],
+        "candidate_seed_scores": [
+          0.8606424374817939,
+          0.8623487747368013,
+          0.8587041041498131,
+          0.8613712356361747
+        ],
+        "baseline_mean": 0.8585793922349163,
+        "candidate_mean": 0.8607666380011457,
+        "paired_seed_deltas": [
+          0.0018920881676188772,
+          0.0016682566664687482,
+          -0.0001409738703272989,
+          0.005329612101157677
+        ],
+        "delta": 0.002187245766229501,
+        "paired_query_ci95": [
+          -0.0008467433649228139,
+          0.005411223244592443
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.0017641837289965542,
+          0.006276212723088924
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "relevance": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.5027092907758721,
+          0.4962982812755722,
+          0.4923287691179478,
+          0.5109862951111255
+        ],
+        "candidate_seed_scores": [
+          0.5113521295362261,
+          0.5136623727869138,
+          0.512507594200189,
+          0.5211733162375181
+        ],
+        "baseline_mean": 0.5005806590701294,
+        "candidate_mean": 0.5146738531902117,
+        "paired_seed_deltas": [
+          0.008642838760353988,
+          0.01736409151134166,
+          0.02017882508224117,
+          0.010187021126392581
+        ],
+        "delta": 0.01409319412008235,
+        "paired_query_ci95": [
+          -0.002838781549223583,
+          0.03027593560607388
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.0054598385394317,
+          0.033036937577696414
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "substitute": {
+        "n_independent_queries": 1500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.6324633189676045,
+          0.6486479452411316,
+          0.6260215153054158,
+          0.63056981723122
+        ],
+        "candidate_seed_scores": [
+          0.6560867048724617,
+          0.6459050487664946,
+          0.6457639451405951,
+          0.6181899276021166
+        ],
+        "baseline_mean": 0.6344256491863429,
+        "candidate_mean": 0.641486406595417,
+        "paired_seed_deltas": [
+          0.02362338590485713,
+          -0.002742896474636991,
+          0.019742429835179265,
+          -0.012379889629103413
+        ],
+        "delta": 0.007060757409073998,
+        "paired_query_ci95": [
+          -0.007087473846273059,
+          0.021543667558504467
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.015967323615741994,
+          0.030295044319553915
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "math": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.466,
+          0.484,
+          0.442,
+          0.454
+        ],
+        "candidate_seed_scores": [
+          0.466,
+          0.468,
+          0.494,
+          0.464
+        ],
+        "baseline_mean": 0.46149999999999997,
+        "candidate_mean": 0.473,
+        "paired_seed_deltas": [
+          0.0,
+          -0.01599999999999996,
+          0.05199999999999999,
+          0.010000000000000009
+        ],
+        "delta": 0.01150000000000001,
+        "paired_query_ci95": [
+          -0.0040000000000000036,
+          0.02700000000000001
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.018000000000000016,
+          0.04300000000000001
+        ]
+      }
+    },
+    "quality_gate_checks_by_seed": [
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8606424374817939,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5113521295362261,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.524024024024024,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6190476190476191,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6451612903225806,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5141700404858299,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6560867048724617,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5181451612903226,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7898406374501992,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8623487747368013,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5136623727869138,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5180180180180181,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6476190476190476,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6451612903225806,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.46963562753036436,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6459050487664946,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5383064516129032,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7559760956175299,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8587041041498131,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.512507594200189,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.49099099099099097,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6628571428571428,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6129032258064516,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5020242914979757,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6457639451405951,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6088709677419355,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.702191235059761,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8613712356361747,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5211733162375181,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5795795795795796,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6095238095238096,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6290322580645161,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.46558704453441296,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6181899276021166,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 0.9853333333333333,
+          "minimum": 0.99,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6995967741935484,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.5856573705179283,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ]
+    ],
+    "all_seed_quality_gates_passed": false,
+    "business_macro": {
+      "delta": 0.007780399098461951,
+      "paired_seed_deltas": [
+        0.011386104277609999,
+        0.00542981723439114,
+        0.013260093682364379,
+        0.0010455811994822817
+      ],
+      "paired_query_ci95": [
+        0.000389635568049049,
+        0.015002207332139568
+      ],
+      "exploratory_seed_query_ci95": [
+        -0.002249372760101498,
+        0.0173420744161786
+      ],
+      "exploratory_seed_only_ci95": [
+        0.003237699216936711,
+        0.01232309897998719
+      ],
+      "positive_seed_pairs": 4
+    },
+    "all_business_domains_noninferior": true,
+    "svamp_regression_noninferior": true,
+    "quality_advantage_supported": false,
+    "bootstrap_repetitions": 5000,
+    "ci_scope": "Primary query intervals condition on the observed paired training seeds. Four seeds do not establish universal training-seed robustness.",
+    "multiplicity": "One frozen business-macro primary comparison; domain intervals are pointwise, and every domain must pass the noninferiority gate.",
+    "cost_boundary": "Quality advantage alone does not establish cost or throughput advantage."
+  },
+  "oracle_disjoint_replication": {
+    "domains": {
+      "search": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.8583904613261047,
+          0.8570462042005429,
+          0.8593254132184497,
+          0.853285609268956
+        ],
+        "candidate_seed_scores": [
+          0.8653295290462462,
+          0.8629273420429747,
+          0.8588384898757143,
+          0.8609597825637052
+        ],
+        "baseline_mean": 0.8570119220035133,
+        "candidate_mean": 0.86201378588216,
+        "paired_seed_deltas": [
+          0.006939067720141412,
+          0.005881137842431827,
+          -0.0004869233427353681,
+          0.007674173294749176
+        ],
+        "delta": 0.005001863878646762,
+        "paired_query_ci95": [
+          -0.00030602513490386377,
+          0.01064235554171714
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.001938314054470977,
+          0.01166173578237611
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "relevance": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.49366591993652786,
+          0.48788468020015036,
+          0.46347644937319077,
+          0.4969155031739743
+        ],
+        "candidate_seed_scores": [
+          0.5109846361199961,
+          0.4955323567866523,
+          0.5168188690142614,
+          0.5081955677365944
+        ],
+        "baseline_mean": 0.48548563817096085,
+        "candidate_mean": 0.5078828574143761,
+        "paired_seed_deltas": [
+          0.017318716183468252,
+          0.00764767658650195,
+          0.05334241964107067,
+          0.01128006456262004
+        ],
+        "delta": 0.02239721924341523,
+        "paired_query_ci95": [
+          -0.010854457278613096,
+          0.05444336977118098
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.017081632049676717,
+          0.06173447247419535
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "substitute": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.6039045611396807,
+          0.6231617647058824,
+          0.5949435452566201,
+          0.6118208975375943
+        ],
+        "candidate_seed_scores": [
+          0.6327061083799514,
+          0.6202339358954884,
+          0.6236779211176106,
+          0.5784615909313757
+        ],
+        "baseline_mean": 0.6084576921599444,
+        "candidate_mean": 0.6137698890811065,
+        "paired_seed_deltas": [
+          0.02880154724027073,
+          -0.0029278288103939953,
+          0.02873437586099048,
+          -0.03335930660621855
+        ],
+        "delta": 0.005312196921162166,
+        "paired_query_ci95": [
+          -0.020078561056105036,
+          0.03015754236193509
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.03312926940481926,
+          0.04125845725330604
+        ],
+        "noninferiority_margin": -0.03,
+        "noninferior": true
+      },
+      "math": {
+        "n_independent_queries": 500,
+        "n_paired_training_seeds": 4,
+        "baseline_seed_scores": [
+          0.442,
+          0.458,
+          0.44,
+          0.46
+        ],
+        "candidate_seed_scores": [
+          0.44,
+          0.486,
+          0.472,
+          0.468
+        ],
+        "baseline_mean": 0.45,
+        "candidate_mean": 0.46649999999999997,
+        "paired_seed_deltas": [
+          -0.0020000000000000018,
+          0.02799999999999997,
+          0.03199999999999997,
+          0.008000000000000007
+        ],
+        "delta": 0.016499999999999987,
+        "paired_query_ci95": [
+          0.0010000000000000009,
+          0.03200000000000003
+        ],
+        "exploratory_seed_query_ci95": [
+          -0.00799999999999998,
+          0.03949999999999999
+        ]
+      }
+    },
+    "quality_gate_checks_by_seed": [
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8653295290462462,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5109846361199961,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5676855895196506,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6123595505617978,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5238095238095238,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5138888888888888,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6327061083799514,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5033557046979866,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7663817663817664,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8629273420429747,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4955323567866523,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5545851528384279,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6404494382022472,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.47619047619047616,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4305555555555556,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6202339358954884,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5167785234899329,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.7350427350427351,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8588384898757143,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5168188690142614,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5502183406113537,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6573033707865169,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5238095238095238,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6236779211176106,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5973154362416108,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.6837606837606838,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      [
+        {
+          "criterion": "search/metric",
+          "value": 0.8609597825637052,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5081955677365944,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6069868995633187,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.601123595505618,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.47619047619047616,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4583333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.5784615909313757,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 0.984,
+          "minimum": 0.99,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6442953020134228,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.5698005698005698,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ]
+    ],
+    "all_seed_quality_gates_passed": false,
+    "business_macro": {
+      "delta": 0.010903760014408053,
+      "paired_seed_deltas": [
+        0.0176864437146268,
+        0.0035336618728465945,
+        0.027196624053108596,
+        -0.00480168958294978
+      ],
+      "paired_query_ci95": [
+        -0.00315401685593412,
+        0.024455230788079922
+      ],
+      "exploratory_seed_query_ci95": [
+        -0.00804583969896303,
+        0.029881941145006922
+      ],
+      "exploratory_seed_only_ci95": [
+        -0.0006340138550515929,
+        0.0224415338838677
+      ],
+      "positive_seed_pairs": 3
+    },
+    "all_business_domains_noninferior": true,
+    "svamp_regression_noninferior": true,
+    "quality_advantage_supported": false,
+    "bootstrap_repetitions": 5000,
+    "ci_scope": "Primary query intervals condition on the observed paired training seeds. Four seeds do not establish universal training-seed robustness.",
+    "multiplicity": "One frozen business-macro primary comparison; domain intervals are pointwise, and every domain must pass the noninferiority gate.",
+    "cost_boundary": "Quality advantage alone does not establish cost or throughput advantage."
+  },
+  "quality_advantage_supported": false,
+  "cost_advantage_supported": false,
+  "boundary": "The post-hoc DEV router is tested once on two disjoint query splits under four paired training seeds. Query intervals condition on those observed seeds; no universal seed or cost claim is made."
+}

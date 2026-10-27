@@ -1,0 +1,72 @@
+{
+  "student_sft_lr1e4": {
+    "domains": {
+      "search": {
+        "n": 40,
+        "changed_texts": 1,
+        "training_metric": 0.8272042425533953,
+        "deployment_metric_same_queries": 0.8281266016203112
+      },
+      "relevance": {
+        "n": 40,
+        "changed_texts": 2,
+        "training_metric": 0.7091767881241566,
+        "deployment_metric_same_queries": 0.6900375939849623
+      },
+      "substitute": {
+        "n": 40,
+        "changed_texts": 3,
+        "training_metric": 0.6491228070175439,
+        "deployment_metric_same_queries": 0.6247654784240151
+      },
+      "math": {
+        "n": 40,
+        "changed_texts": 5,
+        "training_metric": 0.025,
+        "deployment_metric_same_queries": 0.025
+      },
+      "instruction": {
+        "n": 40,
+        "changed_texts": 1,
+        "training_metric": 0.95,
+        "deployment_metric_same_queries": 0.975
+      }
+    },
+    "boundary": "Same development queries: FP32 training runtime vs BF16 adapter merge. Both precision and adapter merge differ; cannot attribute causal numerical error from this observation alone."
+  },
+  "student_sft_lr5e5": {
+    "domains": {
+      "search": {
+        "n": 40,
+        "changed_texts": 2,
+        "training_metric": 0.8170168255622071,
+        "deployment_metric_same_queries": 0.8128791538045071
+      },
+      "relevance": {
+        "n": 40,
+        "changed_texts": 5,
+        "training_metric": 0.6062091503267973,
+        "deployment_metric_same_queries": 0.5805555555555555
+      },
+      "substitute": {
+        "n": 40,
+        "changed_texts": 2,
+        "training_metric": 0.6203623813632442,
+        "deployment_metric_same_queries": 0.5891690009337068
+      },
+      "math": {
+        "n": 40,
+        "changed_texts": 7,
+        "training_metric": 0.1,
+        "deployment_metric_same_queries": 0.075
+      },
+      "instruction": {
+        "n": 40,
+        "changed_texts": 0,
+        "training_metric": 0.95,
+        "deployment_metric_same_queries": 0.95
+      }
+    },
+    "boundary": "Same development queries: FP32 training runtime vs BF16 adapter merge. Both precision and adapter merge differ; cannot attribute causal numerical error from this observation alone."
+  }
+}

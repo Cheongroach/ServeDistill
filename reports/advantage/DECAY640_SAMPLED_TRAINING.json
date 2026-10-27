@@ -1,0 +1,1193 @@
+{
+  "utc": "2026-10-26T00:17:13.497574+00:00",
+  "arms": {
+    "decay_opd_token_lr2e5": {
+      "sampled_steps": 640,
+      "config_sha256": "19f1c1ae71682d9f3d30e750a3b234e78c65c42b26d28b18ccb80e74e4ba26e7",
+      "rollouts_snapshot_sha256": "46fa570be4c90bdd67f5e869cd9ef39b44f9b3c38b49ccb0a3cbd6e9a2dfc6b6",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8332868790304797,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4379391100702576,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.4812646370023419,
+              "prediction_counts": {
+                "C": 176,
+                "S": 240,
+                "E": 176,
+                "I": 262
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5129107981220657,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.5363849765258216,
+              "prediction_counts": {
+                "no": 429,
+                "yes": 420,
+                "INVALID": 3
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.5070754716981132
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.14375,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.9,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5386416861826698,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.6065573770491803,
+              "prediction_counts": {
+                "no": 484,
+                "yes": 368,
+                "INVALID": 2
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.47085201793721976
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8231495431715833,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.47417840375586856,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.5387323943661971,
+              "prediction_counts": {
+                "S": 255,
+                "C": 186,
+                "E": 124,
+                "I": 286,
+                "INVALID": 1
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.09375,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.878125,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.48711943793911006,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.5433255269320844,
+              "prediction_counts": {
+                "I": 259,
+                "E": 181,
+                "S": 264,
+                "C": 150
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5526932084309133,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.6042154566744731,
+              "prediction_counts": {
+                "no": 470,
+                "yes": 384
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.5024875621890548
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8449058141880864,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.11875,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.834375,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8335305161826319,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.48360655737704916,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5644028103044496,
+              "prediction_counts": {
+                "C": 193,
+                "S": 243,
+                "I": 246,
+                "E": 172
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5692488262910798,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.6349765258215962,
+              "prediction_counts": {
+                "no": 489,
+                "yes": 363
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.4949748743718593
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.159375,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.865625,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    },
+    "decay_opd_token_lr5e5": {
+      "sampled_steps": 640,
+      "config_sha256": "8d4ced5d90ecc68734d665952626ba5697d2f7be60def086c560c342ac67011b",
+      "rollouts_snapshot_sha256": "445945d4f67b5bdfa2ae8c97db1a3b4139ed4e8044ece05c0f0700a8e613c1c6",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8277919639189892,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4426229508196721,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.49414519906323184,
+              "prediction_counts": {
+                "C": 164,
+                "S": 270,
+                "E": 168,
+                "I": 251,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5223004694835681,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.5410798122065728,
+              "prediction_counts": {
+                "no": 472,
+                "yes": 376,
+                "INVALID": 4
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.4669811320754717
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.109375,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.8875,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5620608899297423,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.6323185011709602,
+              "prediction_counts": {
+                "no": 472,
+                "yes": 382
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.5089686098654709
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8291574951143403,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.47300469483568075,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.5645539906103286,
+              "prediction_counts": {
+                "S": 274,
+                "I": 259,
+                "C": 178,
+                "E": 140,
+                "INVALID": 1
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.078125,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.846875,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5175644028103045,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.5456674473067916,
+              "prediction_counts": {
+                "S": 264,
+                "I": 260,
+                "C": 157,
+                "E": 173
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5761124121779859,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.607728337236534,
+              "prediction_counts": {
+                "yes": 375,
+                "no": 476,
+                "INVALID": 3
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.5174129353233831
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8341863651766463,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.11875,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.778125,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8324093279534829,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4637002341920375,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5608899297423887,
+              "prediction_counts": {
+                "C": 171,
+                "S": 254,
+                "E": 165,
+                "I": 263,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5469483568075117,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.6220657276995305,
+              "prediction_counts": {
+                "yes": 360,
+                "no": 490,
+                "INVALID": 2
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.46984924623115576
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.10625,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.8625,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    },
+    "decay_opd_trajectory_lr2e5": {
+      "sampled_steps": 640,
+      "config_sha256": "9ecec756d8c600f351559de0fd5ce1fc72909a48e2abc98d7dbe31ffd119bea4",
+      "rollouts_snapshot_sha256": "60a84720778d41f7cfb925e83679bed1a0ac576a3ea0d99156343d9a5aedaf2d",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8312884545256023,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.44379391100702575,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.4882903981264637,
+              "prediction_counts": {
+                "C": 179,
+                "S": 266,
+                "E": 168,
+                "I": 240,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5316901408450704,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.5633802816901409,
+              "prediction_counts": {
+                "no": 451,
+                "yes": 397,
+                "INVALID": 4
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.5
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.11875,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.884375,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5468384074941453,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.5655737704918032,
+              "prediction_counts": {
+                "no": 458,
+                "yes": 395,
+                "INVALID": 1
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.5089686098654709
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8314710102939566,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.49061032863849763,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.5774647887323944,
+              "prediction_counts": {
+                "S": 283,
+                "C": 185,
+                "I": 248,
+                "E": 136
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.128125,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.853125,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5035128805620609,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.5620608899297423,
+              "prediction_counts": {
+                "I": 237,
+                "S": 279,
+                "C": 169,
+                "E": 166,
+                "INVALID": 3
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5339578454332553,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.6346604215456675,
+              "prediction_counts": {
+                "no": 483,
+                "yes": 369,
+                "INVALID": 2
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.4651741293532338
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8483312186755234,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.09375,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.83125,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8312067691967087,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4648711943793911,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5960187353629977,
+              "prediction_counts": {
+                "C": 167,
+                "S": 255,
+                "E": 189,
+                "I": 241,
+                "INVALID": 2
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5528169014084507,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.5997652582159625,
+              "prediction_counts": {
+                "yes": 355,
+                "no": 497
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.46733668341708545
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.146875,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.884375,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    },
+    "decay_opd_trajectory_lr5e5": {
+      "sampled_steps": 640,
+      "config_sha256": "83a3f664428ffee58aa929ed0a9adc442e201f7ddddaceef6ca80ead07c44d47",
+      "rollouts_snapshot_sha256": "ac308b5232bcfefa2df5575954d24c04e58e3a11539bdbf1e46a31e144749d8e",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8367578240244731,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4238875878220141,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.5023419203747073,
+              "prediction_counts": {
+                "C": 148,
+                "S": 304,
+                "E": 167,
+                "I": 234,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.539906103286385,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.5786384976525821,
+              "prediction_counts": {
+                "no": 460,
+                "yes": 391,
+                "INVALID": 1
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.5
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.140625,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.890625,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5480093676814989,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.550351288056206,
+              "prediction_counts": {
+                "no": 491,
+                "yes": 361,
+                "INVALID": 2
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.4730941704035874
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8182577284162784,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.4706572769953052,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.5434272300469484,
+              "prediction_counts": {
+                "S": 275,
+                "C": 180,
+                "I": 269,
+                "E": 126,
+                "INVALID": 2
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.09375,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.840625,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4953161592505855,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.563231850117096,
+              "prediction_counts": {
+                "S": 265,
+                "I": 281,
+                "C": 148,
+                "E": 159,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5608899297423887,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.6252927400468384,
+              "prediction_counts": {
+                "yes": 383,
+                "no": 469,
+                "INVALID": 2
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.5099502487562189
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8407362526307206,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.071875,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.8625,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8263995144154532,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.42505854800936765,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5608899297423887,
+              "prediction_counts": {
+                "C": 182,
+                "I": 215,
+                "E": 190,
+                "S": 267
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5985915492957746,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.6431924882629108,
+              "prediction_counts": {
+                "yes": 347,
+                "no": 503,
+                "INVALID": 2
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.507537688442211
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.146875,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.88125,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    },
+    "decay_opd_token_lr1e5": {
+      "sampled_steps": 640,
+      "config_sha256": "35a3fd7c63740ab812327f5457e338288528c522219214b90cf62975e190a514",
+      "rollouts_snapshot_sha256": "d087bde36f70ecc9fe9b0b52141afa14e2868297f857efd64fe0f5b55ce35105",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8337151181061483,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.446135831381733,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.4519906323185012,
+              "prediction_counts": {
+                "C": 160,
+                "S": 273,
+                "E": 188,
+                "I": 232,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.545774647887324,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.5187793427230047,
+              "prediction_counts": {
+                "no": 426,
+                "yes": 424,
+                "INVALID": 2
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.5448113207547169
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.134375,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.890625,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5362997658079626,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.5784543325526932,
+              "prediction_counts": {
+                "no": 487,
+                "yes": 363,
+                "INVALID": 4
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.4641255605381166
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8302873674098354,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.4612676056338028,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.5363849765258216,
+              "prediction_counts": {
+                "I": 265,
+                "S": 255,
+                "C": 195,
+                "E": 136,
+                "INVALID": 1
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.115625,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.878125,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4882903981264637,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.5374707259953162,
+              "prediction_counts": {
+                "S": 258,
+                "I": 273,
+                "C": 145,
+                "E": 177,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5257611241217799,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.5690866510538641,
+              "prediction_counts": {
+                "yes": 379,
+                "no": 472,
+                "INVALID": 3
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.4701492537313433
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8386915255747578,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.14375,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.853125,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8228936961571597,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.47540983606557374,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5550351288056206,
+              "prediction_counts": {
+                "S": 249,
+                "C": 174,
+                "E": 175,
+                "I": 255,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5692488262910798,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.5950704225352113,
+              "prediction_counts": {
+                "yes": 355,
+                "no": 496,
+                "INVALID": 1
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.4849246231155779
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.1625,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.884375,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    },
+    "decay_opd_trajectory_lr1e5": {
+      "sampled_steps": 640,
+      "config_sha256": "a003fe3d745ec2fbaec3a45c7147bd2fcfcf4dc2614b2e5a1099f16d87e6241e",
+      "rollouts_snapshot_sha256": "8524f175a0d08ed981df51fd8764e02eae8566b7d674bfa9401f08f5cb792fc4",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "unique_training_inputs": 1391,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8472527635603763,
+              "teacher_hard_reward_mean": 0.8783493856776718
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.45550351288056207,
+              "teacher_hard_reward_mean": 0.594847775175644,
+              "teacher_hard_agreement": 0.4812646370023419,
+              "prediction_counts": {
+                "C": 146,
+                "S": 272,
+                "E": 185,
+                "I": 249,
+                "INVALID": 2
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5492957746478874,
+              "teacher_hard_reward_mean": 0.704225352112676,
+              "teacher_hard_agreement": 0.539906103286385,
+              "prediction_counts": {
+                "no": 438,
+                "yes": 411,
+                "INVALID": 3
+              },
+              "positive_targets": 424,
+              "yes_recall": 0.5330188679245284
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.10625,
+              "teacher_hard_reward_mean": 0.33125
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.88125,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "unique_training_inputs": 1369,
+          "domains": {
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.522248243559719,
+              "teacher_hard_reward_mean": 0.6651053864168618,
+              "teacher_hard_agreement": 0.5620608899297423,
+              "prediction_counts": {
+                "no": 476,
+                "yes": 376,
+                "INVALID": 2
+              },
+              "positive_targets": 446,
+              "yes_recall": 0.4641255605381166
+            },
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8160404896143186,
+              "teacher_hard_reward_mean": 0.8607748526164871
+            },
+            "relevance": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.4812206572769953,
+              "teacher_hard_reward_mean": 0.636150234741784,
+              "teacher_hard_agreement": 0.528169014084507,
+              "prediction_counts": {
+                "S": 272,
+                "C": 182,
+                "I": 260,
+                "E": 137,
+                "INVALID": 1
+              }
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.14375,
+              "teacher_hard_reward_mean": 0.4
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.86875,
+              "teacher_hard_reward_mean": 0.9125
+            }
+          }
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "unique_training_inputs": 1404,
+          "domains": {
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5,
+              "teacher_hard_reward_mean": 0.6416861826697893,
+              "teacher_hard_agreement": 0.5398126463700235,
+              "prediction_counts": {
+                "I": 271,
+                "S": 263,
+                "E": 179,
+                "C": 141
+              }
+            },
+            "substitute": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.5796252927400468,
+              "teacher_hard_reward_mean": 0.6838407494145199,
+              "teacher_hard_agreement": 0.6100702576112412,
+              "prediction_counts": {
+                "yes": 386,
+                "no": 467,
+                "INVALID": 1
+              },
+              "positive_targets": 402,
+              "yes_recall": 0.5348258706467661
+            },
+            "search": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.8376272494890767,
+              "teacher_hard_reward_mean": 0.8774205134428605
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.128125,
+              "teacher_hard_reward_mean": 0.41875
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.86875,
+              "teacher_hard_reward_mean": 0.91875
+            }
+          }
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "unique_training_inputs": 1406,
+          "domains": {
+            "search": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.8274240261219867,
+              "teacher_hard_reward_mean": 0.8701201051508561
+            },
+            "relevance": {
+              "sampled_responses": 854,
+              "student_reward_mean": 0.4882903981264637,
+              "teacher_hard_reward_mean": 0.6510538641686182,
+              "teacher_hard_agreement": 0.5608899297423887,
+              "prediction_counts": {
+                "C": 158,
+                "I": 264,
+                "S": 255,
+                "E": 177
+              }
+            },
+            "substitute": {
+              "sampled_responses": 852,
+              "student_reward_mean": 0.5539906103286385,
+              "teacher_hard_reward_mean": 0.6807511737089202,
+              "teacher_hard_agreement": 0.6291079812206573,
+              "prediction_counts": {
+                "yes": 382,
+                "no": 470
+              },
+              "positive_targets": 398,
+              "yes_recall": 0.5025125628140703
+            },
+            "math": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.18125,
+              "teacher_hard_reward_mean": 0.375
+            },
+            "instruction": {
+              "sampled_responses": 320,
+              "student_reward_mean": 0.890625,
+              "teacher_hard_reward_mean": 0.925
+            }
+          }
+        }
+      ]
+    }
+  },
+  "source_sha256": "f86c2b21252279a75598d872226818386f0a8bab11d2ad50a9d2e1b988dff5aa",
+  "train_sha256": "481c4d4d4492a5fb2b3d25d91d37fbcede02ba590c1e77730edffef6c1a4d1a4",
+  "teacher_labels_sha256": "b35950c7988130838e4bd168c0c310647237fec36bc388b66dc6d3a25e30e04c",
+  "holdout_observed": false,
+  "selection_rule_changed": false,
+  "quality_advantage_established": false,
+  "boundary": "Descriptive sampled TRAIN responses, repeated queries and changing Student distributions. Teacher hard responses paired to the same training IDs. No conditional token-signal evidence, independent samples, causal claim or DEV/holdout quality conclusion."
+}

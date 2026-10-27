@@ -1,0 +1,3472 @@
+{
+  "boundary": "No holdout outputs read; no confirmation claim",
+  "evaluations": {
+    "offline_common320_lr1e4/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6966666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6329411764705882,
+            "macro_f1": 0.6329411764705882
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 0.9933333333333333,
+            "constraint_violation": 0.0,
+            "truncated": 0.0033333333333333335,
+            "mean_output_tokens": 28.34,
+            "selection_score": 0.8284902461049515,
+            "ndcg_n": 299,
+            "ndcg": 0.8284902461049515,
+            "mrr": 0.7028015873015873
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5189831480591377,
+            "macro_f1": 0.5189831480591377
+          },
+          "math": {
+            "n": 100,
+            "success": 0.08,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.12,
+            "selection_score": 0.08
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.72,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.82,
+            "selection_score": 0.72
+          }
+        },
+        "business_macro": 0.6601381902115592,
+        "general_macro": 0.39999999999999997,
+        "overall": 0.4581818181818182
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 5,
+            "I": 114,
+            "E": 96,
+            "S": 85
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 96,
+              "true_positive": 72,
+              "precision": 0.75,
+              "recall": 0.5413533834586466,
+              "f1": 0.62882096069869
+            },
+            "S": {
+              "support": 98,
+              "predicted": 85,
+              "true_positive": 42,
+              "precision": 0.49411764705882355,
+              "recall": 0.42857142857142855,
+              "f1": 0.45901639344262296
+            },
+            "C": {
+              "support": 15,
+              "predicted": 5,
+              "true_positive": 5,
+              "precision": 1.0,
+              "recall": 0.3333333333333333,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 54,
+              "predicted": 114,
+              "true_positive": 41,
+              "precision": 0.35964912280701755,
+              "recall": 0.7592592592592593,
+              "f1": 0.4880952380952381
+            }
+          },
+          "macro_f1": 0.5189831480591377,
+          "accuracy": 0.5333333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 60,
+            "no": 240
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 60,
+              "true_positive": 42,
+              "precision": 0.7,
+              "recall": 0.3652173913043478,
+              "f1": 0.48
+            },
+            "no": {
+              "support": 185,
+              "predicted": 240,
+              "true_positive": 167,
+              "precision": 0.6958333333333333,
+              "recall": 0.9027027027027027,
+              "f1": 0.7858823529411765
+            }
+          },
+          "macro_f1": 0.6329411764705882,
+          "accuracy": 0.6966666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr1e4/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.125,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7094430992736077,
+            "macro_f1": 0.7094430992736077
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8107567473947191,
+            "ndcg_n": 39,
+            "ndcg": 0.8107567473947191,
+            "mrr": 0.5974999999999999
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.635,
+            "macro_f1": 0.635
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.7,
+            "selection_score": 0.7
+          }
+        },
+        "business_macro": 0.7183999488894424,
+        "general_macro": 0.39999999999999997,
+        "overall": 0.465
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 16,
+            "E": 8,
+            "S": 15
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 8,
+              "true_positive": 7,
+              "precision": 0.875,
+              "recall": 0.35,
+              "f1": 0.5
+            },
+            "S": {
+              "support": 10,
+              "predicted": 15,
+              "true_positive": 6,
+              "precision": 0.4,
+              "recall": 0.6,
+              "f1": 0.48
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7777777777777778,
+              "f1": 0.56
+            }
+          },
+          "macro_f1": 0.635,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 7,
+            "no": 33
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.42857142857142855,
+              "f1": 0.5714285714285714
+            },
+            "no": {
+              "support": 26,
+              "predicted": 33,
+              "true_positive": 25,
+              "precision": 0.7575757575757576,
+              "recall": 0.9615384615384616,
+              "f1": 0.847457627118644
+            }
+          },
+          "macro_f1": 0.7094430992736077,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr1e4/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.05,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.15,
+            "selection_score": 0.05
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6893874029335634,
+            "macro_f1": 0.6893874029335634
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8128357253975088,
+            "ndcg_n": 39,
+            "ndcg": 0.8128357253975088,
+            "mrr": 0.6044047619047619
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.4,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.3810989010989011,
+            "macro_f1": 0.3810989010989011
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.875,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.875,
+            "selection_score": 0.875
+          }
+        },
+        "business_macro": 0.6277740098099911,
+        "general_macro": 0.4625,
+        "overall": 0.47
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "S": 25,
+            "E": 5,
+            "I": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.2,
+              "f1": 0.32
+            },
+            "S": {
+              "support": 10,
+              "predicted": 25,
+              "true_positive": 8,
+              "precision": 0.32,
+              "recall": 0.8,
+              "f1": 0.45714285714285713
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 4,
+              "true_positive": 3,
+              "precision": 0.75,
+              "recall": 0.3333333333333333,
+              "f1": 0.46153846153846156
+            }
+          },
+          "macro_f1": 0.3810989010989011,
+          "accuracy": 0.4,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 5,
+            "no": 35
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 5,
+              "precision": 1.0,
+              "recall": 0.35714285714285715,
+              "f1": 0.5263157894736842
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 26,
+              "precision": 0.7428571428571429,
+              "recall": 1.0,
+              "f1": 0.8524590163934426
+            }
+          },
+          "macro_f1": 0.6893874029335634,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.69,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6052575729707551,
+            "macro_f1": 0.6052575729707551
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18666666666666668,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8370947056517064,
+            "ndcg_n": 299,
+            "ndcg": 0.8370947056517064,
+            "mrr": 0.7152063492063493
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5211205859980274,
+            "macro_f1": 0.5211205859980274
+          },
+          "math": {
+            "n": 100,
+            "success": 0.08,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.21,
+            "selection_score": 0.08
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.86,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.94,
+            "selection_score": 0.86
+          }
+        },
+        "business_macro": 0.6544909548734963,
+        "general_macro": 0.47,
+        "overall": 0.4727272727272727
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 14,
+            "I": 82,
+            "E": 103,
+            "S": 101
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 103,
+              "true_positive": 76,
+              "precision": 0.7378640776699029,
+              "recall": 0.5714285714285714,
+              "f1": 0.6440677966101694
+            },
+            "S": {
+              "support": 98,
+              "predicted": 101,
+              "true_positive": 47,
+              "precision": 0.46534653465346537,
+              "recall": 0.47959183673469385,
+              "f1": 0.4723618090452261
+            },
+            "C": {
+              "support": 15,
+              "predicted": 14,
+              "true_positive": 7,
+              "precision": 0.5,
+              "recall": 0.4666666666666667,
+              "f1": 0.4827586206896552
+            },
+            "I": {
+              "support": 54,
+              "predicted": 82,
+              "true_positive": 33,
+              "precision": 0.4024390243902439,
+              "recall": 0.6111111111111112,
+              "f1": 0.4852941176470588
+            }
+          },
+          "macro_f1": 0.5211205859980274,
+          "accuracy": 0.5433333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 46,
+            "no": 254
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 46,
+              "true_positive": 34,
+              "precision": 0.7391304347826086,
+              "recall": 0.2956521739130435,
+              "f1": 0.422360248447205
+            },
+            "no": {
+              "support": 185,
+              "predicted": 254,
+              "true_positive": 173,
+              "precision": 0.6811023622047244,
+              "recall": 0.9351351351351351,
+              "f1": 0.7881548974943052
+            }
+          },
+          "macro_f1": 0.6052575729707551,
+          "accuracy": 0.69,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr5e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.175,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.75,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6865203761755485,
+            "macro_f1": 0.6865203761755485
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8097095968594283,
+            "ndcg_n": 39,
+            "ndcg": 0.8097095968594283,
+            "mrr": 0.5969047619047619
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.5,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5381231671554252,
+            "macro_f1": 0.5381231671554252
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.85,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.6781177133968006,
+        "general_macro": 0.46249999999999997,
+        "overall": 0.485
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 2,
+            "I": 13,
+            "E": 11,
+            "S": 14
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 11,
+              "true_positive": 8,
+              "precision": 0.7272727272727273,
+              "recall": 0.4,
+              "f1": 0.5161290322580645
+            },
+            "S": {
+              "support": 10,
+              "predicted": 14,
+              "true_positive": 4,
+              "precision": 0.2857142857142857,
+              "recall": 0.4,
+              "f1": 0.3333333333333333
+            },
+            "C": {
+              "support": 1,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "I": {
+              "support": 9,
+              "predicted": 13,
+              "true_positive": 7,
+              "precision": 0.5384615384615384,
+              "recall": 0.7777777777777778,
+              "f1": 0.6363636363636364
+            }
+          },
+          "macro_f1": 0.5381231671554252,
+          "accuracy": 0.5,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 8,
+            "no": 32
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 8,
+              "true_positive": 6,
+              "precision": 0.75,
+              "recall": 0.42857142857142855,
+              "f1": 0.5454545454545454
+            },
+            "no": {
+              "support": 26,
+              "predicted": 32,
+              "true_positive": 24,
+              "precision": 0.75,
+              "recall": 0.9230769230769231,
+              "f1": 0.8275862068965517
+            }
+          },
+          "macro_f1": 0.6865203761755485,
+          "accuracy": 0.75,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_common320_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.225,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.8,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7802197802197802,
+            "macro_f1": 0.7802197802197802
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.803677858658733,
+            "ndcg_n": 39,
+            "ndcg": 0.803677858658733,
+            "mrr": 0.5977083333333333
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.425,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4006140917905624,
+            "macro_f1": 0.4006140917905624
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.95,
+            "selection_score": 0.9
+          }
+        },
+        "business_macro": 0.6615039102230251,
+        "general_macro": 0.4875,
+        "overall": 0.48
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "E": 6,
+            "S": 24,
+            "I": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 6,
+              "true_positive": 5,
+              "precision": 0.8333333333333334,
+              "recall": 0.25,
+              "f1": 0.38461538461538464
+            },
+            "S": {
+              "support": 10,
+              "predicted": 24,
+              "true_positive": 8,
+              "precision": 0.3333333333333333,
+              "recall": 0.8,
+              "f1": 0.47058823529411764
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 4,
+              "true_positive": 3,
+              "precision": 0.75,
+              "recall": 0.3333333333333333,
+              "f1": 0.46153846153846156
+            }
+          },
+          "macro_f1": 0.4006140917905624,
+          "accuracy": 0.425,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 14,
+              "true_positive": 10,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            },
+            "no": {
+              "support": 26,
+              "predicted": 26,
+              "true_positive": 22,
+              "precision": 0.8461538461538461,
+              "recall": 0.8461538461538461,
+              "f1": 0.8461538461538461
+            }
+          },
+          "macro_f1": 0.7802197802197802,
+          "accuracy": 0.8,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e4/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6619183285849952,
+            "macro_f1": 0.6619183285849952
+          },
+          "search": {
+            "n": 300,
+            "success": 0.16666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8242009586090195,
+            "ndcg_n": 299,
+            "ndcg": 0.8242009586090195,
+            "mrr": 0.6917380952380953
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.49666666666666665,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4242749211609087,
+            "macro_f1": 0.4242749211609087
+          },
+          "math": {
+            "n": 100,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.29,
+            "selection_score": 0.11
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.88,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.13,
+            "selection_score": 0.88
+          }
+        },
+        "business_macro": 0.6367980694516412,
+        "general_macro": 0.495,
+        "overall": 0.4627272727272727
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 35,
+            "E": 129,
+            "I": 107,
+            "S": 29
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 129,
+              "true_positive": 90,
+              "precision": 0.6976744186046512,
+              "recall": 0.6766917293233082,
+              "f1": 0.6870229007633588
+            },
+            "S": {
+              "support": 98,
+              "predicted": 29,
+              "true_positive": 17,
+              "precision": 0.5862068965517241,
+              "recall": 0.17346938775510204,
+              "f1": 0.2677165354330709
+            },
+            "C": {
+              "support": 15,
+              "predicted": 35,
+              "true_positive": 8,
+              "precision": 0.22857142857142856,
+              "recall": 0.5333333333333333,
+              "f1": 0.32
+            },
+            "I": {
+              "support": 54,
+              "predicted": 107,
+              "true_positive": 34,
+              "precision": 0.3177570093457944,
+              "recall": 0.6296296296296297,
+              "f1": 0.422360248447205
+            }
+          },
+          "macro_f1": 0.4242749211609087,
+          "accuracy": 0.49666666666666665,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 80,
+            "no": 220
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 80,
+              "true_positive": 53,
+              "precision": 0.6625,
+              "recall": 0.4608695652173913,
+              "f1": 0.5435897435897435
+            },
+            "no": {
+              "support": 185,
+              "predicted": 220,
+              "true_positive": 158,
+              "precision": 0.7181818181818181,
+              "recall": 0.8540540540540541,
+              "f1": 0.7802469135802469
+            }
+          },
+          "macro_f1": 0.6619183285849952,
+          "accuracy": 0.7033333333333334,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e4/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.75,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6415770609318996,
+            "macro_f1": 0.6415770609318996
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8248078111356005,
+            "ndcg_n": 39,
+            "ndcg": 0.8248078111356005,
+            "mrr": 0.626875
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.475,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4165898617511521,
+            "macro_f1": 0.4165898617511521
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.125,
+            "selection_score": 0.9
+          }
+        },
+        "business_macro": 0.6276582446062174,
+        "general_macro": 0.4875,
+        "overall": 0.49
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "I": 22,
+            "E": 10,
+            "S": 2
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 10,
+              "true_positive": 7,
+              "precision": 0.7,
+              "recall": 0.35,
+              "f1": 0.4666666666666667
+            },
+            "S": {
+              "support": 10,
+              "predicted": 2,
+              "true_positive": 2,
+              "precision": 1.0,
+              "recall": 0.2,
+              "f1": 0.3333333333333333
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 22,
+              "true_positive": 9,
+              "precision": 0.4090909090909091,
+              "recall": 1.0,
+              "f1": 0.5806451612903226
+            }
+          },
+          "macro_f1": 0.4165898617511521,
+          "accuracy": 0.475,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 4,
+            "no": 36
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 4,
+              "true_positive": 4,
+              "precision": 1.0,
+              "recall": 0.2857142857142857,
+              "f1": 0.4444444444444444
+            },
+            "no": {
+              "support": 26,
+              "predicted": 36,
+              "true_positive": 26,
+              "precision": 0.7222222222222222,
+              "recall": 1.0,
+              "f1": 0.8387096774193549
+            }
+          },
+          "macro_f1": 0.6415770609318996,
+          "accuracy": 0.75,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e4/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.05,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.325,
+            "selection_score": 0.05
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.8,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7802197802197802,
+            "macro_f1": 0.7802197802197802
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8010929298655293,
+            "ndcg_n": 39,
+            "ndcg": 0.8010929298655293,
+            "mrr": 0.5839583333333334
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4749860646599777,
+            "macro_f1": 0.4749860646599777
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.0,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.6854329249150958,
+        "general_macro": 0.45,
+        "overall": 0.49
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 7,
+            "I": 14,
+            "E": 16,
+            "S": 3
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 16,
+              "true_positive": 12,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 3,
+              "true_positive": 3,
+              "precision": 1.0,
+              "recall": 0.3,
+              "f1": 0.46153846153846156
+            },
+            "C": {
+              "support": 1,
+              "predicted": 7,
+              "true_positive": 1,
+              "precision": 0.14285714285714285,
+              "recall": 1.0,
+              "f1": 0.25
+            },
+            "I": {
+              "support": 9,
+              "predicted": 14,
+              "true_positive": 6,
+              "precision": 0.42857142857142855,
+              "recall": 0.6666666666666666,
+              "f1": 0.5217391304347826
+            }
+          },
+          "macro_f1": 0.4749860646599777,
+          "accuracy": 0.55,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 14,
+              "true_positive": 10,
+              "precision": 0.7142857142857143,
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            },
+            "no": {
+              "support": 26,
+              "predicted": 26,
+              "true_positive": 22,
+              "precision": 0.8461538461538461,
+              "recall": 0.8461538461538461,
+              "f1": 0.8461538461538461
+            }
+          },
+          "macro_f1": 0.7802197802197802,
+          "accuracy": 0.8,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5515426931356135,
+            "macro_f1": 0.5515426931356135
+          },
+          "search": {
+            "n": 300,
+            "success": 0.21,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8532583886656725,
+            "ndcg_n": 299,
+            "ndcg": 0.8532583886656725,
+            "mrr": 0.7363492063492063
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.48,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4187951049002183,
+            "macro_f1": 0.4187951049002183
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.92,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.92
+          }
+        },
+        "business_macro": 0.6078653955671681,
+        "general_macro": 0.52,
+        "overall": 0.46454545454545454
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 28,
+            "I": 127,
+            "E": 113,
+            "S": 32
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 113,
+              "true_positive": 80,
+              "precision": 0.7079646017699115,
+              "recall": 0.6015037593984962,
+              "f1": 0.6504065040650406
+            },
+            "S": {
+              "support": 98,
+              "predicted": 32,
+              "true_positive": 16,
+              "precision": 0.5,
+              "recall": 0.16326530612244897,
+              "f1": 0.24615384615384617
+            },
+            "C": {
+              "support": 15,
+              "predicted": 28,
+              "true_positive": 7,
+              "precision": 0.25,
+              "recall": 0.4666666666666667,
+              "f1": 0.32558139534883723
+            },
+            "I": {
+              "support": 54,
+              "predicted": 127,
+              "true_positive": 41,
+              "precision": 0.3228346456692913,
+              "recall": 0.7592592592592593,
+              "f1": 0.4530386740331492
+            }
+          },
+          "macro_f1": 0.4187951049002183,
+          "accuracy": 0.48,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 33,
+            "no": 267
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 33,
+              "true_positive": 24,
+              "precision": 0.7272727272727273,
+              "recall": 0.20869565217391303,
+              "f1": 0.32432432432432434
+            },
+            "no": {
+              "support": 185,
+              "predicted": 267,
+              "true_positive": 176,
+              "precision": 0.6591760299625468,
+              "recall": 0.9513513513513514,
+              "f1": 0.7787610619469026
+            }
+          },
+          "macro_f1": 0.5515426931356135,
+          "accuracy": 0.6666666666666666,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.125,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.225,
+            "selection_score": 0.125
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.75,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6666666666666667,
+            "macro_f1": 0.6666666666666667
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8313785130287726,
+            "ndcg_n": 39,
+            "ndcg": 0.8313785130287726,
+            "mrr": 0.6439880952380952
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.575,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5367647058823529,
+            "macro_f1": 0.5367647058823529
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.075,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.678269961859264,
+        "general_macro": 0.5375,
+        "overall": 0.525
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 3,
+            "I": 19,
+            "E": 14,
+            "S": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 14,
+              "true_positive": 11,
+              "precision": 0.7857142857142857,
+              "recall": 0.55,
+              "f1": 0.6470588235294118
+            },
+            "S": {
+              "support": 10,
+              "predicted": 4,
+              "true_positive": 3,
+              "precision": 0.75,
+              "recall": 0.3,
+              "f1": 0.42857142857142855
+            },
+            "C": {
+              "support": 1,
+              "predicted": 3,
+              "true_positive": 1,
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 9,
+              "predicted": 19,
+              "true_positive": 8,
+              "precision": 0.42105263157894735,
+              "recall": 0.8888888888888888,
+              "f1": 0.5714285714285714
+            }
+          },
+          "macro_f1": 0.5367647058823529,
+          "accuracy": 0.575,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 6,
+            "no": 34
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 6,
+              "true_positive": 5,
+              "precision": 0.8333333333333334,
+              "recall": 0.35714285714285715,
+              "f1": 0.5
+            },
+            "no": {
+              "support": 26,
+              "predicted": 34,
+              "true_positive": 25,
+              "precision": 0.7352941176470589,
+              "recall": 0.9615384615384616,
+              "f1": 0.8333333333333334
+            }
+          },
+          "macro_f1": 0.6666666666666667,
+          "accuracy": 0.75,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.325,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7094430992736077,
+            "macro_f1": 0.7094430992736077
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8264957049728964,
+            "ndcg_n": 39,
+            "ndcg": 0.8264957049728964,
+            "mrr": 0.6344047619047618
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.45,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.38374125874125875,
+            "macro_f1": 0.38374125874125875
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.95,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.6398933543292543,
+        "general_macro": 0.475,
+        "overall": 0.48
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 11,
+            "E": 13,
+            "I": 13,
+            "S": 3
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 10,
+              "precision": 0.7692307692307693,
+              "recall": 0.5,
+              "f1": 0.6060606060606061
+            },
+            "S": {
+              "support": 10,
+              "predicted": 3,
+              "true_positive": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.2,
+              "f1": 0.3076923076923077
+            },
+            "C": {
+              "support": 1,
+              "predicted": 11,
+              "true_positive": 1,
+              "precision": 0.09090909090909091,
+              "recall": 1.0,
+              "f1": 0.16666666666666666
+            },
+            "I": {
+              "support": 9,
+              "predicted": 13,
+              "true_positive": 5,
+              "precision": 0.38461538461538464,
+              "recall": 0.5555555555555556,
+              "f1": 0.45454545454545453
+            }
+          },
+          "macro_f1": 0.38374125874125875,
+          "accuracy": 0.45,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 7,
+            "no": 33
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.42857142857142855,
+              "f1": 0.5714285714285714
+            },
+            "no": {
+              "support": 26,
+              "predicted": 33,
+              "true_positive": 25,
+              "precision": 0.7575757575757576,
+              "recall": 0.9615384615384616,
+              "f1": 0.847457627118644
+            }
+          },
+          "macro_f1": 0.7094430992736077,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "original_full_kl_common320/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "original_full_kl_common320/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.325,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.3939393939393939,
+            "macro_f1": 0.3939393939393939
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8550890772773793,
+            "ndcg_n": 39,
+            "ndcg": 0.8550890772773793,
+            "mrr": 0.7064880952380952
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.575,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.3333333333333333,
+            "macro_f1": 0.3333333333333333
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.125,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.5274539348500354,
+        "general_macro": 0.525,
+        "overall": 0.5
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "E": 28,
+            "I": 12
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 28,
+              "true_positive": 16,
+              "precision": 0.5714285714285714,
+              "recall": 0.8,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 12,
+              "true_positive": 7,
+              "precision": 0.5833333333333334,
+              "recall": 0.7777777777777778,
+              "f1": 0.6666666666666666
+            }
+          },
+          "macro_f1": 0.3333333333333333,
+          "accuracy": 0.575,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 40
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 26,
+              "predicted": 40,
+              "true_positive": 26,
+              "precision": 0.65,
+              "recall": 1.0,
+              "f1": 0.7878787878787878
+            }
+          },
+          "macro_f1": 0.3939393939393939,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": true
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "original_full_kl_common320/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 1.0,
+            "mean_output_tokens": 128.0,
+            "selection_score": 0.0
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 1.0,
+            "mean_output_tokens": 128.0,
+            "selection_score": 0.0,
+            "macro_f1": 0.0
+          },
+          "search": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 1.0,
+            "mean_output_tokens": 128.0,
+            "selection_score": 0.0,
+            "ndcg_n": 39,
+            "ndcg": 0.0,
+            "mrr": 0.0
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 1.0,
+            "mean_output_tokens": 128.0,
+            "selection_score": 0.0,
+            "macro_f1": 0.0
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 1.0,
+            "mean_output_tokens": 128.0,
+            "selection_score": 0.0
+          }
+        },
+        "business_macro": 0.0,
+        "general_macro": 0.0,
+        "overall": 0.0
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "INVALID": 40
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "macro_f1": 0.0,
+          "accuracy": 0.0,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": true
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "INVALID": 40
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 26,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "macro_f1": 0.0,
+          "accuracy": 0.0,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": true
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6428571428571428,
+            "macro_f1": 0.6428571428571428
+          },
+          "search": {
+            "n": 300,
+            "success": 0.16,
+            "json_valid": 0.9966666666666667,
+            "constraint_violation": 0.0,
+            "truncated": 0.0033333333333333335,
+            "mean_output_tokens": 28.333333333333332,
+            "selection_score": 0.8380072523100127,
+            "ndcg_n": 299,
+            "ndcg": 0.8380072523100127,
+            "mrr": 0.7323015873015873
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.53,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.516840273791109,
+            "macro_f1": 0.516840273791109
+          },
+          "math": {
+            "n": 100,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.12
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.04,
+            "selection_score": 0.91
+          }
+        },
+        "business_macro": 0.6659015563194215,
+        "general_macro": 0.515,
+        "overall": 0.4727272727272727
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 22,
+            "I": 64,
+            "E": 66,
+            "S": 148
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 66,
+              "true_positive": 55,
+              "precision": 0.8333333333333334,
+              "recall": 0.41353383458646614,
+              "f1": 0.5527638190954773
+            },
+            "S": {
+              "support": 98,
+              "predicted": 148,
+              "true_positive": 66,
+              "precision": 0.44594594594594594,
+              "recall": 0.673469387755102,
+              "f1": 0.5365853658536586
+            },
+            "C": {
+              "support": 15,
+              "predicted": 22,
+              "true_positive": 9,
+              "precision": 0.4090909090909091,
+              "recall": 0.6,
+              "f1": 0.4864864864864865
+            },
+            "I": {
+              "support": 54,
+              "predicted": 64,
+              "true_positive": 29,
+              "precision": 0.453125,
+              "recall": 0.5370370370370371,
+              "f1": 0.4915254237288136
+            }
+          },
+          "macro_f1": 0.516840273791109,
+          "accuracy": 0.53,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 65,
+            "no": 235
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 65,
+              "true_positive": 45,
+              "precision": 0.6923076923076923,
+              "recall": 0.391304347826087,
+              "f1": 0.5
+            },
+            "no": {
+              "support": 185,
+              "predicted": 235,
+              "true_positive": 165,
+              "precision": 0.7021276595744681,
+              "recall": 0.8918918918918919,
+              "f1": 0.7857142857142857
+            }
+          },
+          "macro_f1": 0.6428571428571428,
+          "accuracy": 0.7,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr5e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.15,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7094430992736077,
+            "macro_f1": 0.7094430992736077
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8247118938325605,
+            "ndcg_n": 39,
+            "ndcg": 0.8247118938325605,
+            "mrr": 0.6450297619047619
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.6,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.56,
+            "macro_f1": 0.56
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.925,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.975,
+            "selection_score": 0.925
+          }
+        },
+        "business_macro": 0.6980516643687228,
+        "general_macro": 0.5,
+        "overall": 0.52
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 4,
+            "I": 16,
+            "E": 10,
+            "S": 10
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 10,
+              "true_positive": 9,
+              "precision": 0.9,
+              "recall": 0.45,
+              "f1": 0.6
+            },
+            "S": {
+              "support": 10,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6,
+              "f1": 0.6
+            },
+            "C": {
+              "support": 1,
+              "predicted": 4,
+              "true_positive": 1,
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "I": {
+              "support": 9,
+              "predicted": 16,
+              "true_positive": 8,
+              "precision": 0.5,
+              "recall": 0.8888888888888888,
+              "f1": 0.64
+            }
+          },
+          "macro_f1": 0.56,
+          "accuracy": 0.6,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 7,
+            "no": 33
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.42857142857142855,
+              "f1": 0.5714285714285714
+            },
+            "no": {
+              "support": 26,
+              "predicted": 33,
+              "true_positive": 25,
+              "precision": 0.7575757575757576,
+              "recall": 0.9615384615384616,
+              "f1": 0.847457627118644
+            }
+          },
+          "macro_f1": 0.7094430992736077,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.125,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.175,
+            "selection_score": 0.125
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7254004576659039,
+            "macro_f1": 0.7254004576659039
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8266004400523865,
+            "ndcg_n": 39,
+            "ndcg": 0.8266004400523865,
+            "mrr": 0.6437797619047619
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5595878136200717,
+            "macro_f1": 0.5595878136200717
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.925,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.95,
+            "selection_score": 0.925
+          }
+        },
+        "business_macro": 0.703862903779454,
+        "general_macro": 0.525,
+        "overall": 0.52
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 3,
+            "I": 9,
+            "E": 7,
+            "S": 21
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.3,
+              "f1": 0.4444444444444444
+            },
+            "S": {
+              "support": 10,
+              "predicted": 21,
+              "true_positive": 8,
+              "precision": 0.38095238095238093,
+              "recall": 0.8,
+              "f1": 0.5161290322580645
+            },
+            "C": {
+              "support": 1,
+              "predicted": 3,
+              "true_positive": 1,
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 9,
+              "predicted": 9,
+              "true_positive": 7,
+              "precision": 0.7777777777777778,
+              "recall": 0.7777777777777778,
+              "f1": 0.7777777777777778
+            }
+          },
+          "macro_f1": 0.5595878136200717,
+          "accuracy": 0.55,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 9,
+            "no": 31
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 9,
+              "true_positive": 7,
+              "precision": 0.7777777777777778,
+              "recall": 0.5,
+              "f1": 0.6086956521739131
+            },
+            "no": {
+              "support": 26,
+              "predicted": 31,
+              "true_positive": 24,
+              "precision": 0.7741935483870968,
+              "recall": 0.9230769230769231,
+              "f1": 0.8421052631578947
+            }
+          },
+          "macro_f1": 0.7254004576659039,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    }
+  },
+  "verified_development_evaluations": 23
+}

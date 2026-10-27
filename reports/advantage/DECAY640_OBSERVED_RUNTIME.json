@@ -1,0 +1,539 @@
+{
+  "utc": "2026-10-26T01:27:42.233725+00:00",
+  "verified": true,
+  "arms": {
+    "decay_opd_token_lr5e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "8d4ced5d90ecc68734d665952626ba5697d2f7be60def086c560c342ac67011b",
+      "metrics_sha256": "307735142c806910a183454b49ac576450731dbf456acaf3511f4660cc441c09",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/opd/decay_opd_token_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 0.00011348724365234375,
+      "response_tokens": 164524,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "7d86f441101d076009e93123f3a8d1e2167cd94e105a919cacddef884849449a",
+        "maximum_numeric_differences": {
+          "loss": 0.05353265471079133,
+          "opd_loss": 0.05353265471079133,
+          "gradient_norm": 3.167781949043274,
+          "parameter_delta_l2": 0.0013415265566843818
+        },
+        "all_response_counts_match": false,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_opd_token_lr2e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "19f1c1ae71682d9f3d30e750a3b234e78c65c42b26d28b18ccb80e74e4ba26e7",
+      "metrics_sha256": "d27677ae91c45adddf3cbe17c4680b497478d1df2a4e8e9ba2985efb226f84bc",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/opd/decay_opd_token_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 7.832050323486328e-05,
+      "response_tokens": 163983,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "100293e16b7c501014ebefbea48df40b7f5923c09e923c6abaa32f6130d19233",
+        "maximum_numeric_differences": {
+          "loss": 2.06659786874952e-06,
+          "opd_loss": 2.06659786874952e-06,
+          "gradient_norm": 0.0004057884216308594,
+          "parameter_delta_l2": 2.1295140538793444e-07
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_opd_trajectory_lr2e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "9ecec756d8c600f351559de0fd5ce1fc72909a48e2abc98d7dbe31ffd119bea4",
+      "metrics_sha256": "e0513254e4ccc1755265d6581dc867987653afb442fcc1239676f3bc9d0dc0e8",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/opd/decay_opd_trajectory_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 8.249282836914062e-05,
+      "response_tokens": 164316,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "0c90db07ece5c034c26626cf525badd5cebc2892aca9692d225573fccfeb77c7",
+        "maximum_numeric_differences": {
+          "loss": 3.48584726450607e-06,
+          "opd_loss": 3.48584726450607e-06,
+          "gradient_norm": 0.0009098052978515625,
+          "parameter_delta_l2": 1.4357502601397565e-07
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_opd_trajectory_lr5e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "83a3f664428ffee58aa929ed0a9adc442e201f7ddddaceef6ca80ead07c44d47",
+      "metrics_sha256": "2bd404ec36525d302552491431de445e00805772277798b0e24397d126195d53",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/opd/decay_opd_trajectory_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 8.225440979003906e-05,
+      "response_tokens": 164308,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "18baf762bba74697485bbab85b091771e000118bfd43581a8f7849db592d61c9",
+        "maximum_numeric_differences": {
+          "loss": 2.491120249031864e-05,
+          "opd_loss": 2.491120249031864e-05,
+          "gradient_norm": 0.023079872131347656,
+          "parameter_delta_l2": 6.557384735553229e-06
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_offline_token_lr1e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "c812f509d1f022e8fb64df50fe47fb862e3b9e8aeb43cfca915c49031a0ff8a8",
+      "metrics_sha256": "fdc25b0495b328262c3a123f61d3a635ff3d83ed99ba32dd91ca438ae6dce139",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_token_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "6b37f18e877198c4e64992c546c8102d47059e93013c689e601ef24e0fceab1d",
+        "maximum_numeric_differences": {
+          "loss": 9.95245169499448e-07,
+          "opd_loss": 0.0,
+          "gradient_norm": 2.956390380859375e-05,
+          "parameter_delta_l2": 2.0092667021506805e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_offline_token_lr2e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "a15caa791c918ce68b410e25234e391e14b92ab33f0ff38a890860e0b92e5846",
+      "metrics_sha256": "d91ddd583f086173a05102b5a31c65c571a0e707a172ae7628f6712bf3270d2c",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_token_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "9ed0e949f2b011db97526898fe7e4f5e746b8d99651145dd589c516d270c298a",
+        "maximum_numeric_differences": {
+          "loss": 1.0234542375808786e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 2.5272369384765625e-05,
+          "parameter_delta_l2": 5.9381340147129924e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_offline_token_lr5e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "9476d6802039e059a03c7948396d09ff553b72ccb7da0d1a60e62d1c9ccd6578",
+      "metrics_sha256": "ae8ea0df2c60cd6f1f2f2574dd8d0d8da42c20772fb57196fd2833106812f568",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_token_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "59d1b419f2f6a95d65521d2749c762f1747f0703eae9c68f62a51d7be4eeaa4a",
+        "maximum_numeric_differences": {
+          "loss": 1.2724668033869957e-05,
+          "opd_loss": 0.0,
+          "gradient_norm": 0.0021555423736572266,
+          "parameter_delta_l2": 2.139149393398654e-06
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": false
+    },
+    "decay_offline_trajectory_lr1e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "3a9a9e0731e212f21b58b05a0beb956d995fb9b68d13704466713f03974a8ba9",
+      "metrics_sha256": "9de48b2a23a565e5aca7cf8f27d8f20ec7898ac966ad49026d5e79a4dd12b2ae",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_trajectory_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "601dcf9334bdef5a5d63ab7cbeda5efda3cf2e62597c4657e72381de1f4f3d58",
+        "maximum_numeric_differences": {
+          "loss": 1.6272068023570618e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 4.38690185546875e-05,
+          "parameter_delta_l2": 3.016662398352965e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_offline_trajectory_lr2e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "334a3714c6da9cd4bdf22319c931ecf76f610fa3a79603286a095a33f06b4bee",
+      "metrics_sha256": "2c6fa040296434d88b1585527af579fd1262f140874f0affa96481e13c37e87b",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_trajectory_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "a20d055d39545a77291c51abf5748f4979863b57ef24d08397d3ef3de65937a0",
+        "maximum_numeric_differences": {
+          "loss": 1.6835052519814653e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 5.650520324707031e-05,
+          "parameter_delta_l2": 8.671533161322409e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_offline_trajectory_lr5e5": {
+      "objective": "offline_sft",
+      "observed_updates": 640,
+      "config_sha256": "d476887c752ee4903697ca44cd57283d81df5bfc85236422411fc041060741dc",
+      "metrics_sha256": "e3c4b6e930e64b6f271e94224e7da68ebeb778432f2cf944c2f17e6c7ee8d956",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_offline_trajectory_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81923,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "e9767a56e9128a65194445e75a0fad52c157d5e49be9d9b3c4dccf6419b1084e",
+        "maximum_numeric_differences": {
+          "loss": 2.849102020224814e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 0.0001983642578125,
+          "parameter_delta_l2": 1.877662511723388e-07
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_oracle_token_lr1e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "e56fd6fac9322291c3fedc91b90772bed0c2891f1b9548a9777c5eb6eb524cd6",
+      "metrics_sha256": "a6f0c45a2ba8377bc213dacc49c1d1b65ea8a3a9c6b6d4aa9e7b08f3e1e9009d",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_token_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "f0bc5359b00491adc64c73550eb919444ab3d8e98bed239b23a9015fb6f14b65",
+        "maximum_numeric_differences": {
+          "loss": 9.590929204716936e-07,
+          "opd_loss": 0.0,
+          "gradient_norm": 6.902217864990234e-05,
+          "parameter_delta_l2": 3.442100848620455e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_oracle_token_lr2e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "39b79e68ca296bfca726b9ddc0af00f6e323db0722642fbc412b30ffc917772f",
+      "metrics_sha256": "9a60c0274a2f07d9d9e4c8e0dee4615f3ccfba23a321054f1be7f670a60611f7",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_token_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "e83e8a0c2d486aa69ededcc90ce0b36550c7eb5e3a828a369f52aa54b1a50bdb",
+        "maximum_numeric_differences": {
+          "loss": 5.6309468099702276e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 0.00040787458419799805,
+          "parameter_delta_l2": 1.0246006674381747e-06
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_oracle_token_lr5e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "c488bbaf3cb9b6e1130b9989f4748572b46257504fec628bbdb68888dc868375",
+      "metrics_sha256": "7284a8cc951f3fe835ee05bea00eba685be7187d18751be212574280d72ddb5d",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_token_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "55b800c78d5aab9d064679718e87bd8ed148755b5f5444e9eca07dc867a1f866",
+        "maximum_numeric_differences": {
+          "loss": 0.0008570782162926061,
+          "opd_loss": 0.0,
+          "gradient_norm": 0.031553030014038086,
+          "parameter_delta_l2": 0.00020094447104909707
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": false
+    },
+    "decay_oracle_trajectory_lr1e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "61d913f73b03b39c4036bc5192317bd15132dd4b1c0bf1466313de673e3866ca",
+      "metrics_sha256": "2db037702e37adcdda0a646a5873a416b5ff68c4282f75b6cfb075bab4b76289",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_trajectory_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "c387a4a7707adb1cc87ffbe0cedd74afaa8267e73526026abded6eabff7adb2b",
+        "maximum_numeric_differences": {
+          "loss": 1.4334917068370423e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 3.170967102050781e-05,
+          "parameter_delta_l2": 1.7894176460031552e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_oracle_trajectory_lr2e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "42454000f4f22aabbb38abe088d21cfcc30d09ab2187b05c8d3f354dafe0c60f",
+      "metrics_sha256": "b15cc4c70b0e74335fd6e356ffb159523c3215eafd810ac9bad15e6111e3c5f4",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_trajectory_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "ac07d6ea3e1799e5681ad8819de3085aa811f22de297179fc1ca30c6b8c1e9d8",
+        "maximum_numeric_differences": {
+          "loss": 2.932548522960321e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 3.8623809814453125e-05,
+          "parameter_delta_l2": 5.402307179727672e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_oracle_trajectory_lr5e5": {
+      "objective": "oracle_sft",
+      "observed_updates": 640,
+      "config_sha256": "f7626a8519b87d877f00dfcbea195c97810e8a0c45853fc3601bb9e908e531f2",
+      "metrics_sha256": "c69d2a700d35f0c536e119901c22644bed65c19e2b677ee039a732b5f54b836e",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/sft/decay_oracle_trajectory_lr5e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 0.0,
+      "response_tokens": 81963,
+      "observed_alarms": [],
+      "last_learning_rate_used": 4.999999999999999e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "19baa5d2c0303a3cc7b070c2d178ea0eb6280d06dafc092b3ddc762f7cca1742",
+        "maximum_numeric_differences": {
+          "loss": 5.026161670695917e-06,
+          "opd_loss": 0.0,
+          "gradient_norm": 0.00020837783813476562,
+          "parameter_delta_l2": 4.109659117942921e-07
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_opd_token_lr1e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "35a3fd7c63740ab812327f5457e338288528c522219214b90cf62975e190a514",
+      "metrics_sha256": "498f9aeece0fea36a9c1744f7a911d432c11d9f38671e54e0d7154370d26a629",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/controls/decay_opd_token_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 8.034706115722656e-05,
+      "response_tokens": 164369,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "90bfaf8448df829c577a30d9678b61524a7b48b27042595bb6e34e325cec5c87",
+        "maximum_numeric_differences": {
+          "loss": 1.6019568831737718e-06,
+          "opd_loss": 1.6019568831737718e-06,
+          "gradient_norm": 0.0002689361572265625,
+          "parameter_delta_l2": 4.8703749378972705e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_opd_trajectory_lr1e5": {
+      "objective": "opd",
+      "observed_updates": 640,
+      "config_sha256": "a003fe3d745ec2fbaec3a45c7147bd2fcfcf4dc2614b2e5a1099f16d87e6241e",
+      "metrics_sha256": "20953dc988e8421f184631f094bd5d24000d162de24797a8a96d57fb94c0529e",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/controls/decay_opd_trajectory_lr1e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": true,
+      "maximum_behavior_error": 0.000102996826171875,
+      "response_tokens": 164025,
+      "observed_alarms": [],
+      "last_learning_rate_used": 1e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "051c078bea96cbf920dfdbe1460567cfddad9e2e649571732e8df4af88a4e59f",
+        "maximum_numeric_differences": {
+          "loss": 2.4459324777167946e-06,
+          "opd_loss": 2.4459324777167946e-06,
+          "gradient_norm": 0.0008602142333984375,
+          "parameter_delta_l2": 3.467254620567739e-08
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_original_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "observed_updates": 640,
+      "config_sha256": "b5e072ef72bfc116998fb89aafe361ca703df196f5510d040df0362fbf248554",
+      "metrics_sha256": "54a5281aa014d6f99a614f080a600a88c89429fd71906ade36882be1dfc16b75",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/controls/decay_original_full_kl_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 9.250640869140625e-05,
+      "response_tokens": 330129,
+      "observed_alarms": [
+        "truncation_format_zero_signal_joint_alarm"
+      ],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "d53d33a3ddd7344ead67532ebc7968579d6f6b783b8b4e0612869b40bc367dbe",
+        "maximum_numeric_differences": {
+          "loss": 6.396405018160856e-05,
+          "opd_loss": 6.396405018160856e-05,
+          "gradient_norm": 0.00333404541015625,
+          "parameter_delta_l2": 1.569028494696062e-06
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    },
+    "decay_repaired_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "observed_updates": 640,
+      "config_sha256": "b5e072ef72bfc116998fb89aafe361ca703df196f5510d040df0362fbf248554",
+      "metrics_sha256": "7f6f1f820f9dbc15314c75eab75d9cc803b2918db492a92c0b7526b1303c3f23",
+      "immutable_snapshot": ".ops/decay640-runtime-observations/20261026T012741792281Z/controls/decay_repaired_full_kl_lr2e5",
+      "actual_learning_rates_verified": true,
+      "pure_opd_total_loss_equal": null,
+      "maximum_behavior_error": 8.749961853027344e-05,
+      "response_tokens": 164083,
+      "observed_alarms": [],
+      "last_learning_rate_used": 2e-06,
+      "prior_constant_prefix": {
+        "compared_updates": 320,
+        "old_metrics_sha256": "e46aee31935e14161cac011e4c39fe03329f9839b628cd47bee65ce746cb5b2d",
+        "maximum_numeric_differences": {
+          "loss": 1.9304604981784657e-06,
+          "opd_loss": 1.9304604981784657e-06,
+          "gradient_norm": 0.00017881393432617188,
+          "parameter_delta_l2": 1.5928816711474614e-07
+        },
+        "all_response_counts_match": true,
+        "boundary": "Observed GPU compatibility through constant prefix only."
+      },
+      "training_completed_file_observed": true
+    }
+  },
+  "source_contract_sha256": {
+    "opd": "94c2393c0248b7adac5ff77a7895fa107dfd3c16c5e95d50c806dbaa368774d8",
+    "sft": "7553b92a9022220e33dc7f0775941af605e9b57979c2d8a9409c91686378e082",
+    "controls": "a35a28af48665dc3f288a4f8aae237b521f14e219e60679651a2e47914403475"
+  },
+  "immutable_observation_root": ".ops/decay640-runtime-observations/20261026T012741792281Z",
+  "observer_sha256": "8cad16f345f3d5eae3c764ea457a1b4e2711ded2105068959bfd6cfd794dac38",
+  "scheduling_sha256": "4132d8b2a4db6aaab7dde9566622216f5c7e1d04138aaf9ca6a3cb8d46c92754",
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "boundary": "Locally collected live JSONL updates only. No saved Adam/RNG binary audit, terminal training, final quality or cost conclusion."
+}

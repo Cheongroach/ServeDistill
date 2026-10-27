@@ -1,0 +1,378 @@
+{
+  "utc": "2026-10-26T05:18:31.510393+00:00",
+  "verified": true,
+  "arms": {
+    "teacher320_decay_opd_token_lr5e5": {
+      "sampled_steps": 76,
+      "config_sha256": "8d4ced5d90ecc68734d665952626ba5697d2f7be60def086c560c342ac67011b",
+      "rollouts_sha256": "8b68904cf6cb47391d05c885631a0489c5a6c62d18bca59225380cbcd93ca498",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_token_lr5e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 76,
+          "unique_training_inputs": 713,
+          "domains": {
+            "search": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.8152298617050031,
+              "teacher_hard_reward_mean": 0.8824004238373098,
+              "invalid_responses": 7
+            },
+            "relevance": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.41625615763546797,
+              "teacher_hard_reward_mean": 0.6551724137931034,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.45320197044334976,
+              "prediction_counts": {
+                "C": 88,
+                "S": 113,
+                "E": 98,
+                "I": 107
+              }
+            },
+            "substitute": {
+              "sampled_responses": 404,
+              "student_reward_mean": 0.5272277227722773,
+              "teacher_hard_reward_mean": 0.7029702970297029,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.5123762376237624,
+              "prediction_counts": {
+                "no": 181,
+                "yes": 223
+              },
+              "positive_targets": 186,
+              "yes_recall": 0.5860215053763441
+            },
+            "math": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.07236842105263158,
+              "teacher_hard_reward_mean": 0.34210526315789475,
+              "invalid_responses": 1
+            },
+            "instruction": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.8552631578947368,
+              "teacher_hard_reward_mean": 0.9868421052631579,
+              "invalid_responses": 1
+            }
+          }
+        }
+      ]
+    },
+    "teacher320_decay_opd_token_lr2e5": {
+      "sampled_steps": 76,
+      "config_sha256": "19f1c1ae71682d9f3d30e750a3b234e78c65c42b26d28b18ccb80e74e4ba26e7",
+      "rollouts_sha256": "64220c4598eedda1ed1cbdc900872d6d9780d81d80bf3f4d05422eaddfb3c0b4",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_token_lr2e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 76,
+          "unique_training_inputs": 713,
+          "domains": {
+            "search": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.8378628199867716,
+              "teacher_hard_reward_mean": 0.8824004238373098,
+              "invalid_responses": 0
+            },
+            "relevance": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.458128078817734,
+              "teacher_hard_reward_mean": 0.6551724137931034,
+              "invalid_responses": 1,
+              "teacher_hard_agreement": 0.49014778325123154,
+              "prediction_counts": {
+                "C": 105,
+                "S": 96,
+                "E": 98,
+                "I": 106,
+                "INVALID": 1
+              }
+            },
+            "substitute": {
+              "sampled_responses": 404,
+              "student_reward_mean": 0.5618811881188119,
+              "teacher_hard_reward_mean": 0.7029702970297029,
+              "invalid_responses": 2,
+              "teacher_hard_agreement": 0.5767326732673267,
+              "prediction_counts": {
+                "no": 197,
+                "yes": 205,
+                "INVALID": 2
+              },
+              "positive_targets": 186,
+              "yes_recall": 0.5806451612903226
+            },
+            "math": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.05921052631578947,
+              "teacher_hard_reward_mean": 0.34210526315789475,
+              "invalid_responses": 0
+            },
+            "instruction": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.8618421052631579,
+              "teacher_hard_reward_mean": 0.9868421052631579,
+              "invalid_responses": 0
+            }
+          }
+        }
+      ]
+    },
+    "teacher320_decay_opd_trajectory_lr2e5": {
+      "sampled_steps": 76,
+      "config_sha256": "9ecec756d8c600f351559de0fd5ce1fc72909a48e2abc98d7dbe31ffd119bea4",
+      "rollouts_sha256": "46375919cb682e7f247e6378e6a6848b794a783c414b290e5c2f898c692ebf27",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_trajectory_lr2e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 76,
+          "unique_training_inputs": 713,
+          "domains": {
+            "search": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.8423665399037945,
+              "teacher_hard_reward_mean": 0.8824004238373098,
+              "invalid_responses": 1
+            },
+            "relevance": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.4408866995073892,
+              "teacher_hard_reward_mean": 0.6551724137931034,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.4975369458128079,
+              "prediction_counts": {
+                "C": 93,
+                "S": 101,
+                "E": 98,
+                "I": 114
+              }
+            },
+            "substitute": {
+              "sampled_responses": 404,
+              "student_reward_mean": 0.5668316831683168,
+              "teacher_hard_reward_mean": 0.7029702970297029,
+              "invalid_responses": 2,
+              "teacher_hard_agreement": 0.5816831683168316,
+              "prediction_counts": {
+                "no": 199,
+                "yes": 203,
+                "INVALID": 2
+              },
+              "positive_targets": 186,
+              "yes_recall": 0.5806451612903226
+            },
+            "math": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.05921052631578947,
+              "teacher_hard_reward_mean": 0.34210526315789475,
+              "invalid_responses": 1
+            },
+            "instruction": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.8618421052631579,
+              "teacher_hard_reward_mean": 0.9868421052631579,
+              "invalid_responses": 0
+            }
+          }
+        }
+      ]
+    },
+    "teacher320_decay_opd_trajectory_lr5e5": {
+      "sampled_steps": 76,
+      "config_sha256": "83a3f664428ffee58aa929ed0a9adc442e201f7ddddaceef6ca80ead07c44d47",
+      "rollouts_sha256": "0e3a18fecdda004ef9baf8da46d9167abcdd0772413c13e96c6ca3aea81cb322",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_trajectory_lr5e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 76,
+          "unique_training_inputs": 713,
+          "domains": {
+            "search": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.8341115759731005,
+              "teacher_hard_reward_mean": 0.8824004238373098,
+              "invalid_responses": 3
+            },
+            "relevance": {
+              "sampled_responses": 406,
+              "student_reward_mean": 0.43349753694581283,
+              "teacher_hard_reward_mean": 0.6551724137931034,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.5,
+              "prediction_counts": {
+                "C": 93,
+                "S": 96,
+                "E": 102,
+                "I": 115
+              }
+            },
+            "substitute": {
+              "sampled_responses": 404,
+              "student_reward_mean": 0.551980198019802,
+              "teacher_hard_reward_mean": 0.7029702970297029,
+              "invalid_responses": 3,
+              "teacher_hard_agreement": 0.5767326732673267,
+              "prediction_counts": {
+                "no": 191,
+                "yes": 210,
+                "INVALID": 3
+              },
+              "positive_targets": 186,
+              "yes_recall": 0.5860215053763441
+            },
+            "math": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.05921052631578947,
+              "teacher_hard_reward_mean": 0.34210526315789475,
+              "invalid_responses": 2
+            },
+            "instruction": {
+              "sampled_responses": 152,
+              "student_reward_mean": 0.8486842105263158,
+              "teacher_hard_reward_mean": 0.9868421052631579,
+              "invalid_responses": 0
+            }
+          }
+        }
+      ]
+    },
+    "teacher320_decay_opd_token_lr1e5": {
+      "sampled_steps": 47,
+      "config_sha256": "35a3fd7c63740ab812327f5457e338288528c522219214b90cf62975e190a514",
+      "rollouts_sha256": "dbd80a6968159b060a9c8e5a267dc77d65e006b7900f1a6ff94e0eeef0575672",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_token_lr1e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 47,
+          "unique_training_inputs": 453,
+          "domains": {
+            "search": {
+              "sampled_responses": 252,
+              "student_reward_mean": 0.832423851036158,
+              "teacher_hard_reward_mean": 0.8702033281925131,
+              "invalid_responses": 1
+            },
+            "relevance": {
+              "sampled_responses": 250,
+              "student_reward_mean": 0.44,
+              "teacher_hard_reward_mean": 0.624,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.504,
+              "prediction_counts": {
+                "C": 51,
+                "S": 63,
+                "E": 68,
+                "I": 68
+              }
+            },
+            "substitute": {
+              "sampled_responses": 250,
+              "student_reward_mean": 0.536,
+              "teacher_hard_reward_mean": 0.664,
+              "invalid_responses": 1,
+              "teacher_hard_agreement": 0.552,
+              "prediction_counts": {
+                "no": 114,
+                "yes": 135,
+                "INVALID": 1
+              },
+              "positive_targets": 118,
+              "yes_recall": 0.5847457627118644
+            },
+            "math": {
+              "sampled_responses": 94,
+              "student_reward_mean": 0.06382978723404255,
+              "teacher_hard_reward_mean": 0.40425531914893614,
+              "invalid_responses": 0
+            },
+            "instruction": {
+              "sampled_responses": 94,
+              "student_reward_mean": 0.8723404255319149,
+              "teacher_hard_reward_mean": 0.9787234042553191,
+              "invalid_responses": 0
+            }
+          }
+        }
+      ]
+    },
+    "teacher320_decay_opd_trajectory_lr1e5": {
+      "sampled_steps": 47,
+      "config_sha256": "a003fe3d745ec2fbaec3a45c7147bd2fcfcf4dc2614b2e5a1099f16d87e6241e",
+      "rollouts_sha256": "9006ea666f8f91411a53f86105383fb4b5802e110225b6cffac402486fa62e73",
+      "immutable_snapshot": ".ops/teacher320-training-observations/20261026T051831238682Z/teacher320_decay_opd_trajectory_lr1e5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 47,
+          "unique_training_inputs": 453,
+          "domains": {
+            "search": {
+              "sampled_responses": 252,
+              "student_reward_mean": 0.8376525797342419,
+              "teacher_hard_reward_mean": 0.8702033281925131,
+              "invalid_responses": 0
+            },
+            "relevance": {
+              "sampled_responses": 250,
+              "student_reward_mean": 0.44,
+              "teacher_hard_reward_mean": 0.624,
+              "invalid_responses": 0,
+              "teacher_hard_agreement": 0.5,
+              "prediction_counts": {
+                "C": 55,
+                "S": 61,
+                "E": 66,
+                "I": 68
+              }
+            },
+            "substitute": {
+              "sampled_responses": 250,
+              "student_reward_mean": 0.536,
+              "teacher_hard_reward_mean": 0.664,
+              "invalid_responses": 1,
+              "teacher_hard_agreement": 0.552,
+              "prediction_counts": {
+                "no": 116,
+                "yes": 133,
+                "INVALID": 1
+              },
+              "positive_targets": 118,
+              "yes_recall": 0.576271186440678
+            },
+            "math": {
+              "sampled_responses": 94,
+              "student_reward_mean": 0.06382978723404255,
+              "teacher_hard_reward_mean": 0.40425531914893614,
+              "invalid_responses": 0
+            },
+            "instruction": {
+              "sampled_responses": 94,
+              "student_reward_mean": 0.8723404255319149,
+              "teacher_hard_reward_mean": 0.9787234042553191,
+              "invalid_responses": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "source_contract_sha256": {
+    "opd": "bc8f0b4ce0074a3a8bc97298c9b33612b45cad64b99cc9c2ad8b9d2309614f7f",
+    "controls": "c0231ef2ae923c111ee91b43d0f2aa72006c60b6619cb62fe3f92fb9947d48f3"
+  },
+  "source_sha256": "b19802a5b255b3b3b4d0764d6525479c5702cf2913a93593b4035c9f7ef2ca99",
+  "train_sha256": "481c4d4d4492a5fb2b3d25d91d37fbcede02ba590c1e77730edffef6c1a4d1a4",
+  "teacher_labels_sha256": "ba31a60959ee93ebf1a567bebda2dadbf623f60e29b7af5218987a90ed4807cc",
+  "immutable_observation_root": ".ops/teacher320-training-observations/20261026T051831238682Z",
+  "holdout_observed": false,
+  "selection_rule_changed": false,
+  "quality_advantage_established": false,
+  "boundary": "Descriptive sampled TRAIN responses with repeated prompts and evolving Student distributions. Teacher hard responses are paired by training ID. No token-signal, causal, DEV or holdout quality conclusion."
+}

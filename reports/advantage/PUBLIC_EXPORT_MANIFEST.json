@@ -1,0 +1,995 @@
+{
+  "records": [
+    {
+      "path": "reports/advantage/AVERAGED_DEVELOPMENT.json",
+      "original_sha256": "06bfacdbe108d7922a106ed88863146980aa6bca04e2ca8c506f068ab6fe77d3",
+      "public_sha256": "06bfacdbe108d7922a106ed88863146980aa6bca04e2ca8c506f068ab6fe77d3",
+      "original_bytes": 114906,
+      "public_bytes": 114906
+    },
+    {
+      "path": "reports/advantage/BALANCED_REGRADED.json",
+      "original_sha256": "22292294aec7c19c9f43df8514fda5bf13ba52d06eaf4265db123468d912d524",
+      "public_sha256": "22292294aec7c19c9f43df8514fda5bf13ba52d06eaf4265db123468d912d524",
+      "original_bytes": 129790,
+      "public_bytes": 129790
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT640.json",
+      "original_sha256": "c0df40f25fc58174bfef30a863342eceda5a317af0d356b918799ba2d5671c3e",
+      "public_sha256": "c0df40f25fc58174bfef30a863342eceda5a317af0d356b918799ba2d5671c3e",
+      "original_bytes": 96971,
+      "public_bytes": 96971
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT_AOPD.json",
+      "original_sha256": "86801468c1d82078520f1d29c0021297e52377ac7cb5b74b199e431c5e2dff41",
+      "public_sha256": "86801468c1d82078520f1d29c0021297e52377ac7cb5b74b199e431c5e2dff41",
+      "original_bytes": 1001,
+      "public_bytes": 1001
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT_AOPD_DOMAIN_ROUTER.json",
+      "original_sha256": "8a2c9559f9070aade252df61c70e2e83d9ffe6a581d6af8655ce934f58ab9cea",
+      "public_sha256": "8a2c9559f9070aade252df61c70e2e83d9ffe6a581d6af8655ce934f58ab9cea",
+      "original_bytes": 878,
+      "public_bytes": 878
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT_COMMON_TEACHER_INIT.json",
+      "original_sha256": "1d938341d1210bdff848b2a502c24c7fa547662441669a33a43fa62eeec4f061",
+      "public_sha256": "1d938341d1210bdff848b2a502c24c7fa547662441669a33a43fa62eeec4f061",
+      "original_bytes": 7574,
+      "public_bytes": 7574
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT_DECAY640.json",
+      "original_sha256": "68356d229a7e4017496d74413c7054828d2b6daf9e4caf6bfd573587bd2e74dc",
+      "public_sha256": "68356d229a7e4017496d74413c7054828d2b6daf9e4caf6bfd573587bd2e74dc",
+      "original_bytes": 96975,
+      "public_bytes": 96975
+    },
+    {
+      "path": "reports/advantage/BINARY_AUDIT_TEACHER320_DECAY640.json",
+      "original_sha256": "ed97b523b983532cb75037b6a2ed287f924c9365d3c7ea7079a332923c667038",
+      "public_sha256": "ed97b523b983532cb75037b6a2ed287f924c9365d3c7ea7079a332923c667038",
+      "original_bytes": 98063,
+      "public_bytes": 98063
+    },
+    {
+      "path": "reports/advantage/CANDIDATE_DEVELOPMENT.json",
+      "original_sha256": "129c0a2ba4e03e4ee6d8c336ae55308726bf17ee47254eaa8157caa2a602621f",
+      "public_sha256": "129c0a2ba4e03e4ee6d8c336ae55308726bf17ee47254eaa8157caa2a602621f",
+      "original_bytes": 163219,
+      "public_bytes": 163219
+    },
+    {
+      "path": "reports/advantage/COMBINED640_PAIRED_DEV_DIAGNOSTIC.json",
+      "original_sha256": "108b7fc13025c90fbe6c6215dbf85bc165ec6adcc4a161d0557744346c064b95",
+      "public_sha256": "108b7fc13025c90fbe6c6215dbf85bc165ec6adcc4a161d0557744346c064b95",
+      "original_bytes": 15798,
+      "public_bytes": 15798
+    },
+    {
+      "path": "reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER.json",
+      "original_sha256": "4873fe110b95c44e5ba57027c4d65b47ac3779a420ff0a62c7ecf4a6373e430f",
+      "public_sha256": "4873fe110b95c44e5ba57027c4d65b47ac3779a420ff0a62c7ecf4a6373e430f",
+      "original_bytes": 63277,
+      "public_bytes": 63277
+    },
+    {
+      "path": "reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER.md",
+      "original_sha256": "1899f3ac351329716c1fa23ba65d9abe37c6d31559cb7d9d1aab66bc2bf42aee",
+      "public_sha256": "8cc5e9072ecd66f9bb7db325b7a567f62f9d997c144038df407e8d77a73c968b",
+      "original_bytes": 7240,
+      "public_bytes": 7206
+    },
+    {
+      "path": "reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER_AUDIT.json",
+      "original_sha256": "dbc9e56f6968723073c3783cb0fcc7aafca3a8d4d6ad14fe0ef47dd0586efdb9",
+      "public_sha256": "dbc9e56f6968723073c3783cb0fcc7aafca3a8d4d6ad14fe0ef47dd0586efdb9",
+      "original_bytes": 15356,
+      "public_bytes": 15356
+    },
+    {
+      "path": "reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER_COST.json",
+      "original_sha256": "aa7ef14dbe9bea91c7db71d5976617454df466742b64601e1750466c30f7c966",
+      "public_sha256": "70c53f8a5e19c0bd4551c7afc4839e9deabe7158d21599ff5e5e6c2785d71cea",
+      "original_bytes": 5149,
+      "public_bytes": 5485
+    },
+    {
+      "path": "reports/advantage/COST_AUDIT.json",
+      "original_sha256": "677b5e82541bb929d4f3c7b6e1dbdc09b2641c9eed9bab009b84ef43b6271ba0",
+      "public_sha256": "677b5e82541bb929d4f3c7b6e1dbdc09b2641c9eed9bab009b84ef43b6271ba0",
+      "original_bytes": 22807,
+      "public_bytes": 22807
+    },
+    {
+      "path": "reports/advantage/DECAY640_CLASS_DRIFT.json",
+      "original_sha256": "0fdcbbfa33bb3de9f315eef95f13bb6dcf275b05a139bcc487b8b544bcc724bd",
+      "public_sha256": "0fdcbbfa33bb3de9f315eef95f13bb6dcf275b05a139bcc487b8b544bcc724bd",
+      "original_bytes": 186609,
+      "public_bytes": 186609
+    },
+    {
+      "path": "reports/advantage/DECAY640_OBSERVED_RUNTIME.json",
+      "original_sha256": "bf758d12c73bac9b682653b7fc6c64b8af58f18b7aee3ad0b8d059e1f6124c48",
+      "public_sha256": "bf758d12c73bac9b682653b7fc6c64b8af58f18b7aee3ad0b8d059e1f6124c48",
+      "original_bytes": 25308,
+      "public_bytes": 25308
+    },
+    {
+      "path": "reports/advantage/DECAY640_PREFIX_TIMING.json",
+      "original_sha256": "5c388f3c6cb3ef42c6a16a3ed8991f94e414b12e5fe2d629298b6008b360b3b6",
+      "public_sha256": "5c388f3c6cb3ef42c6a16a3ed8991f94e414b12e5fe2d629298b6008b360b3b6",
+      "original_bytes": 5998,
+      "public_bytes": 5998
+    },
+    {
+      "path": "reports/advantage/DECAY640_PURE_OPD_TRAINING_COMPLETE.json",
+      "original_sha256": "940694f260444dda3ae7bfb5d374af013c45f3f6decfd3dc4d394be27a7a63ac",
+      "public_sha256": "940694f260444dda3ae7bfb5d374af013c45f3f6decfd3dc4d394be27a7a63ac",
+      "original_bytes": 12286,
+      "public_bytes": 12286
+    },
+    {
+      "path": "reports/advantage/DECAY640_SAMPLED_TRAINING.json",
+      "original_sha256": "7e3ad659e78be607a63dbb38fb6dc24330f7f707f8aeeadea157e548929ad97b",
+      "public_sha256": "7e3ad659e78be607a63dbb38fb6dc24330f7f707f8aeeadea157e548929ad97b",
+      "original_bytes": 41223,
+      "public_bytes": 41223
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT.json",
+      "original_sha256": "259d8a97898782146c88c88196a29382876beeb101ff20580b8ba335d7768770",
+      "public_sha256": "259d8a97898782146c88c88196a29382876beeb101ff20580b8ba335d7768770",
+      "original_bytes": 236218,
+      "public_bytes": 236218
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT320_DECISION.json",
+      "original_sha256": "8dbbb7bebe561214218ba94ff60ffad03a2d0d64947ed040f1ee8d1f90221e37",
+      "public_sha256": "8dbbb7bebe561214218ba94ff60ffad03a2d0d64947ed040f1ee8d1f90221e37",
+      "original_bytes": 4381,
+      "public_bytes": 4381
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT320_FINAL.json",
+      "original_sha256": "129c0a2ba4e03e4ee6d8c336ae55308726bf17ee47254eaa8157caa2a602621f",
+      "public_sha256": "129c0a2ba4e03e4ee6d8c336ae55308726bf17ee47254eaa8157caa2a602621f",
+      "original_bytes": 163219,
+      "public_bytes": 163219
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT640.json",
+      "original_sha256": "5a6d915e39484910ce7d4e6fd4969083ffb7d93aff9503f9fe1408b762d282d6",
+      "public_sha256": "5a6d915e39484910ce7d4e6fd4969083ffb7d93aff9503f9fe1408b762d282d6",
+      "original_bytes": 185404,
+      "public_bytes": 185404
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT640_GATES.json",
+      "original_sha256": "b8a6d88b79fe2095ff6db74d259c8f92b01bb3b96f2f058a5154f76e3c6f61ee",
+      "public_sha256": "b8a6d88b79fe2095ff6db74d259c8f92b01bb3b96f2f058a5154f76e3c6f61ee",
+      "original_bytes": 68717,
+      "public_bytes": 68717
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT640_MAIN_OPD_STAGE.json",
+      "original_sha256": "acc626007b54d7981a798a492c380bc972fa98febae946ca8dad62e37f0f5d0e",
+      "public_sha256": "acc626007b54d7981a798a492c380bc972fa98febae946ca8dad62e37f0f5d0e",
+      "original_bytes": 173705,
+      "public_bytes": 173705
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT640_SFT_LOW_MID.json",
+      "original_sha256": "b93fd97e0e56f2fc01402ea141365f040d5ced70f0dc1be29f155d9aeaa36709",
+      "public_sha256": "b93fd97e0e56f2fc01402ea141365f040d5ced70f0dc1be29f155d9aeaa36709",
+      "original_bytes": 1933,
+      "public_bytes": 1933
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_AOPD.json",
+      "original_sha256": "0c2cc1c411481e1276a7c2f5e1ba211701f5e91b6439aba298f02febc2adc6f7",
+      "public_sha256": "0c2cc1c411481e1276a7c2f5e1ba211701f5e91b6439aba298f02febc2adc6f7",
+      "original_bytes": 12275,
+      "public_bytes": 12275
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_AOPD_DOMAIN_ROUTER.json",
+      "original_sha256": "3633bbc03a8d6fbe5318d047b5b5ee5ae92699d7cbf43cf663084c4291eed2d0",
+      "public_sha256": "3633bbc03a8d6fbe5318d047b5b5ee5ae92699d7cbf43cf663084c4291eed2d0",
+      "original_bytes": 3667,
+      "public_bytes": 3667
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_COMBINED180.json",
+      "original_sha256": "a10813aa1010b00769e743564cb659bd8e8041c0fe6cb5f5eb0b1f79d5f27b94",
+      "public_sha256": "a10813aa1010b00769e743564cb659bd8e8041c0fe6cb5f5eb0b1f79d5f27b94",
+      "original_bytes": 580422,
+      "public_bytes": 580422
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_COMBINED640.json",
+      "original_sha256": "ca25fc6c6d21a5127d873b911f2b7c83e63cfe57975eab1ce526577ab022493c",
+      "public_sha256": "ca25fc6c6d21a5127d873b911f2b7c83e63cfe57975eab1ce526577ab022493c",
+      "original_bytes": 384387,
+      "public_bytes": 384387
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_COMMON_TEACHER_INIT.json",
+      "original_sha256": "e50d3ec43d2f262faf2a76dfed6083c28fbcf3bbd8db5ae2e60e74fd9159ca36",
+      "public_sha256": "e50d3ec43d2f262faf2a76dfed6083c28fbcf3bbd8db5ae2e60e74fd9159ca36",
+      "original_bytes": 695121,
+      "public_bytes": 695121
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_CURVES.json",
+      "original_sha256": "b0bc4594c4c3544bd2d610d24a824cb381e4f61d6450c31418ce44451e044957",
+      "public_sha256": "b0bc4594c4c3544bd2d610d24a824cb381e4f61d6450c31418ce44451e044957",
+      "original_bytes": 148590,
+      "public_bytes": 148590
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_DECAY640.json",
+      "original_sha256": "7447c32cb65f32c876e804a6d00497617501d345d30a926f22a02a5080bff460",
+      "public_sha256": "7447c32cb65f32c876e804a6d00497617501d345d30a926f22a02a5080bff460",
+      "original_bytes": 194360,
+      "public_bytes": 194360
+    },
+    {
+      "path": "reports/advantage/DEVELOPMENT_TEACHER320_DECAY640.json",
+      "original_sha256": "82813f1065c8f0818b3a8cd5ae609636530643bf2d69f1834a70eb169fe5e306",
+      "public_sha256": "82813f1065c8f0818b3a8cd5ae609636530643bf2d69f1834a70eb169fe5e306",
+      "original_bytes": 197746,
+      "public_bytes": 197746
+    },
+    {
+      "path": "reports/advantage/EXPLORATORY_OPD_VS_OFFLINE.json",
+      "original_sha256": "5af679af64915c08972a1ea586febb46ed24b7e4018d1faea175258fc2ce7b47",
+      "public_sha256": "5af679af64915c08972a1ea586febb46ed24b7e4018d1faea175258fc2ce7b47",
+      "original_bytes": 1339,
+      "public_bytes": 1339
+    },
+    {
+      "path": "reports/advantage/EXTENDED_DEVELOPMENT.json",
+      "original_sha256": "c5e0ced8b8ee157ce0507d5be2988aa00a94407d0eb5f17b8767e47a8c001763",
+      "public_sha256": "c5e0ced8b8ee157ce0507d5be2988aa00a94407d0eb5f17b8767e47a8c001763",
+      "original_bytes": 101140,
+      "public_bytes": 101140
+    },
+    {
+      "path": "reports/advantage/EXTENDED_REGRADED.json",
+      "original_sha256": "c5e0ced8b8ee157ce0507d5be2988aa00a94407d0eb5f17b8767e47a8c001763",
+      "public_sha256": "c5e0ced8b8ee157ce0507d5be2988aa00a94407d0eb5f17b8767e47a8c001763",
+      "original_bytes": 101140,
+      "public_bytes": 101140
+    },
+    {
+      "path": "reports/advantage/FAILED_LONGRUN_DEVELOPMENT.json",
+      "original_sha256": "05bd94487841098c802f2fde5b6fc92f0c833ab477fb135e5f5fd8f4a24b1466",
+      "public_sha256": "05bd94487841098c802f2fde5b6fc92f0c833ab477fb135e5f5fd8f4a24b1466",
+      "original_bytes": 4133,
+      "public_bytes": 4133
+    },
+    {
+      "path": "reports/advantage/INTERIM640_FP32.json",
+      "original_sha256": "6af2be1791455d321e1e7c6e970c5bc2769e59538429e67263d20707f722983f",
+      "public_sha256": "6af2be1791455d321e1e7c6e970c5bc2769e59538429e67263d20707f722983f",
+      "original_bytes": 4463,
+      "public_bytes": 4463
+    },
+    {
+      "path": "reports/advantage/INTERIM640_FP32_STEP480.json",
+      "original_sha256": "183952370c15b6e24710b2a70f46b3b4d8f7f4fd6ba83e46806c660abda8a17b",
+      "public_sha256": "183952370c15b6e24710b2a70f46b3b4d8f7f4fd6ba83e46806c660abda8a17b",
+      "original_bytes": 35148,
+      "public_bytes": 35148
+    },
+    {
+      "path": "reports/advantage/LOWRATE_DEVELOPMENT.json",
+      "original_sha256": "7a4d6881e37673a26a8d93e130057319fc11feab9200927ff1a29e2a7ded6934",
+      "public_sha256": "7a4d6881e37673a26a8d93e130057319fc11feab9200927ff1a29e2a7ded6934",
+      "original_bytes": 36920,
+      "public_bytes": 36920
+    },
+    {
+      "path": "reports/advantage/LOWRATE_REGRADED.json",
+      "original_sha256": "72dd35f58306d69d03bcf2726f8f8e5ba301e1a873816351d345880862ecea5e",
+      "public_sha256": "72dd35f58306d69d03bcf2726f8f8e5ba301e1a873816351d345880862ecea5e",
+      "original_bytes": 202072,
+      "public_bytes": 202072
+    },
+    {
+      "path": "reports/advantage/OPD640_CLASS_DRIFT.json",
+      "original_sha256": "aaf8f12c907f0ea7df9c5b7190ebbce742546bc8b59c56b6a40ec22feac909da",
+      "public_sha256": "aaf8f12c907f0ea7df9c5b7190ebbce742546bc8b59c56b6a40ec22feac909da",
+      "original_bytes": 158650,
+      "public_bytes": 158650
+    },
+    {
+      "path": "reports/advantage/OPD640_MAIN_TRAINING_COMPLETE.json",
+      "original_sha256": "b8fc36d417caf514f075a8f7d61cbed9488554fdc09e697a30ae4f8771eb1f65",
+      "public_sha256": "b8fc36d417caf514f075a8f7d61cbed9488554fdc09e697a30ae4f8771eb1f65",
+      "original_bytes": 12417,
+      "public_bytes": 12417
+    },
+    {
+      "path": "reports/advantage/OPD640_OBSERVED_RUNTIME.json",
+      "original_sha256": "38059a90e02b36de757f2132572b18c07ca2d602e9e3d1ce64b6ded0cbabdc2f",
+      "public_sha256": "38059a90e02b36de757f2132572b18c07ca2d602e9e3d1ce64b6ded0cbabdc2f",
+      "original_bytes": 10565,
+      "public_bytes": 10565
+    },
+    {
+      "path": "reports/advantage/OPD640_SAMPLE_MIX.json",
+      "original_sha256": "6ab3823c015c2deb056582ecdad6a4ff1e6b14d727f13414124b5c1af599c845",
+      "public_sha256": "6ab3823c015c2deb056582ecdad6a4ff1e6b14d727f13414124b5c1af599c845",
+      "original_bytes": 9513,
+      "public_bytes": 9513
+    },
+    {
+      "path": "reports/advantage/OPD_RECIPE_NOTES.md",
+      "original_sha256": "2345b556bac74b6abea8b43e5e8f051b060ac9f7926d145ef741a4ff99c34d93",
+      "public_sha256": "2345b556bac74b6abea8b43e5e8f051b060ac9f7926d145ef741a4ff99c34d93",
+      "original_bytes": 4095,
+      "public_bytes": 4095
+    },
+    {
+      "path": "reports/advantage/ORIGINAL_COMMON320_FAILURE.json",
+      "original_sha256": "895671ba93583a0e22402a19d5ad63e57e035e309352eb134cc41b4e4bcbdbd9",
+      "public_sha256": "895671ba93583a0e22402a19d5ad63e57e035e309352eb134cc41b4e4bcbdbd9",
+      "original_bytes": 1902,
+      "public_bytes": 1902
+    },
+    {
+      "path": "reports/advantage/ORIGINAL_DEVELOPMENT.json",
+      "original_sha256": "90a967feea672df1ad88b882318876dc0f68b47183a56d213599d9c5b48544eb",
+      "public_sha256": "90a967feea672df1ad88b882318876dc0f68b47183a56d213599d9c5b48544eb",
+      "original_bytes": 68946,
+      "public_bytes": 68946
+    },
+    {
+      "path": "reports/advantage/PRECISION640_DEVELOPMENT.json",
+      "original_sha256": "ea9ae0d610b3f01b24d5167eec573f4fd8c08db984b9bc503db431f8e502cde5",
+      "public_sha256": "ea9ae0d610b3f01b24d5167eec573f4fd8c08db984b9bc503db431f8e502cde5",
+      "original_bytes": 7113,
+      "public_bytes": 7113
+    },
+    {
+      "path": "reports/advantage/PRECISION_DEVELOPMENT.json",
+      "original_sha256": "c127444757ab31ecd66c815ea9ce6a7a199438c56c3ce03fbc244d746211903a",
+      "public_sha256": "c127444757ab31ecd66c815ea9ce6a7a199438c56c3ce03fbc244d746211903a",
+      "original_bytes": 2218,
+      "public_bytes": 2218
+    },
+    {
+      "path": "reports/advantage/PROTOCOL.md",
+      "original_sha256": "9dde93cba817295219038012a12e7568db29074e39b5fbf1bf6ef649edfec639",
+      "public_sha256": "8475767fee29956782f88d8a81153f5e0f94dbdf314bd250227a4565765fa2bb",
+      "original_bytes": 49289,
+      "public_bytes": 49449
+    },
+    {
+      "path": "reports/advantage/REPAIRED_DEVELOPMENT.json",
+      "original_sha256": "f2185284fcbe0aa87ea9a0af052f06b7dd50d6650a6e0c114ce1cff30930c9a7",
+      "public_sha256": "f2185284fcbe0aa87ea9a0af052f06b7dd50d6650a6e0c114ce1cff30930c9a7",
+      "original_bytes": 98516,
+      "public_bytes": 98516
+    },
+    {
+      "path": "reports/advantage/REPAIRED_REGRADED.json",
+      "original_sha256": "f2185284fcbe0aa87ea9a0af052f06b7dd50d6650a6e0c114ce1cff30930c9a7",
+      "public_sha256": "f2185284fcbe0aa87ea9a0af052f06b7dd50d6650a6e0c114ce1cff30930c9a7",
+      "original_bytes": 98516,
+      "public_bytes": 98516
+    },
+    {
+      "path": "reports/advantage/ROUTER_SCHEMA_DEV_DIAGNOSTIC.json",
+      "original_sha256": "0f660bfbe9c59f1272732a8dcf8f739f26c202d24f8ba70308ae23fc13ad38db",
+      "public_sha256": "0f660bfbe9c59f1272732a8dcf8f739f26c202d24f8ba70308ae23fc13ad38db",
+      "original_bytes": 5888,
+      "public_bytes": 5888
+    },
+    {
+      "path": "reports/advantage/ROUTER_STABILITY_DEV.json",
+      "original_sha256": "63e99dfbe48795004ccaf8772a449e9cd5fd9d7af8972cd10a620446d3fb869a",
+      "public_sha256": "63e99dfbe48795004ccaf8772a449e9cd5fd9d7af8972cd10a620446d3fb869a",
+      "original_bytes": 141557,
+      "public_bytes": 141557
+    },
+    {
+      "path": "reports/advantage/ROUTER_STABILITY_DEV.md",
+      "original_sha256": "2c14439d75b9afbb7082730cc3040e0995459390c6f3d90585930a5f4261a7c9",
+      "public_sha256": "9f0705f21f2caacc94751f51ec2da2ecd4f48a95b003e8641ad626cd2e091cec",
+      "original_bytes": 5120,
+      "public_bytes": 5103
+    },
+    {
+      "path": "reports/advantage/ROUTER_STABILITY_DEV_COST.json",
+      "original_sha256": "a88cc4f6134f14e7b1cc91f6a9f07da0ca3126b93f7bdea63061c82b9b709ffa",
+      "public_sha256": "0a336c55d12b26a6106c1823ce690df5f4f401c4d0eab3db794d227050dcb8e8",
+      "original_bytes": 1701,
+      "public_bytes": 1813
+    },
+    {
+      "path": "reports/advantage/SCREEN_DEVELOPMENT.json",
+      "original_sha256": "d945af5a1098b8b4e26473ac9b278853eac609b78ef7103dad1ee15abd180357",
+      "public_sha256": "d945af5a1098b8b4e26473ac9b278853eac609b78ef7103dad1ee15abd180357",
+      "original_bytes": 110347,
+      "public_bytes": 110347
+    },
+    {
+      "path": "reports/advantage/STATUS.json",
+      "original_sha256": "45c9f08b67eca742fed44af8c452c33138746a2f5968d4bb1c0a486f009a63fc",
+      "public_sha256": "84940c3841f341ebf4143ea9508d6ec95746b3aa47494b36572bdb1e48cd4476",
+      "original_bytes": 543243,
+      "public_bytes": 541378
+    },
+    {
+      "path": "reports/advantage/TEACHER320_CLASS_DRIFT.json",
+      "original_sha256": "68068ec0887980c58bee3e1475684026b4ff63e60be05fa3dd870bdce4a3f953",
+      "public_sha256": "68068ec0887980c58bee3e1475684026b4ff63e60be05fa3dd870bdce4a3f953",
+      "original_bytes": 137049,
+      "public_bytes": 137049
+    },
+    {
+      "path": "reports/advantage/TEACHER320_OBSERVED_RUNTIME.json",
+      "original_sha256": "19c425378d299172743e1dd852a5a03eab438b2b428125efee912c696db88221",
+      "public_sha256": "19c425378d299172743e1dd852a5a03eab438b2b428125efee912c696db88221",
+      "original_bytes": 11331,
+      "public_bytes": 11331
+    },
+    {
+      "path": "reports/advantage/TEACHER320_SAMPLED_TRAINING.json",
+      "original_sha256": "846537bb34f45a51406d075850997a848d2d33be6892615b678a94acb7314eb6",
+      "public_sha256": "846537bb34f45a51406d075850997a848d2d33be6892615b678a94acb7314eb6",
+      "original_bytes": 14307,
+      "public_bytes": 14307
+    },
+    {
+      "path": "reports/advantage/TRAJECTORY-TUNED_REGRADED.json",
+      "original_sha256": "c2fe9e2586cf1ab84e430734e17a0fc543a8388bb3a16b10a2654369c885efb6",
+      "public_sha256": "c2fe9e2586cf1ab84e430734e17a0fc543a8388bb3a16b10a2654369c885efb6",
+      "original_bytes": 79286,
+      "public_bytes": 79286
+    },
+    {
+      "path": "reports/advantage/TRAJECTORY_CURVE_COMPARISON.json",
+      "original_sha256": "505ced85d0d9496793c85dafdd16e708f3ae696d51ec30e03683a7e42b9e888d",
+      "public_sha256": "505ced85d0d9496793c85dafdd16e708f3ae696d51ec30e03683a7e42b9e888d",
+      "original_bytes": 1475,
+      "public_bytes": 1475
+    },
+    {
+      "path": "reports/advantage/WORKFLOW640_VERIFICATION.json",
+      "original_sha256": "7b16f6140b951cedec1240464ba7b308386141246fbe6d35da1536c24d74853d",
+      "public_sha256": "00174594210f81704834ee5c81c04cad48d42b2ea42a18aa645a7bf5514f8a8b",
+      "original_bytes": 3035,
+      "public_bytes": 2853
+    },
+    {
+      "path": "configs/router-stability-dev-v1.json",
+      "original_sha256": "5761ad2eff24ac670dcfa6dc2f79f755e61fe5d305f8ce90032d3e817b78d273",
+      "public_sha256": "5761ad2eff24ac670dcfa6dc2f79f755e61fe5d305f8ce90032d3e817b78d273"
+    },
+    {
+      "path": "configs/router-confirmation-v1.json",
+      "original_sha256": "79ffd1973e43e6bfe2832db8aa8e7521e54e061155592c3d37e7ff7b7d02c3bb",
+      "public_sha256": "c0d75e8e034bf1873e318f75088ad859132ebad173e527a554a1c1e82743b18f"
+    },
+    {
+      "path": "configs/router-confirmation-analysis-v1.json",
+      "original_sha256": "e9e33bb42474f523a46918764af94a9a4ba955ed8f0895b8385a67dbc89648e1",
+      "public_sha256": "e9e33bb42474f523a46918764af94a9a4ba955ed8f0895b8385a67dbc89648e1"
+    },
+    {
+      "path": "reports/advantage/router-stability-collection-audit.json",
+      "original_sha256": "9f0b7df5818d8d3d2b9ebe2143f2207b7bac472e46081b6f33de2565fb2ee985",
+      "public_sha256": "9f0b7df5818d8d3d2b9ebe2143f2207b7bac472e46081b6f33de2565fb2ee985"
+    },
+    {
+      "path": "reports/advantage/router-confirmation-collection-audit.json",
+      "original_sha256": "3bebc8e5ecd0384cbf7fe3fe1948e99894d070a562e34a905c8d2601328d3395",
+      "public_sha256": "3bebc8e5ecd0384cbf7fe3fe1948e99894d070a562e34a905c8d2601328d3395"
+    },
+    {
+      "path": "reports/advantage/router-stability-dev-v1-scores.jsonl.gz",
+      "records": 13600,
+      "public_sha256": "b3f70e8b771a889285b2e50ed6639a2e7223c738ba5c2c50f0d9701cf120573a",
+      "original_sources": [
+        {
+          "path": "seed101/all4.jsonl",
+          "sha256": "eb8215453215215ed49e88d7228693feb80176e0cc646482e6160b4bde747eb0"
+        },
+        {
+          "path": "seed101/final640.jsonl",
+          "sha256": "432c682a8ff984c46a21e5d62838e231423cbce6f550eabcdcf18cce577f2e07"
+        },
+        {
+          "path": "seed101/fixed320.jsonl",
+          "sha256": "7b51ad1781e9405c65dcb7ee7b7ef2ca1e824682c16c34b77c3196d2d4b41489"
+        },
+        {
+          "path": "seed101/last2.jsonl",
+          "sha256": "bcd0665f88d39850b3438cfd3bbde79aefef27a8a4787d333a6c4f90ced8cffe"
+        },
+        {
+          "path": "seed101/offline_sft.jsonl",
+          "sha256": "c12336ef1804bff7e3eac98018aa3fc612e85039ea74dc9028c8a73bc7d1f901"
+        },
+        {
+          "path": "seed101/oracle_sft.jsonl",
+          "sha256": "e2425b5b5251b917d2864e0836f9a81007987b5875f259ba6a279518645b4840"
+        },
+        {
+          "path": "seed211/all4.jsonl",
+          "sha256": "4cc65eb62ff87a40ffcd811e37581fac8cbf9915e6c21ffc700c9ed58ad64f91"
+        },
+        {
+          "path": "seed211/final640.jsonl",
+          "sha256": "d60c99cc0548aeb6407372425a588c418a4e5405c6f176b6d44b7fdd413356a9"
+        },
+        {
+          "path": "seed211/fixed320.jsonl",
+          "sha256": "8808898e1ddcb66cc91a9e17e84666e84acee1991598c806867df551a4c48d79"
+        },
+        {
+          "path": "seed211/last2.jsonl",
+          "sha256": "22d4e080d3125c86c556bbb4087db13aeaabf1522189ed68d554c50cad913ef7"
+        },
+        {
+          "path": "seed211/offline_sft.jsonl",
+          "sha256": "114d194f01561be448eff8522238f37d2fb3117be2e3b00a1732ffcaf7e161ea"
+        },
+        {
+          "path": "seed211/oracle_sft.jsonl",
+          "sha256": "a478603d6c21b2c9e4849f17d69a14545727ea58bb528abb06187856cac2e762"
+        },
+        {
+          "path": "seed307/all4.jsonl",
+          "sha256": "d65fd7c67c1fd5effc32091d9d2429041158cf80c86229d4f5be2a1f346cb3f2"
+        },
+        {
+          "path": "seed307/final640.jsonl",
+          "sha256": "6f2ad0e60f0bb7e5932b48d39cc0bd7418faf722b80d59c4e1f24827aafb20ce"
+        },
+        {
+          "path": "seed307/fixed320.jsonl",
+          "sha256": "cd27d9e49c4b410fa2ee69a9790fcc2021b91294b122b6ce751b15f38527e29d"
+        },
+        {
+          "path": "seed307/last2.jsonl",
+          "sha256": "36d93f7e4f5c0e35cb5a61bcc00f5db2415d53d885d1de40a80e05704222589e"
+        },
+        {
+          "path": "seed307/offline_sft.jsonl",
+          "sha256": "2a2f7d8f25a5d085c71a6236fbeaa33c824a7d5e63e3fb76bd777503d314e28c"
+        },
+        {
+          "path": "seed307/oracle_sft.jsonl",
+          "sha256": "d7827c3f545f478b208196a6e493ff0c951ec589cccd0f650dd9122b1173e558"
+        },
+        {
+          "path": "seed401/all4.jsonl",
+          "sha256": "752e565d634ad9a983f87b5021d64cfad628fe115c7812f3e446b80b6e337ff5"
+        },
+        {
+          "path": "seed401/final640.jsonl",
+          "sha256": "7629b231243b5e59968c52ab5fecc6f766b36f6400cf1f723b1f8381606cb203"
+        },
+        {
+          "path": "seed401/fixed320.jsonl",
+          "sha256": "cebebf74e94d671621061be257f9879e5546c0d26b1211721bf7d473b1ffe0e7"
+        },
+        {
+          "path": "seed401/last2.jsonl",
+          "sha256": "71fccf7d31404fdc5e408a46114aa17aed81b3e7c21802e488500df0715c4d9c"
+        },
+        {
+          "path": "seed401/offline_sft.jsonl",
+          "sha256": "a4a93f27d10466b8006c9ce9eab6ed670ecad4f7b2e28833c683e7b420675708"
+        },
+        {
+          "path": "seed401/oracle_sft.jsonl",
+          "sha256": "e4aab42bfefea553e3a688e91235fd0f853e5cc2083f7a2fb299e338827aaa5c"
+        }
+      ],
+      "boundary": "Scope/split distinguish training DEV from frozen confirmation. Repeated seeds/checkpoints are not new independent queries; raw responses remain separate."
+    },
+    {
+      "path": "reports/advantage/aopd-router-confirmation-v1-scores.jsonl.gz",
+      "records": 148000,
+      "public_sha256": "ce1597bc513ab39dfbad289b5a67c02a51484ac25ab0e8808c39d256e09bc8a9",
+      "original_sources": [
+        {
+          "path": "seed101/aopd_seed101/ood.jsonl",
+          "sha256": "c47578549c77d438b8aaef8944bc77fd847781572574d1a6a8413347fa5d1817"
+        },
+        {
+          "path": "seed101/aopd_seed101/test.jsonl",
+          "sha256": "dcc4401b687652b2232e48555e5f0b2a25819e4d7e1ed526df252272a9c9a568"
+        },
+        {
+          "path": "seed101/offline_sft_seed101/ood.jsonl",
+          "sha256": "429108fe71cd8b8ddcbea31273eff245a30f9646d39b810c2713b3e1302f8774"
+        },
+        {
+          "path": "seed101/offline_sft_seed101/test.jsonl",
+          "sha256": "108b966b42600f270c4c522050f2c22c886ea3dff18edd77165fedb914c2fe77"
+        },
+        {
+          "path": "seed101/oracle_sft_seed101/ood.jsonl",
+          "sha256": "1ea6cf8b66061754a937cd228dc6f2eafc8104c2ebb7d8776b3a0a5f02c57a03"
+        },
+        {
+          "path": "seed101/oracle_sft_seed101/test.jsonl",
+          "sha256": "1dff93eddb17a36c1be4e7d75886cabe0c7a3124255d507e31a2b656a5afb104"
+        },
+        {
+          "path": "seed211/aopd_seed211/ood.jsonl",
+          "sha256": "13e8b21d1ee26c70ad8b81c68d8fe1ceda600cae3fd3ee28cf4068c9cdf9bdc9"
+        },
+        {
+          "path": "seed211/aopd_seed211/test.jsonl",
+          "sha256": "d3b93f63a76666eb3a2c71b1c39f468e30896f47d88654f099c66c3a22a2276f"
+        },
+        {
+          "path": "seed211/offline_sft_seed211/ood.jsonl",
+          "sha256": "58fe9a3e114bfdb80705780ef8e8960396fbec20e4f08f5e6cf15d417edb0d61"
+        },
+        {
+          "path": "seed211/offline_sft_seed211/test.jsonl",
+          "sha256": "f51ce8e67dccbf0988bf7c2631c6ae15e03ea45b647c647e6392d2fdec1c963e"
+        },
+        {
+          "path": "seed211/oracle_sft_seed211/ood.jsonl",
+          "sha256": "41ce37442327505bd7b34dcd8a9534448ef8eb7ace48f00d4980572fbd2e8060"
+        },
+        {
+          "path": "seed211/oracle_sft_seed211/test.jsonl",
+          "sha256": "b981ee74a11aca7652a8880c524cf3adfba88f256a6e920b1f4f78e805386280"
+        },
+        {
+          "path": "seed307/aopd_seed307/ood.jsonl",
+          "sha256": "2e9dbbaa455ffed53234287ddef17f4a6bdd9046224895b1a6394543c1198d51"
+        },
+        {
+          "path": "seed307/aopd_seed307/test.jsonl",
+          "sha256": "b99199b561906f79e2e342f3b7f69691de509e7e09d1efa77b27886b8c0d957c"
+        },
+        {
+          "path": "seed307/offline_sft_seed307/ood.jsonl",
+          "sha256": "d6eff1bce042a59c257fa50ebc21a26a9d0d05d9fe493403965a5b78a435e9c6"
+        },
+        {
+          "path": "seed307/offline_sft_seed307/test.jsonl",
+          "sha256": "138646392d209c27727cc76be6725d2cfbc7ac921ff33745a5d0ca1195a12fc9"
+        },
+        {
+          "path": "seed307/oracle_sft_seed307/ood.jsonl",
+          "sha256": "b15b1d867af1f7bd856edc284e3b4459c8d300ef4cf91908c008390c807fc297"
+        },
+        {
+          "path": "seed307/oracle_sft_seed307/test.jsonl",
+          "sha256": "911a0f9730d8cb5815706fe37b919ffbdd5a35ed7b822cde670cca61960ff601"
+        },
+        {
+          "path": "seed401/aopd_seed401/ood.jsonl",
+          "sha256": "8e6ae30d36b43036882f6d299c68d2c6e45128baaa3c8c18cd40fa35f3cec20d"
+        },
+        {
+          "path": "seed401/aopd_seed401/test.jsonl",
+          "sha256": "a9bd336d00695fd956f03cd6a6c90ea34e47027d509538f4d8cf7dd814dbf921"
+        },
+        {
+          "path": "seed401/offline_sft_seed401/ood.jsonl",
+          "sha256": "df32d80cc1d4bd42f2ebfd1ec95a87af7ce7a7f5822467981dee68b057c46682"
+        },
+        {
+          "path": "seed401/offline_sft_seed401/test.jsonl",
+          "sha256": "8f6fa9c6673c4819ebf9b876aa9d385a8e0bd50d804630fedeae8fd79d253beb"
+        },
+        {
+          "path": "seed401/oracle_sft_seed401/ood.jsonl",
+          "sha256": "a348b111a00c2d4c60a838df0770040e3f43cb0d1ba997c5ded74c5861018ee3"
+        },
+        {
+          "path": "seed401/oracle_sft_seed401/test.jsonl",
+          "sha256": "017465a92bbb1b206475d6cf81898569daf0526a9f5f31b79bd47e9430cc331b"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/dev-0000.jsonl",
+          "sha256": "6ef39c0a65f9f81b27ec79d39142b3dcae5e642fe8e6edef90c2a6eb70b3af26"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/dev-0160.jsonl",
+          "sha256": "ad9415eb69974f3e2a4cdba419ef78bd4767eab8f4acecad703c5f8516aeec31"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/dev-0320.jsonl",
+          "sha256": "9cc32b8fb371bc0a6e498fa6eed6394b76dd5eef507c4b8abdc867164e9b3931"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/dev-0480.jsonl",
+          "sha256": "2d454f385243fd86ca198be01f8dfc1fa59ba4a055c66886cb521a7ae2bdac79"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/dev-0640.jsonl",
+          "sha256": "0db13354e23ed38c052be8bd2cb82d30df5ebf0b9487e601bc07e502b0515ff7"
+        },
+        {
+          "path": "training/seed101/aopd_seed101/train/metrics.jsonl",
+          "sha256": "064b4fb1d03ec0097833c438b50601002a5e190d1208f034f7aa94d3ab8326ee"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/dev-0000.jsonl",
+          "sha256": "094fc5dd4da2fede524c04dd0df464eee06c3948bf7120849b10bc867f9b9c4f"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/dev-0160.jsonl",
+          "sha256": "2d11116db8fca79bbdfb252ff9657a14ac954f3b278b06c30dbcc258d9019f80"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/dev-0320.jsonl",
+          "sha256": "44787a3e83da5855027dd70b60b71a0200843fcef7b0d42b1c9f38cf9e938281"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/dev-0480.jsonl",
+          "sha256": "d70fabc5c76bc168ea8b9241bb43f30daa43a1d62c0d69314543bafb425636c9"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/dev-0640.jsonl",
+          "sha256": "574f742d1675951bfbf3e0d5f24344228c10fe0e422d3dcbf69a0d40faccc5ea"
+        },
+        {
+          "path": "training/seed101/offline_sft_seed101/train/metrics.jsonl",
+          "sha256": "141566632eb0ab9b2e7361922cd0f876436cb4e8be52195b037b5466e0f1f98f"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/dev-0000.jsonl",
+          "sha256": "66795c17a50e754aa0b301e0fc2d07dcfc6c7af3fa4e9c01fbbd1d15ea23b8e3"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/dev-0160.jsonl",
+          "sha256": "8a6829d9d130f01b54fb8c3ac359a8f12e877c9472ac347e573edfb5802e3696"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/dev-0320.jsonl",
+          "sha256": "e8c88704a13c274245d9cbc9a8ea62d9c49c989bec61b6805a235c337884042a"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/dev-0480.jsonl",
+          "sha256": "a74cc9bab73c0fd84452079149dde46b3e2104fe69b971eb880bc3e17ee9e16e"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/dev-0640.jsonl",
+          "sha256": "efd542496bb6716166eed669f977d500af8f7e3fff074005bffea8ec241d7168"
+        },
+        {
+          "path": "training/seed101/oracle_sft_seed101/train/metrics.jsonl",
+          "sha256": "982749091d5a457665ae993a3c118446886350e22e3da252ef9eb8ab110b3092"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/dev-0000.jsonl",
+          "sha256": "ec48369b9894a6f6c28fc5f740c5aec4076d323d17d5e76c58b5f580be4ec227"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/dev-0160.jsonl",
+          "sha256": "8e61be60b8a460ef0f670c444ac350af690927d99126506b6d4aaba9b5c05550"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/dev-0320.jsonl",
+          "sha256": "f71458cdf220ad3bb4b18c5d19b6e4aff164ee912ab932dd507d0f880cc7bf0b"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/dev-0480.jsonl",
+          "sha256": "6422c219ab1f93515f02ae5ef3ae46beedcab6e0baf556f38bd3bc649a2f7881"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/dev-0640.jsonl",
+          "sha256": "013022111248b23828f912e878b55eab079b2d960013dd9d2582221f4b6cac81"
+        },
+        {
+          "path": "training/seed211/aopd_seed211/train/metrics.jsonl",
+          "sha256": "a52a12cb5ffc60e778d548dcd34e0186c970515e84ec61e48e1d76a519a5dff8"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/dev-0000.jsonl",
+          "sha256": "f7b63d222a19c05de70b8a1f11fa3fbd45bc54a789895d31bb3b831b1aaf9262"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/dev-0160.jsonl",
+          "sha256": "595ffa44f69f3628bb0b5fb85dd6907abebcb16f75556221f7510e539a4d2a6d"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/dev-0320.jsonl",
+          "sha256": "84a4609944ead2d26f36453b1a4095ba01d6a17a5ddde1fc0760042aa6143e68"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/dev-0480.jsonl",
+          "sha256": "f987fb235076054aaf8ccd8cd0ef6725c8cbe0170c954bd2d38363aafd481591"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/dev-0640.jsonl",
+          "sha256": "a6c5cea33e786b9a9ce93d5a9d1be0f532223a5f9405ea3bf3565f76460023a8"
+        },
+        {
+          "path": "training/seed211/offline_sft_seed211/train/metrics.jsonl",
+          "sha256": "d4f06c11035db5df014b97c2ad076265f46ce851ac042b5b6281d86e6bdb7ef1"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/dev-0000.jsonl",
+          "sha256": "ff105b4d2e77f7ef5c8aeb49ab8db4ea8f8dbca0e7aa49e55a2b8023f634c770"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/dev-0160.jsonl",
+          "sha256": "3176276db6a1736e48b25668691ccd0a7b3521f28ab49eb2bb5eb84a20528be1"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/dev-0320.jsonl",
+          "sha256": "973d1f893d5dd695ba2a3ab90733b973c4b8812d38d7eec1ad1fc7f9a1d12c53"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/dev-0480.jsonl",
+          "sha256": "bb55ccb93676068718aee179d0d05675bf4bebc6c1f6cf38a263328eb221c093"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/dev-0640.jsonl",
+          "sha256": "5a012b5ec246e90171279f483856dd68ca1d8e1d2f5e084bbed01aad0a06b206"
+        },
+        {
+          "path": "training/seed211/oracle_sft_seed211/train/metrics.jsonl",
+          "sha256": "115a9ec9feae0a23879809a1949253a3e6a76777af4029964fec0698a5596568"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/dev-0000.jsonl",
+          "sha256": "965004df8934d49a338ebd93a596a997833bcacfe84e89fd5179ab277effbc26"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/dev-0160.jsonl",
+          "sha256": "e05a53d50cbc4938561cf2d9c8ae1b23f4ba0e33d776122e4d25b09ed4bcc005"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/dev-0320.jsonl",
+          "sha256": "891e40a5f19e75b359faa73fd33644ba77590c42241de6c85fab169c1a6959f9"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/dev-0480.jsonl",
+          "sha256": "2ecf447542d8945e78828bbd65b185f37f3f479b11b21e526ef5f92d60dc5949"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/dev-0640.jsonl",
+          "sha256": "f295c6871d8483265fe77bffa3dafa6eca653235d7798fb956aa2b137ece8dd5"
+        },
+        {
+          "path": "training/seed307/aopd_seed307/train/metrics.jsonl",
+          "sha256": "1b0b322f60c55249009ca73725c9613d121f4589bdd3ec791c0edf7f3f7b9678"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/dev-0000.jsonl",
+          "sha256": "5024a8a02f4db1f9d4703987ac43ec9bc0895412ba63dd0a46222f5d07051c61"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/dev-0160.jsonl",
+          "sha256": "8901fdf2b53e81ee8832fc7e574f41cbe764619aec71b3cbafd54475d582281a"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/dev-0320.jsonl",
+          "sha256": "463ee87f77f00c632727e03ebfc7540171f691b8906dfbf48a1c5ce099c7a078"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/dev-0480.jsonl",
+          "sha256": "00552617a0e265e8f39787b31d497a90d00c563138d04859c48413cc65f779b0"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/dev-0640.jsonl",
+          "sha256": "0d0682b252e05b5c39865a5a11acf737b9bebc04baa2f29b40ceb13ffd481096"
+        },
+        {
+          "path": "training/seed307/offline_sft_seed307/train/metrics.jsonl",
+          "sha256": "c03eeaace3172ffb6b1cc8de9ceffa7e9a99ed67490aa6e9f5b655621658a78d"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/dev-0000.jsonl",
+          "sha256": "676fc733893563bbc3128a36900f971540a3ca921746772cdf9b076e5761ac0a"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/dev-0160.jsonl",
+          "sha256": "d7c5ca4a4ad5cacdeb32b8d218f174d4aea0ff789193dd3fd3e98d1f25c86f29"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/dev-0320.jsonl",
+          "sha256": "0778e9b2c4fc7f89d2f4755e166df48e2495196180e7d1d4bc31d72adb995653"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/dev-0480.jsonl",
+          "sha256": "e0a8c3af1ccf192cc875e91c8e196983e9810d40412f9dbe9d9cb2070e968225"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/dev-0640.jsonl",
+          "sha256": "105ae7c11223130da543304d880a4efd2d30601c8b5f50dd7b4a71a0670a98b5"
+        },
+        {
+          "path": "training/seed307/oracle_sft_seed307/train/metrics.jsonl",
+          "sha256": "1303fefd1bf61ab3dfea7665803f3d696157db714b6570b7c7f2e9debfd4daac"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/dev-0000.jsonl",
+          "sha256": "096a54fc5ecfc09d163832d10a79704176cb5ec69417616a216c176e9b99ad4b"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/dev-0160.jsonl",
+          "sha256": "0e7093ecb124c29bae8315920da818eb34ffe80999b50dd37ebafcf9ef3f5543"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/dev-0320.jsonl",
+          "sha256": "3f379acb07ef48f791cfd9bfcb30569252cea3d4fe7e86ddbbab8e804a0b2119"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/dev-0480.jsonl",
+          "sha256": "9c6f99cbee4b942ba0253604f4078c0cba2c7dcb7c2ea5b9dcda0c2113ce5054"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/dev-0640.jsonl",
+          "sha256": "743c94470dd162e598c78edfc898a62fd427ca7a23e0a3a2b4fe9afeb97407eb"
+        },
+        {
+          "path": "training/seed401/aopd_seed401/train/metrics.jsonl",
+          "sha256": "6c605b01a4cd3049a2ab49f9ed8f78abb1a2a946d4d53c33db29b360917da427"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/dev-0000.jsonl",
+          "sha256": "5296418a9bbb20814891dec1d2ea19ac57960bd318e5554a633013d6687ac207"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/dev-0160.jsonl",
+          "sha256": "3cc9016a370eabad8a41e8bf8a52dabae60edcf8401193b80d46d545d3b68c0a"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/dev-0320.jsonl",
+          "sha256": "b3cc8e3a76406e09ff9e00ed6a9ba9ca1ced5c6112399c1a57092fd1463e56c5"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/dev-0480.jsonl",
+          "sha256": "4c89308cfa5f9fc4927f88c284452717ea25305835a9d416196b2debb1c4c6cd"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/dev-0640.jsonl",
+          "sha256": "76221109698c76ded043e5906dc96a8f0c0e093c0f1acff2c936653a5b6a9d40"
+        },
+        {
+          "path": "training/seed401/offline_sft_seed401/train/metrics.jsonl",
+          "sha256": "4a99fae6bdcff13270084cc4367b7bd897dcd8a8b5f9202e3d3753cc284688d2"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/dev-0000.jsonl",
+          "sha256": "128a2c32a40f04428dcd263b4af296f7991195eebd4e9d2534ff9d40b943c3de"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/dev-0160.jsonl",
+          "sha256": "e0d55e089dc7e6ff3e1f9afbdec48d89532b66a781732886724884c5f613d6ef"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/dev-0320.jsonl",
+          "sha256": "5a53c51e3c01531459ea6bcd1f4fc5d77ce52a4067cef6b9a5a2d447172bef0f"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/dev-0480.jsonl",
+          "sha256": "cb10ab943b23b53a76d37760bbfca4a216ee4ae0bbe0868b8bb30cd3bf26d7cd"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/dev-0640.jsonl",
+          "sha256": "834990a95aea2ec223a4d3d091ddaf3478627a438873ec2223f61b033f4e083b"
+        },
+        {
+          "path": "training/seed401/oracle_sft_seed401/train/metrics.jsonl",
+          "sha256": "2d7449cf79bef3bd177cf5a4e2353a9b5603af9e133cf8e9bc81eff32e022821"
+        }
+      ],
+      "boundary": "Scope/split distinguish training DEV from frozen confirmation. Repeated seeds/checkpoints are not new independent queries; raw responses remain separate."
+    }
+  ],
+  "boundary": "Private platform metadata removed; original and public byte hashes are distinct. Numeric research results unchanged."
+}

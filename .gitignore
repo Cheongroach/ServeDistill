@@ -15,3 +15,8 @@ reports/profiling/raw/
 
 data_expanded/*.jsonl
 reports/expanded/raw/
+
+data_advantage_screen/*.jsonl
+data_advantage_screen/training-examples.json
+reports/advantage/raw/
+data_advantage_holdout/*.jsonl

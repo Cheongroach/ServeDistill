@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "endpoint": "http://127.0.0.1:8000",
+  "model": "servedistill",
+  "per_domain": 30,
+  "max_new_tokens": 128,
+  "request_timeout": 120,
+  "sweep_timeout": 900,
+  "gpus": 1,
+  "concurrency_sweeps": [1, 4, 16],
+  "data_argument": "path to frozen JSONL with labeled tasks",
+  "boundary": "Effective throughput counts graded correct completed answers; concurrency is fixed by http_benchmark."
+}

@@ -74,6 +74,93 @@ def opd_advantages(behavior_logp: Tensor, teacher_logp: Tensor, mask: Tensor) ->
     return ((teacher_logp - behavior_logp) * mask).detach()
 
 
+def asymmetric_opd_loss(
+    current_logp: Tensor,
+    behavior_logp: Tensor,
+    teacher_logp: Tensor,
+    current_logits: Tensor,
+    teacher_logits: Tensor,
+    mask: Tensor,
+    top_k: int = 32,
+    tau: float = 0.0,
+    clip: float = 0.2,
+    aggregation: str = "token",
+    current_log_normalizer: Tensor | None = None,
+    teacher_log_normalizer: Tensor | None = None,
+) -> tuple[Tensor, dict]:
+    """AOPD: positive sampled-token OPD plus localized teacher top-k forward KL."""
+    if not (
+        current_logp.shape == behavior_logp.shape == teacher_logp.shape == mask.shape
+    ):
+        raise ValueError("AOPD sampled-token tensors must have identical shapes")
+    if (
+        current_logits.shape != teacher_logits.shape
+        or current_logits.shape[:-1] != current_logp.shape
+    ):
+        raise ValueError("AOPD logits must share the sampled-token prefix shape")
+    if top_k <= 0 or top_k > current_logits.shape[-1]:
+        raise ValueError("AOPD top_k must be within the vocabulary")
+    for name, normalizer in (
+        ("current", current_log_normalizer),
+        ("teacher", teacher_log_normalizer),
+    ):
+        if normalizer is not None and normalizer.shape != current_logp.shape:
+            raise ValueError(f"AOPD {name} log normalizer shape differs")
+    selected = mask.bool()
+
+    signal = opd_advantages(behavior_logp, teacher_logp, mask)
+    intervention = (
+        teacher_logp.detach().float().exp() - behavior_logp.detach().float().exp()
+        <= tau
+    ) & selected
+    positive_signal = signal * (~intervention)
+    positive_loss, metrics = policy_loss(
+        current_logp, behavior_logp, positive_signal, mask, clip, aggregation
+    )
+
+    if bool(intervention.any()):
+        student_selected = current_logits[intervention].float()
+        teacher_selected = teacher_logits.detach()[intervention].float()
+        if not bool(torch.isfinite(teacher_selected).all()):
+            raise FloatingPointError("Non-finite AOPD teacher logits")
+        if current_log_normalizer is None:
+            student_normalizer = student_selected.logsumexp(-1)
+        else:
+            student_normalizer = current_log_normalizer[intervention].float()
+        if teacher_log_normalizer is None:
+            teacher_normalizer = teacher_selected.logsumexp(-1)
+        else:
+            teacher_normalizer = teacher_log_normalizer[intervention].detach().float()
+        teacher_top_logits, teacher_top_indices = teacher_selected.topk(top_k, dim=-1)
+        teacher_top_logp = teacher_top_logits - teacher_normalizer[:, None]
+        student_top_logp = (
+            student_selected.gather(-1, teacher_top_indices)
+            - student_normalizer[:, None]
+        )
+        # Eq. 7 uses full teacher probabilities on its selected support without
+        # renormalizing. Compute only intervention rows; other rows multiply by zero.
+        forward_kl = (
+            teacher_top_logp.exp() * (teacher_top_logp - student_top_logp)
+        ).sum(-1) / top_k
+        guidance = torch.zeros_like(current_logp).masked_scatter(
+            intervention, forward_kl
+        )
+        guidance_loss = reduce_actions(guidance, mask, aggregation)
+    else:
+        guidance_loss = current_logp.sum() * 0
+    response_tokens = selected.sum()
+    metrics.update({
+        "aopd_intervention_fraction": (
+            intervention.sum().float() / response_tokens
+        ).item(),
+        "aopd_positive_fraction": (
+            ((~intervention) & selected).sum().float() / response_tokens
+        ).item(),
+        "aopd_guidance_loss": guidance_loss.detach().item(),
+    })
+    return positive_loss + guidance_loss, metrics
+
+
 def full_reverse_kl(student_logits: Tensor, teacher_logits: Tensor) -> Tensor:
     if student_logits.shape != teacher_logits.shape:
         raise ValueError("Full KL requires the same event space")

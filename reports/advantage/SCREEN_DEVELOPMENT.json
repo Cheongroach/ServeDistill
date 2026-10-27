@@ -1,0 +1,3764 @@
+{
+  "boundary": "No holdout outputs read; no confirmation claim",
+  "evaluations": {
+    "prompt/student-original.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.5866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.4334795321637427,
+            "macro_f1": 0.4334795321637427
+          },
+          "search": {
+            "n": 300,
+            "success": 0.05,
+            "json_valid": 0.22666666666666666,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 16.796666666666667,
+            "selection_score": 0.1943565642100177,
+            "ndcg_n": 299,
+            "ndcg": 0.1943565642100177,
+            "mrr": 0.16077777777777777
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.45,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.1721950224398205,
+            "macro_f1": 0.1721950224398205
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 10.85,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.02,
+            "mean_output_tokens": 14.22,
+            "selection_score": 0.0
+          }
+        },
+        "business_macro": 0.266677039604527,
+        "general_macro": 0.035,
+        "overall": 0.30272727272727273
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "E": 297,
+            "I": 3
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 297,
+              "true_positive": 133,
+              "precision": 0.4478114478114478,
+              "recall": 1.0,
+              "f1": 0.6186046511627907
+            },
+            "S": {
+              "support": 98,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 15,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 54,
+              "predicted": 3,
+              "true_positive": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.037037037037037035,
+              "f1": 0.07017543859649122
+            }
+          },
+          "macro_f1": 0.1721950224398205,
+          "accuracy": 0.45,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "no": 271,
+            "yes": 29
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 29,
+              "true_positive": 10,
+              "precision": 0.3448275862068966,
+              "recall": 0.08695652173913043,
+              "f1": 0.1388888888888889
+            },
+            "no": {
+              "support": 185,
+              "predicted": 271,
+              "true_positive": 166,
+              "precision": 0.6125461254612546,
+              "recall": 0.8972972972972973,
+              "f1": 0.7280701754385965
+            }
+          },
+          "macro_f1": 0.4334795321637427,
+          "accuracy": 0.5866666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "prompt/student-training_examples.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.41,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.3879033094719369,
+            "macro_f1": 0.3879033094719369
+          },
+          "search": {
+            "n": 300,
+            "success": 0.13333333333333333,
+            "json_valid": 0.7866666666666666,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.503333333333334,
+            "selection_score": 0.6489720125228295,
+            "ndcg_n": 299,
+            "ndcg": 0.6489720125228295,
+            "mrr": 0.5335873015873017
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.46,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.27658173734610125,
+            "macro_f1": 0.27658173734610125
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 10.89,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.02,
+            "mean_output_tokens": 14.22,
+            "selection_score": 0.0
+          }
+        },
+        "business_macro": 0.4378190197802892,
+        "general_macro": 0.035,
+        "overall": 0.28
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "I": 161,
+            "E": 139
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 139,
+              "true_positive": 91,
+              "precision": 0.6546762589928058,
+              "recall": 0.6842105263157895,
+              "f1": 0.6691176470588235
+            },
+            "S": {
+              "support": 98,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 15,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 54,
+              "predicted": 161,
+              "true_positive": 47,
+              "precision": 0.2919254658385093,
+              "recall": 0.8703703703703703,
+              "f1": 0.4372093023255814
+            }
+          },
+          "macro_f1": 0.27658173734610125,
+          "accuracy": 0.46,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 242,
+            "no": 58
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 242,
+              "true_positive": 90,
+              "precision": 0.371900826446281,
+              "recall": 0.782608695652174,
+              "f1": 0.5042016806722689
+            },
+            "no": {
+              "support": 185,
+              "predicted": 58,
+              "true_positive": 33,
+              "precision": 0.5689655172413793,
+              "recall": 0.1783783783783784,
+              "f1": 0.2716049382716049
+            }
+          },
+          "macro_f1": 0.3879033094719369,
+          "accuracy": 0.41,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "prompt/teacher-original.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6133333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.38016528925619836,
+            "macro_f1": 0.38016528925619836
+          },
+          "search": {
+            "n": 300,
+            "success": 0.20666666666666667,
+            "json_valid": 0.8366666666666667,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 27.82,
+            "selection_score": 0.7362160200558463,
+            "ndcg_n": 299,
+            "ndcg": 0.7362160200558463,
+            "mrr": 0.6475357142857143
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.4275874851016395,
+            "macro_f1": 0.4275874851016395
+          },
+          "math": {
+            "n": 100,
+            "success": 0.33,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.2,
+            "selection_score": 0.33
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.64,
+            "selection_score": 0.0
+          }
+        },
+        "business_macro": 0.5146562648045614,
+        "general_macro": 0.165,
+        "overall": 0.3990909090909091
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 8,
+            "E": 162,
+            "I": 112,
+            "S": 18
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 162,
+              "true_positive": 107,
+              "precision": 0.6604938271604939,
+              "recall": 0.8045112781954887,
+              "f1": 0.7254237288135593
+            },
+            "S": {
+              "support": 98,
+              "predicted": 18,
+              "true_positive": 9,
+              "precision": 0.5,
+              "recall": 0.09183673469387756,
+              "f1": 0.15517241379310345
+            },
+            "C": {
+              "support": 15,
+              "predicted": 8,
+              "true_positive": 4,
+              "precision": 0.5,
+              "recall": 0.26666666666666666,
+              "f1": 0.34782608695652173
+            },
+            "I": {
+              "support": 54,
+              "predicted": 112,
+              "true_positive": 40,
+              "precision": 0.35714285714285715,
+              "recall": 0.7407407407407407,
+              "f1": 0.4819277108433735
+            }
+          },
+          "macro_f1": 0.4275874851016395,
+          "accuracy": 0.5333333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "no": 299,
+            "yes": 1
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 1,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 185,
+              "predicted": 299,
+              "true_positive": 184,
+              "precision": 0.6153846153846154,
+              "recall": 0.9945945945945946,
+              "f1": 0.7603305785123967
+            }
+          },
+          "macro_f1": 0.38016528925619836,
+          "accuracy": 0.6133333333333333,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "prompt/teacher-training_examples.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.4266666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.3895225024845015,
+            "macro_f1": 0.3895225024845015
+          },
+          "search": {
+            "n": 300,
+            "success": 0.26666666666666666,
+            "json_valid": 0.99,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 29.97,
+            "selection_score": 0.8682573992001849,
+            "ndcg_n": 299,
+            "ndcg": 0.8682573992001849,
+            "mrr": 0.7598690476190476
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5766666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.5261558433716753,
+            "macro_f1": 0.5261558433716753
+          },
+          "math": {
+            "n": 100,
+            "success": 0.33,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.2,
+            "selection_score": 0.33
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.0,
+            "json_valid": 0.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.64,
+            "selection_score": 0.0
+          }
+        },
+        "business_macro": 0.5946452483521205,
+        "general_macro": 0.165,
+        "overall": 0.37636363636363634
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 10,
+            "S": 83,
+            "E": 111,
+            "I": 96
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 111,
+              "true_positive": 86,
+              "precision": 0.7747747747747747,
+              "recall": 0.6466165413533834,
+              "f1": 0.7049180327868853
+            },
+            "S": {
+              "support": 98,
+              "predicted": 83,
+              "true_positive": 41,
+              "precision": 0.4939759036144578,
+              "recall": 0.41836734693877553,
+              "f1": 0.4530386740331492
+            },
+            "C": {
+              "support": 15,
+              "predicted": 10,
+              "true_positive": 5,
+              "precision": 0.5,
+              "recall": 0.3333333333333333,
+              "f1": 0.4
+            },
+            "I": {
+              "support": 54,
+              "predicted": 96,
+              "true_positive": 41,
+              "precision": 0.4270833333333333,
+              "recall": 0.7592592592592593,
+              "f1": 0.5466666666666666
+            }
+          },
+          "macro_f1": 0.5261558433716753,
+          "accuracy": 0.5766666666666667,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "no": 189,
+            "yes": 111
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 111,
+              "true_positive": 27,
+              "precision": 0.24324324324324326,
+              "recall": 0.23478260869565218,
+              "f1": 0.23893805309734514
+            },
+            "no": {
+              "support": 185,
+              "predicted": 189,
+              "true_positive": 101,
+              "precision": 0.5343915343915344,
+              "recall": 0.5459459459459459,
+              "f1": 0.5401069518716578
+            }
+          },
+          "macro_f1": 0.3895225024845015,
+          "accuracy": 0.4266666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5309916658231265,
+            "macro_f1": 0.5309916658231265
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8489861428796258,
+            "ndcg_n": 299,
+            "ndcg": 0.8489861428796258,
+            "mrr": 0.7343452380952381
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5097144570828781,
+            "macro_f1": 0.5097144570828781
+          },
+          "math": {
+            "n": 100,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.36,
+            "selection_score": 0.07
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.94,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.21,
+            "selection_score": 0.94
+          }
+        },
+        "business_macro": 0.6298974219285435,
+        "general_macro": 0.505,
+        "overall": 0.43363636363636365
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 12,
+            "I": 79,
+            "E": 125,
+            "S": 84
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 125,
+              "true_positive": 86,
+              "precision": 0.688,
+              "recall": 0.6466165413533834,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 98,
+              "predicted": 84,
+              "true_positive": 38,
+              "precision": 0.4523809523809524,
+              "recall": 0.3877551020408163,
+              "f1": 0.4175824175824176
+            },
+            "C": {
+              "support": 15,
+              "predicted": 12,
+              "true_positive": 7,
+              "precision": 0.5833333333333334,
+              "recall": 0.4666666666666667,
+              "f1": 0.5185185185185185
+            },
+            "I": {
+              "support": 54,
+              "predicted": 79,
+              "true_positive": 29,
+              "precision": 0.3670886075949367,
+              "recall": 0.5370370370370371,
+              "f1": 0.43609022556390975
+            }
+          },
+          "macro_f1": 0.5097144570828781,
+          "accuracy": 0.5333333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 218,
+            "no": 82
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 218,
+              "true_positive": 97,
+              "precision": 0.44495412844036697,
+              "recall": 0.8434782608695652,
+              "f1": 0.5825825825825826
+            },
+            "no": {
+              "support": 185,
+              "predicted": 82,
+              "true_positive": 64,
+              "precision": 0.7804878048780488,
+              "recall": 0.34594594594594597,
+              "f1": 0.4794007490636704
+            }
+          },
+          "macro_f1": 0.5309916658231265,
+          "accuracy": 0.5366666666666666,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.7,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.3442622950819672,
+            "macro_f1": 0.3442622950819672
+          },
+          "search": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.15,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 15.225,
+            "selection_score": 0.12091958380723875,
+            "ndcg_n": 39,
+            "ndcg": 0.12091958380723875,
+            "mrr": 0.1
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.2194915254237288,
+            "macro_f1": 0.2194915254237288
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.425,
+            "json_valid": 0.55,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 15.675,
+            "selection_score": 0.425
+          }
+        },
+        "business_macro": 0.2282244681043116,
+        "general_macro": 0.25,
+        "overall": 0.31
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "E": 39,
+            "I": 1
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 39,
+              "true_positive": 20,
+              "precision": 0.5128205128205128,
+              "recall": 1.0,
+              "f1": 0.6779661016949152
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.2
+            }
+          },
+          "macro_f1": 0.2194915254237288,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 35,
+            "yes": 5
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 21,
+              "precision": 0.6,
+              "recall": 0.8076923076923077,
+              "f1": 0.6885245901639344
+            }
+          },
+          "macro_f1": 0.3442622950819672,
+          "accuracy": 0.525,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.725,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.3939393939393939,
+            "macro_f1": 0.3939393939393939
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.7764479655718506,
+            "ndcg_n": 39,
+            "ndcg": 0.7764479655718506,
+            "mrr": 0.5323214285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.15888888888888889,
+            "macro_f1": 0.15888888888888889
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.125,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.4430920828000445,
+        "general_macro": 0.5,
+        "overall": 0.425
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 24,
+            "E": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 16,
+              "true_positive": 10,
+              "precision": 0.625,
+              "recall": 0.5,
+              "f1": 0.5555555555555556
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 24,
+              "true_positive": 1,
+              "precision": 0.041666666666666664,
+              "recall": 1.0,
+              "f1": 0.08
+            },
+            "I": {
+              "support": 9,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "macro_f1": 0.15888888888888889,
+          "accuracy": 0.275,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 40
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 26,
+              "predicted": 40,
+              "true_positive": 26,
+              "precision": 0.65,
+              "recall": 1.0,
+              "f1": 0.7878787878787878
+            }
+          },
+          "macro_f1": 0.3939393939393939,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": true
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/train/dev-0160.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.175,
+            "selection_score": 0.15
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.35,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.25925925925925924,
+            "macro_f1": 0.25925925925925924
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8180083946257874,
+            "ndcg_n": 39,
+            "ndcg": 0.8180083946257874,
+            "mrr": 0.6061309523809524
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.6125,
+            "macro_f1": 0.6125
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.05,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.563255884628349,
+        "general_macro": 0.5499999999999999,
+        "overall": 0.465
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "E": 28,
+            "I": 11
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 28,
+              "true_positive": 18,
+              "precision": 0.6428571428571429,
+              "recall": 0.9,
+              "f1": 0.75
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 11,
+              "true_positive": 7,
+              "precision": 0.6363636363636364,
+              "recall": 0.7777777777777778,
+              "f1": 0.7
+            }
+          },
+          "macro_f1": 0.6125,
+          "accuracy": 0.65,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 40
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 40,
+              "true_positive": 14,
+              "precision": 0.35,
+              "recall": 1.0,
+              "f1": 0.5185185185185185
+            },
+            "no": {
+              "support": 26,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "macro_f1": 0.25925925925925924,
+          "accuracy": 0.35,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": true
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/train/dev-0240.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.15,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.675,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6033562166285278,
+            "macro_f1": 0.6033562166285278
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.81713155251734,
+            "ndcg_n": 39,
+            "ndcg": 0.81713155251734,
+            "mrr": 0.6148214285714285
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5389112903225807,
+            "macro_f1": 0.5389112903225807
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.025,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.6531330198228162,
+        "general_macro": 0.5375,
+        "overall": 0.495
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 2,
+            "I": 22,
+            "E": 10,
+            "S": 6
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 10,
+              "true_positive": 8,
+              "precision": 0.8,
+              "recall": 0.4,
+              "f1": 0.5333333333333333
+            },
+            "S": {
+              "support": 10,
+              "predicted": 6,
+              "true_positive": 3,
+              "precision": 0.5,
+              "recall": 0.3,
+              "f1": 0.375
+            },
+            "C": {
+              "support": 1,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "I": {
+              "support": 9,
+              "predicted": 22,
+              "true_positive": 9,
+              "precision": 0.4090909090909091,
+              "recall": 1.0,
+              "f1": 0.5806451612903226
+            }
+          },
+          "macro_f1": 0.5389112903225807,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 31,
+            "yes": 9
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 9,
+              "true_positive": 5,
+              "precision": 0.5555555555555556,
+              "recall": 0.35714285714285715,
+              "f1": 0.43478260869565216
+            },
+            "no": {
+              "support": 26,
+              "predicted": 31,
+              "true_positive": 22,
+              "precision": 0.7096774193548387,
+              "recall": 0.8461538461538461,
+              "f1": 0.7719298245614035
+            }
+          },
+          "macro_f1": 0.6033562166285278,
+          "accuracy": 0.675,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr1e4/train/dev-0320.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6533333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.505578093306288,
+            "macro_f1": 0.505578093306288
+          },
+          "search": {
+            "n": 300,
+            "success": 0.17666666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.846473294468269,
+            "ndcg_n": 299,
+            "ndcg": 0.846473294468269,
+            "mrr": 0.7272380952380951
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4853245017015071,
+            "macro_f1": 0.4853245017015071
+          },
+          "math": {
+            "n": 100,
+            "success": 0.09,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.37,
+            "selection_score": 0.09
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.91,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.14,
+            "selection_score": 0.91
+          }
+        },
+        "business_macro": 0.6124586298253547,
+        "general_macro": 0.5,
+        "overall": 0.46545454545454545
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 30,
+            "E": 131,
+            "S": 72,
+            "I": 67
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 131,
+              "true_positive": 93,
+              "precision": 0.7099236641221374,
+              "recall": 0.6992481203007519,
+              "f1": 0.7045454545454546
+            },
+            "S": {
+              "support": 98,
+              "predicted": 72,
+              "true_positive": 36,
+              "precision": 0.5,
+              "recall": 0.3673469387755102,
+              "f1": 0.4235294117647059
+            },
+            "C": {
+              "support": 15,
+              "predicted": 30,
+              "true_positive": 9,
+              "precision": 0.3,
+              "recall": 0.6,
+              "f1": 0.4
+            },
+            "I": {
+              "support": 54,
+              "predicted": 67,
+              "true_positive": 25,
+              "precision": 0.373134328358209,
+              "recall": 0.46296296296296297,
+              "f1": 0.4132231404958678
+            }
+          },
+          "macro_f1": 0.4853245017015071,
+          "accuracy": 0.5433333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "no": 279,
+            "yes": 21
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 21,
+              "true_positive": 16,
+              "precision": 0.7619047619047619,
+              "recall": 0.1391304347826087,
+              "f1": 0.23529411764705882
+            },
+            "no": {
+              "support": 185,
+              "predicted": 279,
+              "true_positive": 180,
+              "precision": 0.6451612903225806,
+              "recall": 0.972972972972973,
+              "f1": 0.7758620689655172
+            }
+          },
+          "macro_f1": 0.505578093306288,
+          "accuracy": 0.6533333333333333,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.7,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.3442622950819672,
+            "macro_f1": 0.3442622950819672
+          },
+          "search": {
+            "n": 40,
+            "success": 0.0,
+            "json_valid": 0.15,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 15.225,
+            "selection_score": 0.12091958380723875,
+            "ndcg_n": 39,
+            "ndcg": 0.12091958380723875,
+            "mrr": 0.1
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.2194915254237288,
+            "macro_f1": 0.2194915254237288
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.425,
+            "json_valid": 0.55,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 15.675,
+            "selection_score": 0.425
+          }
+        },
+        "business_macro": 0.2282244681043116,
+        "general_macro": 0.25,
+        "overall": 0.31
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "E": 39,
+            "I": 1
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 39,
+              "true_positive": 20,
+              "precision": 0.5128205128205128,
+              "recall": 1.0,
+              "f1": 0.6779661016949152
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.2
+            }
+          },
+          "macro_f1": 0.2194915254237288,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 35,
+            "yes": 5
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 21,
+              "precision": 0.6,
+              "recall": 0.8076923076923077,
+              "f1": 0.6885245901639344
+            }
+          },
+          "macro_f1": 0.3442622950819672,
+          "accuracy": 0.525,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.425,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.375,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.30118798043326345,
+            "macro_f1": 0.30118798043326345
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.7838038189887879,
+            "ndcg_n": 39,
+            "ndcg": 0.7838038189887879,
+            "mrr": 0.5402678571428572
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.375,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.25854700854700857,
+            "macro_f1": 0.25854700854700857
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.0,
+            "selection_score": 0.775
+          }
+        },
+        "business_macro": 0.4478462693230199,
+        "general_macro": 0.425,
+        "overall": 0.36
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 17,
+            "E": 19,
+            "I": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 19,
+              "true_positive": 12,
+              "precision": 0.631578947368421,
+              "recall": 0.6,
+              "f1": 0.6153846153846154
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 17,
+              "true_positive": 1,
+              "precision": 0.058823529411764705,
+              "recall": 1.0,
+              "f1": 0.1111111111111111
+            },
+            "I": {
+              "support": 9,
+              "predicted": 4,
+              "true_positive": 2,
+              "precision": 0.5,
+              "recall": 0.2222222222222222,
+              "f1": 0.3076923076923077
+            }
+          },
+          "macro_f1": 0.25854700854700857,
+          "accuracy": 0.375,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 39,
+            "no": 1
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 39,
+              "true_positive": 14,
+              "precision": 0.358974358974359,
+              "recall": 1.0,
+              "f1": 0.5283018867924528
+            },
+            "no": {
+              "support": 26,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 0.038461538461538464,
+              "f1": 0.07407407407407407
+            }
+          },
+          "macro_f1": 0.30118798043326345,
+          "accuracy": 0.375,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/train/dev-0160.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.175,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.075,
+            "selection_score": 0.175
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.35,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.25925925925925924,
+            "macro_f1": 0.25925925925925924
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8296958609884453,
+            "ndcg_n": 39,
+            "ndcg": 0.8296958609884453,
+            "mrr": 0.6256845238095238
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.425,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.3389355742296919,
+            "macro_f1": 0.3389355742296919
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.875,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.95,
+            "selection_score": 0.875
+          }
+        },
+        "business_macro": 0.4759635648257989,
+        "general_macro": 0.525,
+        "overall": 0.405
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 16,
+            "E": 15,
+            "I": 9
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 15,
+              "true_positive": 10,
+              "precision": 0.6666666666666666,
+              "recall": 0.5,
+              "f1": 0.5714285714285714
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 16,
+              "true_positive": 1,
+              "precision": 0.0625,
+              "recall": 1.0,
+              "f1": 0.11764705882352941
+            },
+            "I": {
+              "support": 9,
+              "predicted": 9,
+              "true_positive": 6,
+              "precision": 0.6666666666666666,
+              "recall": 0.6666666666666666,
+              "f1": 0.6666666666666666
+            }
+          },
+          "macro_f1": 0.3389355742296919,
+          "accuracy": 0.425,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 40
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 40,
+              "true_positive": 14,
+              "precision": 0.35,
+              "recall": 1.0,
+              "f1": 0.5185185185185185
+            },
+            "no": {
+              "support": 26,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "macro_f1": 0.25925925925925924,
+          "accuracy": 0.35,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": true
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/train/dev-0240.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.35,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.675,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.551337359792925,
+            "macro_f1": 0.551337359792925
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8264285591030077,
+            "ndcg_n": 39,
+            "ndcg": 0.8264285591030077,
+            "mrr": 0.6339583333333334
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5244588744588744,
+            "macro_f1": 0.5244588744588744
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.875,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.0,
+            "selection_score": 0.875
+          }
+        },
+        "business_macro": 0.6340749311182691,
+        "general_macro": 0.4875,
+        "overall": 0.475
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 2,
+            "I": 21,
+            "E": 13,
+            "S": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 9,
+              "precision": 0.6923076923076923,
+              "recall": 0.45,
+              "f1": 0.5454545454545454
+            },
+            "S": {
+              "support": 10,
+              "predicted": 4,
+              "true_positive": 2,
+              "precision": 0.5,
+              "recall": 0.2,
+              "f1": 0.2857142857142857
+            },
+            "C": {
+              "support": 1,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "I": {
+              "support": 9,
+              "predicted": 21,
+              "true_positive": 9,
+              "precision": 0.42857142857142855,
+              "recall": 1.0,
+              "f1": 0.6
+            }
+          },
+          "macro_f1": 0.5244588744588744,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 35,
+            "yes": 5
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 3,
+              "precision": 0.6,
+              "recall": 0.21428571428571427,
+              "f1": 0.3157894736842105
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 24,
+              "precision": 0.6857142857142857,
+              "recall": 0.9230769230769231,
+              "f1": 0.7868852459016393
+            }
+          },
+          "macro_f1": 0.551337359792925,
+          "accuracy": 0.675,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "student_sft_lr5e5/train/dev-0320.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.725,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6203623813632442,
+            "macro_f1": 0.6203623813632442
+          },
+          "search": {
+            "n": 40,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8170168255622071,
+            "ndcg_n": 39,
+            "ndcg": 0.8170168255622071,
+            "mrr": 0.621904761904762
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.6062091503267973,
+            "macro_f1": 0.6062091503267973
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.05,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.681196119084083,
+        "general_macro": 0.525,
+        "overall": 0.52
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 3,
+            "S": 14,
+            "E": 14,
+            "I": 9
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 14,
+              "true_positive": 11,
+              "precision": 0.7857142857142857,
+              "recall": 0.55,
+              "f1": 0.6470588235294118
+            },
+            "S": {
+              "support": 10,
+              "predicted": 14,
+              "true_positive": 6,
+              "precision": 0.42857142857142855,
+              "recall": 0.6,
+              "f1": 0.5
+            },
+            "C": {
+              "support": 1,
+              "predicted": 3,
+              "true_positive": 1,
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 9,
+              "predicted": 9,
+              "true_positive": 7,
+              "precision": 0.7777777777777778,
+              "recall": 0.7777777777777778,
+              "f1": 0.7777777777777778
+            }
+          },
+          "macro_f1": 0.6062091503267973,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 35,
+            "yes": 5
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.2857142857142857,
+              "f1": 0.42105263157894735
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 25,
+              "precision": 0.7142857142857143,
+              "recall": 0.9615384615384616,
+              "f1": 0.819672131147541
+            }
+          },
+          "macro_f1": 0.6203623813632442,
+          "accuracy": 0.725,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_actual_prompt_0080/teacher-actual.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6525553200926519,
+            "macro_f1": 0.6525553200926519
+          },
+          "search": {
+            "n": 300,
+            "success": 0.2,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8250731551524733,
+            "ndcg_n": 299,
+            "ndcg": 0.8250731551524733,
+            "mrr": 0.6671547619047619
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.6066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.546310467760772,
+            "macro_f1": 0.546310467760772
+          },
+          "math": {
+            "n": 100,
+            "success": 0.34,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.23,
+            "selection_score": 0.34
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.94,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.25,
+            "selection_score": 0.94
+          }
+        },
+        "business_macro": 0.6746463143352991,
+        "general_macro": 0.64,
+        "overall": 0.5236363636363637
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 40,
+            "E": 139,
+            "S": 76,
+            "I": 45
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 139,
+              "true_positive": 100,
+              "precision": 0.7194244604316546,
+              "recall": 0.7518796992481203,
+              "f1": 0.7352941176470589
+            },
+            "S": {
+              "support": 98,
+              "predicted": 76,
+              "true_positive": 46,
+              "precision": 0.6052631578947368,
+              "recall": 0.46938775510204084,
+              "f1": 0.5287356321839081
+            },
+            "C": {
+              "support": 15,
+              "predicted": 40,
+              "true_positive": 12,
+              "precision": 0.3,
+              "recall": 0.8,
+              "f1": 0.43636363636363634
+            },
+            "I": {
+              "support": 54,
+              "predicted": 45,
+              "true_positive": 24,
+              "precision": 0.5333333333333333,
+              "recall": 0.4444444444444444,
+              "f1": 0.48484848484848486
+            }
+          },
+          "macro_f1": 0.546310467760772,
+          "accuracy": 0.6066666666666667,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 91,
+            "no": 209
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 91,
+              "true_positive": 56,
+              "precision": 0.6153846153846154,
+              "recall": 0.48695652173913045,
+              "f1": 0.5436893203883495
+            },
+            "no": {
+              "support": 185,
+              "predicted": 209,
+              "true_positive": 150,
+              "precision": 0.7177033492822966,
+              "recall": 0.8108108108108109,
+              "f1": 0.7614213197969543
+            }
+          },
+          "macro_f1": 0.6525553200926519,
+          "accuracy": 0.6866666666666666,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_actual_prompt_0240/teacher-actual.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.73,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7026395330339333,
+            "macro_f1": 0.7026395330339333
+          },
+          "search": {
+            "n": 300,
+            "success": 0.25333333333333335,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8694700537651151,
+            "ndcg_n": 299,
+            "ndcg": 0.8694700537651151,
+            "mrr": 0.7634563492063491
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.6133333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.590513549899612,
+            "macro_f1": 0.590513549899612
+          },
+          "math": {
+            "n": 100,
+            "success": 0.36,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.36
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.88,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.97,
+            "selection_score": 0.88
+          }
+        },
+        "business_macro": 0.7208743788995534,
+        "general_macro": 0.62,
+        "overall": 0.5481818181818182
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 26,
+            "I": 70,
+            "E": 100,
+            "S": 104
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 100,
+              "true_positive": 80,
+              "precision": 0.8,
+              "recall": 0.6015037593984962,
+              "f1": 0.6866952789699571
+            },
+            "S": {
+              "support": 98,
+              "predicted": 104,
+              "true_positive": 58,
+              "precision": 0.5576923076923077,
+              "recall": 0.5918367346938775,
+              "f1": 0.5742574257425742
+            },
+            "C": {
+              "support": 15,
+              "predicted": 26,
+              "true_positive": 11,
+              "precision": 0.4230769230769231,
+              "recall": 0.7333333333333333,
+              "f1": 0.5365853658536586
+            },
+            "I": {
+              "support": 54,
+              "predicted": 70,
+              "true_positive": 35,
+              "precision": 0.5,
+              "recall": 0.6481481481481481,
+              "f1": 0.5645161290322581
+            }
+          },
+          "macro_f1": 0.590513549899612,
+          "accuracy": 0.6133333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 94,
+            "no": 206
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 94,
+              "true_positive": 64,
+              "precision": 0.6808510638297872,
+              "recall": 0.5565217391304348,
+              "f1": 0.6124401913875598
+            },
+            "no": {
+              "support": 185,
+              "predicted": 206,
+              "true_positive": 155,
+              "precision": 0.7524271844660194,
+              "recall": 0.8378378378378378,
+              "f1": 0.7928388746803069
+            }
+          },
+          "macro_f1": 0.7026395330339333,
+          "accuracy": 0.73,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_actual_prompt_0320/teacher-actual.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.7133333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6958121109224675,
+            "macro_f1": 0.6958121109224675
+          },
+          "search": {
+            "n": 300,
+            "success": 0.23666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8676057216508186,
+            "ndcg_n": 299,
+            "ndcg": 0.8676057216508186,
+            "mrr": 0.763904761904762
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.63,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5902189854161544,
+            "macro_f1": 0.5902189854161544
+          },
+          "math": {
+            "n": 100,
+            "success": 0.33,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.25,
+            "selection_score": 0.33
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.97,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.12,
+            "selection_score": 0.97
+          }
+        },
+        "business_macro": 0.7178789393298134,
+        "general_macro": 0.65,
+        "overall": 0.5490909090909091
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 31,
+            "E": 125,
+            "S": 87,
+            "I": 57
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 125,
+              "true_positive": 95,
+              "precision": 0.76,
+              "recall": 0.7142857142857143,
+              "f1": 0.7364341085271318
+            },
+            "S": {
+              "support": 98,
+              "predicted": 87,
+              "true_positive": 52,
+              "precision": 0.5977011494252874,
+              "recall": 0.5306122448979592,
+              "f1": 0.5621621621621622
+            },
+            "C": {
+              "support": 15,
+              "predicted": 31,
+              "true_positive": 12,
+              "precision": 0.3870967741935484,
+              "recall": 0.8,
+              "f1": 0.5217391304347826
+            },
+            "I": {
+              "support": 54,
+              "predicted": 57,
+              "true_positive": 30,
+              "precision": 0.5263157894736842,
+              "recall": 0.5555555555555556,
+              "f1": 0.5405405405405406
+            }
+          },
+          "macro_f1": 0.5902189854161544,
+          "accuracy": 0.63,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 113,
+            "no": 187
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 113,
+              "true_positive": 71,
+              "precision": 0.6283185840707964,
+              "recall": 0.6173913043478261,
+              "f1": 0.6228070175438597
+            },
+            "no": {
+              "support": 185,
+              "predicted": 187,
+              "true_positive": 143,
+              "precision": 0.7647058823529411,
+              "recall": 0.772972972972973,
+              "f1": 0.7688172043010753
+            }
+          },
+          "macro_f1": 0.6958121109224675,
+          "accuracy": 0.7133333333333334,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.76,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7477931904161412,
+            "macro_f1": 0.7477931904161412
+          },
+          "search": {
+            "n": 300,
+            "success": 0.24,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.869753375227125,
+            "ndcg_n": 299,
+            "ndcg": 0.869753375227125,
+            "mrr": 0.7613730158730159
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5733333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5606926882902693,
+            "macro_f1": 0.5606926882902693
+          },
+          "math": {
+            "n": 100,
+            "success": 0.39,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.39
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.87,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.95,
+            "selection_score": 0.87
+          }
+        },
+        "business_macro": 0.7260797513111785,
+        "general_macro": 0.63,
+        "overall": 0.5436363636363636
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 27,
+            "I": 86,
+            "S": 106,
+            "E": 81
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 81,
+              "true_positive": 65,
+              "precision": 0.8024691358024691,
+              "recall": 0.48872180451127817,
+              "f1": 0.6074766355140186
+            },
+            "S": {
+              "support": 98,
+              "predicted": 106,
+              "true_positive": 58,
+              "precision": 0.5471698113207547,
+              "recall": 0.5918367346938775,
+              "f1": 0.5686274509803921
+            },
+            "C": {
+              "support": 15,
+              "predicted": 27,
+              "true_positive": 11,
+              "precision": 0.4074074074074074,
+              "recall": 0.7333333333333333,
+              "f1": 0.5238095238095238
+            },
+            "I": {
+              "support": 54,
+              "predicted": 86,
+              "true_positive": 38,
+              "precision": 0.4418604651162791,
+              "recall": 0.7037037037037037,
+              "f1": 0.5428571428571428
+            }
+          },
+          "macro_f1": 0.5606926882902693,
+          "accuracy": 0.5733333333333334,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 119,
+            "no": 181
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 119,
+              "true_positive": 81,
+              "precision": 0.680672268907563,
+              "recall": 0.7043478260869566,
+              "f1": 0.6923076923076923
+            },
+            "no": {
+              "support": 185,
+              "predicted": 181,
+              "true_positive": 147,
+              "precision": 0.8121546961325967,
+              "recall": 0.7945945945945946,
+              "f1": 0.8032786885245902
+            }
+          },
+          "macro_f1": 0.7477931904161412,
+          "accuracy": 0.76,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.6,
+            "selection_score": 0.275
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 9.0,
+            "selection_score": 0.4982078853046595,
+            "macro_f1": 0.4982078853046595
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 0.85,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 27.975,
+            "selection_score": 0.7298893963042458,
+            "ndcg_n": 39,
+            "ndcg": 0.7298893963042458,
+            "mrr": 0.5643750000000001
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.575,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.0,
+            "selection_score": 0.3666666666666667,
+            "macro_f1": 0.3666666666666667
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.725,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 14.825,
+            "selection_score": 0.725
+          }
+        },
+        "business_macro": 0.531587982758524,
+        "general_macro": 0.5,
+        "overall": 0.495
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "E": 20,
+            "I": 15,
+            "S": 5
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 20,
+              "true_positive": 15,
+              "precision": 0.75,
+              "recall": 0.75,
+              "f1": 0.75
+            },
+            "S": {
+              "support": 10,
+              "predicted": 5,
+              "true_positive": 1,
+              "precision": 0.2,
+              "recall": 0.1,
+              "f1": 0.13333333333333333
+            },
+            "C": {
+              "support": 1,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 15,
+              "true_positive": 7,
+              "precision": 0.4666666666666667,
+              "recall": 0.7777777777777778,
+              "f1": 0.5833333333333334
+            }
+          },
+          "macro_f1": 0.3666666666666667,
+          "accuracy": 0.575,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 36,
+            "yes": 4
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 4,
+              "true_positive": 2,
+              "precision": 0.5,
+              "recall": 0.14285714285714285,
+              "f1": 0.2222222222222222
+            },
+            "no": {
+              "support": 26,
+              "predicted": 36,
+              "true_positive": 24,
+              "precision": 0.6666666666666666,
+              "recall": 0.9230769230769231,
+              "f1": 0.7741935483870968
+            }
+          },
+          "macro_f1": 0.4982078853046595,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.325,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.225,
+            "selection_score": 0.325
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.725,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6925227113906359,
+            "macro_f1": 0.6925227113906359
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.801649032665046,
+            "ndcg_n": 39,
+            "ndcg": 0.801649032665046,
+            "mrr": 0.5681845238095238
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5487677527151211,
+            "macro_f1": 0.5487677527151211
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.6809798322569343,
+        "general_macro": 0.65,
+        "overall": 0.575
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "E": 16,
+            "S": 9,
+            "I": 9
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 16,
+              "true_positive": 13,
+              "precision": 0.8125,
+              "recall": 0.65,
+              "f1": 0.7222222222222222
+            },
+            "S": {
+              "support": 10,
+              "predicted": 9,
+              "true_positive": 6,
+              "precision": 0.6666666666666666,
+              "recall": 0.6,
+              "f1": 0.631578947368421
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 9,
+              "true_positive": 5,
+              "precision": 0.5555555555555556,
+              "recall": 0.5555555555555556,
+              "f1": 0.5555555555555556
+            }
+          },
+          "macro_f1": 0.5487677527151211,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 13,
+            "no": 27
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 13,
+              "true_positive": 8,
+              "precision": 0.6153846153846154,
+              "recall": 0.5714285714285714,
+              "f1": 0.5925925925925926
+            },
+            "no": {
+              "support": 26,
+              "predicted": 27,
+              "true_positive": 21,
+              "precision": 0.7777777777777778,
+              "recall": 0.8076923076923077,
+              "f1": 0.7924528301886793
+            }
+          },
+          "macro_f1": 0.6925227113906359,
+          "accuracy": 0.725,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/train/dev-0160.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.375,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.3,
+            "selection_score": 0.375
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.45,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.41333333333333333,
+            "macro_f1": 0.41333333333333333
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8212341491869575,
+            "ndcg_n": 39,
+            "ndcg": 0.8212341491869575,
+            "mrr": 0.6158630952380952
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.45,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.36618589743589747,
+            "macro_f1": 0.36618589743589747
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.0,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.5335844599853962,
+        "general_macro": 0.675,
+        "overall": 0.495
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 11,
+            "E": 19,
+            "I": 7,
+            "S": 3
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 19,
+              "true_positive": 12,
+              "precision": 0.631578947368421,
+              "recall": 0.6,
+              "f1": 0.6153846153846154
+            },
+            "S": {
+              "support": 10,
+              "predicted": 3,
+              "true_positive": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.2,
+              "f1": 0.3076923076923077
+            },
+            "C": {
+              "support": 1,
+              "predicted": 11,
+              "true_positive": 1,
+              "precision": 0.09090909090909091,
+              "recall": 1.0,
+              "f1": 0.16666666666666666
+            },
+            "I": {
+              "support": 9,
+              "predicted": 7,
+              "true_positive": 3,
+              "precision": 0.42857142857142855,
+              "recall": 0.3333333333333333,
+              "f1": 0.375
+            }
+          },
+          "macro_f1": 0.36618589743589747,
+          "accuracy": 0.45,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 36,
+            "no": 4
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 36,
+              "true_positive": 14,
+              "precision": 0.3888888888888889,
+              "recall": 1.0,
+              "f1": 0.56
+            },
+            "no": {
+              "support": 26,
+              "predicted": 4,
+              "true_positive": 4,
+              "precision": 1.0,
+              "recall": 0.15384615384615385,
+              "f1": 0.26666666666666666
+            }
+          },
+          "macro_f1": 0.41333333333333333,
+          "accuracy": 0.45,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/train/dev-0240.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.4,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.225,
+            "selection_score": 0.4
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.8,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7866666666666666,
+            "macro_f1": 0.7866666666666666
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8410360628701756,
+            "ndcg_n": 39,
+            "ndcg": 0.8410360628701756,
+            "mrr": 0.6658630952380953
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.6,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5783205619412516,
+            "macro_f1": 0.5783205619412516
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.875,
+            "selection_score": 0.9
+          }
+        },
+        "business_macro": 0.7353410971593646,
+        "general_macro": 0.65,
+        "overall": 0.59
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 3,
+            "I": 11,
+            "S": 17,
+            "E": 9
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 9,
+              "true_positive": 9,
+              "precision": 1.0,
+              "recall": 0.45,
+              "f1": 0.6206896551724138
+            },
+            "S": {
+              "support": 10,
+              "predicted": 17,
+              "true_positive": 8,
+              "precision": 0.47058823529411764,
+              "recall": 0.8,
+              "f1": 0.5925925925925926
+            },
+            "C": {
+              "support": 1,
+              "predicted": 3,
+              "true_positive": 1,
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 9,
+              "predicted": 11,
+              "true_positive": 6,
+              "precision": 0.5454545454545454,
+              "recall": 0.6666666666666666,
+              "f1": 0.6
+            }
+          },
+          "macro_f1": 0.5783205619412516,
+          "accuracy": 0.6,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 16,
+            "no": 24
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 16,
+              "true_positive": 11,
+              "precision": 0.6875,
+              "recall": 0.7857142857142857,
+              "f1": 0.7333333333333333
+            },
+            "no": {
+              "support": 26,
+              "predicted": 24,
+              "true_positive": 21,
+              "precision": 0.875,
+              "recall": 0.8076923076923077,
+              "f1": 0.84
+            }
+          },
+          "macro_f1": 0.7866666666666666,
+          "accuracy": 0.8,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "teacher_sft/train/dev-0320.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.35,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.3,
+            "selection_score": 0.35
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.75,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7442455242966752,
+            "macro_f1": 0.7442455242966752
+          },
+          "search": {
+            "n": 40,
+            "success": 0.3,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8485506278172493,
+            "ndcg_n": 39,
+            "ndcg": 0.8485506278172493,
+            "mrr": 0.6849999999999999
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5507563025210085,
+            "macro_f1": 0.5507563025210085
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.975,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.975,
+            "selection_score": 0.975
+          }
+        },
+        "business_macro": 0.714517484878311,
+        "general_macro": 0.6625,
+        "overall": 0.6
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "S": 15,
+            "E": 14,
+            "I": 5
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 14,
+              "true_positive": 12,
+              "precision": 0.8571428571428571,
+              "recall": 0.6,
+              "f1": 0.7058823529411765
+            },
+            "S": {
+              "support": 10,
+              "predicted": 15,
+              "true_positive": 8,
+              "precision": 0.5333333333333333,
+              "recall": 0.8,
+              "f1": 0.64
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.4444444444444444,
+              "f1": 0.5714285714285714
+            }
+          },
+          "macro_f1": 0.5507563025210085,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 20,
+            "no": 20
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 20,
+              "true_positive": 12,
+              "precision": 0.6,
+              "recall": 0.8571428571428571,
+              "f1": 0.7058823529411765
+            },
+            "no": {
+              "support": 26,
+              "predicted": 20,
+              "true_positive": 18,
+              "precision": 0.9,
+              "recall": 0.6923076923076923,
+              "f1": 0.782608695652174
+            }
+          },
+          "macro_f1": 0.7442455242966752,
+          "accuracy": 0.75,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    }
+  },
+  "verified_development_evaluations": 25
+}

@@ -7,6 +7,7 @@ import json
 import random
 import urllib.request
 from collections import Counter
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 DOMAINS = ("dining", "hotel", "service", "math", "instruction")
@@ -48,6 +49,10 @@ TEMPLATES = {
 
 def canonical(value: object) -> str:
     return json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+
+
+def system_prompt(row: dict, teacher: bool = False) -> str:
+    return row.get("teacher_system", TEACHER_SYSTEM) if teacher else row.get("system", SYSTEM)
 
 
 def digest(value: object) -> str:
@@ -299,6 +304,13 @@ def grade(row: dict, text: str) -> dict:
         key: bool(valid and str(value[key]).strip().replace(",", "") == str(expected).strip().replace(",", ""))
         for key, expected in target.items()
     }
+    if row.get("math_source") == "SVAMP" and valid:
+        try:
+            actual = Decimal(str(value["answer"]).strip().replace(",", ""))
+            expected = Decimal(str(target["answer"]).strip().replace(",", ""))
+            matched["answer"] = actual.is_finite() and expected.is_finite() and actual == expected
+        except InvalidOperation:
+            matched["answer"] = False
     if row["domain"] == "instruction" and valid:
         matched["answer"] = str(value["answer"]).strip() == str(target["answer"]).strip()
     success = valid and all(matched.values())

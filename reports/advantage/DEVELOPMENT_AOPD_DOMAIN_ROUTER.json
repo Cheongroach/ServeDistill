@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-26T23:49:35.233543+00:00",
+  "candidate": {
+    "name": "aopd_step320_substitute_router_offline_all4",
+    "kind": "request_task_domain_adapter_router",
+    "routing": {
+      "substitute": "aopd_step320",
+      "search": "offline_sft_all4",
+      "relevance": "offline_sft_all4",
+      "math": "offline_sft_all4",
+      "instruction": "offline_sft_all4"
+    },
+    "routing_key": "request task type; never target, prediction, or grader output",
+    "business_macro": 0.7079973940424757,
+    "general_macro": 0.535,
+    "selection_score": 0.6733979152339806,
+    "domains": {
+      "relevance": {
+        "n": 300,
+        "success": 0.59,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 6.0,
+        "selection_score": 0.5566723001512022,
+        "macro_f1": 0.5566723001512022
+      },
+      "search": {
+        "n": 300,
+        "success": 0.17666666666666667,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 28.0,
+        "selection_score": 0.8533401976579068,
+        "ndcg_n": 299,
+        "ndcg": 0.8533401976579068,
+        "mrr": 0.7388134920634921
+      },
+      "substitute": {
+        "n": 300,
+        "success": 0.73,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 7.0,
+        "selection_score": 0.7139796843183182,
+        "macro_f1": 0.7139796843183182
+      },
+      "instruction": {
+        "n": 100,
+        "success": 0.92,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 12.09,
+        "selection_score": 0.92
+      },
+      "math": {
+        "n": 100,
+        "success": 0.15,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 7.2,
+        "selection_score": 0.15
+      }
+    },
+    "predictions_path": "reports/advantage/raw/aopd-domain-router-v1/dev.jsonl",
+    "predictions_sha256": "7912ae8f35a689c7a3b1c7762dfecbf564fa9af8419deb4a1f9af056111a3a4d"
+  },
+  "sources": {
+    "aopd_step320": {
+      "predictions_path": "reports/advantage/raw/aopd-v1/aopd_tau0_k32_trajectory_lr5e5/selected-dev.jsonl",
+      "predictions_sha256": "a94a12a95a5d37a69932e7893803558a8a2535a2cfea91ad99eaa4b1fea2839e",
+      "summary_sha256": "a7e96e1207520e801d7c278e28fb60ef3ed2011b2503971792aafef7fdaab5cf",
+      "completion_sha256": "36d9b92cef302899bd643421dcf7179702b1fd29b2b34a973aa14ee1fb4d2966"
+    },
+    "offline_sft_all4": {
+      "predictions_path": "reports/advantage/raw/decay640-sft-v1/averaged-development/decay_offline_trajectory_lr5e5_average_all4/dev.jsonl",
+      "predictions_sha256": "e62188b413094f13298b474dc41e86a5c7a686824cdbe60520ad373cc0f612ca",
+      "summary_sha256": "4c328e5fa1000f775d66894298f4ad2f62224c5810268c89b97e88d9ce4bc1b2",
+      "completion_sha256": "cc31a2138a2511f4e50d7165cca5ce7ab49d98b25553117f49455e5c3ea46126"
+    }
+  },
+  "retained_thresholds": {
+    "offline_sft": 0.7038299984194807,
+    "oracle_sft": 0.687469949849396
+  },
+  "selected_dev_business_deltas": {
+    "offline_sft": 0.004167395622995063,
+    "oracle_sft": 0.020527444193079725
+  },
+  "declared_candidates": 1,
+  "completed_candidates": 1,
+  "complete_selection_pool": true,
+  "independent_regrading_completed": true,
+  "quality_advantage_established": true,
+  "posthoc_development_design": true,
+  "holdout_observed": false,
+  "boundary": "Observed DEV only. The fixed task-domain router was designed after AOPD DEV analysis; independent holdouts remain sealed."
+}

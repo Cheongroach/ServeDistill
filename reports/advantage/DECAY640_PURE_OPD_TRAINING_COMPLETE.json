@@ -1,0 +1,380 @@
+{
+  "utc": "2026-10-26T00:22:19.473639+00:00",
+  "arms": {
+    "decay_opd_token_lr2e5": {
+      "completed_json_sha256": "91ba2363b1a04aab482fcf5747cf2619cf105080f17dc3a30b26366b0d371a7f",
+      "config_sha256": "19f1c1ae71682d9f3d30e750a3b234e78c65c42b26d28b18ccb80e74e4ba26e7",
+      "metrics_sha256": "d27677ae91c45adddf3cbe17c4680b497478d1df2a4e8e9ba2985efb226f84bc",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 163983,
+      "maximum_behavior_error": 7.832050323486328e-05,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.6880281770795834,
+        "general_macro": 0.5241666666666667,
+        "domain_metrics": {
+          "math": 0.145,
+          "substitute": 0.6724391854146565,
+          "search": 0.8529867468774603,
+          "relevance": 0.5386585989466333,
+          "instruction": 0.9033333333333333
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 18,
+              "I": 68,
+              "E": 81,
+              "S": 133
+            },
+            "recall": {
+              "E": 0.48872180451127817,
+              "S": 0.6530612244897959,
+              "C": 0.5333333333333333,
+              "I": 0.5740740740740741
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 79,
+              "no": 221
+            },
+            "recall": {
+              "yes": 0.46956521739130436,
+              "no": 0.8648648648648649
+            }
+          }
+        },
+        "predictions_sha256": "a2ed48696bd5536698bd4ada701dee54642de6647f83eef674e9b1c8d40dcf01"
+      }
+    },
+    "decay_opd_token_lr5e5": {
+      "completed_json_sha256": "3b7399522f4956e546b7d134229d0b333eeef3a15220e72bf4625ee53aed9a53",
+      "config_sha256": "8d4ced5d90ecc68734d665952626ba5697d2f7be60def086c560c342ac67011b",
+      "metrics_sha256": "307735142c806910a183454b49ac576450731dbf456acaf3511f4660cc441c09",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 164524,
+      "maximum_behavior_error": 0.00011348724365234375,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.6851178185240726,
+        "general_macro": 0.49833333333333335,
+        "domain_metrics": {
+          "math": 0.12,
+          "substitute": 0.6394230769230769,
+          "search": 0.850788574943932,
+          "relevance": 0.5651418037052091,
+          "instruction": 0.8766666666666667
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 23,
+              "S": 133,
+              "E": 80,
+              "I": 64
+            },
+            "recall": {
+              "E": 0.5037593984962406,
+              "S": 0.6632653061224489,
+              "C": 0.6666666666666666,
+              "I": 0.5925925925925926
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 69,
+              "no": 231
+            },
+            "recall": {
+              "yes": 0.4,
+              "no": 0.8756756756756757
+            }
+          }
+        },
+        "predictions_sha256": "a2107e3f107e72c77b039d6336e7382d6739d4810136af2c376b18964a6209f0"
+      }
+    },
+    "decay_opd_trajectory_lr2e5": {
+      "completed_json_sha256": "991804be7c7e1961035d442c2dc43e13515185f2bdd9776e035fad11fae5bac6",
+      "config_sha256": "9ecec756d8c600f351559de0fd5ce1fc72909a48e2abc98d7dbe31ffd119bea4",
+      "metrics_sha256": "e0513254e4ccc1755265d6581dc867987653afb442fcc1239676f3bc9d0dc0e8",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 164316,
+      "maximum_behavior_error": 8.249282836914062e-05,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.690609598566953,
+        "general_macro": 0.5566666666666666,
+        "domain_metrics": {
+          "math": 0.18,
+          "substitute": 0.6863624340290462,
+          "search": 0.8507770939326994,
+          "relevance": 0.5346892677391131,
+          "instruction": 0.9333333333333333
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 21,
+              "S": 141,
+              "E": 77,
+              "I": 61
+            },
+            "recall": {
+              "E": 0.46616541353383456,
+              "S": 0.6632653061224489,
+              "C": 0.6,
+              "I": 0.5370370370370371
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 82,
+              "no": 218
+            },
+            "recall": {
+              "yes": 0.4956521739130435,
+              "no": 0.8648648648648649
+            }
+          }
+        },
+        "predictions_sha256": "3e726490e9c3e7b499e5587383ce046fa10e7040ccd38eac9c899d6027d1464b"
+      }
+    },
+    "decay_opd_trajectory_lr5e5": {
+      "completed_json_sha256": "bbd7eb26dee95b995776ca9460180efc1a155b71c2ec527df2c8a252065844d6",
+      "config_sha256": "83a3f664428ffee58aa929ed0a9adc442e201f7ddddaceef6ca80ead07c44d47",
+      "metrics_sha256": "2bd404ec36525d302552491431de445e00805772277798b0e24397d126195d53",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 164308,
+      "maximum_behavior_error": 8.225440979003906e-05,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.6971256424205471,
+        "general_macro": 0.5008333333333334,
+        "domain_metrics": {
+          "math": 0.115,
+          "substitute": 0.6830084912986467,
+          "search": 0.8505659179749953,
+          "relevance": 0.5578025179879993,
+          "instruction": 0.8866666666666667
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 20,
+              "S": 138,
+              "E": 79,
+              "I": 63
+            },
+            "recall": {
+              "E": 0.48872180451127817,
+              "S": 0.6632653061224489,
+              "C": 0.6666666666666666,
+              "I": 0.5370370370370371
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 78,
+              "no": 222
+            },
+            "recall": {
+              "yes": 0.4782608695652174,
+              "no": 0.8756756756756757
+            }
+          }
+        },
+        "predictions_sha256": "9a4b5e6e54464f86a6c157800ebb5c6414f72e4b8ac69005cdfd8665e335e23a"
+      }
+    },
+    "decay_opd_token_lr1e5": {
+      "completed_json_sha256": "292f1e0a864546e7529b4d848908d906802fa2cad93278768724a8e794c75de3",
+      "config_sha256": "35a3fd7c63740ab812327f5457e338288528c522219214b90cf62975e190a514",
+      "metrics_sha256": "498f9aeece0fea36a9c1744f7a911d432c11d9f38671e54e0d7154370d26a629",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 164369,
+      "maximum_behavior_error": 8.034706115722656e-05,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.6701444211557895,
+        "general_macro": 0.5275000000000001,
+        "domain_metrics": {
+          "math": 0.135,
+          "substitute": 0.6522305437968089,
+          "search": 0.8491055541124494,
+          "relevance": 0.5090971655581106,
+          "instruction": 0.92
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 21,
+              "I": 68,
+              "E": 88,
+              "S": 123
+            },
+            "recall": {
+              "E": 0.518796992481203,
+              "S": 0.5918367346938775,
+              "C": 0.5333333333333333,
+              "I": 0.5
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 70,
+              "no": 230
+            },
+            "recall": {
+              "yes": 0.41739130434782606,
+              "no": 0.8810810810810811
+            }
+          }
+        },
+        "predictions_sha256": "6fd9043d4b8b3887d5d077854fe690890cb577891eb2bd9aae459467ec14cd13"
+      }
+    },
+    "decay_opd_trajectory_lr1e5": {
+      "completed_json_sha256": "a0d357d7d9000bada5e844d5d2683937091cd7a7c9cc126176a7d489229f5aaa",
+      "config_sha256": "a003fe3d745ec2fbaec3a45c7147bd2fcfcf4dc2614b2e5a1099f16d87e6241e",
+      "metrics_sha256": "20953dc988e8421f184631f094bd5d24000d162de24797a8a96d57fb94c0529e",
+      "steps": 640,
+      "teacher_unchanged": true,
+      "nonzero_updates": 640,
+      "response_tokens": 164025,
+      "maximum_behavior_error": 0.000102996826171875,
+      "pure_opd_total_loss_equal": true,
+      "final_FP32_dev": {
+        "step": 640,
+        "rows": 1400,
+        "business_macro": 0.6818359317656918,
+        "general_macro": 0.5416666666666666,
+        "domain_metrics": {
+          "math": 0.15,
+          "substitute": 0.6717259490982119,
+          "search": 0.8465937930925987,
+          "relevance": 0.5271880531062649,
+          "instruction": 0.9333333333333333
+        },
+        "classes": {
+          "relevance": {
+            "target_counts": {
+              "C": 15,
+              "E": 133,
+              "S": 98,
+              "I": 54
+            },
+            "prediction_counts": {
+              "C": 16,
+              "I": 73,
+              "E": 84,
+              "S": 127
+            },
+            "recall": {
+              "E": 0.5112781954887218,
+              "S": 0.6224489795918368,
+              "C": 0.4666666666666667,
+              "I": 0.5740740740740741
+            }
+          },
+          "substitute": {
+            "target_counts": {
+              "yes": 115,
+              "no": 185
+            },
+            "prediction_counts": {
+              "yes": 74,
+              "no": 226
+            },
+            "recall": {
+              "yes": 0.45217391304347826,
+              "no": 0.8810810810810811
+            }
+          }
+        },
+        "predictions_sha256": "f312493c17928fb5dc16ed5490f0633df773e92127109daeee42512eff751b6a"
+      }
+    }
+  },
+  "complete_pure_opd_training": true,
+  "independent_regrading_completed": true,
+  "runtime_observation_sha256": "912e35773ae54364acb281f395ebd3ecdb16885ecc02ce3bb77bf21ece1a91b0",
+  "class_drift_sha256": "6d4c4135cfcca7e5778bd080d0713253d7f9c935e9b52a126adc2cd848eaa02e",
+  "actual_saved_binary_audit_complete": false,
+  "terminal_platform_cost_complete": false,
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "boundary": "Six actual PURE OPD arms completed640 atomic updates and1400row FP32 final trainingDEV with independent regrading. All120 BF16 candidates,40 source binary audits, terminal costs and four-seed dual-SFT dual-holdout confirmation remain separate requirements."
+}

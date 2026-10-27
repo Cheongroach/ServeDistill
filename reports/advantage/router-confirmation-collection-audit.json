@@ -1,0 +1,35 @@
+{
+  "verified": true,
+  "all_evaluation_runs_terminal_successful": true,
+  "protocol_sha256": "79ffd1973e43e6bfe2832db8aa8e7521e54e061155592c3d37e7ff7b7d02c3bb",
+  "file_count": 72,
+  "bytes": 32378448,
+  "seeds": [
+    {
+      "seed": 101,
+      "files": 18,
+      "bytes": 8094337,
+      "verified": true
+    },
+    {
+      "seed": 211,
+      "files": 18,
+      "bytes": 8092667,
+      "verified": true
+    },
+    {
+      "seed": 307,
+      "files": 18,
+      "bytes": 8096011,
+      "verified": true
+    },
+    {
+      "seed": 401,
+      "files": 18,
+      "bytes": 8095433,
+      "verified": true
+    }
+  ],
+  "holdout_predictions_collected_after_terminal": true,
+  "utc": "2026-10-27T12:19:57.461516+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "scope": "development_only",
+  "created_utc": "2026-10-27T12:27:22.738906+00:00",
+  "seeds": [
+    101,
+    211,
+    307,
+    401
+  ],
+  "source_protocol_sha256": "79ffd1973e43e6bfe2832db8aa8e7521e54e061155592c3d37e7ff7b7d02c3bb",
+  "source_training_file_audit_sha256": "1c09102cd7d0175afad9e2e938d4387467abb4af6b1381b06a0ed297c4151372",
+  "dev_sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4",
+  "selection_precision": "bf16",
+  "dev_rows": 1100,
+  "aopd_rules": {
+    "fixed320": {
+      "kind": "fixed_checkpoint",
+      "step": 320
+    },
+    "final640": {
+      "kind": "fixed_checkpoint",
+      "step": 640
+    },
+    "last2": {
+      "kind": "lora_factor_mean_fp32",
+      "steps": [
+        480,
+        640
+      ]
+    },
+    "all4": {
+      "kind": "lora_factor_mean_fp32",
+      "steps": [
+        160,
+        320,
+        480,
+        640
+      ]
+    }
+  },
+  "controls": {
+    "offline_sft": [
+      160,
+      320,
+      480,
+      640
+    ],
+    "oracle_sft": [
+      480,
+      640
+    ]
+  },
+  "quality_gates": {
+    "minimum_metric": {
+      "search": 0.8,
+      "relevance": 0.45,
+      "substitute": 0.55
+    },
+    "minimum_recall": {
+      "substitute": {
+        "yes": 0.3,
+        "no": 0.3
+      },
+      "relevance": {
+        "E": 0.2,
+        "S": 0.2,
+        "C": 0.2,
+        "I": 0.2
+      }
+    },
+    "minimum_json_valid": 0.99,
+    "domain_noninferiority_margin": -0.03,
+    "math_noninferiority_margin": -0.05,
+    "minimum_positive_seed_pairs": 3
+  },
+  "selection_rule": "Compare every global rule over all four seeds. Require every seed to pass the existing absolute gates before ranking by mean DEV business macro; record all rules and seeds. No automatic holdout confirmation or superiority claim.",
+  "holdout_files_packaged": false,
+  "peak_gpu_limit": 12,
+  "gpus_per_job": 1,
+  "job_hours": 2,
+  "boundary": "Exploratory DEV ablation following a failed confirmation. The observed confirmation splits cannot be reused as unseen data."
+}

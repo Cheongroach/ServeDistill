@@ -1,0 +1,1214 @@
+{
+  "boundary": "No holdout outputs read; no confirmation claim",
+  "evaluations": {
+    "oracle_common320_lr1e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.105,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.39,
+            "selection_score": 0.105
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.49985628054038517,
+            "macro_f1": 0.49985628054038517
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8476459407796831,
+            "ndcg_n": 299,
+            "ndcg": 0.8476459407796831,
+            "mrr": 0.7287896825396826
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5021198863979697,
+            "macro_f1": 0.5021198863979697
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.133333333333333,
+            "selection_score": 0.93
+          }
+        },
+        "business_macro": 0.6165407025726793,
+        "general_macro": 0.5175000000000001,
+        "overall": 0.48142857142857143
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 11,
+            "I": 80,
+            "E": 117,
+            "S": 92
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 117,
+              "true_positive": 84,
+              "precision": 0.717948717948718,
+              "recall": 0.631578947368421,
+              "f1": 0.672
+            },
+            "S": {
+              "support": 98,
+              "predicted": 92,
+              "true_positive": 42,
+              "precision": 0.45652173913043476,
+              "recall": 0.42857142857142855,
+              "f1": 0.4421052631578947
+            },
+            "C": {
+              "support": 15,
+              "predicted": 11,
+              "true_positive": 6,
+              "precision": 0.5454545454545454,
+              "recall": 0.4,
+              "f1": 0.46153846153846156
+            },
+            "I": {
+              "support": 54,
+              "predicted": 80,
+              "true_positive": 29,
+              "precision": 0.3625,
+              "recall": 0.5370370370370371,
+              "f1": 0.43283582089552236
+            }
+          },
+          "macro_f1": 0.5021198863979697,
+          "accuracy": 0.5366666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 240,
+            "no": 60
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 240,
+              "true_positive": 105,
+              "precision": 0.4375,
+              "recall": 0.9130434782608695,
+              "f1": 0.5915492957746479
+            },
+            "no": {
+              "support": 185,
+              "predicted": 60,
+              "true_positive": 50,
+              "precision": 0.8333333333333334,
+              "recall": 0.2702702702702703,
+              "f1": 0.40816326530612246
+            }
+          },
+          "macro_f1": 0.49985628054038517,
+          "accuracy": 0.5166666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e5/train/dev-0020.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.095,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.415,
+            "selection_score": 0.095
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.66,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6448303078137332,
+            "macro_f1": 0.6448303078137332
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18333333333333332,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8428082786154197,
+            "ndcg_n": 299,
+            "ndcg": 0.8428082786154197,
+            "mrr": 0.7262380952380952
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.53,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4741185296324081,
+            "macro_f1": 0.4741185296324081
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.94,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.15,
+            "selection_score": 0.94
+          }
+        },
+        "business_macro": 0.6539190386871869,
+        "general_macro": 0.5175,
+        "overall": 0.5092857142857142
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 27,
+            "I": 75,
+            "E": 110,
+            "S": 88
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 110,
+              "true_positive": 81,
+              "precision": 0.7363636363636363,
+              "recall": 0.6090225563909775,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 98,
+              "predicted": 88,
+              "true_positive": 43,
+              "precision": 0.48863636363636365,
+              "recall": 0.4387755102040816,
+              "f1": 0.46236559139784944
+            },
+            "C": {
+              "support": 15,
+              "predicted": 27,
+              "true_positive": 7,
+              "precision": 0.25925925925925924,
+              "recall": 0.4666666666666667,
+              "f1": 0.3333333333333333
+            },
+            "I": {
+              "support": 54,
+              "predicted": 75,
+              "true_positive": 28,
+              "precision": 0.37333333333333335,
+              "recall": 0.5185185185185185,
+              "f1": 0.43410852713178294
+            }
+          },
+          "macro_f1": 0.4741185296324081,
+          "accuracy": 0.53,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 123,
+            "no": 177
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 123,
+              "true_positive": 68,
+              "precision": 0.5528455284552846,
+              "recall": 0.591304347826087,
+              "f1": 0.5714285714285714
+            },
+            "no": {
+              "support": 185,
+              "predicted": 177,
+              "true_positive": 130,
+              "precision": 0.7344632768361582,
+              "recall": 0.7027027027027027,
+              "f1": 0.7182320441988951
+            }
+          },
+          "macro_f1": 0.6448303078137332,
+          "accuracy": 0.66,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr1e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 119,
+            "success": 0.08403361344537816,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.336134453781512,
+            "selection_score": 0.08403361344537816
+          },
+          "substitute": {
+            "n": 167,
+            "success": 0.6826347305389222,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6424271805437725,
+            "macro_f1": 0.6424271805437725
+          },
+          "search": {
+            "n": 176,
+            "success": 0.21022727272727273,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8365874292541989,
+            "ndcg_n": 175,
+            "ndcg": 0.8365874292541989,
+            "mrr": 0.6990597943722944
+          },
+          "relevance": {
+            "n": 170,
+            "success": 0.4588235294117647,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4356218616283386,
+            "macro_f1": 0.4356218616283386
+          },
+          "instruction": {
+            "n": 176,
+            "success": 0.9375,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.278409090909092,
+            "selection_score": 0.9375
+          }
+        },
+        "business_macro": 0.6382121571421034,
+        "general_macro": 0.510766806722689,
+        "overall": 0.5
+      },
+      "evaluation_complete": false,
+      "classes": {
+        "relevance": {
+          "queries": 170,
+          "target_counts": {
+            "C": 8,
+            "E": 72,
+            "S": 60,
+            "I": 30
+          },
+          "prediction_counts": {
+            "C": 23,
+            "I": 48,
+            "E": 55,
+            "S": 44
+          },
+          "per_class": {
+            "E": {
+              "support": 72,
+              "predicted": 55,
+              "true_positive": 36,
+              "precision": 0.6545454545454545,
+              "recall": 0.5,
+              "f1": 0.5669291338582677
+            },
+            "S": {
+              "support": 60,
+              "predicted": 44,
+              "true_positive": 21,
+              "precision": 0.4772727272727273,
+              "recall": 0.35,
+              "f1": 0.40384615384615385
+            },
+            "C": {
+              "support": 8,
+              "predicted": 23,
+              "true_positive": 6,
+              "precision": 0.2608695652173913,
+              "recall": 0.75,
+              "f1": 0.3870967741935484
+            },
+            "I": {
+              "support": 30,
+              "predicted": 48,
+              "true_positive": 15,
+              "precision": 0.3125,
+              "recall": 0.5,
+              "f1": 0.38461538461538464
+            }
+          },
+          "macro_f1": 0.4356218616283386,
+          "accuracy": 0.4588235294117647,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1487603305785124,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 167,
+          "target_counts": {
+            "yes": 62,
+            "no": 105
+          },
+          "prediction_counts": {
+            "yes": 49,
+            "no": 118
+          },
+          "per_class": {
+            "yes": {
+              "support": 62,
+              "predicted": 49,
+              "true_positive": 29,
+              "precision": 0.5918367346938775,
+              "recall": 0.46774193548387094,
+              "f1": 0.5225225225225225
+            },
+            "no": {
+              "support": 105,
+              "predicted": 118,
+              "true_positive": 85,
+              "precision": 0.7203389830508474,
+              "recall": 0.8095238095238095,
+              "f1": 0.7623318385650224
+            }
+          },
+          "macro_f1": 0.6424271805437725,
+          "accuracy": 0.6826347305389222,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3860294117647059,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e6/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.105,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.39,
+            "selection_score": 0.105
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.49985628054038517,
+            "macro_f1": 0.49985628054038517
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8476459407796831,
+            "ndcg_n": 299,
+            "ndcg": 0.8476459407796831,
+            "mrr": 0.7287896825396826
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5021198863979697,
+            "macro_f1": 0.5021198863979697
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.133333333333333,
+            "selection_score": 0.93
+          }
+        },
+        "business_macro": 0.6165407025726793,
+        "general_macro": 0.5175000000000001,
+        "overall": 0.48142857142857143
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 11,
+            "I": 80,
+            "E": 117,
+            "S": 92
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 117,
+              "true_positive": 84,
+              "precision": 0.717948717948718,
+              "recall": 0.631578947368421,
+              "f1": 0.672
+            },
+            "S": {
+              "support": 98,
+              "predicted": 92,
+              "true_positive": 42,
+              "precision": 0.45652173913043476,
+              "recall": 0.42857142857142855,
+              "f1": 0.4421052631578947
+            },
+            "C": {
+              "support": 15,
+              "predicted": 11,
+              "true_positive": 6,
+              "precision": 0.5454545454545454,
+              "recall": 0.4,
+              "f1": 0.46153846153846156
+            },
+            "I": {
+              "support": 54,
+              "predicted": 80,
+              "true_positive": 29,
+              "precision": 0.3625,
+              "recall": 0.5370370370370371,
+              "f1": 0.43283582089552236
+            }
+          },
+          "macro_f1": 0.5021198863979697,
+          "accuracy": 0.5366666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 240,
+            "no": 60
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 240,
+              "true_positive": 105,
+              "precision": 0.4375,
+              "recall": 0.9130434782608695,
+              "f1": 0.5915492957746479
+            },
+            "no": {
+              "support": 185,
+              "predicted": 60,
+              "true_positive": 50,
+              "precision": 0.8333333333333334,
+              "recall": 0.2702702702702703,
+              "f1": 0.40816326530612246
+            }
+          },
+          "macro_f1": 0.49985628054038517,
+          "accuracy": 0.5166666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e6/train/dev-0020.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.095,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.4,
+            "selection_score": 0.095
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.6033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6029760117439029,
+            "macro_f1": 0.6029760117439029
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8469966276156796,
+            "ndcg_n": 299,
+            "ndcg": 0.8469966276156796,
+            "mrr": 0.733904761904762
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5433333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5017429249147557,
+            "macro_f1": 0.5017429249147557
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.9433333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.146666666666667,
+            "selection_score": 0.9433333333333334
+          }
+        },
+        "business_macro": 0.6505718547581126,
+        "general_macro": 0.5191666666666667,
+        "overall": 0.5021428571428571
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 18,
+            "I": 78,
+            "E": 111,
+            "S": 93
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 111,
+              "true_positive": 82,
+              "precision": 0.7387387387387387,
+              "recall": 0.6165413533834586,
+              "f1": 0.6721311475409836
+            },
+            "S": {
+              "support": 98,
+              "predicted": 93,
+              "true_positive": 45,
+              "precision": 0.4838709677419355,
+              "recall": 0.45918367346938777,
+              "f1": 0.4712041884816754
+            },
+            "C": {
+              "support": 15,
+              "predicted": 18,
+              "true_positive": 7,
+              "precision": 0.3888888888888889,
+              "recall": 0.4666666666666667,
+              "f1": 0.42424242424242425
+            },
+            "I": {
+              "support": 54,
+              "predicted": 78,
+              "true_positive": 29,
+              "precision": 0.3717948717948718,
+              "recall": 0.5370370370370371,
+              "f1": 0.4393939393939394
+            }
+          },
+          "macro_f1": 0.5017429249147557,
+          "accuracy": 0.5433333333333333,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 176,
+            "no": 124
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 176,
+              "true_positive": 86,
+              "precision": 0.48863636363636365,
+              "recall": 0.7478260869565218,
+              "f1": 0.5910652920962199
+            },
+            "no": {
+              "support": 185,
+              "predicted": 124,
+              "true_positive": 95,
+              "precision": 0.7661290322580645,
+              "recall": 0.5135135135135135,
+              "f1": 0.6148867313915858
+            }
+          },
+          "macro_f1": 0.6029760117439029,
+          "accuracy": 0.6033333333333334,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_common320_lr5e6/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 119,
+            "success": 0.07563025210084033,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.361344537815126,
+            "selection_score": 0.07563025210084033
+          },
+          "substitute": {
+            "n": 167,
+            "success": 0.6526946107784432,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6433726067746686,
+            "macro_f1": 0.6433726067746686
+          },
+          "search": {
+            "n": 176,
+            "success": 0.2159090909090909,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8401035549631685,
+            "ndcg_n": 175,
+            "ndcg": 0.8401035549631685,
+            "mrr": 0.7059726731601731
+          },
+          "relevance": {
+            "n": 170,
+            "success": 0.5058823529411764,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5083974722733019,
+            "macro_f1": 0.5083974722733019
+          },
+          "instruction": {
+            "n": 176,
+            "success": 0.9318181818181818,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.301136363636363,
+            "selection_score": 0.9318181818181818
+          }
+        },
+        "business_macro": 0.6639578780037129,
+        "general_macro": 0.5037242169595111,
+        "overall": 0.5024752475247525
+      },
+      "evaluation_complete": false,
+      "classes": {
+        "relevance": {
+          "queries": 170,
+          "target_counts": {
+            "C": 8,
+            "E": 72,
+            "S": 60,
+            "I": 30
+          },
+          "prediction_counts": {
+            "C": 14,
+            "I": 47,
+            "E": 56,
+            "S": 53
+          },
+          "per_class": {
+            "E": {
+              "support": 72,
+              "predicted": 56,
+              "true_positive": 37,
+              "precision": 0.6607142857142857,
+              "recall": 0.5138888888888888,
+              "f1": 0.578125
+            },
+            "S": {
+              "support": 60,
+              "predicted": 53,
+              "true_positive": 25,
+              "precision": 0.4716981132075472,
+              "recall": 0.4166666666666667,
+              "f1": 0.4424778761061947
+            },
+            "C": {
+              "support": 8,
+              "predicted": 14,
+              "true_positive": 6,
+              "precision": 0.42857142857142855,
+              "recall": 0.75,
+              "f1": 0.5454545454545454
+            },
+            "I": {
+              "support": 30,
+              "predicted": 47,
+              "true_positive": 18,
+              "precision": 0.3829787234042553,
+              "recall": 0.6,
+              "f1": 0.4675324675324675
+            }
+          },
+          "macro_f1": 0.5083974722733019,
+          "accuracy": 0.5058823529411764,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1487603305785124,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 167,
+          "target_counts": {
+            "yes": 62,
+            "no": 105
+          },
+          "prediction_counts": {
+            "yes": 78,
+            "no": 89
+          },
+          "per_class": {
+            "yes": {
+              "support": 62,
+              "predicted": 78,
+              "true_positive": 41,
+              "precision": 0.5256410256410257,
+              "recall": 0.6612903225806451,
+              "f1": 0.5857142857142857
+            },
+            "no": {
+              "support": 105,
+              "predicted": 89,
+              "true_positive": 68,
+              "precision": 0.7640449438202247,
+              "recall": 0.6476190476190476,
+              "f1": 0.7010309278350515
+            }
+          },
+          "macro_f1": 0.6433726067746686,
+          "accuracy": 0.6526946107784432,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3860294117647059,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr1e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.105,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.39,
+            "selection_score": 0.105
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.49985628054038517,
+            "macro_f1": 0.49985628054038517
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8476459407796831,
+            "ndcg_n": 299,
+            "ndcg": 0.8476459407796831,
+            "mrr": 0.7287896825396826
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5021198863979697,
+            "macro_f1": 0.5021198863979697
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.133333333333333,
+            "selection_score": 0.93
+          }
+        },
+        "business_macro": 0.6165407025726793,
+        "general_macro": 0.5175000000000001,
+        "overall": 0.48142857142857143
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 11,
+            "I": 80,
+            "E": 117,
+            "S": 92
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 117,
+              "true_positive": 84,
+              "precision": 0.717948717948718,
+              "recall": 0.631578947368421,
+              "f1": 0.672
+            },
+            "S": {
+              "support": 98,
+              "predicted": 92,
+              "true_positive": 42,
+              "precision": 0.45652173913043476,
+              "recall": 0.42857142857142855,
+              "f1": 0.4421052631578947
+            },
+            "C": {
+              "support": 15,
+              "predicted": 11,
+              "true_positive": 6,
+              "precision": 0.5454545454545454,
+              "recall": 0.4,
+              "f1": 0.46153846153846156
+            },
+            "I": {
+              "support": 54,
+              "predicted": 80,
+              "true_positive": 29,
+              "precision": 0.3625,
+              "recall": 0.5370370370370371,
+              "f1": 0.43283582089552236
+            }
+          },
+          "macro_f1": 0.5021198863979697,
+          "accuracy": 0.5366666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 240,
+            "no": 60
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 240,
+              "true_positive": 105,
+              "precision": 0.4375,
+              "recall": 0.9130434782608695,
+              "f1": 0.5915492957746479
+            },
+            "no": {
+              "support": 185,
+              "predicted": 60,
+              "true_positive": 50,
+              "precision": 0.8333333333333334,
+              "recall": 0.2702702702702703,
+              "f1": 0.40816326530612246
+            }
+          },
+          "macro_f1": 0.49985628054038517,
+          "accuracy": 0.5166666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_lr5e6/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.105,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.39,
+            "selection_score": 0.105
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.5166666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.49985628054038517,
+            "macro_f1": 0.49985628054038517
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8476459407796831,
+            "ndcg_n": 299,
+            "ndcg": 0.8476459407796831,
+            "mrr": 0.7287896825396826
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5366666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5021198863979697,
+            "macro_f1": 0.5021198863979697
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.93,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.133333333333333,
+            "selection_score": 0.93
+          }
+        },
+        "business_macro": 0.6165407025726793,
+        "general_macro": 0.5175000000000001,
+        "overall": 0.48142857142857143
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 11,
+            "I": 80,
+            "E": 117,
+            "S": 92
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 117,
+              "true_positive": 84,
+              "precision": 0.717948717948718,
+              "recall": 0.631578947368421,
+              "f1": 0.672
+            },
+            "S": {
+              "support": 98,
+              "predicted": 92,
+              "true_positive": 42,
+              "precision": 0.45652173913043476,
+              "recall": 0.42857142857142855,
+              "f1": 0.4421052631578947
+            },
+            "C": {
+              "support": 15,
+              "predicted": 11,
+              "true_positive": 6,
+              "precision": 0.5454545454545454,
+              "recall": 0.4,
+              "f1": 0.46153846153846156
+            },
+            "I": {
+              "support": 54,
+              "predicted": 80,
+              "true_positive": 29,
+              "precision": 0.3625,
+              "recall": 0.5370370370370371,
+              "f1": 0.43283582089552236
+            }
+          },
+          "macro_f1": 0.5021198863979697,
+          "accuracy": 0.5366666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 240,
+            "no": 60
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 240,
+              "true_positive": 105,
+              "precision": 0.4375,
+              "recall": 0.9130434782608695,
+              "f1": 0.5915492957746479
+            },
+            "no": {
+              "support": 185,
+              "predicted": 60,
+              "true_positive": 50,
+              "precision": 0.8333333333333334,
+              "recall": 0.2702702702702703,
+              "f1": 0.40816326530612246
+            }
+          },
+          "macro_f1": 0.49985628054038517,
+          "accuracy": 0.5166666666666667,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    }
+  },
+  "verified_development_evaluations": 8
+}
