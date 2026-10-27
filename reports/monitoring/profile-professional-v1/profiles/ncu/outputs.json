@@ -1,0 +1,38 @@
+{
+  "gpu-telemetry.csv": {
+    "sha256": "df19d4409fdbeabdc9cbe5e8beccbe1198bea1564bea22e4696e6c0803343fa1",
+    "bytes": 2721
+  },
+  "gpu-details.txt": {
+    "sha256": "ade3b6e32855c296604fd6650002b88aa9e1b1aafb130bed047286ec4cd6b19b",
+    "bytes": 9675
+  },
+  "manifest.json": {
+    "sha256": "ef639d56b55c5fd11baeecbe3f11109fc5bc5e27e9970f7122972ce04f5f1429",
+    "bytes": 10961
+  },
+  "tool-audit.json": {
+    "sha256": "7359b2c1b7550445a25409f9e9d909bf30b0929667f25eb9cbe3490bc031e01b",
+    "bytes": 539
+  },
+  "application.log": {
+    "sha256": "592a4dc5fd9c42bc5a2e93a719cdbcba5272e41d7a4542f03acb3f8513721f2a",
+    "bytes": 361
+  },
+  "available-metrics.txt": {
+    "sha256": "175d3482517e6ed416ef53dfdb495fc7ce9db8aad478b3e5e14e0552735e2d87",
+    "bytes": 1016693
+  },
+  "host-telemetry.jsonl": {
+    "sha256": "c6223e0cf9c5399c428e9003f67a98878136d4c956f7aeeefbc4eb473ba22c8b",
+    "bytes": 261199
+  },
+  "tool-version.txt": {
+    "sha256": "7cf3df32e33121a9f4e53c7dbb843fb5efcc581ac4b3e85bad70571c0634c593",
+    "bytes": 144
+  },
+  "validity.json": {
+    "sha256": "ad8e17fa6ff2e05248fcb200e7be309d1b10ea16c62adb1e2185e178f60fd5b0",
+    "bytes": 509
+  }
+}

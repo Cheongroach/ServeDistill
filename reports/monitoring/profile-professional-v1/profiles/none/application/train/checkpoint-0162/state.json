@@ -1,0 +1,16 @@
+{
+  "step": 162,
+  "adapter_sha256": "68c5638939b09001b855984ac6b0a12fbdbf66bd847130ccdc00da386c8b8032",
+  "optimizer_sha256": "b51e3329c740fa45ec0030624498232056724fac9e349bdf256619924f9fd8d3",
+  "rng_sha256": "38426e2e811bbc79a15a29bb743ebb2600fb8779ed62c42fa6e52bdfc4cfa309",
+  "tokens_seen": 42315,
+  "time_budget": {
+    "limit_seconds": null,
+    "prior_method_seconds": 0.0,
+    "training_wall_seconds": 251.12247756589204,
+    "charged_method_seconds": 251.12247756589204,
+    "exhausted": false,
+    "overrun_seconds": 0.0,
+    "boundary": "Includes model initialization, training dev, updates and checkpoints. Stops between atomic updates; final evaluation and platform costs are reported separately and do not disappear from total GPU cost."
+  }
+}

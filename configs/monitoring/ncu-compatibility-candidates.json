@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "repository": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/",
+  "index": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/Packages.gz",
+  "platform": "linux-x86_64",
+  "selection_rule": "Try in this order on the actual workload; stop at the first complete runtime and counter capture. Retain every failure. No speed claims.",
+  "candidates": [
+    {
+      "version": "2025.2.1",
+      "filename": "nsight-compute-2025.2.1_2025.2.1.3-1_amd64.deb",
+      "sha256": "afa4b2b354f93fcbefbb6c0ab7a83223d7f9d6852d8b8868253757562049fc8d",
+      "bytes": 296189558
+    },
+    {
+      "version": "2024.1.1",
+      "filename": "nsight-compute-2024.1.1_2024.1.1.4-1_amd64.deb",
+      "sha256": "ad33335da979fbe93860c22509d537250d887d5447b7e4ca77bc93cdfe32347e",
+      "bytes": 594372138
+    },
+    {
+      "version": "2023.3.1",
+      "filename": "nsight-compute-2023.3.1_2023.3.1.1-1_amd64.deb",
+      "sha256": "114c6d6138e8d46091c9d0a7ac307e62eac014f70f97837a1529eef318f010d6",
+      "bytes": 733232434
+    }
+  ]
+}

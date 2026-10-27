@@ -1,0 +1,7 @@
+
+==ERROR== An error was reported by the driver:
+==ERROR== For more information, see /tmp/nsight-compute-135a-9b88.log
+==ERROR== Cuda driver is not compatible with Nsight Compute.
+==ERROR== For more information, see /tmp/nsight-compute-135a-9b88.log
+==PROF== Connected to process 6635 (/usr/bin/python3.11)
+==ERROR== The application returned an error code (11).

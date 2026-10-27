@@ -1,0 +1,21 @@
+
+NOTICE: Existing SQLite export found: /tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.sqlite
+        It is assumed file was previously exported from: /tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [/tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.sqlite] with [/tmp/servedistill-profile-professional-v1/tools/nsys/opt/nvidia/nsight-systems-cli/2026.1.1/target-linux-x64/reports/nvtx_sum.py]...
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Style,Range
+51.5,20041670247,1,20041670247.0,20041670247.0,20041670247,20041670247,0.0,PushPop,:update_162
+16.3,6330496389,5,1266099277.8,976723069.0,930544353,1956428597,461380079.1,PushPop,:backward
+15.5,6018213022,1,6018213022.0,6018213022.0,6018213022,6018213022,0.0,PushPop,:rollout
+7.6,2943427848,5,588685569.6,383392529.0,349876712,1166985482,352190727.5,PushPop,:learner_forward
+5.8,2238223540,5,447644708.0,325242140.0,291474591,723139883,200188570.5,PushPop,:reference_forward
+3.4,1311535163,5,262307032.6,209284624.0,199626173,360258681,81533956.7,PushPop,:teacher_forward
+0.0,13710131,5,2742026.2,2733407.0,2694112,2806527,43497.0,PushPop,:asymmetric_opd
+0.0,12777897,1,12777897.0,12777897.0,12777897,12777897,0.0,PushPop,:optimizer
+0.0,1325995,85,15599.9,12454.0,10120,36423,6634.6,PushPop,CCCL:cub::DeviceSelect::Flagged
+0.0,1153901,85,13575.3,6833.0,5304,96858,18552.1,PushPop,CCCL:cub::DeviceReduce::Sum
+0.0,180846,10,18084.6,17431.5,10239,29350,7927.0,PushPop,CCCL:cub::DeviceScan::InclusiveSumByKey
+0.0,134410,15,8960.7,8481.0,5844,13687,2321.9,PushPop,CCCL:cub::DeviceRadixSort
+0.0,116259,3,38753.0,40793.0,34579,40887,3615.1,PushPop,CCCL:cub::DeviceScan::InclusiveScan
+0.0,110011,5,22002.2,22117.0,21297,22585,473.5,PushPop,CCCL:cub::DeviceScan::ExclusiveScan

@@ -1,0 +1,49 @@
+{
+  "completed": false,
+  "all_runtime_gates_passed": false,
+  "exact_final_state_equivalence": false,
+  "states": {
+    "none": {
+      "adapter_sha256": "68c5638939b09001b855984ac6b0a12fbdbf66bd847130ccdc00da386c8b8032",
+      "optimizer_sha256": "b51e3329c740fa45ec0030624498232056724fac9e349bdf256619924f9fd8d3",
+      "rng_sha256": "38426e2e811bbc79a15a29bb743ebb2600fb8779ed62c42fa6e52bdfc4cfa309"
+    },
+    "nsys": {
+      "adapter_sha256": "13e4f7b7d581d2924188fa3f7283a18776d192ba578c225c8645fd3143e08dc3",
+      "optimizer_sha256": "94db25c84f38c263136cb8068c3fcb6cfadf0da45389b0b65d18ae1f2a9ad0c5",
+      "rng_sha256": "38426e2e811bbc79a15a29bb743ebb2600fb8779ed62c42fa6e52bdfc4cfa309"
+    },
+    "torch": {
+      "adapter_sha256": "856e3c1eefd018e568772b52665b56e6b69d148a9dd682ff30bfe7143f36b47d",
+      "optimizer_sha256": "4edb874f127823921045e5043cecd07d6fa0c4ce6566834a718add8767369ccd",
+      "rng_sha256": "38426e2e811bbc79a15a29bb743ebb2600fb8779ed62c42fa6e52bdfc4cfa309"
+    }
+  },
+  "cases": [
+    {
+      "backend": "none",
+      "returncode": 0,
+      "started": 1793115147.145437,
+      "ended": 1793115411.6848052
+    },
+    {
+      "backend": "ncu",
+      "returncode": 1,
+      "started": 1793115429.854557,
+      "ended": 1793115441.084289
+    },
+    {
+      "backend": "nsys",
+      "returncode": 0,
+      "started": 1793115480.8176343,
+      "ended": 1793115559.4270842
+    },
+    {
+      "backend": "torch",
+      "returncode": 0,
+      "started": 1793115638.8751478,
+      "ended": 1793115738.7253747
+    }
+  ],
+  "boundary": "Profiling diagnosis only; speed claims require unprofiled repeated fixed-workload timing."
+}

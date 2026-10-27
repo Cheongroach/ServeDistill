@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "checks": {
+    "cold_restoration": false,
+    "window_complete": false,
+    "finite_loss_gradient_delta": false,
+    "nonzero_parameter_update": false,
+    "behavior_probability": false,
+    "rollout_version": false
+  },
+  "observed_steps": [],
+  "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+  "boundary": "Runtime gates do not prove business quality or method superiority.",
+  "application_succeeded": false,
+  "trace_present": false
+}

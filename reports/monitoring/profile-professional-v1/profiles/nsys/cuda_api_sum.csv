@@ -1,0 +1,27 @@
+
+NOTICE: Existing SQLite export found: /tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.sqlite
+        It is assumed file was previously exported from: /tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [/tmp/servedistill-profile-professional-v1/output/profiles/nsys/capture.sqlite] with [/tmp/servedistill-profile-professional-v1/tools/nsys/opt/nvidia/nsight-systems-cli/2026.1.1/target-linux-x64/reports/cuda_api_sum.py]...
+Time (%),Total Time (ns),Num Calls,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+50.2,4603472863,14377,320197.0,5592.0,2172,85798842,3414463.9,cudaMemcpyAsync
+29.3,2689740483,519053,5182.0,3806.0,2491,4299449,48064.2,cudaLaunchKernel
+9.1,837924674,17,49289686.7,38583.0,13284,281905592,88817077.2,cudaDeviceSynchronize
+4.1,378045275,3813,99146.4,9647.0,748,74731881,1880332.6,cudaStreamSynchronize
+3.1,279698886,57147,4894.4,4206.0,2556,1931440,20056.6,cudaLaunchKernelExC
+1.3,116039598,6126,18942.1,6595.5,2187,3433590,175843.8,cudaMemsetAsync
+1.3,115843471,4035,28709.7,5661.0,3107,36033670,632026.8,cuLaunchKernelEx
+0.7,61262159,14056,4358.4,3549.0,2721,1420191,25866.8,cuLaunchKernel
+0.5,42358124,20,2117906.2,213285.0,115410,17484183,4559738.4,cuModuleLoadData
+0.2,20437627,10,2043762.7,1885526.5,1273018,4631720,967029.3,cudaGetDeviceProperties_v2
+0.1,6728578,10,672857.8,65336.5,17538,2937150,1054943.2,cuMemCreate
+0.1,6164845,14016,439.8,320.0,198,7981,404.6,cuKernelGetFunction
+0.0,3304544,10,330454.4,20884.5,19020,2406516,760132.9,cuMemMap
+0.0,1727435,1541,1121.0,1075.0,241,7441,691.8,cudaStreamIsCapturing
+0.0,1198439,21,57068.5,58856.0,33624,81580,14582.6,cuLibraryLoadData
+0.0,854694,2,427347.0,427347.0,387307,467387,56625.1,cuMemSetAccess
+0.0,319328,2490,128.2,89.0,51,1137,104.8,cuKernelGetAttribute
+0.0,65238,112,582.5,460.5,51,2655,589.9,cuKernelSetAttribute
+0.0,7656,21,364.6,361.0,245,565,96.5,cuLibraryGetKernel
+0.0,6029,1,6029.0,6029.0,6029,6029,0.0,cuProfilerStart

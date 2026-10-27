@@ -1,0 +1,106 @@
+{
+  "gpu-telemetry.csv": {
+    "sha256": "3c2050cfd31f7340292274c35b9123cd756ae1dd23d4614f9a8d6634e4daf67e",
+    "bytes": 26603
+  },
+  "gpu-details.txt": {
+    "sha256": "da38b40b497086974a00d2445aa9ae0626661e32c17d28bb7d909a3a3fc1ded3",
+    "bytes": 9673
+  },
+  "manifest.json": {
+    "sha256": "39e5f0756c89973b999849edec19221c7d74538480b342026e830cad4d627ce2",
+    "bytes": 10361
+  },
+  "tool-audit.json": {
+    "sha256": "2bb20023977704d973e3d86b3537d120457677cb435fcbdaeeddb6cd16eec08e",
+    "bytes": 175
+  },
+  "application.log": {
+    "sha256": "72eabb4ec7c023b90dcea80a850c29421a43b27aec7df651969ea02109970002",
+    "bytes": 218586
+  },
+  "host-telemetry.jsonl": {
+    "sha256": "5d716c4ebcf7643702d7160ec286d0a78e2101dc44a133135004a3a47ab3884e",
+    "bytes": 2512121
+  },
+  "validity.json": {
+    "sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+    "bytes": 511
+  },
+  "application/continuation.json": {
+    "sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+    "bytes": 61
+  },
+  "application/train/latest.json": {
+    "sha256": "705ff9f3108491d979ff22885e1ce092274627567929b8e43de83fac21ba7d93",
+    "bytes": 786
+  },
+  "application/train/rollouts.jsonl": {
+    "sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+    "bytes": 4630
+  },
+  "application/train/cold-stop.json": {
+    "sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+    "bytes": 37
+  },
+  "application/train/metrics.jsonl": {
+    "sha256": "ed0173c344ea2bd29a1784213c0a4784c58fac7ee15b3c5fe7a12ca842fc33d5",
+    "bytes": 3302
+  },
+  "application/train/config.json": {
+    "sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+    "bytes": 782
+  },
+  "application/train/schedule.json": {
+    "sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+    "bytes": 453591
+  },
+  "application/train/restoration-0160.json": {
+    "sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+    "bytes": 298
+  },
+  "application/train/contract.json": {
+    "sha256": "81d783907ee08ada23dead9b9ed228b321385d5a5a7f5d75eb10209853e26567",
+    "bytes": 795
+  },
+  "application/train/last-rollout-contract.json": {
+    "sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+    "bytes": 2439
+  },
+  "application/train/checkpoint-0162/state.json": {
+    "sha256": "9bf50384c1e9aafef5896068ae29af7f5b2b1e05e06926b47e5b34a9610e5f95",
+    "bytes": 757
+  },
+  "application/train/checkpoint-0162/training.pt": {
+    "sha256": "7f057d82e700449db3b0d83b32f637f356798daec977f8bacb9e98fbe5e8c9c1",
+    "bytes": 125447267
+  },
+  "application/train/checkpoint-0162/README.md": {
+    "sha256": "2907a30db85f2d587484fd79c4da68a3962e8ee90fcad60125279a7908c112e5",
+    "bytes": 5264
+  },
+  "application/train/checkpoint-0162/adapter_model.safetensors": {
+    "sha256": "64a1b6424a585c4c198192b4ab5119d7102c09ed2c0b5257f21de1d0d2b03e95",
+    "bytes": 62561688
+  },
+  "application/train/checkpoint-0162/adapter_config.json": {
+    "sha256": "28f64d21a84dcb12ea332100bb890f40f9ceacfa8473c0555a075d97fe042bc2",
+    "bytes": 1137
+  },
+  "application/observation/configuration.json": {
+    "sha256": "d7fb69de6a0a0068c563f30fd9b7212b1932e89b4940c724cee9f11465ca93c4",
+    "bytes": 2054
+  },
+  "application/observation/torch-operators.txt": {
+    "sha256": "82359a9cc925ef2d9e289be6bbb6c4d88bb9756af707a69eecaf3f603e6e977e",
+    "bytes": 18203
+  },
+  "application/observation/host-spans.json": {
+    "sha256": "b3da8dc35dfb7826498842f24d63c39b5e793303bfa6a532d2d53430dc804482",
+    "bytes": 6260
+  },
+  "application/observation/torch-trace.json": {
+    "sha256": "3596f0f0d710cbafa35df9d02dc43f35d5bf3a4788e310304cb14c1b44e23040",
+    "bytes": 285261148
+  }
+}

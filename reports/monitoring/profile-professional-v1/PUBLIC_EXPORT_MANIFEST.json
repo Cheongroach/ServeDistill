@@ -1,0 +1,906 @@
+{
+  "original_hash_verification": {
+    "none": {
+      "files": 24,
+      "all_hashes_match": true
+    },
+    "ncu": {
+      "files": 9,
+      "all_hashes_match": true
+    },
+    "nsys": {
+      "files": 32,
+      "all_hashes_match": true
+    },
+    "torch": {
+      "files": 26,
+      "all_hashes_match": true
+    }
+  },
+  "independent_report_validation": {
+    "none": {
+      "passed": true,
+      "checks": {},
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "ncu": {
+      "passed": false,
+      "checks": {
+        "raw_export_succeeded": false,
+        "kernels_captured": false,
+        "all_requested_metrics_present": false,
+        "finite_values_with_units": false,
+        "positive_kernel_duration": false
+      },
+      "kernel_launches": 0,
+      "metric_rows": 0,
+      "requested_metrics": [
+        "gpu__time_duration.sum",
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed"
+      ],
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "nsys": {
+      "passed": true,
+      "checks": {
+        "cuda_gpu_kern_sum_export": true,
+        "cuda_gpu_kern_sum_has_data": true,
+        "cuda_api_sum_export": true,
+        "cuda_api_sum_has_data": true,
+        "nvtx_sum_export": true,
+        "nvtx_sum_has_data": true,
+        "learner_range_present": true
+      },
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "torch": {
+      "passed": true,
+      "checks": {
+        "gpu_kernel_events": true,
+        "learner_range_present": true
+      },
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    }
+  },
+  "records": [
+    {
+      "source": "base-environment.json",
+      "original_sha256": "0f11c3bb70f2ed2dbc5a85b0e247a8798b6d69a721c27e1a970ea15adcbbce6a",
+      "original_bytes": 525,
+      "public_file": "base-environment.json",
+      "public_sha256": "0f11c3bb70f2ed2dbc5a85b0e247a8798b6d69a721c27e1a970ea15adcbbce6a",
+      "public_bytes": 525
+    },
+    {
+      "source": "environment.json",
+      "original_sha256": "d5e4ccb0bf3d7891306856c88fad9db0e07a7506992c9fb1de6bc924403a808b",
+      "original_bytes": 539,
+      "public_file": "environment.json",
+      "public_sha256": "d5e4ccb0bf3d7891306856c88fad9db0e07a7506992c9fb1de6bc924403a808b",
+      "public_bytes": 539
+    },
+    {
+      "source": "profiles/cases.json",
+      "original_sha256": "118e7de0732f112b70d746b189f07e528c57f98c2a41b7a4f69393df71a64f84",
+      "original_bytes": 480,
+      "public_file": "profiles/cases.json",
+      "public_sha256": "118e7de0732f112b70d746b189f07e528c57f98c2a41b7a4f69393df71a64f84",
+      "public_bytes": 480
+    },
+    {
+      "source": "profiles/installation.json",
+      "original_sha256": "4946b355b362551409add7251de2754db0e5604f22a8db555291838932d37ffc",
+      "original_bytes": 329,
+      "public_file": "profiles/installation.json",
+      "public_sha256": "4946b355b362551409add7251de2754db0e5604f22a8db555291838932d37ffc",
+      "public_bytes": 329
+    },
+    {
+      "source": "profiles/ncu/application.log",
+      "original_sha256": "592a4dc5fd9c42bc5a2e93a719cdbcba5272e41d7a4542f03acb3f8513721f2a",
+      "original_bytes": 361,
+      "public_file": "profiles/ncu/application.log",
+      "public_sha256": "592a4dc5fd9c42bc5a2e93a719cdbcba5272e41d7a4542f03acb3f8513721f2a",
+      "public_bytes": 361
+    },
+    {
+      "source": "profiles/ncu/available-metrics.txt",
+      "original_sha256": "175d3482517e6ed416ef53dfdb495fc7ce9db8aad478b3e5e14e0552735e2d87",
+      "original_bytes": 1016693,
+      "public_file": "profiles/ncu/available-metrics.txt",
+      "public_sha256": "e3a4aa56fc40c454256ec6efea8c28c4f6409d5cc762eab79e19a228f7731d19",
+      "public_bytes": 877953
+    },
+    {
+      "source": "profiles/ncu/gpu-details.txt",
+      "original_sha256": "ade3b6e32855c296604fd6650002b88aa9e1b1aafb130bed047286ec4cd6b19b",
+      "original_bytes": 9675,
+      "public_file": "profiles/ncu/gpu-details.txt",
+      "public_sha256": "11e4ddc837d0a60f57447d22d5774f6ba9b04031d21a74920421f2630a491278",
+      "public_bytes": 9672
+    },
+    {
+      "source": "profiles/ncu/gpu-telemetry.csv",
+      "original_sha256": "df19d4409fdbeabdc9cbe5e8beccbe1198bea1564bea22e4696e6c0803343fa1",
+      "original_bytes": 2721,
+      "public_file": "profiles/ncu/gpu-telemetry.csv",
+      "public_sha256": "df19d4409fdbeabdc9cbe5e8beccbe1198bea1564bea22e4696e6c0803343fa1",
+      "public_bytes": 2721
+    },
+    {
+      "source": "profiles/ncu/host-telemetry.jsonl",
+      "original_sha256": "c6223e0cf9c5399c428e9003f67a98878136d4c956f7aeeefbc4eb473ba22c8b",
+      "original_bytes": 261199,
+      "public_file": "profiles/ncu/host-telemetry.jsonl",
+      "public_sha256": "c87dacb2bd189d0ad62384b1f50c17119720f8fe95291d7c7d48af6fa76a450b",
+      "public_bytes": 261306
+    },
+    {
+      "source": "profiles/ncu/manifest.json",
+      "original_sha256": "ef639d56b55c5fd11baeecbe3f11109fc5bc5e27e9970f7122972ce04f5f1429",
+      "original_bytes": 10961,
+      "public_file": "profiles/ncu/manifest.json",
+      "public_sha256": "eaad04df4b21397abd8343d89820b8bf4d649e9906a61885a20208ad43397319",
+      "public_bytes": 10372
+    },
+    {
+      "source": "profiles/ncu/outputs.json",
+      "original_sha256": "d982affae204e4ef6bda8d39b42895f97009f4425618eaecb154cbf7e42c6017",
+      "original_bytes": 1167,
+      "public_file": "profiles/ncu/outputs.json",
+      "public_sha256": "d982affae204e4ef6bda8d39b42895f97009f4425618eaecb154cbf7e42c6017",
+      "public_bytes": 1167
+    },
+    {
+      "source": "profiles/ncu/tool-audit.json",
+      "original_sha256": "7359b2c1b7550445a25409f9e9d909bf30b0929667f25eb9cbe3490bc031e01b",
+      "original_bytes": 539,
+      "public_file": "profiles/ncu/tool-audit.json",
+      "public_sha256": "7359b2c1b7550445a25409f9e9d909bf30b0929667f25eb9cbe3490bc031e01b",
+      "public_bytes": 539
+    },
+    {
+      "source": "profiles/ncu/tool-version.txt",
+      "original_sha256": "7cf3df32e33121a9f4e53c7dbb843fb5efcc581ac4b3e85bad70571c0634c593",
+      "original_bytes": 144,
+      "public_file": "profiles/ncu/tool-version.txt",
+      "public_sha256": "7cf3df32e33121a9f4e53c7dbb843fb5efcc581ac4b3e85bad70571c0634c593",
+      "public_bytes": 144
+    },
+    {
+      "source": "profiles/ncu/validity.json",
+      "original_sha256": "ad8e17fa6ff2e05248fcb200e7be309d1b10ea16c62adb1e2185e178f60fd5b0",
+      "original_bytes": 509,
+      "public_file": "profiles/ncu/validity.json",
+      "public_sha256": "ad8e17fa6ff2e05248fcb200e7be309d1b10ea16c62adb1e2185e178f60fd5b0",
+      "public_bytes": 509
+    },
+    {
+      "source": "profiles/ncu.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "profiles/ncu.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "profiles/none/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/none/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/none/application/observation/configuration.json",
+      "original_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "original_bytes": 2056,
+      "public_file": "profiles/none/application/observation/configuration.json",
+      "public_sha256": "33e10bccda84a680ac564188de614c48fd652dae97f1810c4220edb5f79e2060",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/none/application/observation/host-spans.json",
+      "original_sha256": "05d1cdf5edf4c6d8087695cad99c679c5ce167bee546368f65e776e66cb7f4a1",
+      "original_bytes": 6322,
+      "public_file": "profiles/none/application/observation/host-spans.json",
+      "public_sha256": "05d1cdf5edf4c6d8087695cad99c679c5ce167bee546368f65e776e66cb7f4a1",
+      "public_bytes": 6322
+    },
+    {
+      "source": "profiles/none/application/train/checkpoint-0162/README.md",
+      "original_sha256": "2907a30db85f2d587484fd79c4da68a3962e8ee90fcad60125279a7908c112e5",
+      "original_bytes": 5264,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "0cc239f4be6e86ced2f4623877f18071cf9c454dd08ce4c2c1bf0d19955dd7ba",
+      "original_bytes": 1137,
+      "public_file": "profiles/none/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "785b8f7b30cb5fe2ae5266b7191b78d37017bb33a063258e4caab517f5e06e3b",
+      "public_bytes": 1138
+    },
+    {
+      "source": "profiles/none/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "1e48b95ca32a7b2a091dfb8c472a39cd079a1deb2ff8094e4a8bde73598f84f9",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none/application/train/checkpoint-0162/state.json",
+      "original_sha256": "64bb22b03151e5742524eeb1e6dd6c904d0f905da2131b9e6d9bb760426c5aea",
+      "original_bytes": 759,
+      "public_file": "profiles/none/application/train/checkpoint-0162/state.json",
+      "public_sha256": "64bb22b03151e5742524eeb1e6dd6c904d0f905da2131b9e6d9bb760426c5aea",
+      "public_bytes": 759
+    },
+    {
+      "source": "profiles/none/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "fecf301b5f04bc6bbec18dc05ed866c7567bcc1357fb8a2e35fc4dcdd6ad7ff3",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/none/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/none/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/none/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/none/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/none/application/train/contract.json",
+      "original_sha256": "767e8043047148c9454894c4e078e99936d7d5f424dfa89997c5715b79a83332",
+      "original_bytes": 796,
+      "public_file": "profiles/none/application/train/contract.json",
+      "public_sha256": "767e8043047148c9454894c4e078e99936d7d5f424dfa89997c5715b79a83332",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/none/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/none/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/none/application/train/latest.json",
+      "original_sha256": "c17b13b11fe365fc86bb730228d6af0f2c9d1ed18110f6da507d93bdff0f5f40",
+      "original_bytes": 788,
+      "public_file": "profiles/none/application/train/latest.json",
+      "public_sha256": "c17b13b11fe365fc86bb730228d6af0f2c9d1ed18110f6da507d93bdff0f5f40",
+      "public_bytes": 788
+    },
+    {
+      "source": "profiles/none/application/train/metrics.jsonl",
+      "original_sha256": "328aa5caf84bae00175dae51b1e67c40fca2db53bbf3a73c27492799ed0e89d8",
+      "original_bytes": 3321,
+      "public_file": "profiles/none/application/train/metrics.jsonl",
+      "public_sha256": "328aa5caf84bae00175dae51b1e67c40fca2db53bbf3a73c27492799ed0e89d8",
+      "public_bytes": 3321
+    },
+    {
+      "source": "profiles/none/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/none/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/none/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/none/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/none/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/none/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/none/application.log",
+      "original_sha256": "7ff249be73c3b69e11817f828c3d3acb2a9ea69cf31c4b1dad1a9e7855f0b692",
+      "original_bytes": 218629,
+      "public_file": "profiles/none/application.log",
+      "public_sha256": "b70471e1f144f5c803c2afff7453166376cde1accf410d89414144e469f2e7d7",
+      "public_bytes": 216892
+    },
+    {
+      "source": "profiles/none/gpu-details.txt",
+      "original_sha256": "91940396c84be9dcd66f2da439cd70b92f74abf27bc965c408a11cfe51341b76",
+      "original_bytes": 9675,
+      "public_file": "profiles/none/gpu-details.txt",
+      "public_sha256": "124531a279f1b85220923cb29b782e76f595f13042be53941b9089bd983ab7a4",
+      "public_bytes": 9672
+    },
+    {
+      "source": "profiles/none/gpu-telemetry.csv",
+      "original_sha256": "52488cb1f3de70bde9d9bde638a45213640862586b928113affae14fbdbe1173",
+      "original_bytes": 69059,
+      "public_file": "profiles/none/gpu-telemetry.csv",
+      "public_sha256": "52488cb1f3de70bde9d9bde638a45213640862586b928113affae14fbdbe1173",
+      "public_bytes": 69059
+    },
+    {
+      "source": "profiles/none/host-telemetry.jsonl",
+      "original_sha256": "994a59ba6d1dfd160c48e05b19486b6b89c0e1d3416d2d058a6e2e1de96fee26",
+      "original_bytes": 6512026,
+      "public_file": "profiles/none/host-telemetry.jsonl",
+      "public_sha256": "fbe729feccc037c0b8fbe15e6d61cb82dc8bec8b3e23936f9a97e0c6dec5a726",
+      "public_bytes": 6518098
+    },
+    {
+      "source": "profiles/none/manifest.json",
+      "original_sha256": "ac553336d04d00966aec56a27d0d4793c3bda9c14586d2aee3c674c16c3843fe",
+      "original_bytes": 10150,
+      "public_file": "profiles/none/manifest.json",
+      "public_sha256": "fe1cabc16ce8bd79d8416f8c83e5c1ffaa8168b41f850a4629ad2a06fea42e98",
+      "public_bytes": 9561
+    },
+    {
+      "source": "profiles/none/outputs.json",
+      "original_sha256": "b0580d249f592e9ffd9818a043ccfdbf72289d94e29aacac888e1b679e34cdf0",
+      "original_bytes": 3482,
+      "public_file": "profiles/none/outputs.json",
+      "public_sha256": "b0580d249f592e9ffd9818a043ccfdbf72289d94e29aacac888e1b679e34cdf0",
+      "public_bytes": 3482
+    },
+    {
+      "source": "profiles/none/tool-audit.json",
+      "original_sha256": "fe80aa8b754fc918014940f53c999983bb3ea611891d31e99b8bf5f85b5dfbd0",
+      "original_bytes": 175,
+      "public_file": "profiles/none/tool-audit.json",
+      "public_sha256": "fe80aa8b754fc918014940f53c999983bb3ea611891d31e99b8bf5f85b5dfbd0",
+      "public_bytes": 175
+    },
+    {
+      "source": "profiles/none/validity.json",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/none/validity.json",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "profiles/none.log",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/none.log",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "profiles/nsys/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/nsys/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/nsys/application/observation/configuration.json",
+      "original_sha256": "75fd1a15a04c4ac65d40f3380b6cede0923f9876315d85e055fbbf3f343ee5a3",
+      "original_bytes": 2056,
+      "public_file": "profiles/nsys/application/observation/configuration.json",
+      "public_sha256": "75fd1a15a04c4ac65d40f3380b6cede0923f9876315d85e055fbbf3f343ee5a3",
+      "public_bytes": 2056
+    },
+    {
+      "source": "profiles/nsys/application/observation/host-spans.json",
+      "original_sha256": "51432420029cca9195e355c5de2f7d96fdd3370edcba31a72af91cb52b22ff18",
+      "original_bytes": 6263,
+      "public_file": "profiles/nsys/application/observation/host-spans.json",
+      "public_sha256": "51432420029cca9195e355c5de2f7d96fdd3370edcba31a72af91cb52b22ff18",
+      "public_bytes": 6263
+    },
+    {
+      "source": "profiles/nsys/application/train/checkpoint-0162/README.md",
+      "original_sha256": "2907a30db85f2d587484fd79c4da68a3962e8ee90fcad60125279a7908c112e5",
+      "original_bytes": 5264,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "b0524f01c22792c8b45cc0a80d220bd00d32c52670ac6dd66d8cd8b26eb06489",
+      "original_bytes": 1137,
+      "public_file": "profiles/nsys/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "915c27c0edb3d55f560c6e2fa8c520065cb3dba08bd4fff46b07401b6ce25eaa",
+      "public_bytes": 1138
+    },
+    {
+      "source": "profiles/nsys/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "8f192cbe2b0e85cdaefe8d7836cc255a345b81ac6cf3a4a6c068fa043e255909",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys/application/train/checkpoint-0162/state.json",
+      "original_sha256": "c2ca6c99825912469ca1a9fb36c5e2d6072694f1d627d9244d4b77c028682436",
+      "original_bytes": 757,
+      "public_file": "profiles/nsys/application/train/checkpoint-0162/state.json",
+      "public_sha256": "c2ca6c99825912469ca1a9fb36c5e2d6072694f1d627d9244d4b77c028682436",
+      "public_bytes": 757
+    },
+    {
+      "source": "profiles/nsys/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "0fa506c13a2a96583b1be5f9f2aeeed97dbacbe687719b858db0b79ad714d4dd",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/nsys/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/nsys/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/nsys/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/nsys/application/train/contract.json",
+      "original_sha256": "b487cdab23207c379cd50d5a85c2e6a7ed27acecc7b853827f349e532a9896fd",
+      "original_bytes": 795,
+      "public_file": "profiles/nsys/application/train/contract.json",
+      "public_sha256": "b487cdab23207c379cd50d5a85c2e6a7ed27acecc7b853827f349e532a9896fd",
+      "public_bytes": 795
+    },
+    {
+      "source": "profiles/nsys/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/nsys/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/nsys/application/train/latest.json",
+      "original_sha256": "6374c00be63c63f00541c028e368d592cb25ebd711bcc8012fe548703ac74d29",
+      "original_bytes": 786,
+      "public_file": "profiles/nsys/application/train/latest.json",
+      "public_sha256": "6374c00be63c63f00541c028e368d592cb25ebd711bcc8012fe548703ac74d29",
+      "public_bytes": 786
+    },
+    {
+      "source": "profiles/nsys/application/train/metrics.jsonl",
+      "original_sha256": "2f9e66604c80fb3f512dcd50c3601dfcddd7a48d44dd90399c2c9bb0f3c17948",
+      "original_bytes": 3318,
+      "public_file": "profiles/nsys/application/train/metrics.jsonl",
+      "public_sha256": "2f9e66604c80fb3f512dcd50c3601dfcddd7a48d44dd90399c2c9bb0f3c17948",
+      "public_bytes": 3318
+    },
+    {
+      "source": "profiles/nsys/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/nsys/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/nsys/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/nsys/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/nsys/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/nsys/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/nsys/application.log",
+      "original_sha256": "57b3f29f6a636afa29d5df1ce7e6775995741d76e6cb081dd246a8ad0d6bda6e",
+      "original_bytes": 221803,
+      "public_file": "profiles/nsys/application.log",
+      "public_sha256": "827660ecc95ee20ff836687098a120041ec023a17d0303bb4657fd9541f0d225",
+      "public_bytes": 220066
+    },
+    {
+      "source": "profiles/nsys/capture.nsys-rep",
+      "original_sha256": "d6eaeed716141e0e0bf1e674317b7f8586fb286ab97e718ec520b5bed9c69e42",
+      "original_bytes": 30490363,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys/capture.sqlite",
+      "original_sha256": "355e4a65dd1691872b594cfeef7ee91f169173b384597f873d491b1d8ebcebb1",
+      "original_bytes": 82759680,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/nsys/cuda_api_sum.csv",
+      "original_sha256": "ba417dac0e2f560af015526dc45627233fa89fd2d746fb35b01c39d570e5692a",
+      "original_bytes": 2042,
+      "public_file": "profiles/nsys/cuda_api_sum.csv",
+      "public_sha256": "2747eadf58291ddb6bc3de1a25b5992402aef75638ca01f79621b7442fe88516",
+      "public_bytes": 2040
+    },
+    {
+      "source": "profiles/nsys/cuda_gpu_kern_sum.csv",
+      "original_sha256": "c78b36903bc90e7ade409dd53e3314c9e9bca64b97b644a1c72fb332f3e2b0de",
+      "original_bytes": 67795,
+      "public_file": "profiles/nsys/cuda_gpu_kern_sum.csv",
+      "public_sha256": "c66b5716faff89beff15b94e2b52188b3e5d2e15acfbd4e614029af0e808db96",
+      "public_bytes": 67793
+    },
+    {
+      "source": "profiles/nsys/cuda_gpu_mem_time_sum.csv",
+      "original_sha256": "d3b6ca23e165b38f8318f9bf14ea3f384eb661abcc2aae01c2c8e4667ff45b54",
+      "original_bytes": 943,
+      "public_file": "profiles/nsys/cuda_gpu_mem_time_sum.csv",
+      "public_sha256": "31db8d44860c7faf158e384078abe2c468eb5a5af81eefd441dea82efc73920c",
+      "public_bytes": 941
+    },
+    {
+      "source": "profiles/nsys/gpu-details.txt",
+      "original_sha256": "2e2c94d9994916b19e7a64d8e2253d5d8d976d7695b9b91db972643481193eac",
+      "original_bytes": 9674,
+      "public_file": "profiles/nsys/gpu-details.txt",
+      "public_sha256": "e009e121be881ecfcbf0f80c64c86a804de1262c7ac71c0a68fd991e38b08fd2",
+      "public_bytes": 9671
+    },
+    {
+      "source": "profiles/nsys/gpu-telemetry.csv",
+      "original_sha256": "86c95493d5aedf48d69f7647a37016a894a208b34ea543ac062bd8382b03273c",
+      "original_bytes": 20900,
+      "public_file": "profiles/nsys/gpu-telemetry.csv",
+      "public_sha256": "86c95493d5aedf48d69f7647a37016a894a208b34ea543ac062bd8382b03273c",
+      "public_bytes": 20900
+    },
+    {
+      "source": "profiles/nsys/host-telemetry.jsonl",
+      "original_sha256": "3cf10ddccf2e5a883b3d8b66ddf3cce47d1398944c202a4fe11ed8e6b03fdd3f",
+      "original_bytes": 1861986,
+      "public_file": "profiles/nsys/host-telemetry.jsonl",
+      "public_sha256": "a1dc9ec72b041f5cc6e655d024d9ee17c5b49af4de036e48c67129541eb353b4",
+      "public_bytes": 1863174
+    },
+    {
+      "source": "profiles/nsys/manifest.json",
+      "original_sha256": "db8a3aa7b45adf0ff236ee93fe9eb936c036bffdf58bbdd96b30de82906f4a61",
+      "original_bytes": 10756,
+      "public_file": "profiles/nsys/manifest.json",
+      "public_sha256": "c0537387383f9c252b9e4621c1c1dac6e5b4d1aa1f8b6fe8a12e4c4989745346",
+      "public_bytes": 10167
+    },
+    {
+      "source": "profiles/nsys/nvtx_sum.csv",
+      "original_sha256": "683cfa51893a337b52768ee29b5f77037317200673b97328d077b09f99cac8cc",
+      "original_bytes": 1904,
+      "public_file": "profiles/nsys/nvtx_sum.csv",
+      "public_sha256": "3d1a20cc31ddf6f5ab3dba916e15adb57622d3a932e1801346315fe5a93b5234",
+      "public_bytes": 1902
+    },
+    {
+      "source": "profiles/nsys/outputs.json",
+      "original_sha256": "29f200a7a067db678fb5648a209094d1f5201487f6d69c08ec2cd32c85dd747f",
+      "original_bytes": 4532,
+      "public_file": "profiles/nsys/outputs.json",
+      "public_sha256": "29f200a7a067db678fb5648a209094d1f5201487f6d69c08ec2cd32c85dd747f",
+      "public_bytes": 4532
+    },
+    {
+      "source": "profiles/nsys/tool-audit.json",
+      "original_sha256": "b56b4a8876ede8a338800adcaab53a1fd7457b4c8a21bcde6be2d1773d35f137",
+      "original_bytes": 1925,
+      "public_file": "profiles/nsys/tool-audit.json",
+      "public_sha256": "b56b4a8876ede8a338800adcaab53a1fd7457b4c8a21bcde6be2d1773d35f137",
+      "public_bytes": 1925
+    },
+    {
+      "source": "profiles/nsys/tool-environment.txt",
+      "original_sha256": "a53364c98015f2188cab712f5608aa209a05b54e32b2c862e7b27f9f8ddbb9a7",
+      "original_bytes": 727,
+      "public_file": "profiles/nsys/tool-environment.txt",
+      "public_sha256": "a53364c98015f2188cab712f5608aa209a05b54e32b2c862e7b27f9f8ddbb9a7",
+      "public_bytes": 727
+    },
+    {
+      "source": "profiles/nsys/tool-version.txt",
+      "original_sha256": "48356fa6513480e7d5f5fe0dc6c55f2d3643265461f39ab1416bc4704d9069ce",
+      "original_bytes": 58,
+      "public_file": "profiles/nsys/tool-version.txt",
+      "public_sha256": "48356fa6513480e7d5f5fe0dc6c55f2d3643265461f39ab1416bc4704d9069ce",
+      "public_bytes": 58
+    },
+    {
+      "source": "profiles/nsys/validity.json",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/nsys/validity.json",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "profiles/nsys.log",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/nsys.log",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "profiles/suite-completed.json",
+      "original_sha256": "12ba33ec4449b33fbd06d5be0a036e5d7e5beb763d7d7c17115e73fa8bcc1033",
+      "original_bytes": 1654,
+      "public_file": "profiles/suite-completed.json",
+      "public_sha256": "12ba33ec4449b33fbd06d5be0a036e5d7e5beb763d7d7c17115e73fa8bcc1033",
+      "public_bytes": 1654
+    },
+    {
+      "source": "profiles/torch/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/torch/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/torch/application/observation/configuration.json",
+      "original_sha256": "d7fb69de6a0a0068c563f30fd9b7212b1932e89b4940c724cee9f11465ca93c4",
+      "original_bytes": 2054,
+      "public_file": "profiles/torch/application/observation/configuration.json",
+      "public_sha256": "d7fb69de6a0a0068c563f30fd9b7212b1932e89b4940c724cee9f11465ca93c4",
+      "public_bytes": 2054
+    },
+    {
+      "source": "profiles/torch/application/observation/host-spans.json",
+      "original_sha256": "b3da8dc35dfb7826498842f24d63c39b5e793303bfa6a532d2d53430dc804482",
+      "original_bytes": 6260,
+      "public_file": "profiles/torch/application/observation/host-spans.json",
+      "public_sha256": "b3da8dc35dfb7826498842f24d63c39b5e793303bfa6a532d2d53430dc804482",
+      "public_bytes": 6260
+    },
+    {
+      "source": "profiles/torch/application/observation/torch-operators.txt",
+      "original_sha256": "82359a9cc925ef2d9e289be6bbb6c4d88bb9756af707a69eecaf3f603e6e977e",
+      "original_bytes": 18203,
+      "public_file": "profiles/torch/application/observation/torch-operators.txt",
+      "public_sha256": "56813117a8f05f902ed31223bc49728f6854cb7a8461f2467c21086ae33f8921",
+      "public_bytes": 18094
+    },
+    {
+      "source": "profiles/torch/application/observation/torch-trace.json",
+      "original_sha256": "3596f0f0d710cbafa35df9d02dc43f35d5bf3a4788e310304cb14c1b44e23040",
+      "original_bytes": 285261148,
+      "public_file": "profiles/torch/application/observation/torch-trace.json.gz",
+      "public_sha256": "c02820e48feeb14597013f4300836ea410dbe867353d740c38b2da3b7010d948",
+      "public_bytes": 15748388
+    },
+    {
+      "source": "profiles/torch/application/train/checkpoint-0162/README.md",
+      "original_sha256": "2907a30db85f2d587484fd79c4da68a3962e8ee90fcad60125279a7908c112e5",
+      "original_bytes": 5264,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/torch/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "28f64d21a84dcb12ea332100bb890f40f9ceacfa8473c0555a075d97fe042bc2",
+      "original_bytes": 1137,
+      "public_file": "profiles/torch/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "7d805c763551d91626e32cd1c92e034b95b00ffe438ad7ff1e345545e5d0ce69",
+      "public_bytes": 1138
+    },
+    {
+      "source": "profiles/torch/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "64a1b6424a585c4c198192b4ab5119d7102c09ed2c0b5257f21de1d0d2b03e95",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/torch/application/train/checkpoint-0162/state.json",
+      "original_sha256": "9bf50384c1e9aafef5896068ae29af7f5b2b1e05e06926b47e5b34a9610e5f95",
+      "original_bytes": 757,
+      "public_file": "profiles/torch/application/train/checkpoint-0162/state.json",
+      "public_sha256": "9bf50384c1e9aafef5896068ae29af7f5b2b1e05e06926b47e5b34a9610e5f95",
+      "public_bytes": 757
+    },
+    {
+      "source": "profiles/torch/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "7f057d82e700449db3b0d83b32f637f356798daec977f8bacb9e98fbe5e8c9c1",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/torch/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/torch/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/torch/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/torch/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/torch/application/train/contract.json",
+      "original_sha256": "81d783907ee08ada23dead9b9ed228b321385d5a5a7f5d75eb10209853e26567",
+      "original_bytes": 795,
+      "public_file": "profiles/torch/application/train/contract.json",
+      "public_sha256": "81d783907ee08ada23dead9b9ed228b321385d5a5a7f5d75eb10209853e26567",
+      "public_bytes": 795
+    },
+    {
+      "source": "profiles/torch/application/train/last-rollout-contract.json",
+      "original_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "original_bytes": 2439,
+      "public_file": "profiles/torch/application/train/last-rollout-contract.json",
+      "public_sha256": "841a851be92b133ce3e2851d998a1c05aeb610e4341721b364415cda1f79f5f1",
+      "public_bytes": 2439
+    },
+    {
+      "source": "profiles/torch/application/train/latest.json",
+      "original_sha256": "705ff9f3108491d979ff22885e1ce092274627567929b8e43de83fac21ba7d93",
+      "original_bytes": 786,
+      "public_file": "profiles/torch/application/train/latest.json",
+      "public_sha256": "705ff9f3108491d979ff22885e1ce092274627567929b8e43de83fac21ba7d93",
+      "public_bytes": 786
+    },
+    {
+      "source": "profiles/torch/application/train/metrics.jsonl",
+      "original_sha256": "ed0173c344ea2bd29a1784213c0a4784c58fac7ee15b3c5fe7a12ca842fc33d5",
+      "original_bytes": 3302,
+      "public_file": "profiles/torch/application/train/metrics.jsonl",
+      "public_sha256": "ed0173c344ea2bd29a1784213c0a4784c58fac7ee15b3c5fe7a12ca842fc33d5",
+      "public_bytes": 3302
+    },
+    {
+      "source": "profiles/torch/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/torch/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/torch/application/train/rollouts.jsonl",
+      "original_sha256": "fa4b48125cb8d1ac5bdd7dc6e003e081daa2377476530aa2038f68600f1f31dc",
+      "original_bytes": 4630,
+      "public_file": "profiles/torch/application/train/rollouts.jsonl",
+      "public_sha256": "6d3342e4f986ee67a5b572493fdb5ea51dc7e6c66f05781ebc418213a546ac3a",
+      "public_bytes": 3080
+    },
+    {
+      "source": "profiles/torch/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/torch/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/torch/application.log",
+      "original_sha256": "72eabb4ec7c023b90dcea80a850c29421a43b27aec7df651969ea02109970002",
+      "original_bytes": 218586,
+      "public_file": "profiles/torch/application.log",
+      "public_sha256": "458b099f216ab7baf3ca9f3d28d832b8a8501ad5bbd8a65147b5f092551cd8a5",
+      "public_bytes": 216849
+    },
+    {
+      "source": "profiles/torch/gpu-details.txt",
+      "original_sha256": "da38b40b497086974a00d2445aa9ae0626661e32c17d28bb7d909a3a3fc1ded3",
+      "original_bytes": 9673,
+      "public_file": "profiles/torch/gpu-details.txt",
+      "public_sha256": "13bd53613fcf5e46a4754aeb09d1556fb6acb1961788dcf28ea78a6e3189bb94",
+      "public_bytes": 9670
+    },
+    {
+      "source": "profiles/torch/gpu-telemetry.csv",
+      "original_sha256": "3c2050cfd31f7340292274c35b9123cd756ae1dd23d4614f9a8d6634e4daf67e",
+      "original_bytes": 26603,
+      "public_file": "profiles/torch/gpu-telemetry.csv",
+      "public_sha256": "3c2050cfd31f7340292274c35b9123cd756ae1dd23d4614f9a8d6634e4daf67e",
+      "public_bytes": 26603
+    },
+    {
+      "source": "profiles/torch/host-telemetry.jsonl",
+      "original_sha256": "5d716c4ebcf7643702d7160ec286d0a78e2101dc44a133135004a3a47ab3884e",
+      "original_bytes": 2512121,
+      "public_file": "profiles/torch/host-telemetry.jsonl",
+      "public_sha256": "c76cf50c59db4b229bfac9de086581d48f7e9e8d9bf18c75f2fcee3cb188df53",
+      "public_bytes": 2514497
+    },
+    {
+      "source": "profiles/torch/manifest.json",
+      "original_sha256": "39e5f0756c89973b999849edec19221c7d74538480b342026e830cad4d627ce2",
+      "original_bytes": 10361,
+      "public_file": "profiles/torch/manifest.json",
+      "public_sha256": "daaa4e1792a88f1fd9357db41f9f3fa803999b93660d4519fa04278b47789418",
+      "public_bytes": 9772
+    },
+    {
+      "source": "profiles/torch/outputs.json",
+      "original_sha256": "21305d5b4bbafe8560e8ab505745df13a9cb2d7dc1873258a30daa1c0dd363e9",
+      "original_bytes": 3797,
+      "public_file": "profiles/torch/outputs.json",
+      "public_sha256": "21305d5b4bbafe8560e8ab505745df13a9cb2d7dc1873258a30daa1c0dd363e9",
+      "public_bytes": 3797
+    },
+    {
+      "source": "profiles/torch/tool-audit.json",
+      "original_sha256": "2bb20023977704d973e3d86b3537d120457677cb435fcbdaeeddb6cd16eec08e",
+      "original_bytes": 175,
+      "public_file": "profiles/torch/tool-audit.json",
+      "public_sha256": "2bb20023977704d973e3d86b3537d120457677cb435fcbdaeeddb6cd16eec08e",
+      "public_bytes": 175
+    },
+    {
+      "source": "profiles/torch/validity.json",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/torch/validity.json",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "profiles/torch.log",
+      "original_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "original_bytes": 511,
+      "public_file": "profiles/torch.log",
+      "public_sha256": "8d8af106256a6447394a10cd59afc8407d8e9bd42725ee655ca4da047a51fa78",
+      "public_bytes": 511
+    },
+    {
+      "source": "task-events.json",
+      "original_sha256": "a7b317e1a3afa455697c83959cf5630f9e90051b653b0cf854120663a1990609",
+      "original_bytes": 320,
+      "public_file": "task-events.json",
+      "public_sha256": "a7b317e1a3afa455697c83959cf5630f9e90051b653b0cf854120663a1990609",
+      "public_bytes": 320
+    },
+    {
+      "source": "worker-failed.json",
+      "original_sha256": "a97708fbb3f8c80f3692c24936a57efa574d12eec8632c0dc2b2dd6ed32e4dc4",
+      "original_bytes": 489,
+      "public_file": "worker-failed.json",
+      "public_sha256": "a97708fbb3f8c80f3692c24936a57efa574d12eec8632c0dc2b2dd6ed32e4dc4",
+      "public_bytes": 489
+    }
+  ],
+  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims."
+}
