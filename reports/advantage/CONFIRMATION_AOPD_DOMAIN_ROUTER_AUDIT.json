@@ -1,0 +1,549 @@
+{
+  "verified": true,
+  "independent_point_estimates_match_frozen_report": true,
+  "source_report_sha256": "4873fe110b95c44e5ba57027c4d65b47ac3779a420ff0a62c7ecf4a6373e430f",
+  "formal": [
+    {
+      "seed": 101,
+      "split": "test",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6560867048724617
+        },
+        "offline_sft": {
+          "search": 0.8606424374817955,
+          "relevance": 0.5113521295362261,
+          "substitute": 0.6516518582868153,
+          "math": 0.466
+        },
+        "oracle_sft": {
+          "search": 0.8587503493141757,
+          "relevance": 0.5027092907758721,
+          "substitute": 0.6324633189676045,
+          "math": 0.466
+        },
+        "candidate": {
+          "search": 0.8606424374817955,
+          "relevance": 0.5113521295362261,
+          "substitute": 0.6560867048724617,
+          "math": 0.466
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 1500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 211,
+      "split": "test",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6459050487664946
+        },
+        "offline_sft": {
+          "search": 0.8623487747368033,
+          "relevance": 0.5136623727869138,
+          "substitute": 0.6508379888268156,
+          "math": 0.468
+        },
+        "oracle_sft": {
+          "search": 0.8606805180703331,
+          "relevance": 0.4962982812755722,
+          "substitute": 0.6486479452411316,
+          "math": 0.484
+        },
+        "candidate": {
+          "search": 0.8623487747368033,
+          "relevance": 0.5136623727869138,
+          "substitute": 0.6459050487664946,
+          "math": 0.468
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 1500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 307,
+      "split": "test",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6457639451405951
+        },
+        "offline_sft": {
+          "search": 0.8587041041498154,
+          "relevance": 0.512507594200189,
+          "substitute": 0.6467671968601528,
+          "math": 0.494
+        },
+        "oracle_sft": {
+          "search": 0.858845078020142,
+          "relevance": 0.4923287691179478,
+          "substitute": 0.6260215153054158,
+          "math": 0.442
+        },
+        "candidate": {
+          "search": 0.8587041041498154,
+          "relevance": 0.512507594200189,
+          "substitute": 0.6457639451405951,
+          "math": 0.494
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 1500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 401,
+      "split": "test",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6181899276021166
+        },
+        "offline_sft": {
+          "search": 0.8613712356361762,
+          "relevance": 0.5211733162375181,
+          "substitute": 0.634347717388988,
+          "math": 0.464
+        },
+        "oracle_sft": {
+          "search": 0.8560416235350183,
+          "relevance": 0.5109862951111255,
+          "substitute": 0.63056981723122,
+          "math": 0.454
+        },
+        "candidate": {
+          "search": 0.8613712356361762,
+          "relevance": 0.5211733162375181,
+          "substitute": 0.6181899276021166,
+          "math": 0.464
+        }
+      },
+      "aopd_substitute_invalid": 22,
+      "aopd_substitute_queries": 1500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 101,
+      "split": "ood",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6327061083799514
+        },
+        "offline_sft": {
+          "search": 0.8653295290462463,
+          "relevance": 0.5109846361199961,
+          "substitute": 0.6249557730864489,
+          "math": 0.44
+        },
+        "oracle_sft": {
+          "search": 0.8583904613261049,
+          "relevance": 0.49366591993652786,
+          "substitute": 0.6039045611396807,
+          "math": 0.442
+        },
+        "candidate": {
+          "search": 0.8653295290462463,
+          "relevance": 0.5109846361199961,
+          "substitute": 0.6327061083799514,
+          "math": 0.44
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 211,
+      "split": "ood",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6202339358954884
+        },
+        "offline_sft": {
+          "search": 0.8629273420429747,
+          "relevance": 0.4955323567866523,
+          "substitute": 0.6172862491983698,
+          "math": 0.486
+        },
+        "oracle_sft": {
+          "search": 0.8570462042005428,
+          "relevance": 0.48788468020015036,
+          "substitute": 0.6231617647058824,
+          "math": 0.458
+        },
+        "candidate": {
+          "search": 0.8629273420429747,
+          "relevance": 0.4955323567866523,
+          "substitute": 0.6202339358954884,
+          "math": 0.486
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 307,
+      "split": "ood",
+      "scores": {
+        "aopd": {
+          "substitute": 0.6236779211176106
+        },
+        "offline_sft": {
+          "search": 0.8588384898757144,
+          "relevance": 0.5168188690142614,
+          "substitute": 0.6207042972533265,
+          "math": 0.472
+        },
+        "oracle_sft": {
+          "search": 0.8593254132184506,
+          "relevance": 0.46347644937319077,
+          "substitute": 0.5949435452566201,
+          "math": 0.44
+        },
+        "candidate": {
+          "search": 0.8588384898757144,
+          "relevance": 0.5168188690142614,
+          "substitute": 0.6236779211176106,
+          "math": 0.472
+        }
+      },
+      "aopd_substitute_invalid": 0,
+      "aopd_substitute_queries": 500,
+      "aopd_substitute_truncated": 0
+    },
+    {
+      "seed": 401,
+      "split": "ood",
+      "scores": {
+        "aopd": {
+          "substitute": 0.5784615909313757
+        },
+        "offline_sft": {
+          "search": 0.8609597825637056,
+          "relevance": 0.5081955677365944,
+          "substitute": 0.6164135651900228,
+          "math": 0.468
+        },
+        "oracle_sft": {
+          "search": 0.8532856092689564,
+          "relevance": 0.4969155031739743,
+          "substitute": 0.6118208975375943,
+          "math": 0.46
+        },
+        "candidate": {
+          "search": 0.8609597825637056,
+          "relevance": 0.5081955677365944,
+          "substitute": 0.5784615909313757,
+          "math": 0.468
+        }
+      },
+      "aopd_substitute_invalid": 8,
+      "aopd_substitute_queries": 500,
+      "aopd_substitute_truncated": 0
+    }
+  ],
+  "training_health": [
+    {
+      "seed": 101,
+      "family": "aopd",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 16511.19836367597
+    },
+    {
+      "seed": 101,
+      "family": "offline_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6791.711573019158
+    },
+    {
+      "seed": 101,
+      "family": "oracle_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6029.8922543870285
+    },
+    {
+      "seed": 211,
+      "family": "aopd",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 15786.947632491589
+    },
+    {
+      "seed": 211,
+      "family": "offline_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6543.5281078107655
+    },
+    {
+      "seed": 211,
+      "family": "oracle_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6111.979608521797
+    },
+    {
+      "seed": 307,
+      "family": "aopd",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 15114.985884710215
+    },
+    {
+      "seed": 307,
+      "family": "offline_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6151.6378799099475
+    },
+    {
+      "seed": 307,
+      "family": "oracle_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 5529.229401003569
+    },
+    {
+      "seed": 401,
+      "family": "aopd",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 16282.775024726987
+    },
+    {
+      "seed": 401,
+      "family": "offline_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 6549.939514213998
+    },
+    {
+      "seed": 401,
+      "family": "oracle_sft",
+      "steps": 640,
+      "alarms": 0,
+      "nonfinite_loss": 0,
+      "elapsed_seconds": 5954.049671860004
+    }
+  ],
+  "dev_diagnostic": [
+    {
+      "seed": 101,
+      "step": 0,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7004006689848516,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 101,
+      "step": 160,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6847103513770181,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 101,
+      "step": 320,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7262222222222222,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 101,
+      "step": 480,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7035952156780696,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 101,
+      "step": 640,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6845714285714286,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 211,
+      "step": 0,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7004006689848516,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 211,
+      "step": 160,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6357455075279261,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 211,
+      "step": 320,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6957155348294958,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 211,
+      "step": 480,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7097056251821627,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 211,
+      "step": 640,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7035952156780696,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 307,
+      "step": 0,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7004006689848516,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 307,
+      "step": 160,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6889361102932705,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 307,
+      "step": 320,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7150997150997151,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 307,
+      "step": 480,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6058082045343192,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 307,
+      "step": 640,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7088093929435979,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 401,
+      "step": 0,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7004006689848516,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 401,
+      "step": 160,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7252322441745667,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 401,
+      "step": 320,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.6554231974921629,
+      "substitute_json_valid": 0.98,
+      "substitute_invalid": 6,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 401,
+      "step": 480,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7069174543014867,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    },
+    {
+      "seed": 401,
+      "step": 640,
+      "full_dev_rows": 1400,
+      "substitute_queries": 300,
+      "substitute_macro_f1": 0.7214355355401829,
+      "substitute_json_valid": 1.0,
+      "substitute_invalid": 0,
+      "precision_scope": "Training runtime FP32; diagnostic only, not BF16 final selection"
+    }
+  ],
+  "holdout_used_for_new_selection": false,
+  "utc": "2026-10-27T12:23:16.396351+00:00"
+}

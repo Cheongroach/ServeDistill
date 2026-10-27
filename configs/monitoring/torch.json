@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "backend": "torch",
+  "timeout_seconds": 900,
+  "first_update": 162,
+  "last_update": 162,
+  "microbatch": 4,
+  "gpu_poll_ms": 500,
+  "host_poll_seconds": 1,
+  "options": {
+    "record_shapes": true,
+    "profile_memory": true,
+    "with_stack": false,
+    "torch_first_microbatch": true
+  }
+}

@@ -13,7 +13,7 @@ import numpy as np
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
 
-from .data import BUSINESS, SYSTEM, TEACHER_SYSTEM, grade
+from .data import BUSINESS, grade, system_prompt
 
 
 def write_json(path: Path, value: object) -> None:
@@ -66,12 +66,8 @@ def summarize(records: list[dict]) -> dict:
             scores[domain]["mrr"] = float(np.mean([r["mrr"] for r in values]))
             scores[domain]["selection_score"] = scores[domain]["ndcg"]
         elif values[0].get("task") in ("esci_classification", "esci_substitute"):
-            from sklearn.metrics import f1_score
-            options = ["E", "S", "C", "I"] if domain == "relevance" else ["yes", "no"]
-            truth = [row["target_class"] for row in values]
-            predicted = [row["predicted_class"] for row in values]
-            scores[domain]["macro_f1"] = f1_score(
-                truth, predicted, labels=options, average="macro", zero_division=0)
+            from .statistics import metric
+            scores[domain]["macro_f1"] = metric(values)
             scores[domain]["selection_score"] = scores[domain]["macro_f1"]
     business = [value["selection_score"] for domain, value in scores.items()
                 if domain not in ("math", "instruction")]
@@ -238,9 +234,7 @@ class Runtime:
     def prompts(self, rows: list[dict], teacher: bool = False) -> torch.Tensor:
         tokenizer = self.teacher_tokenizer if teacher else self.tokenizer
         texts = [tokenizer.apply_chat_template([
-            {"role": "system", "content": (
-                row.get("teacher_system", TEACHER_SYSTEM) if teacher
-                else row.get("system", SYSTEM))},
+            {"role": "system", "content": system_prompt(row, teacher)},
             {"role": "user", "content": row["prompt"]},
         ], tokenize=False, add_generation_prompt=True, enable_thinking=False) for row in rows]
         model = self.teacher if teacher else self.student
@@ -312,10 +306,14 @@ class Runtime:
                 )
                 logits = (output.logits if response_only else
                           output.logits[:, inputs.input_ids.shape[1] - 1:-1]).float()
-                logp = logits.gather(-1, response.unsqueeze(-1)).squeeze(-1) - logits.logsumexp(-1)
-                result = {"logp": logp}
+                log_normalizer = logits.logsumexp(-1)
+                logp = (
+                    logits.gather(-1, response.unsqueeze(-1)).squeeze(-1)
+                    - log_normalizer
+                )
+                result = {"logp": logp, "log_normalizer": log_normalizer}
                 if entropy:
-                    log_probs = logits.log_softmax(-1)
+                    log_probs = logits - log_normalizer.unsqueeze(-1)
                     result["entropy"] = -(log_probs.exp() * log_probs).sum(-1)
                 if keep_logits:
                     result["logits"] = logits

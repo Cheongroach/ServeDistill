@@ -1,0 +1,79 @@
+{
+  "utc": "2026-10-25T13:48:03.865506+00:00",
+  "cpu_regression_result": "..........................................................               [100%]\n58 passed in 3.64s",
+  "confirmation640_rehearsal": {
+    "rehearsal_completed": true,
+    "seed_jobs": 4,
+    "unique_arms": 20,
+    "sources_parsed": 252,
+    "frozen640_averages_bound": true,
+    "original_failure_policy_bound": true,
+    "terminal_evidence_archives_prepared": 4,
+    "submitted": false,
+    "holdout_observed": false,
+    "submission_forbidden": true
+  },
+  "archive_cpu_rehearsal": {
+    "rehearsal_completed": true,
+    "archive_member_hashes_verified": 5,
+    "original_failure_retained": true,
+    "gpu_work_launched": false,
+    "submitted": false,
+    "boundary": "Synthetic CPU lifecycle fixture only; no real model quality or terminal job costs"
+  },
+  "real_640_jobs": {
+    "opd": {
+      "sid": "redacted-666b267a3fcf",
+      "gpu_count": 4,
+      "maximum_gpu_hours": 32,
+      "evidence_archive": "<private-evidence-mount>",
+      "archive_driver_sha256": "f8a385405fc26c2901d811b1f5f851e92af4b1cb088caa40b35594f1ea67204e",
+      "precheck_status": "success"
+    },
+    "sft": {
+      "sid": "redacted-7a7e92fd6863",
+      "gpu_count": 4,
+      "maximum_gpu_hours": 32,
+      "evidence_archive": "<private-evidence-mount>",
+      "archive_driver_sha256": "21ba3f300c9db5d34912ab9c48295814561a0e4147b9dc24c8bc0bea1c64ff69",
+      "precheck_status": "success"
+    },
+    "controls": {
+      "sid": "redacted-cc65ef672c00",
+      "gpu_count": 4,
+      "maximum_gpu_hours": 32,
+      "evidence_archive": "<private-evidence-mount>",
+      "archive_driver_sha256": "a8402f589f5cf3f24f380919777b8bf68dec82b6f053bd458eac60323da4853b",
+      "precheck_status": "success"
+    }
+  },
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "archive_coordinator_cpu_rehearsal": {
+    "rehearsal_completed": true,
+    "coordinator_held_and_resumed": true,
+    "training_processes_signaled": false,
+    "verified_archive_released": true,
+    "boundary": "Synthetic CPU processes only; no GPU lifecycle or model-quality claim"
+  },
+  "real_archive_coordinator_lifecycle": {
+    "opd": {
+      "pid": 64786,
+      "driver_sha256": "ac440bb717ef6dbe745967bdf2e5d0568050503378fff342c265a00c71e869f2",
+      "installed_unix_seconds": 1792935939.8644867,
+      "training_processes_signaled": false
+    },
+    "sft": {
+      "pid": 45941,
+      "driver_sha256": "df84a23614a825466f9e81437962eecd584b37cff861d320e6a5b8327a1c9062",
+      "installed_unix_seconds": 1792935940.5314405,
+      "training_processes_signaled": false
+    },
+    "controls": {
+      "pid": 2071,
+      "driver_sha256": "f902b908242b40797dd88ad6f96fd52cfba199c8ea27cc6aed0dc43a0926d412",
+      "installed_unix_seconds": 1792935941.0599008,
+      "training_processes_signaled": false
+    }
+  }
+}

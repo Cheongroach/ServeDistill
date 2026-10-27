@@ -1,0 +1,72 @@
+{
+  "arm": "original_full_kl_common320",
+  "phase": "development",
+  "failure": {
+    "error": "RuntimeError",
+    "message": "Advantage arm failed at train",
+    "unix_seconds": 1792913891.4419718
+  },
+  "training_failure": {
+    "error": "RuntimeError",
+    "message": "Joint training alarm persisted and dev confirmed degradation",
+    "failed_unix_seconds": 1792913868.5157294
+  },
+  "observed_updates": 80,
+  "development": {
+    "dev-0000.summary.json": {
+      "business_macro": 0.7285012792316987,
+      "general_macro": 0.4875,
+      "json_valid": {
+        "math": 1.0,
+        "substitute": 1.0,
+        "search": 1.0,
+        "relevance": 1.0,
+        "instruction": 1.0
+      },
+      "mean_output_tokens": {
+        "math": 7.375,
+        "substitute": 7.0,
+        "search": 28.0,
+        "relevance": 6.0,
+        "instruction": 13.1
+      }
+    },
+    "dev-0040.summary.json": {
+      "business_macro": 0.5274539348500354,
+      "general_macro": 0.525,
+      "json_valid": {
+        "math": 1.0,
+        "substitute": 1.0,
+        "search": 1.0,
+        "relevance": 1.0,
+        "instruction": 1.0
+      },
+      "mean_output_tokens": {
+        "math": 7.325,
+        "substitute": 7.0,
+        "search": 28.0,
+        "relevance": 6.0,
+        "instruction": 13.125
+      }
+    },
+    "dev-0080.summary.json": {
+      "business_macro": 0.0,
+      "general_macro": 0.0,
+      "json_valid": {
+        "math": 0.0,
+        "substitute": 0.0,
+        "search": 0.0,
+        "relevance": 0.0,
+        "instruction": 0.0
+      },
+      "mean_output_tokens": {
+        "math": 128.0,
+        "substitute": 128.0,
+        "search": 128.0,
+        "relevance": 128.0,
+        "instruction": 128.0
+      }
+    }
+  },
+  "boundary": "Observed original-teacher FullKL formatting collapse; selected-full-dev missing and must not be treated as complete. Platform termination audited separately."
+}

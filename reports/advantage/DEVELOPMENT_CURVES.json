@@ -1,0 +1,4549 @@
+{
+  "utc": "2026-10-25T16:48:34.435328+00:00",
+  "arms": {
+    "reports/advantage/raw/longrun-v1/long_offline_token_lr5e5": {
+      "objective": "offline_sft",
+      "aggregation": "token",
+      "learning_rate": 5e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3972.2775911790086,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.291576378498576,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3568
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2372
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6749244075136995,
+          "general_macro": 0.49916666666666665,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.7130068146118506,
+            "search": 0.8327009408744481,
+            "relevance": 0.47906546705479985,
+            "instruction": 0.8833333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6674636808578774,
+          "general_macro": 0.5225000000000001,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6954849058258876,
+            "search": 0.8380445532977766,
+            "relevance": 0.4688615834499685,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6570471022788277,
+          "general_macro": 0.48833333333333334,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.614007607965988,
+            "search": 0.8623784541152504,
+            "relevance": 0.49475524475524474,
+            "instruction": 0.8666666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6682920752324457,
+          "general_macro": 0.49666666666666665,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6812555204239685,
+            "search": 0.845603793350426,
+            "relevance": 0.47801691192294277,
+            "instruction": 0.8733333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_offline_trajectory_lr2e5": {
+      "objective": "offline_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3500.6962087860156,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.168971436505672,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3568
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2372
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6798682339397081,
+          "general_macro": 0.5016666666666667,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6966337309177744,
+            "search": 0.8481622070518886,
+            "relevance": 0.4948087638494615,
+            "instruction": 0.8833333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6678518613607878,
+          "general_macro": 0.5358333333333333,
+          "domain_scores": {
+            "math": 0.145,
+            "substitute": 0.6746539971080355,
+            "search": 0.8429089131162812,
+            "relevance": 0.48599267385804673,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6517169609382828,
+          "general_macro": 0.5158333333333334,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.6110265516658211,
+            "search": 0.8481043350945399,
+            "relevance": 0.4960199960544874,
+            "instruction": 0.9066666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6812549638050722,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6611039794608473,
+            "search": 0.8483032919229901,
+            "relevance": 0.5343576200313789,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_offline_trajectory_lr5e5": {
+      "objective": "offline_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 5e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3481.605110667995,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.177474859519862,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3568
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2372
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.680279648745432,
+          "general_macro": 0.4975,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.7197656221567129,
+            "search": 0.846546075300815,
+            "relevance": 0.47452724877876806,
+            "instruction": 0.88
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6869112511792009,
+          "general_macro": 0.5275,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.7106481481481481,
+            "search": 0.8526825516325806,
+            "relevance": 0.4974030537568744,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6503050402172255,
+          "general_macro": 0.48416666666666663,
+          "domain_scores": {
+            "math": 0.095,
+            "substitute": 0.5994318181818181,
+            "search": 0.8568950911715234,
+            "relevance": 0.49458821129833486,
+            "instruction": 0.8733333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.680853598052494,
+          "general_macro": 0.49083333333333334,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6579785352046232,
+            "search": 0.8538333481551583,
+            "relevance": 0.5307489107977004,
+            "instruction": 0.8666666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_opd_token_lr5e5": {
+      "objective": "opd",
+      "aggregation": "token",
+      "learning_rate": 5e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 9154.257051399007,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.802932524486096,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4745
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7168
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11942
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 48264
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6738682230274874,
+          "general_macro": 0.5116666666666667,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6495861053273069,
+            "search": 0.8429925583851371,
+            "relevance": 0.5290260053700184,
+            "instruction": 0.9033333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6315562814892764,
+          "general_macro": 0.515,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6052575729707551,
+            "search": 0.837427080113534,
+            "relevance": 0.4519841913835403,
+            "instruction": 0.91
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6756182096866835,
+          "general_macro": 0.48,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6906503621210467,
+            "search": 0.8482559366948,
+            "relevance": 0.4879483302442038,
+            "instruction": 0.84
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.7015399162759696,
+          "general_macro": 0.4925,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.7068497068497068,
+            "search": 0.8396432953515276,
+            "relevance": 0.5581267466266743,
+            "instruction": 0.87
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_opd_trajectory_lr2e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 9155.050499439996,
+      "metrics_available": true,
+      "median_recent_update_seconds": 19.02697006650851,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4748
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11939
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7171
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 48074
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6567709831281526,
+          "general_macro": 0.5141666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6479383958121812,
+            "search": 0.8456828206659275,
+            "relevance": 0.4766917329063495,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.647855002279001,
+          "general_macro": 0.4916666666666667,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6021049929405724,
+            "search": 0.8501343314911199,
+            "relevance": 0.4913256824053108,
+            "instruction": 0.8533333333333334
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.65234827153053,
+          "general_macro": 0.5008333333333334,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6582137508160627,
+            "search": 0.8466277075489741,
+            "relevance": 0.45220335622655305,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6838785196296152,
+          "general_macro": 0.5133333333333334,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6774388402295379,
+            "search": 0.8532017658478459,
+            "relevance": 0.5209949528114616,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_oracle_token_lr1e5": {
+      "objective": "oracle_sft",
+      "aggregation": "token",
+      "learning_rate": 1e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3576.722814787994,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.314954569505062,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2362
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3595
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6384597213278042,
+          "general_macro": 0.5166666666666667,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6304368426039988,
+            "search": 0.8496971328483847,
+            "relevance": 0.43524518853102906,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6426517957890358,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6534281452237015,
+            "search": 0.8438620739782372,
+            "relevance": 0.4306651681651682,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6665720919924262,
+          "general_macro": 0.53,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.699855224284655,
+            "search": 0.8508906201997436,
+            "relevance": 0.44897043149288,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6327296076977629,
+          "general_macro": 0.5258333333333334,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.609266288920306,
+            "search": 0.8534413464047385,
+            "relevance": 0.435481187768244,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_oracle_token_lr5e6": {
+      "objective": "oracle_sft",
+      "aggregation": "token",
+      "learning_rate": 5e-06,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3976.094471247983,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.227525877009612,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3595
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2362
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6494247482095332,
+          "general_macro": 0.5166666666666667,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6492362804119608,
+            "search": 0.8467096071419538,
+            "relevance": 0.45232835707468505,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.640805456566412,
+          "general_macro": 0.5225,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.6274125874125873,
+            "search": 0.8444784297349663,
+            "relevance": 0.4505253525516823,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6471567081150087,
+          "general_macro": 0.5308333333333333,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.6341258741258742,
+            "search": 0.8488772270462464,
+            "relevance": 0.45846702317290555,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6276623761225447,
+          "general_macro": 0.5308333333333333,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.5926816239316239,
+            "search": 0.8521392402222601,
+            "relevance": 0.43816626421375027,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-v1/long_oracle_trajectory_lr5e5": {
+      "objective": "oracle_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 5e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3481.7264347070013,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.096905562488246,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3595
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2362
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6070994385108102,
+          "general_macro": 0.505,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.5466666666666666,
+            "search": 0.8518611348674354,
+            "relevance": 0.42277051399832855,
+            "instruction": 0.88
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6101226635935028,
+          "general_macro": 0.5016666666666667,
+          "domain_scores": {
+            "math": 0.09,
+            "substitute": 0.5383380168606985,
+            "search": 0.8409267244803742,
+            "relevance": 0.4511032494394357,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6385589927911751,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.6233291481016456,
+            "search": 0.8540264544021164,
+            "relevance": 0.43832137586976305,
+            "instruction": 0.9466666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6673604087607581,
+          "general_macro": 0.5216666666666667,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6702686014201914,
+            "search": 0.8508716443805103,
+            "relevance": 0.4809409804815723,
+            "instruction": 0.9233333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-controls-v1/long_opd_trajectory_group4_lr5e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 5e-05,
+      "group_size": 4,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 11340.493593444116,
+      "metrics_available": true,
+      "median_recent_update_seconds": 28.10137128108181,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 320,
+          "sequences": 1280,
+          "response_tokens": 14368
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 3416,
+          "response_tokens": 95990
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 1280,
+          "response_tokens": 9458
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 3412,
+          "response_tokens": 23885
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 3412,
+          "response_tokens": 20472
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.678421073163077,
+          "general_macro": 0.51,
+          "domain_scores": {
+            "math": 0.08,
+            "substitute": 0.6695156695156695,
+            "search": 0.8474740810633679,
+            "relevance": 0.5182734689101935,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6647608610842729,
+          "general_macro": 0.48666666666666664,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6473565570936648,
+            "search": 0.8503083312899389,
+            "relevance": 0.49661769486921503,
+            "instruction": 0.8733333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6693550025731079,
+          "general_macro": 0.49583333333333335,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6871741397288842,
+            "search": 0.8452883029697783,
+            "relevance": 0.4756025650206612,
+            "instruction": 0.8766666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6835671461634103,
+          "general_macro": 0.5225,
+          "domain_scores": {
+            "math": 0.155,
+            "substitute": 0.6978073463268366,
+            "search": 0.8493038626076185,
+            "relevance": 0.5035902295557755,
+            "instruction": 0.89
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-controls-v1/long_opd_trajectory_lr5e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 5e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 9218.475561302621,
+      "metrics_available": true,
+      "median_recent_update_seconds": 19.282246213639155,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 48110
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11939
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4751
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7168
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6840769066221721,
+          "general_macro": 0.4983333333333333,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6847103513770181,
+            "search": 0.8473538598712128,
+            "relevance": 0.5201665086182853,
+            "instruction": 0.8966666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6767710699819687,
+          "general_macro": 0.4791666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.688737973967176,
+            "search": 0.8526422728827392,
+            "relevance": 0.48893296309599077,
+            "instruction": 0.8433333333333334
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6430101459809708,
+          "general_macro": 0.4225,
+          "domain_scores": {
+            "math": 0.095,
+            "substitute": 0.6637613892588246,
+            "search": 0.8388543508960526,
+            "relevance": 0.42641469778803526,
+            "instruction": 0.75
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6649017828351839,
+          "general_macro": 0.49916666666666665,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.702703010559169,
+            "search": 0.8468017052457499,
+            "relevance": 0.4452006327006327,
+            "instruction": 0.8933333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-controls-v1/long_original_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 80,
+      "observed_elapsed_seconds": 3218.244845693931,
+      "metrics_available": true,
+      "median_recent_update_seconds": 29.65814811643213,
+      "remaining_update_seconds_lower_estimate": 7117.955547943711,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "relevance": {
+          "prompts": 213,
+          "sequences": 426,
+          "response_tokens": 6490
+        },
+        "substitute": {
+          "prompts": 213,
+          "sequences": 426,
+          "response_tokens": 6999
+        },
+        "math": {
+          "prompts": 80,
+          "sequences": 160,
+          "response_tokens": 2433
+        },
+        "instruction": {
+          "prompts": 80,
+          "sequences": 160,
+          "response_tokens": 3101
+        },
+        "search": {
+          "prompts": 214,
+          "sequences": 428,
+          "response_tokens": 14999
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.0,
+          "general_macro": 0.0,
+          "domain_scores": {
+            "math": 0.0,
+            "substitute": 0.0,
+            "search": 0.0,
+            "relevance": 0.0,
+            "instruction": 0.0
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": true
+    },
+    "reports/advantage/raw/longrun-controls-v1/long_repaired_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 9183.855714926962,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.646549419499934,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 47851
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4734
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11944
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7179
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6489279230967897,
+          "general_macro": 0.5216666666666667,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.6083166037259059,
+            "search": 0.845164903746478,
+            "relevance": 0.4933022618179852,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6447746452194226,
+          "general_macro": 0.5258333333333334,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.614007607965988,
+            "search": 0.8496333483272704,
+            "relevance": 0.4706829793650094,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6837654191798704,
+          "general_macro": 0.5075000000000001,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6753701416913852,
+            "search": 0.8494604256548155,
+            "relevance": 0.5264656901934104,
+            "instruction": 0.9
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.7016405849390748,
+          "general_macro": 0.5125,
+          "domain_scores": {
+            "math": 0.135,
+            "substitute": 0.7139997139997141,
+            "search": 0.8520366409238251,
+            "relevance": 0.5388853998936851,
+            "instruction": 0.89
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-supplement-v1/long_offline_token_lr2e5": {
+      "objective": "offline_sft",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3245.98996149702,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.826198104536161,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2372
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3568
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6695301105556606,
+          "general_macro": 0.5066666666666666,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6735749305546666,
+            "search": 0.8451243365343891,
+            "relevance": 0.4898910645779261,
+            "instruction": 0.8933333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6557796017118136,
+          "general_macro": 0.5366666666666666,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6385591097995154,
+            "search": 0.8414054639672889,
+            "relevance": 0.4873742313686366,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6633394289835154,
+          "general_macro": 0.5166666666666666,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6362433862433863,
+            "search": 0.8553092931338552,
+            "relevance": 0.4984656075733046,
+            "instruction": 0.9033333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6800900773371207,
+          "general_macro": 0.5366666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6910324974252708,
+            "search": 0.8470855789309962,
+            "relevance": 0.5021521556550952,
+            "instruction": 0.9233333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-supplement-v1/long_opd_token_lr2e5": {
+      "objective": "opd",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 7982.8642796531785,
+      "metrics_available": true,
+      "median_recent_update_seconds": 17.81594795396086,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 47875
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7179
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4742
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11940
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6264541962499756,
+          "general_macro": 0.525,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.5707901296479299,
+            "search": 0.8487756978319615,
+            "relevance": 0.45979676127003544,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6385436381077968,
+          "general_macro": 0.49833333333333335,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.5935481110683267,
+            "search": 0.8458908812449211,
+            "relevance": 0.47619192201014265,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6563248253865724,
+          "general_macro": 0.5191666666666667,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.6410084033613446,
+            "search": 0.8479016651254585,
+            "relevance": 0.48006440767291414,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6863711112622637,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6876745721395561,
+            "search": 0.8513328889565098,
+            "relevance": 0.5201058726907253,
+            "instruction": 0.9033333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-supplement-v1/long_opd_trajectory_lr1e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 1e-05,
+      "group_size": 2,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 7096.979432733962,
+      "metrics_available": true,
+      "median_recent_update_seconds": 17.400870074518025,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 7176
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 640,
+          "response_tokens": 4735
+        },
+        "relevance": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 10236
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 1706,
+          "response_tokens": 11942
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 1708,
+          "response_tokens": 47832
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6339912600037308,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.5998933048813017,
+            "search": 0.8455582735362098,
+            "relevance": 0.45652220159368084,
+            "instruction": 0.92
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6574628049815135,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.633231906107368,
+            "search": 0.8467259086790061,
+            "relevance": 0.4924306001581663,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.651180517047681,
+          "general_macro": 0.5133333333333333,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6248739495798319,
+            "search": 0.8432191331166582,
+            "relevance": 0.48544846844655276,
+            "instruction": 0.9066666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6761596884681086,
+          "general_macro": 0.5166666666666666,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6753701416913852,
+            "search": 0.8455894388709744,
+            "relevance": 0.5075194848419663,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/longrun-supplement-v1/long_oracle_token_lr2e5": {
+      "objective": "oracle_sft",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 320,
+      "observed_updates": 320,
+      "observed_elapsed_seconds": 3706.4954328089952,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.885735422023572,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "relevance": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5118
+        },
+        "math": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 2362
+        },
+        "substitute": {
+          "prompts": 853,
+          "sequences": 853,
+          "response_tokens": 5971
+        },
+        "instruction": {
+          "prompts": 320,
+          "sequences": 320,
+          "response_tokens": 3595
+        },
+        "search": {
+          "prompts": 854,
+          "sequences": 854,
+          "response_tokens": 23912
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0080",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6247671516849328,
+          "general_macro": 0.5208333333333334,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6029258098223615,
+            "search": 0.8495931406990752,
+            "relevance": 0.4217825045333616,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6502472262240814,
+          "general_macro": 0.5183333333333333,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6744055944055944,
+            "search": 0.8435186943356501,
+            "relevance": 0.4328173899309996,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0240",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6654412728411786,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.7044472003616176,
+            "search": 0.8541138420521515,
+            "relevance": 0.437762776109767,
+            "instruction": 0.9466666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6511541233039543,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6657158138705652,
+            "search": 0.8520632378357382,
+            "relevance": 0.4356833182055596,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-opd-v4/deep_opd_token_lr2e5": {
+      "objective": "opd",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 494,
+      "observed_elapsed_seconds": 12095.452815193683,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.607035525143147,
+      "remaining_update_seconds_lower_estimate": 2716.6271866708994,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 11006
+        },
+        "math": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 7289
+        },
+        "search": {
+          "prompts": 1318,
+          "sequences": 2636,
+          "response_tokens": 73887
+        },
+        "relevance": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 15804
+        },
+        "substitute": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 18436
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6385436381077968,
+          "general_macro": 0.49833333333333335,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.5935481110683267,
+            "search": 0.8458908812449211,
+            "relevance": 0.47619192201014265,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6863711112622637,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6876745721395561,
+            "search": 0.8513328889565098,
+            "relevance": 0.5201058726907253,
+            "instruction": 0.9033333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6813121979696436,
+          "general_macro": 0.5033333333333334,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6558498925355029,
+            "search": 0.8538261930101734,
+            "relevance": 0.5342605083632548,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-opd-v4/deep_opd_token_lr5e5": {
+      "objective": "opd",
+      "aggregation": "token",
+      "learning_rate": 5e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 494,
+      "observed_elapsed_seconds": 12095.646322205663,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.708520939573646,
+      "remaining_update_seconds_lower_estimate": 2731.4440571777523,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "relevance": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 15804
+        },
+        "math": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 7291
+        },
+        "instruction": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 11025
+        },
+        "substitute": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 18437
+        },
+        "search": {
+          "prompts": 1318,
+          "sequences": 2636,
+          "response_tokens": 74280
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6315562814892764,
+          "general_macro": 0.515,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6052575729707551,
+            "search": 0.837427080113534,
+            "relevance": 0.4519841913835403,
+            "instruction": 0.91
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.7033991945469555,
+          "general_macro": 0.49333333333333335,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.7048888888888889,
+            "search": 0.8399822004707637,
+            "relevance": 0.5653264942812141,
+            "instruction": 0.8666666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6704394000636307,
+          "general_macro": 0.515,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.611441798941799,
+            "search": 0.8494174845710123,
+            "relevance": 0.5504589166780809,
+            "instruction": 0.9
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-opd-v4/deep_opd_trajectory_lr2e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 494,
+      "observed_elapsed_seconds": 12098.271687116474,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.792609341442585,
+      "remaining_update_seconds_lower_estimate": 2743.7209638506174,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 18438
+        },
+        "math": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 7314
+        },
+        "search": {
+          "prompts": 1318,
+          "sequences": 2636,
+          "response_tokens": 74068
+        },
+        "instruction": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 10997
+        },
+        "relevance": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 15804
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.647855002279001,
+          "general_macro": 0.4916666666666667,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6021049929405724,
+            "search": 0.8501343314911199,
+            "relevance": 0.4913256824053108,
+            "instruction": 0.8533333333333334
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6838785196296152,
+          "general_macro": 0.5133333333333334,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6774388402295379,
+            "search": 0.8532017658478459,
+            "relevance": 0.5209949528114616,
+            "instruction": 0.8866666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6781198031935208,
+          "general_macro": 0.54,
+          "domain_scores": {
+            "math": 0.17,
+            "substitute": 0.6224350205198358,
+            "search": 0.8497230475585382,
+            "relevance": 0.5622013415021889,
+            "instruction": 0.91
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-opd-v4/deep_opd_trajectory_lr5e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 5e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 494,
+      "observed_elapsed_seconds": 12094.949540786445,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.76441141590476,
+      "remaining_update_seconds_lower_estimate": 2739.604066722095,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "math": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 7323
+        },
+        "relevance": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 15817
+        },
+        "search": {
+          "prompts": 1318,
+          "sequences": 2636,
+          "response_tokens": 74097
+        },
+        "instruction": {
+          "prompts": 494,
+          "sequences": 988,
+          "response_tokens": 11020
+        },
+        "substitute": {
+          "prompts": 1317,
+          "sequences": 2634,
+          "response_tokens": 18436
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6767710699819687,
+          "general_macro": 0.4791666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.688737973967176,
+            "search": 0.8526422728827392,
+            "relevance": 0.48893296309599077,
+            "instruction": 0.8433333333333334
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6649017828351839,
+          "general_macro": 0.49916666666666665,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.702703010559169,
+            "search": 0.8468017052457499,
+            "relevance": 0.4452006327006327,
+            "instruction": 0.8933333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6650272239536227,
+          "general_macro": 0.47,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.625081504020865,
+            "search": 0.8543092928532025,
+            "relevance": 0.5156908749868006,
+            "instruction": 0.84
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_offline_token_lr1e5": {
+      "objective": "offline_sft",
+      "aggregation": "token",
+      "learning_rate": 1e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 640,
+      "observed_elapsed_seconds": 5690.239255135413,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.007956815650687,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 7199
+        },
+        "substitute": {
+          "prompts": 1706,
+          "sequences": 1706,
+          "response_tokens": 11942
+        },
+        "math": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 4744
+        },
+        "relevance": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 10242
+        },
+        "search": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 47796
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6424469130230862,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6058690932223313,
+            "search": 0.8452424439982993,
+            "relevance": 0.4762292018486278,
+            "instruction": 0.9233333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6848166252219445,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.7124868071477963,
+            "search": 0.8496755650732197,
+            "relevance": 0.4922875034448174,
+            "instruction": 0.9166666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6724060763588176,
+          "general_macro": 0.54,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6377340463647341,
+            "search": 0.8501164916098236,
+            "relevance": 0.5293676911018951,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0640",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6793302094514004,
+          "general_macro": 0.5358333333333333,
+          "domain_scores": {
+            "math": 0.155,
+            "substitute": 0.6910324974252708,
+            "search": 0.8500592583655705,
+            "relevance": 0.4968988725633601,
+            "instruction": 0.9166666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_offline_token_lr2e5": {
+      "objective": "offline_sft",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 582,
+      "observed_elapsed_seconds": 4797.969895584974,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.710071845445782,
+      "remaining_update_seconds_lower_estimate": 331.18416703585535,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 10864
+        },
+        "relevance": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 9312
+        },
+        "search": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 43456
+        },
+        "instruction": {
+          "prompts": 582,
+          "sequences": 582,
+          "response_tokens": 6530
+        },
+        "math": {
+          "prompts": 582,
+          "sequences": 582,
+          "response_tokens": 4312
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6557796017118136,
+          "general_macro": 0.5366666666666666,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6385591097995154,
+            "search": 0.8414054639672889,
+            "relevance": 0.4873742313686366,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6800900773371207,
+          "general_macro": 0.5366666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6910324974252708,
+            "search": 0.8470855789309962,
+            "relevance": 0.5021521556550952,
+            "instruction": 0.9233333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6687854584482599,
+          "general_macro": 0.5358333333333333,
+          "domain_scores": {
+            "math": 0.155,
+            "substitute": 0.6385591097995154,
+            "search": 0.8526457503937489,
+            "relevance": 0.5151515151515151,
+            "instruction": 0.9166666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_offline_trajectory_lr1e5": {
+      "objective": "offline_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 1e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 640,
+      "observed_elapsed_seconds": 5726.889447827358,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.085721683455631,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "relevance": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 10242
+        },
+        "substitute": {
+          "prompts": 1706,
+          "sequences": 1706,
+          "response_tokens": 11942
+        },
+        "instruction": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 7199
+        },
+        "search": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 47796
+        },
+        "math": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 4744
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6584388862956712,
+          "general_macro": 0.5216666666666667,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6542839015421269,
+            "search": 0.843111561062852,
+            "relevance": 0.47792119628203467,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6815713263967781,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6954842543077837,
+            "search": 0.8498367045399774,
+            "relevance": 0.4993930203425735,
+            "instruction": 0.9033333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.668256272631524,
+          "general_macro": 0.5416666666666666,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6442154336891179,
+            "search": 0.8469343738907914,
+            "relevance": 0.5136190103146625,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0640",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6923264495898088,
+          "general_macro": 0.5375,
+          "domain_scores": {
+            "math": 0.155,
+            "substitute": 0.7251157407407407,
+            "search": 0.84700998641179,
+            "relevance": 0.5048536216168954,
+            "instruction": 0.92
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_offline_trajectory_lr2e5": {
+      "objective": "offline_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 600,
+      "observed_elapsed_seconds": 4906.760948305018,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.676965752383694,
+      "remaining_update_seconds_lower_estimate": 227.07863009534776,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "math": {
+          "prompts": 600,
+          "sequences": 600,
+          "response_tokens": 4447
+        },
+        "relevance": {
+          "prompts": 1600,
+          "sequences": 1600,
+          "response_tokens": 9600
+        },
+        "instruction": {
+          "prompts": 600,
+          "sequences": 600,
+          "response_tokens": 6735
+        },
+        "substitute": {
+          "prompts": 1600,
+          "sequences": 1600,
+          "response_tokens": 11200
+        },
+        "search": {
+          "prompts": 1600,
+          "sequences": 1600,
+          "response_tokens": 44800
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6678518613607878,
+          "general_macro": 0.5358333333333333,
+          "domain_scores": {
+            "math": 0.145,
+            "substitute": 0.6746539971080355,
+            "search": 0.8429089131162812,
+            "relevance": 0.48599267385804673,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6812549638050722,
+          "general_macro": 0.5266666666666666,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6611039794608473,
+            "search": 0.8483032919229901,
+            "relevance": 0.5343576200313789,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6602395503218444,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.135,
+            "substitute": 0.5994318181818181,
+            "search": 0.8505085782407978,
+            "relevance": 0.5307782545429174,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_oracle_token_lr1e5": {
+      "objective": "oracle_sft",
+      "aggregation": "token",
+      "learning_rate": 1e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 640,
+      "observed_elapsed_seconds": 5736.118391941767,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.977766510564834,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 7256
+        },
+        "search": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 47796
+        },
+        "math": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 4727
+        },
+        "relevance": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 10242
+        },
+        "substitute": {
+          "prompts": 1706,
+          "sequences": 1706,
+          "response_tokens": 11942
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6426517957890358,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6534281452237015,
+            "search": 0.8438620739782372,
+            "relevance": 0.4306651681651682,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6327296076977629,
+          "general_macro": 0.5258333333333334,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.609266288920306,
+            "search": 0.8534413464047385,
+            "relevance": 0.435481187768244,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6728730823825887,
+          "general_macro": 0.5349999999999999,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6800568787771063,
+            "search": 0.8506681088093131,
+            "relevance": 0.48789425956134647,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0640",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6158661060132492,
+          "general_macro": 0.5458333333333334,
+          "domain_scores": {
+            "math": 0.135,
+            "substitute": 0.5729752268119797,
+            "search": 0.8456438883432144,
+            "relevance": 0.4289792028845535,
+            "instruction": 0.9566666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_oracle_token_lr2e5": {
+      "objective": "oracle_sft",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 582,
+      "observed_elapsed_seconds": 4804.515123541001,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.7647482375614345,
+      "remaining_update_seconds_lower_estimate": 334.3553977785632,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 43456
+        },
+        "instruction": {
+          "prompts": 582,
+          "sequences": 582,
+          "response_tokens": 6583
+        },
+        "substitute": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 10864
+        },
+        "relevance": {
+          "prompts": 1552,
+          "sequences": 1552,
+          "response_tokens": 9312
+        },
+        "math": {
+          "prompts": 582,
+          "sequences": 582,
+          "response_tokens": 4292
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6502472262240814,
+          "general_macro": 0.5183333333333333,
+          "domain_scores": {
+            "math": 0.1,
+            "substitute": 0.6744055944055944,
+            "search": 0.8435186943356501,
+            "relevance": 0.4328173899309996,
+            "instruction": 0.9366666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6511541233039543,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6657158138705652,
+            "search": 0.8520632378357382,
+            "relevance": 0.4356833182055596,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6540523129058705,
+          "general_macro": 0.54,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6600934424768622,
+            "search": 0.8482163970535399,
+            "relevance": 0.4538470991872092,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_oracle_trajectory_lr1e5": {
+      "objective": "oracle_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 1e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 640,
+      "observed_elapsed_seconds": 5754.476078142878,
+      "metrics_available": true,
+      "median_recent_update_seconds": 6.153708265861496,
+      "remaining_update_seconds_lower_estimate": 0.0,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "instruction": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 7256
+        },
+        "search": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 47796
+        },
+        "substitute": {
+          "prompts": 1706,
+          "sequences": 1706,
+          "response_tokens": 11942
+        },
+        "math": {
+          "prompts": 640,
+          "sequences": 640,
+          "response_tokens": 4727
+        },
+        "relevance": {
+          "prompts": 1707,
+          "sequences": 1707,
+          "response_tokens": 10242
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6532277260845699,
+          "general_macro": 0.53,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6796508658712104,
+            "search": 0.847523007742744,
+            "relevance": 0.43250930463975523,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6502682583848948,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.6525767226404169,
+            "search": 0.8526180572650554,
+            "relevance": 0.44560999524921213,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6567778974831507,
+          "general_macro": 0.5349999999999999,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.6524550928696007,
+            "search": 0.8487817451762982,
+            "relevance": 0.4690968544035531,
+            "instruction": 0.94
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0640",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6307334943804112,
+          "general_macro": 0.5525,
+          "domain_scores": {
+            "math": 0.145,
+            "substitute": 0.6197089947089948,
+            "search": 0.8454601188405948,
+            "relevance": 0.4270313695916438,
+            "instruction": 0.96
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": true,
+      "arm_completed": true,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-sft-v4/deep_oracle_trajectory_lr2e5": {
+      "objective": "oracle_sft",
+      "aggregation": "trajectory",
+      "learning_rate": 2e-05,
+      "group_size": 1,
+      "planned_updates": 640,
+      "observed_updates": 576,
+      "observed_elapsed_seconds": 4817.288462034892,
+      "metrics_available": true,
+      "median_recent_update_seconds": 5.813404387095943,
+      "remaining_update_seconds_lower_estimate": 372.05788077414036,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 1536,
+          "sequences": 1536,
+          "response_tokens": 10752
+        },
+        "instruction": {
+          "prompts": 576,
+          "sequences": 576,
+          "response_tokens": 6529
+        },
+        "relevance": {
+          "prompts": 1536,
+          "sequences": 1536,
+          "response_tokens": 9216
+        },
+        "math": {
+          "prompts": 576,
+          "sequences": 576,
+          "response_tokens": 4246
+        },
+        "search": {
+          "prompts": 1536,
+          "sequences": 1536,
+          "response_tokens": 43008
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6548010541713837,
+          "general_macro": 0.51,
+          "domain_scores": {
+            "math": 0.09,
+            "substitute": 0.6664383023169622,
+            "search": 0.8465904872874898,
+            "relevance": 0.45137437290969895,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.667529545161251,
+          "general_macro": 0.53,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.7076023391812865,
+            "search": 0.8515104191094841,
+            "relevance": 0.4434758771929825,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0480",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6547763437840363,
+          "general_macro": 0.5483333333333333,
+          "domain_scores": {
+            "math": 0.15,
+            "substitute": 0.6712473706087592,
+            "search": 0.8455149984195054,
+            "relevance": 0.4475666623238443,
+            "instruction": 0.9466666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-controls-v4/deep_opd_token_lr1e5": {
+      "objective": "opd",
+      "aggregation": "token",
+      "learning_rate": 1e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 452,
+      "observed_elapsed_seconds": 10727.505445878021,
+      "metrics_available": true,
+      "median_recent_update_seconds": 17.79228589090053,
+      "remaining_update_seconds_lower_estimate": 3344.9497474892996,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "math": {
+          "prompts": 452,
+          "sequences": 904,
+          "response_tokens": 6678
+        },
+        "instruction": {
+          "prompts": 452,
+          "sequences": 904,
+          "response_tokens": 10062
+        },
+        "relevance": {
+          "prompts": 1205,
+          "sequences": 2410,
+          "response_tokens": 14460
+        },
+        "substitute": {
+          "prompts": 1205,
+          "sequences": 2410,
+          "response_tokens": 16869
+        },
+        "search": {
+          "prompts": 1206,
+          "sequences": 2412,
+          "response_tokens": 67781
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6462241507713798,
+          "general_macro": 0.525,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.5902287530013947,
+            "search": 0.8434278918712609,
+            "relevance": 0.5050158074414839,
+            "instruction": 0.92
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6691684648455501,
+          "general_macro": 0.5333333333333333,
+          "domain_scores": {
+            "math": 0.14,
+            "substitute": 0.6669076637058459,
+            "search": 0.8493943976371752,
+            "relevance": 0.49120333319362974,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-controls-v4/deep_opd_trajectory_lr1e5": {
+      "objective": "opd",
+      "aggregation": "trajectory",
+      "learning_rate": 1e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 451,
+      "observed_elapsed_seconds": 10725.183933386113,
+      "metrics_available": true,
+      "median_recent_update_seconds": 17.91640840168111,
+      "remaining_update_seconds_lower_estimate": 3386.20118791773,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 1202,
+          "sequences": 2404,
+          "response_tokens": 16828
+        },
+        "search": {
+          "prompts": 1203,
+          "sequences": 2406,
+          "response_tokens": 67419
+        },
+        "relevance": {
+          "prompts": 1203,
+          "sequences": 2406,
+          "response_tokens": 14436
+        },
+        "math": {
+          "prompts": 451,
+          "sequences": 902,
+          "response_tokens": 6675
+        },
+        "instruction": {
+          "prompts": 451,
+          "sequences": 902,
+          "response_tokens": 10027
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6574628049815135,
+          "general_macro": 0.5241666666666667,
+          "domain_scores": {
+            "math": 0.115,
+            "substitute": 0.633231906107368,
+            "search": 0.8467259086790061,
+            "relevance": 0.4924306001581663,
+            "instruction": 0.9333333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6761596884681086,
+          "general_macro": 0.5166666666666666,
+          "domain_scores": {
+            "math": 0.12,
+            "substitute": 0.6753701416913852,
+            "search": 0.8455894388709744,
+            "relevance": 0.5075194848419663,
+            "instruction": 0.9133333333333333
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-controls-v4/deep_original_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 403,
+      "observed_elapsed_seconds": 10721.432462705998,
+      "metrics_available": true,
+      "median_recent_update_seconds": 17.77222755062394,
+      "remaining_update_seconds_lower_estimate": 4212.017929497873,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "search": {
+          "prompts": 1075,
+          "sequences": 2150,
+          "response_tokens": 94675
+        },
+        "instruction": {
+          "prompts": 403,
+          "sequences": 806,
+          "response_tokens": 24717
+        },
+        "math": {
+          "prompts": 403,
+          "sequences": 806,
+          "response_tokens": 22753
+        },
+        "substitute": {
+          "prompts": 1074,
+          "sequences": 2148,
+          "response_tokens": 60821
+        },
+        "relevance": {
+          "prompts": 1075,
+          "sequences": 2150,
+          "response_tokens": 59191
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.5174191358063452,
+          "general_macro": 0.5283333333333333,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.38144329896907214,
+            "search": 0.8463574758129189,
+            "relevance": 0.32445663263704455,
+            "instruction": 0.9466666666666667
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.5326189680052386,
+          "general_macro": 0.5316666666666667,
+          "domain_scores": {
+            "math": 0.11,
+            "substitute": 0.38144329896907214,
+            "search": 0.8336001211766203,
+            "relevance": 0.382813483870023,
+            "instruction": 0.9533333333333334
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    },
+    "reports/advantage/raw/budget640-controls-v4/deep_repaired_full_kl_lr2e5": {
+      "objective": "full_kl",
+      "aggregation": "token",
+      "learning_rate": 2e-05,
+      "group_size": 2,
+      "planned_updates": 640,
+      "observed_updates": 446,
+      "observed_elapsed_seconds": 10718.288603361929,
+      "metrics_available": true,
+      "median_recent_update_seconds": 18.289687553537078,
+      "remaining_update_seconds_lower_estimate": 3548.199385386193,
+      "estimate_boundary": "Excludes remaining development, checkpoint, final scoring, setup and queue time",
+      "actual_training_consumption_by_domain": {
+        "substitute": {
+          "prompts": 1189,
+          "sequences": 2378,
+          "response_tokens": 16649
+        },
+        "relevance": {
+          "prompts": 1189,
+          "sequences": 2378,
+          "response_tokens": 14268
+        },
+        "math": {
+          "prompts": 446,
+          "sequences": 892,
+          "response_tokens": 6600
+        },
+        "search": {
+          "prompts": 1190,
+          "sequences": 2380,
+          "response_tokens": 66692
+        },
+        "instruction": {
+          "prompts": 446,
+          "sequences": 892,
+          "response_tokens": 9945
+        }
+      },
+      "training_development_curves": [
+        {
+          "checkpoint": "dev-0000",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6165407025726793,
+          "general_macro": 0.5175000000000001,
+          "domain_scores": {
+            "math": 0.105,
+            "substitute": 0.49985628054038517,
+            "search": 0.8476459407796831,
+            "relevance": 0.5021198863979697,
+            "instruction": 0.93
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0160",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.6447746452194226,
+          "general_macro": 0.5258333333333334,
+          "domain_scores": {
+            "math": 0.125,
+            "substitute": 0.614007607965988,
+            "search": 0.8496333483272704,
+            "relevance": 0.4706829793650094,
+            "instruction": 0.9266666666666666
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        },
+        {
+          "checkpoint": "dev-0320",
+          "precision": "float32_torch",
+          "rows": 1400,
+          "rows_by_domain": {
+            "math": 200,
+            "substitute": 300,
+            "search": 300,
+            "relevance": 300,
+            "instruction": 300
+          },
+          "business_macro": 0.7006942605546466,
+          "general_macro": 0.51,
+          "domain_scores": {
+            "math": 0.13,
+            "substitute": 0.7139997139997141,
+            "search": 0.8514210420866677,
+            "relevance": 0.5366620255775577,
+            "instruction": 0.89
+          },
+          "boundary": "Training development; coverage and precision differ from final selection"
+        }
+      ],
+      "training_completed": false,
+      "arm_completed": false,
+      "training_failed": false
+    }
+  },
+  "quality_advantage_established": false,
+  "boundary": "Observed development only. Evaluate method differences with complete 1100-row BF16 fixed-update records; these learning curves do not establish superiority."
+}

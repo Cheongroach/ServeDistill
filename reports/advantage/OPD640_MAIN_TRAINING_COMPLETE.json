@@ -1,0 +1,364 @@
+{
+  "utc": "2026-10-25T17:42:15.343391+00:00",
+  "arms": {
+    "deep_opd_trajectory_lr5e5": {
+      "completion_sha256": "1cf2b87bfd7bb9a92430df7dcea6c4aa959de8c97250dd17d9419c72ce627bdd",
+      "predictions_sha256": "bad1c6aca06894d89b4c59ab918f87796fd4013ab2d66b8337b00fd2b728d3fa",
+      "metrics_sha256": "18baf762bba74697485bbab85b091771e000118bfd43581a8f7849db592d61c9",
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.11,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.33,
+            "selection_score": 0.11
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.71,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6600455877564311,
+            "macro_f1": 0.6600455877564311
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8522115738353528,
+            "ndcg_n": 299,
+            "ndcg": 0.8522115738353528,
+            "mrr": 0.7403134920634921
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.48515869905956116,
+            "macro_f1": 0.48515869905956116
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.8866666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.056666666666667,
+            "selection_score": 0.8866666666666667
+          }
+        },
+        "business_macro": 0.6658052868837817,
+        "general_macro": 0.49833333333333335,
+        "overall": 0.5078571428571429
+      },
+      "complete_atomic_updates": 640,
+      "all_updates_total_loss_equal_opd_loss": true,
+      "maximum_behavior_error": 9.250640869140625e-05,
+      "behavior_tolerance": 0.15,
+      "alarm_updates": 0,
+      "response_tokens": 164400,
+      "elapsed_training_seconds": 15125.279618568718,
+      "phase_seconds": {
+        "rollout": 3226.748708639294,
+        "teacher": 2541.045242421329,
+        "learner": 7414.276859730482,
+        "dev": 1856.4009779132903
+      },
+      "teacher_unchanged": true,
+      "class_recall": {
+        "relevance": {
+          "E": 0.37593984962406013,
+          "S": 0.6224489795918368,
+          "C": 0.6,
+          "I": 0.5925925925925926
+        },
+        "substitute": {
+          "yes": 0.4260869565217391,
+          "no": 0.8864864864864865
+        }
+      }
+    },
+    "deep_opd_token_lr5e5": {
+      "completion_sha256": "70a42ae7aa50656be3e20a38d78732044d085b2957f7f87ac706076585f52f61",
+      "predictions_sha256": "909d8284eaf7a17815834cbd9e73dc2b39db146afc37b51e51f1bfc2ad60c9fa",
+      "metrics_sha256": "7d86f441101d076009e93123f3a8d1e2167cd94e105a919cacddef884849449a",
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.07,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 8.035,
+            "selection_score": 0.07
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.7033333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6410084033613446,
+            "macro_f1": 0.6410084033613446
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8532932411938144,
+            "ndcg_n": 299,
+            "ndcg": 0.8532932411938144,
+            "mrr": 0.7409841269841271
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5766666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5988908547600342,
+            "macro_f1": 0.5988908547600342
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.8633333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.04,
+            "selection_score": 0.8633333333333333
+          }
+        },
+        "business_macro": 0.6977308331050645,
+        "general_macro": 0.4666666666666667,
+        "overall": 0.5107142857142857
+      },
+      "complete_atomic_updates": 640,
+      "all_updates_total_loss_equal_opd_loss": true,
+      "maximum_behavior_error": 8.273124694824219e-05,
+      "behavior_tolerance": 0.15,
+      "alarm_updates": 0,
+      "response_tokens": 164439,
+      "elapsed_training_seconds": 15144.75939566642,
+      "phase_seconds": {
+        "rollout": 3266.304221495986,
+        "teacher": 2471.74570742622,
+        "learner": 7432.951865222305,
+        "dev": 1885.9102276973426
+      },
+      "teacher_unchanged": true,
+      "class_recall": {
+        "relevance": {
+          "E": 0.5112781954887218,
+          "S": 0.5816326530612245,
+          "C": 0.6,
+          "I": 0.7222222222222222
+        },
+        "substitute": {
+          "yes": 0.3739130434782609,
+          "no": 0.9081081081081082
+        }
+      }
+    },
+    "deep_opd_token_lr2e5": {
+      "completion_sha256": "3b869657d8f2e21d22519111ccd9e0b558b271972c52d1182588b49fc0c44f57",
+      "predictions_sha256": "c96269e3a3cba689b075d8dc2d51c64babee5918e6d8c7885993bb83c5bd2245",
+      "metrics_sha256": "100293e16b7c501014ebefbea48df40b7f5923c09e923c6abaa32f6130d19233",
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.12,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.33,
+            "selection_score": 0.12
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.72,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6834011759384894,
+            "macro_f1": 0.6834011759384894
+          },
+          "search": {
+            "n": 300,
+            "success": 0.20333333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8500232074426748,
+            "ndcg_n": 299,
+            "ndcg": 0.8500232074426748,
+            "mrr": 0.7358452380952382
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5566666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5277225828660534,
+            "macro_f1": 0.5277225828660534
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.8633333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.003333333333334,
+            "selection_score": 0.8633333333333333
+          }
+        },
+        "business_macro": 0.6870489887490726,
+        "general_macro": 0.49166666666666664,
+        "overall": 0.5192857142857142
+      },
+      "complete_atomic_updates": 640,
+      "all_updates_total_loss_equal_opd_loss": true,
+      "maximum_behavior_error": 8.368492126464844e-05,
+      "behavior_tolerance": 0.15,
+      "alarm_updates": 0,
+      "response_tokens": 164004,
+      "elapsed_training_seconds": 15130.66115277633,
+      "phase_seconds": {
+        "rollout": 3246.5272446759045,
+        "teacher": 2493.3941276930273,
+        "learner": 7430.834615580738,
+        "dev": 1868.8861410468817
+      },
+      "teacher_unchanged": true,
+      "class_recall": {
+        "relevance": {
+          "E": 0.5037593984962406,
+          "S": 0.6632653061224489,
+          "C": 0.6,
+          "I": 0.48148148148148145
+        },
+        "substitute": {
+          "yes": 0.4956521739130435,
+          "no": 0.8594594594594595
+        }
+      }
+    },
+    "deep_opd_trajectory_lr2e5": {
+      "completion_sha256": "b7c201e40a8385ad89d0e7c02e84ab3b85929c597af9c2e5c90b7523cadb4155",
+      "predictions_sha256": "85bc101969ff77fe1af5931aa7fc2600f530067528db4147dba82e7cb9ab1cea",
+      "metrics_sha256": "0c90db07ece5c034c26626cf525badd5cebc2892aca9692d225573fccfeb77c7",
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 200,
+            "success": 0.17,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.43,
+            "selection_score": 0.17
+          },
+          "substitute": {
+            "n": 300,
+            "success": 0.7066666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6507936507936507,
+            "macro_f1": 0.6507936507936507
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8504336187340514,
+            "ndcg_n": 299,
+            "ndcg": 0.8504336187340514,
+            "mrr": 0.739734126984127
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5466666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5367880363107354,
+            "macro_f1": 0.5367880363107354
+          },
+          "instruction": {
+            "n": 300,
+            "success": 0.9266666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.08,
+            "selection_score": 0.9266666666666666
+          }
+        },
+        "business_macro": 0.6793384352794791,
+        "general_macro": 0.5483333333333333,
+        "overall": 0.5321428571428571
+      },
+      "complete_atomic_updates": 640,
+      "all_updates_total_loss_equal_opd_loss": true,
+      "maximum_behavior_error": 0.00010061264038085938,
+      "behavior_tolerance": 0.15,
+      "alarm_updates": 0,
+      "response_tokens": 164223,
+      "elapsed_training_seconds": 15135.776966519654,
+      "phase_seconds": {
+        "rollout": 3242.3665470033884,
+        "teacher": 2459.572788324207,
+        "learner": 7473.183407783508,
+        "dev": 1871.8508112430573
+      },
+      "teacher_unchanged": true,
+      "class_recall": {
+        "relevance": {
+          "E": 0.41353383458646614,
+          "S": 0.7040816326530612,
+          "C": 0.6666666666666666,
+          "I": 0.5555555555555556
+        },
+        "substitute": {
+          "yes": 0.4,
+          "no": 0.8972972972972973
+        }
+      }
+    }
+  },
+  "complete_main_opd_training": true,
+  "independent_regrading_completed": true,
+  "actual_saved_binary_audit_complete": false,
+  "terminal_platform_cost_complete": false,
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "boundary": "Complete actual JSON training evidence for main four OPD arms and 1400-row FP32 final training DEV, independently regraded. Actual checkpoint binaries, declared 1100-row BF16 final and factor averages, all20 sources, terminal platform costs and independent confirmation remain separate requirements."
+}

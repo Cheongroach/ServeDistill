@@ -1,0 +1,46 @@
+{
+  "baseline": "reports/advantage/raw/repaired-v1/repaired_offline_sft_lr2e5/selected-dev.jsonl",
+  "candidate": "reports/advantage/raw/extended-v1/repaired_opd_lr5e5/selected-dev.jsonl",
+  "source_sha256": [
+    "6deb1b0ed15f3d3a5729e0a9db1bc2782701b1c90505b110258f61d3781ff47e",
+    "2cddf64850a43a553421d28af163aecf4b5d972b2617a7f24784b3cec0dcdd0a"
+  ],
+  "domains": {
+    "search": {
+      "rows": 300,
+      "baseline": 0.8454029768980008,
+      "candidate": 0.8380072523100127,
+      "delta": -0.007395724587988095,
+      "ci95": [
+        -0.017877334021477388,
+        0.0015853963065366164
+      ]
+    },
+    "relevance": {
+      "rows": 300,
+      "baseline": 0.48568244161520213,
+      "candidate": 0.516840273791109,
+      "delta": 0.03115783217590684,
+      "ci95": [
+        -0.004926821208050589,
+        0.07160940327680373
+      ]
+    },
+    "substitute": {
+      "rows": 300,
+      "baseline": 0.6571606669783387,
+      "candidate": 0.6428571428571428,
+      "delta": -0.014303524121195954,
+      "ci95": [
+        -0.04923576313598729,
+        0.019706501530758935
+      ]
+    }
+  },
+  "business_macro_delta": 0.003152861155574264,
+  "query_ci95": [
+    -0.014242425381872923,
+    0.020766835587825952
+  ],
+  "boundary": "Exploratory single-seed comparison on already-used development queries; no confirmation claim"
+}

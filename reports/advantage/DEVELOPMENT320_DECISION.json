@@ -1,0 +1,146 @@
+{
+  "utc": "2026-10-25T13:05:48.147946+00:00",
+  "complete_candidates": 45,
+  "quality_advantage_established": false,
+  "holdout_observed": false,
+  "next_development_budget": 640,
+  "selected": {
+    "opd": {
+      "name": "long_opd_token_lr5e5",
+      "business_macro": 0.6893445011883116,
+      "general_macro": 0.52,
+      "selection_score": 0.6554756009506493
+    },
+    "offline_sft": {
+      "name": "long_offline_trajectory_lr5e5_average_all4",
+      "business_macro": 0.6919865311571703,
+      "general_macro": 0.535,
+      "selection_score": 0.6605892249257362
+    },
+    "oracle_sft": {
+      "name": "long_oracle_trajectory_lr5e5_average_last2",
+      "business_macro": 0.6894761342837855,
+      "general_macro": 0.535,
+      "selection_score": 0.6585809074270285
+    },
+    "full_kl": {
+      "name": "long_repaired_full_kl_lr2e5",
+      "business_macro": 0.6901469384015001,
+      "general_macro": 0.505,
+      "selection_score": 0.6531175507212
+    }
+  },
+  "exploratory_comparisons": {
+    "offline_sft": {
+      "baseline": "long_offline_trajectory_lr5e5_average_all4",
+      "candidate": "long_opd_token_lr5e5",
+      "business_macro_delta": -0.002642029968858761,
+      "exploratory_query_ci95": [
+        -0.027433918622003534,
+        0.020604055225811137
+      ],
+      "domains": {
+        "search": {
+          "independent_queries": 300,
+          "baseline": 0.8511643443303318,
+          "candidate": 0.8405490766729732,
+          "delta": -0.010615267657358651,
+          "exploratory_query_ci95": [
+            -0.019818113862482074,
+            -0.0015117410826803392
+          ]
+        },
+        "relevance": {
+          "independent_queries": 300,
+          "baseline": 0.5218852902767237,
+          "candidate": 0.5483163773289567,
+          "delta": 0.02643108705223296,
+          "exploratory_query_ci95": [
+            -0.031970781948068724,
+            0.0831466751168021
+          ]
+        },
+        "substitute": {
+          "independent_queries": 300,
+          "baseline": 0.7029099588644558,
+          "candidate": 0.6791680495630048,
+          "delta": -0.023741909301451036,
+          "exploratory_query_ci95": [
+            -0.06454635514371515,
+            0.017586031381283635
+          ]
+        },
+        "math": {
+          "independent_queries": 100,
+          "baseline": 0.14,
+          "candidate": 0.13,
+          "delta": -0.010000000000000009,
+          "exploratory_query_ci95": [
+            -0.08,
+            0.06
+          ]
+        }
+      },
+      "paired_training_seeds": [
+        29
+      ],
+      "bootstrap_repetitions": 5000
+    },
+    "oracle_sft": {
+      "baseline": "long_oracle_trajectory_lr5e5_average_last2",
+      "candidate": "long_opd_token_lr5e5",
+      "business_macro_delta": -0.00013163309547392643,
+      "exploratory_query_ci95": [
+        -0.02550048799948008,
+        0.02378224017561322
+      ],
+      "domains": {
+        "search": {
+          "independent_queries": 300,
+          "baseline": 0.8545120144247872,
+          "candidate": 0.8405490766729732,
+          "delta": -0.013962937751814009,
+          "exploratory_query_ci95": [
+            -0.02409959153091185,
+            -0.004034968305392389
+          ]
+        },
+        "relevance": {
+          "independent_queries": 300,
+          "baseline": 0.48322562771540634,
+          "candidate": 0.5483163773289567,
+          "delta": 0.06509074961355032,
+          "exploratory_query_ci95": [
+            0.00644721021146786,
+            0.12118260205072359
+          ]
+        },
+        "substitute": {
+          "independent_queries": 300,
+          "baseline": 0.7306907607111629,
+          "candidate": 0.6791680495630048,
+          "delta": -0.051522711148158096,
+          "exploratory_query_ci95": [
+            -0.09819529438545793,
+            -0.0062270302631938605
+          ]
+        },
+        "math": {
+          "independent_queries": 100,
+          "baseline": 0.11,
+          "candidate": 0.13,
+          "delta": 0.020000000000000004,
+          "exploratory_query_ci95": [
+            -0.04000000000000001,
+            0.08000000000000002
+          ]
+        }
+      },
+      "paired_training_seeds": [
+        29
+      ],
+      "bootstrap_repetitions": 5000
+    }
+  },
+  "boundary": "Complete observed DEV selection; pure OPD does not exceed both strongest SFT controls; no formal confirmation launched"
+}

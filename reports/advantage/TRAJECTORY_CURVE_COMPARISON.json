@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-25T11:13:50.872868+00:00",
+  "candidate": "reports/advantage/raw/longrun-controls-v1/trajectory-curve-development-v1/long_opd_trajectory_lr5e5/dev-0080.jsonl",
+  "baseline": "reports/advantage/raw/longrun-supplement-v1/fixed-tuned-update-development/offline_trajectory_lr5e5/dev-0080.jsonl",
+  "common_update": 80,
+  "precision": "bf16",
+  "training_seeds": 1,
+  "observed_development_rows": 1100,
+  "domains": {
+    "search": {
+      "baseline": 0.8453914027916282,
+      "candidate": 0.8472718656838031,
+      "delta": 0.0018804628921749167,
+      "paired_query_ci95": [
+        -0.0056729576569151145,
+        0.00878966696519659
+      ]
+    },
+    "relevance": {
+      "baseline": 0.47186530679649186,
+      "candidate": 0.5196871846477312,
+      "delta": 0.04782187785123937,
+      "paired_query_ci95": [
+        -0.008465817954553855,
+        0.10275777593401439
+      ]
+    },
+    "substitute": {
+      "baseline": 0.7203689167974883,
+      "candidate": 0.6649524700015583,
+      "delta": -0.05541644679592994,
+      "paired_query_ci95": [
+        -0.10358754857064138,
+        -0.010311828913868788
+      ]
+    }
+  },
+  "business_macro_delta": -0.0019047020175052183,
+  "paired_query_ci95": [
+    -0.02707558572120809,
+    0.02202566241039833
+  ],
+  "quality_advantage_established": false,
+  "boundary": "Exploratory paired development comparison conditional on one seed; observed dev used in all selection attempts. Not confirmatory evidence."
+}

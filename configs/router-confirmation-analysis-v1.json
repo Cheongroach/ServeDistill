@@ -1,0 +1,40 @@
+{
+  "frozen_utc": "2026-10-27T00:18:32.667181+00:00",
+  "protocol_sha256": "79ffd1973e43e6bfe2832db8aa8e7521e54e061155592c3d37e7ff7b7d02c3bb",
+  "source_sha256": {
+    "scripts/evaluate_aopd_router_arm.py": "3a28078286e87fd2468feb7d9386c733b9d04c646df7606f377bafc297e20988",
+    "scripts/analyze_aopd_router_confirmation.py": "9c0a874769634b222ad02134c4561da3606f0a65910c94cf338d535279f94490",
+    "servedistill/advantage_statistics.py": "91a55ebdf97c273afe6cd6aeb413ddb86ad92b6ac97df70395742442c8b8ac44",
+    "servedistill/expanded_statistics.py": "4dda3660e3120500f7ebbfcecedfab434953e3ad7c412b73381fbb86e3a36bdb",
+    "servedistill/statistics.py": "f60ae0a778fdf31cc1649ec30667254f93d70cd0adc137e0931460a2dadc1ad7",
+    "servedistill/data.py": "116243a30f899a63b4a22deac2958f187ea4daf48bfbc51d6f5007f87a524893",
+    "servedistill/runtime.py": "c54a984ffb75c30cdc78988d2370f3a6ed4274bb2426c34be6ee6df4d837a167"
+  },
+  "quality_gates": {
+    "minimum_metric": {
+      "search": 0.8,
+      "relevance": 0.45,
+      "substitute": 0.55
+    },
+    "minimum_recall": {
+      "substitute": {
+        "yes": 0.3,
+        "no": 0.3
+      },
+      "relevance": {
+        "E": 0.2,
+        "S": 0.2,
+        "C": 0.2,
+        "I": 0.2
+      }
+    },
+    "minimum_json_valid": 0.99,
+    "domain_noninferiority_margin": -0.03,
+    "math_noninferiority_margin": -0.05,
+    "minimum_positive_seed_pairs": 3
+  },
+  "bootstrap_repetitions": 5000,
+  "bootstrap_seed": 202610254,
+  "holdout_observed": false,
+  "boundary": "Analysis code and acceptance rules frozen before any holdout evaluation package is prepared or submitted."
+}

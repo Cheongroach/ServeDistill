@@ -1,0 +1,2721 @@
+{
+  "boundary": "No holdout outputs read; no confirmation claim",
+  "evaluations": {
+    "offline_trajectory_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr1e4/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.125,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.05,
+            "selection_score": 0.125
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7381818181818182,
+            "macro_f1": 0.7381818181818182
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.81385103243793,
+            "ndcg_n": 39,
+            "ndcg": 0.81385103243793,
+            "mrr": 0.6094047619047619
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.475,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5706989247311828,
+            "macro_f1": 0.5706989247311828
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.7,
+            "selection_score": 0.7
+          }
+        },
+        "business_macro": 0.7075772584503103,
+        "general_macro": 0.4125,
+        "overall": 0.465
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 23,
+            "E": 11,
+            "S": 5
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 11,
+              "true_positive": 8,
+              "precision": 0.7272727272727273,
+              "recall": 0.4,
+              "f1": 0.5161290322580645
+            },
+            "S": {
+              "support": 10,
+              "predicted": 5,
+              "true_positive": 2,
+              "precision": 0.4,
+              "recall": 0.2,
+              "f1": 0.26666666666666666
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 23,
+              "true_positive": 8,
+              "precision": 0.34782608695652173,
+              "recall": 0.8888888888888888,
+              "f1": 0.5
+            }
+          },
+          "macro_f1": 0.5706989247311828,
+          "accuracy": 0.475,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 11,
+            "no": 29
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 11,
+              "true_positive": 8,
+              "precision": 0.7272727272727273,
+              "recall": 0.5714285714285714,
+              "f1": 0.64
+            },
+            "no": {
+              "support": 26,
+              "predicted": 29,
+              "true_positive": 23,
+              "precision": 0.7931034482758621,
+              "recall": 0.8846153846153846,
+              "f1": 0.8363636363636363
+            }
+          },
+          "macro_f1": 0.7381818181818182,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr1e4/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 14,
+            "success": 0.0,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.0
+          },
+          "substitute": {
+            "n": 30,
+            "success": 0.7333333333333333,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6590909090909092,
+            "macro_f1": 0.6590909090909092
+          },
+          "search": {
+            "n": 19,
+            "success": 0.21052631578947367,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8409207727187672,
+            "ndcg_n": 19,
+            "ndcg": 0.8409207727187672,
+            "mrr": 0.6035714285714285
+          },
+          "relevance": {
+            "n": 25,
+            "success": 0.52,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.48550724637681164,
+            "macro_f1": 0.48550724637681164
+          },
+          "instruction": {
+            "n": 24,
+            "success": 0.9583333333333334,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.125,
+            "selection_score": 0.9583333333333334
+          }
+        },
+        "business_macro": 0.6618396427288293,
+        "general_macro": 0.4791666666666667,
+        "overall": 0.5535714285714286
+      },
+      "evaluation_complete": false,
+      "classes": {
+        "relevance": {
+          "queries": 25,
+          "target_counts": {
+            "C": 1,
+            "E": 9,
+            "S": 9,
+            "I": 6
+          },
+          "prediction_counts": {
+            "C": 4,
+            "E": 3,
+            "S": 14,
+            "I": 4
+          },
+          "per_class": {
+            "E": {
+              "support": 9,
+              "predicted": 3,
+              "true_positive": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.2222222222222222,
+              "f1": 0.3333333333333333
+            },
+            "S": {
+              "support": 9,
+              "predicted": 14,
+              "true_positive": 7,
+              "precision": 0.5,
+              "recall": 0.7777777777777778,
+              "f1": 0.6086956521739131
+            },
+            "C": {
+              "support": 1,
+              "predicted": 4,
+              "true_positive": 1,
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "I": {
+              "support": 6,
+              "predicted": 4,
+              "true_positive": 3,
+              "precision": 0.75,
+              "recall": 0.5,
+              "f1": 0.6
+            }
+          },
+          "macro_f1": 0.48550724637681164,
+          "accuracy": 0.52,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1323529411764706,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 30,
+          "target_counts": {
+            "yes": 11,
+            "no": 19
+          },
+          "prediction_counts": {
+            "yes": 5,
+            "no": 25
+          },
+          "per_class": {
+            "yes": {
+              "support": 11,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.36363636363636365,
+              "f1": 0.5
+            },
+            "no": {
+              "support": 19,
+              "predicted": 25,
+              "true_positive": 18,
+              "precision": 0.72,
+              "recall": 0.9473684210526315,
+              "f1": 0.8181818181818182
+            }
+          },
+          "macro_f1": 0.6590909090909092,
+          "accuracy": 0.7333333333333333,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3877551020408163,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6866666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6169311019343621,
+            "macro_f1": 0.6169311019343621
+          },
+          "search": {
+            "n": 300,
+            "success": 0.18,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8342211152416646,
+            "ndcg_n": 299,
+            "ndcg": 0.8342211152416646,
+            "mrr": 0.7054563492063491
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.5566666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.528770804721191,
+            "macro_f1": 0.528770804721191
+          },
+          "math": {
+            "n": 100,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.19,
+            "selection_score": 0.1
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 11.94,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.6599743406324059,
+        "general_macro": 0.475,
+        "overall": 0.47454545454545455
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 5,
+            "I": 103,
+            "E": 116,
+            "S": 76
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 116,
+              "true_positive": 85,
+              "precision": 0.7327586206896551,
+              "recall": 0.6390977443609023,
+              "f1": 0.6827309236947792
+            },
+            "S": {
+              "support": 98,
+              "predicted": 76,
+              "true_positive": 39,
+              "precision": 0.5131578947368421,
+              "recall": 0.3979591836734694,
+              "f1": 0.4482758620689655
+            },
+            "C": {
+              "support": 15,
+              "predicted": 5,
+              "true_positive": 5,
+              "precision": 1.0,
+              "recall": 0.3333333333333333,
+              "f1": 0.5
+            },
+            "I": {
+              "support": 54,
+              "predicted": 103,
+              "true_positive": 38,
+              "precision": 0.36893203883495146,
+              "recall": 0.7037037037037037,
+              "f1": 0.4840764331210191
+            }
+          },
+          "macro_f1": 0.528770804721191,
+          "accuracy": 0.5566666666666666,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 57,
+            "no": 243
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 57,
+              "true_positive": 39,
+              "precision": 0.6842105263157895,
+              "recall": 0.3391304347826087,
+              "f1": 0.45348837209302323
+            },
+            "no": {
+              "support": 185,
+              "predicted": 243,
+              "true_positive": 167,
+              "precision": 0.6872427983539094,
+              "recall": 0.9027027027027027,
+              "f1": 0.780373831775701
+            }
+          },
+          "macro_f1": 0.6169311019343621,
+          "accuracy": 0.6866666666666666,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr5e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.1,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.75,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7023809523809523,
+            "macro_f1": 0.7023809523809523
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8104411493367663,
+            "ndcg_n": 39,
+            "ndcg": 0.8104411493367663,
+            "mrr": 0.6010714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.6425865800865801,
+            "macro_f1": 0.6425865800865801
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.875,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.85,
+            "selection_score": 0.875
+          }
+        },
+        "business_macro": 0.718469560601433,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 15,
+            "E": 13,
+            "S": 11
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 10,
+              "precision": 0.7692307692307693,
+              "recall": 0.5,
+              "f1": 0.6060606060606061
+            },
+            "S": {
+              "support": 10,
+              "predicted": 11,
+              "true_positive": 4,
+              "precision": 0.36363636363636365,
+              "recall": 0.4,
+              "f1": 0.38095238095238093
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 15,
+              "true_positive": 7,
+              "precision": 0.4666666666666667,
+              "recall": 0.7777777777777778,
+              "f1": 0.5833333333333334
+            }
+          },
+          "macro_f1": 0.6425865800865801,
+          "accuracy": 0.55,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 10,
+            "no": 30
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 10,
+              "true_positive": 7,
+              "precision": 0.7,
+              "recall": 0.5,
+              "f1": 0.5833333333333334
+            },
+            "no": {
+              "support": 26,
+              "predicted": 30,
+              "true_positive": 23,
+              "precision": 0.7666666666666667,
+              "recall": 0.8846153846153846,
+              "f1": 0.8214285714285714
+            }
+          },
+          "macro_f1": 0.7023809523809523,
+          "accuracy": 0.75,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "offline_trajectory_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.2,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7381818181818182,
+            "macro_f1": 0.7381818181818182
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8165097893070159,
+            "ndcg_n": 39,
+            "ndcg": 0.8165097893070159,
+            "mrr": 0.6202380952380953
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.475,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4503968253968254,
+            "macro_f1": 0.4503968253968254
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.925,
+            "selection_score": 0.9
+          }
+        },
+        "business_macro": 0.6683628109618865,
+        "general_macro": 0.4875,
+        "overall": 0.49
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 6,
+            "E": 7,
+            "S": 22,
+            "I": 5
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.3,
+              "f1": 0.4444444444444444
+            },
+            "S": {
+              "support": 10,
+              "predicted": 22,
+              "true_positive": 8,
+              "precision": 0.36363636363636365,
+              "recall": 0.8,
+              "f1": 0.5
+            },
+            "C": {
+              "support": 1,
+              "predicted": 6,
+              "true_positive": 1,
+              "precision": 0.16666666666666666,
+              "recall": 1.0,
+              "f1": 0.2857142857142857
+            },
+            "I": {
+              "support": 9,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.4444444444444444,
+              "f1": 0.5714285714285714
+            }
+          },
+          "macro_f1": 0.4503968253968254,
+          "accuracy": 0.475,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 11,
+            "no": 29
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 11,
+              "true_positive": 8,
+              "precision": 0.7272727272727273,
+              "recall": 0.5714285714285714,
+              "f1": 0.64
+            },
+            "no": {
+              "support": 26,
+              "predicted": 29,
+              "true_positive": 23,
+              "precision": 0.7931034482758621,
+              "recall": 0.8846153846153846,
+              "f1": 0.8363636363636363
+            }
+          },
+          "macro_f1": 0.7381818181818182,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr1e4/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.1,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.1
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.7,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.53125,
+            "macro_f1": 0.53125
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8462841649910587,
+            "ndcg_n": 39,
+            "ndcg": 0.8462841649910587,
+            "mrr": 0.6689880952380952
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.475,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.3645833333333333,
+            "macro_f1": 0.3645833333333333
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.9,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.125,
+            "selection_score": 0.9
+          }
+        },
+        "business_macro": 0.5807058327747974,
+        "general_macro": 0.5,
+        "overall": 0.48
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 5,
+            "I": 23,
+            "E": 12
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 12,
+              "true_positive": 9,
+              "precision": 0.75,
+              "recall": 0.45,
+              "f1": 0.5625
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 5,
+              "true_positive": 1,
+              "precision": 0.2,
+              "recall": 1.0,
+              "f1": 0.3333333333333333
+            },
+            "I": {
+              "support": 9,
+              "predicted": 23,
+              "true_positive": 9,
+              "precision": 0.391304347826087,
+              "recall": 1.0,
+              "f1": 0.5625
+            }
+          },
+          "macro_f1": 0.3645833333333333,
+          "accuracy": 0.475,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "no": 38,
+            "yes": 2
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 2,
+              "true_positive": 2,
+              "precision": 1.0,
+              "recall": 0.14285714285714285,
+              "f1": 0.25
+            },
+            "no": {
+              "support": 26,
+              "predicted": 38,
+              "true_positive": 26,
+              "precision": 0.6842105263157895,
+              "recall": 1.0,
+              "f1": 0.8125
+            }
+          },
+          "macro_f1": 0.53125,
+          "accuracy": 0.7,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr1e4/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 15,
+            "success": 0.06666666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.266666666666667,
+            "selection_score": 0.06666666666666667
+          },
+          "substitute": {
+            "n": 33,
+            "success": 0.7272727272727273,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6674132138857782,
+            "macro_f1": 0.6674132138857782
+          },
+          "search": {
+            "n": 22,
+            "success": 0.2727272727272727,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8436583150077226,
+            "ndcg_n": 22,
+            "ndcg": 0.8436583150077226,
+            "mrr": 0.6557359307359307
+          },
+          "relevance": {
+            "n": 27,
+            "success": 0.6296296296296297,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.6249999999999999,
+            "macro_f1": 0.6249999999999999
+          },
+          "instruction": {
+            "n": 31,
+            "success": 0.8709677419354839,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.290322580645162,
+            "selection_score": 0.8709677419354839
+          }
+        },
+        "business_macro": 0.7120238429645003,
+        "general_macro": 0.46881720430107526,
+        "overall": 0.5859375
+      },
+      "evaluation_complete": false,
+      "classes": {
+        "relevance": {
+          "queries": 27,
+          "target_counts": {
+            "C": 1,
+            "E": 10,
+            "S": 9,
+            "I": 7
+          },
+          "prediction_counts": {
+            "C": 2,
+            "I": 14,
+            "E": 8,
+            "S": 3
+          },
+          "per_class": {
+            "E": {
+              "support": 10,
+              "predicted": 8,
+              "true_positive": 6,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 9,
+              "predicted": 3,
+              "true_positive": 3,
+              "precision": 1.0,
+              "recall": 0.3333333333333333,
+              "f1": 0.5
+            },
+            "C": {
+              "support": 1,
+              "predicted": 2,
+              "true_positive": 1,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "I": {
+              "support": 7,
+              "predicted": 14,
+              "true_positive": 7,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            }
+          },
+          "macro_f1": 0.6249999999999999,
+          "accuracy": 0.6296296296296297,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.13513513513513514,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 33,
+          "target_counts": {
+            "yes": 12,
+            "no": 21
+          },
+          "prediction_counts": {
+            "yes": 7,
+            "no": 26
+          },
+          "per_class": {
+            "yes": {
+              "support": 12,
+              "predicted": 7,
+              "true_positive": 5,
+              "precision": 0.7142857142857143,
+              "recall": 0.4166666666666667,
+              "f1": 0.5263157894736842
+            },
+            "no": {
+              "support": 21,
+              "predicted": 26,
+              "true_positive": 19,
+              "precision": 0.7307692307692307,
+              "recall": 0.9047619047619048,
+              "f1": 0.8085106382978723
+            }
+          },
+          "macro_f1": 0.6674132138857782,
+          "accuracy": 0.7272727272727273,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3888888888888889,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr5e5/selected-dev.jsonl": {
+      "summary": {
+        "domains": {
+          "substitute": {
+            "n": 300,
+            "success": 0.6666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5515426931356135,
+            "macro_f1": 0.5515426931356135
+          },
+          "search": {
+            "n": 300,
+            "success": 0.19666666666666666,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8510953775368169,
+            "ndcg_n": 299,
+            "ndcg": 0.8510953775368169,
+            "mrr": 0.732186507936508
+          },
+          "relevance": {
+            "n": 300,
+            "success": 0.4766666666666667,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.4198442766975392,
+            "macro_f1": 0.4198442766975392
+          },
+          "math": {
+            "n": 100,
+            "success": 0.13,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.28,
+            "selection_score": 0.13
+          },
+          "instruction": {
+            "n": 100,
+            "success": 0.87,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.04,
+            "selection_score": 0.87
+          }
+        },
+        "business_macro": 0.6074941157899899,
+        "general_macro": 0.5,
+        "overall": 0.45636363636363636
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 300,
+          "target_counts": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "prediction_counts": {
+            "C": 42,
+            "E": 104,
+            "I": 112,
+            "S": 42
+          },
+          "per_class": {
+            "E": {
+              "support": 133,
+              "predicted": 104,
+              "true_positive": 78,
+              "precision": 0.75,
+              "recall": 0.5864661654135338,
+              "f1": 0.6582278481012658
+            },
+            "S": {
+              "support": 98,
+              "predicted": 42,
+              "true_positive": 24,
+              "precision": 0.5714285714285714,
+              "recall": 0.24489795918367346,
+              "f1": 0.34285714285714286
+            },
+            "C": {
+              "support": 15,
+              "predicted": 42,
+              "true_positive": 8,
+              "precision": 0.19047619047619047,
+              "recall": 0.5333333333333333,
+              "f1": 0.2807017543859649
+            },
+            "I": {
+              "support": 54,
+              "predicted": 112,
+              "true_positive": 33,
+              "precision": 0.29464285714285715,
+              "recall": 0.6111111111111112,
+              "f1": 0.39759036144578314
+            }
+          },
+          "macro_f1": 0.4198442766975392,
+          "accuracy": 0.4766666666666667,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.1535796766743649,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 300,
+          "target_counts": {
+            "yes": 115,
+            "no": 185
+          },
+          "prediction_counts": {
+            "yes": 33,
+            "no": 267
+          },
+          "per_class": {
+            "yes": {
+              "support": 115,
+              "predicted": 33,
+              "true_positive": 24,
+              "precision": 0.7272727272727273,
+              "recall": 0.20869565217391303,
+              "f1": 0.32432432432432434
+            },
+            "no": {
+              "support": 185,
+              "predicted": 267,
+              "true_positive": 176,
+              "precision": 0.6591760299625468,
+              "recall": 0.9513513513513514,
+              "f1": 0.7787610619469026
+            }
+          },
+          "macro_f1": 0.5515426931356135,
+          "accuracy": 0.6666666666666666,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.38144329896907214,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr5e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr5e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.15,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.175,
+            "selection_score": 0.15
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.725,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.5891690009337068,
+            "macro_f1": 0.5891690009337068
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8300751249407179,
+            "ndcg_n": 39,
+            "ndcg": 0.8300751249407179,
+            "mrr": 0.6439880952380952
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.5,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.3921401515151515,
+            "macro_f1": 0.3921401515151515
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.075,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.6037947591298587,
+        "general_macro": 0.5499999999999999,
+        "overall": 0.51
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 4,
+            "I": 23,
+            "E": 13
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 10,
+              "precision": 0.7692307692307693,
+              "recall": 0.5,
+              "f1": 0.6060606060606061
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 4,
+              "true_positive": 1,
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "I": {
+              "support": 9,
+              "predicted": 23,
+              "true_positive": 9,
+              "precision": 0.391304347826087,
+              "recall": 1.0,
+              "f1": 0.5625
+            }
+          },
+          "macro_f1": 0.3921401515151515,
+          "accuracy": 0.5,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 3,
+            "no": 37
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 3,
+              "true_positive": 3,
+              "precision": 1.0,
+              "recall": 0.21428571428571427,
+              "f1": 0.35294117647058826
+            },
+            "no": {
+              "support": 26,
+              "predicted": 37,
+              "true_positive": 26,
+              "precision": 0.7027027027027027,
+              "recall": 1.0,
+              "f1": 0.8253968253968254
+            }
+          },
+          "macro_f1": 0.5891690009337068,
+          "accuracy": 0.725,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "oracle_trajectory_lr5e5/train/dev-0080.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.125,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.325,
+            "selection_score": 0.125
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.725,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6203623813632442,
+            "macro_f1": 0.6203623813632442
+          },
+          "search": {
+            "n": 40,
+            "success": 0.25,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8353264312322224,
+            "ndcg_n": 39,
+            "ndcg": 0.8353264312322224,
+            "mrr": 0.648154761904762
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.525,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.47114168247944344,
+            "macro_f1": 0.47114168247944344
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.9,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.6422768316916366,
+        "general_macro": 0.4875,
+        "overall": 0.495
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 7,
+            "E": 11,
+            "I": 15,
+            "S": 7
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 11,
+              "true_positive": 9,
+              "precision": 0.8181818181818182,
+              "recall": 0.45,
+              "f1": 0.5806451612903226
+            },
+            "S": {
+              "support": 10,
+              "predicted": 7,
+              "true_positive": 4,
+              "precision": 0.5714285714285714,
+              "recall": 0.4,
+              "f1": 0.47058823529411764
+            },
+            "C": {
+              "support": 1,
+              "predicted": 7,
+              "true_positive": 1,
+              "precision": 0.14285714285714285,
+              "recall": 1.0,
+              "f1": 0.25
+            },
+            "I": {
+              "support": 9,
+              "predicted": 15,
+              "true_positive": 7,
+              "precision": 0.4666666666666667,
+              "recall": 0.7777777777777778,
+              "f1": 0.5833333333333334
+            }
+          },
+          "macro_f1": 0.47114168247944344,
+          "accuracy": 0.525,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 5,
+            "no": 35
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 5,
+              "true_positive": 4,
+              "precision": 0.8,
+              "recall": 0.2857142857142857,
+              "f1": 0.42105263157894735
+            },
+            "no": {
+              "support": 26,
+              "predicted": 35,
+              "true_positive": 25,
+              "precision": 0.7142857142857143,
+              "recall": 0.9615384615384616,
+              "f1": 0.819672131147541
+            }
+          },
+          "macro_f1": 0.6203623813632442,
+          "accuracy": 0.725,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_trajectory_lr1e4/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_trajectory_lr1e4/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.075,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.225,
+            "selection_score": 0.075
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.775,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7484276729559749,
+            "macro_f1": 0.7484276729559749
+          },
+          "search": {
+            "n": 40,
+            "success": 0.225,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.823259155084593,
+            "ndcg_n": 39,
+            "ndcg": 0.823259155084593,
+            "mrr": 0.6260714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.5577922077922077,
+            "macro_f1": 0.5577922077922077
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.85,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 12.9,
+            "selection_score": 0.85
+          }
+        },
+        "business_macro": 0.7098263452775919,
+        "general_macro": 0.46249999999999997,
+        "overall": 0.495
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 24,
+            "E": 15
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 15,
+              "true_positive": 12,
+              "precision": 0.8,
+              "recall": 0.6,
+              "f1": 0.6857142857142857
+            },
+            "S": {
+              "support": 10,
+              "predicted": 0,
+              "true_positive": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 24,
+              "true_positive": 9,
+              "precision": 0.375,
+              "recall": 1.0,
+              "f1": 0.5454545454545454
+            }
+          },
+          "macro_f1": 0.5577922077922077,
+          "accuracy": 0.55,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 13,
+            "no": 27
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 13,
+              "true_positive": 9,
+              "precision": 0.6923076923076923,
+              "recall": 0.6428571428571429,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 27,
+              "true_positive": 22,
+              "precision": 0.8148148148148148,
+              "recall": 0.8461538461538461,
+              "f1": 0.8301886792452831
+            }
+          },
+          "macro_f1": 0.7484276729559749,
+          "accuracy": 0.775,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_trajectory_lr1e5/train/dev-0000.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.375,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.65,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.6491228070175439,
+            "macro_f1": 0.6491228070175439
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8272042425533953,
+            "ndcg_n": 39,
+            "ndcg": 0.8272042425533953,
+            "mrr": 0.6460714285714286
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.625,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.7091767881241566,
+            "macro_f1": 0.7091767881241566
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.1,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7285012792316987,
+        "general_macro": 0.4875,
+        "overall": 0.505
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 10,
+            "E": 13,
+            "S": 16
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 13,
+              "true_positive": 11,
+              "precision": 0.8461538461538461,
+              "recall": 0.55,
+              "f1": 0.6666666666666666
+            },
+            "S": {
+              "support": 10,
+              "predicted": 16,
+              "true_positive": 7,
+              "precision": 0.4375,
+              "recall": 0.7,
+              "f1": 0.5384615384615384
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 10,
+              "true_positive": 6,
+              "precision": 0.6,
+              "recall": 0.6666666666666666,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.7091767881241566,
+          "accuracy": 0.625,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 28,
+            "no": 12
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 28,
+              "true_positive": 14,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 12,
+              "true_positive": 12,
+              "precision": 1.0,
+              "recall": 0.46153846153846156,
+              "f1": 0.631578947368421
+            }
+          },
+          "macro_f1": 0.6491228070175439,
+          "accuracy": 0.65,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    },
+    "repaired_opd_trajectory_lr1e5/train/dev-0040.jsonl": {
+      "summary": {
+        "domains": {
+          "math": {
+            "n": 40,
+            "success": 0.025,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.475,
+            "selection_score": 0.025
+          },
+          "substitute": {
+            "n": 40,
+            "success": 0.8,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 7.0,
+            "selection_score": 0.7619047619047619,
+            "macro_f1": 0.7619047619047619
+          },
+          "search": {
+            "n": 40,
+            "success": 0.275,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 28.0,
+            "selection_score": 0.8275836509458531,
+            "ndcg_n": 39,
+            "ndcg": 0.8275836509458531,
+            "mrr": 0.6448214285714287
+          },
+          "relevance": {
+            "n": 40,
+            "success": 0.55,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 6.0,
+            "selection_score": 0.6651433691756272,
+            "macro_f1": 0.6651433691756272
+          },
+          "instruction": {
+            "n": 40,
+            "success": 0.95,
+            "json_valid": 1.0,
+            "constraint_violation": 0.0,
+            "truncated": 0.0,
+            "mean_output_tokens": 13.05,
+            "selection_score": 0.95
+          }
+        },
+        "business_macro": 0.7515439273420806,
+        "general_macro": 0.4875,
+        "overall": 0.52
+      },
+      "evaluation_complete": true,
+      "classes": {
+        "relevance": {
+          "queries": 40,
+          "target_counts": {
+            "C": 1,
+            "E": 20,
+            "S": 10,
+            "I": 9
+          },
+          "prediction_counts": {
+            "C": 1,
+            "I": 11,
+            "E": 7,
+            "S": 21
+          },
+          "per_class": {
+            "E": {
+              "support": 20,
+              "predicted": 7,
+              "true_positive": 6,
+              "precision": 0.8571428571428571,
+              "recall": 0.3,
+              "f1": 0.4444444444444444
+            },
+            "S": {
+              "support": 10,
+              "predicted": 21,
+              "true_positive": 8,
+              "precision": 0.38095238095238093,
+              "recall": 0.8,
+              "f1": 0.5161290322580645
+            },
+            "C": {
+              "support": 1,
+              "predicted": 1,
+              "true_positive": 1,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "I": {
+              "support": 9,
+              "predicted": 11,
+              "true_positive": 7,
+              "precision": 0.6363636363636364,
+              "recall": 0.7777777777777778,
+              "f1": 0.7
+            }
+          },
+          "macro_f1": 0.6651433691756272,
+          "accuracy": 0.55,
+          "majority_class": "E",
+          "majority_constant_macro_f1": 0.16666666666666666,
+          "constant_prediction": false
+        },
+        "substitute": {
+          "queries": 40,
+          "target_counts": {
+            "yes": 14,
+            "no": 26
+          },
+          "prediction_counts": {
+            "yes": 10,
+            "no": 30
+          },
+          "per_class": {
+            "yes": {
+              "support": 14,
+              "predicted": 10,
+              "true_positive": 8,
+              "precision": 0.8,
+              "recall": 0.5714285714285714,
+              "f1": 0.6666666666666666
+            },
+            "no": {
+              "support": 26,
+              "predicted": 30,
+              "true_positive": 24,
+              "precision": 0.8,
+              "recall": 0.9230769230769231,
+              "f1": 0.8571428571428571
+            }
+          },
+          "macro_f1": 0.7619047619047619,
+          "accuracy": 0.8,
+          "majority_class": "no",
+          "majority_constant_macro_f1": 0.3939393939393939,
+          "constant_prediction": false
+        }
+      },
+      "boundary": "Observed development queries; selection evidence only"
+    }
+  },
+  "verified_development_evaluations": 18
+}

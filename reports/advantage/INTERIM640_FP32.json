@@ -1,0 +1,150 @@
+{
+  "utc": "2026-10-25T16:00:41.190138+00:00",
+  "observed_arms": 8,
+  "rankings": {
+    "opd": [
+      {
+        "name": "deep_opd_token_lr5e5",
+        "business_macro": 0.7033991945469555,
+        "general_macro": 0.49333333333333335,
+        "selection_score": 0.6613860223042312
+      },
+      {
+        "name": "deep_opd_token_lr2e5",
+        "business_macro": 0.6863711112622637,
+        "general_macro": 0.5266666666666666,
+        "selection_score": 0.6544302223431444
+      },
+      {
+        "name": "deep_opd_trajectory_lr2e5",
+        "business_macro": 0.6838785196296152,
+        "general_macro": 0.5133333333333334,
+        "selection_score": 0.6497694823703589
+      },
+      {
+        "name": "deep_opd_trajectory_lr5e5",
+        "business_macro": 0.6649017828351839,
+        "general_macro": 0.49916666666666665,
+        "selection_score": 0.6317547596014804
+      }
+    ],
+    "offline_sft": [
+      {
+        "name": "deep_offline_token_lr1e5",
+        "business_macro": 0.6848166252219445,
+        "general_macro": 0.5283333333333333,
+        "selection_score": 0.6535199668442223
+      },
+      {
+        "name": "deep_offline_trajectory_lr1e5",
+        "business_macro": 0.6815713263967781,
+        "general_macro": 0.5266666666666666,
+        "selection_score": 0.6505903944507558
+      }
+    ],
+    "oracle_sft": [
+      {
+        "name": "deep_oracle_trajectory_lr1e5",
+        "business_macro": 0.6502682583848948,
+        "general_macro": 0.5241666666666667,
+        "selection_score": 0.6250479400412492
+      },
+      {
+        "name": "deep_oracle_token_lr1e5",
+        "business_macro": 0.6327296076977629,
+        "general_macro": 0.5258333333333334,
+        "selection_score": 0.6113503528248769
+      }
+    ],
+    "full_kl": []
+  },
+  "exploratory_comparisons": {
+    "offline_sft": {
+      "baseline": "deep_offline_token_lr1e5",
+      "candidate": "deep_opd_token_lr5e5",
+      "business_macro_delta": 0.01858256932501101,
+      "exploratory_query_ci95": [
+        -4.640871416965994e-05,
+        0.037625392171383165
+      ],
+      "domains": {
+        "search": {
+          "baseline": 0.8496755650732197,
+          "candidate": 0.8399822004707637,
+          "delta": -0.009693364602456067,
+          "exploratory_query_ci95": [
+            -0.018430873944258734,
+            -0.0014762374763825472
+          ]
+        },
+        "relevance": {
+          "baseline": 0.4922875034448174,
+          "candidate": 0.5653264942812141,
+          "delta": 0.07303899083639664,
+          "exploratory_query_ci95": [
+            0.027596135024108102,
+            0.11964320092507642
+          ]
+        },
+        "substitute": {
+          "baseline": 0.7124868071477963,
+          "candidate": 0.7048888888888889,
+          "delta": -0.007597918258907432,
+          "exploratory_query_ci95": [
+            -0.0418144273795899,
+            0.026978018626517983
+          ]
+        }
+      }
+    },
+    "oracle_sft": {
+      "baseline": "deep_oracle_trajectory_lr1e5",
+      "candidate": "deep_opd_token_lr5e5",
+      "business_macro_delta": 0.05313093616206077,
+      "exploratory_query_ci95": [
+        0.025853308760731598,
+        0.08024299630842338
+      ],
+      "domains": {
+        "search": {
+          "baseline": 0.8526180572650554,
+          "candidate": 0.8399822004707637,
+          "delta": -0.012635856794291689,
+          "exploratory_query_ci95": [
+            -0.021048133622611705,
+            -0.00432655367068416
+          ]
+        },
+        "relevance": {
+          "baseline": 0.44560999524921213,
+          "candidate": 0.5653264942812141,
+          "delta": 0.11971649903200193,
+          "exploratory_query_ci95": [
+            0.05465877838256639,
+            0.18378096963295285
+          ]
+        },
+        "substitute": {
+          "baseline": 0.6525767226404169,
+          "candidate": 0.7048888888888889,
+          "delta": 0.052312166248472014,
+          "exploratory_query_ci95": [
+            0.0018460276804793934,
+            0.10157679864803501
+          ]
+        }
+      }
+    }
+  },
+  "evaluated_checkpoint": 320,
+  "source_training_budget": 640,
+  "precision": "float32_torch",
+  "rows_per_arm": 1400,
+  "paired_training_seeds": [
+    29
+  ],
+  "complete_selection_pool": false,
+  "quality_advantage_established": false,
+  "holdout_observed": false,
+  "boundary": "Partial intermediate training DEV, independently regraded. Not final BF16 selection and not a confirmatory advantage."
+}

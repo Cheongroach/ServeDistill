@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "require_cold_restoration": true,
+  "require_teacher_frozen": true,
+  "require_finite_loss_gradient_parameters": true,
+  "require_nonzero_parameter_update": true,
+  "behavior_max_abs_error": 0.15,
+  "require_rollout_version_equals_step_minus_one": true,
+  "require_eos_included_padding_excluded": true,
+  "timing_source": "unprofiled fixed workload measurements only",
+  "profile_trace_required": true,
+  "quality_boundary": "Runtime gates do not prove business quality or method superiority."
+}

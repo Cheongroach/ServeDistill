@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "duration_seconds": 30,
+  "host_poll_seconds": 1,
+  "collectors": {
+    "nvidia_smi": {
+      "enabled": true,
+      "interval_ms": 500,
+      "fields": [
+        "timestamp", "index", "uuid", "utilization.gpu", "utilization.memory",
+        "memory.used", "memory.total", "power.draw", "temperature.gpu",
+        "clocks.sm", "clocks.mem"
+      ]
+    },
+    "dcgm": {
+      "enabled": false,
+      "gpu": "0",
+      "interval_ms": 1000,
+      "fields": [1001, 1002, 1003, 1004, 1005, 1009, 1010]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "scope": "DEV stability study only",
+  "all_trials_retained": true,
+  "trial_count": 4,
+  "records": [
+    {
+      "job_run_sid": "redacted-c772d1b72bd3",
+      "trial_sid": "redacted-ac3f0c356dd1",
+      "trial_pod_sid": "redacted-6c432ee00b2b",
+      "exit_status": 0,
+      "start_at": "2026-10-27T12:31:54.000Z",
+      "stop_at": "2026-10-27T12:58:51.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 1617.0,
+      "gpu_hours": 0.44916666666666666
+    },
+    {
+      "job_run_sid": "redacted-8d710635c269",
+      "trial_sid": "redacted-764e6bfa697c",
+      "trial_pod_sid": "redacted-019a6753821e",
+      "exit_status": 0,
+      "start_at": "2026-10-27T12:31:32.000Z",
+      "stop_at": "2026-10-27T12:58:40.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 1628.0,
+      "gpu_hours": 0.45222222222222225
+    },
+    {
+      "job_run_sid": "redacted-564d44a114f3",
+      "trial_sid": "redacted-2a8f66770d84",
+      "trial_pod_sid": "redacted-fa5c59e46a33",
+      "exit_status": 0,
+      "start_at": "2026-10-27T12:31:32.000Z",
+      "stop_at": "2026-10-27T12:59:14.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 1662.0,
+      "gpu_hours": 0.46166666666666667
+    },
+    {
+      "job_run_sid": "redacted-b228161b1d8b",
+      "trial_sid": "redacted-fa57d1e36b95",
+      "trial_pod_sid": "redacted-169063e3b154",
+      "exit_status": 0,
+      "start_at": "2026-10-27T12:31:47.000Z",
+      "stop_at": "2026-10-27T13:00:55.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 1748.0,
+      "gpu_hours": 0.4855555555555556
+    }
+  ],
+  "allocated_gpu_hours": 1.848611111111111,
+  "cost_advantage_supported": false,
+  "boundary": "Pod allocation intervals, not billing or useful GPU compute time. Prior confirmation and historical development costs are separate."
+}

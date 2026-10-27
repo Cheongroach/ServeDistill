@@ -11,7 +11,7 @@ class TrainingObservation:
     def __init__(self, output, backend, first_update, last_update, *,
                  microbatch=None, record_shapes=False, profile_memory=False,
                  with_stack=False, torch_first_microbatch=False):
-        if backend not in ("none", "nsys", "torch"):
+        if backend not in ("none", "nsys", "ncu", "torch"):
             raise ValueError("Unknown observation backend")
         if first_update < 1 or last_update < first_update:
             raise ValueError("Invalid observation window")
@@ -52,7 +52,7 @@ class TrainingObservation:
     def begin_update(self, update):
         self.update = update
         if update == self.first_update:
-            if self.backend == "nsys":
+            if self.backend in ("nsys", "ncu"):
                 torch.cuda.synchronize()
                 torch.cuda.profiler.start()
             elif self.backend == "torch":
@@ -65,7 +65,7 @@ class TrainingObservation:
             self.active = True
         if self.active:
             self.started = time.perf_counter_ns()
-            if self.backend == "nsys":
+            if self.backend in ("nsys", "ncu"):
                 torch.cuda.nvtx.range_push(f"update_{update}")
 
     @contextmanager
@@ -77,7 +77,7 @@ class TrainingObservation:
                 and not self.trace_finished and name == "learner_forward"):
             self.profiler.__enter__()
         start = time.perf_counter_ns()
-        if self.backend == "nsys":
+        if self.backend in ("nsys", "ncu"):
             torch.cuda.nvtx.range_push(name)
         context = (torch.profiler.record_function(name)
                    if self.backend == "torch" and self.profiler is not None
@@ -88,7 +88,7 @@ class TrainingObservation:
                 yield
         finally:
             end = time.perf_counter_ns()
-            if self.backend == "nsys":
+            if self.backend in ("nsys", "ncu"):
                 torch.cuda.nvtx.range_pop()
             self.events.append({
                 "name": name, "update": self.update,
@@ -104,7 +104,7 @@ class TrainingObservation:
         if not self.active:
             return
         end = time.perf_counter_ns()
-        if self.backend == "nsys":
+        if self.backend in ("nsys", "ncu"):
             torch.cuda.nvtx.range_pop()
         self.events.append({
             "name": "update", "update": self.update,
@@ -131,7 +131,7 @@ class TrainingObservation:
     def close(self):
         if not self.active:
             return
-        if self.backend == "nsys":
+        if self.backend in ("nsys", "ncu"):
             torch.cuda.synchronize()
             torch.cuda.profiler.stop()
         elif self.profiler is not None:

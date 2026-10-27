@@ -4,6 +4,30 @@
 
 ServeDistill tests whether OPD is worth using for product-search relevance, reranking, capability retention, and small-model serving. The main benchmark uses real Amazon ESCI queries, product texts, and independently annotated labels. Fictional local-services tasks provide additional checks of budget, refunds, inventory, and clarification decisions.
 
+Start with the Chinese [54-step tutorial](docs/一步步认识ServeDistill项目-friendly.md).
+The standalone [performance monitoring manual](PERFORMANCE_MONITORING.md) covers runnable
+Nsight Systems, Nsight Compute, PyTorch profiler, GPU/host telemetry, DCGM, perf,
+Compute Sanitizer, serving measurements, and validity checks.
+
+As of 2026-10-27, **stable quality superiority remains unestablished**. The frozen
+router confirmation failed; its test and replication are now observed data.
+The four-seed DEV stability study selected last2 averaging, but only two of four
+pairs improved over offline SFT. The [preserved results](reports/advantage/ROUTER_STABILITY_DEV.md)
+include failures and allocation costs.
+
+A new [DEV-only protocol](configs/anchor-development-v1.json) compares AOPD with a
+fixed gold CE anchor, pure AOPD, oracle SFT, and offline SFT. All methods use one
+common adapter, fresh Adam, paired prompt schedules, and the same Teacher320
+for on-policy feedback and unfiltered offline labels. Four one-GPU jobs were
+submitted; a separate one-GPU profiler verification was submitted. This round
+respects **at most 8 concurrent H20 GPUs**. Submission and CPU tests are setup
+evidence; completed model, quality, profiler, and cost acceptance remain separate.
+
+The following paragraphs describe older, closed studies. Their historical GPU
+counts do not change the current eight-GPU limit.
+
+The [four-seed AOPD router confirmation](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER.md) completed all 12 training arms and both independent holdout splits. It did not establish superiority over offline SFT: business macro differences were −0.147 pp on test and −0.202 pp on replication, with both 95% intervals crossing zero. Seed 401 also failed the 99% JSON-validity gate. The [confirmation cost audit](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER_COST.json) retains all 12 trials and 46.548 H20 GPU hours; this is separate from the earlier studies below. Further method development uses DEV, and a new confirmation requires unseen data.
+
 The original study completed **28 training stages × 80 updates**, two seeds, final test/replication, frozen dev selection, BF16 native vLLM serving, protocol fallback, and 32 CPU regressions. All original-study GPU allocations are released: **59.75 H20 GPU hours**, peak 32 GPUs, 4.21 hours from first allocation to final release.
 
 The dev-selected OPD-family method (`full_kl`) reached a two-seed business macro score of **49.25% vs 25.86%** initially; the limited general score increased **17.75 pp**. Substitute macro-F1 fell **5.48 pp**, failing the final 5 pp retention gate. Dev selection favored offline SFT; this study does **not establish OPD superiority or production readiness**. Fictional local-services output-format transfer also failed. These negative outcomes are part of the result.
@@ -28,7 +52,28 @@ See [dataset selection](DATASET_SELECTION.md) for the search, coupon, recommenda
 
 ## Branches
 
-`main` contains runnable code, tests, experiment configurations, and reproducible reports. `manuscript` contains research notes, design decisions, and a sanitized conversation/design history. Resource identifiers, credentials, internal endpoints, and unrelated workspace files are excluded from public history.
+`main` contains runnable code, tests, experiment configurations, and reproducible
+reports. `doc` contains the latest research notes, manuscripts, and sanitized
+conversation excerpts. The existing `manuscript` branch preserves its historical
+notes. Resource identifiers, credentials, internal endpoints, and unrelated
+workspace files are excluded from public history.
+
+Check out `doc` alongside `main` without switching the current directory:
+
+```bash
+bash scripts/open_reading_workspace.sh ../ServeDistill-doc
+code ServeDistill.code-workspace
+```
+
+The repository includes an exact source snapshot for the frozen DEV protocol:
+
+```bash
+python scripts/materialize_experiment.py --output ../ServeDistill-anchor-v1
+```
+
+Run the protocol from that generated source directory with its hash-bound input
+assets. This avoids silently substituting newer monitoring code into the
+submitted experiment.
 
 ## Interpretation
 

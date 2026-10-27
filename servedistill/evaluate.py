@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from .data import load_rows
+from .advantage_contracts import file_digest
 from .runtime import Runtime, seed_all, stratified, write_json
 
 
@@ -28,6 +29,13 @@ def main():
     seed_all(20261024)
     runtime = Runtime(args.student, args.teacher, args.adapter)
     write_json(output / "contract.json", runtime.contract)
+    if args.adapter:
+        adapter = Path(args.adapter)
+        write_json(output / "evaluation-adapter.json", {
+            "adapter_file_sha256": file_digest(adapter / "adapter_model.safetensors"),
+            "adapter_config_sha256": file_digest(adapter / "adapter_config.json"),
+            "adapter_path": str(adapter),
+        })
     if args.phase == "qualification":
         rows = stratified(load_rows(Path(args.data) / "dev.jsonl"), args.per_domain)
         runtime.evaluate(rows, output, "student", args.batch_size, args.max_new_tokens)

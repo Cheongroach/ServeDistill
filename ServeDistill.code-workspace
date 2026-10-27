@@ -1,0 +1,7 @@
+{
+  "folders": [
+    {"name": "main · runnable code", "path": "."},
+    {"name": "doc · research notes", "path": "../ServeDistill-doc"}
+  ],
+  "settings": {"files.exclude": {"**/__pycache__": true}}
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "backend": "ncu",
+  "timeout_seconds": 1800,
+  "first_update": 162,
+  "last_update": 162,
+  "microbatch": 4,
+  "gpu_poll_ms": 1000,
+  "host_poll_seconds": 1,
+  "options": {
+    "replay_mode": "kernel",
+    "nvtx_include": "learner_forward/",
+    "launch_count": 1,
+    "sections": ["SpeedOfLight", "MemoryWorkloadAnalysis", "LaunchStats", "Occupancy"]
+  }
+}

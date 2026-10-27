@@ -4,8 +4,8 @@ import torch
 
 from servedistill.data import business_oracle, grade, make_business
 from servedistill.losses import (
-    DevWeightController, full_reverse_kl, grpo_advantages,
-    opd_advantages, policy_loss, reduce_actions,
+    DevWeightController, asymmetric_opd_loss, full_reverse_kl,
+    grpo_advantages, opd_advantages, policy_loss, reduce_actions,
 )
 
 
@@ -37,6 +37,99 @@ class ProbabilityContractTests(unittest.TestCase):
         result = opd_advantages(behavior, teacher, torch.ones_like(behavior))
         self.assertEqual(result.tolist(), [[-2.0, 1.0]])
         self.assertFalse(result.requires_grad)
+
+    def test_aopd_intervenes_with_teacher_topk_forward_kl(self):
+        student = torch.tensor([[[0.0, 0.0, 0.0]]], requires_grad=True)
+        teacher = torch.tensor([[[2.0, 0.0, -1.0]]], requires_grad=True)
+        current = student.log_softmax(-1)[..., 1]
+        behavior = current.detach().clone()
+        teacher_sampled = teacher.log_softmax(-1)[..., 1]
+        mask = torch.ones_like(current)
+        loss, metrics = asymmetric_opd_loss(
+            current, behavior, teacher_sampled, student, teacher, mask, top_k=2)
+        teacher_logp = teacher.detach().log_softmax(-1)
+        indices = teacher_logp.topk(2, dim=-1).indices
+        expected = (
+            teacher_logp.gather(-1, indices).exp()
+            * (teacher_logp.gather(-1, indices)
+               - student.log_softmax(-1).gather(-1, indices))
+        ).sum() / 2
+        torch.testing.assert_close(loss, expected)
+        self.assertEqual(metrics["aopd_intervention_fraction"], 1.0)
+        loss.backward()
+        self.assertIsNone(teacher.grad)
+        self.assertGreater(student.grad.abs().sum().item(), 0)
+
+    def test_aopd_keeps_positive_sampled_token_opd(self):
+        student = torch.tensor([[[0.0, 0.0, 0.0]]], requires_grad=True)
+        teacher = torch.tensor([[[2.0, 0.0, -1.0]]])
+        current = student.log_softmax(-1)[..., 0]
+        behavior = current.detach().clone()
+        teacher_sampled = teacher.log_softmax(-1)[..., 0]
+        mask = torch.ones_like(current)
+        loss, metrics = asymmetric_opd_loss(
+            current, behavior, teacher_sampled, student, teacher, mask, top_k=2)
+        expected, _ = policy_loss(
+            current, behavior, teacher_sampled - behavior, mask)
+        torch.testing.assert_close(loss, expected)
+        self.assertEqual(metrics["aopd_intervention_fraction"], 0.0)
+
+    def test_aopd_zero_probability_difference_intervenes(self):
+        logits = torch.tensor([[[1.0, 0.0]]], requires_grad=True)
+        sampled = logits.log_softmax(-1)[..., 0]
+        _, metrics = asymmetric_opd_loss(
+            sampled, sampled.detach(), sampled.detach(), logits, logits.detach(),
+            torch.ones_like(sampled), top_k=2, tau=0.0)
+        self.assertEqual(metrics["aopd_intervention_fraction"], 1.0)
+
+    def test_aopd_rejects_topk_larger_than_vocabulary(self):
+        logits = torch.zeros(1, 1, 2)
+        sampled = logits.log_softmax(-1)[..., 0]
+        with self.assertRaises(ValueError):
+            asymmetric_opd_loss(
+                sampled, sampled, sampled, logits, logits,
+                torch.ones_like(sampled), top_k=3)
+
+    def test_aopd_sparse_guidance_matches_dense_formula_and_gradient(self):
+        torch.manual_seed(7)
+        student = torch.randn(2, 3, 5, requires_grad=True)
+        teacher = torch.randn(2, 3, 5)
+        sampled_ids = torch.tensor([[0, 1, 2], [3, 4, 0]])
+        mask = torch.tensor([[1, 1, 0], [1, 1, 1]], dtype=torch.bool)
+        current = student.log_softmax(-1).gather(
+            -1, sampled_ids[..., None]).squeeze(-1)
+        teacher_sampled = teacher.log_softmax(-1).gather(
+            -1, sampled_ids[..., None]).squeeze(-1)
+        offsets = torch.tensor([[0.2, -0.2, 0.2], [-0.2, 0.2, -0.2]])
+        behavior = teacher_sampled + offsets
+
+        actual, _ = asymmetric_opd_loss(
+            current, behavior, teacher_sampled, student, teacher, mask,
+            top_k=3, aggregation="trajectory",
+            current_log_normalizer=student.logsumexp(-1),
+            teacher_log_normalizer=teacher.logsumexp(-1),
+        )
+        signal = opd_advantages(behavior, teacher_sampled, mask)
+        intervention = (
+            teacher_sampled.exp() - behavior.exp() <= 0
+        ) & mask
+        positive, _ = policy_loss(
+            current, behavior, signal * (~intervention), mask,
+            aggregation="trajectory",
+        )
+        teacher_log_distribution = teacher.log_softmax(-1)
+        teacher_top_logp, indices = teacher_log_distribution.topk(3, dim=-1)
+        student_top_logp = student.log_softmax(-1).gather(-1, indices)
+        dense_kl = (
+            teacher_top_logp.exp() * (teacher_top_logp - student_top_logp)
+        ).sum(-1) / 3
+        expected = positive + reduce_actions(
+            dense_kl * intervention, mask, "trajectory")
+        actual_gradient = torch.autograd.grad(actual, student, retain_graph=True)[0]
+        expected_gradient = torch.autograd.grad(expected, student)[0]
+
+        torch.testing.assert_close(actual, expected)
+        torch.testing.assert_close(actual_gradient, expected_gradient)
 
     def test_zero_variance_grpo_does_not_create_updates(self):
         rewards = torch.tensor([1.0, 1.0, 0.0, 1.0])

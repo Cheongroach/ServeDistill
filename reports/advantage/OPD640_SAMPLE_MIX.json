@@ -1,0 +1,353 @@
+{
+  "utc": "2026-10-25T17:39:14.182701+00:00",
+  "arms": {
+    "deep_opd_trajectory_lr5e5": {
+      "observed_updates": 640,
+      "rollouts_sha256": "faf1e985e3dd4bfd1e930f03469057a26625cc89c63fc55f9303d02764934a83",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 460,
+          "rollout_yes": 391,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_noon": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 491,
+          "target_yes": 446,
+          "teacher_yes": 320,
+          "rollout_yes": 361,
+          "rollout_True": 1,
+          "rollout_None": 1
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_yes": 382,
+          "rollout_no": 469,
+          "target_no": 452,
+          "teacher_yes": 324,
+          "rollout_s": 1,
+          "rollout_set": 1,
+          "rollout_nobody": 1
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "sequences": 852,
+          "target_yes": 398,
+          "teacher_yes": 310,
+          "rollout_no": 505,
+          "rollout_yes": 346,
+          "target_no": 454,
+          "teacher_no": 542,
+          "rollout_None": 1
+        }
+      ]
+    },
+    "deep_opd_token_lr5e5": {
+      "observed_updates": 640,
+      "rollouts_sha256": "e083b5a09d6db59b5a6942e0cbc27aa13fd9ddd2022f9ecf47907683402171c2",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 472,
+          "rollout_yes": 376,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_None": 1,
+          "rollout_n": 1,
+          "rollout_any": 1,
+          "rollout_solid": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 473,
+          "target_yes": 446,
+          "rollout_yes": 381,
+          "teacher_yes": 320
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_yes": 375,
+          "target_no": 452,
+          "rollout_no": 475,
+          "teacher_yes": 324,
+          "rollout_True": 1,
+          "rollout_None": 1,
+          "rollout_ip": 1,
+          "rollout_nos": 1
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "sequences": 852,
+          "target_yes": 398,
+          "teacher_yes": 310,
+          "rollout_no": 493,
+          "rollout_yes": 359,
+          "target_no": 454,
+          "teacher_no": 542
+        }
+      ]
+    },
+    "deep_opd_token_lr2e5": {
+      "observed_updates": 640,
+      "rollouts_sha256": "b4c11472909ad7b8bd66371181b40a8f1a838fa99406cdddd4067948f9caaca5",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 429,
+          "rollout_yes": 420,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_None": 1,
+          "rollout_s": 1,
+          "rollout_maybe": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 484,
+          "target_yes": 446,
+          "rollout_yes": 368,
+          "teacher_yes": 320,
+          "rollout_None": 1,
+          "rollout_y": 1
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_no": 474,
+          "rollout_yes": 380,
+          "target_no": 452,
+          "teacher_yes": 324
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "sequences": 852,
+          "target_yes": 398,
+          "teacher_yes": 310,
+          "rollout_no": 497,
+          "rollout_yes": 355,
+          "target_no": 454,
+          "teacher_no": 542
+        }
+      ]
+    },
+    "deep_opd_trajectory_lr2e5": {
+      "observed_updates": 640,
+      "rollouts_sha256": "36ee6c748f955ae34a263d526d5eaaae92cb04d17987676da8ab8102f924dfae",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 451,
+          "rollout_yes": 397,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_None": 1,
+          "rollout_s": 1,
+          "rollout_y": 1,
+          "rollout_true": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 458,
+          "target_yes": 446,
+          "rollout_yes": 395,
+          "teacher_yes": 320,
+          "rollout_odd": 1
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_no": 480,
+          "target_no": 452,
+          "rollout_yes": 372,
+          "teacher_yes": 324,
+          "rollout_cyan": 1,
+          "rollout_brilliant": 1
+        },
+        {
+          "first_step": 481,
+          "last_step": 640,
+          "sequences": 852,
+          "target_yes": 398,
+          "teacher_yes": 310,
+          "rollout_yes": 388,
+          "target_no": 454,
+          "teacher_no": 542,
+          "rollout_no": 463,
+          "rollout_None": 1
+        }
+      ]
+    },
+    "deep_opd_trajectory_lr1e5": {
+      "observed_updates": 594,
+      "rollouts_sha256": "8695e234d71cb68df0d4f47747a1684dab189025b36d7a6710649d2b2374bfa7",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 438,
+          "rollout_yes": 411,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_None": 2,
+          "rollout_y": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 476,
+          "target_yes": 446,
+          "rollout_yes": 376,
+          "teacher_yes": 320,
+          "rollout_he": 1,
+          "rollout_byproduct": 1
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_yes": 376,
+          "target_no": 452,
+          "rollout_no": 477,
+          "teacher_yes": 324,
+          "rollout_None": 1
+        },
+        {
+          "first_step": 481,
+          "last_step": 594,
+          "sequences": 608,
+          "target_yes": 302,
+          "teacher_yes": 232,
+          "rollout_no": 345,
+          "target_no": 306,
+          "teacher_no": 376,
+          "rollout_yes": 261,
+          "rollout_n": 1,
+          "rollout_y": 1
+        }
+      ]
+    },
+    "deep_opd_token_lr1e5": {
+      "observed_updates": 595,
+      "rollouts_sha256": "630ef76758024b659bcf6112fe22dff3f0a9dbb3deae9781120491ae53a328ba",
+      "windows": [
+        {
+          "first_step": 1,
+          "last_step": 160,
+          "sequences": 852,
+          "target_no": 428,
+          "teacher_no": 528,
+          "rollout_no": 426,
+          "rollout_yes": 424,
+          "target_yes": 424,
+          "teacher_yes": 324,
+          "rollout_None": 1,
+          "rollout_y": 1
+        },
+        {
+          "first_step": 161,
+          "last_step": 320,
+          "sequences": 854,
+          "target_no": 408,
+          "teacher_no": 534,
+          "rollout_no": 487,
+          "target_yes": 446,
+          "rollout_yes": 363,
+          "teacher_yes": 320,
+          "rollout_if condition was required": 1,
+          "rollout_S": 1,
+          "rollout_ago": 1,
+          "rollout_s": 1
+        },
+        {
+          "first_step": 321,
+          "last_step": 480,
+          "sequences": 854,
+          "target_yes": 402,
+          "teacher_no": 530,
+          "rollout_yes": 368,
+          "rollout_no": 483,
+          "target_no": 452,
+          "teacher_yes": 324,
+          "rollout_none": 1,
+          "rollout_None": 1,
+          "rollout_s": 1
+        },
+        {
+          "first_step": 481,
+          "last_step": 595,
+          "sequences": 612,
+          "target_yes": 304,
+          "teacher_yes": 232,
+          "rollout_yes": 269,
+          "target_no": 308,
+          "teacher_no": 380,
+          "rollout_no": 343
+        }
+      ]
+    }
+  },
+  "teacher_labels_sha256": "b35950c7988130838e4bd168c0c310647237fec36bc388b66dc6d3a25e30e04c",
+  "holdout_observed": false,
+  "selection_rule_changed": false,
+  "boundary": "Observed class prevalence in saved training trajectories. Repeated group samples are not independent queries; descriptive counts do not identify a causal mechanism."
+}

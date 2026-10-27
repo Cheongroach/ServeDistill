@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "repository": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/",
+  "index": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/Packages.gz",
+  "platform": "linux-x86_64",
+  "packages": {
+    "nsys": {
+      "filename": "NsightSystems-linux-cli-public-2026.1.1.204-3717666.deb",
+      "sha256": "37a1cb9b12cdbc9c40a8cb42e58b05a141e44c63c800cac435cb8e43256e0780"
+    },
+    "ncu": {
+      "filename": "nsight-compute-2026.1.1_2026.1.1.2-1_amd64.deb",
+      "sha256": "f1ead828efaf27835dd6fbbc2d9f2f058f99490ba034e1f4a037a3ed0188be00",
+      "bytes": 329884926
+    }
+  }
+}

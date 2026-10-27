@@ -1,0 +1,212 @@
+{
+  "scope": "Preserved FP32 DEV diagnostics only",
+  "source_rows_per_seed_checkpoint": 300,
+  "holdout_read_for_diagnosis": false,
+  "records": [
+    {
+      "seed": 101,
+      "step": 0,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "6ef39c0a65f9f81b27ec79d39142b3dcae5e642fe8e6edef90c2a6eb70b3af26"
+    },
+    {
+      "seed": 101,
+      "step": 160,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "ad9415eb69974f3e2a4cdba419ef78bd4767eab8f4acecad703c5f8516aeec31"
+    },
+    {
+      "seed": 101,
+      "step": 320,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "9cc32b8fb371bc0a6e498fa6eed6394b76dd5eef507c4b8abdc867164e9b3931"
+    },
+    {
+      "seed": 101,
+      "step": 480,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "2d454f385243fd86ca198be01f8dfc1fa59ba4a055c66886cb521a7ae2bdac79"
+    },
+    {
+      "seed": 101,
+      "step": 640,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "0db13354e23ed38c052be8bd2cb82d30df5ebf0b9487e601bc07e502b0515ff7"
+    },
+    {
+      "seed": 211,
+      "step": 0,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "ec48369b9894a6f6c28fc5f740c5aec4076d323d17d5e76c58b5f580be4ec227"
+    },
+    {
+      "seed": 211,
+      "step": 160,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "8e61be60b8a460ef0f670c444ac350af690927d99126506b6d4aaba9b5c05550"
+    },
+    {
+      "seed": 211,
+      "step": 320,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "f71458cdf220ad3bb4b18c5d19b6e4aff164ee912ab932dd507d0f880cc7bf0b"
+    },
+    {
+      "seed": 211,
+      "step": 480,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "6422c219ab1f93515f02ae5ef3ae46beedcab6e0baf556f38bd3bc649a2f7881"
+    },
+    {
+      "seed": 211,
+      "step": 640,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "013022111248b23828f912e878b55eab079b2d960013dd9d2582221f4b6cac81"
+    },
+    {
+      "seed": 307,
+      "step": 0,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "965004df8934d49a338ebd93a596a997833bcacfe84e89fd5179ab277effbc26"
+    },
+    {
+      "seed": 307,
+      "step": 160,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "e05a53d50cbc4938561cf2d9c8ae1b23f4ba0e33d776122e4d25b09ed4bcc005"
+    },
+    {
+      "seed": 307,
+      "step": 320,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "891e40a5f19e75b359faa73fd33644ba77590c42241de6c85fab169c1a6959f9"
+    },
+    {
+      "seed": 307,
+      "step": 480,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "2ecf447542d8945e78828bbd65b185f37f3f479b11b21e526ef5f92d60dc5949"
+    },
+    {
+      "seed": 307,
+      "step": 640,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "f295c6871d8483265fe77bffa3dafa6eca653235d7798fb956aa2b137ece8dd5"
+    },
+    {
+      "seed": 401,
+      "step": 0,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "096a54fc5ecfc09d163832d10a79704176cb5ec69417616a216c176e9b99ad4b"
+    },
+    {
+      "seed": 401,
+      "step": 160,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "0e7093ecb124c29bae8315920da818eb34ffe80999b50dd37ebafcf9ef3f5543"
+    },
+    {
+      "seed": 401,
+      "step": 320,
+      "rows": 300,
+      "schema_invalid": 6,
+      "failures": [
+        {
+          "sample_id": "esci:dev:substitute:50e20fc09dafe2ac8857",
+          "text": "{\"substitute\":\"C\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        },
+        {
+          "sample_id": "esci:dev:substitute:141c5ae45e7cbb071311",
+          "text": "{\"substitute\":\"C\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        },
+        {
+          "sample_id": "esci:dev:substitute:2cc61de961cc1824033d",
+          "text": "{\"substitute\":\"I\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        },
+        {
+          "sample_id": "esci:dev:substitute:d529469cca1350af1d7f",
+          "text": "{\"substitute\":\"C\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        },
+        {
+          "sample_id": "esci:dev:substitute:6eeb909404bde9eb6409",
+          "text": "{\"substitute\":\"C\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        },
+        {
+          "sample_id": "esci:dev:substitute:1621406a16dc71d118c3",
+          "text": "{\"substitute\":\"C\"}",
+          "json_parseable": true,
+          "truncated": false,
+          "target_class": "no"
+        }
+      ],
+      "source_sha256": "3f379acb07ef48f791cfd9bfcb30569252cea3d4fe7e86ddbbab8e804a0b2119"
+    },
+    {
+      "seed": 401,
+      "step": 480,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "9c6f99cbee4b942ba0253604f4078c0cba2c7dcb7c2ea5b9dcda0c2113ce5054"
+    },
+    {
+      "seed": 401,
+      "step": 640,
+      "rows": 300,
+      "schema_invalid": 0,
+      "failures": [],
+      "source_sha256": "743c94470dd162e598c78edfc898a62fd427ca7a23e0a3a2b4fe9afeb97407eb"
+    }
+  ],
+  "observation": "seed401 step320 has five C and one I values in substitute; all six JSON objects parse, have the expected field, and are not truncated",
+  "causal_mechanism_established": false
+}

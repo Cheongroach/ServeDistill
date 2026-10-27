@@ -1,0 +1,2745 @@
+{
+  "utc": "2026-10-25T17:13:38.152746+00:00",
+  "development_report_sha256": "838c74d1120a55f94a982c699f2ce614c849baae3c0a4f6ee251897ac14cfc8b",
+  "candidates": {
+    "deep_offline_trajectory_lr1e5/final": {
+      "predictions_sha256": "3f504eb390d7c1937947020e425f9b3bbc528aedeb7cb79ac41ad476a808f367",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8444863461955234,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5056452556452556,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.48872180451127817,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6530612244897959,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.48148148148148145,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.7197656221567129,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.591304347826087,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8378378378378378,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 40,
+            "E": 77,
+            "I": 57,
+            "S": 126
+          },
+          "recall": {
+            "E": 0.48872180451127817,
+            "S": 0.6530612244897959,
+            "C": 0.6666666666666666,
+            "I": 0.48148148148148145
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 98,
+            "no": 202
+          },
+          "recall": {
+            "yes": 0.591304347826087,
+            "no": 0.8378378378378378
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_trajectory_lr2e5/final": {
+      "predictions_sha256": "7b156ef43a292b7bbd7e1d213fdcc47ceaf8762657c9d57064a30fbf1e3910a9",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8476246645924824,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5306244098746872,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.49624060150375937,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6938775510204082,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6952972992816848,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5478260869565217,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8324324324324325,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 29,
+            "S": 137,
+            "E": 78,
+            "I": 56
+          },
+          "recall": {
+            "E": 0.49624060150375937,
+            "S": 0.6938775510204082,
+            "C": 0.6,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 94,
+            "no": 206
+          },
+          "recall": {
+            "yes": 0.5478260869565217,
+            "no": 0.8324324324324325
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_trajectory_lr2e5/last2": {
+      "predictions_sha256": "57d24d7c99145a726a5289bfbccf5fd0234e7c90f1a1beebb1bd71a6a3b575aa",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8478419864016213,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5203538997114389,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5338345864661654,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6020408163265306,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6805360760479975,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.45217391304347826,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8972972972972973,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 34,
+            "I": 64,
+            "E": 90,
+            "S": 112
+          },
+          "recall": {
+            "E": 0.5338345864661654,
+            "S": 0.6020408163265306,
+            "C": 0.6666666666666666,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 71,
+            "no": 229
+          },
+          "recall": {
+            "yes": 0.45217391304347826,
+            "no": 0.8972972972972973
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr2e5/final": {
+      "predictions_sha256": "0ddd35bd075ae64e4639b227c4064f34771d7e551c2cf558bb6db3156b3327b5",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8489053063506946,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5017094978983456,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.47368421052631576,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6428571428571429,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.48148148148148145,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6924976844705155,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5304347826086957,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8432432432432433,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 37,
+            "I": 58,
+            "E": 76,
+            "S": 129
+          },
+          "recall": {
+            "E": 0.47368421052631576,
+            "S": 0.6428571428571429,
+            "C": 0.6666666666666666,
+            "I": 0.48148148148148145
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 90,
+            "no": 210
+          },
+          "recall": {
+            "yes": 0.5304347826086957,
+            "no": 0.8432432432432433
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_trajectory_lr2e5/all4": {
+      "predictions_sha256": "7e5744f6daa4bfb8bd4e9f542a61c8100bb71aab3f02a686aa3686d9890699ee",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.84893355980178,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5033818526057443,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.518796992481203,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.5918367346938775,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6753701416913852,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.46956521739130436,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8702702702702703,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 34,
+            "E": 88,
+            "I": 64,
+            "S": 114
+          },
+          "recall": {
+            "E": 0.518796992481203,
+            "S": 0.5918367346938775,
+            "C": 0.6,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 78,
+            "no": 222
+          },
+          "recall": {
+            "yes": 0.46956521739130436,
+            "no": 0.8702702702702703
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr1e5/last2": {
+      "predictions_sha256": "545264b32e4354bf5414e860d1c77903ea6707bdd51dce8a7d0518ebd61512a7",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8480036937037315,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5071714835199586,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5263157894736842,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.5816326530612245,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6620528026310679,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.43478260869565216,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8810810810810811,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 37,
+            "E": 88,
+            "I": 59,
+            "S": 116
+          },
+          "recall": {
+            "E": 0.5263157894736842,
+            "S": 0.5816326530612245,
+            "C": 0.6666666666666666,
+            "I": 0.5
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 72,
+            "no": 228
+          },
+          "recall": {
+            "yes": 0.43478260869565216,
+            "no": 0.8810810810810811
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr2e5/all4": {
+      "predictions_sha256": "2e21081c86c8cad3bc8acffd5f4c54336eb0347855c2bb44da77606e364d7890",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8532408929800478,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.500455068306226,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.49624060150375937,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.5918367346938775,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6688061617458281,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.45217391304347826,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8756756756756757,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 38,
+            "E": 84,
+            "I": 57,
+            "S": 121
+          },
+          "recall": {
+            "E": 0.49624060150375937,
+            "S": 0.5918367346938775,
+            "C": 0.6666666666666666,
+            "I": 0.5
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 75,
+            "no": 225
+          },
+          "recall": {
+            "yes": 0.45217391304347826,
+            "no": 0.8756756756756757
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr2e5/last2": {
+      "predictions_sha256": "9d392ba1429cb54c8b27bd78286373f81d95ceff8593ca75230cd1b46b73118c",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8498436037039937,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5018765301784169,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5112781954887218,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.5714285714285714,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6658943406853646,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.45217391304347826,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8702702702702703,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 38,
+            "I": 63,
+            "E": 87,
+            "S": 112
+          },
+          "recall": {
+            "E": 0.5112781954887218,
+            "S": 0.5714285714285714,
+            "C": 0.6666666666666666,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 76,
+            "no": 224
+          },
+          "recall": {
+            "yes": 0.45217391304347826,
+            "no": 0.8702702702702703
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr1e5/final": {
+      "predictions_sha256": "a2011192294ede5cf592a2ac1531b9b0bf533c9a183957685db20c69e99ba8c2",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8492680246730091,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5006434687387769,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5037593984962406,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6326530612244898,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4444444444444444,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6788049023189027,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.48695652173913045,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8594594594594595,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 39,
+            "E": 84,
+            "S": 128,
+            "I": 49
+          },
+          "recall": {
+            "E": 0.5037593984962406,
+            "S": 0.6326530612244898,
+            "C": 0.6666666666666666,
+            "I": 0.4444444444444444
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 82,
+            "no": 218
+          },
+          "recall": {
+            "yes": 0.48695652173913045,
+            "no": 0.8594594594594595
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_trajectory_lr1e5/all4": {
+      "predictions_sha256": "54bb9deae719165dc017057079aca97f1f7572b13e2f98c2fbf4e17d185d08b6",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8457847088095384,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5004327327178607,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5037593984962406,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6020408163265306,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.48148148148148145,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6688061617458281,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.45217391304347826,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8756756756756757,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 37,
+            "E": 85,
+            "I": 60,
+            "S": 118
+          },
+          "recall": {
+            "E": 0.5037593984962406,
+            "S": 0.6020408163265306,
+            "C": 0.6666666666666666,
+            "I": 0.48148148148148145
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 75,
+            "no": 225
+          },
+          "recall": {
+            "yes": 0.45217391304347826,
+            "no": 0.8756756756756757
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_trajectory_lr1e5/last2": {
+      "predictions_sha256": "f951fbbb0e59d9c3003b587b6ce088aa23c752d5b77ff51ddf52ca940ba1c852",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8483574711099305,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.5051397443601184,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.49624060150375937,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6020408163265306,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6666666666666666,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6522305437968089,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.41739130434782606,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8810810810810811,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 37,
+            "E": 82,
+            "I": 65,
+            "S": 116
+          },
+          "recall": {
+            "E": 0.49624060150375937,
+            "S": 0.6020408163265306,
+            "C": 0.6666666666666666,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 70,
+            "no": 230
+          },
+          "recall": {
+            "yes": 0.41739130434782606,
+            "no": 0.8810810810810811
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_offline_token_lr1e5/all4": {
+      "predictions_sha256": "37991d848aa67f2cbd57527cb1ad44ea5d8cca8c915b2522b3cf42cfc868566b",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8484110146746764,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4853031255150954,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5037593984962406,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.6020408163265306,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4444444444444444,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6571606669783387,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.4260869565217391,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8810810810810811,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 36,
+            "E": 85,
+            "S": 125,
+            "I": 54
+          },
+          "recall": {
+            "E": 0.5037593984962406,
+            "S": 0.6020408163265306,
+            "C": 0.6,
+            "I": 0.4444444444444444
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 71,
+            "no": 229
+          },
+          "recall": {
+            "yes": 0.4260869565217391,
+            "no": 0.8810810810810811
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_oracle_trajectory_lr2e5/all4": {
+      "predictions_sha256": "8fe4f431635fb6be1406dbc96a8848473863c5f17a1fbac7db54937d65e077da",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8480740102459411,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.44098707792943614,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6541353383458647,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.3877551020408163,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.3888888888888889,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.7027185138313494,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.6,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 45,
+            "I": 57,
+            "E": 124,
+            "S": 74
+          },
+          "recall": {
+            "E": 0.6541353383458647,
+            "S": 0.3877551020408163,
+            "C": 0.5333333333333333,
+            "I": 0.3888888888888889
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 106,
+            "no": 194
+          },
+          "recall": {
+            "yes": 0.6,
+            "no": 0.8
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_token_lr2e5/all4": {
+      "predictions_sha256": "b10fff99f3f1ccbdb19a14923d956d3e8d78ef4cc9f55fa837a680517b1956ec",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8478895464336879,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.44312768493461163,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6992481203007519,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.32653061224489793,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.3888888888888889,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.673202614379085,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5043478260869565,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8324324324324325,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 43,
+            "I": 61,
+            "E": 132,
+            "S": 64
+          },
+          "recall": {
+            "E": 0.6992481203007519,
+            "S": 0.32653061224489793,
+            "C": 0.6,
+            "I": 0.3888888888888889
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 89,
+            "no": 211
+          },
+          "recall": {
+            "yes": 0.5043478260869565,
+            "no": 0.8324324324324325
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_token_lr1e5/all4": {
+      "predictions_sha256": "560928401642ba385c2e3ef2d343f7a020d5ab7fbcaf53c8b3978cae1de86076",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8500371090306525,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4390092346988899,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6766917293233082,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.336734693877551,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.3888888888888889,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6835874973632291,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5130434782608696,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8432432432432433,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 45,
+            "I": 63,
+            "E": 128,
+            "S": 64
+          },
+          "recall": {
+            "E": 0.6766917293233082,
+            "S": 0.336734693877551,
+            "C": 0.6,
+            "I": 0.3888888888888889
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 88,
+            "no": 212
+          },
+          "recall": {
+            "yes": 0.5130434782608696,
+            "no": 0.8432432432432433
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_trajectory_lr2e5/last2": {
+      "predictions_sha256": "727268f83c37ce935cf0f984f1d51ee855e6286d7245d2597e65912e8c0ae214",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8439229216221632,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.44760455556115736,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6240601503759399,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.3673469387755102,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.48148148148148145,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6465150004531859,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.41739130434782606,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8702702702702703,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 40,
+            "I": 79,
+            "E": 113,
+            "S": 68
+          },
+          "recall": {
+            "E": 0.6240601503759399,
+            "S": 0.3673469387755102,
+            "C": 0.5333333333333333,
+            "I": 0.48148148148148145
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 72,
+            "no": 228
+          },
+          "recall": {
+            "yes": 0.41739130434782606,
+            "no": 0.8702702702702703
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_trajectory_lr1e5/all4": {
+      "predictions_sha256": "5bcaa2563cf58b05a10296565b44b41f2bf599e973be406bb3d9207e397798a9",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.846285374273544,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.43422294528203476,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6691729323308271,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.336734693877551,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4074074074074074,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6762166405023547,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.5217391304347826,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8216216216216217,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 42,
+            "I": 66,
+            "E": 127,
+            "S": 65
+          },
+          "recall": {
+            "E": 0.6691729323308271,
+            "S": 0.336734693877551,
+            "C": 0.5333333333333333,
+            "I": 0.4074074074074074
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 93,
+            "no": 207
+          },
+          "recall": {
+            "yes": 0.5217391304347826,
+            "no": 0.8216216216216217
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_trajectory_lr2e5/final": {
+      "predictions_sha256": "2762a2f79a2cedb117bf8367e86c5e42b9755e97907cd6c928363168a0f0dc0b",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8426925721662016,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.455138027825238,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6090225563909775,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.41836734693877553,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.48148148148148145,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.625081504020865,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.34782608695652173,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9081081081081082,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 49,
+            "I": 71,
+            "E": 108,
+            "S": 72
+          },
+          "recall": {
+            "E": 0.6090225563909775,
+            "S": 0.41836734693877553,
+            "C": 0.5333333333333333,
+            "I": 0.48148148148148145
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 57,
+            "no": 243
+          },
+          "recall": {
+            "yes": 0.34782608695652173,
+            "no": 0.9081081081081082
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_oracle_token_lr2e5/last2": {
+      "predictions_sha256": "4441a54a6185641934cdf559227a8df39d56d7d4c54d54099b369d5e1cd035b3",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8448048757141362,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.44214009029303364,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6390977443609023,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.336734693877551,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.4666666666666667,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6142270861833106,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.33043478260869563,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9081081081081082,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 32,
+            "I": 85,
+            "E": 118,
+            "S": 65
+          },
+          "recall": {
+            "E": 0.6390977443609023,
+            "S": 0.336734693877551,
+            "C": 0.4666666666666667,
+            "I": 0.5
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 55,
+            "no": 245
+          },
+          "recall": {
+            "yes": 0.33043478260869563,
+            "no": 0.9081081081081082
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_trajectory_lr1e5/last2": {
+      "predictions_sha256": "d52cfa6b5f4d40840520b6d774142299f73d0ff254bd7ac4db2c6ef6f315672f",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8464340419909052,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4346326231551042,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.5939849624060151,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.35714285714285715,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.4666666666666667,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6195564189736118,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.34782608695652173,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.8972972972972973,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 34,
+            "I": 88,
+            "E": 107,
+            "S": 71
+          },
+          "recall": {
+            "E": 0.5939849624060151,
+            "S": 0.35714285714285715,
+            "C": 0.4666666666666667,
+            "I": 0.5
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 59,
+            "no": 241
+          },
+          "recall": {
+            "yes": 0.34782608695652173,
+            "no": 0.8972972972972973
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_token_lr1e5/last2": {
+      "predictions_sha256": "53a51390194263b5b7a48163b89c25c29dcb9b2fadf6526d223e3bd3f61d1f87",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8459433388741738,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4549298060764304,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6015037593984962,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.3673469387755102,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5185185185185185,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.5975716004480647,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.30434782608695654,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9081081081081082,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 33,
+            "I": 82,
+            "E": 110,
+            "S": 75
+          },
+          "recall": {
+            "E": 0.6015037593984962,
+            "S": 0.3673469387755102,
+            "C": 0.5333333333333333,
+            "I": 0.5185185185185185
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 52,
+            "no": 248
+          },
+          "recall": {
+            "yes": 0.30434782608695654,
+            "no": 0.9081081081081082
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": true
+    },
+    "deep_oracle_trajectory_lr1e5/final": {
+      "predictions_sha256": "97f5462fe80a2fe38b0b184e0e1d520e3841d5ff20c7fed9f5826de5e8c0d5e4",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8454484025078917,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.42494081917200927,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6015037593984962,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.336734693877551,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.46296296296296297,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.6137466574229969,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.30434782608695654,
+          "minimum": 0.3,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9405405405405406,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 47,
+            "I": 80,
+            "E": 109,
+            "S": 64
+          },
+          "recall": {
+            "E": 0.6015037593984962,
+            "S": 0.336734693877551,
+            "C": 0.5333333333333333,
+            "I": 0.46296296296296297
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 46,
+            "no": 254
+          },
+          "recall": {
+            "yes": 0.30434782608695654,
+            "no": 0.9405405405405406
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_token_lr2e5/final": {
+      "predictions_sha256": "165eba0d349c09d799bd1dc8901089794f78b2fc08562f058c81ec0ef554f98a",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8427556322216976,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.45354114544050605,
+          "minimum": 0.45,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6090225563909775,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.3979591836734694,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.5333333333333333,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.5,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.5605118392729012,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.21739130434782608,
+          "minimum": 0.3,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9567567567567568,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 46,
+            "I": 76,
+            "E": 108,
+            "S": 70
+          },
+          "recall": {
+            "E": 0.6090225563909775,
+            "S": 0.3979591836734694,
+            "C": 0.5333333333333333,
+            "I": 0.5
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 33,
+            "no": 267
+          },
+          "recall": {
+            "yes": 0.21739130434782608,
+            "no": 0.9567567567567568
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    },
+    "deep_oracle_token_lr1e5/final": {
+      "predictions_sha256": "9a5f742d583f702171c76db9d5585adb1d199c9ed48f535809b098fa2179aa0a",
+      "checks": [
+        {
+          "criterion": "search/metric",
+          "value": 0.8448879767064263,
+          "minimum": 0.8,
+          "passed": true
+        },
+        {
+          "criterion": "search/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/metric",
+          "value": 0.4304950425918168,
+          "minimum": 0.45,
+          "passed": false
+        },
+        {
+          "criterion": "relevance/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/E",
+          "value": 0.6165413533834586,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/S",
+          "value": 0.32653061224489793,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/C",
+          "value": 0.6,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "relevance/recall/I",
+          "value": 0.4444444444444444,
+          "minimum": 0.2,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/metric",
+          "value": 0.5745054173794798,
+          "minimum": 0.55,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/json_valid",
+          "value": 1.0,
+          "minimum": 0.99,
+          "passed": true
+        },
+        {
+          "criterion": "substitute/recall/yes",
+          "value": 0.24347826086956523,
+          "minimum": 0.3,
+          "passed": false
+        },
+        {
+          "criterion": "substitute/recall/no",
+          "value": 0.9459459459459459,
+          "minimum": 0.3,
+          "passed": true
+        }
+      ],
+      "diagnostics": {
+        "relevance": {
+          "target_n": {
+            "C": 15,
+            "E": 133,
+            "S": 98,
+            "I": 54
+          },
+          "predicted_n": {
+            "C": 48,
+            "I": 70,
+            "E": 115,
+            "S": 67
+          },
+          "recall": {
+            "E": 0.6165413533834586,
+            "S": 0.32653061224489793,
+            "C": 0.6,
+            "I": 0.4444444444444444
+          }
+        },
+        "substitute": {
+          "target_n": {
+            "yes": 115,
+            "no": 185
+          },
+          "predicted_n": {
+            "yes": 38,
+            "no": 262
+          },
+          "recall": {
+            "yes": 0.24347826086956523,
+            "no": 0.9459459459459459
+          }
+        }
+      },
+      "all_development_absolute_gates_passed": false
+    }
+  },
+  "holdout_observed": false,
+  "quality_advantage_established": false,
+  "boundary": "Absolute checks on observed complete DEV, not excluded candidates or changed selector. No independent confirmation or paired-seed quality result."
+}

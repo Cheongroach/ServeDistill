@@ -1,0 +1,393 @@
+{
+  "utc": "2026-10-26T23:41:32.142523+00:00",
+  "rankings": [
+    {
+      "name": "aopd_tau0_k32_trajectory_lr5e5/all4",
+      "variant": "all4",
+      "arm_config": {
+        "objective": "aopd",
+        "train_precision": "float32_torch",
+        "seed": 29,
+        "steps": 640,
+        "prompts_per_step": 10,
+        "group_size": 2,
+        "microbatch": 4,
+        "rollout_batch": 8,
+        "max_new_tokens": 128,
+        "learning_rate": 5e-05,
+        "learning_rate_schedule": "constant_then_linear",
+        "learning_rate_decay_start": 320,
+        "learning_rate_final_ratio": 0.1,
+        "dev_every": 160,
+        "dev_per_domain": 300,
+        "aggregation": "trajectory",
+        "behavior_tolerance": 0.15,
+        "aopd_top_k": 32,
+        "aopd_tau": 0.0
+      },
+      "postprocessing": {
+        "kind": "lora_factor_mean_fp32",
+        "steps": [
+          160,
+          320,
+          480,
+          640
+        ]
+      },
+      "business_macro": 0.6882293431974492,
+      "general_macro": 0.525,
+      "selection_score": 0.6555834745579594,
+      "domains": {
+        "substitute": {
+          "n": 300,
+          "success": 0.7366666666666667,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.0,
+          "selection_score": 0.7200930661029159,
+          "macro_f1": 0.7200930661029159
+        },
+        "search": {
+          "n": 300,
+          "success": 0.18666666666666668,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 28.0,
+          "selection_score": 0.8510171008952994,
+          "ndcg_n": 299,
+          "ndcg": 0.8510171008952994,
+          "mrr": 0.7408492063492063
+        },
+        "relevance": {
+          "n": 300,
+          "success": 0.56,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 6.0,
+          "selection_score": 0.49357786259413244,
+          "macro_f1": 0.49357786259413244
+        },
+        "math": {
+          "n": 100,
+          "success": 0.11,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.33,
+          "selection_score": 0.11
+        },
+        "instruction": {
+          "n": 100,
+          "success": 0.94,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 12.17,
+          "selection_score": 0.94
+        }
+      },
+      "predictions_path": "reports/advantage/raw/aopd-v1/averaged-development/aopd_tau0_k32_trajectory_lr5e5_average_all4/dev.jsonl",
+      "predictions_sha256": "9c35911d239654a6b97f41f83443a12a1a0cc0f4ae043a1ace5fc886659d1da7",
+      "completion_sha256": "48f0acde08ff8767b2135133800aa2a45cfb6ebc4027a09ac21de58976dec638",
+      "independent_regrading_completed": true
+    },
+    {
+      "name": "aopd_tau0_k32_trajectory_lr5e5/last2",
+      "variant": "last2",
+      "arm_config": {
+        "objective": "aopd",
+        "train_precision": "float32_torch",
+        "seed": 29,
+        "steps": 640,
+        "prompts_per_step": 10,
+        "group_size": 2,
+        "microbatch": 4,
+        "rollout_batch": 8,
+        "max_new_tokens": 128,
+        "learning_rate": 5e-05,
+        "learning_rate_schedule": "constant_then_linear",
+        "learning_rate_decay_start": 320,
+        "learning_rate_final_ratio": 0.1,
+        "dev_every": 160,
+        "dev_per_domain": 300,
+        "aggregation": "trajectory",
+        "behavior_tolerance": 0.15,
+        "aopd_top_k": 32,
+        "aopd_tau": 0.0
+      },
+      "postprocessing": {
+        "kind": "lora_factor_mean_fp32",
+        "steps": [
+          480,
+          640
+        ]
+      },
+      "business_macro": 0.6816902405165907,
+      "general_macro": 0.515,
+      "selection_score": 0.6483521924132726,
+      "domains": {
+        "substitute": {
+          "n": 300,
+          "success": 0.7366666666666667,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.0,
+          "selection_score": 0.7170453324418868,
+          "macro_f1": 0.7170453324418868
+        },
+        "search": {
+          "n": 300,
+          "success": 0.19,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 28.0,
+          "selection_score": 0.8539992369811057,
+          "ndcg_n": 299,
+          "ndcg": 0.8539992369811057,
+          "mrr": 0.7423492063492063
+        },
+        "relevance": {
+          "n": 300,
+          "success": 0.5433333333333333,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 6.0,
+          "selection_score": 0.47402615212677945,
+          "macro_f1": 0.47402615212677945
+        },
+        "math": {
+          "n": 100,
+          "success": 0.11,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.43,
+          "selection_score": 0.11
+        },
+        "instruction": {
+          "n": 100,
+          "success": 0.92,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 12.3,
+          "selection_score": 0.92
+        }
+      },
+      "predictions_path": "reports/advantage/raw/aopd-v1/averaged-development/aopd_tau0_k32_trajectory_lr5e5_average_last2/dev.jsonl",
+      "predictions_sha256": "67b3c7c164b0e05ef16cfdfc1d604204870a6a80c4bec492d64bef9f4bfab347",
+      "completion_sha256": "4e264bc187404543aa85a0a682eadd7eff8ba752f42fd41ddab88b5bfd212220",
+      "independent_regrading_completed": true
+    },
+    {
+      "name": "aopd_tau0_k32_trajectory_lr5e5/final",
+      "variant": "final",
+      "arm_config": {
+        "objective": "aopd",
+        "train_precision": "float32_torch",
+        "seed": 29,
+        "steps": 640,
+        "prompts_per_step": 10,
+        "group_size": 2,
+        "microbatch": 4,
+        "rollout_batch": 8,
+        "max_new_tokens": 128,
+        "learning_rate": 5e-05,
+        "learning_rate_schedule": "constant_then_linear",
+        "learning_rate_decay_start": 320,
+        "learning_rate_final_ratio": 0.1,
+        "dev_every": 160,
+        "dev_per_domain": 300,
+        "aggregation": "trajectory",
+        "behavior_tolerance": 0.15,
+        "aopd_top_k": 32,
+        "aopd_tau": 0.0
+      },
+      "postprocessing": {
+        "kind": "final_checkpoint"
+      },
+      "business_macro": 0.66990560892847,
+      "general_macro": 0.52,
+      "selection_score": 0.6399244871427759,
+      "domains": {
+        "substitute": {
+          "n": 300,
+          "success": 0.7166666666666667,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.0,
+          "selection_score": 0.6955551045260808,
+          "macro_f1": 0.6955551045260808
+        },
+        "search": {
+          "n": 300,
+          "success": 0.18666666666666668,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 28.0,
+          "selection_score": 0.8506482087458158,
+          "ndcg_n": 299,
+          "ndcg": 0.8506482087458158,
+          "mrr": 0.7358492063492063
+        },
+        "relevance": {
+          "n": 300,
+          "success": 0.5266666666666666,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 6.0,
+          "selection_score": 0.46351351351351355,
+          "macro_f1": 0.46351351351351355
+        },
+        "math": {
+          "n": 100,
+          "success": 0.11,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 7.31,
+          "selection_score": 0.11
+        },
+        "instruction": {
+          "n": 100,
+          "success": 0.93,
+          "json_valid": 1.0,
+          "constraint_violation": 0.0,
+          "truncated": 0.0,
+          "mean_output_tokens": 12.27,
+          "selection_score": 0.93
+        }
+      },
+      "predictions_path": "reports/advantage/raw/aopd-v1/fixed-update-development/aopd_tau0_k32_trajectory_lr5e5/dev-0640.jsonl",
+      "predictions_sha256": "6434c3d37e8b4d20b822d7a9cd6c609cd14ef25d4041667c9e140d3f41848be5",
+      "completion_sha256": "4a4f8f3e56f3b057ee61c63ef444372f30a9e61e8b40ffac349af285d07a04a6",
+      "independent_regrading_completed": true
+    }
+  ],
+  "selected": {
+    "name": "aopd_tau0_k32_trajectory_lr5e5/all4",
+    "variant": "all4",
+    "arm_config": {
+      "objective": "aopd",
+      "train_precision": "float32_torch",
+      "seed": 29,
+      "steps": 640,
+      "prompts_per_step": 10,
+      "group_size": 2,
+      "microbatch": 4,
+      "rollout_batch": 8,
+      "max_new_tokens": 128,
+      "learning_rate": 5e-05,
+      "learning_rate_schedule": "constant_then_linear",
+      "learning_rate_decay_start": 320,
+      "learning_rate_final_ratio": 0.1,
+      "dev_every": 160,
+      "dev_per_domain": 300,
+      "aggregation": "trajectory",
+      "behavior_tolerance": 0.15,
+      "aopd_top_k": 32,
+      "aopd_tau": 0.0
+    },
+    "postprocessing": {
+      "kind": "lora_factor_mean_fp32",
+      "steps": [
+        160,
+        320,
+        480,
+        640
+      ]
+    },
+    "business_macro": 0.6882293431974492,
+    "general_macro": 0.525,
+    "selection_score": 0.6555834745579594,
+    "domains": {
+      "substitute": {
+        "n": 300,
+        "success": 0.7366666666666667,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 7.0,
+        "selection_score": 0.7200930661029159,
+        "macro_f1": 0.7200930661029159
+      },
+      "search": {
+        "n": 300,
+        "success": 0.18666666666666668,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 28.0,
+        "selection_score": 0.8510171008952994,
+        "ndcg_n": 299,
+        "ndcg": 0.8510171008952994,
+        "mrr": 0.7408492063492063
+      },
+      "relevance": {
+        "n": 300,
+        "success": 0.56,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 6.0,
+        "selection_score": 0.49357786259413244,
+        "macro_f1": 0.49357786259413244
+      },
+      "math": {
+        "n": 100,
+        "success": 0.11,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 7.33,
+        "selection_score": 0.11
+      },
+      "instruction": {
+        "n": 100,
+        "success": 0.94,
+        "json_valid": 1.0,
+        "constraint_violation": 0.0,
+        "truncated": 0.0,
+        "mean_output_tokens": 12.17,
+        "selection_score": 0.94
+      }
+    },
+    "predictions_path": "reports/advantage/raw/aopd-v1/averaged-development/aopd_tau0_k32_trajectory_lr5e5_average_all4/dev.jsonl",
+    "predictions_sha256": "9c35911d239654a6b97f41f83443a12a1a0cc0f4ae043a1ace5fc886659d1da7",
+    "completion_sha256": "48f0acde08ff8767b2135133800aa2a45cfb6ebc4027a09ac21de58976dec638",
+    "independent_regrading_completed": true
+  },
+  "completed_candidates": 3,
+  "declared_candidates": 3,
+  "missing_candidates": [],
+  "complete_selection_pool": true,
+  "retained_thresholds": {
+    "offline_sft": {
+      "name": "decay_offline_trajectory_lr5e5/all4",
+      "business_macro": 0.7038299984194807
+    },
+    "oracle_sft": {
+      "name": "commoninit080/commoninit080_oracle_trajectory_lr5e5/last2",
+      "business_macro": 0.687469949849396
+    }
+  },
+  "selected_dev_business_deltas": {
+    "offline_sft": -0.015600655222031468,
+    "oracle_sft": 0.0007593933480531945
+  },
+  "quality_advantage_established": false,
+  "binary_audit_required": true,
+  "independent_regrading_completed": true,
+  "holdout_observed": false,
+  "artifact_contract_sha256": "d5bb2d5072a18d8bea2e042cbcfcc02b2f8ab55711228b0c7ad1f6b22103597c",
+  "boundary": "Observed DEV only; independent holdouts remain sealed."
+}

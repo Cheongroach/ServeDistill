@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "arm": "aopd_tau0_k32_trajectory_lr5e5",
+  "objective": "aopd",
+  "config_sha256": "23189f2c698a4fcdbcecb1d6321c5fee1fe4a832c30e67cf5e798cb154380152",
+  "initial_adapter_file_sha256": "cd56fbb66c87a4d7e3ceba063a9f0d715a922749f77b0472aad21741de0ee20c",
+  "metrics_sha256": "aa036f8cefdf7564d742e54a5406c2888fb755b63a229502e4057e78b2a93cb2",
+  "completion_sha256": [
+    "cc358eb081e43246c02e991ef719ec9ad691e285e8217869da5b87fff9d024ad",
+    "4a4f8f3e56f3b057ee61c63ef444372f30a9e61e8b40ffac349af285d07a04a6",
+    "4e264bc187404543aa85a0a682eadd7eff8ba752f42fd41ddab88b5bfd212220",
+    "48f0acde08ff8767b2135133800aa2a45cfb6ebc4027a09ac21de58976dec638"
+  ],
+  "aopd_contract": {
+    "source": "arXiv:2605.06387v2",
+    "intervention": "P_T(y_t)-P_S(y_t) <= tau",
+    "tau": 0.0,
+    "teacher_top_k": 32,
+    "divergence": "teacher-support truncated forward KL",
+    "beta": 1.0,
+    "scale": "1/K"
+  },
+  "holdout_observed": false,
+  "utc": "2026-10-26T23:41:48.646068+00:00"
+}

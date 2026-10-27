@@ -28,15 +28,17 @@ class ToyRuntime:
         elif reference:
             logits=torch.tensor([.0,.0,.0]).expand(*tokens.shape,3)
         else:logits=self.weight.expand(*tokens.shape,3)
-        logs=logits.log_softmax(-1)
-        result={'logp':logs.gather(-1,tokens.unsqueeze(-1)).squeeze(-1)}
+        normalizer=logits.logsumexp(-1)
+        logs=logits-normalizer.unsqueeze(-1)
+        result={'logp':logs.gather(-1,tokens.unsqueeze(-1)).squeeze(-1),
+                'log_normalizer':normalizer}
         if entropy:result['entropy']=-(logs.exp()*logs).sum(-1)
         if keep_logits:result['logits']=logits
         return result
 
 
 class ExpandedTests(unittest.TestCase):
-    def update(self,microbatch,frozen=False):
+    def update(self,microbatch,frozen=False,objective='full_kl'):
         runtime=ToyRuntime()
         tokens=torch.tensor([[0,1,2],[1,2,0],[2,0,1],[1,0,2]])
         mask=torch.tensor([[1,1,0],[1,0,0],[1,1,1],[1,1,0]],dtype=torch.bool)
@@ -45,7 +47,7 @@ class ExpandedTests(unittest.TestCase):
         rollout={'rows':rows,'tokens':tokens,'mask':mask,'behavior_logp':old}
         params=[runtime.weight];before=[runtime.weight.detach().clone()]
         opt=torch.optim.AdamW(params,lr=2e-5,weight_decay=0.)
-        cfg=Config(objective='full_kl',microbatch=microbatch)
+        cfg=Config(objective=objective,microbatch=microbatch,aopd_top_k=3)
         teacher=runtime.score(rows,tokens,mask,teacher=True,keep_logits=True) if frozen else None
         runtime.teacher_calls=0
         with tempfile.TemporaryDirectory() as tmp,patch('torch.cuda.synchronize'):
@@ -60,6 +62,14 @@ class ExpandedTests(unittest.TestCase):
         torch.testing.assert_close(a[1],b[1],atol=1e-7,rtol=1e-6)
         torch.testing.assert_close(a[2],b[2],atol=1e-7,rtol=1e-6)
         self.assertEqual(a[3],4);self.assertEqual(b[3],1)
+
+    def test_aopd_update_matches_across_microbatch(self):
+        a=self.update(1,objective='aopd');b=self.update(4,objective='aopd')
+        self.assertAlmostEqual(a[0][0]['loss'],b[0][0]['loss'],places=6)
+        torch.testing.assert_close(a[1],b[1],atol=1e-7,rtol=1e-6)
+        torch.testing.assert_close(a[2],b[2],atol=1e-7,rtol=1e-6)
+        self.assertAlmostEqual(a[0][0]['aopd_intervention_fraction'],
+                               b[0][0]['aopd_intervention_fraction'],places=6)
 
     def test_frozen_teacher_has_no_recomputed_teacher_calls(self):
         a=self.update(1);b=self.update(1,True)

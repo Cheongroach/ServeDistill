@@ -16,11 +16,12 @@ import torch
 
 from .data import BUSINESS, canonical, grade, load_rows
 from .losses import (
-    DevWeightController, full_reverse_kl, grpo_advantages, mix_losses,
-    opd_advantages, policy_loss,
+    DevWeightController, asymmetric_opd_loss, full_reverse_kl, grpo_advantages,
+    mix_losses, opd_advantages, policy_loss,
 )
 from .runtime import Runtime, append_json, seed_all, stratified, write_json
-from .scheduling import Config, schedule
+from .scheduling import Config, schedule, update_learning_rate
+from .time_budget import TrainingBudget
 
 
 def tensor_fingerprint(value) -> str:
@@ -49,7 +50,7 @@ def parameter_state(runtime: Runtime) -> dict:
 
 
 def save_checkpoint(runtime, optimizer, config, controller, step, output, best_score,
-                    tokens_seen, monitor_history) -> dict:
+                    tokens_seen, monitor_history, budget=None) -> dict:
     path = output / f"checkpoint-{step:04d}"
     path.mkdir(parents=True, exist_ok=True)
     runtime.student.save_pretrained(path)
@@ -71,6 +72,8 @@ def save_checkpoint(runtime, optimizer, config, controller, step, output, best_s
             state["python_rng"], state["numpy_rng"], state["torch_rng"], state["cuda_rng"]]),
         "tokens_seen": tokens_seen,
     }
+    if budget is not None:
+        metadata["time_budget"] = budget.snapshot()
     write_json(path / "state.json", metadata)
     write_json(output / "latest.json", {"path": path.name, **metadata})
     return metadata
@@ -78,7 +81,7 @@ def save_checkpoint(runtime, optimizer, config, controller, step, output, best_s
 
 def load_checkpoint(runtime, optimizer, path: Path, config: Config, controller) -> dict:
     state = torch.load(path / "training.pt", map_location="cpu", weights_only=False)
-    if state["config"] != dataclasses.asdict(config):
+    if dataclasses.asdict(Config(**state["config"])) != dataclasses.asdict(config):
         raise ValueError("Resume configuration differs from the saved immutable configuration")
     optimizer.load_state_dict(state["optimizer"])
     for item in optimizer.state.values():
@@ -100,6 +103,10 @@ def load_checkpoint(runtime, optimizer, path: Path, config: Config, controller) 
     expected = json.loads((path / "state.json").read_text())
     if any(actual[key] != expected[key] for key in actual):
         raise RuntimeError("Cold-process restoration fingerprint mismatch")
+    if config.method_time_budget_seconds is not None:
+        if "time_budget" not in expected:
+            raise ValueError("Time-budget checkpoint has no measured elapsed time")
+        state["time_budget"] = expected["time_budget"]
     return {**state, "restoration": {"passed": True, "step": state["step"], **actual}}
 
 
@@ -152,6 +159,10 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
     total_actions = mask.sum().item()
     version = step
     sft = config.objective in ("oracle_sft", "offline_sft")
+    anchor_counts = None
+    if config.anchor_ce_weight:
+        anchor_counts = [len(runtime.tokenizer.encode(canonical(row["target"]),
+                          add_special_tokens=False)) + 1 for row in rows]
     audit = defaultdict(float)
     max_error = 0.0
     for start in range(0, len(rows), config.microbatch):
@@ -161,7 +172,7 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
         teacher_seconds = 0.0
         with span("learner_forward"):
             current = runtime.score(batch, tok, m, entropy=True,
-                                    keep_logits=config.objective == "full_kl")
+                                    keep_logits=config.objective in ("full_kl", "aopd"))
         logp = current["logp"]
         m = m.to(logp.device)
         factor = m.sum().item() / total_actions if config.aggregation == "token" else len(batch) / len(rows)
@@ -191,7 +202,7 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
                 teacher_started = time.monotonic()
                 with span("teacher_forward"):
                     teacher = (runtime.score(batch, tok, m, teacher=True,
-                                            keep_logits=config.objective == "full_kl")
+                                            keep_logits=config.objective in ("full_kl", "aopd"))
                                if frozen_teacher is None else {
                                    key: value[start:end].to(logp.device)
                                    for key, value in frozen_teacher.items()})
@@ -206,12 +217,25 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
                         kl = full_reverse_kl(
                             current["logits"], teacher["logits"].to(logp.device))
                         opd_loss = reduce_actions(kl, m, config.aggregation)
+                elif config.objective == "aopd":
+                    with span("asymmetric_opd"):
+                        opd_loss, aopd_metrics = asymmetric_opd_loss(
+                            logp, old, teacher_logp,
+                            current["logits"], teacher["logits"].to(logp.device), m,
+                            config.aopd_top_k, config.aopd_tau, config.clip,
+                            config.aggregation,
+                            current["log_normalizer"],
+                            teacher["log_normalizer"].to(logp.device),
+                        )
+                    for key, value in aopd_metrics.items():
+                        if key.startswith("aopd_"):
+                            audit[key] += value * factor
                 else:
                     opd_loss, _ = policy_loss(
                         logp, old, signal, m, config.clip, config.aggregation)
                 audit["teacher_sampled_kl"] += reduce_actions(-signal, m, config.aggregation).item() * factor
                 del teacher
-            if config.objective == "full_kl":
+            if config.objective in ("full_kl", "aopd"):
                 loss = opd_loss
             else:
                 loss = mix_losses(rl_loss, opd_loss, controller.weight,
@@ -243,6 +267,20 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
         with span("backward"):
             (loss * factor).backward()
         del current, logp, loss
+        if config.anchor_ce_weight:
+            from .supervision import gold_ce
+            with span("anchor_forward"):
+                anchor = gold_ce(runtime, batch, config.aggregation)
+            if not bool(torch.isfinite(anchor)):
+                raise FloatingPointError("Non-finite supervised anchor")
+            # Gold and sampled trajectories have separate denominators.
+            anchor_factor = (sum(anchor_counts[start:end]) / sum(anchor_counts)
+                             if config.aggregation == "token" else len(batch) / len(rows))
+            audit["anchor_ce_loss"] += anchor.detach().item() * anchor_factor
+            audit["loss"] += config.anchor_ce_weight * anchor.detach().item() * anchor_factor
+            with span("anchor_backward"):
+                (config.anchor_ce_weight * anchor * anchor_factor).backward()
+            del anchor
         torch.cuda.synchronize()
         totals["learner"] += time.monotonic() - learner_started - teacher_seconds
     gradients_finite = all(p.grad is None or bool(torch.isfinite(p.grad).all()) for p in parameters)
@@ -262,7 +300,11 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
 
 
 def train(args) -> dict:
+    process_started = time.monotonic()
     config = Config(**json.loads(Path(args.config).read_text()))
+    update_learning_rate(config, 1)
+    budget = TrainingBudget(config.method_time_budget_seconds, config.prior_method_seconds,
+                            started=process_started)
     observation = getattr(args, "observation", None)
     if observation is None and getattr(args, "observe_host", False):
         from .observation import TrainingObservation
@@ -298,6 +340,10 @@ def train(args) -> dict:
         restored = load_checkpoint(runtime, optimizer, Path(args.resume), config, controller)
         start_step, tokens_seen = restored["step"], restored["tokens_seen"]
         best_score, history = restored["best_score"], restored["monitor_history"]
+        if config.method_time_budget_seconds is not None:
+            budget = TrainingBudget(
+                config.method_time_budget_seconds, config.prior_method_seconds,
+                started=process_started, restored=restored["time_budget"])
         write_json(output / f"restoration-{start_step:04d}.json", restored["restoration"])
     elif fork_parent:
         parent_path = Path(fork_parent)
@@ -328,9 +374,17 @@ def train(args) -> dict:
         controller.last_business = baseline["business_macro"]
         write_json(output / "baseline.json", baseline)
         totals["dev"] += time.monotonic() - started
+    if start_step == 0 and budget.exhausted():
+        raise TimeoutError("Method time budget exhausted before the first update")
+    completed_steps = start_step
     for step in range(start_step, config.steps):
+        if budget.exhausted():
+            break
         if observation is not None:
             observation.begin_update(step + 1)
+        learning_rate_used = update_learning_rate(config, step + 1)
+        for group in optimizer.param_groups:
+            group["lr"] = learning_rate_used
         optimizer.zero_grad(set_to_none=True)
         prompts = batches[step]
         before = [p.detach().clone() for p in parameters]
@@ -388,6 +442,7 @@ def train(args) -> dict:
                          for ts, ms in zip(tokens, mask)) / len(rows)
         metrics.update({
             **audit, "step": step + 1, "rollout_version": version,
+            "learning_rate_used": learning_rate_used,
             "learner_version": step + 1, "gradient_norm": norm, "parameter_delta_l2": delta,
             "response_tokens": total_actions, "cumulative_response_tokens": tokens_seen,
             "opd_weight": controller.weight, "behavior_max_error": max_error,
@@ -399,6 +454,7 @@ def train(args) -> dict:
         })
         metrics["alarms"] = alert(metrics, history)
         history.append(metrics)
+        completed_steps = step + 1
         append_json(output / "metrics.jsonl", metrics)
         if observation is not None:
             observation.end_update(metrics)
@@ -419,7 +475,7 @@ def train(args) -> dict:
             score = 0.8 * report["business_macro"] + 0.2 * report["general_macro"]
             checkpoint = save_checkpoint(
                 runtime, optimizer, config, controller, step + 1, output,
-                max(best_score, score), tokens_seen, history)
+                max(best_score, score), tokens_seen, history, budget=budget)
             if score > best_score:
                 best_score = score
                 write_json(output / "selected.json", {
@@ -432,9 +488,23 @@ def train(args) -> dict:
                     raise RuntimeError("Joint training alarm persisted and dev confirmed degradation")
         if args.stop_after and step + 1 >= args.stop_after:
             save_checkpoint(runtime, optimizer, config, controller, step + 1, output,
-                            best_score, tokens_seen, history)
+                            best_score, tokens_seen, history, budget=budget)
             write_json(output / "cold-stop.json", {"step": step + 1, "healthy": True})
             return {"completed": False, "cold_stop": True, "step": step + 1}
+    final_checkpoint = output / f"checkpoint-{completed_steps:04d}"
+    if not final_checkpoint.exists():
+        # The budget can expire between scheduled development checkpoints.
+        dev_started = time.monotonic()
+        report = runtime.evaluate(dev, output, f"dev-{completed_steps:04d}",
+                                  version=completed_steps)
+        totals["dev"] += time.monotonic() - dev_started
+        score = 0.8 * report["business_macro"] + 0.2 * report["general_macro"]
+        checkpoint = save_checkpoint(
+            runtime, optimizer, config, controller, completed_steps, output,
+            max(best_score, score), tokens_seen, history, budget=budget)
+        if score > best_score:
+            write_json(output / "selected.json", {
+                "path": final_checkpoint.name, "dev_score": score, **checkpoint})
     teacher_unchanged = True
     if runtime.teacher:
         teacher_unchanged = frozen_teacher == tensor_fingerprint(
@@ -442,7 +512,11 @@ def train(args) -> dict:
         if not teacher_unchanged:
             raise RuntimeError("Frozen teacher fingerprint changed")
     result = {
-        "completed": True, "steps": config.steps, "response_tokens": tokens_seen,
+        "completed": True, "steps": completed_steps, "planned_steps": config.steps,
+        "stop_reason": "method_time_budget" if completed_steps < config.steps
+                       else "update_budget",
+        "final_checkpoint": final_checkpoint.name, "time_budget": budget.snapshot(),
+        "response_tokens": tokens_seen,
         "elapsed_seconds": time.monotonic() - started, "phase_seconds": totals,
         "teacher_unchanged": teacher_unchanged, "trainable_parameters": sum(p.numel() for p in parameters),
         "nonzero_updates": sum(h["parameter_delta_l2"] > 0 for h in history),
