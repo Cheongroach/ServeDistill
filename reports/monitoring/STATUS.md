@@ -2,9 +2,13 @@
 
 2026-10-27。
 
-统一监控配置和运行器已实现，独立仓库 CPU 回归通过 132 项。已提交一个 1-H20 任务，分别冷恢复执行 none、NCU、Nsight Systems 和 PyTorch profiler；真实 GPU 环境已报告 NVIDIA H20 / PyTorch 2.9.1 / CUDA 12.9，任务仍在准备资产。
+统一监控配置和运行器已实现，当前 CPU 回归通过 136 项。首次 1-H20 套件已结束：实际环境为 NVIDIA H20 / PyTorch 2.9.1 / CUDA 12.9 / driver 535.261.03。none、Nsight Systems 和 PyTorch profiler 均退出 0，冷恢复后的 update162 运行门通过；实际 CUDA/API/NVTX 和 PyTorch GPU kernel trace 已核查。
 
-基线和 nsys 副本已成功退出并通过 update162 的 runtime gate。NCU 2026.1.1 在实际 driver 535.261.03 上以 application code 11 失败，日志报告 CUDA driver 不兼容；详见 `NCU_COMPATIBILITY_FAILURE.json`。版本与 query-metrics 成功不替代 capture。下一步测试兼容的官方旧版，真实 counter、状态对比和终态成本仍未闭合。
+NCU 2026.1.1 以 application code 11 报告驱动不兼容；套件最终失败、Pod 退出 1，详见 `NCU_COMPATIBILITY_FAILURE.json`。版本与 query-metrics 成功不替代 capture。新 1-H20 串行兼容任务已提交，尚无有效 NCU counter；每个候选使用实际训练捕获，并保留失败。
+
+91 个输出文件与原始 `outputs.json` 的大小/SHA256 一致；公开导出见 `profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json`。nsys/PyTorch 与 none 的 RNG、step 和 token 数一致，300 个 adapter / 900 个 optimizer tensor 通过预设数值容差；精确哈希不一致，见两份 `PROFILE_NUMERICS_*.json`。这不证明生成质量等价。
+
+首次套件的 terminal Pod 分配区间与成本见 `PROFILE_PROFESSIONAL_V1_COST.json`，包括准备、失败工具和导出；新兼容性任务单独计费。任何 profiler 的墙钟都不进入速度优势表。
 
 DCGM、perf、Compute Sanitizer 配置可通过文档中的入口运行；本轮未验证它们的硬件/权限环境。
 

@@ -1,7 +1,9 @@
 """Auditable profiler commands and Linux host sampling; no training dependencies."""
 from __future__ import annotations
 
+import csv
 import hashlib
+import io
 import json
 import math
 import os
@@ -180,3 +182,90 @@ def runtime_validity(root: Path, config: dict, gates: dict) -> dict:
             "observed_steps": [r["step"] for r in selected],
             "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
             "boundary": gates["quality_boundary"]}
+
+
+def csv_records(path: Path, required: set[str]) -> list[dict]:
+    """Ignore CLI preambles but require the real exported CSV header."""
+    if not path.is_file():
+        return []
+    lines = path.read_text(errors="replace").splitlines()
+    for index, line in enumerate(lines):
+        fields = next(csv.reader([line]), [])
+        if required.issubset(fields):
+            return list(csv.DictReader(io.StringIO("\n".join(lines[index:]))))
+    return []
+
+
+def metric_number(value: str | None) -> float | None:
+    try:
+        result = float((value or "").replace(",", "").strip())
+    except ValueError:
+        return None
+    return result if math.isfinite(result) else None
+
+
+def report_validity(root: Path, config: dict, audit: dict) -> dict:
+    """A nonempty report alone does not establish usable profiler evidence."""
+    backend = config["backend"]
+    checks, details = {}, {}
+    if backend == "ncu":
+        rows = csv_records(root / "ncu-metrics.csv",
+                           {"Kernel Name", "Metric Name", "Metric Value", "Metric Unit"})
+        requested = config["options"].get("metrics", [])
+        kernels = {}
+        for row in rows:
+            if not row.get("Kernel Name"):
+                continue
+            key = (row.get("ID"), row["Kernel Name"])
+            kernels.setdefault(key, {})[row.get("Metric Name")] = row
+        checks["raw_export_succeeded"] = audit.get("raw_metrics", {}).get("returncode") == 0
+        checks["kernels_captured"] = bool(kernels)
+        checks["all_requested_metrics_present"] = bool(kernels) and all(
+            all(name in metrics for name in requested) for metrics in kernels.values())
+        values = [row for metrics in kernels.values() for name, row in metrics.items()
+                  if not requested or name in requested]
+        checks["finite_values_with_units"] = bool(values) and all(
+            row.get("Metric Unit") and metric_number(row.get("Metric Value")) is not None
+            and metric_number(row.get("Metric Value")) >= 0 for row in values)
+        checks["positive_kernel_duration"] = bool(kernels) and all(
+            metric_number(metrics.get("gpu__time_duration.sum", {}).get("Metric Value"))
+            is not None
+            and metric_number(metrics["gpu__time_duration.sum"]["Metric Value"]) > 0
+            for metrics in kernels.values())
+        details = {"kernel_launches": len(kernels), "metric_rows": len(values),
+                   "requested_metrics": requested}
+    elif backend == "nsys":
+        for report in ("cuda_gpu_kern_sum", "cuda_api_sum", "nvtx_sum"):
+            name_key = "Range" if report == "nvtx_sum" else "Name"
+            rows = csv_records(root / (report + ".csv"), {name_key})
+            checks[report + "_export"] = audit.get(report, {}).get("returncode") == 0
+            checks[report + "_has_data"] = any(
+                row.get(name_key) and any(
+                    key and ("Instances" in key or "Calls" in key or "Range Count" in key)
+                    and (metric_number(value) or 0) > 0
+                    for key, value in row.items())
+                and (metric_number(row.get("Total Time (ns)")) or 0) > 0 for row in rows)
+        nvtx = csv_records(root / "nvtx_sum.csv", {"Range"})
+        checks["learner_range_present"] = any(
+            "learner_forward" in row.get("Range", "") for row in nvtx)
+    elif backend == "torch":
+        path = root / "application/observation/torch-trace.json"
+        events = json.loads(path.read_text()).get("traceEvents", []) if path.is_file() else []
+        checks["gpu_kernel_events"] = any(
+            event.get("cat") == "kernel" and event.get("ph") == "X"
+            and (metric_number(str(event.get("dur", ""))) or 0) > 0 for event in events)
+        checks["learner_range_present"] = any(
+            event.get("name") == "learner_forward" for event in events)
+    elif backend == "perf":
+        path = root / "perf-stat.csv"
+        rows = list(csv.reader(path.read_text().splitlines())) if path.is_file() else []
+        present = {row[2]: row[0] for row in rows if len(row) >= 3}
+        checks["all_events_counted"] = all(
+            metric_number(present.get(event)) is not None
+            for event in config["options"]["events"])
+    elif backend == "sanitizer":
+        path = root / "sanitizer.log"
+        checks["zero_error_summary"] = (
+            path.is_file() and "ERROR SUMMARY: 0 errors" in path.read_text())
+    return {"passed": all(checks.values()), "checks": checks, **details,
+            "boundary": "Captured diagnostics only; representative kernel selection is a separate check."}

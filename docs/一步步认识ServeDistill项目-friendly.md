@@ -576,6 +576,8 @@ python scripts/profile_run.py \
 
 从 `manifest.json` 核查输入，从 `tool-audit.json` 核查退出码，从 `validity.json` 核查数值和窗口，从实际 trace/CSV 阅读采集数据。`outputs.json` 提供产物哈希。
 
+本轮 [公开导出](../reports/monitoring/profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json)已核验 91 个原始输出文件。nsys/PyTorch trace 有真实 GPU/NVTX 内容，NCU 2026.1.1 仍是驱动不兼容失败。状态数值近似通过和精确哈希一致是两个字段；不能互换。
+
 完整字段、命令和局限见 [PERFORMANCE_MONITORING.md](../PERFORMANCE_MONITORING.md)。
 
 只记住：**必须同时存在元数据和对应的真实产物。**
@@ -605,7 +607,7 @@ GPU·h 使用每个 Pod 的实际分配区间乘卡数，不只统计训练循�
 
 ### 第 54 步：把结论限制在实际完成的验收
 
-历史 expanded 对照测得 learner 2.98×、完整训练 1.98× 的速度变化；业务绝对质量未通过。新 anchor 方法目前只有实现、CPU 回归和任务提交证据，仍需最终模型、独立评分与完整成本。
+历史 expanded 对照测得 learner 2.98×、完整训练 1.98× 的速度变化；业务绝对质量未通过。新 anchor 轮已有实现、CPU 回归和 GPU 初始 DEV/训练进度，仍需四种方法的全部最终模型、独立评分与完整成本。专业监控已验证 nsys/PyTorch 采集内容；NCU 兼容性仍待实际 capture。
 
 只记住：**哪个层次实际通过，就报告哪个层次。**
 

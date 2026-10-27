@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "adapter": {"rtol": 0.00001, "atol": 0.000001},
+  "optimizer": {"rtol": 0.0001, "atol": 0.00000001},
+  "require_identical_rng": true,
+  "boundary": "Diagnostic state compatibility only. Tolerances are frozen before inspecting tensor differences; this does not establish identical trajectories, output predictions or business quality."
+}

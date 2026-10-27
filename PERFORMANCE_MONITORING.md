@@ -2,7 +2,7 @@
 
 本文是独立的复现手册。先确定要测的量，再选工具；每一步都说明输入、参数、输出和能支持的结论。项目教学顺序见 [54 步教程](docs/一步步认识ServeDistill项目-friendly.md)。
 
-2026-10-27 状态：历史 nsys/PyTorch 采集和 expanded 无 profiler 测量已归档；本轮 none/nsys 副本通过 update162 的运行门。NCU 2026.1.1 在实际 driver 535.261.03 上报告不兼容，兼容版本正在核查，尚无本轮有效 NCU counter。DCGM、perf、compute-sanitizer 提供可执行配置，其本轮验证尚未完成。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
+2026-10-27 状态：本轮 none/nsys/PyTorch 副本均通过 update162 的运行门；实际 CUDA/NVTX、GPU kernel trace 和 91 个原始输出文件的 SHA256 已独立核验。[本轮导出](reports/monitoring/profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json)保留版本、遥测、统计 CSV、压缩 PyTorch trace、失败记录与原始/公开哈希。NCU 2026.1.1 在 driver 535.261.03 上报告不兼容；串行兼容性任务已提交，尚无本轮有效 NCU counter。DCGM、perf、compute-sanitizer 的本轮环境验证尚未完成。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
 
 ## 第一阶段：确定测量问题与边界
 
@@ -50,7 +50,7 @@ python -m pytest -q tests
 
 保留宿主 CUDA 环境提供的 PyTorch，先核对 CUDA/驱动兼容性。核心 Transformers/PEFT 版本在 `pyproject.toml` 中固定；运行时记录真实版本，安装声明不替代环境审计。
 
-CPU 回归在当前隔离依赖环境通过 132 项，包含完整更新在不同 microbatch 切分下的一致性检查。这不证明 GPU 执行、计数器权限或新方法业务质量。
+CPU 回归在当前隔离依赖环境通过 136 项，包含完整更新的 microbatch 一致性、空/缺失 counter 拒绝、真实 NVTX CSV 结构、CPU-only trace 拒绝和数值漂移检查。CPU 测试不证明 GPU 执行、计数器权限或新方法业务质量。
 
 ### 第 5 步：指定模型、数据和 checkpoint
 
@@ -66,6 +66,8 @@ export TOOLS_ROOT=/absolute/path/nsight-tools
 `DATA` 目录含 `train.jsonl` 和 `dev.jsonl`。输入使用你的实际路径；不要把这些变量留为空。`--config` 是源训练的 immutable config；`--profile` 是观测配置，二者用途不同。
 
 checkpoint 必须含 `state.json`、`training.pt`、`adapter_model.safetensors` 和 adapter 配置。模型 manifest 应验证权重、tokenizer 和配置内容。
+
+`experiments/profile-professional-v1/` 和 `experiments/ncu-compatibility-v1/` 保存各自实际执行的 code/config archive 与逐文件 SHA256。复跑历史采集时先在新目录解压对应 `source.tar.gz`，核对 manifest，再提供外部数据、模型和 checkpoint。当前 main 的后续监控改进与冻结采集源码分别记录，不能把当前 head 当成历史实际执行版本。
 
 ### 第 6 步：固定观测窗口
 
@@ -143,6 +145,17 @@ python scripts/install_profile_tools.py --root "$TOOLS_ROOT" --tools nsys ncu
 完整 digest 见 `configs/monitoring/tools.lock.json`。`installation-audit.json` 保存实际 binary、version 和包指纹。现成工具可通过 `SERVEDISTILL_NSYS` / `SERVEDISTILL_NCU` 指定绝对可执行路径，实际版本仍必须归档；suite 显式使用它安装的锁定二进制。
 
 当前锁文件保留首次请求的 NCU 2026.1.1，便于复现失败；它未通过本轮 R535 驱动采集。不要把这份锁文件解释为当前 worker 的已验证兼容推荐。兼容版本必须经实际 capture 后更新，并保留原失败记录。
+
+兼容性配置 `configs/monitoring/ncu-compatibility-candidates.json` 固定官方 2025.2.1 → 2024.1.1 → 2023.3.1 的顺序、包大小和 SHA256。runner 在一张 GPU 上串行执行实际训练副本，首个完整 runtime/counter 门通过的版本才入选：
+
+```bash
+python scripts/run_ncu_compatibility.py \
+  --student "$STUDENT" --teacher "$TEACHER" --data "$DATA" \
+  --config "$TRAIN_CONFIG" --checkpoint "$CHECKPOINT" \
+  --tools-root "$TOOLS_ROOT" --output results/ncu-compatibility
+```
+
+每版输出 `capture/`、`runner.log`；`cases.json` 保留所有尝试和失败，`completed.json` 保存入选版本与候选配置 SHA256。下载包通过校验只证明来源一致，query-metrics 成功只证明查询可用，都不替代实际采集。
 
 停下来回答：包下载地址相同但 SHA256 不同，应该继续解压吗？
 
@@ -256,6 +269,8 @@ ncu --import capture.ncu-rep --csv --page raw > ncu-metrics.csv
 
 输出 `capture.ncu-rep` 可用 GUI 打开；`ncu-metrics.csv` 的 metric name、value、unit、kernel 和 launch 信息应一并保存。版本、可用指标列表、counter 权限错误和非零导出退出码都在 audit/log 中。
 
+`validity.json.report` 要求 raw export 退出 0、至少一个真实 kernel、每个 kernel 的请求 metric 齐全、带单位的有限非负数，以及正的 kernel duration。空 CSV、`N/A`、缺失 DRAM metric 或导出失败均不能通过。Nsight Systems 同样要求 kernel/API/NVTX 三类真实统计行与 learner 范围；PyTorch trace 要求实际 GPU kernel 和 learner 范围。
+
 出现 `ERR_NVGPUCTRPERM` 时，仅说明当前运行身份不能读取所需计数器。保留失败证据，并通过平台支持的 counter 权限配置解决；不要把 nvidia-smi utilization 填进 NCU 缺失字段，也不要在共享宿主上擅自修改驱动参数。
 
 NCU 和 DCGM profiling counters 不应在同一采集窗口竞争；必要时关闭你自己的 DCGM counter watcher 后单独运行。涉及 NCCL/并发 stream 的 kernel replay 可能等待其他工作，应进一步选择合适 replay 模式和范围，不能把单卡配置未经验证推广到多卡。
@@ -356,6 +371,18 @@ python scripts/profile_run.py \
 
 `run_profiler_suite.py` 还比较各诊断进程最终 adapter/Adam/RNG 指纹，输出 `exact_final_state_equivalence`。该字段 false 时不能声称数值轨迹等价，即使各自的 runtime gate 都通过。数值近似相容需要另行定义容差和任务检验，不能改名为精确一致。
 
+本轮 nsys/PyTorch 与 none 的 RNG、update、有效 token 数相同，精确指纹不同。[nsys 状态比较](reports/monitoring/PROFILE_NUMERICS_NSYS.json)和[PyTorch 状态比较](reports/monitoring/PROFILE_NUMERICS_TORCH.json)量化了全部 300 个 adapter 与 900 个 optimizer tensor：adapter 最大绝对差分别为 `3.73e-9` / `1.86e-9`，optimizer 为 `4.75e-9` / `5.76e-9`。两者通过检查差值前冻结的容差，但这仅支持诊断状态近似相容，不证明生成文本或业务质量等价。
+
+```bash
+python scripts/compare_profile_states.py \
+  --reference results/profiler-suite/none/application/train/checkpoint-0162 \
+  --candidate results/profiler-suite/nsys/application/train/checkpoint-0162 \
+  --gates configs/validity/profile-numerics.json \
+  --output results/nsys-numerics.json
+```
+
+输入必须是已核验的本地训练 checkpoint；`training.pt` 含 pickle 状态，不能加载不可信来源。adapter 容差为 `rtol=1e-5, atol=1e-6`，optimizer 为 `rtol=1e-4, atol=1e-8`；要求相同 key/shape/dtype、有限值、相同 param groups/step/token 和 RNG。输出逐 tensor 的最大绝对差、L2 差、参考范数、相对 L2、精确一致和容差判定。
+
 ```bash
 python scripts/run_profiler_suite.py \
   --student "$STUDENT" --teacher "$TEACHER" --data "$DATA" \
@@ -414,10 +441,14 @@ python scripts/serving_monitor.py \
 | `system.json` | `scripts/system_watch.py --config <file> ...` |
 | `serving.json` | `scripts/serving_monitor.py --config <file> ...` |
 | `tools.lock.json` | `scripts/install_profile_tools.py --lock <file> ...` |
+| `ncu-compatibility-candidates.json` | `scripts/run_ncu_compatibility.py --candidates <file> ...` |
 | `validity/runtime.json` | `scripts/profile_run.py --validity <file> ...` |
+| `validity/profile-numerics.json` | `scripts/compare_profile_states.py --gates <file> ...` |
 | `anchor-development-v1.json` | `scripts/run_anchor_development.py --protocol <file> ...`；须使用绑定输入和源码 |
 
 默认配置都需要实际输入路径和对应 GPU/工具环境，不提供伪造 trace、占位测量值或自动通过的缺失字段。
+
+公开采集导出使用 `scripts/export_profile_evidence.py --evidence <原始目录> --output <新目录>`，先核验每个 backend 的 `outputs.json`，再脱敏文本并压缩完整 PyTorch trace。`gzip -dc torch-trace.json.gz > torch-trace.json` 后可用 Perfetto 打开。原始 `.nsys-rep`、SQLite 和训练 tensor 保留在独立原始证据目录，公开 manifest 记录其字节数/哈希；文本脱敏后的哈希与原始文件不能混用。首次失败套件的实际 Pod 分配成本见 `reports/monitoring/PROFILE_PROFESSIONAL_V1_COST.json`，新兼容性任务成本另计。
 
 ## 官方技术参考
 

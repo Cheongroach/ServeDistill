@@ -9,7 +9,7 @@ import sys
 import time
 
 from servedistill.profiling import (
-    HostSampler, build_command, digest, locate, runtime_validity, validate_config,
+    HostSampler, build_command, digest, locate, report_validity, runtime_validity, validate_config,
 )
 
 
@@ -136,7 +136,9 @@ def main():
                    "perf": "perf-stat.csv", "sanitizer": "sanitizer.log"}
         expected = args.output / reports[backend] if backend in reports else None
         validity["trace_present"] = expected is None or (expected.is_file() and expected.stat().st_size > 0)
-        validity["passed"] &= validity["application_succeeded"] and validity["trace_present"]
+        validity["report"] = report_validity(args.output, config, audit)
+        validity["passed"] &= (validity["application_succeeded"] and validity["trace_present"]
+                               and validity["report"]["passed"])
         (args.output / "validity.json").write_text(json.dumps(validity, indent=2) + "\n")
         outputs = {str(p.relative_to(args.output)): {"sha256": digest(p), "bytes": p.stat().st_size}
                    for p in args.output.rglob("*") if p.is_file()}

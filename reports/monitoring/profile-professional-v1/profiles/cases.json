@@ -1,0 +1,26 @@
+[
+  {
+    "backend": "none",
+    "returncode": 0,
+    "started": 1793115147.145437,
+    "ended": 1793115411.6848052
+  },
+  {
+    "backend": "ncu",
+    "returncode": 1,
+    "started": 1793115429.854557,
+    "ended": 1793115441.084289
+  },
+  {
+    "backend": "nsys",
+    "returncode": 0,
+    "started": 1793115480.8176343,
+    "ended": 1793115559.4270842
+  },
+  {
+    "backend": "torch",
+    "returncode": 0,
+    "started": 1793115638.8751478,
+    "ended": 1793115738.7253747
+  }
+]

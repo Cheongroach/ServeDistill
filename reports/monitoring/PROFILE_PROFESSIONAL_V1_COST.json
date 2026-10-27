@@ -1,0 +1,17 @@
+{
+  "scope": "profile_professional_v1",
+  "terminal_status": "failed",
+  "pod_exit_status": 1,
+  "allocated_gpus": 1,
+  "schedule_at": "2026-10-27T15:19:01.000Z",
+  "container_start_at": "2026-10-27T15:19:04.000Z",
+  "stop_at": "2026-10-27T15:50:39.000Z",
+  "allocation_seconds_from_schedule": 1898.0,
+  "allocated_gpu_hours_from_schedule": 0.5272222222222223,
+  "container_running_seconds": 1895.0,
+  "container_running_gpu_hours": 0.5263888888888889,
+  "original_exit_info_sha256": "0e1d2cd932409debe8bb1557b98d709e9e06c29eb5a847a3936b24a6ec128fc2",
+  "included": "asset preparation, all four backend attempts including failed NCU, exports and container shutdown",
+  "excluded": "pre-schedule queue waiting, other experiment allocations",
+  "boundary": "Schedule-to-stop is the observed allocation proxy; not a financial invoice. Failed capture costs are retained. Not a speed or quality result."
+}

@@ -1,0 +1,25 @@
+{
+  "python": "3.11.2 (main, Apr 28 2025, 14:11:48) [GCC 12.2.0]",
+  "versions": {
+    "torch": "2.9.1",
+    "transformers": null,
+    "peft": null,
+    "vllm": null,
+    "flash-linear-attention": null,
+    "causal-conv1d": null,
+    "triton": "3.5.1",
+    "numpy": "2.3.5",
+    "scikit-learn": null
+  },
+  "cuda": "12.9",
+  "device_count": 1,
+  "devices": [
+    "NVIDIA H20"
+  ],
+  "optional_kernels": {
+    "fla": false,
+    "causal_conv1d": false
+  },
+  "unix_seconds": 1793114404.114837,
+  "bf16_backward_finite": true
+}

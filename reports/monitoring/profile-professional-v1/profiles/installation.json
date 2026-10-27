@@ -1,0 +1,7 @@
+{
+  "binaries": {
+    "ncu": "/tmp/servedistill-profile-professional-v1/tools/ncu/opt/nvidia/nsight-compute/2026.1.1/ncu",
+    "nsys": "/tmp/servedistill-profile-professional-v1/tools/nsys/opt/nvidia/nsight-systems-cli/2026.1.1/bin/nsys"
+  },
+  "lock_sha256": "8a7e447737059dfa579a165b5d4325c8434165b417a7ed0aafbd3d3b0d371bd9"
+}

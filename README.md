@@ -18,10 +18,19 @@ include failures and allocation costs.
 A new [DEV-only protocol](configs/anchor-development-v1.json) compares AOPD with a
 fixed gold CE anchor, pure AOPD, oracle SFT, and offline SFT. All methods use one
 common adapter, fresh Adam, paired prompt schedules, and the same Teacher320
-for on-policy feedback and unfiltered offline labels. Four one-GPU jobs were
-submitted; a separate one-GPU profiler verification was submitted. This round
-respects **at most 8 concurrent H20 GPUs**. Submission and CPU tests are setup
-evidence; completed model, quality, profiler, and cost acceptance remain separate.
+for on-policy feedback and unfiltered offline labels. Four one-GPU jobs are running;
+final DEV comparisons remain pending. This round respects **at most 8 concurrent
+H20 GPUs**. Submission and CPU tests are setup evidence; completed model and quality
+acceptance require terminal artifacts and independent scoring.
+
+The [professional profiler verification](reports/monitoring/STATUS.md) collected
+real Nsight Systems and PyTorch GPU traces after cold restoration. All 91 indexed
+output files passed SHA256 checks, and adapter/Adam drift passed the frozen diagnostic
+tolerances while exact hashes differed. NCU 2026.1.1 failed on driver 535.261.03;
+a separate one-GPU compatibility run is queued. Its absence remains a failed counter
+capture. The first suite consumed **0.527 H20 GPU hours**, including preparation and
+failure, separate from historical and DEV allocations. CPU regressions passed **136
+tests**. Profiling diagnostics do not establish speed or quality superiority.
 
 The following paragraphs describe older, closed studies. Their historical GPU
 counts do not change the current eight-GPU limit.
