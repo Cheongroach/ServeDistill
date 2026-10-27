@@ -63,3 +63,17 @@ same updates/prompts 不意味着 same tokens/time。oracle/offline 和 AOPD 的
 输入审计显示：small-version ESCI 只剩 1,273 个未用 test query，GSM8K test 只剩 119 题，SVAMP 为零。改查完整源后有 17,626 个未用 ESCI test query、4,573 道未用 GSM8K train 原题。新确认必须声明抽样总体变化、按原题/查询组排除历史输入，并在任何新模型预测前冻结数据和显著性预算。公开基准是否进入基础模型预训练仍未知。
 
 main `b361316` 已发布以上协议、源码快照、收集器、数据审计、失败成本与文档，当前 CPU 回归 140 项通过。GPU 终态、各权重最终质量和新计数器仍分别等待实证。
+
+## 8. 恢复采集与统一 DEV 验收的核验
+
+main `198271e` 补齐三档权重的统一收集和选择入口，待全部训练结束后重评 30,800 条固定最终 DEV 输出；完整评分尚未执行。实际 rollout ID、版本、学习率、完整更新数、参数变化、token 状态和最终 adapter 都是审计检查项。所有权重、种子和两个强 SFT 齐备后，才按原门槛和同分规则选择；没有合格者则返回 null。CPU 回归 156 项通过，GPU 质量仍待终态产物。
+
+恢复采集使用 NCU 2025.2.1、显式 no_cudnn，实际获得八个基础 kernel 及一个指定 FP32 GEMM。旧解析器只识别长 CSV，误报零 kernel；当前支持真实宽表和单位行，核验了六项捕获的全部 156 个索引文件。原始 false verdict 不覆盖，复核结果另存 `PROFILE_RECOVERY_V1_REVALIDATION.json`。
+
+指定 GEMM 为 1.473088 ms、SM throughput 88.902048%、DRAM throughput 1.975737%、achieved occupancy 12.492236%，寄存器为 255 register/thread，寄存器限制为 2 block，L2 sector hit rate 为 92.505896%。这些是一个过滤 launch 的计数器，不是全训练平均或 BF16 Tensor Core 利用率，也不能证明优化收益。
+
+NCU 基础采集、GEMM、nsys 的 300 个 adapter 与 900 个 optimizer tensor 均通过同 dispatch 基线的预设容差；RNG、step、token 数一致，精确哈希不同。这个数值检查不证明文本或业务质量等价。恢复任务消耗 3,727 秒、1.035278 H20·h，包含准备和失败工具。
+
+独立 host/GPU telemetry 通过，perf/DCGM 未安装。Sanitizer 日志显示 student rollout prefill 的 DeltaNet 路径 OOM，同时记录 ExpandableSegment::map 中 cuMemCreate 的 CUDA_ERROR_INVALID_VALUE，汇总 3 errors。新的 1-H20 对照保持完整模型、输入、rollout 和训练窗口，只关闭 expandable segments，并对比基线与 memcheck。已提交不等于运行成功；原失败、allocator 对照结果及成本分别保留。
+
+稳定质量优势仍未建立。接下来仍须全部 DEV 最终模型、统一独立评分，以及合格候选在新的未观测数据上的预先冻结确认和不重叠复验。
