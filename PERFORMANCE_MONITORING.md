@@ -2,7 +2,7 @@
 
 本文是独立的复现手册。先确定要测的量，再选工具；每一步都说明输入、参数、输出和能支持的结论。项目教学顺序见 [54 步教程](docs/一步步认识ServeDistill项目-friendly.md)。
 
-2026-10-27 状态：历史 nsys/PyTorch 采集和 expanded 无 profiler 测量已归档；新增 NCU/统一监控验证正在 H20 任务中执行。DCGM、perf、compute-sanitizer 提供可执行配置，其本轮验证尚未完成。不得把“有配置”写成“已取得有效硬件计数器”。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
+2026-10-27 状态：历史 nsys/PyTorch 采集和 expanded 无 profiler 测量已归档；本轮 none/nsys 副本通过 update162 的运行门。NCU 2026.1.1 在实际 driver 535.261.03 上报告不兼容，兼容版本正在核查，尚无本轮有效 NCU counter。DCGM、perf、compute-sanitizer 提供可执行配置，其本轮验证尚未完成。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
 
 ## 第一阶段：确定测量问题与边界
 
@@ -141,6 +141,8 @@ python scripts/install_profile_tools.py --root "$TOOLS_ROOT" --tools nsys ncu
 | ncu | `nsight-compute-2026.1.1_2026.1.1.2-1_amd64.deb` | 官方版本化包，大小 329,884,926 bytes，内容 SHA256 已从官方 index 核对 |
 
 完整 digest 见 `configs/monitoring/tools.lock.json`。`installation-audit.json` 保存实际 binary、version 和包指纹。现成工具可通过 `SERVEDISTILL_NSYS` / `SERVEDISTILL_NCU` 指定绝对可执行路径，实际版本仍必须归档；suite 显式使用它安装的锁定二进制。
+
+当前锁文件保留首次请求的 NCU 2026.1.1，便于复现失败；它未通过本轮 R535 驱动采集。不要把这份锁文件解释为当前 worker 的已验证兼容推荐。兼容版本必须经实际 capture 后更新，并保留原失败记录。
 
 停下来回答：包下载地址相同但 SHA256 不同，应该继续解压吗？
 

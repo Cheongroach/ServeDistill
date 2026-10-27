@@ -2,5 +2,7 @@
   "file": "source.tar.gz",
   "sha256": "a24ec1f318a4c8008977598805d73b602f06caf0f7408f06ff2abf5a5d7be86c",
   "protocol_sha256": "c5a8110f496151d24895087261ca82daf5235375db13e3a521aa31280ff63f7b",
+  "support_file": "support.tar.gz",
+  "support_sha256": "2a914cdfbf893ff782268f1155303b36285cdd20c845907d68e98af1b3ddbe6b",
   "boundary": "Exact DEV executed sources; raw inputs and checkpoints remain separate pinned assets"
 }

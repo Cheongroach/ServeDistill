@@ -19,6 +19,9 @@ def main():
     if (digest(archive_path) != manifest["sha256"]
             or digest(protocol_path) != manifest["protocol_sha256"]):
         raise ValueError("Frozen source archive or protocol changed")
+    support_path = root / manifest["support_file"]
+    if digest(support_path) != manifest["support_sha256"]:
+        raise ValueError("Frozen worker support archive changed")
     protocol = json.loads(protocol_path.read_text())
     args.output.mkdir(parents=True, exist_ok=False)
     with tarfile.open(archive_path) as archive:
@@ -26,6 +29,12 @@ def main():
             path = Path(member.name)
             if path.is_absolute() or ".." in path.parts or not member.isfile():
                 raise ValueError("Unsafe source archive entry")
+        archive.extractall(args.output)
+    with tarfile.open(support_path) as archive:
+        for member in archive.getmembers():
+            path = Path(member.name)
+            if path.is_absolute() or ".." in path.parts or not member.isfile():
+                raise ValueError("Unsafe worker support entry")
         archive.extractall(args.output)
     for relative, expected in protocol["source_files"].items():
         if digest(args.output / relative) != expected:
