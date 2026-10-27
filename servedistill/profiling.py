@@ -52,6 +52,8 @@ def validate_config(config: dict) -> None:
             raise ValueError("Positive finite profiler option required: " + key)
     if config["last_update"] < config["first_update"]:
         raise ValueError("Observation window is reversed")
+    if config.get("attention_backend", "default") not in ("default", "no_cudnn"):
+        raise ValueError("Unknown diagnostic attention backend")
     if config["backend"] == "ncu":
         options = config["options"]
         if options["replay_mode"] != "kernel" or not options["nvtx_include"]:

@@ -9,7 +9,7 @@ The standalone [performance monitoring manual](PERFORMANCE_MONITORING.md) covers
 Nsight Systems, Nsight Compute, PyTorch profiler, GPU/host telemetry, DCGM, perf,
 Compute Sanitizer, serving measurements, and validity checks.
 
-As of 2026-10-27, **stable quality superiority remains unestablished**. The frozen
+As of 2026-10-28, **stable quality superiority remains unestablished**. The frozen
 router confirmation failed; its test and replication are now observed data.
 The four-seed DEV stability study selected last2 averaging, but only two of four
 pairs improved over offline SFT. The [preserved results](reports/advantage/ROUTER_STABILITY_DEV.md)
@@ -19,21 +19,32 @@ A new [DEV-only protocol](configs/anchor-development-v1.json) compares AOPD with
 fixed gold CE anchor, pure AOPD, oracle SFT, and offline SFT. All methods use one
 common adapter, fresh Adam, paired prompt schedules, and the same Teacher320
 for on-policy feedback and unfiltered offline labels. Four one-GPU jobs are running;
-final DEV comparisons remain pending. This round respects **at most 8 concurrent
-H20 GPUs**. Submission and CPU tests are setup evidence; completed model and quality
-acceptance require terminal artifacts and independent scoring.
+final DEV comparisons remain pending. The user removed the global eight-GPU cap
+on 2026-10-28. A [frozen extension](configs/anchor-weight-development-v2.json)
+adds weights 0.1 and 1.0 at all four seeds: eight additional single-GPU jobs.
+Selection waits for every weight and control, using the original quality gates.
+Submission and CPU tests are setup evidence; completed model and quality acceptance
+require terminal artifacts and independent scoring.
+
+The [collection and fresh-pool guide](docs/ANCHOR_COLLECTION_AND_FRESH_POOLS.md)
+documents independent regrading, complete allocation costs and input exclusions.
+After excluding all recorded historical inputs, the full ESCI source retains 17,626
+official-test query groups and GSM8K train retains 4,573 original questions.
+These are input-pool audits, not frozen confirmation samples or model results.
 
 The [professional profiler verification](reports/monitoring/STATUS.md) collected
 real Nsight Systems and PyTorch GPU traces after cold restoration. All 91 indexed
 output files passed SHA256 checks, and adapter/Adam drift passed the frozen diagnostic
-tolerances while exact hashes differed. NCU 2026.1.1 failed on driver 535.261.03;
-a separate one-GPU compatibility run is queued. Its absence remains a failed counter
-capture. The first suite consumed **0.527 H20 GPU hours**, including preparation and
-failure, separate from historical and DEV allocations. CPU regressions passed **136
-tests**. Profiling diagnostics do not establish speed or quality superiority.
+tolerances while exact hashes differed. NCU 2026.1.1 failed on driver 535.261.03.
+Three older releases then failed at Teacher cuDNN attention initialization; all 45
+indexed outputs were verified and [failures retained](reports/monitoring/NCU_COMPATIBILITY_V1_SUMMARY.json).
+A separate one-GPU default/no-cuDNN diagnostic has been submitted; valid NCU counters
+remain pending. The first suite consumed **0.527 H20 GPU hours** and the compatibility
+probe **0.382 GPU hours**, including preparation and failure, separate from historical
+and DEV allocations. CPU regressions passed **140 tests**. Profiling diagnostics do
+not establish speed or quality superiority.
 
-The following paragraphs describe older, closed studies. Their historical GPU
-counts do not change the current eight-GPU limit.
+The following paragraphs describe older, closed studies.
 
 The [four-seed AOPD router confirmation](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER.md) completed all 12 training arms and both independent holdout splits. It did not establish superiority over offline SFT: business macro differences were −0.147 pp on test and −0.202 pp on replication, with both 95% intervals crossing zero. Seed 401 also failed the 99% JSON-validity gate. The [confirmation cost audit](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER_COST.json) retains all 12 trials and 46.548 H20 GPU hours; this is separate from the earlier studies below. Further method development uses DEV, and a new confirmation requires unseen data.
 

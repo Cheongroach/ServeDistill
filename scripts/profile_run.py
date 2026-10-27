@@ -49,6 +49,7 @@ def main():
         "--backend", backend if backend in ("nsys", "ncu", "torch") else "none",
         "--first-update", str(config["first_update"]),
         "--last-update", str(config["last_update"]), "--microbatch", str(config["microbatch"]),
+        "--attention-backend", config.get("attention_backend", "default"),
     ])
     if backend == "torch":
         for key, value in config["options"].items():

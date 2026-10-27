@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-9.1.1, pluggy-1.7.0
+cachedir: /tmp/servedistill-delivery-20261027/pytest-cache
+rootdir: <private-workspace-path>
+configfile: ../../../../../../../dev/null
+collected 140 items
+
+tests/test_adapter_average.py ................                           [ 11%]
+tests/test_advantage_confirmation.py ......                              [ 15%]
+tests/test_advantage_contracts.py ...................                    [ 29%]
+tests/test_advantage_protocol_selection.py .........                     [ 35%]
+tests/test_advantage_screen.py .                                         [ 36%]
+tests/test_anchor_collection.py ....                                     [ 39%]
+tests/test_aopd_domain_router.py ...                                     [ 41%]
+tests/test_aopd_router_confirmation.py ...                               [ 43%]
+tests/test_contracts.py ....................                             [ 57%]
+tests/test_deployment.py ......                                          [ 62%]
+tests/test_expanded.py ......                                            [ 66%]
+tests/test_expanded_artifacts.py .....                                   [ 70%]
+tests/test_expanded_statistics.py ........                               [ 75%]
+tests/test_http_benchmark.py ....                                        [ 78%]
+tests/test_monitoring.py ..                                              [ 80%]
+tests/test_native_export.py ..                                           [ 81%]
+tests/test_profile_configuration.py .....                                [ 85%]
+tests/test_profile_numerics.py .                                         [ 85%]
+tests/test_router_stability_dev.py .....                                 [ 89%]
+tests/test_statistics.py ...                                             [ 91%]
+tests/test_supervised_anchor.py ...                                      [ 93%]
+tests/test_time_budget.py .........                                      [100%]
+
+============================= 140 passed in 4.10s ==============================

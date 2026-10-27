@@ -1,0 +1,28 @@
+{
+  "tokenizer_vocab_sha256": "365c2d8a0c0e72d4bcc5dbc6c2e9330a87dae7ffc77e9fcd9d65739f4d16bfff",
+  "eos_ids": [
+    248044
+  ],
+  "pad_id": 248044,
+  "student_vocab": 248320,
+  "teacher_vocab": 248320,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "response_mask": "first EOS included; later padding excluded",
+  "attention": "SDPA full attention",
+  "delta_kernels": {
+    "chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5",
+    "recurrent_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5"
+  },
+  "precision": "float32_torch",
+  "load_seconds": 13.471437511965632,
+  "enable_thinking": false,
+  "architecture": "qwen3_5_text",
+  "loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "text_only": true
+  }
+}

@@ -2,7 +2,7 @@
 
 本文是独立的复现手册。先确定要测的量，再选工具；每一步都说明输入、参数、输出和能支持的结论。项目教学顺序见 [54 步教程](docs/一步步认识ServeDistill项目-friendly.md)。
 
-2026-10-27 状态：本轮 none/nsys/PyTorch 副本均通过 update162 的运行门；实际 CUDA/NVTX、GPU kernel trace 和 91 个原始输出文件的 SHA256 已独立核验。[本轮导出](reports/monitoring/profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json)保留版本、遥测、统计 CSV、压缩 PyTorch trace、失败记录与原始/公开哈希。NCU 2026.1.1 在 driver 535.261.03 上报告不兼容；串行兼容性任务已提交，尚无本轮有效 NCU counter。DCGM、perf、compute-sanitizer 的本轮环境验证尚未完成。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
+2026-10-28 状态：本轮 none/nsys/PyTorch 副本均通过 update162 的运行门；实际 CUDA/NVTX、GPU kernel trace 和 91 个原始输出文件的 SHA256 已独立核验。[本轮导出](reports/monitoring/profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json)保留版本、遥测、统计 CSV、压缩 PyTorch trace、失败记录与原始/公开哈希。NCU 2026.1.1 报告驱动不兼容，三个旧版随后在 Teacher 的 cuDNN SDPA 初始化处失败；尚无有效 NCU counter。[兼容性结果](reports/monitoring/NCU_COMPATIBILITY_V1_SUMMARY.json)保留 45 个经哈希核验的索引输出。新单卡 no_cudnn 诊断与系统工具验证已提交，结果待收集。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
 
 ## 第一阶段：确定测量问题与边界
 
@@ -50,7 +50,7 @@ python -m pytest -q tests
 
 保留宿主 CUDA 环境提供的 PyTorch，先核对 CUDA/驱动兼容性。核心 Transformers/PEFT 版本在 `pyproject.toml` 中固定；运行时记录真实版本，安装声明不替代环境审计。
 
-CPU 回归在当前隔离依赖环境通过 136 项，包含完整更新的 microbatch 一致性、空/缺失 counter 拒绝、真实 NVTX CSV 结构、CPU-only trace 拒绝和数值漂移检查。CPU 测试不证明 GPU 执行、计数器权限或新方法业务质量。
+CPU 回归在当前隔离依赖环境通过 140 项，包含完整更新的 microbatch 一致性、空/缺失 counter 拒绝、真实 NVTX CSV 结构、CPU-only trace 拒绝、数值漂移、DEV 比较门和历史输入排除检查。CPU 测试不证明 GPU 执行、计数器权限或新方法业务质量。
 
 ### 第 5 步：指定模型、数据和 checkpoint
 
@@ -435,6 +435,25 @@ python scripts/serving_monitor.py \
 
 ## 配置与输出定位
 
+### 第 23 步：隔离 cuDNN 初始化失败
+
+实际三个旧版 NCU 均在 warmup 的 Teacher SDPA 调用处报告 `CUDNN_STATUS_NOT_INITIALIZED`。这个错误位置不证明底层原因；也不同于首次 2026.1.1 的驱动不兼容消息。
+
+`attention_backend: no_cudnn` 只用于诊断，将 `torch.backends.cuda.enable_cudnn_sdp(False)` 显式传入副本，保留 flash、memory-efficient、math 的实际 enabled 状态到 `application/attention-backend.json`。默认值是 `default`，不改变质量训练配置。
+
+```bash
+python -m scripts.run_profiler_recovery \
+  --student "$STUDENT" --teacher "$TEACHER" --data "$DATA" \
+  --config "$TRAIN_CONFIG" --checkpoint "$CHECKPOINT" \
+  --tools-root "$TOOLS_ROOT" --output results/profiler-recovery
+```
+
+该入口安装锁定 NCU 2025.2.1 和 nsys，串行运行 default/no_cudnn 基线、no_cudnn NCU、指定 GEMM 的详细 NCU、no_cudnn nsys、可用的 perf/Compute Sanitizer。独立 system-watch 在 kernel profiling 前结束，避免 DCGM counter 同时竞争。缺失工具、非零退出和无效 counter 分别留在 `system-tools.json`、`cases.json` 和 `validity.json`。
+
+`ncu_gemm_no_cudnn.json` 用精确 kernel 家族正则选取历史 nsys 中占 CUDA kernel 总时间 33.7% 的 FP32 GEMM 家族，限制在 `learner_forward/` 内的一个 launch。这个选择来自原 trace 的热点，不代表该次 launch 覆盖所有 shape；新 trace 中实际匹配到的 kernel、grid/block、时钟与计数器仍须验证。
+
+`completed.json.completed=true` 只说明诊断清单执行结束，必须另读 `all_cases_passed` 和每个 case 的 `validity.passed`。新 attention dispatch 的数值状态要先与同 dispatch 的无 profiler 副本比较，再单独量化它与默认 dispatch 的差异。不得把诊断后端变化藏进速度或质量结论。
+
 | 文件/入口 | 直接运行方式 |
 |---|---|
 | `baseline/nsys/ncu/ncu_deep/torch/perf/sanitizer.json` | `scripts/profile_run.py --profile <file> ...` |
@@ -445,6 +464,8 @@ python scripts/serving_monitor.py \
 | `validity/runtime.json` | `scripts/profile_run.py --validity <file> ...` |
 | `validity/profile-numerics.json` | `scripts/compare_profile_states.py --gates <file> ...` |
 | `anchor-development-v1.json` | `scripts/run_anchor_development.py --protocol <file> ...`；须使用绑定输入和源码 |
+| `ncu_no_cudnn/ncu_gemm_no_cudnn.json` | `scripts/profile_run.py --profile <file> ...`；显式诊断 attention backend |
+| `anchor-weight-development-v2.json` | 从冻结快照运行 `scripts/run_anchor_weight_development.py --extension <file> ...` |
 
 默认配置都需要实际输入路径和对应 GPU/工具环境，不提供伪造 trace、占位测量值或自动通过的缺失字段。
 

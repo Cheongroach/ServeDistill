@@ -20,6 +20,7 @@ def main():
     parser.add_argument("--record-shapes", action="store_true")
     parser.add_argument("--profile-memory", action="store_true")
     parser.add_argument("--with-stack", action="store_true")
+    parser.add_argument("--attention-backend", choices=("default", "no_cudnn"), default="default")
     args = parser.parse_args()
     checkpoint = json.loads((Path(args.resume) / "state.json").read_text())
     if args.first_update <= checkpoint["step"] + 1:
@@ -33,6 +34,19 @@ def main():
         microbatch=args.microbatch, record_shapes=args.record_shapes,
         profile_memory=args.profile_memory, with_stack=args.with_stack,
         torch_first_microbatch=args.torch_first_microbatch)
+    import torch
+    if args.attention_backend == "no_cudnn":
+        torch.backends.cuda.enable_cudnn_sdp(False)
+    (root / "attention-backend.json").write_text(json.dumps({
+        "requested": args.attention_backend,
+        "cudnn_sdp_enabled": torch.backends.cuda.cudnn_sdp_enabled(),
+        "flash_sdp_enabled": torch.backends.cuda.flash_sdp_enabled(),
+        "math_sdp_enabled": torch.backends.cuda.math_sdp_enabled(),
+        "mem_efficient_sdp_enabled": torch.backends.cuda.mem_efficient_sdp_enabled(),
+        "boundary": "Diagnostic dispatch policy; no_cudnn changes eligible SDPA kernels. "
+                    "Compare only matching-policy baseline and profiler captures. "
+                    "Training/quality experiment defaults remain independent.",
+    }, indent=2) + "\n")
     options = SimpleNamespace(
         student=args.student, teacher=args.teacher, teacher_device="cuda:0",
         data=args.data, config=args.config, output=str(root / "train"),

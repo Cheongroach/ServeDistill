@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "esci": {
+    "repository": "amazon-science/esci-data",
+    "revision": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "examples_sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a",
+    "examples_bytes": 51286808
+  },
+  "gsm8k": {
+    "repository": "openai/grade-school-math",
+    "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "path": "grade_school_math/data/train.jsonl",
+    "split": "train",
+    "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+    "license": "MIT"
+  },
+  "boundary": "ESCI full official test plus GSM8K official train questions unused by this project. New confirmation must declare this population and freeze its selection before evaluating models."
+}
