@@ -42,6 +42,12 @@ same updates/prompts 不意味着 same tokens/time。oracle/offline 和 AOPD 的
 
 ## 6. 当前可报告的事实
 
-完整代码与文档已发布到独立 main；doc 保留原 manuscript 历史并加入本轮记录。CPU 132 项通过，五个 H20 任务已进入运行态。运行器和协议准备完成。
+完整代码与文档已发布到独立 main；doc 保留原 manuscript 历史并加入本轮记录。最新 main `015b10c` 已包含采集内容检查、数值状态对比、串行 NCU 兼容性入口、冻结采集源码和公开证据。CPU 136 项通过。
 
-新 DEV 模型尚未收齐，NCU 新采集、诊断状态对比和终态成本尚未闭合。质量、时间、成本和规模结论分别等待对应证据；稳定质量优势仍未建立。
+首次 profiler 套件已终态失败：none/nsys/PyTorch 应用退出 0，冷恢复与 update162 运行门通过；NCU 2026.1.1 在 driver 535.261.03 上报告不兼容，应用退出 11，套件 Pod 退出 1。实际 nsys CUDA/API/NVTX 和 PyTorch GPU kernel 事件已核查；91 个原始输出文件的 bytes/SHA256 全部一致。
+
+全部 300 个 adapter 和 900 个 optimizer tensor 均完成与 none 的逐 tensor 比较。nsys/PyTorch 的 adapter 最大绝对差为 `3.73e-9` / `1.86e-9`，optimizer 为 `4.75e-9` / `5.76e-9`；RNG、update、token 数一致。预设数值容差通过，但精确哈希不同，不能宣称相同生成文本或质量。
+
+首次套件的 schedule-to-stop 为 1,898 秒、1 GPU，即 `0.52722 H20·h`；container start-to-stop 为 1,895 秒。它包含资产准备、失败工具、导出和容器关闭；这是观测分配区间代理，不是财务账单。新 NCU 兼容任务另计。
+
+兼容任务按官方锁定的 2025.2.1 → 2024.1.1 → 2023.3.1 串行执行真实训练，首个完整 runtime/counter 通过者才入选。它已提交，尚无有效新 counter。四个 DEV seed 仍在执行，seed101 已从 1,100 条初始 DEV 进入 anchor 训练；最终四方法模型尚未收齐。质量、时间、成本和规模结论分别等待对应证据，稳定质量优势仍未建立。
