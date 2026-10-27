@@ -51,3 +51,15 @@ same updates/prompts 不意味着 same tokens/time。oracle/offline 和 AOPD 的
 首次套件的 schedule-to-stop 为 1,898 秒、1 GPU，即 `0.52722 H20·h`；container start-to-stop 为 1,895 秒。它包含资产准备、失败工具、导出和容器关闭；这是观测分配区间代理，不是财务账单。新 NCU 兼容任务另计。
 
 兼容任务按官方锁定的 2025.2.1 → 2024.1.1 → 2023.3.1 串行执行真实训练，首个完整 runtime/counter 通过者才入选。它已提交，尚无有效新 counter。四个 DEV seed 仍在执行，seed101 已从 1,100 条初始 DEV 进入 anchor 训练；最终四方法模型尚未收齐。质量、时间、成本和规模结论分别等待对应证据，稳定质量优势仍未建立。
+
+## 7. 2026-10-28 的扩展与新证据
+
+用户取消全局 8 卡限制后，新增权重 0.1、1.0 各四个种子，与已有 0.5 候选和两个强 SFT 比较。只改变 gold CE 系数，保留原训练代码、配对 prompt 日程及最终 update320。全部候选/对照完成后，在通过原门的候选中选择平均 DEV business macro 最大者，同分选较小权重。原四方法仍在运行；不能根据中间 step 的有利分数提前挑选。
+
+新增八个单卡任务与原四个单卡任务均进入运行态。另一个单卡 profiler recovery 独立运行。这一资源扩展改善并行进度，不构成质量证据，也不会把新增 gold CE 计算从成本里抹去。
+
+三版旧 NCU 已全部失败，实际异常位置是 warmup 的 Teacher SDPA：`CUDNN_STATUS_NOT_INITIALIZED`。45 个索引产物通过 SHA256 校验，Pod 调度到结束为 1,376 秒，即 0.38222 H20·h。该异常尚未定位到具体库/驱动原因。新的 recovery 对照默认 dispatch 与显式禁用 cuDNN SDPA 的诊断副本，并对历史热点 FP32 GEMM 家族采集详细 section；结果仍待收集。
+
+输入审计显示：small-version ESCI 只剩 1,273 个未用 test query，GSM8K test 只剩 119 题，SVAMP 为零。改查完整源后有 17,626 个未用 ESCI test query、4,573 道未用 GSM8K train 原题。新确认必须声明抽样总体变化、按原题/查询组排除历史输入，并在任何新模型预测前冻结数据和显著性预算。公开基准是否进入基础模型预训练仍未知。
+
+main `b361316` 已发布以上协议、源码快照、收集器、数据审计、失败成本与文档，当前 CPU 回归 140 项通过。GPU 终态、各权重最终质量和新计数器仍分别等待实证。
