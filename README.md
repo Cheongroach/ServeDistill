@@ -38,11 +38,16 @@ output files passed SHA256 checks, and adapter/Adam drift passed the frozen diag
 tolerances while exact hashes differed. NCU 2026.1.1 failed on driver 535.261.03.
 Three older releases then failed at Teacher cuDNN attention initialization; all 45
 indexed outputs were verified and [failures retained](reports/monitoring/NCU_COMPATIBILITY_V1_SUMMARY.json).
-A separate one-GPU default/no-cuDNN diagnostic has been submitted; valid NCU counters
-remain pending. The first suite consumed **0.527 H20 GPU hours** and the compatibility
-probe **0.382 GPU hours**, including preparation and failure, separate from historical
-and DEV allocations. CPU regressions passed **140 tests**. Profiling diagnostics do
-not establish speed or quality superiority.
+The separate default/no-cuDNN diagnostic completed: NCU 2025.2.1 captured eight kernels
+and one selected FP32 GEMM under explicit no-cuDNN dispatch. The original validator
+misread the wide raw CSV; [independent revalidation](reports/monitoring/PROFILE_RECOVERY_V1_REVALIDATION.json)
+verified all 156 indexed files and retained the old false verdicts. NCU, GEMM and nsys
+final numerical states passed the matched baseline tolerances, with different exact
+hashes. Perf/DCGM were unavailable, and Compute Sanitizer failed with CUDA API errors
+and student-rollout OOM. The first suite consumed **0.527 H20 GPU hours**, the compatibility
+probe **0.382**, and recovery **1.035278**, including preparation and failure, separate
+from historical and DEV allocations. CPU regressions passed **156 tests**.
+Profiling diagnostics do not establish speed or quality superiority.
 
 The following paragraphs describe older, closed studies.
 

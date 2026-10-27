@@ -1,0 +1,11 @@
+{
+  "gpu": {
+    "argv": [
+      "/usr/bin/nvidia-smi",
+      "-q"
+    ],
+    "returncode": 0
+  },
+  "application_returncode": 0,
+  "ended_unix_seconds": 1793120703.3156834
+}

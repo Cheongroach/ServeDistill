@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "all_trials_retained": true,
+  "records": [
+    {
+      "job_run_sid": "redacted-b1cedf7d8313",
+      "trial_sid": "redacted-40b22c532eb9",
+      "trial_pod_sid": "redacted-eac0ca74ea06",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:48:38.000Z",
+      "start_at": "2026-10-27T16:48:39.000Z",
+      "stop_at": "2026-10-27T17:50:45.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 3727.0,
+      "gpu_hours": 1.0352777777777777
+    }
+  ],
+  "allocated_gpu_hours": 1.0352777777777777,
+  "cost_advantage_supported": false,
+  "boundary": "Scheduled-to-stop intervals for profiler recovery, including preparation, successful captures, failed sanitizer and unavailable tools; not billing or useful training."
+}

@@ -9,7 +9,8 @@ import sys
 import time
 
 from servedistill.profiling import (
-    HostSampler, build_command, digest, locate, report_validity, runtime_validity, validate_config,
+    HostSampler, application_environment, build_command, digest, locate,
+    report_validity, runtime_validity, validate_config,
 )
 
 
@@ -63,6 +64,7 @@ def main():
     if config["first_update"] <= checkpoint_step + 1:
         raise ValueError("Require one complete warmup update after cold restoration")
     args.output.mkdir(parents=True, exist_ok=False)
+    environment = application_environment(config, os.environ)
     manifest = {
         "configuration": config, "command": argv, "checkpoint_step": checkpoint_step,
         "profile_configuration_sha256": digest(args.profile),
@@ -73,6 +75,8 @@ def main():
             args.resume / "adapter_model.safetensors", args.data / "train.jsonl", args.data / "dev.jsonl")},
         "source_files": {str(p.relative_to(REPO)): digest(p) for directory in ("servedistill", "scripts")
                          for p in sorted((REPO / directory).glob("*.py"))},
+        "allocator_environment": {key: environment.get(key) for key in (
+            "PYTORCH_ALLOC_CONF", "PYTORCH_CUDA_ALLOC_CONF")},
         "started_unix_seconds": time.time(), "profiler_times_eligible_for_speed_claim": False,
     }
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
@@ -97,7 +101,7 @@ def main():
     try:
         with (args.output / "application.log").open("w") as stream:
             process = subprocess.Popen(argv, stdout=stream, stderr=subprocess.STDOUT,
-                                       cwd=REPO, start_new_session=True)
+                                       cwd=REPO, env=environment, start_new_session=True)
             with HostSampler(args.output / "host-telemetry.jsonl", config["host_poll_seconds"], process.pid):
                 try:
                     returncode = process.wait(timeout=config["timeout_seconds"])

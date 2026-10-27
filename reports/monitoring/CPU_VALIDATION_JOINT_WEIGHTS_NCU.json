@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "tests_passed": 156,
+  "test_log": "reports/monitoring/cpu-tests-joint-weights-ncu.txt",
+  "test_log_sha256": "18461c7cbb62b1f11bbfcdef16de1a9acf48144627f57852867b717abd8d14ff",
+  "source_files": {
+    "scripts/collect_anchor_development.py": "fc02af96fe6c89f92b163feca4683d9f1d1478f3aff4bfc82edf54ebad01c57d",
+    "scripts/collect_anchor_weights.py": "2f206162ca7d02dd0afd6c85b6201ee32f76f25230aca07860ff5c999a20aa61",
+    "scripts/analyze_anchor_development.py": "62464f2abfc6a60fd56e8135f5236421907836e6358ec654ba0e26be20ba5e0f",
+    "scripts/analyze_anchor_weights.py": "2790b669dd026dc9e7d8a53f337ad2fe6b819aaf8a2245d7e6ccff44f1f9ba89",
+    "scripts/revalidate_profile_evidence.py": "d3e1a1e6c1ab57ea5c71c8860c79933823dace89e3f1e8d2cd6f390636ac6303",
+    "scripts/profile_run.py": "7a6f422493cee789a1b8d7f0fd218082359629bf4611d3da09e4f685f2044591",
+    "scripts/run_sanitizer_allocator_probe.py": "ef3301b5053291a07bd61e0802823de0ac2adecde0a85afd7457e29c9ae72bf2",
+    "servedistill/profiling.py": "df406fa605057c3868583b622124ae3dee550fb239a150ce68a3d08f5d1f27bb",
+    "tests/test_anchor_weights.py": "96b9dc4558320d83abc890c71f18389c11abf2cbad8601fc3af0c902ee509372",
+    "tests/test_profile_configuration.py": "ce4c0e50032b198cc5cad9a5b7eccfef4b72aa8d2f4957dbec407d4538aab402"
+  },
+  "boundary": "CPU regressions cover paired terminal evidence rejection, all-three-weight selection, NCU long/wide CSV counters, and child allocator policy. Real profiler capture revalidation is reported separately; no training quality advantage is established."
+}

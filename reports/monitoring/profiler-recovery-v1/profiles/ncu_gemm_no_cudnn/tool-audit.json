@@ -1,0 +1,36 @@
+{
+  "version": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/ncu",
+      "--version"
+    ],
+    "returncode": 0
+  },
+  "metrics": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/ncu",
+      "--query-metrics"
+    ],
+    "returncode": 0
+  },
+  "gpu": {
+    "argv": [
+      "/usr/bin/nvidia-smi",
+      "-q"
+    ],
+    "returncode": 0
+  },
+  "raw_metrics": {
+    "argv": [
+      "/tmp/servedistill-profiler-recovery-v1/tools/ncu/opt/nvidia/nsight-compute/2025.2.1/ncu",
+      "--import",
+      "/tmp/servedistill-profiler-recovery-v1/output/profiles/ncu_gemm_no_cudnn/capture.ncu-rep",
+      "--csv",
+      "--page",
+      "raw"
+    ],
+    "returncode": 0
+  },
+  "application_returncode": 0,
+  "ended_unix_seconds": 1793121411.035642
+}

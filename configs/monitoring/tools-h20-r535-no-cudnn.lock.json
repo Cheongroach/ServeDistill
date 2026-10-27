@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "repository": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/",
+  "index": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/Packages.gz",
+  "platform": "linux-x86_64",
+  "packages": {
+    "nsys": {
+      "filename": "NsightSystems-linux-cli-public-2026.1.1.204-3717666.deb",
+      "sha256": "37a1cb9b12cdbc9c40a8cb42e58b05a141e44c63c800cac435cb8e43256e0780"
+    },
+    "ncu": {
+      "version": "2025.2.1",
+      "filename": "nsight-compute-2025.2.1_2025.2.1.3-1_amd64.deb",
+      "sha256": "afa4b2b354f93fcbefbb6c0ab7a83223d7f9d6852d8b8868253757562049fc8d",
+      "bytes": 296189558
+    }
+  },
+  "validated_scope": {
+    "gpu": "NVIDIA H20",
+    "driver": "535.261.03",
+    "pytorch": "2.9.1",
+    "cuda": "12.9",
+    "attention_backend": "no_cudnn",
+    "evidence": "reports/monitoring/PROFILE_RECOVERY_V1_REVALIDATION.json",
+    "boundary": "Bounded cold-restored update162 diagnostics only; default cuDNN capture remains failed in the earlier study."
+  }
+}

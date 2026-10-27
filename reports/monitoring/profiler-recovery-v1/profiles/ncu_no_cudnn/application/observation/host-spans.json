@@ -1,0 +1,229 @@
+[
+  {
+    "name": "rollout",
+    "update": 162,
+    "start_ns": 88298397215,
+    "end_ns": 114191573903,
+    "host_wall_seconds": 25.893176688,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "learner_forward",
+    "update": 162,
+    "start_ns": 114193028060,
+    "end_ns": 124407970532,
+    "host_wall_seconds": 10.214942472,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "teacher_forward",
+    "update": 162,
+    "start_ns": 124415151063,
+    "end_ns": 124729609185,
+    "host_wall_seconds": 0.314458122,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "asymmetric_opd",
+    "update": 162,
+    "start_ns": 124732670823,
+    "end_ns": 124748129078,
+    "host_wall_seconds": 0.015458255,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "reference_forward",
+    "update": 162,
+    "start_ns": 124749171340,
+    "end_ns": 126007472548,
+    "host_wall_seconds": 1.258301208,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "backward",
+    "update": 162,
+    "start_ns": 126010145730,
+    "end_ns": 131000807516,
+    "host_wall_seconds": 4.990661786,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "learner_forward",
+    "update": 162,
+    "start_ns": 131001083883,
+    "end_ns": 133354866491,
+    "host_wall_seconds": 2.353782608,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "teacher_forward",
+    "update": 162,
+    "start_ns": 133387664778,
+    "end_ns": 133760426154,
+    "host_wall_seconds": 0.372761376,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "asymmetric_opd",
+    "update": 162,
+    "start_ns": 134046675013,
+    "end_ns": 134064900705,
+    "host_wall_seconds": 0.018225692,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "reference_forward",
+    "update": 162,
+    "start_ns": 134066163207,
+    "end_ns": 135861348874,
+    "host_wall_seconds": 1.795185667,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "backward",
+    "update": 162,
+    "start_ns": 135883472319,
+    "end_ns": 143479213332,
+    "host_wall_seconds": 7.595741013,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "learner_forward",
+    "update": 162,
+    "start_ns": 143479441060,
+    "end_ns": 145073230515,
+    "host_wall_seconds": 1.593789455,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "teacher_forward",
+    "update": 162,
+    "start_ns": 145091578895,
+    "end_ns": 145511219294,
+    "host_wall_seconds": 0.419640399,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "asymmetric_opd",
+    "update": 162,
+    "start_ns": 145512994772,
+    "end_ns": 145530895145,
+    "host_wall_seconds": 0.017900373,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "reference_forward",
+    "update": 162,
+    "start_ns": 145532299150,
+    "end_ns": 147436423687,
+    "host_wall_seconds": 1.904124537,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "backward",
+    "update": 162,
+    "start_ns": 147440007053,
+    "end_ns": 152639066141,
+    "host_wall_seconds": 5.199059088,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "learner_forward",
+    "update": 162,
+    "start_ns": 152639307529,
+    "end_ns": 154782676502,
+    "host_wall_seconds": 2.143368973,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "teacher_forward",
+    "update": 162,
+    "start_ns": 154815959947,
+    "end_ns": 155288153841,
+    "host_wall_seconds": 0.472193894,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "asymmetric_opd",
+    "update": 162,
+    "start_ns": 155361535551,
+    "end_ns": 155379998761,
+    "host_wall_seconds": 0.01846321,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "reference_forward",
+    "update": 162,
+    "start_ns": 155381283018,
+    "end_ns": 158104450696,
+    "host_wall_seconds": 2.723167678,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "backward",
+    "update": 162,
+    "start_ns": 158115549691,
+    "end_ns": 164577413607,
+    "host_wall_seconds": 6.461863916,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "learner_forward",
+    "update": 162,
+    "start_ns": 164577732578,
+    "end_ns": 166326698031,
+    "host_wall_seconds": 1.748965453,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "teacher_forward",
+    "update": 162,
+    "start_ns": 166348094012,
+    "end_ns": 166822102345,
+    "host_wall_seconds": 0.474008333,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "asymmetric_opd",
+    "update": 162,
+    "start_ns": 166824111532,
+    "end_ns": 166843972563,
+    "host_wall_seconds": 0.019861031,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "reference_forward",
+    "update": 162,
+    "start_ns": 166845265916,
+    "end_ns": 168224185821,
+    "host_wall_seconds": 1.378919905,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "backward",
+    "update": 162,
+    "start_ns": 168227346712,
+    "end_ns": 173210187735,
+    "host_wall_seconds": 4.982841023,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "optimizer",
+    "update": 162,
+    "start_ns": 173392919263,
+    "end_ns": 173411431422,
+    "host_wall_seconds": 0.018512159,
+    "boundary": "host scope; CUDA work may finish outside the range"
+  },
+  {
+    "name": "update",
+    "update": 162,
+    "start_ns": 88290309670,
+    "end_ns": 173703130066,
+    "host_wall_seconds": 85.412820396,
+    "response_tokens": 246,
+    "behavior_max_error": 5.0067901611328125e-05,
+    "gradient_norm": 0.20470349490642548,
+    "parameter_delta_l2": 0.040168102276693485
+  }
+]

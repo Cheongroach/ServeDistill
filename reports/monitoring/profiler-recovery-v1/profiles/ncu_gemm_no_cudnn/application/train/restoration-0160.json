@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "step": 160,
+  "adapter_sha256": "f4e573446ff8c5fd51db3b59be06593359fbba886c9b0d1fd8465ce9a6a8ef24",
+  "optimizer_sha256": "ceab8d506a20b5c099f52e5988498ae4fffcfbd925ef823c2f6932e5a1605cf0",
+  "rng_sha256": "72dd14c9737b0d8ddf6c1b9dccf26bfaf6bc4f7839ac152f2100b60c75695476"
+}

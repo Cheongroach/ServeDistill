@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "elapsed_seconds": 3435.3310058116913,
+  "tasks": [
+    {
+      "name": "verify_diagnostic_overlay",
+      "returncode": 0,
+      "start_unix_seconds": 1793120375.208168,
+      "end_unix_seconds": 1793120375.4730003
+    },
+    {
+      "name": "cold_restored_profiler_recovery",
+      "returncode": 0,
+      "start_unix_seconds": 1793120382.3969946,
+      "end_unix_seconds": 1793123003.4863777
+    }
+  ],
+  "assets_verified": true
+}

@@ -39,6 +39,22 @@ class ProfileContracts(unittest.TestCase):
             (train / "metrics.jsonl").write_text(json.dumps(row) + "\n")
             self.assertFalse(runtime_validity(root, config, gates)["passed"])
 
+    def test_diagnostic_allocator_override_reaches_child_without_changing_parent(self):
+        from servedistill.profiling import application_environment
+        config = json.loads((ROOT / "configs/monitoring/sanitizer_no_expandable.json").read_text())
+        validate_config(config)
+        parent = {"PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+                  "PYTORCH_ALLOC_CONF": "expandable_segments:True", "OTHER": "kept"}
+        child = application_environment(config, parent)
+        self.assertEqual(child["PYTORCH_ALLOC_CONF"], "expandable_segments:False")
+        self.assertNotIn("PYTORCH_CUDA_ALLOC_CONF", child)
+        self.assertEqual(parent["PYTORCH_CUDA_ALLOC_CONF"], "expandable_segments:True")
+        self.assertEqual(child["OTHER"], "kept")
+        self.assertEqual(application_environment({}, parent), parent)
+        config["cuda_allocator"] = "typo"
+        with self.assertRaisesRegex(ValueError, "CUDA allocator"):
+            validate_config(config)
+
     def test_ncu_requires_actual_kernel_counters_and_units(self):
         config = json.loads((ROOT / "configs/monitoring/ncu.json").read_text())
         audit = {"raw_metrics": {"returncode": 0}}
@@ -75,6 +91,62 @@ class ProfileContracts(unittest.TestCase):
             events.append({"name": "gemm", "cat": "kernel", "ph": "X", "dur": 5})
             path.write_text(json.dumps({"traceEvents": events}))
             self.assertTrue(report_validity(root, config, {})["passed"])
+
+    def test_actual_ncu_raw_wide_layout_preserves_units_and_rejects_missing_counter(self):
+        config = json.loads((ROOT / "configs/monitoring/ncu.json").read_text())
+        audit = {"raw_metrics": {"returncode": 0}}
+        with tempfile.TemporaryDirectory() as value:
+            root = Path(value)
+            path = root / "ncu-metrics.csv"
+            header = ('"ID","Kernel Name","gpu__time_duration.sum",'
+                      '"sm__throughput.avg.pct_of_peak_sustained_elapsed",'
+                      '"dram__throughput.avg.pct_of_peak_sustained_elapsed"\n')
+            units = '"","","us","%","%"\n'
+            data = '"0","copy<4>","3.456000","0.260615","0.142045"\n'
+            path.write_text(header + units + data)
+            result = report_validity(root, config, audit)
+            self.assertTrue(result["passed"])
+            self.assertEqual(result["kernel_launches"], 1)
+            self.assertEqual(result["metric_rows"], 3)
+            path.write_text(header + units + data.replace('"0.142045"', '"N/A"'))
+            self.assertFalse(report_validity(root, config, audit)["passed"])
+            path.write_text(header + units.replace('"us"', '"%"') + data)
+            self.assertFalse(report_validity(root, config, audit)["passed"])
+            path.write_text(header + units + data + data)
+            self.assertFalse(report_validity(root, config, audit)["passed"])
+            path.write_text(header + data)
+            with self.assertRaisesRegex(ValueError, "units row"):
+                report_validity(root, config, audit)
+
+    def test_ncu_sections_require_each_sections_quantitative_evidence(self):
+        from servedistill.profiling import NCU_SECTION_METRICS
+        import csv
+        config = json.loads((ROOT / "configs/monitoring/ncu_gemm_no_cudnn.json").read_text())
+        names = list(dict.fromkeys(name for section in config["options"]["sections"]
+                                   for name in NCU_SECTION_METRICS[section]))
+        with tempfile.TemporaryDirectory() as value:
+            root = Path(value)
+            path = root / "ncu-metrics.csv"
+            with path.open("w") as stream:
+                writer = csv.writer(stream)
+                writer.writerow(["ID", "Kernel Name", *names])
+                units = {
+                    "gpu__time_duration.sum": "ms",
+                    "dram__bytes.sum.per_second": "Gbyte/s",
+                    "launch__registers_per_thread": "register/thread",
+                    "launch__shared_mem_per_block": "Kbyte/block",
+                    "launch__occupancy_limit_registers": "block",
+                }
+                writer.writerow(["", "", *(units.get(name, "%") for name in names)])
+                writer.writerow(["0", "gemm", *([1.] * len(names))])
+            audit = {"raw_metrics": {"returncode": 0}}
+            self.assertTrue(report_validity(root, config, audit)["passed"])
+            config["options"]["sections"].append("UnknownSection")
+            self.assertFalse(report_validity(root, config, audit)["passed"])
+            config["options"]["sections"].pop()
+            path.write_text(path.read_text().replace(
+                "lts__t_sector_hit_rate.pct", "unrequested__metric"))
+            self.assertFalse(report_validity(root, config, audit)["passed"])
 
     def test_nsys_requires_real_kernel_api_and_nvtx_rows(self):
         config = json.loads((ROOT / "configs/monitoring/nsys.json").read_text())

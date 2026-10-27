@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "schema_version": 1,
+    "duration_seconds": 30,
+    "host_poll_seconds": 1,
+    "collectors": {
+      "nvidia_smi": {
+        "enabled": true,
+        "interval_ms": 500,
+        "fields": [
+          "timestamp",
+          "index",
+          "uuid",
+          "utilization.gpu",
+          "utilization.memory",
+          "memory.used",
+          "memory.total",
+          "power.draw",
+          "temperature.gpu",
+          "clocks.sm",
+          "clocks.mem"
+        ]
+      },
+      "dcgm": {
+        "enabled": false,
+        "gpu": "0",
+        "interval_ms": 1000,
+        "fields": [
+          1001,
+          1002,
+          1003,
+          1004,
+          1005,
+          1009,
+          1010
+        ]
+      }
+    }
+  },
+  "config_sha256": "814c2aa85c4bb28b3c2901e5474390c657378b6194b8dd57cb9ca5d6f27f7756",
+  "collectors": {
+    "nvidia_smi": {
+      "argv": [
+        "/usr/bin/nvidia-smi",
+        "--query-gpu=timestamp,index,uuid,utilization.gpu,utilization.memory,memory.used,memory.total,power.draw,temperature.gpu,clocks.sm,clocks.mem",
+        "--format=csv",
+        "--loop-ms=500"
+      ],
+      "returncode": 0,
+      "terminated_at_declared_duration": true
+    }
+  },
+  "boundary": "Hardware-wide telemetry. Host data includes co-tenants; DCGM N/A is not zero."
+}

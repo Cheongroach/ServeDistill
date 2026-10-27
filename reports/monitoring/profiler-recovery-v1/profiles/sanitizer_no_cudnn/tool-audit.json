@@ -1,0 +1,18 @@
+{
+  "version": {
+    "argv": [
+      "/usr/local/cuda/bin/compute-sanitizer",
+      "--version"
+    ],
+    "returncode": 0
+  },
+  "gpu": {
+    "argv": [
+      "/usr/bin/nvidia-smi",
+      "-q"
+    ],
+    "returncode": 0
+  },
+  "application_returncode": 86,
+  "ended_unix_seconds": 1793122512.7294903
+}

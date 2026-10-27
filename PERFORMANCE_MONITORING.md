@@ -2,7 +2,7 @@
 
 本文是独立的复现手册。先确定要测的量，再选工具；每一步都说明输入、参数、输出和能支持的结论。项目教学顺序见 [54 步教程](docs/一步步认识ServeDistill项目-friendly.md)。
 
-2026-10-28 状态：本轮 none/nsys/PyTorch 副本均通过 update162 的运行门；实际 CUDA/NVTX、GPU kernel trace 和 91 个原始输出文件的 SHA256 已独立核验。[本轮导出](reports/monitoring/profile-professional-v1/PUBLIC_EXPORT_MANIFEST.json)保留版本、遥测、统计 CSV、压缩 PyTorch trace、失败记录与原始/公开哈希。NCU 2026.1.1 报告驱动不兼容，三个旧版随后在 Teacher 的 cuDNN SDPA 初始化处失败；尚无有效 NCU counter。[兼容性结果](reports/monitoring/NCU_COMPATIBILITY_V1_SUMMARY.json)保留 45 个经哈希核验的索引输出。新单卡 no_cudnn 诊断与系统工具验证已提交，结果待收集。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
+2026-10-28 状态：默认 dispatch 的 none/nsys/PyTorch 已通过冷恢复 update162 的运行门；91 个索引文件已核验。后续显式 `no_cudnn` 诊断捕获了 8 个 NCU kernel 和 1 个指定 GEMM，156 个索引文件全部核验，见[恢复采集与独立复核](reports/monitoring/PROFILE_RECOVERY_V1_SUMMARY.json)。NCU、GEMM、nsys 的最终 adapter/Adam 均通过同 dispatch 基线的数值容差检查，精确状态哈希仍不同。perf/DCGM 未安装，Compute Sanitizer 发生 CUDA API 错误和 OOM，不能视为通过。Nsight Systems 的命令名是 `nsys`，不是 `nvsys`。
 
 ## 第一阶段：确定测量问题与边界
 
@@ -144,7 +144,7 @@ python scripts/install_profile_tools.py --root "$TOOLS_ROOT" --tools nsys ncu
 
 完整 digest 见 `configs/monitoring/tools.lock.json`。`installation-audit.json` 保存实际 binary、version 和包指纹。现成工具可通过 `SERVEDISTILL_NSYS` / `SERVEDISTILL_NCU` 指定绝对可执行路径，实际版本仍必须归档；suite 显式使用它安装的锁定二进制。
 
-当前锁文件保留首次请求的 NCU 2026.1.1，便于复现失败；它未通过本轮 R535 驱动采集。不要把这份锁文件解释为当前 worker 的已验证兼容推荐。兼容版本必须经实际 capture 后更新，并保留原失败记录。
+`tools.lock.json` 保留首次请求的 NCU 2026.1.1，便于复现驱动不兼容失败。当前 H20 / R535 / CUDA12.9 的显式 no_cudnn 诊断改用 `tools-h20-r535-no-cudnn.lock.json`，固定已实际捕获 counter 的 NCU 2025.2.1；不能据此声称默认 cuDNN 也已通过。安装时使用 `scripts/install_profile_tools.py --lock <相应锁文件> ...`，运行时归档实际版本。
 
 兼容性配置 `configs/monitoring/ncu-compatibility-candidates.json` 固定官方 2025.2.1 → 2024.1.1 → 2023.3.1 的顺序、包大小和 SHA256。runner 在一张 GPU 上串行执行实际训练副本，首个完整 runtime/counter 门通过的版本才入选：
 
@@ -454,6 +454,55 @@ python -m scripts.run_profiler_recovery \
 
 `completed.json.completed=true` 只说明诊断清单执行结束，必须另读 `all_cases_passed` 和每个 case 的 `validity.passed`。新 attention dispatch 的数值状态要先与同 dispatch 的无 profiler 副本比较，再单独量化它与默认 dispatch 的差异。不得把诊断后端变化藏进速度或质量结论。
 
+### 第 24 步：用原始格式核验计数器
+
+这次 `ncu --csv --page raw` 输出宽表：每个 kernel 占一行，指标名在列头，第二行为各列单位。旧验证器只识别 `Metric Name / Metric Value / Metric Unit` 的长表，误报零 kernel，并使两项 runner 返回失败。原始 `validity.json`、`cases.json` 和日志完整保留；当前解析器支持两种格式，重复 kernel/metric、缺指标、非有限值、缺单位、错误时间单位和超出 launch 上限都不能通过。
+
+```bash
+python -m scripts.revalidate_profile_evidence \
+  --root "$RAW_RECOVERY_EVIDENCE" \
+  --cases profiles/none_default profiles/none_no_cudnn \
+    profiles/ncu_no_cudnn profiles/ncu_gemm_no_cudnn \
+    profiles/nsys_no_cudnn profiles/sanitizer_no_cudnn \
+  --output results/profile-revalidation.json
+```
+
+这个入口先核查每个 `outputs.json` 中的文件大小和 SHA256，再使用原 runtime gate 重算 verdict。结果保留 `original_passed` 与 `revalidated_passed`，不覆盖原始产物。section 检查要求 SpeedOfLight、MemoryWorkloadAnalysis、LaunchStats、Occupancy 各自对应的量化指标，不把设备属性等无单位字段误当作吞吐计数器；也不宣称已验证每一个派生指标。
+
+指定 GEMM launch 的真实读数如下，源表和报告指纹见 [恢复结果](reports/monitoring/PROFILE_RECOVERY_V1_SUMMARY.json)：
+
+| 量 | 实测值 | 如何解释 |
+|---|---:|---|
+| kernel duration | 1.473088 ms | 单个过滤后的 launch，含 kernel replay 采集条件 |
+| SM throughput | 88.902048% | 相对工具定义的持续峰值，不能替代整个训练的利用率 |
+| DRAM throughput | 1.975737% | 同一 launch 的持续峰值占比 |
+| DRAM bytes rate | 79.479168 Gbyte/s | 与总显存用量是不同量 |
+| achieved occupancy | 12.492236% | 活跃 warp 相对理论上限，不等于计算效率 |
+| registers per thread | 255 register/thread | 该 kernel 的寄存器资源需求 |
+| register occupancy limit | 2 block | 工具报告的寄存器约束下 block 上限 |
+| L2 sector hit rate | 92.505896% | 单次 launch 的缓存计数器，不能推广到全部请求 |
+
+该 kernel 名包含 `f32f32` 和 `ffma`，属于本训练 FP32 路径，不能把其 SM throughput 称为 BF16 Tensor Core 利用率。8 个基础采集 kernel 是 learner range 内首先匹配的 copy/elementwise/scan 等 launch；它们不是按总耗时排名的八个热点。
+
+独立 system-watch 成功采集 host/GPU 遥测，但 DCGM、perf 不可用。Compute Sanitizer 在 student rollout 的 prefill 阶段记录 `cuMemCreate` 的 `CUDA_ERROR_INVALID_VALUE`，随后在 DeltaNet 路径 OOM，最终 `ERROR SUMMARY: 3 errors`；未完成 update162，也没有通过 memcheck。这个失败不能单独证明是模型 bug 或 allocator bug。
+
+本次恢复任务分配 3,727 秒、1.035278 H20·h，包含准备、所有诊断和失败；见 [完整分配成本](reports/monitoring/PROFILE_RECOVERY_V1_COST.json)。Profiler 时间继续排除在速度优势统计之外。
+
+### 第 25 步：隔离 allocator 与 memcheck 的兼容性
+
+新的单卡诊断只改变 child process 的 allocator：`cuda_allocator: no_expandable` 删除旧环境变量并设置 `PYTORCH_ALLOC_CONF=expandable_segments:False`，实际值写入 capture manifest。默认配置继承原环境，父进程和质量训练不受这个诊断入口影响。
+
+```bash
+python -m scripts.run_sanitizer_allocator_probe \
+  --student "$STUDENT" --teacher "$TEACHER" --data "$DATA" \
+  --config "$TRAIN_CONFIG" --checkpoint "$CHECKPOINT" \
+  --output results/sanitizer-allocator-probe
+```
+
+输入仍是原冷恢复 checkpoint160、同一数据、模型精度和 rollout 配置；两个副本都使用 no_cudnn、learner microbatch1，先执行完整 warmup161，再观察162。`baseline_no_expandable.json` 与 `sanitizer_no_expandable.json` 分别限定 900、2400 秒；memcheck 作用于完整应用，不通过缩小模型或过滤 kernel 来回避原失败。
+
+该任务已提交，结果尚未收集。只有完整 runtime、零错误 memcheck、产物 SHA256 和同设置基线数值检查都通过，才能报告这个诊断完成；即使通过，也只回答新 allocator 设置下的兼容性问题。原设置的 CUDA API 错误与 OOM 继续保留。
+
 | 文件/入口 | 直接运行方式 |
 |---|---|
 | `baseline/nsys/ncu/ncu_deep/torch/perf/sanitizer.json` | `scripts/profile_run.py --profile <file> ...` |
@@ -466,6 +515,7 @@ python -m scripts.run_profiler_recovery \
 | `anchor-development-v1.json` | `scripts/run_anchor_development.py --protocol <file> ...`；须使用绑定输入和源码 |
 | `ncu_no_cudnn/ncu_gemm_no_cudnn.json` | `scripts/profile_run.py --profile <file> ...`；显式诊断 attention backend |
 | `anchor-weight-development-v2.json` | 从冻结快照运行 `scripts/run_anchor_weight_development.py --extension <file> ...` |
+| `baseline_no_expandable/sanitizer_no_expandable.json` | `scripts/run_sanitizer_allocator_probe.py ...`，或逐项传给 `scripts/profile_run.py` |
 
 默认配置都需要实际输入路径和对应 GPU/工具环境，不提供伪造 trace、占位测量值或自动通过的缺失字段。
 
