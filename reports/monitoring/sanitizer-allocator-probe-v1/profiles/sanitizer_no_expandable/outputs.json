@@ -1,0 +1,62 @@
+{
+  "host-telemetry.jsonl": {
+    "sha256": "50c4685d8a3f648f75018d46ccaef1cf4eb3a89d16b2a1f3ef799147bdb2761d",
+    "bytes": 6078004
+  },
+  "tool-version.txt": {
+    "sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+    "bytes": 125
+  },
+  "sanitizer.log": {
+    "sha256": "e8e3b1e9e330dc2961f19ca5bfa5ec6073047e3e693198f038493b4697c597cf",
+    "bytes": 97145
+  },
+  "gpu-telemetry.csv": {
+    "sha256": "d621552d76336a6a974dcdcc5704f32bb6eef2a213e7ab6e7767b641eff20cda",
+    "bytes": 34999
+  },
+  "application.log": {
+    "sha256": "8f670bd45f270bbc52e2d1ab49f8b3864d953c8d3da1df37a1578c0f4bb4a105",
+    "bytes": 218495
+  },
+  "validity.json": {
+    "sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+    "bytes": 702
+  },
+  "tool-audit.json": {
+    "sha256": "3d49c7d44a468a70396cfdf0a91499a2038d4bba83dac7225c7280ac807589e2",
+    "bytes": 301
+  },
+  "manifest.json": {
+    "sha256": "d978c316c5678e28ee8cdd4d941e36bb7482e53e32efecfe9071123c7e55ea2f",
+    "bytes": 12907
+  },
+  "gpu-details.txt": {
+    "sha256": "5a48c5afe5d64e31b593fbbe83a176eaf59a39d3c9e7fd5bfccddefb76ddc008",
+    "bytes": 9681
+  },
+  "application/attention-backend.json": {
+    "sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+    "bytes": 357
+  },
+  "application/observation/configuration.json": {
+    "sha256": "4c3aa1ca8072bc78d9eb449d186fc924063fff1a31987ddb76180b45a96ca617",
+    "bytes": 2056
+  },
+  "application/train/restoration-0160.json": {
+    "sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+    "bytes": 298
+  },
+  "application/train/config.json": {
+    "sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+    "bytes": 782
+  },
+  "application/train/contract.json": {
+    "sha256": "785a32e694968ba8f99b07defd60ce3c2c2af7cea4c0ff29d63eac72a0e5d6be",
+    "bytes": 796
+  },
+  "application/train/schedule.json": {
+    "sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+    "bytes": 453591
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "elapsed_seconds": 1189.1314098834991,
+  "tasks": [
+    {
+      "name": "verify_diagnostic_overlay",
+      "returncode": 0,
+      "start_unix_seconds": 1793126117.084087,
+      "end_unix_seconds": 1793126117.3486469
+    },
+    {
+      "name": "full_workload_allocator_pair",
+      "returncode": 0,
+      "start_unix_seconds": 1793126127.954687,
+      "end_unix_seconds": 1793126846.0807118
+    }
+  ],
+  "assets_verified": true
+}

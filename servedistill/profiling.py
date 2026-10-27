@@ -56,6 +56,10 @@ def validate_config(config: dict) -> None:
         raise ValueError("Unknown diagnostic attention backend")
     if config.get("cuda_allocator", "default") not in ("default", "no_expandable"):
         raise ValueError("Unknown diagnostic CUDA allocator")
+    if "rollout_batch" in config:
+        value = config["rollout_batch"]
+        if type(value) is not int or value < 1:
+            raise ValueError("Diagnostic rollout_batch must be a positive integer")
     if config["backend"] == "ncu":
         options = config["options"]
         if options["replay_mode"] != "kernel" or not options["nvtx_include"]:

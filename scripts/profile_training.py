@@ -16,6 +16,7 @@ def main():
     parser.add_argument("--first-update", type=int, required=True)
     parser.add_argument("--last-update", type=int, required=True)
     parser.add_argument("--microbatch", type=int)
+    parser.add_argument("--rollout-batch", type=int)
     parser.add_argument("--torch-first-microbatch", action="store_true")
     parser.add_argument("--record-shapes", action="store_true")
     parser.add_argument("--profile-memory", action="store_true")
@@ -31,7 +32,7 @@ def main():
     root = Path(args.output)
     observation = TrainingObservation(
         root / "observation", args.backend, args.first_update, args.last_update,
-        microbatch=args.microbatch, record_shapes=args.record_shapes,
+        microbatch=args.microbatch, rollout_batch=args.rollout_batch, record_shapes=args.record_shapes,
         profile_memory=args.profile_memory, with_stack=args.with_stack,
         torch_first_microbatch=args.torch_first_microbatch)
     import torch

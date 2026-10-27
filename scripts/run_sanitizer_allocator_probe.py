@@ -14,13 +14,24 @@ def main():
     for name in ("student", "teacher", "data", "checkpoint", "config", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--destination", type=Path)
-    args = parser.parse_args()
     repo = Path(__file__).resolve().parents[1]
+    parser.add_argument("--profiles", type=Path, nargs=2, default=[
+        repo / "configs/monitoring/baseline_no_expandable.json",
+        repo / "configs/monitoring/sanitizer_no_expandable.json"])
+    args = parser.parse_args()
+    profiles = [(path, json.loads(path.read_text())) for path in args.profiles]
+    baseline, sanitizer = [config for _, config in profiles]
+    if baseline["backend"] != "none" or sanitizer["backend"] != "sanitizer":
+        raise ValueError("Require an unprofiled baseline followed by a sanitizer")
+    workload_keys = ("first_update", "last_update", "microbatch",
+                     "attention_backend", "cuda_allocator", "rollout_batch")
+    if (args.profiles[0].stem == args.profiles[1].stem
+            or any(baseline.get(key) != sanitizer.get(key) for key in workload_keys)):
+        raise ValueError("Pair must have distinct names and identical diagnostic workload settings")
     args.output.mkdir(parents=True, exist_ok=False)
     cases = []
-    for name in ("baseline_no_expandable", "sanitizer_no_expandable"):
-        profile = repo / "configs/monitoring" / (name + ".json")
-        configuration = json.loads(profile.read_text())
+    for profile, configuration in profiles:
+        name = profile.stem
         argv = [sys.executable, str(repo / "scripts/profile_run.py"),
                 "--profile", str(profile), "--student", str(args.student),
                 "--teacher", str(args.teacher), "--data", str(args.data),
@@ -46,12 +57,14 @@ def main():
         "completed": True, "cases": cases,
         "all_cases_passed": all(c["returncode"] == 0 and (c["validity"] or {}).get("passed")
                                 for c in cases),
-        "hypothesis": "Disabling expandable segments may avoid observed cuMemCreate "
-                      "CUDA_ERROR_INVALID_VALUE under Compute Sanitizer; not established.",
+        "paired_configuration": {key: baseline.get(key) for key in workload_keys},
+        "hypothesis": "Frozen matched diagnostic of allocator/batch settings under Compute "
+                      "Sanitizer. Completion alone does not establish compatibility.",
         "boundary": "Same cold checkpoint, train inputs, two updates, model precision, "
-                    "rollout configuration, no_cudnn attention and learner microbatch1. "
-                    "Full application is instrumented. Allocator policy is a diagnostic change, "
-                    "not a speed or quality result. Earlier failures remain separate.",
+                    "prompt/group/token budgets and matched diagnostic configuration. "
+                    "Full sanitizer application is instrumented. Rollout batch overrides "
+                    "may change trajectories and are not speed or quality results. "
+                    "Earlier failures remain separate.",
     }, indent=2) + "\n")
     if args.destination:
         publish(args.output, args.destination)

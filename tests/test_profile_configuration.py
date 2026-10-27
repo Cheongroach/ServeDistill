@@ -79,6 +79,56 @@ class ProfileContracts(unittest.TestCase):
             self.assertFalse(report_validity(
                 root, config, {"raw_metrics": {"returncode": 1}})["passed"])
 
+    def test_diagnostic_rollout_override_keeps_original_schedule_and_group_contract(self):
+        import dataclasses
+        import torch
+        from servedistill.observation import TrainingObservation
+        from servedistill.scheduling import Config, schedule
+        from servedistill.train import collate_rollouts
+
+        original = Config(steps=2, prompts_per_step=10, group_size=2, rollout_batch=8)
+        rows = [{"sample_id": domain, "domain": domain}
+                for domain in ("search", "relevance", "substitute", "math", "instruction")]
+        expected = schedule(rows, original)
+        with tempfile.TemporaryDirectory() as value:
+            observer = TrainingObservation(Path(value) / "observation", "none", 162, 162,
+                                           rollout_batch=1)
+            observed = dataclasses.replace(original)
+            observer.configure(observed)
+            self.assertEqual(schedule(rows, observed), expected)
+            record = json.loads((observer.output / "configuration.json").read_text())
+            self.assertEqual(record["checkpoint_configuration"]["rollout_batch"], 8)
+            self.assertEqual(record["observed_configuration"]["rollout_batch"], 1)
+            self.assertEqual(original.rollout_batch, 8)
+
+            class RecordingRuntime:
+                tokenizer = type("Tokenizer", (), {"pad_token_id": 0})()
+                calls = []
+
+                def rollout(self, batch, token_limit):
+                    self.calls.append(([row["sample_id"] for row in batch], token_limit))
+                    return {"tokens": torch.ones(len(batch), 1, dtype=torch.long),
+                            "mask": torch.ones(len(batch), 1, dtype=torch.bool),
+                            "behavior_logp": torch.zeros(len(batch), 1),
+                            "texts": [row["sample_id"] for row in batch],
+                            "elapsed_seconds": 0.0}
+
+            runtime = RecordingRuntime()
+            result = collate_rollouts(runtime, expected[0], observed)
+            ids = [row["sample_id"] for row in expected[0] for _ in range(2)]
+            self.assertEqual([identity for batch, _ in runtime.calls for identity in batch], ids)
+            self.assertEqual(len(runtime.calls), 20)
+            self.assertTrue(all(len(batch) == 1 and limit == 128
+                                for batch, limit in runtime.calls))
+            self.assertEqual(result["texts"], ids)
+            self.assertEqual(result["groups"].tolist(), [i for i in range(10) for _ in range(2)])
+            self.assertEqual(result["tokens"].shape, (20, 1))
+        profile = json.loads((ROOT / "configs/monitoring/sanitizer_rollout1.json").read_text())
+        for invalid in (0, -1, 1.5, True):
+            profile["rollout_batch"] = invalid
+            with self.assertRaisesRegex(ValueError, "rollout_batch"):
+                validate_config(profile)
+
     def test_torch_cpu_only_trace_cannot_pass_gpu_capture(self):
         config = json.loads((ROOT / "configs/monitoring/torch.json").read_text())
         with tempfile.TemporaryDirectory() as value:

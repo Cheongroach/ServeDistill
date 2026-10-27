@@ -1,0 +1,989 @@
+========= COMPUTE-SANITIZER
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaMalloc.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3ef96] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3bc2b] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mm_out_cuda_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x3351232] in libtorch_cuda.so
+=========         Host Frame: at::meta::structured_mm::meta(at::Tensor const&, at::Tensor const&) [0x1a44580] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mm(at::Tensor const&, at::Tensor const&) [0x33184fc] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mm>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x331856e] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mm::call(at::Tensor const&, at::Tensor const&) [0x262a1cb] in libtorch_cpu.so
+=========         Host Frame: at::native::_matmul_impl(at::Tensor&, at::Tensor const&, at::Tensor const&) [0x1a546d9] in libtorch_cpu.so
+=========         Host Frame: at::native::matmul(at::Tensor const&, at::Tensor const&) [0x1a54fd1] in libtorch_cpu.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__matmul>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x2b6115e] in libtorch_cpu.so
+=========         Host Frame: at::_ops::matmul::call(at::Tensor const&, at::Tensor const&) [0x275c07b] in libtorch_cpu.so
+=========         Host Frame: at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x1a36732] in libtorch_cpu.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__linear>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x2b61861] in libtorch_cpu.so
+=========         Host Frame: at::_ops::linear::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x217be7b] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_linear(_object*, _object*, _object*) [0x5ff3b9] in libtorch_python.so
+=========         Host Frame: cfunction_call in methodobject.c:542 [0x147b95] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in linear.py:134
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaGetLastError.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3f506] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3bc2b] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mm_out_cuda_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x3351232] in libtorch_cuda.so
+=========         Host Frame: at::meta::structured_mm::meta(at::Tensor const&, at::Tensor const&) [0x1a44580] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mm(at::Tensor const&, at::Tensor const&) [0x33184fc] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mm>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x331856e] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mm::call(at::Tensor const&, at::Tensor const&) [0x262a1cb] in libtorch_cpu.so
+=========         Host Frame: at::native::_matmul_impl(at::Tensor&, at::Tensor const&, at::Tensor const&) [0x1a546d9] in libtorch_cpu.so
+=========         Host Frame: at::native::matmul(at::Tensor const&, at::Tensor const&) [0x1a54fd1] in libtorch_cpu.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__matmul>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x2b6115e] in libtorch_cpu.so
+=========         Host Frame: at::_ops::matmul::call(at::Tensor const&, at::Tensor const&) [0x275c07b] in libtorch_cpu.so
+=========         Host Frame: at::native::linear(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x1a36732] in libtorch_cpu.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__linear>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x2b61861] in libtorch_cpu.so
+=========         Host Frame: at::_ops::linear::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&) [0x217be7b] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_linear(_object*, _object*, _object*) [0x5ff3b9] in libtorch_python.so
+=========         Host Frame: cfunction_call in methodobject.c:542 [0x147b95] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in linear.py:134
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaMalloc.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3ef96] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3bc2b] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mul_out_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x337a060] in libtorch_cuda.so
+=========         Host Frame: at::TensorIteratorBase::allocate_or_resize_outputs() [0x15cdb16] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build(at::TensorIteratorConfig&) [0x15d0e6a] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build_borrowing_binary_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&) [0x15d1b6f] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mul_Tensor(at::Tensor const&, at::Tensor const&) [0x330f522] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mul_Tensor>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x330f5ce] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mul_Tensor::call(at::Tensor const&, at::Tensor const&) [0x21599cb] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_mul(_object*, _object*, _object*) [0x463d3c] in libtorch_python.so
+=========         Host Frame: _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_mul>(_object*, _object*, _object*) [0x463df5] in libtorch_python.so
+=========         Host Frame: method_vectorcall_VARARGS_KEYWORDS in descrobject.c:364 [0x150c6d] in python3
+=========         Host Frame: vectorcall_maybe.constprop.0 in typeobject.c:1702 [0x1e436d] in python3
+=========         Host Frame: slot_nb_multiply in typeobject.c:7428 [0x29f586] in python3
+=========         Host Frame: PyNumber_Multiply in abstract.c:1111 [0x1a6b20] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5551 [0x12c98c] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaGetLastError.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3f506] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3bc2b] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mul_out_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x337a060] in libtorch_cuda.so
+=========         Host Frame: at::TensorIteratorBase::allocate_or_resize_outputs() [0x15cdb16] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build(at::TensorIteratorConfig&) [0x15d0e6a] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build_borrowing_binary_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&) [0x15d1b6f] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mul_Tensor(at::Tensor const&, at::Tensor const&) [0x330f522] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mul_Tensor>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x330f5ce] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mul_Tensor::call(at::Tensor const&, at::Tensor const&) [0x21599cb] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_mul(_object*, _object*, _object*) [0x463d3c] in libtorch_python.so
+=========         Host Frame: _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_mul>(_object*, _object*, _object*) [0x463df5] in libtorch_python.so
+=========         Host Frame: method_vectorcall_VARARGS_KEYWORDS in descrobject.c:364 [0x150c6d] in python3
+=========         Host Frame: vectorcall_maybe.constprop.0 in typeobject.c:1702 [0x1e436d] in python3
+=========         Host Frame: slot_nb_multiply in typeobject.c:7428 [0x29f586] in python3
+=========         Host Frame: PyNumber_Multiply in abstract.c:1111 [0x1a6b20] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5551 [0x12c98c] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaMalloc.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3ef96] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3c4f0] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mul_out_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x337a060] in libtorch_cuda.so
+=========         Host Frame: at::TensorIteratorBase::allocate_or_resize_outputs() [0x15cdb16] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build(at::TensorIteratorConfig&) [0x15d0e6a] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build_borrowing_binary_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&) [0x15d1b6f] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mul_Tensor(at::Tensor const&, at::Tensor const&) [0x330f522] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mul_Tensor>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x330f5ce] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mul_Tensor::call(at::Tensor const&, at::Tensor const&) [0x21599cb] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_mul(_object*, _object*, _object*) [0x463d3c] in libtorch_python.so
+=========         Host Frame: _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_mul>(_object*, _object*, _object*) [0x463df5] in libtorch_python.so
+=========         Host Frame: method_vectorcall_VARARGS_KEYWORDS in descrobject.c:364 [0x150c6d] in python3
+=========         Host Frame: vectorcall_maybe.constprop.0 in typeobject.c:1702 [0x1e436d] in python3
+=========         Host Frame: slot_nb_multiply in typeobject.c:7428 [0x29f586] in python3
+=========         Host Frame: PyNumber_Multiply in abstract.c:1111 [0x1a6b20] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5551 [0x12c98c] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Program hit cudaErrorMemoryAllocation (error 2) due to "out of memory" on CUDA API call to cudaGetLastError.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::alloc_block(c10::cuda::CUDACachingAllocator::Native::(anonymous namespace)::AllocParams&, bool, std::shared_ptr<c10::GatheredContext> const&, std::unique_lock<std::recursive_mutex>&) [0x3f506] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*) [0x3c4f0] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*) [0x3df72] in libc10_cuda.so
+=========         Host Frame: c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long) [0x3e4be] in libc10_cuda.so
+=========         Host Frame: c10::StorageImpl::StorageImpl(c10::StorageImpl::use_byte_size_t, c10::SymInt const&, c10::Allocator*, bool) [0x152a1ec] in libtorch_cpu.so
+=========         Host Frame: at::TensorBase at::detail::_empty_generic<long>(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x15264d4] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_generic(c10::ArrayRef<long>, c10::Allocator*, c10::DispatchKeySet, c10::ScalarType, std::optional<c10::MemoryFormat>) [0x1526ea2] in libtorch_cpu.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::ScalarType, std::optional<c10::Device>, std::optional<c10::MemoryFormat>) [0xd035a5] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, std::optional<c10::ScalarType>, std::optional<c10::Layout>, std::optional<c10::Device>, std::optional<bool>, std::optional<c10::MemoryFormat>) [0xd0371d] in libtorch_cuda.so
+=========         Host Frame: at::detail::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&) [0xd03844] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::create_out(c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions const&) [0x328bf39] in libtorch_cuda.so
+=========         Host Frame: at::(anonymous namespace)::structured_mul_out_functional::set_output_raw_strided(long, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::TensorOptions, c10::ArrayRef<at::Dimname>) [0x337a060] in libtorch_cuda.so
+=========         Host Frame: at::TensorIteratorBase::allocate_or_resize_outputs() [0x15cdb16] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build(at::TensorIteratorConfig&) [0x15d0e6a] in libtorch_cpu.so
+=========         Host Frame: at::TensorIteratorBase::build_borrowing_binary_op(at::TensorBase const&, at::TensorBase const&, at::TensorBase const&) [0x15d1b6f] in libtorch_cpu.so
+=========         Host Frame: at::(anonymous namespace)::wrapper_CUDA_mul_Tensor(at::Tensor const&, at::Tensor const&) [0x330f522] in libtorch_cuda.so
+=========         Host Frame: c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&), &at::(anonymous namespace)::wrapper_CUDA_mul_Tensor>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&> >, at::Tensor (at::Tensor const&, at::Tensor const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&) [0x330f5ce] in libtorch_cuda.so
+=========         Host Frame: at::_ops::mul_Tensor::call(at::Tensor const&, at::Tensor const&) [0x21599cb] in libtorch_cpu.so
+=========         Host Frame: torch::autograd::THPVariable_mul(_object*, _object*, _object*) [0x463d3c] in libtorch_python.so
+=========         Host Frame: _object* torch::autograd::TypeError_to_NotImplemented_<&torch::autograd::THPVariable_mul>(_object*, _object*, _object*) [0x463df5] in libtorch_python.so
+=========         Host Frame: method_vectorcall_VARARGS_KEYWORDS in descrobject.c:364 [0x150c6d] in python3
+=========         Host Frame: vectorcall_maybe.constprop.0 in typeobject.c:1702 [0x1e436d] in python3
+=========         Host Frame: slot_nb_multiply in typeobject.c:7428 [0x29f586] in python3
+=========         Host Frame: PyNumber_Multiply in abstract.c:1111 [0x1a6b20] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5551 [0x12c98c] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:89 [0x183b2d] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:141 [0x11f126] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: _PyObject_MakeTpCall in call.c:214 [0x117fc2] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:4772 [0x12b9df] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: _PyObject_FastCallDictTstate in call.c:152 [0x11f245] in python3
+=========         Host Frame: _PyObject_Call_Prepend in call.c:482 [0x1662bc] in python3
+=========         Host Frame: slot_tp_call in typeobject.c:7630 [0x1e4901] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a493] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyFunction_Vectorcall in call.c:393 [0x15c9d0] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: _PyObject_VectorcallTstate in pycore_call.h:92 [0x184b23] in python3
+=========         Host Frame: method_vectorcall in classobject.c:59 [0x183b93] in python3
+=========         Host Frame: PyObject_Call in call.c:355 [0x16a380] in python3
+=========         Host Frame: _PyEval_EvalFrameDefault in ceval.c:5379 [0x12f9c0] in python3
+=========         Host Frame: PyEval_EvalCode in ceval.c:1154 [0x1236ba] in python3
+=========         Host Frame: run_eval_code_obj in pythonrun.c:1714 [0x247d96] in python3
+=========         Host Frame: run_mod in pythonrun.c:1735 [0x2456ee] in python3
+=========         Host Frame: pyrun_file in pythonrun.c:1630 [0x25176f] in python3
+=========         Host Frame: _PyRun_SimpleFileObject in pythonrun.c:440 [0x2514ba] in python3
+=========         Host Frame: _PyRun_AnyFileObject in pythonrun.c:79 [0x2512e3] in python3
+=========         Host Frame: Py_RunMain in main.c:680 [0x25007e] in python3
+=========         Host Frame: Py_BytesMain in main.c:734 [0x227d36] in python3
+=========         Host Frame:  [0x27249] in libc.so.6
+=========         Host Frame: __libc_start_main [0x27304] in libc.so.6
+=========         Host Frame: _start [0x227bd0] in python3
+=========         Host Frame: forward in layer.py:807
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:803
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:879
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: __call__ in modeling_layers.py:93
+=========         Host Frame: forward in modeling_qwen3_5.py:1370
+=========         Host Frame: wrapper in output_capturing.py:253
+=========         Host Frame: wrapper in generic.py:915
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: forward in modeling_qwen3_5.py:1764
+=========         Host Frame: wrapper in generic.py:841
+=========         Host Frame: _call_impl in module.py:1786
+=========         Host Frame: _wrapped_call_impl in module.py:1775
+=========         Host Frame: _prefill in utils.py:3857
+=========         Host Frame: _sample in utils.py:2863
+=========         Host Frame: generate in utils.py:2668
+=========         Host Frame: decorate_context in _contextlib.py:120
+=========         Host Frame: generate in peft_model.py:2048
+=========         Host Frame: rollout in runtime.py:257
+=========         Host Frame: <listcomp> in train.py:116
+=========         Host Frame: collate_rollouts in train.py:115
+=========         Host Frame: train in train.py:413
+=========         Host Frame: main in profile_training.py:56
+=========
+========= Target application returned an error
+========= ERROR SUMMARY: 6 errors

@@ -1,0 +1,145 @@
+{
+  "scope": "full_workload_allocator_diagnostic",
+  "parent_completed": true,
+  "parent_exit_status": 0,
+  "worker_assets_verified": true,
+  "all_cases_passed": false,
+  "original_worker_completion_sha256": "b750b028560c423718f9fdfd7d4d1be16681a1721999eaa370e0c3a377c29396",
+  "original_pair_completion_sha256": "995ab95305392fea5eeedee1c4612116216b7c4bbb6c3ee7af7cdad4f0d33c51",
+  "original_case_indexed_files_verified": 40,
+  "terminal_source_files_exported": 50,
+  "input_files": [
+    {
+      "file": "state.json",
+      "sha256": "bfd73d6f7d7f75d7c43c1ccedcf9d850e1fdac368a5109d9d262585367756494"
+    },
+    {
+      "file": "training.pt",
+      "sha256": "80c7887140d5ab7a15e7446f26d6e3384ecf96ee2d441df682e8401b5d9ea135"
+    },
+    {
+      "file": "adapter_model.safetensors",
+      "sha256": "11733b285ef8a261f59863fa8607ca8656f43c33b8be1347086a9d19367b0b9d"
+    },
+    {
+      "file": "train.jsonl",
+      "sha256": "481c4d4d4492a5fb2b3d25d91d37fbcede02ba590c1e77730edffef6c1a4d1a4"
+    },
+    {
+      "file": "dev.jsonl",
+      "sha256": "46982562be2e09770074442df453a488c4c1013d0d79c5e6ef5f13b0b4d736f4"
+    }
+  ],
+  "cases": {
+    "baseline_no_expandable": {
+      "application_returncode": 0,
+      "capture_wall_seconds": 284.6621639728546,
+      "sampled_peak_memory_mib": 28348.0,
+      "profile_configuration": {
+        "schema_version": 1,
+        "backend": "none",
+        "attention_backend": "no_cudnn",
+        "cuda_allocator": "no_expandable",
+        "timeout_seconds": 900,
+        "first_update": 162,
+        "last_update": 162,
+        "microbatch": 1,
+        "gpu_poll_ms": 1000,
+        "host_poll_seconds": 1,
+        "options": {}
+      },
+      "allocator_environment": {
+        "PYTORCH_ALLOC_CONF": "expandable_segments:False",
+        "PYTORCH_CUDA_ALLOC_CONF": null
+      },
+      "manifest_sha256": "0f7ce1ef3d0d70f57b2ed642342415876919a0fcfd4a3b91480fc9755d8059bf",
+      "validity_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2"
+    },
+    "sanitizer_no_expandable": {
+      "application_returncode": 86,
+      "capture_wall_seconds": 257.9353632926941,
+      "sampled_peak_memory_mib": 97266.0,
+      "profile_configuration": {
+        "schema_version": 1,
+        "backend": "sanitizer",
+        "attention_backend": "no_cudnn",
+        "cuda_allocator": "no_expandable",
+        "timeout_seconds": 2400,
+        "first_update": 162,
+        "last_update": 162,
+        "microbatch": 1,
+        "gpu_poll_ms": 1000,
+        "host_poll_seconds": 1,
+        "options": {
+          "tool": "memcheck"
+        }
+      },
+      "allocator_environment": {
+        "PYTORCH_ALLOC_CONF": "expandable_segments:False",
+        "PYTORCH_CUDA_ALLOC_CONF": null
+      },
+      "manifest_sha256": "d978c316c5678e28ee8cdd4d941e36bb7482e53e32efecfe9071123c7e55ea2f",
+      "validity_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6"
+    }
+  },
+  "sanitizer_failure": {
+    "stage": "student rollout prefill before warmup update161 completion",
+    "stack": "Qwen3.5 MLP modeling_qwen3_5.py:803 -> PEFT LoRA layer.py:807",
+    "cuda_api": [
+      "cudaMalloc",
+      "cudaGetLastError"
+    ],
+    "error_summary": 6,
+    "requested_mib": 74.0,
+    "free_mib": 18.38,
+    "pytorch_allocated_gib": 91.96,
+    "complete_update162": false,
+    "zero_error_memcheck": false,
+    "boundary": "Observed CUDA allocation failure. No cuMemCreate signature in this capture does not establish a general allocator fix or model correctness."
+  },
+  "previous_baseline_comparison": {
+    "passed": false,
+    "exact_final_state_equivalence": false,
+    "rng_equal": true,
+    "same_step_and_tokens": true,
+    "original_result_sha256": "e77b4bb8ce8f650695d0f254c630f5e03490d87da8924a9da6275ce7b37fb3eb",
+    "tensors": {
+      "adapter": {
+        "total": 300,
+        "failed": 264,
+        "max_abs_error": 2.877623774111271e-05,
+        "tolerance": {
+          "rtol": 1e-05,
+          "atol": 1e-06
+        }
+      },
+      "optimizer": {
+        "total": 900,
+        "failed": 300,
+        "max_abs_error": 7.125631054805126e-05,
+        "tolerance": {
+          "rtol": 0.0001,
+          "atol": 1e-08
+        }
+      }
+    },
+    "boundary": "Comparison against prior no_cudnn baseline with its original allocator. Not a matched memcheck final-state comparison; sanitizer has no final state. Frozen tolerances were not widened."
+  },
+  "inflight_to_terminal": {
+    "unchanged_existing_files": 47,
+    "updated_metadata": [
+      "task-events.json"
+    ],
+    "new_files": [
+      "worker-completed.json",
+      "profiles/completed.json"
+    ],
+    "inflight_export": "sanitizer-allocator-probe-v1/PUBLIC_EXPORT_MANIFEST.json",
+    "terminal_export": "sanitizer-allocator-probe-v1-terminal/PUBLIC_EXPORT_MANIFEST.json",
+    "boundary": "Both snapshots retained separately; updated task events are closing metadata."
+  },
+  "allocated_gpu_hours": 0.3622222222222222,
+  "speed_advantage_supported": false,
+  "quality_advantage_supported": false,
+  "boundary": "Full original batch8, 10 prompts/group2/max128 tokens, cold checkpoint160, warmup161 and observed162; no_cudnn and learner microbatch1 in both children. Parent orchestration completed while memcheck failed. Diagnostic timings and altered allocator states cannot support speed or quality superiority."
+}

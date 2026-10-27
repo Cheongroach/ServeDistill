@@ -60,6 +60,17 @@ from historical and DEV allocations. The 156-test monitoring/collection validati
 is retained; the current fresh-confirmation CPU validation is reported separately.
 Profiling diagnostics do not establish speed or quality superiority.
 
+The [completed allocator diagnostic](reports/monitoring/SANITIZER_ALLOCATOR_V1.md)
+retains both full-workload captures and all **0.362222 H20 GPU hours**. The parent
+exited zero, while memcheck failed before update161 with six CUDA allocation errors.
+All 40 indexed files were verified. The baseline completed update162 but failed
+the frozen numerical tolerances against the previous baseline. A separate frozen
+[batch1 diagnostic](experiments/sanitizer-rollout1-probe-v1/manifest.json) has been
+submitted with all 10 prompts, group size 2 and the original 128-token limit;
+it changes rollout batching after strict restoration and may change trajectories.
+The [new CPU audit](reports/monitoring/CPU_VALIDATION_ROLLOUT1.json) records
+167 passed checks. GPU completion and memcheck acceptance remain pending.
+
 The following paragraphs describe older, closed studies.
 
 The [four-seed AOPD router confirmation](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER.md) completed all 12 training arms and both independent holdout splits. It did not establish superiority over offline SFT: business macro differences were −0.147 pp on test and −0.202 pp on replication, with both 95% intervals crossing zero. Seed 401 also failed the 99% JSON-validity gate. The [confirmation cost audit](reports/advantage/CONFIRMATION_AOPD_DOMAIN_ROUTER_COST.json) retains all 12 trials and 46.548 H20 GPU hours; this is separate from the earlier studies below. Further method development uses DEV, and a new confirmation requires unseen data.
