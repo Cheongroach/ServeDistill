@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "all_trials_retained": true,
+  "records": [
+    {
+      "job_run_sid": "redacted-7fc49c45a5d8",
+      "trial_sid": "redacted-322cd4298f87",
+      "trial_pod_sid": "redacted-e029ed2116f4",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T18:27:45.000Z",
+      "start_at": "2026-10-27T18:27:45.000Z",
+      "stop_at": "2026-10-27T18:49:29.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 1304.0,
+      "gpu_hours": 0.3622222222222222
+    }
+  ],
+  "allocated_gpu_hours": 0.3622222222222222,
+  "cost_advantage_supported": false,
+  "boundary": "All terminal scheduled-to-stop Pod intervals, including preparation, both diagnostic children and every publication. Parent exit0 does not imply child memcheck success. Not billing or useful training; historical and DEV costs remain separate."
+}

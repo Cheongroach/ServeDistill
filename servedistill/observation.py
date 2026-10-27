@@ -9,7 +9,7 @@ import torch
 
 class TrainingObservation:
     def __init__(self, output, backend, first_update, last_update, *,
-                 microbatch=None, record_shapes=False, profile_memory=False,
+                 microbatch=None, rollout_batch=None, record_shapes=False, profile_memory=False,
                  with_stack=False, torch_first_microbatch=False):
         if backend not in ("none", "nsys", "ncu", "torch"):
             raise ValueError("Unknown observation backend")
@@ -20,6 +20,9 @@ class TrainingObservation:
         self.backend = backend
         self.first_update, self.last_update = first_update, last_update
         self.microbatch = microbatch
+        if rollout_batch is not None and (type(rollout_batch) is not int or rollout_batch < 1):
+            raise ValueError("rollout_batch must be a positive integer")
+        self.rollout_batch = rollout_batch
         self.options = dict(record_shapes=record_shapes, profile_memory=profile_memory,
                             with_stack=with_stack)
         self.active = False
@@ -39,6 +42,8 @@ class TrainingObservation:
             if self.microbatch < 1:
                 raise ValueError("microbatch must be positive")
             config.microbatch = self.microbatch
+        if self.rollout_batch is not None:
+            config.rollout_batch = self.rollout_batch
         (self.output / "configuration.json").write_text(json.dumps({
             "checkpoint_configuration": self.configuration,
             "observed_configuration": vars(config),
@@ -46,7 +51,9 @@ class TrainingObservation:
             "first_update": self.first_update, "last_update": self.last_update,
             "profiler_options": self.options,
             "torch_first_microbatch": self.torch_first_microbatch,
-            "boundary": "diagnostic clone; original checkpoints and final selection unchanged",
+            "boundary": "Diagnostic clone after strict checkpoint restoration. Rollout batching "
+                        "may change sampled trajectories; prompt/group/token budgets are retained. "
+                        "Original checkpoints and final selection remain unchanged.",
         }, indent=2) + "\n")
 
     def begin_update(self, update):

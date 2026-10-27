@@ -52,6 +52,8 @@ def main():
         "--last-update", str(config["last_update"]), "--microbatch", str(config["microbatch"]),
         "--attention-backend", config.get("attention_backend", "default"),
     ])
+    if "rollout_batch" in config:
+        application.extend(["--rollout-batch", str(config["rollout_batch"])])
     if backend == "torch":
         for key, value in config["options"].items():
             if value:

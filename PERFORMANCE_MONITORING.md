@@ -501,7 +501,26 @@ python -m scripts.run_sanitizer_allocator_probe \
 
 输入仍是原冷恢复 checkpoint160、同一数据、模型精度和 rollout 配置；两个副本都使用 no_cudnn、learner microbatch1，先执行完整 warmup161，再观察162。`baseline_no_expandable.json` 与 `sanitizer_no_expandable.json` 分别限定 900、2400 秒；memcheck 作用于完整应用，不通过缩小模型或过滤 kernel 来回避原失败。
 
-该任务已提交，结果尚未收集。只有完整 runtime、零错误 memcheck、产物 SHA256 和同设置基线数值检查都通过，才能报告这个诊断完成；即使通过，也只回答新 allocator 设置下的兼容性问题。原设置的 CUDA API 错误与 OOM 继续保留。
+该任务已结束：[原始索引复核](reports/monitoring/SANITIZER_ALLOCATOR_V1_REVALIDATION.json)核验了40个文件，terminal导出包含50个源文件。基线完成update162，memcheck在warmup161的student prefill中OOM，记录6次`cudaMalloc` / `cudaGetLastError`分配错误。父编排器退出0，但两个子测试的`all_cases_passed=false`。完整分配成本为1,304秒、0.362222 H20·h，见[结果与证据边界](reports/monitoring/SANITIZER_ALLOCATOR_V1.md)。
+
+基线与上一轮no_cudnn、原allocator设置基线比较时，264/300 adapter和300/900 optimizer tensor超出原容差，RNG、step和token数仍相同。原容差没有放宽。memcheck没有最终checkpoint，因此不能报告它与本轮基线的数值等价。原设置的CUDA API错误与OOM继续保留。
+
+### 第 26 步：降低 rollout batch，保留完整更新
+
+`rollout_batch`控制一次生成多少条trajectory，不控制每次optimizer update使用多少个prompt。新配对诊断将它从8改为1，仍处理每步10个prompt、每prompt两条trajectory，最多128个新token，先完整执行warmup161再观察162。完整student/teacher、learner microbatch1、no_cudnn和非expandable allocator保持配对。
+
+```bash
+python -m scripts.run_sanitizer_allocator_probe \
+  --student "$STUDENT" --teacher "$TEACHER" --data "$DATA" \
+  --config "$TRAIN_CONFIG" --checkpoint "$CHECKPOINT" \
+  --profiles configs/monitoring/baseline_rollout1.json \
+    configs/monitoring/sanitizer_rollout1.json \
+  --output results/sanitizer-rollout1-probe
+```
+
+`TrainingObservation.configure`在严格核对checkpoint原配置及恢复fingerprint之后应用batch覆盖，并将原配置和观察配置写入`application/observation/configuration.json`。原配置文件和checkpoint不被改写。分批方式可能改变随机数消耗和采样轨迹，因而这轮只检验新的诊断条件；其结果不能支持原batch8通过memcheck或生成质量等价。
+
+冻结源码在`experiments/sanitizer-rollout1-probe-v1/`；167项CPU检查覆盖全部20条trajectory的顺序、group映射和token limit，但不是GPU验证。任务已提交，完整runtime、零错误memcheck、同设置基线数值检查及最终Pod成本仍待收集。
 
 | 文件/入口 | 直接运行方式 |
 |---|---|
@@ -516,6 +535,7 @@ python -m scripts.run_sanitizer_allocator_probe \
 | `ncu_no_cudnn/ncu_gemm_no_cudnn.json` | `scripts/profile_run.py --profile <file> ...`；显式诊断 attention backend |
 | `anchor-weight-development-v2.json` | 从冻结快照运行 `scripts/run_anchor_weight_development.py --extension <file> ...` |
 | `baseline_no_expandable/sanitizer_no_expandable.json` | `scripts/run_sanitizer_allocator_probe.py ...`，或逐项传给 `scripts/profile_run.py` |
+| `baseline_rollout1/sanitizer_rollout1.json` | `scripts/run_sanitizer_allocator_probe.py --profiles <baseline> <sanitizer> ...`；完整模型及更新，诊断覆盖 rollout batch |
 
 默认配置都需要实际输入路径和对应 GPU/工具环境，不提供伪造 trace、占位测量值或自动通过的缺失字段。
 

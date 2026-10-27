@@ -1,0 +1,58 @@
+[
+  {
+    "case": "baseline_no_expandable",
+    "configuration_sha256": "d65fd9b8355886d37589c5f56376eee81c445de3838a6d567f46ee01ad994902",
+    "returncode": 0,
+    "validity": {
+      "passed": true,
+      "checks": {
+        "cold_restoration": true,
+        "window_complete": true,
+        "finite_loss_gradient_delta": true,
+        "nonzero_parameter_update": true,
+        "behavior_probability": true,
+        "rollout_version": true
+      },
+      "observed_steps": [
+        162
+      ],
+      "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+      "boundary": "Runtime gates do not prove business quality or method superiority.",
+      "application_succeeded": true,
+      "trace_present": true,
+      "report": {
+        "passed": true,
+        "checks": {},
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      }
+    }
+  },
+  {
+    "case": "sanitizer_no_expandable",
+    "configuration_sha256": "bfb6dc6c29988cdff2a7ee5c0ffd98f3c438660e6b70b8de5725e8d859539d5e",
+    "returncode": 1,
+    "validity": {
+      "passed": false,
+      "checks": {
+        "cold_restoration": true,
+        "window_complete": false,
+        "finite_loss_gradient_delta": false,
+        "nonzero_parameter_update": false,
+        "behavior_probability": false,
+        "rollout_version": false
+      },
+      "observed_steps": [],
+      "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+      "boundary": "Runtime gates do not prove business quality or method superiority.",
+      "application_succeeded": false,
+      "trace_present": true,
+      "report": {
+        "passed": false,
+        "checks": {
+          "zero_error_summary": false
+        },
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      }
+    }
+  }
+]

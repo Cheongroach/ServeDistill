@@ -1,0 +1,22 @@
+{
+  "scope": "cpu_regression_only",
+  "utc": "2026-10-27T18:58:33.570822+00:00",
+  "tests_passed": 167,
+  "test_stdout_sha256": "bacf3e5b1db976fa9e697e3d337a9ec78cd19b61a31ae004bf91304032ecd0ab",
+  "test_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_sha256": {
+    "servedistill/profiling.py": "4436c6cf0b49ed0c3a9cd560b51773042877cfe4b5c70bad702a2d3d7c540eba",
+    "servedistill/observation.py": "9111521d610269dc54f94d9c2e0b64392e50a38c0c76c3eb395bc7ad908a97cb",
+    "scripts/profile_run.py": "4a99a40f03b434c0a00c8dd362396751237939c1ee7f43649ef69eefe9cb5cbd",
+    "scripts/profile_training.py": "e63af9e43635f8a3fd2871a87de67e5d63b3d1e1782b245dc0d80f905bb2f1a3",
+    "scripts/run_sanitizer_allocator_probe.py": "85dec4c54042ede5c755e95531daff1998bc753d79d6dbb500f4d781813fa65e",
+    "tests/test_profile_configuration.py": "d8ed59a5c3ca3b471b117342cffee3c12d2042254e05931d47a668bcb59e2c96",
+    "configs/monitoring/baseline_rollout1.json": "47e8ac1fe40ac91c36ac77fcc6b4404e784562de92e99a1e6dd7b84faf601346",
+    "configs/monitoring/sanitizer_rollout1.json": "cfbeb481efc36c9bb1181f0b089204248f50818a0fccac9efbddd36ce2eba247"
+  },
+  "coverage": "Diagnostic batch override after strict restoration; original schedule and configuration retained; all20 rollout sequences preserve request order, groups and max128 token limit; invalid batch rejected. Existing full suite includes fresh-confirmation acceptance/rejection gates.",
+  "gpu_validation_completed": false,
+  "quality_advantage_supported": false,
+  "speed_advantage_supported": false,
+  "boundary": "CPU contracts only. Original frozen training snapshots remain unchanged; real diagnostic captures and quality experiments need independent terminal evidence."
+}
