@@ -1,0 +1,80 @@
+{
+  "scope": "development_only",
+  "holdout_observed": false,
+  "checked_at": 1793149661.8998556,
+  "protocol_sha256": "42dbf44f87864f732b4bfe0de826919db38fdafdd8df85621de24c5004a84dfa",
+  "jobs": [
+    {
+      "variant": "domain01",
+      "seed": 101,
+      "stem": "domain-domain01-seed101",
+      "gpu_count": 1,
+      "sid": "redacted-9236a9577499",
+      "status": "started"
+    },
+    {
+      "variant": "domain01",
+      "seed": 211,
+      "stem": "domain-domain01-seed211",
+      "gpu_count": 1,
+      "sid": "redacted-0849fdb017f0",
+      "status": "running"
+    },
+    {
+      "variant": "domain01",
+      "seed": 307,
+      "stem": "domain-domain01-seed307",
+      "gpu_count": 1,
+      "sid": "redacted-b8d64389ef65",
+      "status": "started"
+    },
+    {
+      "variant": "domain01",
+      "seed": 401,
+      "stem": "domain-domain01-seed401",
+      "gpu_count": 1,
+      "sid": "redacted-c3895f292f62",
+      "status": "running"
+    },
+    {
+      "variant": "domain05",
+      "seed": 101,
+      "stem": "domain-domain05-seed101",
+      "gpu_count": 1,
+      "sid": "redacted-d59bbb2b7be6",
+      "status": "running"
+    },
+    {
+      "variant": "domain05",
+      "seed": 211,
+      "stem": "domain-domain05-seed211",
+      "gpu_count": 1,
+      "sid": "redacted-902fb2d443a8",
+      "status": "running"
+    },
+    {
+      "variant": "domain05",
+      "seed": 307,
+      "stem": "domain-domain05-seed307",
+      "gpu_count": 1,
+      "sid": "redacted-a6c6000d37dd",
+      "status": "running"
+    },
+    {
+      "variant": "domain05",
+      "seed": 401,
+      "stem": "domain-domain05-seed401",
+      "gpu_count": 1,
+      "sid": "redacted-410b90d3d86e",
+      "status": "running"
+    }
+  ],
+  "new_single_gpu_jobs": 8,
+  "all_prechecks_successful": true,
+  "precheck_warnings_or_hints": [],
+  "precheck_contract": "Final payloads schema-checked and prechecked; error blocks submission. Warnings/hints exposed. request_context fields preserved while merging precheck_sid, submitted within 30min.",
+  "historical_controls_reverified": true,
+  "quality_advantage_supported": false,
+  "allocated_cost_closed": false,
+  "boundary": "Platform running/started and CPU validation are setup evidence only. No DEV result, fresh confirmation or quality superiority from these new runs."
+}

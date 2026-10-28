@@ -1,0 +1,9 @@
+{
+  "file": "source.tar.gz",
+  "sha256": "341398ed55391772c505e09558f761f452384c0c6fed4ac7c64506ff8faad738",
+  "support_file": "support.tar.gz",
+  "support_sha256": "114d3628b32635afa25c3502308fa64f0f85549743c86c0793d758015db5c704",
+  "protocol_sha256": "42dbf44f87864f732b4bfe0de826919db38fdafdd8df85621de24c5004a84dfa",
+  "base_protocol_sha256": "c5a8110f496151d24895087261ca82daf5235375db13e3a521aa31280ff63f7b",
+  "boundary": "Exact updated domain CE training/collection/analysis source. No data, weights or holdout. Historical source archives retained."
+}

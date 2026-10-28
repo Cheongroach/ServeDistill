@@ -1,0 +1,434 @@
+{
+  "original_hash_verification": {
+    "profiles/baseline_rollout1": {
+      "files": 25,
+      "all_hashes_match": true
+    },
+    "profiles/sanitizer_rollout1": {
+      "files": 16,
+      "all_hashes_match": true
+    }
+  },
+  "independent_report_validation": {
+    "profiles/baseline_rollout1": {
+      "passed": true,
+      "checks": {},
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    },
+    "profiles/sanitizer_rollout1": {
+      "passed": false,
+      "checks": {
+        "zero_error_summary": false
+      },
+      "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+    }
+  },
+  "records": [
+    {
+      "source": "base-environment.json",
+      "original_sha256": "77a5d887be0cdfb9afbfb21797d79878293ad4a30186d9facf64ab9e819a6500",
+      "original_bytes": 526,
+      "public_file": "base-environment.json",
+      "public_sha256": "77a5d887be0cdfb9afbfb21797d79878293ad4a30186d9facf64ab9e819a6500",
+      "public_bytes": 526
+    },
+    {
+      "source": "environment.json",
+      "original_sha256": "d21949c039b652b8ca31adae6d7c67bb1aa030a73fdef270a775930d3e00a620",
+      "original_bytes": 539,
+      "public_file": "environment.json",
+      "public_sha256": "d21949c039b652b8ca31adae6d7c67bb1aa030a73fdef270a775930d3e00a620",
+      "public_bytes": 539
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/baseline_rollout1/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/continuation.json",
+      "original_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "original_bytes": 61,
+      "public_file": "profiles/baseline_rollout1/application/continuation.json",
+      "public_sha256": "0d65a5479b0cb0a6b40c6b47fb230d9b3ccc06b3a23181380bc823e1fa56dc3f",
+      "public_bytes": 61
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/observation/configuration.json",
+      "original_sha256": "54f12f484dc8fb39ff72e186e0d1fe06edda175ebabf9285fbc2a8821bfdf53f",
+      "original_bytes": 2191,
+      "public_file": "profiles/baseline_rollout1/application/observation/configuration.json",
+      "public_sha256": "54f12f484dc8fb39ff72e186e0d1fe06edda175ebabf9285fbc2a8821bfdf53f",
+      "public_bytes": 2191
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/observation/host-spans.json",
+      "original_sha256": "cc17b8780422ef2cf98a35427e9349138972ea1ee128bd481066fcc6669bc4d5",
+      "original_bytes": 23022,
+      "public_file": "profiles/baseline_rollout1/application/observation/host-spans.json",
+      "public_sha256": "cc17b8780422ef2cf98a35427e9349138972ea1ee128bd481066fcc6669bc4d5",
+      "public_bytes": 23022
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/checkpoint-0162/README.md",
+      "original_sha256": "589c3f49c4bdab3bed5f2b68cbe8749276cf33a1ddfb591d3aa0ae37ca55e1eb",
+      "original_bytes": 5272,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/checkpoint-0162/adapter_config.json",
+      "original_sha256": "a6cf39bc471b1916a2974ab83254e0cf910874c4662f25687778bb79f8abe5c2",
+      "original_bytes": 1141,
+      "public_file": "profiles/baseline_rollout1/application/train/checkpoint-0162/adapter_config.json",
+      "public_sha256": "7c995b4ce872ad2f4d98cc1dbec2b91b89756073bb800604c43b7d5e82aa373e",
+      "public_bytes": 1142
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/checkpoint-0162/adapter_model.safetensors",
+      "original_sha256": "39125a7b7af74256dcc641248bb153a545e1121c866674114505e3345c1166ff",
+      "original_bytes": 62561688,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/checkpoint-0162/state.json",
+      "original_sha256": "172115c6ccb2fe88c8382e6e4bb74b716c8a44676e57c2fd4602868cc5779549",
+      "original_bytes": 757,
+      "public_file": "profiles/baseline_rollout1/application/train/checkpoint-0162/state.json",
+      "public_sha256": "172115c6ccb2fe88c8382e6e4bb74b716c8a44676e57c2fd4602868cc5779549",
+      "public_bytes": 757
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/checkpoint-0162/training.pt",
+      "original_sha256": "e63e34c7d1483dddacdefc56309ee91c1e1c613f77f55e598788df55e7e7b0bf",
+      "original_bytes": 125447267,
+      "public_file": null,
+      "boundary": "Original binary/model state retained in the local evidence directory."
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/cold-stop.json",
+      "original_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "original_bytes": 37,
+      "public_file": "profiles/baseline_rollout1/application/train/cold-stop.json",
+      "public_sha256": "8e387cb67f79a3dfe9ce34256f15023c2dca55c21501222c6c51682fa645bbf8",
+      "public_bytes": 37
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/baseline_rollout1/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/contract.json",
+      "original_sha256": "cf71e440b5a5f835ace539598a7544337335e666def61639f51379e28904facf",
+      "original_bytes": 796,
+      "public_file": "profiles/baseline_rollout1/application/train/contract.json",
+      "public_sha256": "cf71e440b5a5f835ace539598a7544337335e666def61639f51379e28904facf",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/last-rollout-contract.json",
+      "original_sha256": "89de05a1fbee8440cde0eba16ec6c465c1671a9caaeb7ed2ce8c7f55970493f6",
+      "original_bytes": 2438,
+      "public_file": "profiles/baseline_rollout1/application/train/last-rollout-contract.json",
+      "public_sha256": "89de05a1fbee8440cde0eba16ec6c465c1671a9caaeb7ed2ce8c7f55970493f6",
+      "public_bytes": 2438
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/latest.json",
+      "original_sha256": "33f4858b9e940bd88369fc980d9f35f395ee133835b358068d8146550eaf6fed",
+      "original_bytes": 786,
+      "public_file": "profiles/baseline_rollout1/application/train/latest.json",
+      "public_sha256": "33f4858b9e940bd88369fc980d9f35f395ee133835b358068d8146550eaf6fed",
+      "public_bytes": 786
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/metrics.jsonl",
+      "original_sha256": "0fe87e6def7a067a867ab2d760559abb613fc81940593e589c679febc249c746",
+      "original_bytes": 3338,
+      "public_file": "profiles/baseline_rollout1/application/train/metrics.jsonl",
+      "public_sha256": "0fe87e6def7a067a867ab2d760559abb613fc81940593e589c679febc249c746",
+      "public_bytes": 3338
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/baseline_rollout1/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/rollouts.jsonl",
+      "original_sha256": "5c1f3c66aa46524d4268895bb9883f8ae3aec780764c7303825e556486666299",
+      "original_bytes": 4618,
+      "public_file": "profiles/baseline_rollout1/application/train/rollouts.jsonl",
+      "public_sha256": "7fe0237866b7e918a04849dae6c017e598f750807025f6fe3dccc3b0573de470",
+      "public_bytes": 3065
+    },
+    {
+      "source": "profiles/baseline_rollout1/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/baseline_rollout1/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/baseline_rollout1/application.log",
+      "original_sha256": "6269b7cae9b3e38162667e4aa895e74b2a2e219cbc61210d0dccd0ac9d89ae0e",
+      "original_bytes": 218428,
+      "public_file": "profiles/baseline_rollout1/application.log",
+      "public_sha256": "5e5fa49feb8b5436e845a0ba910269a1662a4487fd49ed730ff7bdc065aa3e1f",
+      "public_bytes": 216692
+    },
+    {
+      "source": "profiles/baseline_rollout1/gpu-details.txt",
+      "original_sha256": "9d9c4ded3c7b36d6b2dae33c15d8bf2fdfd415223435ac182824082eb468c4a1",
+      "original_bytes": 9683,
+      "public_file": "profiles/baseline_rollout1/gpu-details.txt",
+      "public_sha256": "4204bd0707899d2e209fad676e052531c662f40c25749d6674c99bc735fd14d4",
+      "public_bytes": 9680
+    },
+    {
+      "source": "profiles/baseline_rollout1/gpu-telemetry.csv",
+      "original_sha256": "923856e75cf7190c75fcf5fea1da1b4edb8b71f70f6f9d848e5945857947d8b3",
+      "original_bytes": 38727,
+      "public_file": "profiles/baseline_rollout1/gpu-telemetry.csv",
+      "public_sha256": "923856e75cf7190c75fcf5fea1da1b4edb8b71f70f6f9d848e5945857947d8b3",
+      "public_bytes": 38727
+    },
+    {
+      "source": "profiles/baseline_rollout1/host-telemetry.jsonl",
+      "original_sha256": "799db187bf95dca3a44d167c84a74cd59fe8eb9a0f2bf42442999c3be08f058b",
+      "original_bytes": 7062030,
+      "public_file": "profiles/baseline_rollout1/host-telemetry.jsonl",
+      "public_sha256": "abe03960a20e04bb37527e58f251e45390d2de6afb047dda3fdbe9da7128845f",
+      "public_bytes": 7068570
+    },
+    {
+      "source": "profiles/baseline_rollout1/manifest.json",
+      "original_sha256": "1aaadb80a6c66faa6680120f2105d8b7bb486afa68e0132e076dbdf79d9200cb",
+      "original_bytes": 13350,
+      "public_file": "profiles/baseline_rollout1/manifest.json",
+      "public_sha256": "29f99b8d63e6f69ad923846fd346e0164ed6f8457dcaaeea6100231766bab650",
+      "public_bytes": 12761
+    },
+    {
+      "source": "profiles/baseline_rollout1/outputs.json",
+      "original_sha256": "c85e431e53c660449a623722cd0ab9e0fdf1ca31285488d42c88086da31b174b",
+      "original_bytes": 3629,
+      "public_file": "profiles/baseline_rollout1/outputs.json",
+      "public_sha256": "c85e431e53c660449a623722cd0ab9e0fdf1ca31285488d42c88086da31b174b",
+      "public_bytes": 3629
+    },
+    {
+      "source": "profiles/baseline_rollout1/tool-audit.json",
+      "original_sha256": "5ff5365a6c1e59c4bfb6a4743c58baf64729baa2cf9cb19b05cc0e2ea6077be4",
+      "original_bytes": 175,
+      "public_file": "profiles/baseline_rollout1/tool-audit.json",
+      "public_sha256": "5ff5365a6c1e59c4bfb6a4743c58baf64729baa2cf9cb19b05cc0e2ea6077be4",
+      "public_bytes": 175
+    },
+    {
+      "source": "profiles/baseline_rollout1/validity.json",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/baseline_rollout1/validity.json",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/baseline_rollout1.log",
+      "original_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_bytes": 666,
+      "public_file": "profiles/baseline_rollout1.log",
+      "public_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "public_bytes": 666
+    },
+    {
+      "source": "profiles/cases.json",
+      "original_sha256": "dcac34974d64b416fdda1e74726c3bcf481df5d3381175861a23626e09285ad2",
+      "original_bytes": 1898,
+      "public_file": "profiles/cases.json",
+      "public_sha256": "dcac34974d64b416fdda1e74726c3bcf481df5d3381175861a23626e09285ad2",
+      "public_bytes": 1898
+    },
+    {
+      "source": "profiles/completed.json",
+      "original_sha256": "7685b0b5049e1ed3a042b7a0f9d51fb6d1db27c81116d243a7094673ba5eb98e",
+      "original_bytes": 2740,
+      "public_file": "profiles/completed.json",
+      "public_sha256": "7685b0b5049e1ed3a042b7a0f9d51fb6d1db27c81116d243a7094673ba5eb98e",
+      "public_bytes": 2740
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/attention-backend.json",
+      "original_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "original_bytes": 357,
+      "public_file": "profiles/sanitizer_rollout1/application/attention-backend.json",
+      "public_sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+      "public_bytes": 357
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/observation/configuration.json",
+      "original_sha256": "54f12f484dc8fb39ff72e186e0d1fe06edda175ebabf9285fbc2a8821bfdf53f",
+      "original_bytes": 2191,
+      "public_file": "profiles/sanitizer_rollout1/application/observation/configuration.json",
+      "public_sha256": "54f12f484dc8fb39ff72e186e0d1fe06edda175ebabf9285fbc2a8821bfdf53f",
+      "public_bytes": 2191
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/train/config.json",
+      "original_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "original_bytes": 782,
+      "public_file": "profiles/sanitizer_rollout1/application/train/config.json",
+      "public_sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+      "public_bytes": 782
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/train/contract.json",
+      "original_sha256": "0a2d4f54d2f37de89c25abc3d5630e4bd4b0d87efcf3fdc20439f04b8907ac16",
+      "original_bytes": 796,
+      "public_file": "profiles/sanitizer_rollout1/application/train/contract.json",
+      "public_sha256": "0a2d4f54d2f37de89c25abc3d5630e4bd4b0d87efcf3fdc20439f04b8907ac16",
+      "public_bytes": 796
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/train/last-rollout-contract.json",
+      "original_sha256": "d67efc3914573464c9bcc868bfe8fd00c564e0cd1d5b3b4fdf0020aa42372bb0",
+      "original_bytes": 2547,
+      "public_file": "profiles/sanitizer_rollout1/application/train/last-rollout-contract.json",
+      "public_sha256": "15a6e206d8e805d3479485c701cc2f671cda13a4afcf9364aac1932fc7804f00",
+      "public_bytes": 2583
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/train/restoration-0160.json",
+      "original_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "original_bytes": 298,
+      "public_file": "profiles/sanitizer_rollout1/application/train/restoration-0160.json",
+      "public_sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+      "public_bytes": 298
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application/train/schedule.json",
+      "original_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "original_bytes": 453591,
+      "public_file": "profiles/sanitizer_rollout1/application/train/schedule.json",
+      "public_sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+      "public_bytes": 453591
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/application.log",
+      "original_sha256": "dbe21e84fdd83a91eb5811abd61bce822ec2cec178cf6a3d9311310d1652d164",
+      "original_bytes": 212547,
+      "public_file": "profiles/sanitizer_rollout1/application.log",
+      "public_sha256": "a408265298baa7b2d0845fbf4ac8fc3a1c046d04b5e10c4375407ff2bdf3813e",
+      "public_bytes": 210810
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/gpu-details.txt",
+      "original_sha256": "79df4cede29b09abe16ba3d194e6eb69b33b1119ffa22fd88fb488a632f1e5c7",
+      "original_bytes": 9683,
+      "public_file": "profiles/sanitizer_rollout1/gpu-details.txt",
+      "public_sha256": "184e2ad741b9c63a989bcd3e69709eb7b15036430e46c2aa03c299c8734fddd8",
+      "public_bytes": 9680
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/gpu-telemetry.csv",
+      "original_sha256": "f62414e1079e7e72c8803200bfbaa3c298cf6ede1f90cbc5f8328b5d12b72e89",
+      "original_bytes": 483424,
+      "public_file": "profiles/sanitizer_rollout1/gpu-telemetry.csv",
+      "public_sha256": "f62414e1079e7e72c8803200bfbaa3c298cf6ede1f90cbc5f8328b5d12b72e89",
+      "public_bytes": 483424
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/host-telemetry.jsonl",
+      "original_sha256": "f9d560e46d59411a8ca7531aad9592a5309d8d9c2e2c7d4ace540b5055fbc3d4",
+      "original_bytes": 90973110,
+      "public_file": "profiles/sanitizer_rollout1/host-telemetry.jsonl",
+      "public_sha256": "8c36c29854bdcfebeb8e99524794b147e12741b942360daa88c95f19d1b3cac4",
+      "public_bytes": 91016166
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/manifest.json",
+      "original_sha256": "31f8c46d2f861ce827e3ee0545f942642cbbf6bf9f8e3847bda8811612ef3ad8",
+      "original_bytes": 13615,
+      "public_file": "profiles/sanitizer_rollout1/manifest.json",
+      "public_sha256": "b45017bf6feaf3686849e2327edf61875871652c36cca749f440a2c34241e510",
+      "public_bytes": 13026
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/outputs.json",
+      "original_sha256": "2ed08664643459eb7ac6f346dc14c44f647a46c6fa5a3f2cb6f27187ba629ba6",
+      "original_bytes": 2200,
+      "public_file": "profiles/sanitizer_rollout1/outputs.json",
+      "public_sha256": "2ed08664643459eb7ac6f346dc14c44f647a46c6fa5a3f2cb6f27187ba629ba6",
+      "public_bytes": 2200
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/sanitizer.log",
+      "original_sha256": "ff67e023dd2522f48f581b468aabc5051838da0db7df008d6df233343f9ba767",
+      "original_bytes": 28,
+      "public_file": "profiles/sanitizer_rollout1/sanitizer.log",
+      "public_sha256": "ff67e023dd2522f48f581b468aabc5051838da0db7df008d6df233343f9ba767",
+      "public_bytes": 28
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/tool-audit.json",
+      "original_sha256": "9c75d9ab9ec4e0744c836aecb74f193c526a087cb77c2d377d5aa5fd1e8a3ce2",
+      "original_bytes": 303,
+      "public_file": "profiles/sanitizer_rollout1/tool-audit.json",
+      "public_sha256": "9c75d9ab9ec4e0744c836aecb74f193c526a087cb77c2d377d5aa5fd1e8a3ce2",
+      "public_bytes": 303
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/tool-version.txt",
+      "original_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "original_bytes": 125,
+      "public_file": "profiles/sanitizer_rollout1/tool-version.txt",
+      "public_sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+      "public_bytes": 125
+    },
+    {
+      "source": "profiles/sanitizer_rollout1/validity.json",
+      "original_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "original_bytes": 702,
+      "public_file": "profiles/sanitizer_rollout1/validity.json",
+      "public_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "public_bytes": 702
+    },
+    {
+      "source": "profiles/sanitizer_rollout1.log",
+      "original_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "original_bytes": 80,
+      "public_file": "profiles/sanitizer_rollout1.log",
+      "public_sha256": "eedc7bc3cd7d8b8fa473fcce3a3fe98acea48511535d105b6ab61e8d241c5dcf",
+      "public_bytes": 80
+    },
+    {
+      "source": "task-events.json",
+      "original_sha256": "365dd6106dc0c4225e1078305d0169315b8b25131c3ee31a4009e36d57b55e72",
+      "original_bytes": 322,
+      "public_file": "task-events.json",
+      "public_sha256": "365dd6106dc0c4225e1078305d0169315b8b25131c3ee31a4009e36d57b55e72",
+      "public_bytes": 322
+    },
+    {
+      "source": "worker-completed.json",
+      "original_sha256": "2c1075a4e80be5f367d6cdc1f3e8995c48dfc7b9f9f83208ffae52971003c10d",
+      "original_bytes": 451,
+      "public_file": "worker-completed.json",
+      "public_sha256": "2c1075a4e80be5f367d6cdc1f3e8995c48dfc7b9f9f83208ffae52971003c10d",
+      "public_bytes": 451
+    }
+  ],
+  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims."
+}

@@ -1,0 +1,72 @@
+{
+  "completed": true,
+  "cases": [
+    {
+      "case": "baseline_rollout1",
+      "configuration_sha256": "47e8ac1fe40ac91c36ac77fcc6b4404e784562de92e99a1e6dd7b84faf601346",
+      "returncode": 0,
+      "validity": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority.",
+        "application_succeeded": true,
+        "trace_present": true,
+        "report": {
+          "passed": true,
+          "checks": {},
+          "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+        }
+      }
+    },
+    {
+      "case": "sanitizer_rollout1",
+      "configuration_sha256": "cfbeb481efc36c9bb1181f0b089204248f50818a0fccac9efbddd36ce2eba247",
+      "returncode": 1,
+      "validity": {
+        "passed": false,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": false,
+          "finite_loss_gradient_delta": false,
+          "nonzero_parameter_update": false,
+          "behavior_probability": false,
+          "rollout_version": false
+        },
+        "observed_steps": [],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority.",
+        "application_succeeded": false,
+        "trace_present": true,
+        "report": {
+          "passed": false,
+          "checks": {
+            "zero_error_summary": false
+          },
+          "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+        }
+      }
+    }
+  ],
+  "all_cases_passed": false,
+  "paired_configuration": {
+    "first_update": 162,
+    "last_update": 162,
+    "microbatch": 1,
+    "attention_backend": "no_cudnn",
+    "cuda_allocator": "no_expandable",
+    "rollout_batch": 1
+  },
+  "hypothesis": "Frozen matched diagnostic of allocator/batch settings under Compute Sanitizer. Completion alone does not establish compatibility.",
+  "boundary": "Same cold checkpoint, train inputs, two updates, model precision, prompt/group/token budgets and matched diagnostic configuration. Full sanitizer application is instrumented. Rollout batch overrides may change trajectories and are not speed or quality results. Earlier failures remain separate."
+}

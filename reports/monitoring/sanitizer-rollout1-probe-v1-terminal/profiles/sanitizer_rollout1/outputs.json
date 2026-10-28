@@ -1,0 +1,66 @@
+{
+  "tool-audit.json": {
+    "sha256": "9c75d9ab9ec4e0744c836aecb74f193c526a087cb77c2d377d5aa5fd1e8a3ce2",
+    "bytes": 303
+  },
+  "host-telemetry.jsonl": {
+    "sha256": "f9d560e46d59411a8ca7531aad9592a5309d8d9c2e2c7d4ace540b5055fbc3d4",
+    "bytes": 90973110
+  },
+  "manifest.json": {
+    "sha256": "31f8c46d2f861ce827e3ee0545f942642cbbf6bf9f8e3847bda8811612ef3ad8",
+    "bytes": 13615
+  },
+  "gpu-telemetry.csv": {
+    "sha256": "f62414e1079e7e72c8803200bfbaa3c298cf6ede1f90cbc5f8328b5d12b72e89",
+    "bytes": 483424
+  },
+  "application.log": {
+    "sha256": "dbe21e84fdd83a91eb5811abd61bce822ec2cec178cf6a3d9311310d1652d164",
+    "bytes": 212547
+  },
+  "tool-version.txt": {
+    "sha256": "3f22a8a71d8cba15810e29e8d0c1fba2f16f477d5cb6c02f2c886bc0511961a9",
+    "bytes": 125
+  },
+  "gpu-details.txt": {
+    "sha256": "79df4cede29b09abe16ba3d194e6eb69b33b1119ffa22fd88fb488a632f1e5c7",
+    "bytes": 9683
+  },
+  "validity.json": {
+    "sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+    "bytes": 702
+  },
+  "sanitizer.log": {
+    "sha256": "ff67e023dd2522f48f581b468aabc5051838da0db7df008d6df233343f9ba767",
+    "bytes": 28
+  },
+  "application/attention-backend.json": {
+    "sha256": "4d04b2d91b36f7f68cbf2ffd9be9f3b6367c99c429b08d0a8a26bf5641e3bc50",
+    "bytes": 357
+  },
+  "application/observation/configuration.json": {
+    "sha256": "54f12f484dc8fb39ff72e186e0d1fe06edda175ebabf9285fbc2a8821bfdf53f",
+    "bytes": 2191
+  },
+  "application/train/contract.json": {
+    "sha256": "0a2d4f54d2f37de89c25abc3d5630e4bd4b0d87efcf3fdc20439f04b8907ac16",
+    "bytes": 796
+  },
+  "application/train/restoration-0160.json": {
+    "sha256": "f2a1fa197b02587de304f1d53af4a5361c19f9302174de310a804f7f1af10e86",
+    "bytes": 298
+  },
+  "application/train/schedule.json": {
+    "sha256": "70b62507330245a8dab4cd927812ab087e6d49fcf3566decfbf3e75ff834836e",
+    "bytes": 453591
+  },
+  "application/train/config.json": {
+    "sha256": "bb00693abb66bf5ebc4c98b18d22f8f6f802810234df4ad0053d2c0e21f54825",
+    "bytes": 782
+  },
+  "application/train/last-rollout-contract.json": {
+    "sha256": "d67efc3914573464c9bcc868bfe8fd00c564e0cd1d5b3b4fdf0020aa42372bb0",
+    "bytes": 2547
+  }
+}

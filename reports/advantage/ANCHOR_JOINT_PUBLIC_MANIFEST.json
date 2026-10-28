@@ -1,0 +1,240 @@
+{
+  "records": [
+    {
+      "path": "ANCHOR_JOINT_DEV.json",
+      "original_sha256": "2efc71bab8cea0f6606952a918d1b73e7614b5c57b2fb53512e56443ef441d49",
+      "public_sha256": "2efc71bab8cea0f6606952a918d1b73e7614b5c57b2fb53512e56443ef441d49"
+    },
+    {
+      "path": "ANCHOR_BASE_DEV_COST.json",
+      "original_sha256": "269c62fc7eedb3a6b52c83b779a1cc1b99ed08101d803ba4a85fbb24ad3a27bf",
+      "public_sha256": "c0169a4fac29796328a7f49e83460f39971bdd8e7694f9c90a4848dcd80a91cc"
+    },
+    {
+      "path": "ANCHOR_WEIGHT_DEV_COST.json",
+      "original_sha256": "9d2e902d764c0d3782a3bffb5f92aa088f63558c7ad3e86ed4670ac34e4b3a56",
+      "public_sha256": "b9d88fffdd5f24f28a2e297d5fb62ba9e9f6a61d0fea98eec4575adc88139808"
+    },
+    {
+      "path": "ANCHOR_BASE_COLLECTION.json",
+      "original_sha256": "449a9769dec094e78d82deaa87e2d99be40c59b8278b4fc4bd7ce928932cfefc",
+      "public_sha256": "449a9769dec094e78d82deaa87e2d99be40c59b8278b4fc4bd7ce928932cfefc"
+    },
+    {
+      "path": "ANCHOR_WEIGHT_COLLECTION.json",
+      "original_sha256": "367054b5791de3e1ca0a894b01d89d4d7159d047ac93ae7a0d91e89b54d53003",
+      "public_sha256": "367054b5791de3e1ca0a894b01d89d4d7159d047ac93ae7a0d91e89b54d53003"
+    },
+    {
+      "path": "../monitoring/SANITIZER_ROLLOUT1_V1_COST.json",
+      "original_sha256": "e784a6d31fe84f6961359c7cf7e736fff1676928805aefc4e708b958a73a5296",
+      "public_sha256": "0a636af5764e44531af630a586a4b365cc7d5f8c8ee4595f4019271296b8d9b9"
+    },
+    {
+      "path": "../monitoring/SANITIZER_ROLLOUT1_V1_REVALIDATION.json",
+      "original_sha256": "981985add80cdef1996619d988259b4de3a06bedcf38e16e45a840ecccdc563a",
+      "public_sha256": "981985add80cdef1996619d988259b4de3a06bedcf38e16e45a840ecccdc563a"
+    },
+    {
+      "path": "seed101/study/initial-dev.jsonl",
+      "original_sha256": "f0cd8f48f1594578c06de2bf0c8ede62e45ab8d5aa289e5b8fbaf0b911164f90",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed101/study/aopd_anchor/final-dev.jsonl",
+      "original_sha256": "6d87c9130d5a7e452b0372d0d6ef981caf5693b6f13ff6ff55586b0eb4eee7b5",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed101/study/aopd_pure/final-dev.jsonl",
+      "original_sha256": "a0bab7a12ba7670af3d0967f17887af834e9421aac9aa345881e095dc0b966f4",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed101/study/offline_sft/final-dev.jsonl",
+      "original_sha256": "86c92a8c292afc87c4934f243ccb86e7ca151b6a06dc225a70b836345614677e",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed101/study/oracle_sft/final-dev.jsonl",
+      "original_sha256": "7ca50a4876bef90bf9cd2e551f201ba8f4e8063f673e704ee346df2e838c0f1f",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed211/study/initial-dev.jsonl",
+      "original_sha256": "6a7d69e0baa965528d3899e2ec9081b02712beaf5430b012bf55872801b64a2b",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed211/study/aopd_anchor/final-dev.jsonl",
+      "original_sha256": "221208f9dd13f12f64d0263ea3b861d96a742fdeebc98d9c8120943ab48c8d64",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed211/study/aopd_pure/final-dev.jsonl",
+      "original_sha256": "28975e8bed22a800709df067f3c80f0474443cef7c18a1a325f0110a6cf811ec",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed211/study/offline_sft/final-dev.jsonl",
+      "original_sha256": "4b2bf8e64de55081d4c93286e33d2b12426f8d793e9547079148f37404dec597",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed211/study/oracle_sft/final-dev.jsonl",
+      "original_sha256": "86b00ab3363b85ecf87fc6af9927f1a7bc31299b391f462afc27c120f44dfe31",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed307/study/initial-dev.jsonl",
+      "original_sha256": "c351673c05ecba5eb81e3dddedefd18f9223d1e83cf7efab7e604af8bceb3b76",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed307/study/aopd_anchor/final-dev.jsonl",
+      "original_sha256": "f5e2f75a8620d59a5c8d58bf2715cd6cd34dd764d6aadc7aaab530a9513e5af4",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed307/study/aopd_pure/final-dev.jsonl",
+      "original_sha256": "0b22d8cb6991e05a5c816da3519603920223d00b6eb8977a4f57ceff192df79c",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed307/study/offline_sft/final-dev.jsonl",
+      "original_sha256": "5fda22890b1e3df8d0ef79d4f700a38291076c170f1d40fbe9e4fde12769eb3e",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed307/study/oracle_sft/final-dev.jsonl",
+      "original_sha256": "bcb7799f588b56c44fe48fd5ca3fae6ceed61bca7554ccfa4c691a4869a08212",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed401/study/initial-dev.jsonl",
+      "original_sha256": "a635334d9060d95d95e8585e476d69cd599b0db5bd33eceefce63fc9cf6702d3",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed401/study/aopd_anchor/final-dev.jsonl",
+      "original_sha256": "23040729cb5ff8ff3c3273a547ba3550a53d29d6304d1c8c380c4be4641c3243",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed401/study/aopd_pure/final-dev.jsonl",
+      "original_sha256": "81a03fa399c39b16d95ef27396e00e1c5b2e7de6ec7180a6eca417c16d67fb70",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed401/study/offline_sft/final-dev.jsonl",
+      "original_sha256": "bd5796a9c469eae5bd0b8db264d5c5e393b83a09482752745ca6605ab71e2d5f",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "seed401/study/oracle_sft/final-dev.jsonl",
+      "original_sha256": "7a1496a59d763ae165495485a6ac22a48a33d4b96a6a3fa4e73e8d6dbb0eba3a",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor01/seed101/study/final-dev.jsonl",
+      "original_sha256": "ce8a207ebb5b5fc530c5f47b1f48c6fe400f702a4b632b1a6ee9ca9139ec5da2",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor01/seed211/study/final-dev.jsonl",
+      "original_sha256": "cc14156e5fa1b6c5dc85dc8001e51b8f4a18537847bdfa48d333c5da18305839",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor01/seed307/study/final-dev.jsonl",
+      "original_sha256": "bc24ea9b2d5d5ee77121021ac2dd31e9af40719384886e33e21dc6756a261a5f",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor01/seed401/study/final-dev.jsonl",
+      "original_sha256": "aa764382f1d30ba2956179aba62ed289da2ca683a39937482b5459efbdf7399d",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor10/seed101/study/final-dev.jsonl",
+      "original_sha256": "f1f83506682edf20619274f5ccb2bd78798fb49921f1ff423515a360c5038648",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor10/seed211/study/final-dev.jsonl",
+      "original_sha256": "40a705a37a09026d168cab987b9526db7db5a37dc9311f798b63c3c91d035bc3",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor10/seed307/study/final-dev.jsonl",
+      "original_sha256": "c3cd7143565b093096a5db651ab55a1dff3603859efca78b39f2d5fe8c4281e7",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    },
+    {
+      "path": "anchor10/seed401/study/final-dev.jsonl",
+      "original_sha256": "33e38eb80037e9d7438cf1b8e881a42ea6896d77024b4fa4be19aefbd26fd31b",
+      "rows": 1100,
+      "export": "anchor-joint-dev-scores.jsonl.gz"
+    }
+  ],
+  "score_counts": {
+    "anchor-development-final/seed101/study/initial-dev.jsonl": 1100,
+    "anchor-development-final/seed101/study/aopd_anchor/final-dev.jsonl": 1100,
+    "anchor-development-final/seed101/study/aopd_pure/final-dev.jsonl": 1100,
+    "anchor-development-final/seed101/study/offline_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed101/study/oracle_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed211/study/initial-dev.jsonl": 1100,
+    "anchor-development-final/seed211/study/aopd_anchor/final-dev.jsonl": 1100,
+    "anchor-development-final/seed211/study/aopd_pure/final-dev.jsonl": 1100,
+    "anchor-development-final/seed211/study/offline_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed211/study/oracle_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed307/study/initial-dev.jsonl": 1100,
+    "anchor-development-final/seed307/study/aopd_anchor/final-dev.jsonl": 1100,
+    "anchor-development-final/seed307/study/aopd_pure/final-dev.jsonl": 1100,
+    "anchor-development-final/seed307/study/offline_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed307/study/oracle_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed401/study/initial-dev.jsonl": 1100,
+    "anchor-development-final/seed401/study/aopd_anchor/final-dev.jsonl": 1100,
+    "anchor-development-final/seed401/study/aopd_pure/final-dev.jsonl": 1100,
+    "anchor-development-final/seed401/study/offline_sft/final-dev.jsonl": 1100,
+    "anchor-development-final/seed401/study/oracle_sft/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor01/seed101/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor01/seed211/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor01/seed307/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor01/seed401/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor10/seed101/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor10/seed211/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor10/seed307/study/final-dev.jsonl": 1100,
+    "anchor-weights-final/anchor10/seed401/study/final-dev.jsonl": 1100
+  },
+  "prediction_rows": 30800,
+  "scores_sha256": "9dbd481f834828ce7df0c9d37d6ed38e4e6a8dec6156d9dac0f5856dce9c663c",
+  "boundary": "Original immutable evidence retained. Public JSON redacts platform identity; score export excludes prompts and generated text. Training seeds remain paired."
+}

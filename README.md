@@ -18,13 +18,24 @@ include failures and allocation costs.
 A new [DEV-only protocol](configs/anchor-development-v1.json) compares AOPD with a
 fixed gold CE anchor, pure AOPD, oracle SFT, and offline SFT. All methods use one
 common adapter, fresh Adam, paired prompt schedules, and the same Teacher320
-for on-policy feedback and unfiltered offline labels. Four one-GPU jobs are running;
-final DEV comparisons remain pending. The user removed the global eight-GPU cap
+for on-policy feedback and unfiltered offline labels. All twelve single-GPU jobs
+and all three anchor weights have closed. The user removed the global eight-GPU cap
 on 2026-10-28. A [frozen extension](configs/anchor-weight-development-v2.json)
 adds weights 0.1 and 1.0 at all four seeds: eight additional single-GPU jobs.
-Selection waits for every weight and control, using the original quality gates.
-Submission and CPU tests are setup evidence; completed model and quality acceptance
-require terminal artifacts and independent scoring.
+Independent regrading covered **30,800 predictions** and verified 428 files and
+24 trained adapters. **No weight passed the original DEV advance gate**:
+0.1/0.5 failed math retention, while 1.0 failed business improvement, seed consistency
+and substitute retention. All **56.668611 H20 GPU hours** remain recorded.
+The [terminal report](reports/advantage/ANCHOR_JOINT_DEV.md) includes exact gates and costs.
+
+A [new domain CE protocol](configs/domain-anchor-development-v1.json) tests business
+weights 0.1/0.5 with math/instruction weights 1.0 at all four paired seeds.
+Eight single-GPU jobs have entered started/running states; their final results and
+costs remain open. [The walkthrough](docs/DOMAIN_ANCHOR-friendly.md) explains the
+unchanged gates, historical control revalidation and exact
+[source snapshot](experiments/domain-anchor-development-v1/README.md).
+[176 CPU checks](reports/monitoring/CPU_VALIDATION_DOMAIN_ANCHOR.json) passed;
+these are setup evidence, not GPU quality acceptance.
 
 The [collection and fresh-pool guide](docs/ANCHOR_COLLECTION_AND_FRESH_POOLS.md)
 documents independent regrading, complete allocation costs and input exclusions.
@@ -35,10 +46,11 @@ These are input-pool audits, not frozen confirmation samples or model results.
 The [fresh confirmation walkthrough](docs/FRESH_CONFIRMATION-friendly.md) provides
 candidate sealing, label-independent sampling, prospective alpha spending, fixed
 adapter evaluation and independent regrading against both SFT controls on both
-batches. New predictions still await the complete DEV gate. The pinned 1.11 GB
+batches. The completed DEV gate rejected every candidate; no new confirmation
+inputs or predictions were produced. The pinned 1.11 GB
 ESCI product table has been downloaded and SHA256-verified; historical source
 locks and failed confirmations remain unchanged.
-The [current CPU audit](reports/monitoring/CPU_VALIDATION_FRESH_CONFIRMATION.json)
+The [fresh-confirmation CPU audit](reports/monitoring/CPU_VALIDATION_FRESH_CONFIRMATION.json)
 records **166 passed checks**, including complete synthetic acceptance and rejection
 cases; those synthetic outputs do not establish model quality.
 
@@ -65,11 +77,13 @@ retains both full-workload captures and all **0.362222 H20 GPU hours**. The pare
 exited zero, while memcheck failed before update161 with six CUDA allocation errors.
 All 40 indexed files were verified. The baseline completed update162 but failed
 the frozen numerical tolerances against the previous baseline. A separate frozen
-[batch1 diagnostic](experiments/sanitizer-rollout1-probe-v1/manifest.json) has been
-submitted with all 10 prompts, group size 2 and the original 128-token limit;
+[batch1 diagnostic](reports/monitoring/SANITIZER_ROLLOUT1_V1.md) completed with
+all 10 prompts, group size 2 and the original 128-token limit;
 it changes rollout batching after strict restoration and may change trajectories.
 The [new CPU audit](reports/monitoring/CPU_VALIDATION_ROLLOUT1.json) records
-167 passed checks. GPU completion and memcheck acceptance remain pending.
+167 passed checks at that source version. The baseline passed update162;
+memcheck timed out at 3,600 seconds without completing the update window or
+reporting an error summary. All **1.313889 H20 GPU hours** and failure logs are retained.
 
 The following paragraphs describe older, closed studies.
 

@@ -10,7 +10,8 @@ from servedistill.profiling import digest
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--experiment", choices=("anchor-development-v1", "anchor-weight-development-v2"),
+    parser.add_argument("--experiment", choices=("anchor-development-v1", "anchor-weight-development-v2",
+                                                "domain-anchor-development-v1"),
                         default="anchor-development-v1")
     args = parser.parse_args()
     repo = Path(__file__).resolve().parents[1]
@@ -31,7 +32,8 @@ def main():
         base_path = repo / "configs/anchor-development-v1.json"
         if digest(base_path) != protocol["base_protocol_sha256"]:
             raise ValueError("Original base protocol changed")
-        source_files.update(json.loads(base_path.read_text())["source_files"])
+        if args.experiment != "domain-anchor-development-v1":
+            source_files.update(json.loads(base_path.read_text())["source_files"])
     args.output.mkdir(parents=True, exist_ok=False)
     with tarfile.open(archive_path) as archive:
         for member in archive.getmembers():
@@ -50,7 +52,9 @@ def main():
             raise ValueError("Materialized source hash mismatch")
     (args.output / "anchor-protocol.json").write_bytes((base_path or protocol_path).read_bytes())
     if base_path:
-        (args.output / "anchor-weight-protocol.json").write_bytes(protocol_path.read_bytes())
+        name = ("domain-anchor-protocol.json" if args.experiment == "domain-anchor-development-v1"
+                else "anchor-weight-protocol.json")
+        (args.output / name).write_bytes(protocol_path.read_bytes())
     (args.output / "pyproject.toml").write_bytes((repo / "pyproject.toml").read_bytes())
     (args.output / "LICENSE").write_bytes((repo / "LICENSE").read_bytes())
     print(args.output.resolve())

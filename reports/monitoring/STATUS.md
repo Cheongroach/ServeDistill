@@ -2,7 +2,9 @@
 
 2026-10-28。
 
-统一监控配置和运行器已实现，当前 CPU 回归通过 167 项，见 `CPU_VALIDATION_ROLLOUT1.json`；此前 156/166 项验证按各自源码版本保留。首次 1-H20 套件已结束：实际环境为 NVIDIA H20 / PyTorch 2.9.1 / CUDA 12.9 / driver 535.261.03。none、Nsight Systems 和 PyTorch profiler 均退出 0，冷恢复后的 update162 运行门通过；实际 CUDA/API/NVTX 和 PyTorch GPU kernel trace 已核查。
+最新项目 CPU 回归为 176 项，绑定本轮 domain CE 源码与协议，见 `CPU_VALIDATION_DOMAIN_ANCHOR.json`。下面各轮 profiler/allocator 的 156/166/167 项记录仍对应其原源码；新增 CPU 覆盖不会改写任何 GPU 失败。
+
+统一监控配置和运行器已实现，rollout1 源码的 CPU 回归通过 167 项，见 `CPU_VALIDATION_ROLLOUT1.json`；此前 156/166 项验证按各自源码版本保留。首次 1-H20 套件已结束：实际环境为 NVIDIA H20 / PyTorch 2.9.1 / CUDA 12.9 / driver 535.261.03。none、Nsight Systems 和 PyTorch profiler 均退出 0，冷恢复后的 update162 运行门通过；实际 CUDA/API/NVTX 和 PyTorch GPU kernel trace 已核查。
 
 NCU 2026.1.1 以 application code 11 报告驱动不兼容；套件最终失败、Pod 退出 1，详见 `NCU_COMPATIBILITY_FAILURE.json`。随后的 2025.2.1、2024.1.1、2023.3.1 都在 Teacher SDPA 的 cuDNN 初始化处失败，未捕获 kernel；45 个索引文件哈希全部核验，见 `NCU_COMPATIBILITY_V1_SUMMARY.json` 和 `ncu-compatibility-v1/`。
 
@@ -20,6 +22,6 @@ NCU 基础采集、GEMM 和 nsys 的 RNG、step、token 数与同 dispatch 基�
 
 这轮基线与上一轮 no_cudnn、原 allocator 设置基线的 RNG、step 和 token 数相同，但 264/300 adapter 与 300/900 optimizer tensor 超出原容差；未放宽门槛。它不是通过的 memcheck 数值对照，后者没有最终状态。
 
-新的 `experiments/sanitizer-rollout1-probe-v1/` 配对诊断已提交。它在严格恢复原 checkpoint 后将 rollout batch8 改为1，保留每步10个 prompt、group2、max128 tokens、完整模型及更新161/162；两个副本同用 no_cudnn、learner microbatch1 和非 expandable allocator。观察配置单独记录，采样轨迹可能变化；GPU 结果和最终成本待收集。
+`experiments/sanitizer-rollout1-probe-v1/` 配对诊断已终结。它在严格恢复原 checkpoint 后将 rollout batch8 改为1，保留每步10个 prompt、group2、max128 tokens、完整模型及更新161/162；两个副本同用 no_cudnn、learner microbatch1 和非 expandable allocator。无 profiler 基线完成 update162；memcheck 超时退出124，未完成161/162，也没有 `ERROR SUMMARY`。25+16 个索引文件核验通过，51 个 terminal 源文件分别保留指纹与公开导出。成本为 4,730秒、1.313889 H20·h。本次不是通过的 memcheck，现有证据也不能归因为 OOM，见 `SANITIZER_ROLLOUT1_V1.md`。
 
 历史有效 nsys/PyTorch 证据在 `reports/profiling` 和 `reports/expanded/profiles`。新增采集任务不自动修改历史性能结论。

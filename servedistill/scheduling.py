@@ -34,6 +34,7 @@ class Config:
     aopd_top_k: int = 32
     aopd_tau: float = 0.0
     anchor_ce_weight: float = 0.0
+    anchor_ce_domain_weights: dict[str, float] = dataclasses.field(default_factory=dict)
     method_time_budget_seconds: float | None = None
     prior_method_seconds: float = 0.0
 
@@ -44,7 +45,13 @@ def update_learning_rate(config: Config, update: int) -> float:
         raise ValueError("Learning-rate update lies outside the declared budget")
     if not math.isfinite(config.anchor_ce_weight) or config.anchor_ce_weight < 0:
         raise ValueError("Anchor CE weight must be finite and nonnegative")
-    if config.anchor_ce_weight and config.objective != "aopd":
+    allowed = {*config.business_domains, "math", "instruction"}
+    if (not isinstance(config.anchor_ce_domain_weights, dict)
+            or any(domain not in allowed or not isinstance(weight, (int, float))
+                   or not math.isfinite(weight) or weight < 0
+                   for domain, weight in config.anchor_ce_domain_weights.items())):
+        raise ValueError("Anchor domain weights must name configured domains and be finite and nonnegative")
+    if (config.anchor_ce_weight or config.anchor_ce_domain_weights) and config.objective != "aopd":
         raise ValueError("Supervised anchor is defined only for AOPD")
     if not math.isfinite(config.learning_rate) or config.learning_rate <= 0:
         raise ValueError("Learning rate must be finite and positive")

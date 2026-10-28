@@ -1,0 +1,113 @@
+{
+  "advance_rule": "all four candidate seeds pass absolute gates; mean business delta positive against both SFT controls; at least three positive seed pairs against each; domain/math noninferiority versus both and initial",
+  "anchor_normalization": "mean_i w(domain_i)*mean_gold_tokens CE_i; denominator includes all trajectories, not sum of weights. EOS included, padding excluded.",
+  "base_protocol_sha256": "c5a8110f496151d24895087261ca82daf5235375db13e3a521aa31280ff63f7b",
+  "cost_boundary": "Retain all new attempts, failures and complete allocated intervals. Historical controls/teacher/init costs are separate and not charged twice.",
+  "created_unix_seconds": 1793149350.2001424,
+  "global_gpu_cap": null,
+  "holdout_files_packaged": false,
+  "holdout_observed": false,
+  "hypothesis": "Weak business CE preserves DEV business gains; stronger general CE may prevent the math regression seen with scalar weights. DEV hypothesis only.",
+  "new_single_gpu_jobs": 8,
+  "prior_joint_analysis_sha256": "2efc71bab8cea0f6606952a918d1b73e7614b5c57b2fb53512e56443ef441d49",
+  "quality_gates": {
+    "domain_noninferiority_margin": -0.03,
+    "math_noninferiority_margin": -0.05,
+    "minimum_json_valid": 0.99,
+    "minimum_metric": {
+      "relevance": 0.45,
+      "search": 0.8,
+      "substitute": 0.55
+    },
+    "minimum_positive_seed_pairs": 3,
+    "minimum_recall": {
+      "relevance": {
+        "C": 0.2,
+        "E": 0.2,
+        "I": 0.2,
+        "S": 0.2
+      },
+      "substitute": {
+        "no": 0.3,
+        "yes": 0.3
+      }
+    }
+  },
+  "reference_collection_sha256": "449a9769dec094e78d82deaa87e2d99be40c59b8278b4fc4bd7ce928932cfefc",
+  "reference_controls": "Original four paired offline/oracle SFT plus initial. Historical source bytes/configs and full updates reverified; new empty domain map is backward-compatible.",
+  "schema_version": 1,
+  "scope": "development_only",
+  "seeds": [
+    101,
+    211,
+    307,
+    401
+  ],
+  "selection_checkpoint": "fixed_final_update_320",
+  "selection_precision": "bf16",
+  "selection_rule": "Wait for both candidates at all four seeds and original paired controls. Only candidates passing unchanged DEV advance rule are eligible; choose highest mean business macro, exact ties use smaller business CE weight.",
+  "source_files": {
+    "scripts/analyze_anchor_development.py": "62464f2abfc6a60fd56e8135f5236421907836e6358ec654ba0e26be20ba5e0f",
+    "scripts/analyze_domain_anchor_development.py": "57927db5a19cfc86c4b5e797867a614c3357d71bed0150b5a19056d53e59659d",
+    "scripts/analyze_router_stability_dev.py": "0b936ab785a8359f373ecb3c7f622c5c9b864023ea7e76cdc669a3b57022a033",
+    "scripts/collect_anchor_development.py": "b7f6393de00331210bf4c286a9d6496f9d80adfd825a741502d12581a5865d47",
+    "scripts/collect_anchor_weights.py": "2f206162ca7d02dd0afd6c85b6201ee32f76f25230aca07860ff5c999a20aa61",
+    "scripts/collect_domain_anchor_development.py": "ddb0dc1d14f45ac8aec92291e8f4bbb73ef2e548347628605f12199e540ccffe",
+    "scripts/prepare_source_overlay.py": "609bffbdecbdbb7f0a75d18b8916e1f1438392e2a375029b718386b48ec8b8f3",
+    "scripts/run_anchor_weight_development.py": "859d22fcfb801b15b1301f38cc552481e205429a22d12df90ec66db88d065c6e",
+    "scripts/run_domain_anchor_development.py": "3fdb8d6f0b28fd9d79715fcb500e70d943fc60fc69041f05ec1e7a6f8deb3705",
+    "scripts/worker.py": "3ea5e242b3aa7b047058c7b857cf4c314febb5066a252db1d0c1edde03c091ba",
+    "servedistill/__init__.py": "51190da780958d25343a6b2d9fadc3098bca72651e34d4f6342549e0e8ad5e43",
+    "servedistill/adapter_average.py": "bdb7991515183fe65d305225ec1e789721d2d46b959972603af66b6c82092480",
+    "servedistill/advantage_contracts.py": "7b8e506863dce65d3191499292c8fb117ca8350832b768c216958f0dc8feecd6",
+    "servedistill/advantage_data.py": "0119c17facd6f86bcbf8034475d250895b26eddb0cbf01cf6cafd1dcf1dc556f",
+    "servedistill/advantage_failures.py": "3495400387556dd542f12abb6e400e8a9552aafa2f85dd70e4b853747a871c35",
+    "servedistill/advantage_holdout.py": "c838d86e2250218221c4ccc258acc529c95bd0f8a0ee75f20799a6bb26df0e54",
+    "servedistill/advantage_statistics.py": "91a55ebdf97c273afe6cd6aeb413ddb86ad92b6ac97df70395742442c8b8ac44",
+    "servedistill/assets.py": "6bbb386ad72f77931545f3aac99080fd2d75e00826452c466ec589d3f95dd98c",
+    "servedistill/baseline.py": "e0ff61b082ae988cd677dc018c97c9a2dde10e3e316c5779151eeba0641e6b9b",
+    "servedistill/benchmark.py": "bac3983ab30f1e63d958f75e78866a232b830912584f08ae687610537a2fbc85",
+    "servedistill/cascade_benchmark.py": "52d7ee78777b080f68290a949b1e46ba908fba5caf82071f87ff7ad1c105b5b5",
+    "servedistill/data.py": "116243a30f899a63b4a22deac2958f187ea4daf48bfbc51d6f5007f87a524893",
+    "servedistill/evaluate.py": "a817bb20b40d3554734dba195181dae52ac171c5ffa4ec981dc170ac3827e6f4",
+    "servedistill/expanded_data.py": "f8e50c2c03107e9fed69af02fbbf75f90504731d79a973c34fccdb4bfadcec32",
+    "servedistill/expanded_statistics.py": "4dda3660e3120500f7ebbfcecedfab434953e3ad7c412b73381fbb86e3a36bdb",
+    "servedistill/export.py": "a7bd145df045d88e7a630c3015b005516438b57d412c5329a9ad141e0946d920",
+    "servedistill/fresh_confirmation.py": "cb59cfe77aa246b7c7bd774a2a07f4ab74c7a9a11c8d00e4095cbeb559407ff8",
+    "servedistill/fresh_contracts.py": "5cdc43c468247162a92acae1437caecbf470db97017e7ce217f46012188596be",
+    "servedistill/http_benchmark.py": "b8faac59033b134d406d887cf55a5cd4986b37895733e70c5e4a94a958ca6276",
+    "servedistill/losses.py": "da269a415a372a1aedffe5e82de92a16a10da9b1f2480331d8eff356398d8ca2",
+    "servedistill/native_export.py": "da4dc35297abadabf327ca746b2f16da88c7d33ebdb4937fb065dde46ea06b56",
+    "servedistill/observation.py": "9111521d610269dc54f94d9c2e0b64392e50a38c0c76c3eb395bc7ad908a97cb",
+    "servedistill/pipeline.py": "a14697f3cf732baf37df6ce60eba008736d8c8baa194aa8b97291015ba2db820",
+    "servedistill/probability_probe.py": "7a6950395ee47c0e80679b235669263ed72274a4165f1a8b97a23808f1f2ba52",
+    "servedistill/profiling.py": "4436c6cf0b49ed0c3a9cd560b51773042877cfe4b5c70bad702a2d3d7c540eba",
+    "servedistill/reranker.py": "f011ba13f73a22ee8b689dfdaa0132c5e1fb278618dd40cb306c6619a39d9840",
+    "servedistill/runtime.py": "c54a984ffb75c30cdc78988d2370f3a6ed4274bb2426c34be6ee6df4d837a167",
+    "servedistill/scheduling.py": "5d9436058ae7dfc9fcd197cb6a65778e10446942e19c12845b74c0fdf22ebc8c",
+    "servedistill/search_data.py": "184465920c4b470fbf51f7c77b77df69fe2c1af160a34a8310c9632980817f25",
+    "servedistill/selection.py": "f5fe40d87acbfd04a00c2944f94a01373ddddb4aa9eab698dde09f27e2cd7a56",
+    "servedistill/sequential_confirmation.py": "ef0814bb08e6471ef3091c6b17b18a260781cf98b0c6ef6250b95758afd2af82",
+    "servedistill/statistics.py": "f60ae0a778fdf31cc1649ec30667254f93d70cd0adc137e0931460a2dadc1ad7",
+    "servedistill/supervision.py": "9949fb65761f9ee3ec867e4c3f56bf19fdd2b2bf85544a9f4e2385fcfe97c282",
+    "servedistill/time_budget.py": "9cc73078ee90adf0509f660b1845159b10a58a641791a02388f39d7282e20695",
+    "servedistill/train.py": "179fa8df3083f9eed7aa57ed8531b27e4ad1e5dcce0edb3e7e93a4e8fa6b33a5"
+  },
+  "training_change": "Only per-domain gold CE coefficients; scalar fallback zero. Fresh Adam, common initialization, Teacher320, schedule, LR, 320updates/10prompts/group2/microbatch4/rollout8/max128 unchanged.",
+  "variants": {
+    "domain01": {
+      "instruction": 1.0,
+      "math": 1.0,
+      "relevance": 0.1,
+      "search": 0.1,
+      "substitute": 0.1
+    },
+    "domain05": {
+      "instruction": 1.0,
+      "math": 1.0,
+      "relevance": 0.5,
+      "search": 0.5,
+      "substitute": 0.5
+    }
+  }
+}

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import datetime
 import hashlib
 import json
@@ -88,8 +89,10 @@ def verify_arm(arm: Path, spec: dict, schedule_hash: str, training: list[dict]) 
     actual = json.loads((arm / "train/schedule.json").read_text())
     if (actual != expected or schedule_hash != hashlib.sha256(
             json.dumps(actual).encode()).hexdigest()
-            or json.loads((arm / "config.json").read_text()) != spec
-            or json.loads((arm / "train/config.json").read_text()) != spec):
+            or dataclasses.asdict(Config(**json.loads((arm / "config.json").read_text())))
+               != dataclasses.asdict(config)
+            or dataclasses.asdict(Config(**json.loads((arm / "train/config.json").read_text())))
+               != dataclasses.asdict(config)):
         raise ValueError("Actual method schedule or configuration changed")
     final = json.loads((arm / "train/completed.json").read_text())
     checkpoint = arm / f"train/checkpoint-{config.steps:04d}"
