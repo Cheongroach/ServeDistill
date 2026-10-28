@@ -161,3 +161,69 @@ def test_joint_analysis_rejects_omitted_prediction_files(tmp_path):
         "base_protocol_sha256": extension["base_protocol_sha256"], "files": []})
     with pytest.raises(ValueError, match="Complete eight-run"):
         verify_collection(tmp_path, base, extension, extension_hash)
+
+
+@pytest.fixture
+def domain_evidence(weight_evidence):
+    from scripts.run_domain_anchor_development import load_protocol, variant_config as domain_config
+    root, _, _, _, training = weight_evidence
+    base, protocol = load_protocol(ROOT / "configs/anchor-development-v1.json",
+                                   ROOT / "configs/domain-anchor-development-v1.json")
+    protocol_hash = file_digest(ROOT / "configs/domain-anchor-development-v1.json")
+    for relative in ("study/completed.json", "study/binding.json"):
+        path = root / relative
+        value = json.loads(path.read_text())
+        value.pop("extension_sha256")
+        value["protocol_sha256"] = protocol_hash
+        value["variant"] = "domain01"
+        write_json(path, value)
+    config = dataclasses.asdict(domain_config(base, protocol, "domain01", 101))
+    for relative in ("study/config.json", "study/train/config.json"):
+        write_json(root / relative, config)
+    return root, base, protocol, protocol_hash, training
+
+
+def test_domain_candidate_binds_every_executed_update(domain_evidence):
+    from scripts.collect_domain_anchor_development import verify_seed_candidate
+    root, base, protocol, protocol_hash, training = domain_evidence
+    result = verify_seed_candidate(root, base, protocol, protocol_hash, "domain01", 101, training)
+    assert result["verified_optimizer_updates"] == 320
+
+
+@pytest.mark.parametrize("change", ["weight", "schedule", "holdout", "adapter", "task"])
+def test_domain_candidate_rejects_broken_execution(domain_evidence, change):
+    from scripts.collect_domain_anchor_development import verify_seed_candidate
+    root, base, protocol, protocol_hash, training = domain_evidence
+    path, key = {
+        "weight": ("study/train/config.json", "anchor_ce_domain_weights"),
+        "schedule": ("study/train/schedule.json", None),
+        "holdout": ("study/binding.json", "holdout_observed"),
+        "adapter": ("study/evaluated-adapter.json", "adapter_sha256"),
+        "task": ("worker-completed.json", "completed"),
+    }[change]
+    file = root / path
+    doc = json.loads(file.read_text())
+    if change == "weight":
+        doc[key]["math"] = .1
+    elif change == "schedule":
+        doc[0][0] = "wrong"
+    else:
+        doc[key] = {"holdout": True, "adapter": "wrong", "task": False}[change]
+    write_json(file, doc)
+    with pytest.raises(ValueError):
+        verify_seed_candidate(root, base, protocol, protocol_hash, "domain01", 101, training)
+
+
+def test_domain_selection_cannot_skip_or_accept_ineligible_candidate():
+    from scripts.analyze_domain_anchor_development import select_candidate as select_domain
+    _, protocol = __import__("scripts.run_domain_anchor_development", fromlist=["load_protocol"]).load_protocol(
+        ROOT / "configs/anchor-development-v1.json", ROOT / "configs/domain-anchor-development-v1.json")
+    result = {n: {"advance_to_fresh_confirmation": True, "mean_dev_business_macro": .8}
+              for n in protocol["variants"]}
+    assert select_domain(result, protocol)[1] == "domain01"
+    result["domain01"]["advance_to_fresh_confirmation"] = False
+    assert select_domain(result, protocol)[1] == "domain05"
+    result["domain05"]["advance_to_fresh_confirmation"] = False
+    assert select_domain(result, protocol) == ([], None)
+    with pytest.raises(ValueError, match="Both domain"):
+        select_domain({"domain01": result["domain01"]}, protocol)

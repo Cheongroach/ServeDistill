@@ -1,0 +1,68 @@
+{
+  "cases": {
+    "profiles/baseline_rollout1": {
+      "original_index_sha256": "c85e431e53c660449a623722cd0ab9e0fdf1ca31285488d42c88086da31b174b",
+      "original_validity_sha256": "382ef5303798d1d0f684539c6716a714ee780071fcc57b7ba11e1ccbc50175e2",
+      "original_files_verified": 25,
+      "original_passed": true,
+      "runtime": {
+        "passed": true,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": true,
+          "finite_loss_gradient_delta": true,
+          "nonzero_parameter_update": true,
+          "behavior_probability": true,
+          "rollout_version": true
+        },
+        "observed_steps": [
+          162
+        ],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": true,
+        "checks": {},
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": true,
+      "revalidated_passed": true
+    },
+    "profiles/sanitizer_rollout1": {
+      "original_index_sha256": "2ed08664643459eb7ac6f346dc14c44f647a46c6fa5a3f2cb6f27187ba629ba6",
+      "original_validity_sha256": "9bb7f2c956a46b30113c072850919069ff04472daeedea2083ee167c38c338e6",
+      "original_files_verified": 16,
+      "original_passed": false,
+      "runtime": {
+        "passed": false,
+        "checks": {
+          "cold_restoration": true,
+          "window_complete": false,
+          "finite_loss_gradient_delta": false,
+          "nonzero_parameter_update": false,
+          "behavior_probability": false,
+          "rollout_version": false
+        },
+        "observed_steps": [],
+        "teacher_frozen_and_finite_parameters": "enforced in train.apply_rollout; failure is fatal",
+        "boundary": "Runtime gates do not prove business quality or method superiority."
+      },
+      "report": {
+        "passed": false,
+        "checks": {
+          "zero_error_summary": false
+        },
+        "boundary": "Captured diagnostics only; representative kernel selection is a separate check."
+      },
+      "application_succeeded": false,
+      "revalidated_passed": false
+    }
+  },
+  "runtime_gates_sha256": "f9ed062044b0a6e3775345704e7c53e55eae6dd0e28d139c65f1ce29a0e61049",
+  "revalidation_source_sha256": "d3e1a1e6c1ab57ea5c71c8860c79933823dace89e3f1e8d2cd6f390636ac6303",
+  "validator_source_sha256": "4436c6cf0b49ed0c3a9cd560b51773042877cfe4b5c70bad702a2d3d7c540eba",
+  "quality_advantage_supported": false,
+  "speed_advantage_supported": false,
+  "boundary": "Original capture, completion and failure bytes remain untouched. Revalidation fixes report parsing only and does not turn unavailable tools, failed runtime windows, or sampled kernels into a full workload validation."
+}

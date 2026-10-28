@@ -1,0 +1,105 @@
+{
+  "verified": true,
+  "all_trials_retained": true,
+  "records": [
+    {
+      "job_run_sid": "redacted-b25325d66026",
+      "trial_sid": "redacted-e9da038a23a6",
+      "trial_pod_sid": "redacted-bcc51151fcea",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:44:28.000Z",
+      "start_at": "2026-10-27T16:44:46.000Z",
+      "stop_at": "2026-10-27T20:12:47.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12499.0,
+      "gpu_hours": 3.4719444444444445
+    },
+    {
+      "job_run_sid": "redacted-530fba359b2b",
+      "trial_sid": "redacted-44d052aeccce",
+      "trial_pod_sid": "redacted-5fadc8843b41",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:44:29.000Z",
+      "start_at": "2026-10-27T16:44:29.000Z",
+      "stop_at": "2026-10-27T20:16:58.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12749.0,
+      "gpu_hours": 3.5413888888888887
+    },
+    {
+      "job_run_sid": "redacted-782ed31fa71e",
+      "trial_sid": "redacted-bdc5d9380299",
+      "trial_pod_sid": "redacted-12ac2579b905",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:44:25.000Z",
+      "start_at": "2026-10-27T16:44:25.000Z",
+      "stop_at": "2026-10-27T20:16:19.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12714.0,
+      "gpu_hours": 3.5316666666666667
+    },
+    {
+      "job_run_sid": "redacted-151985455d85",
+      "trial_sid": "redacted-adfd2cc79143",
+      "trial_pod_sid": "redacted-b429ca06e438",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:45:20.000Z",
+      "start_at": "2026-10-27T16:45:20.000Z",
+      "stop_at": "2026-10-27T20:20:37.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12917.0,
+      "gpu_hours": 3.5880555555555556
+    },
+    {
+      "job_run_sid": "redacted-7939cffa4c7f",
+      "trial_sid": "redacted-090f5518ee5b",
+      "trial_pod_sid": "redacted-8baa68deb2fa",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:45:14.000Z",
+      "start_at": "2026-10-27T16:45:14.000Z",
+      "stop_at": "2026-10-27T20:17:38.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12744.0,
+      "gpu_hours": 3.54
+    },
+    {
+      "job_run_sid": "redacted-469b56c72441",
+      "trial_sid": "redacted-c3bbde0ef0a1",
+      "trial_pod_sid": "redacted-7d3e6fcc2099",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:45:20.000Z",
+      "start_at": "2026-10-27T16:45:20.000Z",
+      "stop_at": "2026-10-27T20:17:27.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12727.0,
+      "gpu_hours": 3.535277777777778
+    },
+    {
+      "job_run_sid": "redacted-02e5a9053daf",
+      "trial_sid": "redacted-0baa0b28372a",
+      "trial_pod_sid": "redacted-3651708dcd53",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:45:12.000Z",
+      "start_at": "2026-10-27T16:45:12.000Z",
+      "stop_at": "2026-10-27T20:16:16.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12664.0,
+      "gpu_hours": 3.517777777777778
+    },
+    {
+      "job_run_sid": "redacted-61187041d978",
+      "trial_sid": "redacted-9d5321e1ec24",
+      "trial_pod_sid": "redacted-5b1fd278a680",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T16:45:12.000Z",
+      "start_at": "2026-10-27T16:45:12.000Z",
+      "stop_at": "2026-10-27T20:13:15.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 12483.0,
+      "gpu_hours": 3.4675
+    }
+  ],
+  "allocated_gpu_hours": 28.193611111111114,
+  "cost_advantage_supported": false,
+  "boundary": "Scheduled-to-stop Pod intervals; includes preparation, every DEV arm and evaluation. Not billing or useful compute. Prior teacher repair, labels and common initialization are separate historical costs."
+}

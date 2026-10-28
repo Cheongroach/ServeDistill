@@ -1,0 +1,57 @@
+{
+  "verified": true,
+  "all_trials_retained": true,
+  "records": [
+    {
+      "job_run_sid": "redacted-05d364df7df8",
+      "trial_sid": "redacted-42fb16953086",
+      "trial_pod_sid": "redacted-cba424c752e8",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T15:22:21.000Z",
+      "start_at": "2026-10-27T15:22:24.000Z",
+      "stop_at": "2026-10-27T22:29:42.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 25641.0,
+      "gpu_hours": 7.1225
+    },
+    {
+      "job_run_sid": "redacted-ae2d51aa6c33",
+      "trial_sid": "redacted-056ca795be24",
+      "trial_pod_sid": "redacted-d3242c51cd65",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T15:28:06.000Z",
+      "start_at": "2026-10-27T15:28:06.000Z",
+      "stop_at": "2026-10-27T22:29:17.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 25271.0,
+      "gpu_hours": 7.019722222222223
+    },
+    {
+      "job_run_sid": "redacted-00fa9b89179f",
+      "trial_sid": "redacted-0326ea6803be",
+      "trial_pod_sid": "redacted-575511f34fda",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T15:28:22.000Z",
+      "start_at": "2026-10-27T15:28:22.000Z",
+      "stop_at": "2026-10-27T22:43:28.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 26106.0,
+      "gpu_hours": 7.251666666666667
+    },
+    {
+      "job_run_sid": "redacted-ac1413fa0e04",
+      "trial_sid": "redacted-62ea55c55680",
+      "trial_pod_sid": "redacted-189396568dda",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T15:28:05.000Z",
+      "start_at": "2026-10-27T15:28:06.000Z",
+      "stop_at": "2026-10-27T22:32:57.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 25492.0,
+      "gpu_hours": 7.081111111111111
+    }
+  ],
+  "allocated_gpu_hours": 28.475,
+  "cost_advantage_supported": false,
+  "boundary": "Scheduled-to-stop Pod intervals; includes preparation, every DEV arm and evaluation. Not billing or useful compute. Prior teacher repair, labels and common initialization are separate historical costs."
+}

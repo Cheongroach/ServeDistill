@@ -17,7 +17,16 @@ def gold_responses(rows, tokenizer, eos_id):
     return tokens, mask
 
 
-def gold_ce(runtime, rows, aggregation):
+def gold_ce(runtime, rows, aggregation, weights=None):
+    """Weight each row without renormalizing by the sum of its coefficients."""
     tokens, mask = gold_responses(rows, runtime.tokenizer, runtime.eos_ids[0])
     scores = runtime.score(rows, tokens, mask)
-    return reduce_actions(-scores["logp"], mask.to(scores["logp"].device), aggregation)
+    losses = -scores["logp"]
+    if weights is not None:
+        coefficients = torch.as_tensor(weights, dtype=losses.dtype, device=losses.device)
+        if (coefficients.shape != (len(rows),)
+                or not bool(torch.isfinite(coefficients).all())
+                or bool((coefficients < 0).any())):
+            raise ValueError("Require one finite nonnegative CE coefficient per gold row")
+        losses = losses * coefficients[:, None]
+    return reduce_actions(losses, mask.to(losses.device), aggregation)

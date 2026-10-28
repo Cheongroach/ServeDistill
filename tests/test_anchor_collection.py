@@ -61,7 +61,8 @@ def test_weight_sweep_changes_only_coefficient_and_paired_seed():
     extension = {"scope": "development_only", "holdout_files_packaged": False,
                  "seeds": base["seeds"], "variants": {"low": {"anchor_ce_weight": 0.1}}}
     actual = dataclasses.asdict(variant_config(base, extension, "low", 101))
-    expected = {**base["methods"]["aopd_anchor"], "anchor_ce_weight": 0.1, "seed": 101}
+    expected = {**base["methods"]["aopd_anchor"], "anchor_ce_weight": 0.1, "seed": 101,
+                "anchor_ce_domain_weights": {}}
     assert actual == expected
     extension["variants"]["low"]["anchor_ce_weight"] = 0.2
     with pytest.raises(ValueError, match="Undeclared"):

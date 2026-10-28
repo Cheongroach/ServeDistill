@@ -160,7 +160,10 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
     version = step
     sft = config.objective in ("oracle_sft", "offline_sft")
     anchor_counts = None
-    if config.anchor_ce_weight:
+    anchor_enabled = config.anchor_ce_weight or config.anchor_ce_domain_weights
+    anchor_weights = ([config.anchor_ce_domain_weights.get(row["domain"], config.anchor_ce_weight)
+                       for row in rows] if config.anchor_ce_domain_weights else None)
+    if anchor_enabled:
         anchor_counts = [len(runtime.tokenizer.encode(canonical(row["target"]),
                           add_special_tokens=False)) + 1 for row in rows]
     audit = defaultdict(float)
@@ -267,19 +270,22 @@ def apply_rollout(runtime, optimizer, config, controller, rollout, rl_adv,
         with span("backward"):
             (loss * factor).backward()
         del current, logp, loss
-        if config.anchor_ce_weight:
+        if anchor_enabled:
             from .supervision import gold_ce
             with span("anchor_forward"):
-                anchor = gold_ce(runtime, batch, config.aggregation)
+                anchor = gold_ce(runtime, batch, config.aggregation,
+                                 anchor_weights[start:end] if anchor_weights is not None else None)
             if not bool(torch.isfinite(anchor)):
                 raise FloatingPointError("Non-finite supervised anchor")
             # Gold and sampled trajectories have separate denominators.
             anchor_factor = (sum(anchor_counts[start:end]) / sum(anchor_counts)
                              if config.aggregation == "token" else len(batch) / len(rows))
+            coefficient = 1.0 if anchor_weights is not None else config.anchor_ce_weight
             audit["anchor_ce_loss"] += anchor.detach().item() * anchor_factor
-            audit["loss"] += config.anchor_ce_weight * anchor.detach().item() * anchor_factor
+            audit["anchor_weighted_ce_loss"] += coefficient * anchor.detach().item() * anchor_factor
+            audit["loss"] += coefficient * anchor.detach().item() * anchor_factor
             with span("anchor_backward"):
-                (config.anchor_ce_weight * anchor * anchor_factor).backward()
+                (coefficient * anchor * anchor_factor).backward()
             del anchor
         torch.cuda.synchronize()
         totals["learner"] += time.monotonic() - learner_started - teacher_seconds

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "verify_diagnostic_overlay",
+    "returncode": 0,
+    "start_unix_seconds": 1793128007.5489638,
+    "end_unix_seconds": 1793128007.8137722
+  },
+  {
+    "name": "full_model_rollout1_pair",
+    "returncode": 0,
+    "start_unix_seconds": 1793128010.9001963,
+    "end_unix_seconds": 1793132089.1747246
+  }
+]

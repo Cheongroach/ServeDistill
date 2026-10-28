@@ -77,3 +77,13 @@ NCU 基础采集、GEMM、nsys 的 300 个 adapter 与 900 个 optimizer tensor 
 独立 host/GPU telemetry 通过，perf/DCGM 未安装。Sanitizer 日志显示 student rollout prefill 的 DeltaNet 路径 OOM，同时记录 ExpandableSegment::map 中 cuMemCreate 的 CUDA_ERROR_INVALID_VALUE，汇总 3 errors。新的 1-H20 对照保持完整模型、输入、rollout 和训练窗口，只关闭 expandable segments，并对比基线与 memcheck。已提交不等于运行成功；原失败、allocator 对照结果及成本分别保留。
 
 稳定质量优势仍未建立。接下来仍须全部 DEV 最终模型、统一独立评分，以及合格候选在新的未观测数据上的预先冻结确认和不重叠复验。
+
+## 9. 标量权重没有晋级：保留失败，再检验分领域监督
+
+三种权重的四种子固定 update320 已全部终结，30,800 条 DEV 预测独立重评，428 个文件及 24 份训练后 adapter 全部绑定。0.1/0.5 的业务均值相对 offline 为 +0.3981/+0.2608 pp，均有 3/4 正种子配对；数学相对 oracle 的查询 bootstrap 95% 下界为 −8.00/−5.25 pp，均未通过 −5 pp 非劣门。1.0 数学下界为 −2.00 pp，但业务相对 offline 为 −0.2545 pp，仅 2/4 正种子配对，并有 substitute 非劣失败。没有 DEV 候选晋级，更没有新确认优势。
+
+原四任务与八个权重任务分配成本合计 56.668611 H20·h，历史对照/Teacher/init 成本分别保留。rollout batch1 memcheck 独立诊断为超时退出124，没有完成 update161/162或形成 error summary；基线完成162。全部41个索引文件核验，51个terminal源文件导出；1.313889 H20·h 全部保留。未知超时原因不能写成 OOM 或零错误。
+
+下一轮只在 DEV 检验业务 CE 0.1/0.5、math/instruction CE1.0。损失对每条 gold 回答先取 token 均值再乘领域系数，最后除以完整轨迹数；禁止按权重和或微批领域数归一化。新实现通过实际梯度、uniform map 对标量等价、两种聚合的微批不变性和候选执行绑定检查，全套176项 CPU 回归通过。
+
+新源码单独封存，旧协议原始字节保留；复用强对照前重新核验全部16段更新历史和实际prompt日程。8个单卡任务通过预检后提交并启动，原门槛保持不变。终态监控将收集两组候选四种子并重评22,000条候选/强对照/initial输出。合格DEV仍须新的确认与不重叠复制，当前没有质量优势结论。

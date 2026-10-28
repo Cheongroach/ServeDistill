@@ -1,6 +1,6 @@
 # 一步步从 DEV 候选走到新的独立确认
 
-本页对应 `freeze_fresh_confirmation.py → evaluate_fresh_confirmation.py → analyze_fresh_confirmation.py`。这些入口已通过 CPU 检查；当前十二项训练尚未全部终结，没有新确认预测，也没有已确认的质量优势。
+本页对应 `freeze_fresh_confirmation.py → evaluate_fresh_confirmation.py → analyze_fresh_confirmation.py`。这些入口已通过 CPU 检查；十二项训练已经终结，三种权重均未通过完整 DEV 门。没有封存新的确认输入、没有新确认预测，也没有已确认的质量优势，见[终态复核](../reports/advantage/ANCHOR_JOINT_DEV.md)。
 
 ## 第 1 步：确定本轮究竟要回答什么
 

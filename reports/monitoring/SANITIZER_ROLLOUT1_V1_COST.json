@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "all_trials_retained": true,
+  "records": [
+    {
+      "job_run_sid": "redacted-beea8f8e730c",
+      "trial_sid": "redacted-396c7598cf1e",
+      "trial_pod_sid": "redacted-661684424f28",
+      "exit_status": 0,
+      "schedule_at": "2026-10-27T18:59:12.000Z",
+      "start_at": "2026-10-27T18:59:12.000Z",
+      "stop_at": "2026-10-27T20:18:02.000Z",
+      "gpu_count": 1,
+      "allocation_seconds": 4730.0,
+      "gpu_hours": 1.3138888888888889
+    }
+  ],
+  "allocated_gpu_hours": 1.3138888888888889,
+  "cost_advantage_supported": false,
+  "boundary": "Scheduled-to-stop Pod intervals; includes preparation, every DEV arm and evaluation. Not billing or useful compute. Prior teacher repair, labels and common initialization are separate historical costs."
+}
