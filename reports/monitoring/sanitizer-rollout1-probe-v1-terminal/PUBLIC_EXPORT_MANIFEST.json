@@ -209,9 +209,11 @@
       "source": "profiles/baseline_rollout1/host-telemetry.jsonl",
       "original_sha256": "799db187bf95dca3a44d167c84a74cd59fe8eb9a0f2bf42442999c3be08f058b",
       "original_bytes": 7062030,
-      "public_file": "profiles/baseline_rollout1/host-telemetry.jsonl",
-      "public_sha256": "abe03960a20e04bb37527e58f251e45390d2de6afb047dda3fdbe9da7128845f",
-      "public_bytes": 7068570
+      "public_file": "profiles/baseline_rollout1/host-telemetry.jsonl.gz",
+      "public_sha256": "d2cf701224107f3f321da085dde2b44dcae23773958005fc74762ab33054a95d",
+      "public_bytes": 721095,
+      "uncompressed_public_sha256": "abe03960a20e04bb37527e58f251e45390d2de6afb047dda3fdbe9da7128845f",
+      "uncompressed_public_bytes": 7068570
     },
     {
       "source": "profiles/baseline_rollout1/manifest.json",
@@ -353,9 +355,11 @@
       "source": "profiles/sanitizer_rollout1/host-telemetry.jsonl",
       "original_sha256": "f9d560e46d59411a8ca7531aad9592a5309d8d9c2e2c7d4ace540b5055fbc3d4",
       "original_bytes": 90973110,
-      "public_file": "profiles/sanitizer_rollout1/host-telemetry.jsonl",
-      "public_sha256": "8c36c29854bdcfebeb8e99524794b147e12741b942360daa88c95f19d1b3cac4",
-      "public_bytes": 91016166
+      "public_file": "profiles/sanitizer_rollout1/host-telemetry.jsonl.gz",
+      "public_sha256": "7f6c1cfddf02ebf279e33a0a506d0a6eea08275eda64c73b3070cf75f1690dc4",
+      "public_bytes": 8938520,
+      "uncompressed_public_sha256": "8c36c29854bdcfebeb8e99524794b147e12741b942360daa88c95f19d1b3cac4",
+      "uncompressed_public_bytes": 91016166
     },
     {
       "source": "profiles/sanitizer_rollout1/manifest.json",
@@ -430,5 +434,5 @@
       "public_bytes": 451
     }
   ],
-  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims."
+  "boundary": "Sanitized public bytes have distinct hashes; plain-text trailing whitespace is normalized. Original binary reports and training checkpoints remain separate. Profiled timings cannot support speed claims. Host telemetry is gzip-compressed losslessly; uncompressed public hashes remain recorded."
 }
